@@ -128,7 +128,7 @@ Sometimes, it's better repeating a bit to keep the code maintainable rather than
 
 If you ask me the very first thing a styleguide should do is describe the usual guidelines to write code. When several actors are involved in writing CSS on the same projects, it is only a matter of time before one of them start doing things his own way. Code guidelines are not only meant to prevent that, but also helps reading and updating the code by making it look consistent.
 
-Roughly, we want (shameless inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting):
+Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
 * two (2) spaces indents, no tabs;
 * ideally, 80-characters wide lines;
