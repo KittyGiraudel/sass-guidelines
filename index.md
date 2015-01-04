@@ -64,7 +64,7 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 ## Other preprocessors
 
-Sass is a preprocessor among others. Its most serious competitor has to be [LESS](), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap][bootstrap] using it. There is also Stylus which is kind of the nerdy unrestricting version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Sass is a preprocessor among others. Its most serious competitor has to be [LESS][Less], a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap][bootstrap] using it. There is also Stylus which is kind of the nerdy unrestricting version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
 Now *why choosing Sass over LESS or another preprocessor* is still a valid question as of today. Not so long ago, we use to recommand Sass for Ruby-based projects because it was first made in Ruby and went well with Ruby on Rails. Now that LibSass has caught up (or so) on original Sass, this is no longer a relevant advice.
 
@@ -74,7 +74,7 @@ Preprocessors aside, we should also mention postprocessors, which have known qui
 
 You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), you compile your stylesheets with a postprocessor, and every variable occurrence gets replaced with its value, as Sass would do.
 
-The idea behind preprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
+The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
 
 While providing tomorrow's syntax today has something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
 
@@ -587,5 +587,5 @@ If you have to override a section of any vendor, I recommand you have a 8th fold
 [kiss_principle]: http://en.wikipedia.org/wiki/KISS_principle
 [dry_principle]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
 [postcss]: https://github.com/postcss/postcss
-[cssnext]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+[cssnext]: https://cssnext.github.io
 [stylus]: http://learnboost.github.io/stylus/
