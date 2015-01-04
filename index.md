@@ -159,27 +159,347 @@ Illustration:
 }
 ```
 
-## Nesting
+Adding to those CSS-related guidelines, we want to pay attention to:
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*.
+* local variables are declared before any declaration, then spaced from declarations by a new line;
+* mixin calls with no `@content` come before any declaration;
+* nested selectors always come after a new line;
+* mixin calls with `@content` come after any nested selectors;
+* no new line before a closing brace (`}`).
+
+Illustration:
+
+```scss
+.foo, .foo-bar,
+.baz {
+  $length: 42em;
+
+  @include ellipsis;
+  @include size($length);
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+
+  &:hover {
+    color: red;
+  }
+
+  @include respond-to("small") {
+    overflow: visible;
+  }
+}
+```
+
+## Selector nesting
+
+One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for developers to compute long selectors by nesting shorter selectors within each others. For instance the following Sass nesting:
+
+```scss
+.foo {
+  .bar {
+    &:hover {
+      content: baz;
+    }
+  }
+}
+```
+
+... will generate this CSS:
+
+
+```css
+.foo .bar:hover {
+  content: baz;
+}
+```
+
+Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
+
+```scss
+.foo {
+  &-bar {
+    content: "I'm `.foo-bar`.";
+  }
+}
+```
+
+This method is often used along with BEM naming conventions to generated `.block__element` and `.block--modifier` selectors based on the original one (i.e. `.block` in this case).
+
+*Note: while it might be anecdotal, generating new selectors from the current selector reference (`&`) makes those selectors unsearchable in the code base since they do not exist per se.*
+
+The problem with selector nesting is it ultimately makes code more difficult to read. Because one has to mentally compute the resulting selector out of the indentation levels, it is not always quite obvious what the CSS will end up being.
+
+This statement is getting even truer when selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk to lose track and not being able to understand what's going anymore is so high that it is not worth it.
+
+To avoid such a situation to happen, we avoid selector nesting except when it comes to pseudo-classes and pseudo-elements. These are the only cases where nesting is allowed, and even recommended.
+
+```scss
+.foo {
+  content: regular;
+
+  &:hover {
+    content: hovered;
+  }
+
+  &::before {
+    content: pseudo-element;
+  }
+}
+```
+
+Using selector nesting for pseudo-classes and pseudo-elements not only makes sense because it deals with closely related selectors, but also helps keeping everything about a component at the same place.
 
 ### Further reading
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more moduler CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-
-## Maps
+* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
 
 # Naming conventions
 
+In this section, we will not deal with what are the best CSS naming conventions for maintainability and scale; this is not only up to you, but also out of the scope of a Sass Styleguide. May I recommand those in place for [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+
+There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
+
+* variables;
+* functions;
+* mixins.
+
+Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
+
+Regarding variables, functions and mixins, we stick to something very *CSSy*: hyphen-delimited, no camel-case, and above all meaningful.
+
+```scss
+$vertical-rhythm-baseline: 1.5rem;
+
+@mixin size($width, $height: $width) { /* ... */ }
+
+@function opposite-direction($direction) { /* ... */ }
+```
+
 # Commenting
+
+CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don't let you or anybode else in the position of *I-didn't-write-this-oh-my-god-why*.
+
+As simple as CSS can get, there are still a lot of room for comments. Could it be explaining:
+
+* the structure and/or role of a file;
+* the goal of a ruleset;
+* the idea behind a magic number;
+* the reason of a CSS declaration;
+* the order of CSS declarations;
+* the thought process behind a way of doing.
+
+And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back to a piece of code to comment it is not only completely unrealistic but also extremely annoying.
 
 ## Writing comments
 
+Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining what is the point of the rule set. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+
+```scss
+/**
+ * Helper class to truncate and add ellipsis to a string too long for it to fit
+ * on a single line.
+ * 1. Prevent content from wrapping, forcing it on a single line.
+ * 2. Add ellipsis at the end of the line.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+```
+
+Basically everything that is not obvious from the first glance should be commented. There is no such thing as too much documentation. You cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+
+When commenting a Sass specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development process.
+
+```scss
+// Add current module to the list of imported modules.
+// `!global` flag is required so it actually updates the global variable.
+$imported-modules: append($imported-modules, $module) !global;
+```
+
 ## Documentation
 
+Every variable, function, mixin and placeholder that is intended to be re-used all over the code base should be documented as part of the global API using [SassDoc][sassdoc].
+
+SassDoc provides two different syntaxes for comments: either C-style or inline. For instance both of the following snippets are valid SassDoc comments:
+
+```scss
+/**
+ * Vertical rhythm baseline used all over the code base.
+ * @type Length
+ **/
+$vertical-rhythm-baseline: 1.5rem;
+```
+
+*Note: two stars (`/`) required before the closing slash (`/`).*
+
+```scss
+/// Vertical rhythm baseline used all over the code base.
+/// @type Length
+$vertical-rhythm-baseline: 1.5rem;
+```
+
+*Note: three slashes (`/`) required.*
+
+SassDoc has two major roles:
+
+* forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
+* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoint (CLI tool, Grunt, Gulp, Broccoli, Node...).
+
 # Architecture
+
+Architecturing a CSS project is probably one of the most difficult things you will have to do in a project's live. Keeping the architecture consistent and meaningful is even harder.
+
+Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do).
+
+Thanks to Sass' overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
+
+On top of that, I cannot stress enough the need of folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use have folders; one for the house/flat, one for the bank, one for bills, and so on.
+
+There is no reason to do otherwise when structuring your CSS project. Split the codebase into meaningful separated folders so it's getting easier to find stuff later when you have to come back to the code.
+
+I usually go with what I call the *7-1*: 7 folders, 1 file. Basically, you have all your partials stuffed into a collection of folders, and a single file at root level (usually named `main.scss`) that imports them all to be compiled into a CSS stylesheet.
+
+* `base/`
+* `components/`
+* `layout/`
+* `pages/`
+* `themes/`
+* `utils/`
+* `vendors/`
+
+And of course:
+
+* `main.scss`
+
+> “One file to rule them all,
+> One file to find them,
+> One file to bring them all,
+> And in the Sass way merge them.”
+> — J.R.R. Tolkien
+
+```
+sass/
+|
+|– base/
+|   |– _reset.scss       # Reset/normalize
+|   |– _typography.scss  # Typography rules
+|   ...                  # Etc…
+|
+|– components/
+|   |– _buttons.scss     # Buttons
+|   |– _carousel.scss    # Carousel
+|   |– _cover.scss       # Cover
+|   |– _dropdown.scss    # Dropdown
+|   ...                  # Etc…
+|
+|– layout/
+|   |– _navigation.scss  # Navigation
+|   |– _grid.scss        # Grid system
+|   |– _header.scss      # Header
+|   |– _footer.scss      # Footer
+|   |– _sidebar.scss     # Sidebar
+|   |– _forms.scss       # Forms
+|   ...                  # Etc…
+|
+|– pages/
+|   |– _home.scss        # Home specific styles
+|   |– _contact.scss     # Contact specific styles
+|   ...                  # Etc…
+|
+|– themes/
+|   |– _theme.scss       # Default theme
+|   |– _admin.scss       # Admin theme
+|   ...                  # Etc…
+|
+|– utils/
+|   |– _variables.scss   # Sass Variables
+|   |– _functions.scss   # Sass Functions
+|   |– _mixins.scss      # Sass Mixins
+|   |– _helpers.scss     # Class & placeholders helpers
+|
+|– vendors/
+|   |– _bootstrap.scss   # Bootstrap
+|   |– _jquery-ui.scss   # jQuery UI
+|   ...                  # Etc…
+|
+|
+`– main.scss             # primary Sass file
+```
+
+## Base folder
+
+The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset (or `Normalize.css` or whatever), probably some stuff dealing with typography, and, depending on the project, maybe some other files.
+
+* `_reset.scss` or `_normalize.scss`
+* `_typography.scss`
+
+## Layout folder
+
+The `layout/` folder contains everything that takes part in layouting the site or application. Could it be the stylesheet for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even the CSS styles for all the forms.
+
+* `_grid.scss`
+* `_header.scss`
+* `_footer.scss`
+* `_sidebar.scss`
+* `_forms.scss`
+* `_navigation.scss`
+
+*Note: The `layout/` folder might also be called `partials/`, depending on what you prefer.*
+
+## Components folder
+
+For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more *micro*. It can contain all kind of specific modules like a slider, a loader, a widget, or anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+
+* `_media.scss`
+* `_carousel.scss`
+* `_thumbnails.scss`
+
+*Note: the `components/` folder might also be called `modules/`, depending on what you prefer.*
+
+## Pages folder
+
+If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
+
+* `_home.scss`
+* `_contact.scss`
+
+*Note: depending on your deployment process, those files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.*
+
+## Themes folder
+
+On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
+
+* `_theme.scss`
+* `_admin.scss`
+
+Note that this is very project specific and is likely to be non-existent on many projects.
+
+## Utils folder
+
+The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variables, functions, mixins and placeholders should be put in there.
+
+The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. This is nothing but Sass helpers.
+
+* `_variables.scss`
+* `_mixins.scss`
+* `_functions.scss`
+* `_placeholders.scss` (frequently named `_helpers.scss`)
+
+*Note: the `utils/` folder might also be called `helpers/`, `sass-helpers/` or `sass-utils/`, depending on what you prefer.*
+
+## Vendors folder
+
+And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to tell “Hey, this is not from me, not my code, not my responsibility”.
+
+* `bootstrap.scss`
+* `jquery-ui.scss`
+* `select2.scss`
+
+If you have to override a section of any vendor, I recommand you have a 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite. For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
 
 # Sass features
 
@@ -196,7 +516,6 @@ One particular feature Sass provides that is being overly misused by many develo
 * [Don’t Over-@extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
 ## Warnings and errors
-
 
 [sass]: http://sass-lang.com
 [sass_documentation]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
