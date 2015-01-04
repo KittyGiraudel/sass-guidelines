@@ -8,15 +8,15 @@ I have also written a couple of Sass libraries, mostly for the heck of it: [Sass
 
 # Contribute
 
-Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. It takes me a lot of time and knowing that you liked it is already much appreciated!
+Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
 
-Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing the single typo on the [GitHub repository][repository] would be great! Also, I like beer if you wanna pay me back.
+Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository][repository] would be great! Also, I like beer if you wanna pay me back.
 
 # About Sass
 
 > Sass is an extension of CSS that adds power and elegance to the basic language.
 
-This is how Sass describes itself in its documentation. Sass' ultimate objective is to fix CSS flaws. CSS, as we all know, is not the best language in the world. While very simple to learn, it can quickly get quite messy, especially on large projects.
+This is how [Sass][sass] describes itself in its [documentation][sass_documentation]. Sass' ultimate objective is to fix CSS flaws. CSS, as we all know, is not the best language in the world. While very simple to learn, it can quickly get quite messy, especially on large projects.
 
 This is where Sass comes in, as a meta-language, to improve CSS syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding CSS language.
 
@@ -31,9 +31,9 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 ## Ruby Sass or LibSass
 
-[Sass][sass]' first draft goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby Sass, varied ports popped here and there. The most successful one, [LibSass][libsass] written in C is now close to be fully compatible with the original Ruby version.
+[Sass' first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby Sass, varied ports popped here and there. The most successful one, [LibSass][libsass], written in C is now close to be fully compatible with the original Ruby version.
 
-In 2014, Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward with Sass as a language. Since then, LibSass has been actively releasing versions to have feature-parity with its older brother.
+In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward with Sass as a language](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older brother.
 
 Last inconsistencies are gathered and listed by myself under the [Sass-Compatibility][sass_compatibility] project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
@@ -48,7 +48,7 @@ On the other hand, LibSass is mostly dedicated to being wrapped. So if you want 
 
 ## Sass or SCSS
 
-There are quite a lot of confusion regarding the semantic behind *Sass*. And for good reason: Sass means both the preprocessor and its syntax. Not very practical, is it?
+There are quite a lot of confusion regarding the semantic behind the *Sass* appellation. And for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
 
 You see, Sass initially described a syntax very close to Ruby. Actually, the initial idea was to write CSS in Ruby. Soon enough, Sass maintainers decided to close the gap between Sass and CSS by providing a CSS-friendly syntax called *SCSS* for *Sassy CSS*. The motto is: if it's valid CSS, it's valid SCSS.
 
@@ -66,13 +66,13 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 Sass is a preprocessor among others. Its most serious competitor has to be [LESS](), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap][bootstrap] using it. There is also Stylus which is kind of the nerdy unrestricting version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
-Now *why choosing Sass over LESS or another preprocessor* is still a valid question as of today. Not so long ago, we use to recommand Sass to Ruby-based project because it was made in Ruby and went well with Ruby on Rails. Now that LibSass has caught up on original Sass, this is no longer a relevant advice.
+Now *why choosing Sass over LESS or another preprocessor* is still a valid question as of today. Not so long ago, we use to recommand Sass for Ruby-based projects because it was first made in Ruby and went well with Ruby on Rails. Now that LibSass has caught up (or so) on original Sass, this is no longer a relevant advice.
 
 What I do like with Sass, it is its conservative aspect regarding CSS. Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extra features on top of a language that is not intented to support any logical aspect. It is a software aiming at solving actual issues; helping writing CSS where CSS shows some weakness.
 
 Preprocessors aside, we should also mention postprocessors, which have known quite a good exposure of the last few months especially thanks to [postCSS][postcss] and [CSSNext][cssnext]. Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else than upcoming CSS syntax.
 
-You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you write variables as they are described in the CSS specifications, you compile your stylesheets with a postprocessor, and every variable occurrence gets replaced with its value, as Sass would do.
+You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), you compile your stylesheets with a postprocessor, and every variable occurrence gets replaced with its value, as Sass would do.
 
 The idea behind preprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
 
@@ -89,9 +89,7 @@ While providing tomorrow's syntax today has something of a noble idea, I have to
 
 ## The importance of a styleguide
 
-Styleguides are not just a pleasing document to read picturing an ideal state for your code. It is a key document in a project's life, describing how and why code should be written.
-
-It may look overkill for small projects, yet it helps a lot to keep your codebase clean, scalable and easily maintainable.
+Styleguides are not just a pleasing document to read picturing an ideal state for your code. It is a key document in a project's life, describing how and why code should be written. It may look overkill for small projects, yet it helps a lot to keep your codebase clean, scalable and easily maintainable.
 
 Needless to say, the more actors involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
 
@@ -118,15 +116,15 @@ Obviously, they are certainly not the only way of doing and may or may not suit 
 
 At the end of the day, if there is one thing I'd like you to get from this whole styleguide, it is that Sass should be kept as simple as it can be.
 
-Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators][sassybitwise], [iterators and generators][sassyiteratorsgenerators] and [a JSON parser][sassyjson] in Sass, so trust me I am well aware of what one can do with this preprocessor.
+Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators][sassybitwise], [iterators and generators][sassyiteratorsgenerators] and [a JSON parser][sassyjson] in Sass, so trust me when I say I am well aware of what one can do with this preprocessor.
 
-Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle][kiss_principle] (Keep It Simple Stupid) is key here and takes over the [DRY principle][dry_principle] (Don't Repeat Yourself).
+Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle][kiss_principle] (Keep It Simple Stupid) is key here and may even take over the [DRY principle][dry_principle] (Don't Repeat Yourself) in some circumstancies.
 
 Sometimes, it's better repeating a bit to keep the code maintainable rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because too complex.
 
 # Syntax & formatting
 
-If you ask me the very first thing a styleguide should do is describe the usual guidelines to write code. When several actors are involved in writing CSS on the same projects, it is only a matter of time before one of them start doing things his own way. Code guidelines are not only meant to prevent that, but also helps reading and updating the code by making it look consistent.
+If you ask me, the very first thing a styleguide should do is describe the usual guidelines to write code. When several actors are involved in writing CSS on the same projects, it is only a matter of time before one of them start doing things his own way. Code guidelines are not only meant to prevent that, but also help reading and updating the code by making it look consistent.
 
 Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
@@ -146,7 +144,8 @@ At this point, this is mostly rehearsing what everybody knows, but here is how a
 * each declaration on its own new line;
 * a space after the colon (`:`);
 * a trailing semi-colon (`;`) at the end of all declarations;
-* the closing brace (`}`) on its own new line.
+* the closing brace (`}`) on its own new line;
+* a new line after the closing brace `}`.
 
 Illustration:
 
@@ -161,10 +160,10 @@ Illustration:
 
 Adding to those CSS-related guidelines, we want to pay attention to:
 
-* local variables are declared before any declaration, then spaced from declarations by a new line;
-* mixin calls with no `@content` come before any declaration;
-* nested selectors always come after a new line;
-* mixin calls with `@content` come after any nested selectors;
+* local variables being declared before any declaration, then spaced from declarations by a new line;
+* mixin calls with no `@content` coming before any declaration;
+* nested selectors always coming after a new line;
+* mixin calls with `@content` coming after any nested selectors;
 * no new line before a closing brace (`}`).
 
 Illustration:
@@ -192,7 +191,7 @@ Illustration:
 
 ## Selector nesting
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for developers to compute long selectors by nesting shorter selectors within each others. For instance the following Sass nesting:
+One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheets authors to compute long selectors by nesting shorter selectors within each others. For instance the following Sass nesting:
 
 ```scss
 .foo {
@@ -218,12 +217,12 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 ```scss
 .foo {
   &-bar {
-    content: "I'm `.foo-bar`.";
+    content: "Howdy! I am `.foo-bar`.";
   }
 }
 ```
 
-This method is often used along with BEM naming conventions to generated `.block__element` and `.block--modifier` selectors based on the original one (i.e. `.block` in this case).
+This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generated `.block__element` and `.block--modifier` selectors based on the original one (i.e. `.block` in this case).
 
 *Note: while it might be anecdotal, generating new selectors from the current selector reference (`&`) makes those selectors unsearchable in the code base since they do not exist per se.*
 
@@ -231,18 +230,18 @@ The problem with selector nesting is it ultimately makes code more difficult to 
 
 This statement is getting even truer when selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk to lose track and not being able to understand what's going anymore is so high that it is not worth it.
 
-To avoid such a situation to happen, we avoid selector nesting except when it comes to pseudo-classes and pseudo-elements. These are the only cases where nesting is allowed, and even recommended.
+To prevent such a situation to happen, we avoid selector nesting except when it comes to pseudo-classes and pseudo-elements. These are the only cases where nesting is allowed, and even recommended.
 
 ```scss
 .foo {
-  content: regular;
+  content: "regular";
 
   &:hover {
-    content: hovered;
+    content: "hovered";
   }
 
   &::before {
-    content: pseudo-element;
+    content: "pseudo-element";
   }
 }
 ```
@@ -257,7 +256,7 @@ Using selector nesting for pseudo-classes and pseudo-elements not only makes sen
 
 # Naming conventions
 
-In this section, we will not deal with what are the best CSS naming conventions for maintainability and scale; this is not only up to you, but also out of the scope of a Sass Styleguide. May I recommand those in place for [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+In this section, we will not deal with what are the best CSS naming conventions for maintainability and scale; this is not only up to you, but also out of the scope of a Sass Styleguide. May I suggest those recommanded by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
 
@@ -290,11 +289,11 @@ As simple as CSS can get, there are still a lot of room for comments. Could it b
 * the order of CSS declarations;
 * the thought process behind a way of doing.
 
-And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back to a piece of code to comment it is not only completely unrealistic but also extremely annoying.
+And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
 
 ## Writing comments
 
-Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining what is the point of the rule set. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining what is the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
 
 ```scss
 /**
@@ -310,7 +309,7 @@ Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining wh
 }
 ```
 
-Basically everything that is not obvious from the first glance should be commented. There is no such thing as too much documentation. You cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Basically everything that is not obvious from the first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
 When commenting a Sass specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development process.
 
@@ -349,6 +348,45 @@ SassDoc has two major roles:
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
 * being able to generate an HTML version of the API documentation by using any of the SassDoc endpoint (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
+![SassDoc powered documentation](http://sassdoc.com/assets/images/preview-image.png)
+
+Here is an example of mixin documented with SassDoc:
+
+```scss
+/// Mixin helping defining both `width` and `height` simultaneously.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - Element's `width`
+/// @param {Length} $height ($width) - Element's `height`
+///
+/// @example scss - Usage
+/// .element {
+///   @include size(10em);
+/// }
+///
+/// .other-element {
+///   @include size(100%, 10em);
+/// }
+///
+/// @example css - CSS output
+/// .element {
+///   width: 10em;
+///   height: 10em;
+/// }
+///
+/// .other-element {
+///   width: 100%;
+///   height: 10em;
+/// }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+```
+
 # Architecture
 
 Architecturing a CSS project is probably one of the most difficult things you will have to do in a project's live. Keeping the architecture consistent and meaningful is even harder.
@@ -359,9 +397,11 @@ Thanks to Sass' overload of the `@import` directive, it is perfectly safe (and a
 
 On top of that, I cannot stress enough the need of folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use have folders; one for the house/flat, one for the bank, one for bills, and so on.
 
-There is no reason to do otherwise when structuring your CSS project. Split the codebase into meaningful separated folders so it's getting easier to find stuff later when you have to come back to the code.
+There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
 
-I usually go with what I call the *7-1*: 7 folders, 1 file. Basically, you have all your partials stuffed into a collection of folders, and a single file at root level (usually named `main.scss`) that imports them all to be compiled into a CSS stylesheet.
+There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Bootstrap][bootstrap]-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
+
+I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into a 7 different folders, and a single file at root level (usually named `main.scss`) that imports them all to be compiled into a CSS stylesheet.
 
 * `base/`
 * `components/`
@@ -375,11 +415,9 @@ And of course:
 
 * `main.scss`
 
-> “One file to rule them all,
-> One file to find them,
-> One file to bring them all,
-> And in the Sass way merge them.”
-> — J.R.R. Tolkien
+![Sass by Tolkien](https://dl.dropboxusercontent.com/u/5465537/SASS-poster.jpg)
+
+Ideally, we can come up with something like this:
 
 ```
 sass/
@@ -500,6 +538,12 @@ And last but not least, most projects will have a `vendors/` folder containing a
 * `select2.scss`
 
 If you have to override a section of any vendor, I recommand you have a 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite. For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+
+### Further reading
+
+* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
+* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
+* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 # Sass features
 
