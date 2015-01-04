@@ -1,0 +1,16 @@
+figure {
+  background: $medium-background;
+  margin: 0;
+  padding: 2em;
+}
+
+figure img {
+  display: block;
+  height: auto;
+}
+
+figcaption {
+  text-align: center;
+  font-size: .8em;
+  font-style: italic;
+}
