@@ -58,6 +58,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
 * [Syntax & Formatting](#syntax--formatting)
   * [Strings](#strings)
   * [Numbers](#numbers)
+  * [Colors](#colors)
   * [Lists](#lists)
   * [Maps](#maps)
   * [CSS Ruleset](#css-ruleset)
@@ -74,6 +75,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
   * [Themes Folder](#themes-folder)
   * [Utils Folder](#utils-folder)
   * [Vendors Folder](#vendors-folder)
+  * [Main file](#main-file)
 * [Variables](#variables)
   * [`!default` Flag](#default-flag)
   * [`!global` Flag](#global-flag)
@@ -274,7 +276,7 @@ CSS does not require strings to be quoted even those containing spaces. Take fon
 
 Because of that, Sass does not require strings to be quoted as well. Even better, a quoted string is strictly equivalent to this unquoted twin (e.g. `"abc"` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority thus we should always be quoting strings in Sass. Aside of consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority thus we should always be wrapper strings with double quotes in Sass. Aside of consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
 
 * most syntax highlights will choke on unquoted strings;
 * it helps general readibility;
@@ -283,6 +285,9 @@ That being said, languages that do not require strings to be quoted are definite
 {% highlight scss %}
 // Yep
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
+
+// Nope
+$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
 
 // Nope
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
@@ -355,6 +360,27 @@ Top level of Sass numeric calculations should always be wrapped in parenthesis. 
 
 
 
+
+
+## Colors
+
+Colors occupy an important place of the CSS language. Because of this, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+My advice would be to express colors in HSL when possible since it is the friendliest color notation for the human brain. It also makes colors easy to tweak by adjusting the hue, the saturation or the lightness individually. If HSL is not an option, opt for RGB which still presents the benefit of understanding if the color is closer to red, green or blue. Else use hexadecimal notation.
+
+When possible, always use the CSS color keywords in place of any other notation. When using a color more than once, store it in a variable with a meaninful name so you can reuse it.
+
+{% highlight scss %}
+// Yep
+$sass-pink: #c69;
+
+// Nope
+$pink: #c69;
+{% endhighlight %}
+
+To lighten or darken a color, do not use [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) Sass functions. Instead, use the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function to mix your color with either `white` or `black`. The benefit of using `mix` rather than one of the two fore-mentioned functions is that is will slowly go to black (or white) as you decrease the proportion of the color. Whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+
+<p data-height="400" data-theme-id="0" data-slug-hash="wBopOd" data-default-tab="result" data-user="HugoGiraudel" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/wBopOd/'>Dadgumit, Blowouts</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 
 ## Lists
@@ -920,6 +946,53 @@ And last but not least, most projects will have a `vendors/` folder containing a
 * `select2.scss`
 
 If you have to override a section of any vendor, I recommand you have a 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite. For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+
+## Main file
+
+The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+
+Files should be imported according to the folder they live in, one after the other in the following order:
+
+1. `vendors/`
+1. `utils/`
+1. `base/`
+1. `layout/`
+1. `components/`
+1. `pages/`
+1. `themes/`
+
+No new line between two imports of a same folder, a new line after the last import of a folder. File extensions and leading underscores for partials should be omitted.
+
+{% highlight scss %}
+@import "vendors/bootstrap";
+@import "vendors/jquery-ui";
+
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/forms";
+
+@import "components/buttons";
+@import "components/carousel";
+@import "components/cover";
+@import "components/dropdown";
+
+@import "pages/home";
+@import "pages/contact";
+
+@import "themes/theme";
+@import "themes/admin";
+{% endhighlight %}
 
 ### Further reading
 
