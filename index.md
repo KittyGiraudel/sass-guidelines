@@ -1,16 +1,56 @@
+---
+layout: default
+---
+
 # About the author
 
 My name is [Hugo Giraudel][author_website], I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc][sassdoc] and [Sass-Compatibility][sass_compatibility].
 
 I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON][sassyjson], [SassyLists][sassylists], [SassySort][sassysort], [SassyCast][sassycast], [SassyMatrix][sassymatrix], [SassyBitwise][sassybitwise], [SassyIteratorsGenerators][sassyiteratorsgenerators], [SassyLogger][sassylogger], [SassyStrings][sassystrings] and [SassyGradients][sassygradients].
 
-<a href="https://twitter.com/hugogiraudel" target="_blank">Catch me on Twitter</a>
+<div class="button-wrapper">
+  <a href="https://twitter.com/hugogiraudel" target="_blank" class="button">Catch me on Twitter</a>
+</div>
 
-# Contribute
+# Contributing
 
 Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
 
 Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository][repository] would be great! Also, I like beer if you wanna pay me back.
+
+<div class="button-wrapper">
+  <a href="https://twitter.com/hugogiraudel" target="_blank" class="button">GitHub repository</a>
+  <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
+</div>
+
+# Table of Contents
+
+* [About the author](#about-the-author)
+* [Contributing](#contributing)
+* [About Sass](#about-sass)
+  * [Ruby Sass or LibSass](#ruby-sass-or-libsass)
+  * [Sass or SCSS](#sass-or-scss)
+  * [Other preprocessors](#other-preprocessors)
+* [Introduction](#introduction)
+  * [The importance of a styleguide](#)
+  * [Disclaimer](#disclaimer)
+  * [Key principles](#key-principles)
+* [Syntax & formatting](#syntax--formatting)
+  * [Anatomy of a ruleset](#anatomy-of-a-ruleset)
+  * [Selector nesting](#selector-nesting)
+* [Naming conventions](#naming-conventions)
+* [Commenting](#commenting)
+  * [Writing comments](#writing-comments)
+  * [Documentation](#documentation)
+* [Architecture](#architecture)
+  * [Base folder](#base-folder)
+  * [Components folder](#components-folder)
+  * [Layout folder](#layout-folder)
+  * [Pages folder](#pages-folder)
+  * [Themes folder](#themes-folder)
+  * [Utils folder](#utils-folder)
+  * [Vendors folder](#vendors-folder)
+* [Up Next](#up-next)
 
 # About Sass
 
@@ -149,14 +189,14 @@ At this point, this is mostly rehearsing what everybody knows, but here is how a
 
 Illustration:
 
-```scss
+{% highlight scss %}
 .foo, .foo-bar,
 .baz {
   display: block;
   overflow: hidden;
   margin: 0 auto;
 }
-```
+{% endhighlight %}
 
 Adding to those CSS-related guidelines, we want to pay attention to:
 
@@ -168,7 +208,7 @@ Adding to those CSS-related guidelines, we want to pay attention to:
 
 Illustration:
 
-```scss
+{% highlight scss %}
 .foo, .foo-bar,
 .baz {
   $length: 42em;
@@ -187,13 +227,13 @@ Illustration:
     overflow: visible;
   }
 }
-```
+{% endhighlight %}
 
 ## Selector nesting
 
 One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheets authors to compute long selectors by nesting shorter selectors within each others. For instance the following Sass nesting:
 
-```scss
+{% highlight scss %}
 .foo {
   .bar {
     &:hover {
@@ -201,30 +241,32 @@ One particular feature Sass provides that is being overly misused by many develo
     }
   }
 }
-```
+{% endhighlight %}
 
 ... will generate this CSS:
 
 
-```css
+{% highlight css %}
 .foo .bar:hover {
   content: baz;
 }
-```
+{% endhighlight %}
 
 Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
 
-```scss
+{% highlight scss %}
 .foo {
   &-bar {
     content: "Howdy! I am `.foo-bar`.";
   }
 }
-```
+{% endhighlight %}
 
 This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generated `.block__element` and `.block--modifier` selectors based on the original one (i.e. `.block` in this case).
 
-*Note: while it might be anecdotal, generating new selectors from the current selector reference (`&`) makes those selectors unsearchable in the code base since they do not exist per se.*
+<div class="note">
+  <p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&</code>) makes those selectors unsearchable in the code base since they do not exist per se.</p>
+</div>
 
 The problem with selector nesting is it ultimately makes code more difficult to read. Because one has to mentally compute the resulting selector out of the indentation levels, it is not always quite obvious what the CSS will end up being.
 
@@ -232,7 +274,7 @@ This statement is getting even truer when selectors get longer and references to
 
 To prevent such a situation to happen, we avoid selector nesting except when it comes to pseudo-classes and pseudo-elements. These are the only cases where nesting is allowed, and even recommended.
 
-```scss
+{% highlight scss %}
 .foo {
   content: "regular";
 
@@ -244,7 +286,7 @@ To prevent such a situation to happen, we avoid selector nesting except when it 
     content: "pseudo-element";
   }
 }
-```
+{% endhighlight %}
 
 Using selector nesting for pseudo-classes and pseudo-elements not only makes sense because it deals with closely related selectors, but also helps keeping everything about a component at the same place.
 
@@ -268,13 +310,13 @@ Sass placeholders are deliberately omitted from this list since they can be cons
 
 Regarding variables, functions and mixins, we stick to something very *CSSy*: hyphen-delimited, no camel-case, and above all meaningful.
 
-```scss
+{% highlight scss %}
 $vertical-rhythm-baseline: 1.5rem;
 
 @mixin size($width, $height: $width) { /* ... */ }
 
 @function opposite-direction($direction) { /* ... */ }
-```
+{% endhighlight %}
 
 # Commenting
 
@@ -295,7 +337,7 @@ And I probably forgot a lot of other various reasons as well. Commenting takes v
 
 Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining what is the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
 
-```scss
+{% highlight css %}
 /**
  * Helper class to truncate and add ellipsis to a string too long for it to fit
  * on a single line.
@@ -307,17 +349,17 @@ Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining wh
   text-overflow: ellipsis; /* 2 */
   overflow: hidden;
 }
-```
+{% endhighlight %}
 
 Basically everything that is not obvious from the first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
 When commenting a Sass specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development process.
 
-```scss
+{% highlight scss %}
 // Add current module to the list of imported modules.
 // `!global` flag is required so it actually updates the global variable.
 $imported-modules: append($imported-modules, $module) !global;
-```
+{% endhighlight %}
 
 ## Documentation
 
@@ -325,34 +367,41 @@ Every variable, function, mixin and placeholder that is intended to be re-used a
 
 SassDoc provides two different syntaxes for comments: either C-style or inline. For instance both of the following snippets are valid SassDoc comments:
 
-```scss
+{% highlight scss %}
 /**
  * Vertical rhythm baseline used all over the code base.
  * @type Length
  **/
 $vertical-rhythm-baseline: 1.5rem;
-```
+{% endhighlight %}
 
-*Note: two stars (`/`) required before the closing slash (`/`).*
+<div class="note">
+  <p>Two stars (<code>/</code>) required before the closing slash (<code>/</code>).</p>
+</div>
 
-```scss
+{% highlight scss %}
 /// Vertical rhythm baseline used all over the code base.
 /// @type Length
 $vertical-rhythm-baseline: 1.5rem;
-```
+{% endhighlight %}
 
-*Note: three slashes (`/`) required.*
+<div class="note">
+  <p>Three slashes (<code>/</code>) required.</p>
+</div>
 
 SassDoc has two major roles:
 
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
 * being able to generate an HTML version of the API documentation by using any of the SassDoc endpoint (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
-![SassDoc powered documentation](http://sassdoc.com/assets/images/preview-image.png)
+<figure>
+<img alt="" src="/assets/images/sassdoc-preview.png" />
+<figcaption>Documentation generated by SassDoc</figcaption>
+</figure>
 
 Here is an example of mixin documented with SassDoc:
 
-```scss
+{% highlight scss %}
 /// Mixin helping defining both `width` and `height` simultaneously.
 ///
 /// @author Hugo Giraudel
@@ -385,7 +434,7 @@ Here is an example of mixin documented with SassDoc:
   width: $width;
   height: $height;
 }
-```
+{% endhighlight %}
 
 # Architecture
 
@@ -415,11 +464,14 @@ And of course:
 
 * `main.scss`
 
-![Sass by Tolkien](https://dl.dropboxusercontent.com/u/5465537/SASS-poster.jpg)
+<figure>
+  <img src="/assets/images/sass-wallpaper.jpg" alt="" />
+  <figcaption>Wallpaper by <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
+</figure>
 
 Ideally, we can come up with something like this:
 
-```
+{% highlight css %}
 sass/
 |
 |– base/
@@ -466,7 +518,7 @@ sass/
 |
 |
 `– main.scss             # primary Sass file
-```
+{% endhighlight %}
 
 ## Base folder
 
@@ -486,7 +538,9 @@ The `layout/` folder contains everything that takes part in layouting the site o
 * `_forms.scss`
 * `_navigation.scss`
 
-*Note: The `layout/` folder might also be called `partials/`, depending on what you prefer.*
+<div class="note">
+  <p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p>
+</div>
 
 ## Components folder
 
@@ -496,7 +550,9 @@ For smaller components, there is the `components/` folder. While `layout/` is *m
 * `_carousel.scss`
 * `_thumbnails.scss`
 
-*Note: the `components/` folder might also be called `modules/`, depending on what you prefer.*
+<div class="note">
+  <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
+</div>
 
 ## Pages folder
 
@@ -505,7 +561,9 @@ If you have page-specific styles, it is better to put them in a `pages/` folder,
 * `_home.scss`
 * `_contact.scss`
 
-*Note: depending on your deployment process, those files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.*
+<div class="note">
+  <p>Depending on your deployment process, those files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
+</div>
 
 ## Themes folder
 
@@ -527,7 +585,9 @@ The rule of thumb for this folder is that it should not output a single line of 
 * `_functions.scss`
 * `_placeholders.scss` (frequently named `_helpers.scss`)
 
-*Note: the `utils/` folder might also be called `helpers/`, `sass-helpers/` or `sass-utils/`, depending on what you prefer.*
+<div class="note">
+  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, depending on what you prefer.</p>
+</div>
 
 ## Vendors folder
 
@@ -545,21 +605,13 @@ If you have to override a section of any vendor, I recommand you have a 8th fold
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
 * [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
-# Sass features
+# Up Next
 
-## Variables
-
-## Mixin
-
-## Extend
-
-### Further reading
-
-* [Why You Should Avoid `@extend`](http://www.sitepoint.com/avoid-sass-extend/)
-* [When to use @⁠extend; when to use a mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
-* [Don’t Over-@extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-
-## Warnings and errors
+* Sass features
+  * Variables
+  * Mixins
+  * Extend
+  * Warnings and errors
 
 [sass]: http://sass-lang.com
 [sass_documentation]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html

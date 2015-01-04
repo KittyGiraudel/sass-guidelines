@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font: 1.125em/1.35 "Droid Sans", "Helvetica", "Arial", sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+  font-weight: bold;
+  transition: .15s;
+
+  @include on-event {
+    color: $secondary-color;
+  }
+}

@@ -1,0 +1,62 @@
+/// Define the element as a container
+/// @author Hugo Giraudel
+@mixin container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/// Apply vertical rhythm
+/// @author Hugo Giraudel
+@mixin vertical-rhythm {
+  margin-bottom: $vertical-rhythm-baseline;
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self (false) - Whether or not to include current selector
+/// @see https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Contexts
+/// @author Hugo Giraudel
+/// @param {String | List} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// Small screens helper
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+@mixin respond-to($breakpoint) {
+  $breakpoints: (
+    'medium': 801px
+  );
+
+  @if map-has-key($breakpoints, $breakpoint) == false {
+    @error "Invalid breakpoint #{$breakpoint}.";
+  }
+
+  @media all and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}

@@ -1,0 +1,24 @@
+.button {
+  @include vertical-rhythm;
+  padding: 1em;
+  border: .25em solid;
+  color: $secondary-color;
+  display: block;
+  border-radius: .3em;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include on-event {
+    color: $main-color;
+  }
+
+  @include respond-to("medium") {
+    display: inline-block;
+  }
+}
+
+.button-wrapper {
+  text-align: center;
+  padding: 1em 0;
+}
