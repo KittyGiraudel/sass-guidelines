@@ -80,6 +80,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
   * [`!default` Flag](#default-flag)
   * [`!global` Flag](#global-flag)
   * [Multiple Variables Or Map](#multiple-variables-or-map)
+* [Extend](#extend)
 * [Up Next](#up-next)
 
 
@@ -234,7 +235,7 @@ Obviously, they are certainly not the only way of doing and may or may not suit 
 
 ## Key principles
 
-At the end of the day, if there is one thing I'd like you to get from this whole styleguide, it is that Sass should be kept as simple as it can be.
+At the end of the day, if there is one thing I'd like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
 
 Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators][sassybitwise], [iterators and generators][sassyiteratorsgenerators] and [a JSON parser][sassyjson] in Sass, so trust me when I say I am well aware of what one can do with this preprocessor.
 
@@ -276,7 +277,7 @@ CSS does not require strings to be quoted even those containing spaces. Take fon
 
 Because of that, Sass does not require strings to be quoted as well. Even better, a quoted string is strictly equivalent to this unquoted twin (e.g. `"abc"` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority thus we should always be wrapper strings with double quotes in Sass. Aside of consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority thus **strings should always be wrapped with double quotes** in Sass. Aside of consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
 
 * most syntax highlights will choke on unquoted strings;
 * it helps general readibility;
@@ -306,6 +307,8 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
 
 In Sass, number is a data type englobing everything from unitless numbers to lengths, durations, frequencies, angles and so on. This is intended in order to be able to run calculations on lengths and such.
 
+### Floats
+
 Floats should not display the leading 0.
 
 {% highlight scss %}
@@ -319,6 +322,8 @@ Floats should not display the leading 0.
   opacity: 0.5;
 }
 {% endhighlight %}
+
+### Casting
 
 When casting a unitless number to a length, an angle or whatever, there are two ways of doing this properly, and an incorrect one. Pick wisely.
 
@@ -337,7 +342,9 @@ $length: $value + px;
 
 Appending the unit as a string to a number results in a string, preventing any additional operation on the value. This is not what you want.
 
-Top level of Sass numeric calculations should always be wrapped in parenthesis. This requirement not only dramatically improves readability, but also prevents some edge cases by forcing Sass to evaluate the content of parenthesis.
+### Calculations
+
+**Top-level numeric calculations should always be wrapped in parenthesis**. This requirement not only dramatically improves readability, but also prevents some edge cases by forcing Sass to evaluate the content of parenthesis.
 
 {% highlight scss %}
 // Yep
@@ -366,9 +373,28 @@ Top level of Sass numeric calculations should always be wrapped in parenthesis. 
 
 Colors occupy an important place of the CSS language. Because of this, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-My advice would be to express colors in HSL when possible since it is the friendliest color notation for the human brain. It also makes colors easy to tweak by adjusting the hue, the saturation or the lightness individually. If HSL is not an option, opt for RGB which still presents the benefit of understanding if the color is closer to red, green or blue. Else use hexadecimal notation.
+### Color format
 
-When possible, always use the CSS color keywords in place of any other notation. When using a color more than once, store it in a variable with a meaninful name so you can reuse it.
+In order to make colors as simple as they can be, my advice would be to respec tthe following order of preference for color formats:
+
+1. [CSS color keywords](http://www.w3.org/TR/css3-color/#svg-color);
+1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
+1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
+1. Hexadecimal notation. Preferably lowercase and shortened when possible.
+
+{% highlight scss %}
+// Yep
+.element {
+  color: red;
+}
+
+// Nope
+.element {
+  color: #FF0000;
+}
+{% endhighlight %}
+
+When using a color more than once, store it in a variable with a meaninful name so you can reuse it.
 
 {% highlight scss %}
 // Yep
@@ -378,16 +404,53 @@ $sass-pink: #c69;
 $pink: #c69;
 {% endhighlight %}
 
-To lighten or darken a color, do not use [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) Sass functions. Instead, use the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function to mix your color with either `white` or `black`. The benefit of using `mix` rather than one of the two fore-mentioned functions is that is will slowly go to black (or white) as you decrease the proportion of the color. Whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+### Lightening and darkening colors
+
+To lighten or darken a color, do not use [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) Sass functions. Instead, use the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function to mix your color with either `white` or `black`.
+
+The benefit of using `mix` rather than one of the two forementioned functions is that is will progressively go to black (or white) as you decrease the proportion of the color whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
 
 <p data-height="400" data-theme-id="0" data-slug-hash="wBopOd" data-default-tab="result" data-user="HugoGiraudel" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/wBopOd/'>Dadgumit, Blowouts</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+If you don't want to write the `mix` function every time, you can create two easy-to-use functions to do the same thing:
+
+{% highlight scss %}
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+{% endhighlight %}
+
+### Further reading
+
+* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+
+
+
+
 
 
 ## Lists
 
 Lists are the Sass equivalent of arrays. It is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
 
-Unless you have a good reason to do so (using a Sass list a CSS list of values for instance), always use a comma as a delimiter. While making the list slightly longer, it helps distinguishing values from each others and stay consistent with most languages.
+Unless you have a good reason to do so (using a Sass list a CSS list of values for instance), always **use comma as a delimiter**. While making the list slightly longer, it helps distinguishing values from each others and stay consistent with most languages.
 
 {% highlight scss %}
 // Yep
@@ -396,6 +459,10 @@ $font-stack: "Helvetica", "Arial", sans-serif;
 // Nope
 $font-stack: "Helvetica" "Arial" sans-serif;
 {% endhighlight %}
+
+### Further reading
+
+* [SassyLists][sassylists]
 
 
 
@@ -410,7 +477,7 @@ Maps should be written as follow:
 
 * space after the color (`:`);
 * opening brace (`(`) on the same line as the color (`:`);
-* quoted keys if they are string (which represents 99% of the cases);
+* **quoted keys** if they are string (which represents 99% of the cases);
 * each key/value pair on its own new line;
 * comma (`,`) at the end of each key/value except the last;
 * closing brace (`)`) on its own new line;
@@ -429,6 +496,13 @@ $breakpoints: (
 // Nope
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
+
+### Further reading
+
+* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
+* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
 
 
 
@@ -497,6 +571,10 @@ Illustration:
 }
 {% endhighlight %}
 
+### Further reading
+
+* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+
 
 
 
@@ -545,7 +623,7 @@ The problem with selector nesting is it ultimately makes code more difficult to 
 
 This statement is getting even truer when selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk to lose track and not being able to understand what's going anymore is so high that it is not worth it.
 
-To prevent such a situation to happen, we avoid selector nesting except when it comes to pseudo-classes and pseudo-elements. These are the only cases where nesting is allowed, and even recommended.
+To prevent such a situation to happen, we **avoid selector nesting except for pseudo-classes and pseudo-elements**. These are the only cases where nesting is allowed, and even recommended.
 
 {% highlight scss %}
 .foo {
@@ -591,7 +669,7 @@ There are a few things you can name in Sass, and it is important to name them we
 
 Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
 
-Regarding variables, functions and mixins, we stick to something very *CSSy*: hyphen-delimited, no camel-case, and above all meaningful.
+Regarding variables, functions and mixins, we stick to something very *CSSy*: **hyphen-delimited**, no camel-case, and above all meaningful.
 
 {% highlight scss %}
 $vertical-rhythm-baseline: 1.5rem;
@@ -600,6 +678,10 @@ $vertical-rhythm-baseline: 1.5rem;
 
 @function opposite-direction($direction) { /* ... */ }
 {% endhighlight %}
+
+### Further reading
+
+* [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
 
 
@@ -658,6 +740,10 @@ When commenting a Sass specific section, use Sass inline comments instead of a C
 // `!global` flag is required so it actually updates the global variable.
 $imported-modules: append($imported-modules, $module) !global;
 {% endhighlight %}
+
+### Further reading
+
+* [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
 
 
 
@@ -738,6 +824,12 @@ Here is an example of mixin documented with SassDoc:
   height: $height;
 }
 {% endhighlight %}
+
+### Futher reading
+
+* [SassDoc official website][sassdoc]
+* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [New Features and New Look for SassDoc](http://webdesign.tutsplus.com/articles/new-features-and-a-new-look-for-sassdoc--cms-21914)
 
 
 
@@ -999,6 +1091,8 @@ No new line between two imports of a same folder, a new line after the last impo
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
 * [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
+* [SMACSS](https://smacss.com/)
+* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 
 
 
@@ -1108,17 +1202,59 @@ $z-indexes: (
 
 
 
+## Extend
 
+The `@extend` directive has to be one of the features that made Sass that popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
+
+While this feature might help in some circumstancies, it still presents a lot of drawbacks, possibly introducing more issues than it fixes.
+
+The main problem with `@extend` is that it is completely invisible. When extending a selector, you have absolutely no way to know what is going to answer to those questions without having an in-depth knowledge of the whole code base:
+
+* where is my current selector going to be appended?
+* am I likely to be causing undesireed side-effects?
+* how large is the CSS generated by this single extend?
+
+For what you know, the result could range from doing nothing to causing disastrous side-effects. And this is a problem. A CSS project is no place for randomness.
+
+Aside of the fact that this feature does not make your stylesheet *obvious*, which should be a priority at all time, it also presents some issues when used inside a media block.
+
+As you may know, Sass is unable to extend an outer selector from within a media query. When doing so, the compiler simple crashes, telling you that you cannot do such a thing. Not great. Especially since media queries is almost all we do know.
+
+{% highlight scss %}
+.foo {
+  content: "foo";
+}
+
+@media print {
+  .bar {
+    // This doesn't work. Worse: it crashes.
+    @extend .foo;
+  }
+}
+{% endhighlight %}
+
+> You may not @extend an outer selector from within @media.<br>
+> You may only @extend selectors within the same directive.
+
+Last but not least, `@extend` is very unflexible compared to a mixin. There is no way to catch errors, add parameters or include some extra logic. For little to no benefit.
+
+To sum up, **the `@extend` directive is prohibited.**
+
+
+### Further reading
+
+* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
 
 
 
 
 # Up Next
 
-* Sass features
-  * Mixins
-  * Extend
-  * Warnings and errors
+* Mixins
+* Extend
+* Warnings and errors
 
 [sass]: http://sass-lang.com
 [sass_documentation]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
