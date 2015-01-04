@@ -31,6 +31,10 @@ blockquote {
 
 h1, h2, h3 {
   text-transform: capitalize;
+
+  code {
+    text-transform: initial;
+  }
 }
 
 h1 {
