@@ -1201,7 +1201,7 @@ $variable: "initial value" !global;
 .other-local-scope {
   content: $variable;
 }
-{% endhiglight %}
+{% endhighlight %}
 
 
 
