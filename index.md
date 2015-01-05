@@ -81,7 +81,8 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
   * [`!global` Flag](#global-flag)
   * [Multiple Variables Or Map](#multiple-variables-or-map)
 * [Extend](#extend)
-* [Up Next](#up-next)
+* [Mixins](#mixins)
+* [Warnings and errors](#warnings-and-errors)
 
 
 
@@ -381,6 +382,8 @@ In order to make colors as simple as they can be, my advice would be to respec t
 1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Hexadecimal notation. Preferably lowercase and shortened when possible.
+
+For starter, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend but also makes it easy for stylesheets authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB has still the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Last, hexadecimal is close to indecipherable for the humain mind.
 
 {% highlight scss %}
 // Yep
@@ -1202,7 +1205,7 @@ $z-indexes: (
 
 
 
-## Extend
+# Extend
 
 The `@extend` directive has to be one of the features that made Sass that popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
 
@@ -1247,14 +1250,14 @@ To sum up, **the `@extend` directive is prohibited.**
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
 
+# Mixins
 
+To be added.
 
+# Warnings and Errors
 
-# Up Next
+To be added.
 
-* Mixins
-* Extend
-* Warnings and errors
 
 [sass]: http://sass-lang.com
 [sass_documentation]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
