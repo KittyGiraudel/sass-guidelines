@@ -96,6 +96,10 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Mixins](#mixins)
   * [Basics](#basics)
   * [Arguments list](#arguments-list)
+* [Loops](#loops)
+  * [Each](#each)
+  * [For](#for)
+  * [While](#while)
 * [Warnings and errors](#warnings-and-errors)
   * [Warnings](#warnings)
   * [Errors](#errors)
@@ -1598,6 +1602,70 @@ $params: (
 
 
 
+
+
+
+
+
+
+# Loops
+
+Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
+
+However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and actually solves an issue.
+
+
+
+
+
+## Each
+
+The `@each` loops is definitely the more used of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+
+{% highlight scss %}
+@each $theme in $themes {
+  .section-#{$theme} {
+    background-color: map-get($colors, $theme);
+  }
+}
+{% endhighlight %}
+
+When iterating on a map, always use `$key` and `$value` as variable names to enforce consistency.
+
+{% highlight scss %}
+@each $key, $value in $map {
+  .section-#{$key} {
+    background-color: $value;
+  }
+}
+{% endhighlight %}
+
+
+
+
+
+## For
+
+The `@for` loops might be useful when combined with CSS `:nth-*` pseudo-classes. Aside of those scenarios, prefer an `@each` loop if you *do have* to iterate over something.
+
+{% highlight scss %}
+@for $i from 1 through 10 {
+  .element:nth-of-type(#{$i}) {
+    border-color: hsl($i * 36, 50%, 50%);
+  }
+}
+{% endhighlight %}
+
+Always use `$i` as a variable name to stick to the usual conventions and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+
+
+
+
+
+
+## While
+
+The `@while` loop has absolutely no use case in a real Sass projet. **Do not use it**.
 
 
 
