@@ -4,9 +4,9 @@ layout: default
 
 # About the author
 
-My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc][sassdoc] and [Sass-Compatibility][sass_compatibility].
+My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc](http://sassdoc.com) and [Sass-Compatibility](http://sass-compatibility.github.io).
 
-I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON][sassyjson], [SassyLists][sassylists], [SassySort][sassysort], [SassyCast][sassycast], [SassyMatrix][sassymatrix], [SassyBitwise][sassybitwise], [SassyIteratorsGenerators][sassyiteratorsgenerators], [SassyLogger][sassylogger], [SassyStrings][sassystrings] and [SassyGradients][sassygradients].
+I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) and [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
 <div class="button-wrapper">
   <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">Catch me on Twitter</a>
@@ -26,7 +26,7 @@ I have also written a couple of Sass libraries, mostly for the heck of it: [Sass
 
 Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
 
-Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository][repository] would be great! Also, I like beer if you wanna pay me back.
+Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great! Also, I like beer if you wanna pay me back.
 
 <div class="button-wrapper">
   <a href="https://github.com/{{ site.github_username }}/sass-guidelines" target="_blank" class="button">GitHub repository</a>
@@ -100,7 +100,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
 
 # About Sass
 
-This is how [Sass][sass] describes itself in its [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+This is how [Sass](http://sass-lang.com) describes itself in its [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass is an extension of CSS that adds power and elegance to the basic language.
 
@@ -114,7 +114,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 ### Further reading
 
-* [Sass][sass]
+* [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
 
@@ -124,11 +124,11 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 ## Ruby Sass or LibSass
 
-[Sass' first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass][libsass] (written in C) is now close to being fully compatible with the original Ruby version.
+[Sass' first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass](https://github.com/sass/libsass) (written in C) is now close to being fully compatible with the original Ruby version.
 
 In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older brother.
 
-Last inconsistencies are gathered and listed by myself under the [Sass-Compatibility][sass_compatibility] project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
+Last inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
 Now when it comes to choosing your compiler, it does not really matter. Actually, it is really up to your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case.
 
@@ -136,7 +136,7 @@ On the other hand, LibSass is mostly dedicated to being wrapped. So if you want 
 
 ### Further reading
 
-* [Sass-Compatibility][sass_compatibility]
+* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 
@@ -246,7 +246,7 @@ Obviously, this is certainly not the only way of doing and may or may not suit y
 
 At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
 
-Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators][sassybitwise], [iterators and generators][sassyiteratorsgenerators] and [a JSON parser][sassyjson] in Sass, so trust me when I say I am well aware of what one can do with this preprocessor.
+Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, so trust me when I say I am well aware of what one can do with this preprocessor.
 
 Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) in some circumstances.
 
@@ -509,7 +509,7 @@ $font-stack: "Helvetica" "Arial" sans-serif;
 
 ### Further reading
 
-* [SassyLists][sassylists]
+* [SassyLists](http://sassylists.com)
 
 
 
@@ -799,7 +799,7 @@ $imported-modules: append($imported-modules, $module) !global;
 
 ## Documentation
 
-Every variable, function, mixin and placeholder that is intended to be re-used all over the code base should be documented as part of the global API using [SassDoc][sassdoc].
+Every variable, function, mixin and placeholder that is intended to be re-used all over the code base should be documented as part of the global API using [SassDoc](http://sassdoc.com).
 
 SassDoc provides two different syntaxes for comments: either C-style or inline. For instance both of the following snippets are valid SassDoc comments:
 
@@ -876,7 +876,7 @@ Here is an example of a mixin extensively documented with SassDoc:
 
 ### Futher reading
 
-* [SassDoc official website][sassdoc]
+* [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
 * [New Features and New Look for SassDoc](http://webdesign.tutsplus.com/articles/new-features-and-a-new-look-for-sassdoc--cms-21914)
 
@@ -1501,20 +1501,29 @@ $z-indexes: (
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger][sassylogger]
+* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
-[sass]: http://sass-lang.com
-[libsass]: https://github.com/sass/libsass
-[repository]: https://github.com/HugoGiraudel/sass-guidelines
-[sassdoc]: http://sassdoc.com
-[sass_compatibility]: http://sass-compatibility.github.io
-[sassyjson]: https://github.com/HugoGiraudel/SassyJSON
-[sassylists]: https://github.com/at-import/SassyLists
-[sassysort]: https://github.com/HugoGiraudel/SassySort
-[sassycast]: https://github.com/HugoGiraudel/SassyCast
-[sassymatrix]: https://github.com/HugoGiraudel/SassyMatrix
-[sassybitwise]: https://github.com/HugoGiraudel/SassyBitwise
-[sassyiteratorsgenerators]: https://github.com/HugoGiraudel/SassyIteratorsGenerators
-[sassylogger]: https://github.com/HugoGiraudel/SassyLogger
-[Sassystrings]: https://github.com/HugoGiraudel/SassyStrings
-[Sassygradients]: https://github.com/HugoGiraudel/SassyGradients
+## Tl;dr
+
+To sum up, we want:
+
+* Two (2) spaces indents, no tabs;
+* 80-characters wide lines;
+* Properly written multi-lines CSS;
+* Meaningful uses of whitespace;
+* Quoted strings;
+* No leading 0 for floats;
+* Calculations wrapped in parenthesis;
+* No magic numbers;
+* Colors expressed in keywords > HSL > RGB > hexadecimal;
+* Lists separated with commas;
+* No trailing comma in lists and maps;
+* No selector nesting expected pseudo-classes and pseudo-elements;
+* Hyphen-delimited naming;
+* Extensive comments;
+* SassDoc-powered API comments;
+* 7-1 architecture pattern
+* No `@extend`;
+* Simple mixins;
+* Meaningful uses of warnings and errors.
+
