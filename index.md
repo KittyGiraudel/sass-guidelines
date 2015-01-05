@@ -1168,6 +1168,45 @@ Basically, that means it has no point declaring a variable that will never be up
 
 
 
+## Scoping
+
+Variable scoping in Sass has changed over the years. Until fairly recently, all variables declarations were global, no matter where. Since version 3.4, Sass now properly tackles the concept of scopes and local variables.
+
+Actually, it is not really that Sass has different scopes. Indeed, the docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+
+{% highlight scss %}
+// Initialize a global variable at root level.
+// In this case, the `!global` flag is optional.
+$variable: "initial value" !global;
+
+// Create a mixin that overrides that global variable.
+@mixin global-variable-overriding {
+  $variable: "mixin value" !global;
+}
+
+.local-scope {
+  // Create a local variable that shadows the global one.
+  $variable: "local value";
+
+  // Include the mixin: it overrides the global variable.
+  @include global-variable-overriding;
+
+  // Print the variable's value.
+  // It is the **local** one, since it shadows the global one.
+  content: $variable;
+}
+
+// Print the variable in another selector that does no shadowing.
+// It is the **global** one, as expected.
+.other-local-scope {
+  content: $variable;
+}
+{% endhiglight %}
+
+
+
+
+
 ## `!default` flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
