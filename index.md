@@ -1761,6 +1761,7 @@ $z-indexes: (
 
 What is nice with such a popular CSS preprocessor as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
+However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
 
 
 
@@ -1801,6 +1802,10 @@ linters:
     style: double_quotes
 {% endhighlight %}
 
+<div class="note">
+  <p><a href="https://twitter.com/fweinb">Fabrice Weinberg</a> is the author of a Grunt plugin for SCSS-lint called <a href="https://github.com/FWeinb/grunt-scsslint">grunt-scsslint</a>.</p>
+</div>
+
 # Too Long; Didn't read
 
 To sum up, we want:
@@ -1823,5 +1828,7 @@ To sum up, we want:
 * 7-1 architecture pattern
 * No `@extend`;
 * Simple mixins;
+* As few loops as possible, no `@while`;
+* Reduced number of dependencies;
 * Meaningful uses of warnings and errors.
 
