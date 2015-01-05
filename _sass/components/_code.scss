@@ -5,11 +5,11 @@
   @include vertical-rhythm;
   background: $dark-background;
   color: white;
-  padding: 2em 0;
 
   > pre {
     margin-top: 0;
     margin-bottom: 0;
+    padding: 2em 0;
     font-family: $code-font-stack;
   }
 }

@@ -24,5 +24,12 @@ a {
   @include on-event {
     color: $secondary-color;
   }
+
+  &:visited {
+    font-weight: normal;
+  }
 }
 
+:not(pre) > code {
+  color: #6b717f;
+}
