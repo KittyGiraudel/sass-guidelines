@@ -1267,7 +1267,70 @@ To sum up, **the `@extend` directive is prohibited.**
 
 # Mixins
 
-To be added.
+Mixins are one of the most used features from the whole Sass language. They are the key to re-usability and DRY components. And for good reason: mixins allow authors to define styles that cazn be re-used throughout the stylesheet without needing to resort to non-semantic classes such as `.float-left`.
+
+They can contain full CSS rules and pretty much everything that is allowed anywhere in a Sass document. They can even take arguments in just as functions. Needless to say possibilities are endless.
+
+Although I feel like I must warn you against abusing mixins' power. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive logic. It's called overengineering and most developers suffer from it. Do not overthink your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either splitted into smaller chunks or completely revisited.
+
+That being said, mixins are extremely useful and you should be using some. The rule of thumb is if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
+
+{% highlight scss %}
+/// Helper to clear inner floats
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+{% endhighlight %}
+
+A mixin you should probably use at all time on any Sass project, no matter how you've written it, is a breakpoint manager. Now that Responsive Web Design has become a thing™, sites and applications have to support a whole range of devices and screen sizes. Thankfully, we have Media Queries for this.
+
+However, repeating media queries over and over again is far from convenient, not only because the syntax is annoying but essentially because it hurts maintainability. Then, perfect use case for a mixin.
+
+{% highlight scss %}
+/// Map of breakpoints for responsive design.
+/// @access private
+/// @see {mixin} respond-to
+/// @type Map
+$breakpoints: (
+  "small":  (max-width: 800px),
+  "medium": (min-width: 801px)
+) !global;
+
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @error "No value found for `#{$breakpoint}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+{% endhighlight %}
+
+Usage is both simple and obvious.
+
+{% highlight scss %}
+.element {
+  color: red;
+
+  @include respond-to("small") {
+    color: blue;
+  }
+}
+{% endhighlight %}
 
 # Warnings and Errors
 
