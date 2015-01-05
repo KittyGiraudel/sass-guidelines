@@ -60,7 +60,13 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Syntax & Formatting](#syntax--formatting)
   * [Strings](#strings)
   * [Numbers](#numbers)
+    * [Floats](#floats)
+    * [Casting a unitless number](#casting-a-unitless-number)
+    * [Calculations](#calculations)
+    * [Magic numbers](#magic-numbers)
   * [Colors](#colors)
+    * [Color format](#color-format)
+    * [Lightening and Darkening Colors](#lightening-and-darkening-colors)
   * [Lists](#lists)
   * [Maps](#maps)
   * [CSS Ruleset](#css-ruleset)
@@ -71,14 +77,15 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
   * [Documentation](#documentation)
 * [Architecture](#architecture)
   * [The 7-1 pattern](#the-7-1-pattern)
-  * [Base Folder](#base-folder)
-  * [Components Folder](#components-folder)
-  * [Layout Folder](#layout-folder)
-  * [Pages Folder](#pages-folder)
-  * [Themes Folder](#themes-folder)
-  * [Utils Folder](#utils-folder)
-  * [Vendors Folder](#vendors-folder)
-  * [Main file](#main-file)
+    * [Base Folder](#base-folder)
+    * [Components Folder](#components-folder)
+    * [Layout Folder](#layout-folder)
+    * [Pages Folder](#pages-folder)
+    * [Themes Folder](#themes-folder)
+    * [Utils Folder](#utils-folder)
+    * [Vendors Folder](#vendors-folder)
+    * [Main file](#main-file)
+  * [Shame file](#shame-file)
 * [Variables](#variables)
   * [Scoping](#scoping)
   * [!default Flag](#default-flag)
@@ -985,7 +992,7 @@ sass/
 
 
 
-## Base folder
+### Base folder
 
 The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I use to call `_base.scss`) defining some standard styles for most used HTML elements.
 
@@ -998,7 +1005,7 @@ The `base/` folder holds what we might call the boilerplate code for the project
 
 
 
-## Layout folder
+### Layout folder
 
 The `layout/` folder contains everything that takes part in laying out the site or application. Could it be stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even the CSS styles for all the forms.
 
@@ -1018,7 +1025,7 @@ The `layout/` folder contains everything that takes part in laying out the site 
 
 
 
-## Components folder
+### Components folder
 
 For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contain all kind of specific modules like a slider, a loader, a widget, or basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
 
@@ -1035,7 +1042,7 @@ For smaller components, there is the `components/` folder. While `layout/` is *m
 
 
 
-## Pages folder
+### Pages folder
 
 If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
 
@@ -1051,7 +1058,7 @@ If you have page-specific styles, it is better to put them in a `pages/` folder,
 
 
 
-## Themes folder
+### Themes folder
 
 On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
 
@@ -1067,7 +1074,7 @@ On large sites and applications, it is not unusual to have different themes. The
 
 
 
-## Utils folder
+### Utils folder
 
 The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variables, functions, mixins and placeholders should be put in there.
 
@@ -1087,7 +1094,7 @@ The rule of thumb for this folder is that it should not output a single line of 
 
 
 
-## Vendors folder
+### Vendors folder
 
 And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to tell “Hey, this is not from me, not my code, not my responsibility”.
 
@@ -1100,7 +1107,7 @@ If you have to override a section of any vendor, I recommend you have a 8th fold
 
 For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
 
-## Main file
+### Main file
 
 The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
 
@@ -1161,6 +1168,37 @@ In order to preserve readability, the main file should respect those guidelines:
 * [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
+
+
+
+
+
+
+
+## Shame file
+
+There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists on putting all the CSS declarations, hacks and things we are not proud about in a *shame file*. This file, dramatically entitled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+
+{% highlight scss %}
+/**
+ * Nav specificity fix.
+ *
+ * Someone used an ID in the header code (`#header a {}`) which trumps the
+ * nav selectors (`.site-nav a {}`). Use !important to override it until I
+ * have time to refactor the header stuff.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+
+### Further reading
+
+* [shame.css](http://csswizardry.com/2013/04/shame-css/)
+* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
+
+
+
 
 
 
