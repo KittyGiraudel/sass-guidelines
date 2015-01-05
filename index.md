@@ -377,11 +377,27 @@ Appending the unit as a string to a number results in a string, preventing any a
 }
 {% endhighlight %}
 
+### Magic numbers
+
+Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just some random number that happens to *just work*™ yet is not tied to any logical explanation.
+
+Needless to say **magic numbers are a plague and should be avoided at all cost**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaning how you got there and why do you suspect it works. Admitting you don't know why it works is still more helpful to the next developer than having to figure out what's going on.
+
+{% highlight scss %}
+/**
+ * 1. Magic number. This value is the lowest I could find to align the top of
+ * `.element` with its parent. Ideally, we should fix it properly.
+ */
+.element {
+  top: .327em; /* 1 */
+}
+{% endhighlight %}
+
 ### Further reading
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-
+* [Magic Number in CSS](http://css-tricks.com/magic-numbers-in-css/)
 
 
 
