@@ -69,6 +69,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
     * [Lightening and Darkening Colors](#lightening-and-darkening-colors)
   * [Lists](#lists)
   * [Maps](#maps)
+    * [Debugging A Sass Map](#debugging-a-sass-map)
   * [CSS Ruleset](#css-ruleset)
   * [Selector Nesting](#selector-nesting)
 * [Naming Conventions](#naming-conventions)
@@ -576,9 +577,54 @@ $breakpoints: (
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
 
+### Debugging a Sass map
+
+If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
+
+{% highlight scss %}
+/// Prints a map as a CSS rule
+/// @access private
+/// @param {Map} $map
+@mixin debug-map($map) {
+  @at-root {
+    @debug-map {
+      __toString__: inspect($map);
+      __length__: length($map);
+      __depth__: if(function-exists("map-depth"), map-depth($map), null);
+      __keys__: map-keys($map);
+      __properties__ {
+        @each $key, $value in $map {
+          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
+        }
+      }
+    }
+  }
+}
+{% endhighlight %}
+
+If you are interested in knowing the depth of the map, add the following function as well. The mixin will display it automatically.
+
+{% highlight scss %}
+/// Compute the maximum depth of a map
+/// @param {Map} $map
+/// @return {Number} max depth of `$map`
+@function depth($map) {
+  $level: 1;
+
+  @each $key, $value in $map {
+    @if type-of($value) == "map" {
+      $level: max(depth($value) + 1, $level);
+    }
+  }
+
+  @return $level;
+}
+{% endhighlight %}
+
 ### Further reading
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
