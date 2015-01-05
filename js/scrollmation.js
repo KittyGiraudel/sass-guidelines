@@ -52,8 +52,6 @@ function sglScrollmation(event) {
       hash_section = document.getElementById(hash_value).offsetTop,
       ease_motion  = easing.easeInOutCubic;
 
-  event.preventDefault();
-
   scrollTo(hash_section, scroll_speed, ease_motion);
 }
 
