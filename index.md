@@ -68,6 +68,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
   * [Writing Comments](#writing-comments)
   * [Documentation](#documentation)
 * [Architecture](#architecture)
+  * [The 7-1 pattern](#the-7-1-pattern)
   * [Base Folder](#base-folder)
   * [Components Folder](#components-folder)
   * [Layout Folder](#layout-folder)
@@ -885,15 +886,15 @@ Here is an example of a mixin extensively documented with SassDoc:
 
 Architecturing a CSS project is probably one of the most difficult things you will have to do in a project's live. Keeping the architecture consistent and meaningful is even harder.
 
-Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do).
+Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass' overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
 
-Thanks to Sass' overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
-
-On top of that, I cannot stress enough the need of folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use have folders; one for the house/flat, one for the bank, one for bills, and so on.
+On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use have folders; one for the house/flat, one for the bank, one for bills, and so on.
 
 There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
 
 There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap][bootstrap]-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
+
+## The 7-1 pattern
 
 I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into a 7 different folders, and a single file at root level (usually named `main.scss`) that imports them all to be compiled into a CSS stylesheet.
 
@@ -965,6 +966,9 @@ sass/
 `– main.scss             # primary Sass file
 </code></pre></div>
 
+<div class="note">
+  <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
+</div>
 
 
 
