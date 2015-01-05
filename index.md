@@ -93,6 +93,8 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
   * [Multiple Variables Or Map](#multiple-variables-or-maps)
 * [Extend](#extend)
 * [Mixins](#mixins)
+  * [Basics](#basics)
+  * [Arguments list](#arguments-list)
 * [Warnings and errors](#warnings-and-errors)
   * [Warnings](#warnings)
   * [Errors](#errors)
@@ -1419,6 +1421,8 @@ They can contain full CSS rules and pretty much everything that is allowed anywh
 
 Although I feel like I must warn you against abusing mixins' power. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive logic. It's called overengineering and most developers suffer from it. Do not overthink your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revisited.
 
+## Basics
+
 That being said, mixins are extremely useful and you should be using some. The rule of thumb is if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
 
 {% highlight scss %}
@@ -1491,6 +1495,66 @@ Leading to the following CSS output:
   }
 }
 {% endhighlight %}
+
+
+
+
+
+
+## Arguments list
+
+When dealing with an unknown number of arguments in a mixin, always use an `arglist` rather than a list. Think of `arglist` as the 8th hidden undocumented data type from Sass that is implicitely used when passing an arbitrary number of arguments to a mixin or a function whose signature contains `...`.
+
+{% highlight scss %}
+@mixin shadows($shadows...) {
+  // type-of($shadows) == "arglist"
+  // ...
+}
+{% endhighlight %}
+
+Now, when building a mixin that accepts a handful of arguments (understand 3 or more), think twice before merging them out as a list or a map thinking it will be easier than passing them all one by one.
+
+Sass is actually pretty clever with mixins and functions declarations, so much that you can actually pass a list or a map as an arglist to a function/mixin so it is being used as a series of arguments.
+
+{% highlight scss %}
+@mixin dummy($a, $b, $c) {
+  // ...
+}
+
+// Yep
+@include dummy(true, 42, "kittens");
+
+// Yep but nope
+$params: true, 42, "kittens";
+$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
+
+// Yep
+$params: true, 42, "kittens";
+@include dummy($params...);
+
+// Yep
+$params: (
+  "c": "kittens",
+  "a": true,
+  "b": 42
+);
+@include dummy($params...);
+{% endhighlight %}
+
+### Further reading
+
+* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+
+
+
+
+
+
+
+
+
+
+
 
 # Warnings and Errors
 
