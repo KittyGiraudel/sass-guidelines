@@ -9,7 +9,7 @@ My name is [Hugo Giraudel][author_website], I am a front-end developer from Fran
 I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON][sassyjson], [SassyLists][sassylists], [SassySort][sassysort], [SassyCast][sassycast], [SassyMatrix][sassymatrix], [SassyBitwise][sassybitwise], [SassyIteratorsGenerators][sassyiteratorsgenerators], [SassyLogger][sassylogger], [SassyStrings][sassystrings] and [SassyGradients][sassygradients].
 
 <div class="button-wrapper">
-  <a href="https://twitter.com/hugogiraudel" target="_blank" class="button">Catch me on Twitter</a>
+  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">Catch me on Twitter</a>
 </div>
 
 
@@ -29,7 +29,7 @@ Sass Guidelines is a free project I maintain in my spare time. Needless to say i
 Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository][repository] would be great! Also, I like beer if you wanna pay me back.
 
 <div class="button-wrapper">
-  <a href="https://twitter.com/hugogiraudel" target="_blank" class="button">GitHub repository</a>
+  <a href="https://github.com/{{ site.github_username }}/sass-guidelines" target="_blank" class="button">GitHub repository</a>
   <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
 </div>
 
