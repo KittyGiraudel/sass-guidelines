@@ -89,6 +89,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Warnings and errors](#warnings-and-errors)
   * [Warnings](#warnings)
   * [Errors](#errors)
+* [Too Long; Didn't Read](#too-long-didnt-read)
 
 
 
@@ -1505,7 +1506,7 @@ $z-indexes: (
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
-## Tl;dr
+## Too Long; Didn't read
 
 To sum up, we want:
 
