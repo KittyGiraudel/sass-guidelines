@@ -106,7 +106,7 @@ This is where Sass comes in, as a meta-language, to improve CSS syntax in order 
 
 The point is not to turn CSS into a fully-featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is not any harder than learning CSS: it simply adds a couple of extra features on top of it.
 
-That being said, there are many ways to use these features. Some good, some bad, so unusual. Those guidelines are meant to give you a consistent and documented approach to writing Sass code.
+That being said, there are many ways to use these features. Some good, some bad, some unusual. Those guidelines are meant to give you a consistent and documented approach to writing Sass code.
 
 ### Further reading
 
