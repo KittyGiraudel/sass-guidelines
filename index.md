@@ -26,10 +26,12 @@ I have also written a couple of Sass libraries, mostly for the heck of it: [Sass
 
 Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
 
-Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great! Also, I like beer if you wanna pay me back.
+Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
+
+Last but not least before we start: if you enjoyed this document, if it is useful for you or your team, please consider supporting it!
 
 <div class="button-wrapper">
-  <a href="https://github.com/{{ site.github_username }}/sass-guidelines" target="_blank" class="button">GitHub repository</a>
+  <a href="https://gum.co/sass-guildelines" target="_blank" class="button">Support Sass Guidelines</a>
   <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
 </div>
 
