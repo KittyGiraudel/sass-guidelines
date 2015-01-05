@@ -874,7 +874,7 @@ On top of that, I cannot stress enough the need of folders, even on small scale 
 
 There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
 
-There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Bootstrap][bootstrap]-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
+There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap][bootstrap]-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
 
 I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into a 7 different folders, and a single file at root level (usually named `main.scss`) that imports them all to be compiled into a CSS stylesheet.
 
