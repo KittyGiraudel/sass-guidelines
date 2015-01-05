@@ -1092,7 +1092,13 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-No new line between two imports of a same folder, a new line after the last import of a folder. File extensions and leading underscores for partials should be omitted.
+In order to preserve readibility, the main file should respect those guidelines:
+
+* one file per `@import`;
+* one `@import` per line;
+* no new line between two imports of a same folder;
+* a new line after the last import of a folder;
+* file extensions and leading underscores omitted.
 
 {% highlight scss %}
 @import "vendors/bootstrap";
