@@ -103,6 +103,9 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Warnings and errors](#warnings-and-errors)
   * [Warnings](#warnings)
   * [Errors](#errors)
+* [Tools](#tools)
+  * [Compass](#compass)
+  * [SCSS-lint](#scss-lint)
 * [Too Long; Didn't Read](#too-long-didnt-read)
 
 
@@ -1746,7 +1749,59 @@ $z-indexes: (
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
-## Too Long; Didn't read
+
+
+
+
+
+
+
+
+# Tools
+
+What is nice with such a popular CSS preprocessor as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+
+
+
+
+
+
+## Compass
+
+[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two maintainers of Ruby Sass, I don't see it dramatically losing in popularity before a while if you want my opinion.
+
+Still, I do not use Compass anymore, the main reason is that it slows Sass a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it is not really here to help.
+
+The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the top of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
+
+Unfortunately, this is all sugar and there is no killer feature in there. Exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+
+Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass compatible (even if efforts have been made going towards that direction). If you feel better using it, fair enough but I don't think you'll get much from it at the end of the day.
+
+
+
+
+
+
+## SCSS-lint
+
+Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody's perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+
+[SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
+
+Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+
+{% highlight yaml %}
+linters:
+  MergeableSelector:
+    force_nesting: false
+  SingleLinePerProperty:
+    allow_single_line_rule_sets: false
+  StringQuotes:
+    style: double_quotes
+{% endhighlight %}
+
+# Too Long; Didn't read
 
 To sum up, we want:
 
