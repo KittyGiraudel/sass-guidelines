@@ -4,7 +4,7 @@ layout: default
 
 # About the author
 
-My name is [Hugo Giraudel][author_website], I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc][sassdoc] and [Sass-Compatibility][sass_compatibility].
+My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc][sassdoc] and [Sass-Compatibility][sass_compatibility].
 
 I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON][sassyjson], [SassyLists][sassylists], [SassySort][sassysort], [SassyCast][sassycast], [SassyMatrix][sassymatrix], [SassyBitwise][sassybitwise], [SassyIteratorsGenerators][sassyiteratorsgenerators], [SassyLogger][sassylogger], [SassyStrings][sassystrings] and [SassyGradients][sassygradients].
 
@@ -102,7 +102,7 @@ Now, if you feel like contributing, please know that tweeting about it, spreadin
 
 > Sass is an extension of CSS that adds power and elegance to the basic language.
 
-This is how [Sass][sass] describes itself in its [documentation][sass_documentation]. Sass' ultimate objective is to fix CSS flaws. CSS, as we all know, is not the best language in the world. While very simple to learn, it can quickly get quite messy, especially on large projects.
+This is how [Sass][sass] describes itself in its [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). Sass' ultimate objective is to fix CSS flaws. CSS, as we all know, is not the best language in the world. While very simple to learn, it can quickly get quite messy, especially on large projects.
 
 This is where Sass comes in, as a meta-language, to improve CSS syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding CSS language.
 
@@ -113,7 +113,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 ### Further reading
 
 * [Sass official website][sass]
-* [Sass official documentation][sass_documentation]
+* [Sass official documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
 
 
@@ -130,7 +130,7 @@ Last inconsistencies are gathered and listed by myself under the [Sass-Compatibi
 
 Now when it comes to choosing your compiler, it does not really matter. Actually, it is really up to your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case.
 
-On the other hand, LibSass is mostly dedicated to being wrapped. So if you want to use anything but Ruby, for instance NodeJS, [node-sass][node_sass] is all chosen. Also the major benefit of using LibSass is its speed: it is blazingly fast compared to Ruby Sass.
+On the other hand, LibSass is mostly dedicated to being wrapped. So if you want to use anything but Ruby, for instance NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen. Also the major benefit of using LibSass is its speed: it is blazingly fast compared to Ruby Sass.
 
 ### Further reading
 
@@ -165,26 +165,26 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 ## Other preprocessors
 
-Sass is a preprocessor among others. Its most serious competitor has to be [LESS](), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap][bootstrap] using it. There is also Stylus which is kind of the nerdy unrestricting version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Sass is a preprocessor among others. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also Stylus which is kind of the nerdy unrestricting version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
 Now *why choosing Sass over LESS or another preprocessor* is still a valid question as of today. Not so long ago, we use to recommand Sass for Ruby-based projects because it was first made in Ruby and went well with Ruby on Rails. Now that LibSass has caught up (or so) on original Sass, this is no longer a relevant advice.
 
 What I do like with Sass, it is its conservative aspect regarding CSS. Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extra features on top of a language that is not intented to support any logical aspect. It is a software aiming at solving actual issues; helping writing CSS where CSS shows some weakness.
 
-Preprocessors aside, we should also mention postprocessors, which have known quite a good exposure of the last few months especially thanks to [postCSS][postcss] and [CSSNext][cssnext]. Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else than upcoming CSS syntax.
+Preprocessors aside, we should also mention postprocessors, which have known quite a good exposure of the last few months especially thanks to [postCSS](https://github.com/postcss/postcss) and [CSSNext](https://github.com/cssnext/cssnext). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else than upcoming CSS syntax.
 
 You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), you compile your stylesheets with a postprocessor, and every variable occurrence gets replaced with its value, as Sass would do.
 
-The idea behind preprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
+The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
 
 While providing tomorrow's syntax today has something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
 
 ### Further reading
 
 * [LESS official website][less]
-* [Stylus official website][stylus]
-* [CSSNext official website][cssnext]
-* [postCSS repository][postcss]
+* [Stylus official website](http://learnboost.github.io/stylus/)
+* [CSSNext official website](https://github.com/cssnext/cssnext)
+* [postCSS repository](https://github.com/postcss/postcss)
 
 
 
@@ -209,7 +209,7 @@ Styleguides are not just a pleasing document to read picturing an ideal state fo
 
 Needless to say, the more actors involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
 
-[Harry Roberts][harry_roberts] states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](http://csswizardry.com) states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:</p>
@@ -246,7 +246,7 @@ At the end of the day, if there is one thing I'd like you to get from this whole
 
 Believe me, I know what Sass is capable of. I am the guy who implemented [bitwise operators][sassybitwise], [iterators and generators][sassyiteratorsgenerators] and [a JSON parser][sassyjson] in Sass, so trust me when I say I am well aware of what one can do with this preprocessor.
 
-Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle][kiss_principle] (Keep It Simple Stupid) is key here and may even take over the [DRY principle][dry_principle] (Don't Repeat Yourself) in some circumstancies.
+Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) in some circumstancies.
 
 Sometimes, it's better repeating a bit to keep the code maintainable rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because too complex.
 
@@ -892,7 +892,7 @@ On top of that, I cannot stress enough the need for folders, even on small scale
 
 There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
 
-There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap][bootstrap]-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
+There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
 
 ## The 7-1 pattern
 
@@ -1473,12 +1473,8 @@ $z-indexes: (
 * [SassyLogger][sassylogger]
 
 [sass]: http://sass-lang.com
-[sass_documentation]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
 [libsass]: https://github.com/sass/libsass
-[node_sass]: https://github.com/sass/node-sass
 [repository]: https://github.com/HugoGiraudel/sass-guidelines
-[author_website]: http://hugogiraudel.com
-[author_twitter]: https://twitter.com/hugogiraudel
 [sassdoc]: http://sassdoc.com
 [sass_compatibility]: http://sass-compatibility.github.io
 [sassyjson]: https://github.com/HugoGiraudel/SassyJSON
@@ -1491,12 +1487,3 @@ $z-indexes: (
 [sassylogger]: https://github.com/HugoGiraudel/SassyLogger
 [Sassystrings]: https://github.com/HugoGiraudel/SassyStrings
 [Sassygradients]: https://github.com/HugoGiraudel/SassyGradients
-[bootstrap]: http://getbootstrap.com/
-[less]: http://lesscss.org/
-[harry_roberts]: http://csswizardry.com
-[css_guidelines]: http://cssguidelin.es/
-[kiss_principle]: http://en.wikipedia.org/wiki/KISS_principle
-[dry_principle]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
-[postcss]: https://github.com/postcss/postcss
-[cssnext]: http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
-[stylus]: http://learnboost.github.io/stylus/
