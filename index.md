@@ -509,12 +509,32 @@ Lists are the Sass equivalent of arrays. It is a flat data structure (unlike [ma
 
 Unless you have a good reason to do so (using a Sass list a CSS list of values for instance), always **use comma as a delimiter**. While making the list slightly longer, it helps distinguishing values from each others and stay consistent with most languages.
 
+However, **do not wrap a list in parenthesis** unless if it is empty. Also, **do not add a trailing comma**. It is ugly and it does not help.
+
 {% highlight scss %}
 // Yep
 $font-stack: "Helvetica", "Arial", sans-serif;
 
 // Nope
 $font-stack: "Helvetica" "Arial" sans-serif;
+
+// Nope
+$font-stack: ("Helvetica", "Arial", sans-serif);
+
+// Nope
+$font-stack: ("Helvetica", "Arial", sans-serif,);
+{% endhighlight %}
+
+When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
+
+{% highlight scss %}
+$shadows: 0 42px 13.37px hotpink;
+
+// Yep
+$shadows: append($shadows, $shadow, comma);
+
+// Nope
+$shadows: $shadows, $shadow;
 {% endhighlight %}
 
 ### Further reading
