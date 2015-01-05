@@ -1,8 +1,14 @@
+/**
+ * Vertical rhythm
+ */
 h1, h2, h3, h4, p, ul, ol, pre, img {
   @include container;
   @include vertical-rhythm;
 }
 
+/**
+ * Lists
+ */
 ul, ol {
   list-style-position: inside;
 }
@@ -25,10 +31,16 @@ li {
   margin-bottom: .5rem;
 }
 
+/**
+ * Quotes
+ */
 blockquote {
   @include vertical-rhythm;
 }
 
+/**
+ * Headings
+ */
 h1, h2, h3 {
   text-transform: capitalize;
 
@@ -53,6 +65,9 @@ h3 {
   text-transform: uppercase;
 }
 
+/**
+ * Images
+ */
 img {
   max-width: 100%;
 }
