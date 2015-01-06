@@ -601,7 +601,7 @@ If you don't want to write the `mix` function every time, you can create two eas
 
 Lists are the Sass equivalent of arrays. It is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
 
-Unless you have a good reason to do so (using a Sass list a CSS list of values for instance), always **use comma as a delimiter**. While making the list slightly longer, it helps distinguishing values from each others and stay consistent with most languages.
+Unless you have a good reason to do so (using a Sass list for a CSS list of values for instance), always **use a comma as a delimiter**. While making the list slightly longer, it helps distinguishing values from each others and staying consistent with most languages.
 
 However, **do not wrap a list in parenthesis** unless if it is empty. Also, **do not add a trailing comma**. It is ugly and it does not help.
 
@@ -650,7 +650,7 @@ Maps should be written as follow:
 
 * space after the colon (`:`);
 * opening brace (`(`) on the same line as the colon (`:`);
-* **quoted keys** if they are string (which represents 99% of the cases);
+* **quoted keys** if they are strings (which represents 99% of the cases);
 * each key/value pair on its own new line;
 * comma (`,`) at the end of each key/value except the last;
 * closing brace (`)`) on its own new line;
@@ -767,7 +767,7 @@ Adding to those CSS-related guidelines, we want to pay attention to:
 * local variables being declared before any declaration, then spaced from declarations by a new line;
 * mixin calls with no `@content` coming before any declaration;
 * nested selectors always coming after a new line;
-* mixin calls with `@content` coming after any nested selectors;
+* mixin calls with `@content` coming after any nested selector;
 * no new line before a closing brace (`}`).
 
 Illustration:
@@ -959,7 +959,7 @@ Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining wh
 }
 {% endhighlight %}
 
-Basically everything that is not obvious from the first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Basically everything that is not obvious at the first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
 When commenting a Sass specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development process.
 
@@ -1059,7 +1059,7 @@ Here is an example of a mixin extensively documented with SassDoc:
 
 
 
-### Futher reading
+### Further reading
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
@@ -1540,9 +1540,7 @@ $z-indexes: (
 
 The `@extend` directive has to be one of the features that made Sass that popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
 
-While this feature might help in some circumstanc
-
-The main problem with `@extend` is that it is completely invisible. When extending a selector, you have absolutely no way to answer those questions without having an in-depth knowledge of the whole code base:
+While this feature might help in some circumstances, the main problem with `@extend` is that it is completely invisible. When extending a selector, you have absolutely no way to answer those questions without having an in-depth knowledge of the whole code base:
 
 * where is my current selector going to be appended?
 * am I likely to be causing undesired side-effects?
@@ -1820,7 +1818,7 @@ However, the presence of loops usually implies moderately complex logic that pro
 
 ## Each
 
-The `@each` loops is definitely the more used of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+The `@each` loop is definitely the more used of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
 
 {% highlight scss %}
 @each $theme in $themes {
@@ -1847,7 +1845,7 @@ When iterating on a map, always use `$key` and `$value` as variable names to enf
 
 ## For
 
-The `@for` loops might be useful when combined with CSS `:nth-*` pseudo-classes. Aside of those scenarios, prefer an `@each` loop if you *do have* to iterate over something.
+The `@for` loop might be useful when combined with CSS `:nth-*` pseudo-classes. Aside of those scenarios, prefer an `@each` loop if you *do have* to iterate over something.
 
 {% highlight scss %}
 @for $i from 1 through 10 {
@@ -1857,7 +1855,7 @@ The `@for` loops might be useful when combined with CSS `:nth-*` pseudo-classes.
 }
 {% endhighlight %}
 
-Always use `$i` as a variable name to stick to the usual conventions and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
 
 
 
