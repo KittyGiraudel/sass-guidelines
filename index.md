@@ -579,6 +579,7 @@ If you don't want to write the `mix` function every time, you can create two eas
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
 * [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 
 
@@ -1547,6 +1548,7 @@ To sum up, **the `@extend` directive is prohibited.**
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 
 
 
@@ -1645,6 +1647,14 @@ Leading to the following CSS output:
   }
 }
 {% endhighlight %}
+
+
+
+### Further reading
+
+* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
+* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+* [Building a Linear-Gradient mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 
 
@@ -1896,6 +1906,14 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 
 
+### Further reading
+
+* [Compass](http://compass-style.org/)
+* [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
+* [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
+
+
+
 
 
 
@@ -1924,6 +1942,7 @@ Or you can head yourself to something a bit more casual, like [CSSWizardry Grids
 * [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
 * [Bootstrap's Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
+* [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
 
 
