@@ -154,6 +154,8 @@ Now when it comes to choosing your compiler, it does not really matter. Actually
 
 On the other hand, LibSass is mostly dedicated to being wrapped. So if you want to use anything but Ruby, for instance NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen. Also the major benefit of using LibSass is its speed: it is blazingly fast compared to Ruby Sass.
 
+
+
 ### Further reading
 
 * [Sass-Compatibility](http://sass-compatibility.github.io)
@@ -175,6 +177,8 @@ Since then, Sass (the preprocessor) has been providing two different syntaxes: S
 Sass Ruby-like syntax relies on indentation to get rid off braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to use since it's mostly some tiny extra bits on top of CSS.
 
 I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, I will use SCSS rather than Sass all along those guidelines.
+
+
 
 ### Further reading
 
@@ -201,6 +205,8 @@ The idea behind postprocessors is that once browsers support new features (e.g. 
 
 While providing tomorrow's syntax today has something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
 
+
+
 ### Further reading
 
 * [LESS](http://lesscss.org/)
@@ -219,7 +225,6 @@ While providing tomorrow's syntax today has something of a noble idea, I have to
 
 
 # Introduction
-
 
 
 
@@ -274,11 +279,15 @@ Sometimes, it's better repeating a bit to keep the code maintainable rather than
 
 Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against rules described here. If it makes sense, if it feels right, do it. Code is just a way, not an end.
 
+
+
 ### Further reading
 
 * [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
 * [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
+
+
 
 
 
@@ -360,6 +369,8 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
 
 In Sass, number is a data type englobing everything from unitless numbers to lengths, durations, frequencies, angles and so on. This is intended in order to be able to run calculations on such measures.
 
+
+
 ### Floats
 
 Floats, while quite uncommon, should not display the leading 0.
@@ -375,6 +386,8 @@ Floats, while quite uncommon, should not display the leading 0.
   opacity: 0.5;
 }
 {% endhighlight %}
+
+
 
 ### Casting a unitless number
 
@@ -395,6 +408,8 @@ $length: $value + px;
 
 Appending the unit as a string to a number results in a string, preventing any additional operation on the value. This is not what you want.
 
+
+
 ### Calculations
 
 **Top-level numeric calculations should always be wrapped in parenthesis**. This requirement not only dramatically improves readability, but also prevents some edge cases by forcing Sass to evaluate the content of parenthesis.
@@ -410,6 +425,8 @@ Appending the unit as a string to a number results in a string, preventing any a
   width: 100% / 3;
 }
 {% endhighlight %}
+
+
 
 ### Magic numbers
 
@@ -427,6 +444,8 @@ Needless to say **magic numbers are a plague and should be avoided at all cost**
 }
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -441,6 +460,8 @@ Needless to say **magic numbers are a plague and should be avoided at all cost**
 ## Colors
 
 Colors occupy an important place of the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+
 
 ### Color format
 
@@ -475,6 +496,8 @@ $sass-pink: #c69;
 $pink: #c69;
 {% endhighlight %}
 
+
+
 ### Lightening and darkening colors
 
 To lighten or darken a color, do not use [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) Sass functions. Instead, use the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function to mix your color with either `white` or `black`.
@@ -504,6 +527,8 @@ If you don't want to write the `mix` function every time, you can create two eas
   @return mix($color, black, $percentage);
 }
 {% endhighlight %}
+
+
 
 ### Further reading
 
@@ -551,6 +576,8 @@ $shadows: append($shadows, $shadow, comma);
 $shadows: $shadows, $shadow;
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [SassyLists](http://sassylists.com)
@@ -587,6 +614,8 @@ $breakpoints: (
 // Nope
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
+
+
 
 ### Debugging a Sass map
 
@@ -631,6 +660,8 @@ If you are interested in knowing the depth of the map, add the following functio
   @return $level;
 }
 {% endhighlight %}
+
+
 
 ### Further reading
 
@@ -707,6 +738,8 @@ Illustration:
 }
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
@@ -777,6 +810,8 @@ To prevent such a situation to happen, we **avoid selector nesting except for ps
 
 Using selector nesting for pseudo-classes and pseudo-elements not only makes sense because it deals with closely related selectors, but also helps keeping everything about a component at the same place.
 
+
+
 ### Further reading
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
@@ -814,6 +849,8 @@ $vertical-rhythm-baseline: 1.5rem;
 
 @function opposite-direction($direction) { /* ... */ }
 {% endhighlight %}
+
+
 
 ### Further reading
 
@@ -876,6 +913,8 @@ When commenting a Sass specific section, use Sass inline comments instead of a C
 // `!global` flag is required so it actually updates the global variable.
 $imported-modules: append($imported-modules, $module) !global;
 {% endhighlight %}
+
+
 
 ### Further reading
 
@@ -963,6 +1002,8 @@ Here is an example of a mixin extensively documented with SassDoc:
 }
 {% endhighlight %}
 
+
+
 ### Futher reading
 
 * [SassDoc](http://sassdoc.com)
@@ -990,6 +1031,11 @@ On top of that, I cannot stress enough the need for folders, even on small scale
 There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
 
 There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... As far as I am concerned, all of them are too complicated for me. I like to keep things simple. To keep them obvious.
+
+
+
+
+
 
 ## The 7-1 pattern
 
@@ -1069,8 +1115,6 @@ sass/
 
 
 
-
-
 ### Base folder
 
 The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I use to call `_base.scss`) defining some standard styles for most used HTML elements.
@@ -1078,9 +1122,6 @@ The `base/` folder holds what we might call the boilerplate code for the project
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
-
 
 
 
@@ -1101,9 +1142,6 @@ The `layout/` folder contains everything that takes part in laying out the site 
 
 
 
-
-
-
 ### Components folder
 
 For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contain all kind of specific modules like a slider, a loader, a widget, or basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
@@ -1115,9 +1153,6 @@ For smaller components, there is the `components/` folder. While `layout/` is *m
 <div class="note">
   <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
 </div>
-
-
-
 
 
 
@@ -1134,9 +1169,6 @@ If you have page-specific styles, it is better to put them in a `pages/` folder,
 
 
 
-
-
-
 ### Themes folder
 
 On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
@@ -1147,9 +1179,6 @@ On large sites and applications, it is not unusual to have different themes. The
 <div class="note">
   <p>This is very project specific and is likely to be non-existent on many projects.</p>
 </div>
-
-
-
 
 
 
@@ -1170,9 +1199,6 @@ The rule of thumb for this folder is that it should not output a single line of 
 
 
 
-
-
-
 ### Vendors folder
 
 And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to tell “Hey, this is not from me, not my code, not my responsibility”.
@@ -1185,6 +1211,8 @@ And last but not least, most projects will have a `vendors/` folder containing a
 If you have to override a section of any vendor, I recommend you have a 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
 
 For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+
+
 
 ### Main file
 
@@ -1239,6 +1267,8 @@ In order to preserve readability, the main file should respect those guidelines:
 @import "themes/admin";
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
@@ -1247,7 +1277,6 @@ In order to preserve readability, the main file should respect those guidelines:
 * [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-
 
 
 
@@ -1271,13 +1300,12 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 }
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
-
-
-
 
 
 
@@ -1344,6 +1372,7 @@ $variable: "initial value" !global;
   content: $variable;
 }
 {% endhighlight %}
+
 
 
 
@@ -1425,6 +1454,11 @@ $z-indexes: (
 
 
 
+
+
+
+
+
 # Extend
 
 The `@extend` directive has to be one of the features that made Sass that popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
@@ -1464,11 +1498,22 @@ Last but not least, `@extend` is very inflexible compared to a mixin. There is n
 To sum up, **the `@extend` directive is prohibited.**
 
 
+
 ### Further reading
 
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+
+
+
+
+
+
+
+
+
+
 
 # Mixins
 
@@ -1477,6 +1522,11 @@ Mixins are one of the most used features from the whole Sass language. They are 
 They can contain full CSS rules and pretty much everything that is allowed anywhere in a Sass document. They can even take arguments in just as functions. Needless to say possibilities are endless.
 
 Although I feel like I must warn you against abusing mixins' power. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive logic. It's called overengineering and most developers suffer from it. Do not overthink your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revisited.
+
+
+
+
+
 
 ## Basics
 
@@ -1598,9 +1648,12 @@ $params: (
 @include dummy($params...);
 {% endhighlight %}
 
+
+
 ### Further reading
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+
 
 
 
@@ -1616,6 +1669,7 @@ $params: (
 Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
 
 However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and actually solves an issue.
+
 
 
 
@@ -1642,6 +1696,7 @@ When iterating on a map, always use `$key` and `$value` as variable names to enf
   }
 }
 {% endhighlight %}
+
 
 
 
@@ -1677,6 +1732,9 @@ The `@while` loop has absolutely no use case in a real Sass projet. **Do not use
 
 
 
+
+
+
 # Warnings and Errors
 
 If there is a feature that is often overlooked by Sass developers, it is the ability to dynamically output warnings and errors. Indeed, Sass comes with three custom directives to print content in the standard output system (CLI, compiling app...):
@@ -1688,6 +1746,11 @@ If there is a feature that is often overlooked by Sass developers, it is the abi
 Let's put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one does stop the compiler while the other does not. I'll let you guess which does what.
 
 Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong or display a warning when doing an assumption.
+
+
+
+
+
 
 ## Warnings
 
@@ -1707,6 +1770,11 @@ Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting
 {% endhighlight %}
 
 If the value happens to be unitless, the function assumes the value is meant to be expressed in pixels. At this point, an assumption may be risky so the user should be warned that the software did something that could be considered unexpected.
+
+
+
+
+
 
 ## Errors
 
@@ -1743,6 +1811,7 @@ $z-indexes: (
 {% endhighlight %}
 
 
+
 ### Further reading
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
@@ -1757,11 +1826,14 @@ $z-indexes: (
 
 
 
+
+
 # Tools
 
 What is nice with such a popular CSS preprocessor as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
+
 
 
 
@@ -1806,6 +1878,16 @@ linters:
   <p><a href="https://twitter.com/fweinb">Fabrice Weinberg</a> is the author of a Grunt plugin for SCSS-lint called <a href="https://github.com/FWeinb/grunt-scsslint">grunt-scsslint</a>.</p>
 </div>
 
+
+
+
+
+
+
+
+
+
+
 # Too Long; Didn't read
 
 To sum up, we want:
@@ -1831,4 +1913,3 @@ To sum up, we want:
 * As few loops as possible, no `@while`;
 * Reduced number of dependencies;
 * Meaningful uses of warnings and errors.
-
