@@ -710,7 +710,7 @@ If you are interested in knowing the depth of the map, add the following functio
 
   @each $key, $value in $map {
     @if type-of($value) == "map" {
-      $level: max(depth($value) + 1, $level);
+      $level: max(map-depth($value) + 1, $level);
     }
   }
 
