@@ -61,11 +61,12 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
   * [Strings](#strings)
   * [Numbers](#numbers)
     * [Zeros](#zeros)
-    * [Casting a unitless number](#casting-a-unitless-number)
+    * [Units](#units)
     * [Calculations](#calculations)
     * [Magic numbers](#magic-numbers)
   * [Colors](#colors)
-    * [Color format](#color-format)
+    * [Color formats](#color-formats)
+    * [Colors and variables](#color-format)
     * [Lightening and Darkening Colors](#lightening-and-darkening-colors)
   * [Lists](#lists)
   * [Maps](#maps)
@@ -77,6 +78,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
   * [Writing Comments](#writing-comments)
   * [Documentation](#documentation)
 * [Architecture](#architecture)
+  * [Components](#components)
   * [The 7-1 pattern](#the-7-1-pattern)
     * [Base Folder](#base-folder)
     * [Components Folder](#components-folder)
@@ -96,6 +98,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Mixins](#mixins)
   * [Basics](#basics)
   * [Arguments list](#arguments-list)
+  * [Mixins and Vendor Prefixes](#mixins-and-vendor-prefixes)
 * [Loops](#loops)
   * [Each](#each)
   * [For](#for)
@@ -490,7 +493,7 @@ Colors occupy an important place of the CSS language. Naturally, Sass ends up be
 
 
 
-### Color format
+### Color formats
 
 In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
 
@@ -513,20 +516,6 @@ For starter, keywords often speak for themselves. The HSL representation is not 
 }
 {% endhighlight %}
 
-When using a color more than once, store it in a variable with a meaningful name representing the color.
-
-{% highlight scss %}
-$sass-pink: #c69;
-{% endhighlight %}
-
-At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it into another one with a name explaining how it should be used.
-
-{% highlight scss %}
-$main-theme-color: $sass-pink;
-{% endhighlight %}
-
-Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
-
 When using a HSL or RGB notation, always add a single space after commas (`,`) and no space between parenthesis (`(`, `)`) and content.
 
 {% highlight scss %}
@@ -542,6 +531,24 @@ When using a HSL or RGB notation, always add a single space after commas (`,`) a
   background: hsl( 300, 100%, 100% );
 }
 {% endhighlight %}
+
+
+
+### Colors and variables
+
+When using a color more than once, store it in a variable with a meaningful name representing the color.
+
+{% highlight scss %}
+$sass-pink: #c69;
+{% endhighlight %}
+
+At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it into another one with a name explaining how it should be used.
+
+{% highlight scss %}
+$main-theme-color: $sass-pink;
+{% endhighlight %}
+
+Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
 
 
 
