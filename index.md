@@ -696,7 +696,7 @@ If you are interested in knowing the depth of the map, add the following functio
 /// Compute the maximum depth of a map
 /// @param {Map} $map
 /// @return {Number} max depth of `$map`
-@function depth($map) {
+@function map-depth($map) {
   $level: 1;
 
   @each $key, $value in $map {
