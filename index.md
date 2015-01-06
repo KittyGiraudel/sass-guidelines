@@ -411,7 +411,7 @@ Numbers should never display leading and trailing zeros.
 
 ### Units
 
-A `0` value should never ever have unit. Zero is zero, no unit involved.
+When dealing with lengths, a `0` value should never ever have unit.
 
 {% highlight scss %}
 // Yep
