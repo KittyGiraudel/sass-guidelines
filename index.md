@@ -812,7 +812,7 @@ One particular feature Sass provides that is being overly misused by many develo
 .foo {
   .bar {
     &:hover {
-      content: baz;
+      color: red;
     }
   }
 }
@@ -823,7 +823,7 @@ One particular feature Sass provides that is being overly misused by many develo
 
 {% highlight css %}
 .foo .bar:hover {
-  content: baz;
+  color: red;
 }
 {% endhighlight %}
 
@@ -832,8 +832,17 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 {% highlight scss %}
 .foo {
   &-bar {
-    content: "Howdy! I am `.foo-bar`.";
+    color: red;
   }
+}
+{% endhighlight %}
+
+... will generate this CSS:
+
+
+{% highlight css %}
+.foo-bar {
+  color: red;
 }
 {% endhighlight %}
 
@@ -851,10 +860,10 @@ To prevent such a situation to happen, we **avoid selector nesting except for ps
 
 {% highlight scss %}
 .foo {
-  content: "regular";
+  color: red;
 
   &:hover {
-    content: "hovered";
+    color: green;
   }
 
   &::before {
