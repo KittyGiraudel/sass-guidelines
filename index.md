@@ -1866,7 +1866,7 @@ Always use `$i` as a variable name to stick to the usual convention and unless y
 
 ## While
 
-The `@while` loop has absolutely no use case in a real Sass projet. **Do not use it**.
+The `@while` loop has absolutely no use case in a real Sass project. **Do not use it**.
 
 
 
