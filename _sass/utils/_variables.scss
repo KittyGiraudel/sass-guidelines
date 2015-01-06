@@ -10,13 +10,17 @@ $main-color: #c69;
 /// @type Color
 $secondary-color: #b37399;
 
+/// Light grey
+/// @type Color
+$light-grey: #dadbdf;
+
 /// Code background
 /// @type Color
 $dark-background: #444;
 
 /// Code background
 /// @type Color
-$medium-background: #dadbdf;
+$medium-background: $light-grey;
 
 /// Regular font stack
 /// @type List

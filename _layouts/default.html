@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body id="top">
 
     {% include header.html %}
 
@@ -11,12 +11,10 @@
 
     {% include footer.html %}
 
+    <a href="#top" class="back-to-top">Top</a>
+
     <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
     <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
-
-    <script>
-
-    </script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

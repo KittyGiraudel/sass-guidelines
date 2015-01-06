@@ -1,0 +1,20 @@
+/**
+ * Button to get back to top of the page
+ */
+.back-to-top {
+  display: none;
+
+  @include respond-to("medium") {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: .5em;
+    padding: .5em;
+    font-size: .8em;
+    border-radius: .35em;
+    color: $light-grey;
+    border: .25em solid;
+    text-transform: uppercase;
+  }
+}
