@@ -4,7 +4,7 @@ layout: default
 
 # About the author
 
-My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move in Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc](http://sassdoc.com) and [Sass-Compatibility](http://sass-compatibility.github.io).
+My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move to Germany. I have been writing Sass for over two years now and am the author of Sass related projects such as [SassDoc](http://sassdoc.com) and [Sass-Compatibility](http://sass-compatibility.github.io).
 
 I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) and [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
@@ -24,11 +24,11 @@ I have also written a couple of Sass libraries, mostly for the heck of it: [Sass
 
 # Contributing
 
-Sass Guidelines is a free project I maintain in my spare time. Needless to say it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
+Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously knowing that you liked this styleguide is already much appreciated!
 
-Now, if you feel like contributing, please know that tweeting about it, spreading the word of fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
+Now if you feel like contributing, please know that tweeting about it, spreading the word, or fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
 
-Last but not least before we start: if you enjoyed this document, if it is useful for you or your team, please consider supporting it!
+Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it!
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guildelines" target="_blank" class="button">Support Sass Guidelines</a>
@@ -132,9 +132,9 @@ Sass' ultimate objective is to fix CSS flaws. CSS, as we all know, is not the be
 
 This is where Sass comes in, as a meta-language, to improve CSS syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding CSS language.
 
-The point is not to turn CSS into a fully-featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is not any harder than learning CSS: it simply adds a couple of extra features on top of it.
+The point is not to turn CSS into a fully-featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of extra features on top of it.
 
-That being said, there are many ways to use these features. Some good, some bad, some unusual. Those guidelines are meant to give you a consistent and documented approach to writing Sass code.
+That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
 
 ### Further reading
 
@@ -152,7 +152,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older brother.
 
-Last inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
+The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
 Now when it comes to choosing your compiler, it does not really matter. Actually, it is really up to your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case.
 
@@ -172,15 +172,15 @@ On the other hand, LibSass is mostly dedicated to being wrapped. So if you want 
 
 ## Sass or SCSS
 
-There are quite a lot of confusion regarding the semantic behind the *Sass* appellation. And for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
+There is quite a lot of confusion regarding the semantic behind the *Sass* appellation. And for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
 
 You see, Sass initially described a syntax very close to Ruby. Actually, the initial idea was to write CSS in Ruby. Soon enough, Sass maintainers decided to close the gap between Sass and CSS by providing a CSS-friendly syntax called *SCSS* for *Sassy CSS*. The motto is: if it's valid CSS, it's valid SCSS.
 
-Since then, Sass (the preprocessor) has been providing two different syntaxes: Sass (not uppercased, [please](http://sassnotsass.com)), also known at *the indented syntax* and SCSS. Which one to use is pretty much up to you since both are strictly equivalent in features. It is only a matter of aesthetics at this point.
+Since then, Sass (the preprocessor) has been providing two different syntaxes: Sass (not uppercase, [please](http://sassnotsass.com)), also known as *the indented syntax* and SCSS. Which one to use is pretty much up to you since both are strictly equivalent in features. It is only a matter of aesthetics at this point.
 
-Sass Ruby-like syntax relies on indentation to get rid off braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to use since it's mostly some tiny extra bits on top of CSS.
+Sass Ruby-like syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to use since it's mostly some tiny extra bits on top of CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, I will use SCSS rather than Sass all along those guidelines.
+I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, I will use SCSS rather than Sass all along these guidelines.
 
 
 
@@ -195,19 +195,19 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 ## Other preprocessors
 
-Sass is a preprocessor among others. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) which is kind of the nerdy unrestricted version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Sass is a preprocessor among other things. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) which is kind of the nerdy unrestricted version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
-*Why choosing Sass over LESS or another preprocessor* is still a valid question as of today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (or so) on original Sass, this is no longer a relevant advice.
+*Why choose Sass over LESS or another preprocessor?* is still a valid question as of today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (or so) on original Sass, this is no longer relevant advice.
 
-What I do like with Sass is its conservative aspect regarding CSS. Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical aspect. It is a software aiming at solving actual issues; helping writing CSS where CSS shows some weakness.
+What I do like with Sass is its conservative aspect regarding CSS. Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical aspects. It is a software aiming at solving actual issues; helping write CSS where CSS shows some weakness.
 
 Preprocessors aside, we should also mention postprocessors, which have known quite a good exposure over the last few months especially thanks to [postCSS](https://github.com/postcss/postcss) and [CSSNext](https://github.com/cssnext/cssnext). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else than upcoming CSS syntax.
 
 You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you would write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), then compile your stylesheets with a postprocessor only to find every variable occurrence gets replaced with its value, as Sass would do.
 
-The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and let browsers take over.
+The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
 
-While providing tomorrow's syntax today has something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
+While providing tomorrow's syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
 
 
 
@@ -236,7 +236,7 @@ While providing tomorrow's syntax today has something of a noble idea, I have to
 
 ## Why a styleguide
 
-Styleguides are not just a pleasing document to read picturing an ideal state for your code. It is a key document in a project's life, describing how and why code should be written. It may look overkill for small projects, yet it helps a lot to keeping the codebase clean, scalable and easily maintainable.
+A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project's life, describing how and why code should be written. It may look overkill for small projects, yet it helps a lot in keeping the codebase clean, scalable and easily maintainable.
 
 Needless to say, the more actors involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
 
@@ -246,7 +246,7 @@ Needless to say, the more actors involved on a project, the more code guidelines
   <p>A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:</p>
   <ul>
     <li>build and maintain products for a reasonable length of time;</li>
-    <li>have developers of differing abilities and specialisms;</li>
+    <li>have developers of differing abilities and specialties;</li>
     <li>have a number of different developers working on a product at any given time;</li>
     <li>on-board new staff regularly;</li>
     <li>have a number of codebases that developers dip in and out of.</li>
@@ -262,9 +262,9 @@ Needless to say, the more actors involved on a project, the more code guidelines
 
 First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass specific content.
 
-Also, this styleguide is my own and somehow very opinionated. Think of it as a collection of methodologies and advices I have polished and given over the years. Also, it gaves me the opportunity to link to a handful of insightful resources, so be sure to check further readings.
+Also, this styleguide is my own and somehow very opinionated. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
 
-Obviously, this is certainly not the only way of doing and may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say *your mileage may vary*.
+Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
 
 
 
@@ -277,11 +277,11 @@ At the end of the day, if there is one thing I would like you to get from this w
 
 Thanks to my silly experiments like [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
 
-Meanwhile, CSS is a simple language. Sass being intended to write CSS, it should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) in some circumstances.
+Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) in some circumstances.
 
-Sometimes, it's better repeating a bit to keep the code maintainable rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because too complex.
+Sometimes, it's better repeating a bit to keep the code maintainable rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it's too complex.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against rules described here. If it makes sense, if it feels right, do it. Code is just a way, not an end.
+Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a way, not an end.
 
 
 
@@ -305,14 +305,14 @@ Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pr
 
 If you ask me, the very first thing a styleguide should do is describe the usual guidelines to write code.
 
-When several actors are involved in writing CSS on the same projects, it is only a matter of time before one of them start doing things his own way. Code guidelines are not only meant to prevent that, but also help reading and updating the code by making it look consistent.
+When several actors are involved in writing CSS on the same project, it is only a matter of time before one of them starts doing things his own way. Code guidelines are not only meant to prevent this, but also to help in the reading and maintenance of code by making it look consistent.
 
 Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
 * two (2) spaces indents, no tabs;
 * ideally, 80-characters wide lines;
-* properly written multi-lines CSS rules;
-* meaningful uses of whitespace.
+* properly written multi-line CSS rules;
+* meaningful use of whitespaces.
 
 {% highlight scss %}
 // Yep
@@ -330,7 +330,7 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 }
 {% endhighlight %}
 
-We will not tackle the question of file architecture in this section. It is the object of [another chapter](#architecture).
+We will not tackle the question of file organization in this section. It is the object of [another chapter](#architecture).
 
 
 
@@ -339,11 +339,11 @@ We will not tackle the question of file architecture in this section. It is the 
 
 ## Strings
 
-CSS does not require strings to be quoted even those containing spaces. Take font-family names for instance, it doesn't not matter whether you wrap them in quotes for the CSS parser.
+CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance, it doesn't matter whether you wrap them in quotes for the CSS parser.
 
-Because of that, Sass does not require strings to be quoted as well. Even better (and *luckily*, you'll conceed), a quoted string is strictly equivalent to this unquoted twin (e.g. `"abc"` is strictly equal to `abc`).
+Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll conceed), a quoted string is strictly equivalent to its unquoted twin (e.g. `"abc"` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority thus **strings should always be wrapped with double quotes** in Sass. Aside of consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with double quotes** in Sass. Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
 
 * most syntax highlighters will choke on unquoted strings;
 * it helps general readability;
@@ -411,7 +411,7 @@ Numbers should never display leading and trailing zeros.
 
 ### Units
 
-When dealing with lengths, a `0` value should never ever have unit.
+When dealing with lengths, a `0` value should never ever have a unit.
 
 {% highlight scss %}
 // Yep
@@ -442,7 +442,7 @@ Appending the unit as a string to a number results in a string, preventing any a
 
 ### Calculations
 
-**Top-level numeric calculations should always be wrapped in parenthesis**. This requirement not only dramatically improves readability, but also prevents some edge cases by forcing Sass to evaluate the content of parenthesis.
+**Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
 
 {% highlight scss %}
 // Yep
@@ -460,9 +460,9 @@ Appending the unit as a string to a number results in a string, preventing any a
 
 ### Magic numbers
 
-Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just some random number that happens to *just work*™ yet is not tied to any logical explanation.
+Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
 
-Needless to say **magic numbers are a plague and should be avoided at all cost**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why do you suspect it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
+Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you thik it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
 
 {% highlight scss %}
 /**
@@ -489,7 +489,7 @@ Needless to say **magic numbers are a plague and should be avoided at all cost**
 
 ## Colors
 
-Colors occupy an important place of the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 
 
@@ -502,7 +502,7 @@ In order to make colors as simple as they can be, my advice would be to respect 
 1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Hexadecimal notation. Preferably lowercase and shortened when possible.
 
-For starter, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend <sup>[citation needed]</sup> but also makes it easy for stylesheets authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB has still the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Last, hexadecimal is close to indecipherable for the human mind.
+For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Last, hexadecimal is close to indecipherable for the human mind.
 
 {% highlight scss %}
 // Yep
@@ -516,7 +516,7 @@ For starter, keywords often speak for themselves. The HSL representation is not 
 }
 {% endhighlight %}
 
-When using a HSL or RGB notation, always add a single space after commas (`,`) and no space between parenthesis (`(`, `)`) and content.
+When using HSL or RGB notation, always add a single space after commas (`,`) and no space between parentheses (`(`, `)`) and content.
 
 {% highlight scss %}
 // Yep
@@ -542,7 +542,7 @@ When using a color more than once, store it in a variable with a meaningful name
 $sass-pink: #c69;
 {% endhighlight %}
 
-At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it into another one with a name explaining how it should be used.
+At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
 
 {% highlight scss %}
 $main-theme-color: $sass-pink;
@@ -558,7 +558,7 @@ Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#l
 
 The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
 
-The benefit of using `mix` rather than one of the two aforementioned functions is that is will progressively go to black (or white) as you decrease the proportion of the color whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+The benefit of using `mix` rather than one of the two aforementioned functions is that it will progressively go to black (or white) as you decrease the proportion of the color, whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
 
 <p data-height="400" data-theme-id="0" data-slug-hash="wBopOd" data-default-tab="result" data-user="HugoGiraudel" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/wBopOd/'>Dadgumit, Blowouts</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
@@ -603,9 +603,9 @@ If you don't want to write the `mix` function every time, you can create two eas
 
 Lists are the Sass equivalent of arrays. It is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
 
-Unless you have a good reason to do so (using a Sass list for a CSS list of values for instance), always **use a comma as a delimiter**. While making the list slightly longer, it helps distinguishing values from each others and staying consistent with most languages.
+Unless you have a good reason to do so (using a Sass list for a CSS list of values for instance), always **use a comma as a delimiter**. While making the list slightly longer, it helps in distinguishing values from each other and in staying consistent with most languages.
 
-However, **do not wrap a list in parenthesis** unless if it is empty. Also, **do not add a trailing comma**. It is ugly and it does not help.
+However, **do not wrap a list in parentheses** unless it is empty. Also, **do not add a trailing comma**. It is ugly and it does not help.
 
 {% highlight scss %}
 // Yep
@@ -648,7 +648,7 @@ $shadows: $shadows, $shadow;
 
 Since Sass 3.3, stylesheets authors can now define maps which is the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
 
-Maps should be written as follow:
+Maps should be written as follows:
 
 * space after the colon (`:`);
 * opening brace (`(`) on the same line as the colon (`:`);
@@ -735,7 +735,7 @@ If you are interested in knowing the depth of the map, add the following functio
 
 ## CSS Ruleset
 
-At this point, this is mostly rehearsing what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines including [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset) and those):
+At this point, this is mostly revising what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines, including [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * related selectors on the same line; unrelated selectors on new lines;
 * the opening brace (`{`) spaced from the last selector by a single space;
@@ -766,7 +766,7 @@ Illustration:
 
 Adding to those CSS-related guidelines, we want to pay attention to:
 
-* local variables being declared before any declaration, then spaced from declarations by a new line;
+* local variables being declared before any declarations, then spaced from declarations by a new line;
 * mixin calls with no `@content` coming before any declaration;
 * nested selectors always coming after a new line;
 * mixin calls with `@content` coming after any nested selector;
@@ -808,7 +808,7 @@ Illustration:
 
 ## Selector Nesting
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheets authors to compute long selectors by nesting shorter selectors within each others. For instance the following Sass nesting:
+One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each other. For instance, the following Sass nesting:
 
 {% highlight scss %}
 .foo {
@@ -839,17 +839,17 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 }
 {% endhighlight %}
 
-This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generated `.block__element` and `.block--modifier` selectors based on the original one (i.e. `.block` in this case).
+This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generate `.block__element` and `.block--modifier` selectors based on the original selector (i.e. `.block` in this case).
 
 <div class="note">
-  <p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&</code>) makes those selectors unsearchable in the code base since they do not exist per se.</p>
+  <p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&</code>) makes those selectors unsearchable in the codebase since they do not exist per se.</p>
 </div>
 
 The problem with selector nesting is it ultimately makes code more difficult to read. Because one has to mentally compute the resulting selector out of the indentation levels, it is not always quite obvious what the CSS will end up being.
 
-This statement is getting even truer when selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk to lose track and not being able to understand what's going on anymore is so high that it is not worth it.
+This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what's going on anymore is so high that it is not worth it.
 
-To prevent such a situation to happen, we **avoid selector nesting except for pseudo-classes and pseudo-elements**. These are the only cases where nesting is allowed, and even recommended.
+To prevent such a situation, we **avoid selector nesting except for pseudo-classes and pseudo-elements**. These are the only cases where nesting is allowed, and even recommended.
 
 {% highlight scss %}
 .foo {
@@ -865,7 +865,7 @@ To prevent such a situation to happen, we **avoid selector nesting except for ps
 }
 {% endhighlight %}
 
-Using selector nesting for pseudo-classes and pseudo-elements not only makes sense because it deals with closely related selectors, but also helps keeping everything about a component at the same place.
+Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
 
 
 
@@ -887,7 +887,7 @@ Using selector nesting for pseudo-classes and pseudo-elements not only makes sen
 
 # Naming conventions
 
-In this section, we will not deal with what are the best CSS naming conventions for maintainability and scale; this is not only up to you, but also out of the scope of a Sass styleguide. May I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it's also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
 
@@ -925,16 +925,16 @@ $vertical-rhythm-baseline: 1.5rem;
 
 # Commenting
 
-CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don't let you or anybody else in the position of *I-didn't-write-this-oh-my-god-why*.
+CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don't let you or anybody else be in the position of *I-didn't-write-this-oh-my-god-why*.
 
-As simple as CSS can get, there are still a lot of room for comments. Could it be explaining:
+As simple as CSS can get, there is still a lot of room for comments. These could be explaining:
 
 * the structure and/or role of a file;
 * the goal of a ruleset;
 * the idea behind a magic number;
-* the reason of a CSS declaration;
+* the reason for a CSS declaration;
 * the order of CSS declarations;
-* the thought process behind a way of doing.
+* the thought process behind a way of doing things.
 
 And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
 
@@ -945,7 +945,7 @@ And I probably forgot a lot of other various reasons as well. Commenting takes v
 
 ## Writing comments
 
-Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining what is the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
 
 {% highlight css %}
 /**
@@ -961,9 +961,9 @@ Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining wh
 }
 {% endhighlight %}
 
-Basically everything that is not obvious at the first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
-When commenting a Sass specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development process.
+When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
 
 {% highlight scss %}
 // Add current module to the list of imported modules.
@@ -984,9 +984,9 @@ $imported-modules: append($imported-modules, $module) !global;
 
 ## Documentation
 
-Every variable, function, mixin and placeholder that is intended to be re-used all over the code base should be documented as part of the global API using [SassDoc](http://sassdoc.com).
+Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
 
-SassDoc provides two different syntaxes for comments: either C-style or inline. For instance both of the following snippets are valid SassDoc comments:
+SassDoc provides two different syntaxes for comments: either C-style or inline. For instance, both of the following snippets are valid SassDoc comments:
 
 {% highlight scss %}
 /**
@@ -1010,12 +1010,12 @@ $vertical-rhythm-baseline: 1.5rem;
   <p>Three slashes (<code>/</code>) required.</p>
 </div>
 
-There is no benefit to using one over the other, so pick the one you feel the most confident with.
+There is no benefit in using one over the other, so pick the one you feel the most confident with.
 
 SassDoc has two major roles:
 
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoint (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
 <figure>
 <img alt="" src="/assets/images/sassdoc-preview.png" />
@@ -1083,9 +1083,9 @@ Architecting a CSS project is probably one of the most difficult things you will
 
 Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass' overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
 
-On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back at the code.
+On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.
 
-There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons. Nevertheless, none of them suits me correctly. Call me old fashioned, but I find them too complicated for me. I like to keep things simple. To keep them obvious.
+There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons. Nevertheless, none of them suits me correctly. Call me old fashioned, but I find them too complicated for myself. I like to keep things simple, to keep them obvious.
 
 
 
@@ -1096,15 +1096,15 @@ There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.
 
 There is a major difference between making it *work*, and making it *good*. Again, CSS is quite a messy language <sup>[citation needed]</sup>. The less CSS we have, the merrier. We don't want to deal with megabytes of CSS code. To keep stylesheets short and efficient &mdash; and this will not be any surprise to you &mdash; it is usually a good idea to think of an interface as a collection of components.
 
-Components can be anything, as long they:
+Components can be anything, as long as they:
 
 * do one thing and one thing only;
 * are re-usable and re-used across the project;
 * are independant.
 
-For instance, a search form should be treated as a component. It should be re-usable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).
+For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).
 
-Most of any interface can be thought as little components and I highly recommend you to stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.
+Most of any interface can be thought of as little components and I highly recommend you stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.
 
 
 
@@ -1113,7 +1113,7 @@ Most of any interface can be thought as little components and I highly recommend
 
 ## The 7-1 pattern
 
-Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into a 7 different folders, and a single file at root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.
+Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into 7 different folders, and a single file at the root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.
 
 * `base/`
 * `components/`
@@ -1191,7 +1191,7 @@ sass/
 
 ### Base folder
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I use to call `_base.scss`) defining some standard styles for most used HTML elements.
+The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I'm used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.
 
 * `_base.scss`
 * `_reset.scss`
@@ -1201,7 +1201,7 @@ The `base/` folder holds what we might call the boilerplate code for the project
 
 ### Layout folder
 
-The `layout/` folder contains everything that takes part in laying out the site or application. Could it be stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even the CSS styles for all the forms.
+The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even CSS styles for all the forms.
 
 * `_grid.scss`
 * `_header.scss`
@@ -1218,7 +1218,7 @@ The `layout/` folder contains everything that takes part in laying out the site 
 
 ### Components folder
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contain all kind of specific modules like a slider, a loader, a widget, or basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
 
 * `_media.scss`
 * `_carousel.scss`
@@ -1238,7 +1238,7 @@ If you have page-specific styles, it is better to put them in a `pages/` folder,
 * `_contact.scss`
 
 <div class="note">
-  <p>Depending on your deployment process, those files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
+  <p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
 </div>
 
 
@@ -1251,16 +1251,16 @@ On large sites and applications, it is not unusual to have different themes. The
 * `_admin.scss`
 
 <div class="note">
-  <p>This is very project specific and is likely to be non-existent on many projects.</p>
+  <p>This is very project-specific and is likely to be non-existent on many projects.</p>
 </div>
 
 
 
 ### Utils folder
 
-The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variables, functions, mixins and placeholders should be put in there.
+The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
 
-The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. This is nothing but Sass helpers.
+The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
 
 * `_variables.scss`
 * `_mixins.scss`
@@ -1282,9 +1282,9 @@ And last but not least, most projects will have a `vendors/` folder containing a
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-If you have to override a section of any vendor, I recommend you have a 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
+If you have to override a section of any vendor, I recommend you have an 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
 
-For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+For instance, `vendors-extensions/_boostrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap's default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
 
 
 
@@ -1302,12 +1302,12 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-In order to preserve readability, the main file should respect those guidelines:
+In order to preserve readability, the main file should respect these guidelines:
 
 * one file per `@import`;
 * one `@import` per line;
-* no new line between two imports of a same folder;
-* a new line after the last import of a folder;
+* no new line between two imports from the same folder;
+* a new line after the last import from a folder;
 * file extensions and leading underscores omitted.
 
 {% highlight scss %}
@@ -1342,8 +1342,8 @@ In order to preserve readability, the main file should respect those guidelines:
 {% endhighlight %}
 
 <div class="note">
-  <p>In order not to have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a> making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source order dependant language.</p>
+  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
+  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependant language.</p>
 </div>
 
 
@@ -1364,7 +1364,7 @@ In order to preserve readability, the main file should respect those guidelines:
 
 ## Shame file
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists on putting all the CSS declarations, hacks and things we are not proud about in a *shame file*. This file, dramatically entitled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud about in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
 
 {% highlight scss %}
 /**
@@ -1402,13 +1402,13 @@ Variables are the essence of any programming language. They allow us to reuse va
 
 However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won't help. A new variable should be created only when all of the following criteria is are met:
+My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won't help. A new variable should be created only when all of the following criteria are met:
 
 * the value is repeated at least twice;
 * the value is likely to be updated at least once;
-* all occurrences of the values are tied to the variable (i.e. not by coincidence).
+* all occurrences of the value are tied to the variable (i.e. not by coincidence).
 
-Basically, that means it has no point declaring a variable that will never be updated or that is only being used at a single place.
+Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
 
 
 
@@ -1417,9 +1417,9 @@ Basically, that means it has no point declaring a variable that will never be up
 
 ## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, all variables declarations were global, no matter where. Since version 3.4, Sass now properly tackles the concept of scopes and local variables.
+Variable scoping in Sass has changed over the years. Until fairly recently, all variable declarations were global, no matter where. Since version 3.4, Sass now properly tackles the concept of scopes and local variables.
 
-Actually, it is not really that Sass has different scopes. Indeed, the docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+Sass doesn't really have different scopes. Indeed, the docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
 
 The following code snippet explains the *variable shadowing* concept.
 
@@ -1484,14 +1484,14 @@ $baseline: 2em;
 
 ## `!global` flag
 
-On the opposite, if your Sass code is not intended to be distributed and is likely to be restricted to a single project, global variables should be declared using the `!global` flag.
+On the contrary, if your Sass code is not intended to be distributed and is likely to be restricted to a single project, global variables should be declared using the `!global` flag.
 
 {% highlight scss %}
 $baseline: 1em !global;
 {% endhighlight %}
 
 <div class="note">
-  <p>The <code>!global</code> flag does nothing in this case but helps understand this is a global variable that is intended to be used all over the code base.</p>
+  <p>The <code>!global</code> flag does nothing in this case but helps understand this is a global variable that is intended to be used all over the codebase.</p>
 </div>
 
 
@@ -1540,19 +1540,19 @@ $z-indexes: (
 
 # Extend
 
-The `@extend` directive has to be one of the features that made Sass that popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
+The `@extend` directive has to be one of the features that made Sass so popular a couple of years ago. It has been claimed to be the holy grail of modular CSS many times now, and frankly I still cannot see why.
 
-While this feature might help in some circumstances, the main problem with `@extend` is that it is completely invisible. When extending a selector, you have absolutely no way to answer those questions without having an in-depth knowledge of the whole code base:
+While this feature might help in some circumstances, the main problem with `@extend` is that it is completely invisible. When extending a selector, you have absolutely no way to answer these questions without having an in-depth knowledge of the whole codebase:
 
 * where is my current selector going to be appended?
 * am I likely to be causing undesired side-effects?
 * how large is the CSS generated by this single extend?
 
-For what you know, the result could range from doing nothing to causing disastrous side-effects. And this is a problem. A CSS project is no place for randomness.
+For all you know, the result could range from doing nothing to causing disastrous side-effects. And this is a problem. A CSS project is no place for randomness.
 
-Aside of the fact that this feature does not make your stylesheet *obvious*, which should be a priority at all time, it also presents some issues when used inside a media block.
+Besides the fact that this feature does not make your stylesheet *obvious*, which should be a priority at all times, it also presents some issues when used inside a media block.
 
-As you may know, Sass is unable to extend an outer selector from within a media query. When doing so, the compiler simple crashes, telling you that you cannot do such a thing. Not great. Especially since media queries is almost all we do know.
+As you may know, Sass is unable to extend an outer selector from within a media query. When doing so, the compiler simply crashes, telling you that you cannot do such a thing. Not great. Especially since media queries are almost all we do know.
 
 {% highlight scss %}
 .foo {
@@ -1597,9 +1597,9 @@ To sum up, **the `@extend` directive is prohibited.**
 
 Mixins are one of the most used features from the whole Sass language. They are the key to re-usability and DRY components. And for good reason: mixins allow authors to define styles that can be re-used throughout the stylesheet without needing to resort to non-semantic classes such as `.float-left`.
 
-They can contain full CSS rules and pretty much everything that is allowed anywhere in a Sass document. They can even take arguments in just as functions. Needless to say possibilities are endless.
+They can contain full CSS rules and pretty much everything that is allowed anywhere in a Sass document. They can even take arguments in just as functions. Needless to say, the possibilities are endless.
 
-Although I feel like I must warn you against abusing mixins' power. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive logic. It's called overengineering and most developers suffer from it. Do not overthink your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revisited.
+Though I feel I must warn you against abusing the power of mixins. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive logic. It's called overengineering and most developers suffer from it. Do not overthink your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revisited.
 
 
 
@@ -1608,7 +1608,7 @@ Although I feel like I must warn you against abusing mixins' power. Again, the k
 
 ## Basics
 
-That being said, mixins are extremely useful and you should be using some. The rule of thumb is if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
+That being said, mixins are extremely useful and you should be using some. The rule of thumb is that if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
 
 {% highlight scss %}
 /// Helper to clear inner floats
@@ -1623,9 +1623,9 @@ That being said, mixins are extremely useful and you should be using some. The r
 }
 {% endhighlight %}
 
-A mixin you should probably use at all time on any Sass project, no matter how you've written it, is a breakpoint manager. Now that Responsive Web Design has become a thing™, sites and applications have to support a whole range of devices and screen sizes. Thankfully, we have Media Queries for this.
+A mixin that you should probably use at all times on any Sass project, no matter how you've written it, is a breakpoint manager. Now that Responsive Web Design has become a thing™, sites and applications have to support a whole range of devices and screen sizes. Thankfully, we have Media Queries for this.
 
-However, repeating media queries over and over again is far from convenient, not only because the syntax is annoying but essentially because it hurts maintainability. Then, perfect use case for a mixin.
+However, repeating media queries over and over again is far from convenient, not only because the syntax is annoying but essentially because it hurts maintainability. The perfect use case for a mixin.
 
 {% highlight scss %}
 /// Map of breakpoints for responsive design.
@@ -1696,7 +1696,7 @@ Leading to the following CSS output:
 
 ## Arguments list
 
-When dealing with an unknown number of arguments in a mixin, always use an `arglist` rather than a list. Think of `arglist` as the 8th hidden undocumented data type from Sass that is implicitely used when passing an arbitrary number of arguments to a mixin or a function whose signature contains `...`.
+When dealing with an unknown number of arguments in a mixin, always use an `arglist` rather than a list. Think of `arglist` as the 8th hidden undocumented data type from Sass that is implicitly used when passing an arbitrary number of arguments to a mixin or a function whose signature contains `...`.
 
 {% highlight scss %}
 @mixin shadows($shadows...) {
@@ -1707,7 +1707,7 @@ When dealing with an unknown number of arguments in a mixin, always use an `argl
 
 Now, when building a mixin that accepts a handful of arguments (understand 3 or more), think twice before merging them out as a list or a map thinking it will be easier than passing them all one by one.
 
-Sass is actually pretty clever with mixins and functions declarations, so much that you can actually pass a list or a map as an arglist to a function/mixin so it is being used as a series of arguments.
+Sass is actually pretty clever with mixins and function declarations, so much so that you can actually pass a list or a map as an arglist to a function/mixin so that it gets parsed as a series of arguments.
 
 {% highlight scss %}
 @mixin dummy($a, $b, $c) {
@@ -1747,11 +1747,11 @@ $params: (
 
 ## Mixins and vendor prefixes
 
-It might be tempting to define custom mixins to handle vendor prefixes for unsupported or partially supported CSS properties. But we do not. First, if you can use [Autoprefixer](https://github.com/postcss/autoprefixer), use Autoprefixer. It will remove Sass code from your project, will always be up-to-date and will necessarily do a much better job than you at prefixing stuff.
+It might be tempting to define custom mixins to handle vendor prefixes for unsupported or partially supported CSS properties. But we do not want to do this. First, if you can use [Autoprefixer](https://github.com/postcss/autoprefixer), use Autoprefixer. It will remove Sass code from your project, will always be up-to-date and will necessarily do a much better job than you at prefixing stuff.
 
-Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](http://bourbon.io/) or [Compass](http://compass-style.org/), you may not be without knowing that they both provide a collection of mixin handling vendor prefixes for you. Use them.
+Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](http://bourbon.io/) or [Compass](http://compass-style.org/), you may already know that they both provide a collection of mixins that handle vendor prefixes for you. Use those.
 
-If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and only then, you can have your own mixin for prefixing CSS properties. But. Please do not build a mixin per property, manually printing each vendors.
+If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and only then, you can have your own mixin for prefixing CSS properties. But. Please do not build a mixin per property, manually printing each vendor.
 
 {% highlight scss %}
 // Nope
@@ -1811,7 +1811,7 @@ Please keep in mind this is a poor solution. For instance, it cannot deal with c
 
 Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
 
-However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and actually solves an issue.
+However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and that it actually solves an issue.
 
 
 
@@ -1820,7 +1820,7 @@ However, the presence of loops usually implies moderately complex logic that pro
 
 ## Each
 
-The `@each` loop is definitely the more used of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
 
 {% highlight scss %}
 @each $theme in $themes {
@@ -1847,7 +1847,7 @@ When iterating on a map, always use `$key` and `$value` as variable names to enf
 
 ## For
 
-The `@for` loop might be useful when combined with CSS `:nth-*` pseudo-classes. Aside of those scenarios, prefer an `@each` loop if you *do have* to iterate over something.
+The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *do have* to iterate over something.
 
 {% highlight scss %}
 @for $i from 1 through 10 {
@@ -1886,9 +1886,9 @@ If there is a feature that is often overlooked by Sass developers, it is the abi
 * `@warn`;
 * `@error`.
 
-Let's put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one does stop the compiler while the other does not. I'll let you guess which does what.
+Let's put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one stops the compiler while the other does not. I'll let you guess which does what.
 
-Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong or display a warning when doing an assumption.
+Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong, or display a warning when doing an assumption.
 
 
 
@@ -1973,7 +1973,7 @@ $z-indexes: (
 
 # Tools
 
-What is nice with such a popular CSS preprocessor as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+What is nice sbout such a popular CSS preprocessor as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
 
@@ -1984,15 +1984,15 @@ However my advice would to be to lower the number of dependencies to the strict 
 
 ## Compass
 
-[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two maintainers of Ruby Sass, I don't see it dramatically losing in popularity before a while if you want my opinion.
+[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two maintainers of Ruby Sass, I don't see it dramatically losing in popularity for a while, if you want my opinion.
 
 Still, I do not use Compass anymore, the main reason is that it slows Sass a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it is not really here to help.
 
-The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the top of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
+The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the tip of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
 
-Unfortunately, this is all sugar and there is no killer feature in there. Exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+Unfortunately, this is all sugar and there is no killer feature in there. An exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
 
-Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass compatible (even if efforts have been made going towards that direction). If you feel better using it, fair enough but I don't think you'll get much from it at the end of the day.
+Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough but I don't think you'll get much from it at the end of the day.
 
 
 
@@ -2009,15 +2009,15 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 ## Grid systems
 
-Using a grid system is not optional now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds have made them re-usable.
+Using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
 
-Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is it the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
 
 If you are using a CSS framework for your project like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
 
 If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases &mdash;even the most nifty ones&mdash; will be covered. If you ask me, Susy has a slightly better community, but that's my opinion.
 
-Or you can head yourself to something a bit more casual, like [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not impact much on your coding style, so this is pretty much up to you at this point.
+Or you can head over to something a bit more casual, like [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
 
 
 
@@ -2243,12 +2243,12 @@ To sum up, we want:
 
 * Two (2) spaces indents, no tabs;
 * 80-characters wide lines;
-* Properly written multi-lines CSS;
-* Meaningful uses of whitespace;
+* Properly written multi-line CSS;
+* Meaningful use of whitespaces;
 * Quoted strings;
 * Quoted URLs;
 * No leading or trailing 0;
-* Calculations wrapped in parenthesis;
+* Calculations wrapped in parentheses;
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
 * Lists separated with commas;
@@ -2262,4 +2262,4 @@ To sum up, we want:
 * Simple mixins;
 * As few loops as possible, no `@while`;
 * Reduced number of dependencies;
-* Meaningful uses of warnings and errors.
+* Meaningful use of warnings and errors.
