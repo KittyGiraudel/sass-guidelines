@@ -1680,7 +1680,7 @@ Leading to the following CSS output:
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 
 
@@ -1733,6 +1733,63 @@ $params: (
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
+
+
+
+
+
+## Mixins and vendor prefixes
+
+It might be tempting to define custom mixins to handle vendor prefixes for unsupported or partially supported CSS properties. But we do not. First, if you can use [Autoprefixer](https://github.com/postcss/autoprefixer), use Autoprefixer. It will remove Sass code from your project, will always be up-to-date and will necessarily do a much better job than you at prefixing stuff.
+
+Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](http://bourbon.io/) or [Compass](http://compass-style.org/), you may not be without knowing that they both provide a collection of mixin handling vendor prefixes for you. Use them.
+
+If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and only then, you can have your own mixin for prefixing CSS properties. But. Please do not build a mixin per property, manually printing each vendors.
+
+{% highlight scss %}
+// Nope
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  transform: $value;
+}
+{% endhighlight %}
+
+
+Do it the clever way.
+
+{% highlight scss %}
+/// Mixin helper to output vendor prefixes
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - Unprefixed CSS property
+/// @param {*} $value - Raw CSS value
+/// @param {List} $prefixes - List of prefixes to output
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+{% endhighlight %}
+
+Then using this mixin should be very straightforward:
+
+{% highlight scss %}
+.element {
+  @include prefix(transform, rotate(90deg), webkit ms);
+}
+{% endhighlight %}
+
+Please keep in mind this is a poor solution. For instance, it cannot deal with complex polyfills such as those required for Flexbox. In that sense, using Autoprefixer would be a far better option.
+
+
+
+### Further reading
+
+* [Autoprefixer](https://github.com/postcss/autoprefixer)
+* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 
 
