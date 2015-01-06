@@ -391,19 +391,19 @@ In Sass, number is a data type englobing everything from unitless numbers to len
 
 ### Zeros
 
-Numbers should never display leading and trailing zeros.
+Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
 
 {% highlight scss %}
 // Yep
 .element {
   padding: 2em;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 // Nope
 .element {
   padding: 2.0em;
-  opacity: 0.5;
+  opacity: .5;
 }
 {% endhighlight %}
 
