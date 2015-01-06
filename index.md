@@ -60,7 +60,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 * [Syntax & Formatting](#syntax--formatting)
   * [Strings](#strings)
   * [Numbers](#numbers)
-    * [Floats](#floats)
+    * [Zeros](#zeros)
     * [Casting a unitless number](#casting-a-unitless-number)
     * [Calculations](#calculations)
     * [Magic numbers](#magic-numbers)
@@ -361,6 +361,20 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
   <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
 </div>
 
+URLs should be quoted as well, for the same reasons as above:
+
+{% highlight scss %}
+// Yep
+.element {
+  background-image: url("/images/kittens.jpg");
+}
+
+// Nope
+.element {
+  background-image: url(/images/kittens.jpg);
+}
+{% endhighlight %}
+
 
 
 
@@ -372,25 +386,37 @@ In Sass, number is a data type englobing everything from unitless numbers to len
 
 
 
-### Floats
+### Zeros
 
-Floats, while quite uncommon, should not display the leading 0.
+Numbers should never display leading and trailing zeros.
 
 {% highlight scss %}
 // Yep
 .element {
+  padding: 2em;
   opacity: .5;
 }
 
 // Nope
 .element {
+  padding: 2.0em;
   opacity: 0.5;
 }
 {% endhighlight %}
 
 
 
-### Casting a unitless number
+### Units
+
+A `0` value should never ever have unit. Zero is zero, no unit involved.
+
+{% highlight scss %}
+// Yep
+$length: 0;
+
+// Nope
+$length: 0em;
+{% endhighlight %}
 
 When casting a unitless number to a length, an angle or whatever, there are two ways of doing this properly, and an incorrect one. Pick wisely.
 
@@ -495,6 +521,22 @@ $sass-pink: #c69;
 
 // Nope (kind of)
 $pink: #c69;
+{% endhighlight %}
+
+When using a HSL or RGB notation, always add a single space after commas (`,`) and no space between parenthesis (`(`, `)`) and content.
+
+{% highlight scss %}
+// Yep
+.element {
+  color: rgba(0, 0, 0, .1);
+  background: hsl(300, 100%, 100%);
+}
+
+// Nope
+.element {
+  color: rgba(0,0,0,.1);
+  background: hsl( 300, 100%, 100% );
+}
 {% endhighlight %}
 
 
@@ -1897,13 +1939,171 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
 {% highlight yaml %}
+# For SCSS-Lint v0.31.0
+
 linters:
+
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  BorderZero:
+    enabled: true
+
+  ColorKeyword:
+    enabled: false
+
+  Comment:
+    enabled: false
+
+  DebugStatement:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: true
+
+  DuplicateProperty:
+    enabled: false
+
+  ElsePlacement:
+    enabled: true
+    style: same_line
+
+  EmptyLineBetweenBlocks:
+    enabled: true
+    ignore_single_line_blocks: false
+
+  EmptyRule:
+    enabled: true
+
+  FinalNewline:
+    enabled: true
+    present: true
+
+  HexLength:
+    enabled: true
+    style: short
+
+  HexNotation:
+    enabled: true
+    style: lowercase
+
+  HexValidation:
+    enabled: true
+
+  IdSelector:
+    enabled: true
+
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  Indentation:
+    enabled: true
+    character: space
+    width: 2
+
+  LeadingZero:
+    enabled: true
+    style: exclude_zero
+
   MergeableSelector:
-    force_nesting: false
+    enabled: false
+
+  NameFormat:
+    enabled: true
+    convention: hyphenated_lowercase
+
+  NestingDepth:
+    enabled: true
+    max_depth: 3
+
+  PlaceholderInExtend:
+    enabled: true
+
+  PropertySortOrder:
+    enabled: false
+
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 3
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase
+    class_convention: '^(?:u|is|has)\-[a-z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:\-[a-z][a-zA-Z0-9]*)?(?:\-\-[a-z][a-zA-Z0-9]*)?$'
+
+  Shorthand:
+    enabled: true
+
   SingleLinePerProperty:
+    enabled: true
     allow_single_line_rule_sets: false
+
+  SingleLinePerSelector:
+    enabled: true
+
+  SpaceAfterComma:
+    enabled: true
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: one_space
+
+  SpaceAfterPropertyName:
+    enabled: true
+
+  SpaceBeforeBrace:
+    enabled: true
+    style: space
+    allow_single_line_padding: true
+
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
   StringQuotes:
+    enabled: true
     style: double_quotes
+
+  TrailingSemicolon:
+    enabled: true
+
+  TrailingZero:
+    enabled: true
+
+  UnnecessaryMantissa:
+    enabled: true
+
+  UnnecessaryParentReference:
+    enabled: true
+
+  UrlFormat:
+    enabled: false
+
+  UrlQuotes:
+    enabled: true
+
+  VendorPrefixes:
+    enabled: true
+    identifier_list: base
+    include: []
+    exclude: []
+
+  ZeroUnit:
+    enabled: true
 {% endhighlight %}
 
 <div class="note">
