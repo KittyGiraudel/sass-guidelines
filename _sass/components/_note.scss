@@ -6,12 +6,15 @@
   background: $medium-background;
   padding: 2em;
 
-  > p {
+  > :first-child {
     margin-top: 0;
+  }
+
+  > :last-child {
     margin-bottom: 0;
   }
 
-  > p::before {
+  > p:first-child::before {
     content: "Note — ";
     font-weight: bold;
   }
