@@ -689,7 +689,7 @@ If you ever find yourself lost, wondering what kind of crazy magic is happening 
       __keys__: map-keys($map);
       __properties__ {
         @each $key, $value in $map {
-          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
+          #{"(" + type-of($value) + ") " + $key}: inspect($value);
         }
       }
     }
