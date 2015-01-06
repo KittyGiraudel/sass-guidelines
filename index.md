@@ -513,15 +513,19 @@ For starter, keywords often speak for themselves. The HSL representation is not 
 }
 {% endhighlight %}
 
-When using a color more than once, store it in a variable with a meaningful name so you can reuse it.
+When using a color more than once, store it in a variable with a meaningful name representing the color.
 
 {% highlight scss %}
-// Yep
 $sass-pink: #c69;
-
-// Nope (kind of)
-$pink: #c69;
 {% endhighlight %}
+
+At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it into another one with a name explaining how it should be used.
+
+{% highlight scss %}
+$main-theme-color: $sass-pink;
+{% endhighlight %}
+
+Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
 
 When using a HSL or RGB notation, always add a single space after commas (`,`) and no space between parenthesis (`(`, `)`) and content.
 
