@@ -105,6 +105,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
   * [Errors](#errors)
 * [Tools](#tools)
   * [Compass](#compass)
+  * [Grid Systems](#grid-systems)
   * [SCSS-lint](#scss-lint)
 * [Too Long; Didn't Read](#too-long-didnt-read)
 
@@ -1856,6 +1857,37 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 
 
+## Grid systems
+
+Using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made their re-usable.
+
+Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is it the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+
+If you are using a CSS framework for your project like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
+
+If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases &mdash;even the most nifty ones&mdash; will be covered. If you ask me, Susy has a slightly better community, but that's my opinion.
+
+Or you can head yourself to something a bit more casual, like [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not impact much on your coding style, so this is pretty much up to you at this point.
+
+
+
+### Further reading
+
+* [Singularity](http://singularity.gs/)
+* [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
+* [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
+* [Susy](http://susy.oddbird.net/)
+* [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
+* [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
+* [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
+* [Bootstrap's Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
+* [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
+
+
+
+
+
+
 ## SCSS-lint
 
 Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody's perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
@@ -1879,6 +1911,14 @@ linters:
 </div>
 
 
+
+### Further reading
+
+* [SCSS-lint](https://github.com/causes/scss-lint)
+* [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
+* [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardianco)
+* [grunt-scsslint](https://github.com/FWeinb/grunt-scsslint)
+* [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/)
 
 
 
