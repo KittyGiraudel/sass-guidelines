@@ -32,7 +32,7 @@ Last but not least before we start: if you enjoyed this document, if it is usefu
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guildelines" target="_blank" class="button">Support Sass Guidelines</a>
-  <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
+  <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20by%20%40HugoGiraudel%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
 </div>
 
 
