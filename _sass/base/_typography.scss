@@ -38,10 +38,19 @@ blockquote {
  */
 h1, h2, h3 {
   text-transform: capitalize;
+  position: relative;
 
   code {
     text-transform: initial;
   }
+}
+
+.anchor-link {
+  position: absolute;
+  left: -1.5rem;
+  font-size: .8em;
+  top: .2em;
+  color: #dadbdf;
 }
 
 h1 {
