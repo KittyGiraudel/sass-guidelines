@@ -2216,7 +2216,7 @@ linters:
 {% endhighlight %}
 
 <div class="note">
-  <p><a href="https://twitter.com/fweinb">Fabrice Weinberg</a> is the author of a Grunt plugin for SCSS-lint called <a href="https://github.com/FWeinb/grunt-scsslint">grunt-scsslint</a>.</p>
+  <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
 </div>
 
 
@@ -2226,7 +2226,7 @@ linters:
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
 * [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardianco)
-* [grunt-scsslint](https://github.com/FWeinb/grunt-scsslint)
+* [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
 * [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/)
 
 
