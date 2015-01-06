@@ -259,7 +259,7 @@ Needless to say, the more actors involved on a project, the more code guidelines
 
 First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass specific content.
 
-Also, this styleguide is my own and somehow very opinionated. Think of it as a collection of methodologies and advices I have polished and given over the years.
+Also, this styleguide is my own and somehow very opinionated. Think of it as a collection of methodologies and advices I have polished and given over the years. Also, it gaves me the opportunity to link to a handful of insightful resources, so be sure to check further readings.
 
 Obviously, this is certainly not the only way of doing and may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say *your mileage may vary*.
 
