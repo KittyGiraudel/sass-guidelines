@@ -2137,7 +2137,8 @@ To sum up, we want:
 * Properly written multi-lines CSS;
 * Meaningful uses of whitespace;
 * Quoted strings;
-* No leading 0 for floats;
+* Quoted URLs;
+* No leading or trailing 0;
 * Calculations wrapped in parenthesis;
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
