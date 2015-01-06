@@ -1332,6 +1332,11 @@ In order to preserve readability, the main file should respect those guidelines:
 @import "themes/admin";
 {% endhighlight %}
 
+<div class="note">
+  <p>In order not to have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a> making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
+  <p>That being said I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source order dependant language.</p>
+</div>
+
 
 
 ### Further reading
