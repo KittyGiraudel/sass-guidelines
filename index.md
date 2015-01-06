@@ -411,7 +411,7 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 ### Units
 
-A `0` value should never ever have unit. Zero is zero, no unit involved.
+When dealing with lengths, a `0` value should never ever have unit.
 
 {% highlight scss %}
 // Yep
