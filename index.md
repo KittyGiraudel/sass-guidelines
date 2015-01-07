@@ -32,7 +32,8 @@ Last but not least before we start: if you enjoyed this document, or if it is us
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guildelines" target="_blank" class="button">Support Sass Guidelines</a>
-  <a href="https://twitter.com/share?text=Sass%20Guidelines%2C%20a%20styleguide%20for%20writing%20sane%2C%20maintainable%20and%20scalable%20Sass%20by%20%40HugoGiraudel%20%E2%80%94%20&url=http://sass-guidelin.es" target="_blank" class="button">Spread the word</a>
+  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">Spread the word</a>
 </div>
 
 
@@ -1146,6 +1147,10 @@ Fortunately, one of the main benefits of using a CSS preprocessor is having the 
 On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.
 
 There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons. Nevertheless, none of them suits me correctly. Call me old fashioned, but I find them too complicated for myself. I like to keep things simple, to keep them obvious.
+
+<div class="note">
+  <p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p>
+</div>
 
 
 
