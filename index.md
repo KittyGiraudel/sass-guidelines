@@ -1944,7 +1944,7 @@ $z-indexes: (
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer) {
-  @if not map-has-key($z-index, $layer) {
+  @if not map-has-key($z-indexes, $layer) {
     @error "There is no layer named `#{$layer}` in $z-indexes."
          + "Layer should be one of #{map-keys($z-indexes)}.";
   }
