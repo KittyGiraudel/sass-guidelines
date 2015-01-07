@@ -631,13 +631,22 @@ If you don't want to write the `mix` function every time, you can create two eas
 
 Lists are the Sass equivalent of arrays. It is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
 
-Unless you have a good reason to do so (using a Sass list as a CSS list of values for instance), always **use a comma as a delimiter**. While making the list slightly longer, it helps in distinguish values from each other and stays consistent with most languages.
+Lists should respect the following guidelines:
 
-However, **do not wrap a list in parentheses** unless it is empty. Also, **do not add a trailing comma**. It is ugly and it does not help.
+* unless it is too long to fit on a 80-characters line, always display it on a single line;
+* unless it is used as is for CSS purposes, always use comma as a delimiter;
+* unless it is empty, never write the parenthesis;
+* never add a trailing comma.
 
 {% highlight scss %}
 // Yep
 $font-stack: 'Helvetica', 'Arial', sans-serif;
+
+// Nope
+$font-stack:
+  'Helvetica',
+  'Arial',
+  sans-serif;
 
 // Nope
 $font-stack: 'Helvetica' 'Arial' sans-serif;
