@@ -1,0 +1,15 @@
+.donate {
+  @include vertical-rhythm;
+  background: #f2ece4;
+  padding: 1em;
+  text-align: center;
+
+  .button {
+    margin-left: 0;
+    background: white;
+  }
+}
+
+.donate__content {
+  @include container;
+}
