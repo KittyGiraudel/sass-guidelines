@@ -579,6 +579,8 @@ $main-theme-color: $sass-pink;
 
 Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
 
+{% include donate.html %}
+
 
 
 ### Lightening and darkening colors
@@ -1050,6 +1052,8 @@ $imported-modules: append($imported-modules, $module) !global;
 ### Further reading
 
 * [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
+
+{% include donate.html %}
 
 
 
@@ -1575,6 +1579,8 @@ $variable: 'initial value' !global;
   content: $variable;
 }
 {% endhighlight %}
+
+{% include donate.html %}
 
 
 
@@ -2470,3 +2476,5 @@ To sum up, we want:
 * As few loops as possible, no `@while`;
 * Reduced number of dependencies;
 * Meaningful use of warnings and errors.
+
+{% include donate.html %}
