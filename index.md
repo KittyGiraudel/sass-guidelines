@@ -101,6 +101,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
   * [Basics](#basics)
   * [Arguments list](#arguments-list)
   * [Mixins and Vendor Prefixes](#mixins-and-vendor-prefixes)
+* [Conditional statements](#conditional-statements)
 * [Loops](#loops)
   * [Each](#each)
   * [For](#for)
@@ -1929,6 +1930,78 @@ Please keep in mind this is a poor solution. For instance, it cannot deal with c
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+
+
+
+
+
+
+
+
+
+
+# Conditional statements
+
+You are probably not without knowing that Sass provides conditional statements under the `@if` and `@else` directives. Unless you involve some medium to complex logic in your code, there is no need for conditional statements in the everyday's stylesheet. However, if you ever find yourself in the need for them, please respect the following guidelines:
+
+* No parentheses unless they are necessary;
+* Always a line break after the opening brace (`{`);
+* `@else` statements on the same line as previous closing brace (`}`).
+
+{% highlight scss %}
+// Yep
+@if $support-legacy == true {
+  // ...
+} @else {
+  // ...
+}
+
+// Nope
+@if ($support-legacy == true) {
+  // ...
+}
+@else {
+  // ...
+}
+{% endhighlight %}
+
+When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
+
+{% highlight scss %}
+// Yep
+@if not index($list, $item) {
+  // ...
+}
+
+// Nope
+@if index($list, $item) == null {
+  // ...
+}
+{% endhighlight %}
+
+When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
+
+{% highlight scss %}
+// Yep
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  }
+
+  @return false;
+}
+
+// Nope
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+{% endhighlight %}
+
 
 
 
