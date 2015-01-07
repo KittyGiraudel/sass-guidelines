@@ -1972,7 +1972,9 @@ If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and onl
 Do it the clever way.
 
 > >     #{'-' + $prefix + '-' + $property}: $value;
+>
 > I'd write
+>
 >     -#{$prefix}-#{$property}: $value
 
 {% highlight scss %}
