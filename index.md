@@ -462,7 +462,7 @@ Appending the unit as a string to a number results in a string, preventing any a
 
 Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
 
-Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you thik it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
+Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you think it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
 
 {% highlight scss %}
 /**
@@ -2009,7 +2009,7 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 ## Grid systems
 
-Using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
 
 Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
 
