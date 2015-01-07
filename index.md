@@ -295,6 +295,7 @@ Obviously, this is certainly not the only way of doing things, and it may or may
 ## Key principles
 
 > > **Sass should be kept as simple as it can be**
+>
 > This sounds a lot like one of the principles I mentioned above for desining the language :).
 
 At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
@@ -330,6 +331,7 @@ Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pr
 If you ask me, the very first thing a styleguide should do is describe the usual guidelines to write code.
 
 > > his
+>
 > Please consider gender-neutral language here. They/them/their is a perfectly reasonable set of singular gender-neutral pronouns. Little things like this can go a long way towards making a community feel more or less open to women and non-binary people.
 
 When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things his own way. Code guidelines are not only meant to prevent this, but also help when reading and updating of code, by making it look consistent.
@@ -670,9 +672,11 @@ Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike
 Lists should respect the following guidelines:
 
 > > unless it is empty
+>
 > Or nested, presumably?
 >
 > > never add a trailing comma
+>
 > I like trailing commas for multi-line lists, because it makes it easier to add a new line without having to modify any previous ones. It makes diffs nicer, too.
 
 * unless it is too long to fit on a 80-characters line, always display it on a single line;
@@ -1590,11 +1594,13 @@ Basically, there is no point declaring a variable that will never be updated or 
 ## Scoping
 
 > > all variable declarations were global, no matter where
+>
 > This isn't accurate. Declarations within rulesets and other scopes were local by default. The difference came up if there was *also* a global variable with the same name. Previously, the local assignment would change the global variable; now, it creates a new local variable instead.
 
 Variable scoping in Sass has changed over the years. Until fairly recently, all variable declarations were global, no matter where. Since version 3.4, Sass now properly tackles the concept of scopes and local variables.
 
 > > Sass doesn't really have different scopes.
+>
 > I'm not sure what you mean by this. Every block has its own scope.
 
 Sass doesn't really have different scopes. Indeed, the docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
@@ -1725,6 +1731,7 @@ $z-indexes: (
 # Extend
 
 > > style an element A exactly like an element B
+>
 > More specifically, as though it also matched selector B.
 
 The `@extend` directive has to be one of the features that made Sass so popular a couple of years ago. As a reminder, it makes it possible to tell Sass to style an element A exactly like an element B. Needless to say this can end up being a valuable ally when writing modular CSS.
@@ -2022,6 +2029,7 @@ You probably already know that Sass provides conditional statements via the `@if
 * `@else` statements on the same line as previous closing brace (`}`).
 
 > >     @if $support-legacy == true {
+>
 > Please don't ever write `== true`. Every time you do this a tear runs down an orphan's cheek.
 
 {% highlight scss %}
@@ -2267,6 +2275,7 @@ However my advice would to be to lower the number of dependencies to the strict 
 ## Compass
 
 > > maintainers of Ruby Sass
+>
 > I'd say "core designers of Sass". I do almost of the actual coding these days, but Chris and I collaborate on the language design. This design is, of course, not specific to Ruby.
 
 [Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two maintainers of Ruby Sass, I don't see it dramatically losing in popularity for a while, if you want my opinion.
