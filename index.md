@@ -2256,7 +2256,7 @@ To sum up, we want:
 * Meaningful use of whitespaces;
 * Quoted strings;
 * Quoted URLs;
-* No leading or trailing 0;
+* No trailing 0;
 * Calculations wrapped in parentheses;
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
