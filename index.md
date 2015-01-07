@@ -470,7 +470,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
  * `.element` with its parent. Ideally, we should fix it properly.
  */
 .element {
-  top: .327em; /* 1 */
+  top: 0.327em; /* 1 */
 }
 {% endhighlight %}
 
@@ -521,13 +521,13 @@ When using HSL or RGB notation, always add a single space after commas (`,`) and
 {% highlight scss %}
 // Yep
 .element {
-  color: rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
 // Nope
 .element {
-  color: rgba(0,0,0,.1);
+  color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
 }
 {% endhighlight %}
@@ -2247,7 +2247,7 @@ To sum up, we want:
 * Meaningful use of whitespaces;
 * Quoted strings;
 * Quoted URLs;
-* No leading or trailing 0;
+* Use leading zeros, no trailing zeros;
 * Calculations wrapped in parentheses;
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
