@@ -562,7 +562,7 @@ The benefit of using `mix` rather than one of the two aforementioned functions i
 
 <p data-height="400" data-theme-id="0" data-slug-hash="wBopOd" data-default-tab="result" data-user="HugoGiraudel" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/wBopOd/'>Dadgumit, Blowouts</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
-If you don't want to write the `mix` function every time, you can create two easy-to-use functions to do the same thing:
+If you don't want to write the `mix` function every time, you can create two easy-to-use functions `tint` and `shade` (which are also a part of [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) to do the same thing:
 
 {% highlight scss %}
 /// Slightly lighten a color
