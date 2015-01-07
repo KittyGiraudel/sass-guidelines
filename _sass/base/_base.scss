@@ -18,15 +18,11 @@ body {
 a {
   text-decoration: none;
   color: $main-color;
-  font-weight: bold;
+  font-weight: 700;
   transition: .15s;
 
   @include on-event {
     color: $secondary-color;
-  }
-
-  &:visited {
-    font-weight: normal;
   }
 }
 
