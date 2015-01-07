@@ -421,7 +421,9 @@ $length: 0;
 $length: 0em;
 {% endhighlight %}
 
-When casting a unitless number to a length, an angle or whatever, there are two ways of doing this properly, and an incorrect one. Pick wisely.
+The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, that is certainly not how units work. Think of units as algebraic symbols.
+
+To add a unit to a number, you have to multiply this number by *1 unit*. Adding *0 member of that unit* also works.
 
 {% highlight scss %}
 $value: 42;
@@ -436,7 +438,19 @@ $length: $value + 0px;
 $length: $value + px;
 {% endhighlight %}
 
-Appending the unit as a string to a number results in a string, preventing any additional operation on the value. This is not what you want.
+To remove the unit of a value, you have to divide it by *one unit of its kind*.
+
+{% highlight scss %}
+$length: 42px;
+
+// Yep
+$value: $length / 1px;
+
+// Nope
+$value: str-slice($length + unquote(""), 1, 2);
+{% endhighlight %}
+
+Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
 
 
 
