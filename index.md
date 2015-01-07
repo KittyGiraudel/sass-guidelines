@@ -521,13 +521,13 @@ When using HSL or RGB notation, always add a single space after commas (`,`) and
 {% highlight scss %}
 // Yep
 .element {
-  color: rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
 // Nope
 .element {
-  color: rgba(0,0,0,.1);
+  color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
 }
 {% endhighlight %}
