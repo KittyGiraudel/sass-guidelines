@@ -41,8 +41,4 @@
   &::first-letter {
     text-transform: uppercase;
   }
-
-  &::after {
-    content: '.';
-  }
 }
