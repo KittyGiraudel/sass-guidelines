@@ -1,7 +1,6 @@
 # Site settings
 title: Sass Guidelines
-description: >
-  Styleguide for writing sane, maintainable and scalable Sass.
+description: "an opinionated styleguide for writing sane, maintainable and scalable Sass"
 baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
