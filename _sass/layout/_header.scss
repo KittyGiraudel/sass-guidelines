@@ -37,4 +37,12 @@
   font-size: 2.5em;
   text-transform: initial;
   color: $main-color;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &::after {
+    content: '.';
+  }
 }
