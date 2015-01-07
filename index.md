@@ -2451,19 +2451,18 @@ To sum up, we want:
 * 80-characters wide lines;
 * Properly written multi-line CSS;
 * Meaningful use of whitespaces;
-* Quoted strings & URLs;
-* No trailing 0;
+* Quoted strings (single quotes) & URLs;
+* No trailing 0, mandatory leading 0;
 * Calculations wrapped in parentheses;
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
 * Lists separated with commas;
 * No trailing comma in lists and maps;
-* No selector nesting expected pseudo-classes and pseudo-elements;
+* No selector nesting except for pseudo-classes and pseudo-elements;
 * Hyphen-delimited naming;
 * Extensive comments;
 * SassDoc-powered API comments;
-* 7-1 architecture pattern
-* No `@extend`;
+* Limited usage of `@extend`;
 * Simple mixins;
 * As few loops as possible, no `@while`;
 * Reduced number of dependencies;
