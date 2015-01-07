@@ -462,7 +462,7 @@ Appending the unit as a string to a number results in a string, preventing any a
 
 Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
 
-Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you think it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
+Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you thik it works. Admitting you don't know why something works is still more helpful to the next developer than having to figure out what's going on.
 
 {% highlight scss %}
 /**
@@ -727,6 +727,7 @@ If you are interested in knowing the depth of the map, add the following functio
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 
 
@@ -814,7 +815,7 @@ One particular feature Sass provides that is being overly misused by many develo
 .foo {
   .bar {
     &:hover {
-      color: red;
+      content: baz;
     }
   }
 }
@@ -825,7 +826,7 @@ One particular feature Sass provides that is being overly misused by many develo
 
 {% highlight css %}
 .foo .bar:hover {
-  color: red;
+  content: baz;
 }
 {% endhighlight %}
 
@@ -834,17 +835,8 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 {% highlight scss %}
 .foo {
   &-bar {
-    color: red;
+    content: "Howdy! I am `.foo-bar`.";
   }
-}
-{% endhighlight %}
-
-... will generate this CSS:
-
-
-{% highlight css %}
-.foo-bar {
-  color: red;
 }
 {% endhighlight %}
 
@@ -862,10 +854,10 @@ To prevent such a situation, we **avoid selector nesting except for pseudo-class
 
 {% highlight scss %}
 .foo {
-  color: red;
+  content: "regular";
 
   &:hover {
-    color: green;
+    content: "hovered";
   }
 
   &::before {
@@ -2018,7 +2010,7 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 ## Grid systems
 
-Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+Using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
 
 Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
 
