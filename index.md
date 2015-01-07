@@ -470,7 +470,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
  * `.element` with its parent. Ideally, we should fix it properly.
  */
 .element {
-  top: .327em; /* 1 */
+  top: 0.327em; /* 1 */
 }
 {% endhighlight %}
 
