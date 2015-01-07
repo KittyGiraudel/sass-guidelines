@@ -1109,7 +1109,7 @@ Components can be anything, as long as they:
 
 * do one thing and one thing only;
 * are re-usable and re-used across the project;
-* are independant.
+* are independent.
 
 For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).
 
@@ -1352,7 +1352,7 @@ In order to preserve readability, the main file should respect these guidelines:
 
 <div class="note">
   <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependant language.</p>
+  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
 </div>
 
 
