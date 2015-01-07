@@ -16,6 +16,6 @@
 
   > p:first-child::before {
     content: "Note — ";
-    font-weight: bold;
+    font-weight: 700;
   }
 }
