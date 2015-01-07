@@ -342,9 +342,9 @@ We will not tackle the question of file organization in this section. It is the 
 
 CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance, it doesn't matter whether you wrap them in quotes for the CSS parser.
 
-Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll conceed), a quoted string is strictly equivalent to its unquoted twin (e.g. `"abc"` is strictly equal to `abc`).
+Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll conceed), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with double quotes** in Sass. Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
 
 * most syntax highlighters will choke on unquoted strings;
 * it helps general readability;
@@ -352,10 +352,10 @@ That being said, languages that do not require strings to be quoted are definite
 
 {% highlight scss %}
 // Yep
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
+$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
 
 // Nope
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
 
 // Nope
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
@@ -370,7 +370,7 @@ URLs should be quoted as well, for the same reasons as above:
 {% highlight scss %}
 // Yep
 .element {
-  background-image: url("/images/kittens.jpg");
+  background-image: url('/images/kittens.jpg');
 }
 
 // Nope
@@ -460,7 +460,7 @@ $length: 42px;
 $value: $length / 1px;
 
 // Nope
-$value: str-slice($length + unquote(""), 1, 2);
+$value: str-slice($length + unquote(''), 1, 2);
 {% endhighlight %}
 
 Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
@@ -487,7 +487,7 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 ### Magic numbers
 
-Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for "unnamed numerical constant". Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
+Magic numbers is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
 
 Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for a number to work, add an extensive comment explaining how you got there and why you think it works. Admitting you don't know why something works is still more helpful to the next developer than them having to figure out what's going on.
 
@@ -636,16 +636,16 @@ However, **do not wrap a list in parentheses** unless it is empty. Also, **do no
 
 {% highlight scss %}
 // Yep
-$font-stack: "Helvetica", "Arial", sans-serif;
+$font-stack: 'Helvetica', 'Arial', sans-serif;
 
 // Nope
-$font-stack: "Helvetica" "Arial" sans-serif;
+$font-stack: 'Helvetica' 'Arial' sans-serif;
 
 // Nope
-$font-stack: ("Helvetica", "Arial", sans-serif);
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 
 // Nope
-$font-stack: ("Helvetica", "Arial", sans-serif,);
+$font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
 
 When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
@@ -690,9 +690,9 @@ Illustration:
 {% highlight scss %}
 // Yep
 $breakpoints: (
-  "small": 767px,
-  "medium": 992px,
-  "large": 1200px
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px
 );
 
 // Nope
@@ -714,11 +714,11 @@ If you ever find yourself lost, wondering what kind of crazy magic is happening 
     @debug-map {
       __toString__: inspect($map);
       __length__: length($map);
-      __depth__: if(function-exists("map-depth"), map-depth($map), null);
+      __depth__: if(function-exists('map-depth'), map-depth($map), null);
       __keys__: map-keys($map);
       __properties__ {
         @each $key, $value in $map {
-          #{"(" + type-of($value) + ") " + $key}: inspect($value);
+          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
         }
       }
     }
@@ -736,7 +736,7 @@ If you are interested in knowing the depth of the map, add the following functio
   $level: 1;
 
   @each $key, $value in $map {
-    @if type-of($value) == "map" {
+    @if type-of($value) == 'map' {
       $level: max(map-depth($value) + 1, $level);
     }
   }
@@ -817,7 +817,7 @@ Illustration:
     color: red;
   }
 
-  @include respond-to("small") {
+  @include respond-to('small') {
     overflow: visible;
   }
 }
@@ -897,7 +897,7 @@ To prevent such a situation, we **avoid selector nesting except for pseudo-class
   }
 
   &::before {
-    content: "pseudo-element";
+    content: 'pseudo-element';
   }
 }
 {% endhighlight %}
@@ -1371,34 +1371,34 @@ In order to preserve readability, the main file should respect these guidelines:
 * file extensions and leading underscores omitted.
 
 {% highlight scss %}
-@import "vendors/bootstrap";
-@import "vendors/jquery-ui";
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
 
-@import "utils/variables";
-@import "utils/functions";
-@import "utils/mixins";
-@import "utils/placeholders";
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/placeholders';
 
-@import "base/reset";
-@import "base/typography";
+@import 'base/reset';
+@import 'base/typography';
 
-@import "layout/navigation";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/sidebar";
-@import "layout/forms";
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
 
-@import "components/buttons";
-@import "components/carousel";
-@import "components/cover";
-@import "components/dropdown";
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/cover';
+@import 'components/dropdown';
 
-@import "pages/home";
-@import "pages/contact";
+@import 'pages/home';
+@import 'pages/contact';
 
-@import "themes/theme";
-@import "themes/admin";
+@import 'themes/theme';
+@import 'themes/admin';
 {% endhighlight %}
 
 <div class="note">
@@ -1486,16 +1486,16 @@ The following code snippet explains the *variable shadowing* concept.
 {% highlight scss %}
 // Initialize a global variable at root level.
 // In this case, the `!global` flag is optional.
-$variable: "initial value" !global;
+$variable: 'initial value' !global;
 
 // Create a mixin that overrides that global variable.
 @mixin global-variable-overriding {
-  $variable: "mixin value" !global;
+  $variable: 'mixin value' !global;
 }
 
 .local-scope {
   // Create a local variable that shadows the global one.
-  $variable: "local value";
+  $variable: 'local value';
 
   // Include the mixin: it overrides the global variable.
   @include global-variable-overriding;
@@ -1532,7 +1532,7 @@ Thanks to this, a developer can define his own `$baseline` variable *before* imp
 $baseline: 2em;
 
 // Your library declaring `$baseline`
-@import "your-library";
+@import 'your-library';
 
 // $baseline == 2em;
 {% endhighlight %}
@@ -1625,7 +1625,7 @@ If you are going to use extend, let me also remind you that it does not play wel
 
 {% highlight scss %}
 .foo {
-  content: "foo";
+  content: 'foo';
 }
 
 @media print {
@@ -1705,8 +1705,8 @@ However, repeating media queries over and over again is far from convenient, not
 /// @see {mixin} respond-to
 /// @type Map
 $breakpoints: (
-  "small":  (max-width: 800px),
-  "medium": (min-width: 801px)
+  'small':  (max-width: 800px),
+  'medium': (min-width: 801px)
 ) !global;
 
 /// Responsive manager.
@@ -1721,8 +1721,8 @@ $breakpoints: (
   }
 
   @else {
-    @error "No value found for `#{$breakpoint}`. "
-         + "Please make sure it is defined in `$breakpoints` map.";
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
 {% endhighlight %}
@@ -1733,7 +1733,7 @@ Usage is both simple and obvious.
 .element {
   color: red;
 
-  @include respond-to("small") {
+  @include respond-to('small') {
     color: blue;
   }
 }
@@ -1772,7 +1772,7 @@ When dealing with an unknown number of arguments in a mixin, always use an `argl
 
 {% highlight scss %}
 @mixin shadows($shadows...) {
-  // type-of($shadows) == "arglist"
+  // type-of($shadows) == 'arglist'
   // ...
 }
 {% endhighlight %}
@@ -1787,21 +1787,21 @@ Sass is actually pretty clever with mixins and function declarations, so much so
 }
 
 // Yep
-@include dummy(true, 42, "kittens");
+@include dummy(true, 42, 'kittens');
 
 // Yep but nope
-$params: true, 42, "kittens";
+$params: true, 42, 'kittens';
 $value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
 
 // Yep
-$params: true, 42, "kittens";
+$params: true, 42, 'kittens';
 @include dummy($params...);
 
 // Yep
 $params: (
-  "c": "kittens",
-  "a": true,
-  "b": 42
+  'c': 'kittens',
+  'a': true,
+  'b': 42
 );
 @include dummy($params...);
 {% endhighlight %}
@@ -1974,7 +1974,7 @@ Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting
 {% highlight scss %}
 @function mq-px2em($px, $base-font-size: $mq-base-font-size) {
     @if unitless($px) {
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @warn 'Assuming #{$px} to be in pixels, attempting to convert it into pixels.';
         @return mq-px2em($px + 0px);
     } @else if unit($px) == em {
         @return $px;
@@ -2017,8 +2017,8 @@ $z-indexes: (
 /// @require $z-indexes
 @function z($layer) {
   @if not map-has-key($z-indexes, $layer) {
-    @error "There is no layer named `#{$layer}` in $z-indexes."
-         + "Layer should be one of #{map-keys($z-indexes)}.";
+    @error 'There is no layer named `#{$layer}` in $z-indexes.'
+         + 'Layer should be one of #{map-keys($z-indexes)}.';
   }
 
   @return map-get($z-indexes, $layer);
@@ -2257,7 +2257,7 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: double_quotes
+    style: single_quotes
 
   TrailingSemicolon:
     enabled: true
@@ -2318,8 +2318,7 @@ To sum up, we want:
 * 80-characters wide lines;
 * Properly written multi-line CSS;
 * Meaningful use of whitespaces;
-* Quoted strings;
-* Quoted URLs;
+* Quoted strings & URLs;
 * No trailing 0;
 * Calculations wrapped in parentheses;
 * No magic numbers;
