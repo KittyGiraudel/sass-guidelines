@@ -727,6 +727,7 @@ If you are interested in knowing the depth of the map, add the following functio
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 
 
