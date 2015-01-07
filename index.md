@@ -2,6 +2,8 @@
 layout: default
 ---
 
+> Comments are in quotes, because I couldn't find a better way to do them. There are also a few copy-editing changes inline because I can't help myself.
+
 # About the author
 
 My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer from France about to move to Berlin, Germany. I have been writing Sass for over two years now and am the author of Sass-related projects such as [SassDoc](http://sassdoc.com) and [Sass-Compatibility](http://sass-compatibility.github.io).
@@ -157,7 +159,13 @@ In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync 
 
 The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
+> I don't like the phrasing of "it doesn't really matter". Ruby Sass will always be the reference implementation and will always lead libsass in features (except for the brief period between libsass catching up to 3.4 and 3.5 or 4.0 being released).
+>
+> I also don't like the idea that Ruby Sass is only useful for Ruby projects. Various GUIs make it very easy to get up and running with Ruby Sass without ever interacting with Ruby itself directly at all.
+
 Now when it comes to choosing your compiler, it doesn't really matter. Actually, it is really up to your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case.
+
+> I think it's worth noting that Ruby Sass is actively in performance-improvement mode. I don't have any solid numbers yet, but I'm very optimistic about the results of my compile-to-Ruby efforts.
 
 On the other hand, LibSass is mostly dedicated to being wrapped. So if you want to use anything but Ruby, for instance NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen. Also the major benefit of using LibSass is its speed: it is blazingly fast compared to Ruby Sass.
 
@@ -177,9 +185,13 @@ On the other hand, LibSass is mostly dedicated to being wrapped. So if you want 
 
 There is quite a lot of confusion regarding the semantics of the name *Sass*, and for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
 
+> "Very close to Ruby" and "write CSS in Ruby" aren't accurate. The defining characteristic of the indented syntax is its indentation-sensitivity, which Ruby doesn't share. Historically, the indented syntax was originally conceived as "Haml for CSS". Haml in turn was created by taking an HTML document and deleting every superfluous character, including closing tags.
+
 You see, Sass initially described a syntax very close to Ruby. Actually, the initial idea was to write CSS in Ruby. Soon enough, Sass maintainers decided to close the gap between Sass and CSS by providing a CSS-friendly syntax called *SCSS* for *Sassy CSS*. The motto is: if it's valid CSS, it's valid SCSS.
 
 Since then, Sass (the preprocessor) has been providing two different syntaxes: Sass (not all-caps, [please](http://sassnotsass.com)), also known as *the indented syntax*, and SCSS. Which one to use is pretty much up to you since both are strictly equivalent in features. It's only a matter of aesthetics at this point.
+
+> "Ruby-like" -> "indented" or "whitespace-sensitive". Also, I'd say that SCSS is "easier to learn" rather than "easier to use"; no one would use the indented syntax if they didn't find it easier.
 
 Sass's Ruby-like syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to use since it's mostly some tiny extra bits on top of CSS.
 
@@ -200,9 +212,15 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 Sass is a preprocessor among other things. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) which is kind of the nerdy unrestricted version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
+> > This is no longer relevant advice.
+>
+> I claim that this was never relevant advice :p.
+
 *Why choose Sass over LESS or another preprocessor?* is still a valid question today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (mostly) with original Sass, this is no longer relevant advice.
 
 What I do like with Sass is its conservative approach to CSS. Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aiming at solving actual issues; helping to provide useful functionality to CSS where CSS proves shortcoming.
+
+> I'd add two things here. First, Sass's design is based on strong design principles: much of the design comes naturally out of our beliefs that adding extra features has a complexity cost that needs to be justified by usefulness, and that it should be easy to reason about what a given block of styles is doing by looking at that block alone. Second, I believe Sass has a much closer attention to detail than other preprocessors. We care deeply about supporting every corner-case of CSS compatibility and making sure every corner-case of behavior is consistent.
 
 Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [postCSS](https://github.com/postcss/postcss) and [CSSNext](https://github.com/cssnext/cssnext). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
 
@@ -276,6 +294,9 @@ Obviously, this is certainly not the only way of doing things, and it may or may
 
 ## Key principles
 
+> > **Sass should be kept as simple as it can be**
+> This sounds a lot like one of the principles I mentioned above for desining the language :).
+
 At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
 
 Thanks to my silly experiments like [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
@@ -307,6 +328,9 @@ Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pr
 # Syntax & formatting
 
 If you ask me, the very first thing a styleguide should do is describe the usual guidelines to write code.
+
+> > his
+> Please consider gender-neutral language here. They/them/their is a perfectly reasonable set of singular gender-neutral pronouns. Little things like this can go a long way towards making a community feel more or less open to women and non-binary people.
 
 When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things his own way. Code guidelines are not only meant to prevent this, but also help when reading and updating of code, by making it look consistent.
 
@@ -347,6 +371,8 @@ CSS does not require strings to be quoted, not even those containing spaces. Tak
 Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
 
 That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+
+> Color names are also a serious pitfall when using unquoted strings in SassScript. If you just write `black`, that's treated as a color object, not a string, which can cause unexpected behavior.
 
 * most syntax highlighters will choke on unquoted strings;
 * it helps general readability;
@@ -423,6 +449,8 @@ $length: 0;
 // Nope
 $length: 0em;
 {% endhighlight %}
+
+> It might be worth spending a little time explaining the theory behind this behavior. The example I like best is that in the real world, when you multiply 5 inches by 5 inches, you get 25 square inches, and the same is true for Sass. It might also be worth mentioning that if your units aren't coming out how you want, that often indicates a bug somewhere in the unit-manipulation logic.
 
 The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, that is certainly not how units work. Think of units as algebraic symbols.
 
@@ -585,6 +613,8 @@ Doing this would prevent a theme change leading to something like `$sass-pink: b
 
 ### Lightening and darkening colors
 
+> The `scale-color` function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as `mix`'s but with a clearer calling convention. The scaling factor isn't exactly the same, but it's a better idea to get familiar with `scale-color` than with `mix`.
+
 Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding or substracting lightness to it. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
 
 The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
@@ -639,6 +669,12 @@ Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike
 
 Lists should respect the following guidelines:
 
+> > unless it is empty
+> Or nested, presumably?
+>
+> > never add a trailing comma
+> I like trailing commas for multi-line lists, because it makes it easier to add a new line without having to modify any previous ones. It makes diffs nicer, too.
+
 * unless it is too long to fit on a 80-characters line, always display it on a single line;
 * unless it is used as is for CSS purposes, always use comma as a delimiter;
 * unless it is empty, never write the parenthesis;
@@ -665,6 +701,8 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
 
 When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
+
+> Maybe explain that the second example creates a nested list?
 
 {% highlight scss %}
 $shadows: 0 42px 13.37px hotpink;
@@ -720,6 +758,8 @@ $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 ### Debugging a Sass map
 
 If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
+
+> Why not just use the `@debug` directive here?
 
 {% highlight scss %}
 /// Prints a map as a CSS rule
@@ -807,6 +847,8 @@ Illustration:
     overflow: hidden;
     margin: 0 auto }
 {% endhighlight %}
+
+> Are nested selectors required to come after declarations? The example does so, but the rules aren't explicit. If so, that does mean that any properties added by mixins with `@content` can't be overridden.
 
 Adding to those CSS-related guidelines, we want to pay attention to:
 
@@ -972,6 +1014,8 @@ $vertical-rhythm-baseline: 1.5rem;
 
 
 ## Namespace
+
+> Note that automatic namespacing is definitely a design goal for the upcoming import revamp. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.
 
 If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else's code.
 
@@ -1545,7 +1589,13 @@ Basically, there is no point declaring a variable that will never be updated or 
 
 ## Scoping
 
+> > all variable declarations were global, no matter where
+> This isn't accurate. Declarations within rulesets and other scopes were local by default. The difference came up if there was *also* a global variable with the same name. Previously, the local assignment would change the global variable; now, it creates a new local variable instead.
+
 Variable scoping in Sass has changed over the years. Until fairly recently, all variable declarations were global, no matter where. Since version 3.4, Sass now properly tackles the concept of scopes and local variables.
+
+> > Sass doesn't really have different scopes.
+> I'm not sure what you mean by this. Every block has its own scope.
 
 Sass doesn't really have different scopes. Indeed, the docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
 
@@ -1589,6 +1639,8 @@ $variable: 'initial value' !global;
 
 ## `!default` flag
 
+> Ugh, I'm not a fan of this pattern, and I'm not sure it'll keep working with the new import system. I'd rather this just suggest that people write their libraries such that they can be safely configured *after* being imported.
+
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
 
 {% highlight scss %}
@@ -1613,6 +1665,8 @@ $baseline: 2em;
 
 
 ## `!global` flag
+
+> This is an abuse of `!global` that will make it much more confusing when it's used legitimately. If you want to annotate some top-level variables with documentory metadata, do that with a comment, not with a language-level flag that happens to be a no-op in this case. We may well deprecate this usage of `!global` in the future to prevent this sort of confusion.
 
 On the contrary, if your Sass code is not intended to be distributed and is likely to be restricted to a single project, global variables should be declared using the `!global` flag.
 
@@ -1669,6 +1723,9 @@ $z-indexes: (
 
 
 # Extend
+
+> > style an element A exactly like an element B
+> More specifically, as though it also matched selector B.
 
 The `@extend` directive has to be one of the features that made Sass so popular a couple of years ago. As a reminder, it makes it possible to tell Sass to style an element A exactly like an element B. Needless to say this can end up being a valuable ally when writing modular CSS.
 
@@ -1907,6 +1964,10 @@ If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and onl
 
 Do it the clever way.
 
+> >     #{'-' + $prefix + '-' + $property}: $value;
+> I'd write
+>     -#{$prefix}-#{$property}: $value
+
 {% highlight scss %}
 /// Mixin helper to output vendor prefixes
 /// @access public
@@ -1952,11 +2013,16 @@ Please keep in mind this is a poor solution. For instance, it cannot deal with c
 
 # Conditional statements
 
+> It might be worth mentioning that these mainly exist for writing libraries and frameworks.
+
 You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. However, if you ever find yourself in need of them, please respect the following guidelines:
 
 * No parentheses unless they are necessary;
 * Always a line break after the opening brace (`{`);
 * `@else` statements on the same line as previous closing brace (`}`).
+
+> >     @if $support-legacy == true {
+> Please don't ever write `== true`. Every time you do this a tear runs down an orphan's cheek.
 
 {% highlight scss %}
 // Yep
@@ -2189,6 +2255,8 @@ $z-indexes: (
 
 What's nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
+> I hope when we have a good package manager this won't be true anymore.
+
 However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
 
 
@@ -2198,7 +2266,12 @@ However my advice would to be to lower the number of dependencies to the strict 
 
 ## Compass
 
+> > maintainers of Ruby Sass
+> I'd say "core designers of Sass". I do almost of the actual coding these days, but Chris and I collaborate on the language design. This design is, of course, not specific to Ruby.
+
 [Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two maintainers of Ruby Sass, I don't see it dramatically losing in popularity for a while, if you want my opinion.
+
+> This will almost certainly be mitigated when I finish my optimizations. They're specifically targeted at logic-heavy styles with many functions and mixins, so frameworks like Compass should see a huge improvement.
 
 Still, I do not use Compass anymore, the main reason is that it slows Sass down a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it doesn't really help.
 
