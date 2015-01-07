@@ -74,6 +74,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
   * [CSS Ruleset](#css-ruleset)
   * [Selector Nesting](#selector-nesting)
 * [Naming Conventions](#naming-conventions)
+  * [Namespace](#namespace)
 * [Commenting](#commenting)
   * [Writing Comments](#writing-comments)
   * [Documentation](#documentation)
@@ -948,6 +949,29 @@ $vertical-rhythm-baseline: 1.5rem;
 ### Further reading
 
 * [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
+
+
+
+
+
+
+## Namespace
+
+If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else's code.
+
+For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn't, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+
+{% highlight scss %}
+$su-configuration: ( ... );
+
+@function su-rainbow($unicorn) {
+  // ...
+}
+{% endhighlight %}
+
+### Further reading
+
+* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
 
 
 
