@@ -423,7 +423,7 @@ $length: 0em;
 
 The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, that is certainly not how units work. Think of units as algebraic symbols.
 
-To add a unit to a number, you have to multiply this number by *1 unit*. Adding *0 member of that unit* also works.
+To add a unit to a number, you have to multiply this number by *1 unit*.
 
 {% highlight scss %}
 $value: 42;
@@ -431,12 +431,24 @@ $value: 42;
 // Yep
 $length: $value * 1px;
 
-// Yep
-$length: $value + 0px;
-
 // Nope
 $length: $value + px;
 {% endhighlight %}
+
+Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can somehow be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
+
+{% highlight scss %}
+$value: 42 + 0px;
+// -> 42px
+
+$value: 1in + 0px;
+// -> 1in
+
+$value: 0px + 1in;
+// -> 96px
+{% endhighlight %}
+
+In the end, it really depends on what you are trying to achieve. Just keep in mind that adding the unit as a string is not a good way to proceed.
 
 To remove the unit of a value, you have to divide it by *one unit of its kind*.
 
