@@ -317,14 +317,14 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   display: block;
   overflow: hidden;
   padding: 0 1em;
 }
 
 // Nope
-.element {
+.foo {
     display: block; overflow: hidden;
 
     padding: 0 1em;
@@ -369,12 +369,12 @@ URLs should be quoted as well, for the same reasons as above:
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   background-image: url('/images/kittens.jpg');
 }
 
 // Nope
-.element {
+.foo {
   background-image: url(/images/kittens.jpg);
 }
 {% endhighlight %}
@@ -396,13 +396,13 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   padding: 2em;
   opacity: 0.5;
 }
 
 // Nope
-.element {
+.foo {
   padding: 2.0em;
   opacity: .5;
 }
@@ -473,12 +473,12 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   width: (100% / 3);
 }
 
 // Nope
-.element {
+.foo {
   width: 100% / 3;
 }
 {% endhighlight %}
@@ -494,9 +494,9 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 {% highlight scss %}
 /**
  * 1. Magic number. This value is the lowest I could find to align the top of
- * `.element` with its parent. Ideally, we should fix it properly.
+ * `.foo` with its parent. Ideally, we should fix it properly.
  */
-.element {
+.foo {
   top: 0.327em; /* 1 */
 }
 {% endhighlight %}
@@ -533,12 +533,12 @@ For starters, keywords often speak for themselves. The HSL representation is not
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   color: red;
 }
 
 // Nope
-.element {
+.foo {
   color: #FF0000;
 }
 {% endhighlight %}
@@ -547,13 +547,13 @@ When using HSL or RGB notation, always add a single space after commas (`,`) and
 
 {% highlight scss %}
 // Yep
-.element {
+.foo {
   color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
 // Nope
-.element {
+.foo {
   color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
 }
@@ -1095,21 +1095,21 @@ Here is an example of a mixin extensively documented with SassDoc:
 /// @param {Length} $height ($width) - Element's `height`
 ///
 /// @example scss - Usage
-/// .element {
+/// .foo {
 ///   @include size(10em);
 /// }
 ///
-/// .other-element {
+/// .bar {
 ///   @include size(100%, 10em);
 /// }
 ///
 /// @example css - CSS output
-/// .element {
+/// .foo {
 ///   width: 10em;
 ///   height: 10em;
 /// }
 ///
-/// .other-element {
+/// .bar {
 ///   width: 100%;
 ///   height: 10em;
 /// }
@@ -1776,7 +1776,7 @@ $breakpoints: (
 Usage is both simple and obvious.
 
 {% highlight scss %}
-.element {
+.foo {
   color: red;
 
   @include respond-to('small') {
@@ -1788,12 +1788,12 @@ Usage is both simple and obvious.
 Leading to the following CSS output:
 
 {% highlight css %}
-.element {
+.foo {
   color: red;
 }
 
 @media (max-width: 800px) {
-  .element {
+  .foo {
     color: blue;
   }
 }
@@ -1902,7 +1902,7 @@ Do it the clever way.
 Then using this mixin should be very straightforward:
 
 {% highlight scss %}
-.element {
+.foo {
   @include prefix(transform, rotate(90deg), webkit ms);
 }
 {% endhighlight %}
@@ -1969,7 +1969,7 @@ The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes.
 
 {% highlight scss %}
 @for $i from 1 through 10 {
-  .element:nth-of-type(#{$i}) {
+  .foo:nth-of-type(#{$i}) {
     border-color: hsl($i * 36, 50%, 50%);
   }
 }
