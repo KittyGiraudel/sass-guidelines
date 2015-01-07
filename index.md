@@ -1401,6 +1401,52 @@ In order to preserve readability, the main file should respect these guidelines:
 @import 'themes/admin';
 {% endhighlight %}
 
+There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I'll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+
+* one `@import` per folder;
+* a linebreak after `@import`;
+* each file on its own line;
+* a new line after the last import from a folder;
+* file extensions and leading underscores omitted.
+
+{% highlight scss %}
+@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui';
+
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins',
+  'utils/placeholders';
+
+@import
+  'base/reset',
+  'base/typography';
+
+@import
+  'layout/navigation',
+  'layout/grid',
+  'layout/header',
+  'layout/footer',
+  'layout/sidebar',
+  'layout/forms';
+
+@import
+  'components/buttons',
+  'components/carousel',
+  'components/cover',
+  'components/dropdown';
+
+@import
+  'pages/home',
+  'pages/contact';
+
+@import
+  'themes/theme',
+  'themes/admin';
+{% endhighlight %}
+
 <div class="note">
   <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
   <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
