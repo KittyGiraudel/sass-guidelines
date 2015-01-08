@@ -704,7 +704,8 @@ Maps should be written as follows:
 * opening brace (`(`) on the same line as the colon (`:`);
 * **quoted keys** if they are strings (which represents 99% of the cases);
 * each key/value pair on its own new line;
-* comma (`,`) at the end of each key/value except the last;
+* comma (`,`) at the end of each key/value;
+* **trailing comma** (`,`) on last item to make it easier to add, remove or reorder items;
 * closing brace (`)`) on its own new line;
 * no space or new line between closing brace (`)`) and semi-colon (`;`).
 
@@ -715,7 +716,7 @@ Illustration:
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
-  'large': 1200px
+  'large': 1200px,
 );
 
 // Nope
@@ -2485,7 +2486,8 @@ To sum up, we want:
 * No magic numbers;
 * Colors expressed in keywords > HSL > RGB > hexadecimal;
 * Lists separated with commas;
-* No trailing comma in lists and maps;
+* No trailing comma in lists (since they are inlined);
+* Trailing comma in maps;
 * No selector nesting except for pseudo-classes and pseudo-elements;
 * Hyphen-delimited naming;
 * Extensive comments;
