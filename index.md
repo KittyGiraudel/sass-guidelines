@@ -168,6 +168,7 @@ On non-Ruby project that need a workflow integration, LibSass will probably be a
 
 ### Further reading
 
+* [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
@@ -270,7 +271,7 @@ Needless to say, the more developers involved on a project, the more code guidel
 
 First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
 
-Also, this styleguide is my own and therefore very opinionated. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
+Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
 
 Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
 
@@ -386,6 +387,13 @@ URLs should be quoted as well, for the same reasons as above:
   background-image: url(/images/kittens.jpg);
 }
 {% endhighlight %}
+
+
+
+### Further Reading
+
+* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 
 
@@ -516,6 +524,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+* [Sassy-Math](https://github.com/at-import/sassy-math)
 
 
 
@@ -783,6 +792,8 @@ If you are interested in knowing the depth of the map, add the following functio
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
+* [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 
@@ -1215,6 +1226,17 @@ I, myself, use an approach that happens to be quite similar to [SMACSS](https://
 
 
 
+### Further reading
+
+* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
+* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
+* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
+* [SMACSS](https://smacss.com/)
+* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
+* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
+
+
+
 
 
 
@@ -1520,17 +1542,6 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 
 
-### Further reading
-
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-* [SMACSS](https://smacss.com/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-
-
-
 
 
 
@@ -1646,6 +1657,13 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 
 
+### Further Reading
+
+* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
+* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
+
+
+
 
 
 
@@ -1689,6 +1707,7 @@ Now, if you really are concerned about duplicated media queries, you can still u
 ### Further Reading
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)
 
 
@@ -2227,6 +2246,14 @@ Now, there is a lot of room in a Sass project for warnings and errors. Basically
 
 
 
+### Further reading
+
+* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
+* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
+* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
+
+
+
 
 
 
@@ -2287,14 +2314,6 @@ $z-indexes: (
   @return map-get($z-indexes, $layer);
 }
 {% endhighlight %}
-
-
-
-### Further reading
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
 
 
