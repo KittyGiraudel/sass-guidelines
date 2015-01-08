@@ -75,6 +75,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
   * [CSS Ruleset](#css-ruleset)
   * [Selector Nesting](#selector-nesting)
 * [Naming Conventions](#naming-conventions)
+  * [Constants](#constants)
   * [Namespace](#namespace)
 * [Commenting](#commenting)
   * [Writing Comments](#writing-comments)
@@ -962,7 +963,7 @@ There are a few things you can name in Sass, and it is important to name them we
 
 Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
 
-Regarding variables, functions and mixins, we stick to something very *CSS-y*: **hyphen-delimited**, no camel-case, and above all meaningful.
+Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
 
 {% highlight scss %}
 $vertical-rhythm-baseline: 1.5rem;
@@ -977,6 +978,31 @@ $vertical-rhythm-baseline: 1.5rem;
 ### Further reading
 
 * [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
+
+
+
+
+
+
+## Constants
+
+If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
+
+As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also constrats well with usual lowercased hyphenated variables.
+
+{% highlight scss %}
+// Yep
+$CSS_POSITIONS: top, right, bottom, left, center;
+
+// Nope
+$css-positions: top, right, bottom, left, center;
+{% endhighlight %}
+
+
+
+### Further Reading
+
+* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
 
 
