@@ -73,6 +73,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
   * [Maps](#maps)
     * [Debugging A Sass Map](#debugging-a-sass-map)
   * [CSS Ruleset](#css-ruleset)
+  * [Declaration Sorting](#declaration-sorting)
   * [Selector Nesting](#selector-nesting)
 * [Naming Conventions](#naming-conventions)
   * [Constants](#constants)
@@ -868,6 +869,93 @@ Illustration:
 ### Further reading
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+
+
+
+
+
+
+## Declaration Sorting
+
+I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
+
+* sticking to the alphabetical order;
+* ordering declarations by type (position, display, colors, font, miscellaneous...).
+
+There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why animations should appear before the display type? There are a lot of oddities with alphabet ordering.
+
+{% highlight scss %}
+.foo {
+  background: black;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100px;
+}
+{% endhighlight %}
+
+On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
+
+{% highlight scss %}
+.foo {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+{% endhighlight %}
+
+There is also another interesting subtree of type ordering called [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), that seems to be quite popular as well. Basically, Concentric CSS relies on the box-model to define an order: starts outside, moves inward.
+
+{% highlight scss %}
+.foo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: black;
+  overflow: hidden;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+{% endhighlight %}
+
+I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
+
+<figure>
+  <img src="/assets/images/css_order_chart.png" alt="" />
+  <figcaption>Chart showing how developers order their CSS declarations</figcaption>
+</figure>
+
+Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets.
+
+<div class="note">
+  <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
+</div>
+
+
+
+### Further reading
+
+* [CSS Comb](https://github.com/csscomb/csscomb.js)
+* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
+* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 
 
