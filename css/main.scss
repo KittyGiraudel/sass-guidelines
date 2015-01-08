@@ -10,6 +10,7 @@
 
 @import "base/base";
 @import "base/typography";
+@import "base/utilities";
 
 @import "layout/header";
 @import "layout/footer";
@@ -21,4 +22,4 @@
 @import "components/image";
 @import "components/donate";
 @import "components/heading-anchors";
-@import "components/back-to-top";
+@import "components/syntax-toggle";

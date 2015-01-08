@@ -7,11 +7,14 @@
 
     {% include header.html %}
 
+    <input type="checkbox" id="syntax-toggle" class="visually-hidden" />
+    <label for="syntax-toggle" class="button-ui  button-ui--syntax">Syntax</label>
+
     {{ content }}
 
-    {% include footer.html %}
+    <a href="#top" class="button-ui  button-ui--back">Top</a>
 
-    <a href="#top" class="back-to-top">Top</a>
+    {% include footer.html %}
 
     {% include scripts.html %}
 
