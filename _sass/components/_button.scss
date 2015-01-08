@@ -35,9 +35,9 @@
   border-radius: .35em;
   color: mix($light-grey, black, 90%);
   border: .25em solid;
-  text-transform: uppercase;
   background: white;
   text-align: center;
+  font-weight: 400;
 
   @include respond-to('medium') {
     position: fixed;
@@ -61,9 +61,8 @@
  */
 .button-ui--syntax {
   display: block;
-  right: 0;
-  top: 0;
-  text-transform: initial;
+  right: 4em;
+  bottom: 0;
 
   &::after {
     content: ': SCSS';
