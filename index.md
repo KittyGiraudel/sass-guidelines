@@ -67,7 +67,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
     * [Magic numbers](#magic-numbers)
   * [Colors](#colors)
     * [Color formats](#color-formats)
-    * [Colors and variables](#color-format)
+    * [Colors and variables](#colors-and-variables)
     * [Lightening and Darkening Colors](#lightening-and-darkening-colors)
   * [Lists](#lists)
   * [Maps](#maps)
