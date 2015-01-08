@@ -53,10 +53,6 @@
 /// @author Hugo Giraudel
 /// @param {String} $breakpoint - Breakpoint name
 @mixin respond-to($breakpoint) {
-  $breakpoints: (
-    'medium': 801px
-  );
-
   @if map-has-key($breakpoints, $breakpoint) == false {
     @error "Invalid breakpoint #{$breakpoint}.";
   }
