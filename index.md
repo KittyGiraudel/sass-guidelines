@@ -91,6 +91,10 @@ Last but not least before we start: if you enjoyed this document, or if it is us
     * [Vendors Folder](#vendors-folder)
     * [Main file](#main-file)
   * [Shame file](#shame-file)
+* [Responsive Web Design and Breakpoints](#responsive-web-design-and-breakpoints)
+  * [Naming Breakpoints](#naming-breakpoints)
+  * [Breakpoint manager](#breakpoint-manager)
+  * [Media Queries Usage](#media-queries-usage)
 * [Variables](#variables)
   * [Scoping](#scoping)
   * [!default Flag](#default-flag)
@@ -1538,6 +1542,139 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 
 
 
+# Responsive Web Design and breakpoints
+
+I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
+
+
+
+
+
+
+## Naming breakpoints
+
+I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
+
+For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on...
+
+{% highlight scss %}
+// Yep
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+// Nope
+$breakpoints: (
+  'tablet': (min-width: 800px),
+  'computer': (min-width: 1000px),
+  'tv': (min-width: 1200px),
+);
+{% endhighlight %}
+
+At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+
+{% highlight scss %}
+$breakpoints: (
+  'seed': (min-width: 800px),
+  'sprout': (min-width: 1000px),
+  'plant': (min-width: 1200px),
+);
+{% endhighlight %}
+
+
+
+
+### Further reading
+
+* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
+
+
+
+
+
+
+## Breakpoint manager
+
+Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
+
+{% highlight scss %}
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+{% endhighlight %}
+
+
+
+
+
+
+## Media Queries Usage
+
+Not so long ago, there has been a quite hot debate about where should be written media queries: should they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+
+{% highlight scss %}
+.foo {
+  color: red;
+
+  @include respond-to('small') {
+    color: blue;
+  }
+}
+{% endhighlight %}
+
+Leading to the following CSS output:
+
+{% highlight css %}
+.foo {
+  color: red;
+}
+
+@media (max-width: 800px) {
+  .foo {
+    color: blue;
+  }
+}
+{% endhighlight %}
+
+You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn't matter once Gzip (or any equivalent) has done its thing:
+
+> … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
+> &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
+
+Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
+
+
+
+### Further Reading
+
+* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)
+
+
+
+
+
+
+
+
+
+
+
 # Variables
 
 Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
@@ -1775,64 +1912,6 @@ That being said, mixins are extremely useful and you should be using some. The r
     content: '';
     display: table;
     clear: both;
-  }
-}
-{% endhighlight %}
-
-A mixin that you should probably use at all times on any Sass project, no matter how you've written it, is a breakpoint manager. Now that Responsive Web Design has become a thing™, sites and applications have to support a whole range of devices and screen sizes. Thankfully, we have Media Queries for this.
-
-However, repeating media queries over and over again is far from convenient, not only because the syntax is annoying but essentially because it hurts maintainability. The perfect use case for a mixin.
-
-{% highlight scss %}
-/// Map of breakpoints for responsive design.
-/// @access private
-/// @see {mixin} respond-to
-/// @type Map
-$breakpoints: (
-  'small':  (max-width: 800px),
-  'medium': (min-width: 801px)
-) !global;
-
-/// Responsive manager.
-/// @access public
-/// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
-      @content;
-    }
-  }
-
-  @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
-  }
-}
-{% endhighlight %}
-
-Usage is both simple and obvious.
-
-{% highlight scss %}
-.foo {
-  color: red;
-
-  @include respond-to('small') {
-    color: blue;
-  }
-}
-{% endhighlight %}
-
-Leading to the following CSS output:
-
-{% highlight css %}
-.foo {
-  color: red;
-}
-
-@media (max-width: 800px) {
-  .foo {
-    color: blue;
   }
 }
 {% endhighlight %}
