@@ -1841,7 +1841,7 @@ $z-indexes: (
   'modal': 5000,
   'dropdown': 4000,
   'default': 1,
-  'below': -1
+  'below': -1,
 );
 
 /// Get a z-index value from a layer name
@@ -2297,7 +2297,7 @@ $z-indexes: (
   'modal': 5000,
   'dropdown': 4000,
   'default': 1,
-  'below': -1
+  'below': -1,
 );
 
 /// Get a z-index value from a layer name
