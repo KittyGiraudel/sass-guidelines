@@ -2039,13 +2039,26 @@ That being said, mixins are extremely useful and you should be using some. The r
 {% highlight scss %}
 /// Helper to clear inner floats
 /// @author Nicolas Gallagher
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix Hack
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 @mixin clearfix {
   &::after {
     content: '';
     display: table;
     clear: both;
   }
+}
+{% endhighlight %}
+
+Another valid example would be a mixin to size an element, defining both `width` and `height` at the same time. Not only would it make the code lighter to type, but also easier to read.
+
+{% highlight scss %}
+/// Helper to size an element
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
 }
 {% endhighlight %}
 
