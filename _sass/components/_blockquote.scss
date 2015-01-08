@@ -4,7 +4,7 @@
 blockquote {
   margin: 0;
   @include vertical-rhythm;
-  background: $medium-background;
+  background: $quote-background;
   padding: 1em;
   overflow: hidden;
   font-style: italic;
