@@ -1754,7 +1754,7 @@ SassDoc provides two different syntaxes for comments: either C-style or inline. 
 /**
  * Vertical rhythm baseline used all over the code base.
  * @type Length
- **/
+ */
 $vertical-rhythm-baseline: 1.5rem;
 {% endhighlight %}
   </div>
@@ -1763,14 +1763,10 @@ $vertical-rhythm-baseline: 1.5rem;
 /**
  * Vertical rhythm baseline used all over the code base.
  * @type Length
- **/
+ */
 $vertical-rhythm-baseline: 1.5rem
 {% endhighlight %}
   </div>
-</div>
-
-<div class="note">
-  <p>Two stars (<code>*</code>) required before the closing slash (<code>/</code>).</p>
 </div>
 
 <div class="code-block">
