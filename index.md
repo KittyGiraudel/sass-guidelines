@@ -1696,7 +1696,7 @@ For all you know, the result could range from doing nothing to causing disastrou
 That being said, you know the saying:
 
 > Never say never.<br>
-> &mdash; Beyonce, or someone like that.
+> &mdash; Apparently, [not Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
 
 There are scenarios where extending selectors might be helpful and worthwhile. Yet, always keep in mind those rules so you don't get yourself into trouble:
 
