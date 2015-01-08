@@ -10,8 +10,13 @@
   > pre {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 2em 0;
+    padding: 2rem 1rem;
     font-family: $code-font-stack;
+
+    @include respond-to('medium') {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
