@@ -1,0 +1,30 @@
+/**
+ * Dual code blocks
+ * SCSS is default, Sass is hidden
+ */
+.code-block {
+  > [data-syntax="sass"] {
+    display: none;
+  }
+
+  > [data-syntax="scss"] {
+    display: block;
+  }
+}
+
+/**
+ * Syntax toggle checkbox
+ * 1. Only way I found to prevent page jump when clicking label
+ */
+#syntax-toggle {
+  display: none; /* 1 */
+
+  &:checked ~ .code-block > [data-syntax="sass"] {
+    display: block;
+  }
+
+  &:checked ~ .code-block > [data-syntax="scss"] {
+    display: none;
+  }
+}
+

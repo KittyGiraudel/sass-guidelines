@@ -25,3 +25,51 @@
   text-align: center;
   padding: 1em 0;
 }
+
+.button-ui {
+  display: block;
+  cursor: pointer;
+  margin: 1em;
+  padding: .5em;
+  font-size: .8em;
+  border-radius: .35em;
+  color: mix($light-grey, black, 90%);
+  border: .25em solid;
+  text-transform: uppercase;
+  background: white;
+  text-align: center;
+
+  @include respond-to('medium') {
+    position: fixed;
+  }
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+/**
+ * Button to get back to top of the page
+ */
+.button-ui--back {
+  right: 0;
+  bottom: 0;
+}
+
+/**
+ * Button to change syntax
+ */
+.button-ui--syntax {
+  display: block;
+  right: 0;
+  top: 0;
+  text-transform: initial;
+
+  &::after {
+    content: ': SCSS';
+  }
+
+  #syntax-toggle:checked + &::after {
+    content: ': Sass';
+  }
+}
