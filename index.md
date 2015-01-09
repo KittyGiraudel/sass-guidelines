@@ -2596,7 +2596,7 @@ $variable: 'initial value' !global;
   $variable: 'mixin value' !global;
 }
 
-.local-scope {
+.local-scope::before {
   // Create a local variable that shadows the global one.
   $variable: 'local value';
 
@@ -2610,7 +2610,7 @@ $variable: 'initial value' !global;
 
 // Print the variable in another selector that does no shadowing.
 // It is the **global** one, as expected.
-.other-local-scope {
+.other-local-scope::before {
   content: $variable;
 }
 {% endhighlight %}
@@ -2625,7 +2625,7 @@ $variable: 'initial value' !global
 @mixin global-variable-overriding
   $variable: 'mixin value' !global
 
-.local-scope
+.local-scope::before
   // Create a local variable that shadows the global one.
   $variable: 'local value'
 
@@ -2638,7 +2638,7 @@ $variable: 'initial value' !global
 
 // Print the variable in another selector that does no shadowing.
 // It is the **global** one, as expected.
-.other-local-scope
+.other-local-scope::before
   content: $variable
 {% endhighlight %}
   </div>
