@@ -3158,8 +3158,10 @@ You probably already know that Sass provides conditional statements via the `@if
 Anyway, if you ever find yourself in need of them, please respect the following guidelines:
 
 * No parentheses unless they are necessary;
+* Always an empty new line before `@if`;
 * Always a line break after the opening brace (`{`);
 * `@else` statements on the same line as previous closing brace (`}`).
+* Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -3334,6 +3336,11 @@ When iterating on a map, always use `$key` and `$value` as variable names to enf
   </div>
 </div>
 
+Also be sure to respect those guidelines to preserve readability:
+
+* Always an empty new line before `@each`;
+* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
+
 
 
 
@@ -3363,6 +3370,11 @@ The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes.
 </div>
 
 Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+
+Also be sure to respect those guidelines to preserve readability:
+
+* Always an empty new line before `@each`;
+* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
 
 
 
