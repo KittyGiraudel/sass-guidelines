@@ -1,6 +1,7 @@
 # Site settings
 title: Sass Guidelines
 description: "an opinionated styleguide for writing sane, maintainable and scalable Sass"
+keywords: css sass scss styleguide guidelines
 baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
