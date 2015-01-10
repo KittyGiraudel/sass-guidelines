@@ -1385,7 +1385,7 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 
 ## Selector Nesting
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each other. For instance, the following Sass nesting:
+One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others. For instance, the following Sass nesting:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1466,7 +1466,9 @@ The problem with selector nesting is it ultimately makes code more difficult to 
 
 This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what's going on anymore is so high that it is not worth it.
 
-To prevent such a situation, we **avoid selector nesting except for pseudo-classes and pseudo-elements**. These are the only cases where nesting is allowed, and even recommended.
+To prevent such a situation, we **avoid selector nesting as much as possible**. However, there are obviously a few exceptions to this rule.
+
+For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1499,6 +1501,112 @@ To prevent such a situation, we **avoid selector nesting except for pseudo-class
 </div>
 
 Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
+
+Also, when using component-agnostic state classes such as `.is-active`, it is perfectly fine to nest it under the component's selector to keep things tidy.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+.foo {
+  // ...
+
+  &.is-active {
+    font-weight: bold;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+.foo
+  // ...
+
+  &.is-active
+    font-weight: bold
+{% endhighlight %}
+  </div>
+</div>
+
+Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+.foo {
+  // ...
+
+  .no-opacity & {
+    display: none;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+.foo
+  // ...
+
+  .no-opacity &
+    display: none
+{% endhighlight %}
+  </div>
+</div>
+
+When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Helper mixin to provide simple API to selector nesting
+/// @param {String} $selector - Selector
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Helper mixin to provide simple API to selector nesting
+/// @param {String} $selector - Selector
+=when-inside($selector) {
+  #{$selector} &
+    @content
+}
+{% endhighlight %}
+  </div>
+</div>
+
+Rewriting our previous example, it would look like this:
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+.foo {
+  // ...
+
+  @include when-inside('.no-opacity') {
+    display: none;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+.foo
+  // ...
+
+  +when-inside('.no-opacity')
+    display: none
+{% endhighlight %}
+  </div>
+</div>
+
+As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
+
+
+
 
 
 
