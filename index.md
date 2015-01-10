@@ -75,6 +75,8 @@ Last but not least before we start: if you enjoyed this document, or if it is us
   * [CSS Ruleset](#css-ruleset)
   * [Declaration Sorting](#declaration-sorting)
   * [Selector Nesting](#selector-nesting)
+    * [General Rule](#general-rule)
+    * [Exceptions](#exceptions)
 * [Naming Conventions](#naming-conventions)
   * [Constants](#constants)
   * [Namespace](#namespace)
@@ -1385,7 +1387,11 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 
 ## Selector Nesting
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others. For instance, the following Sass nesting:
+One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others.
+
+### General rule
+
+For instance, the following Sass nesting:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1467,6 +1473,8 @@ The problem with selector nesting is it ultimately makes code more difficult to 
 This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what's going on anymore is so high that it is not worth it.
 
 To prevent such a situation, we **avoid selector nesting as much as possible**. However, there are obviously a few exceptions to this rule.
+
+### Exceptions
 
 For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
 
