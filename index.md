@@ -3383,7 +3383,7 @@ Also be sure to respect those guidelines to preserve readability:
 
 ## While
 
-The `@while` loop has absolutely no use case in a real Sass project. **Do not use it**.
+The `@while` loop has absolutely no use case in a real Sass project, especially since there is no way to break a loop from the inside. **Do not use it**.
 
 
 
