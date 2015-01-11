@@ -1,0 +1,22 @@
+#syntax-toggle:active ~ .message-ui {
+  transition: opacity;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+.message-ui {
+  transition-delay: 3s;
+  opacity: 0;
+  padding: .5em;
+  margin: 1em;
+  font-size: .8em;
+  color: #699;
+  border-radius: .35em;
+  border: .25em solid;
+
+  @include respond-to('medium') {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
