@@ -213,7 +213,7 @@ What I do like with Sass is its conservative approach to CSS. Sass's design is b
 
 In other words, Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aiming at solving actual issues; helping to provide useful functionality to CSS where CSS proves shortcoming.
 
-Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [postCSS](https://github.com/postcss/postcss) and [CSSNext](https://github.com/cssnext/cssnext). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
+Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
 
 You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you would write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), then compile your stylesheets with a postprocessor only to find every variable occurrence gets replaced with its value, as Sass would do.
 
@@ -227,8 +227,8 @@ While providing tomorrow's syntax today is something of a noble idea, I have to 
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)
-* [CSSNext](https://github.com/cssnext/cssnext)
-* [postCSS](https://github.com/postcss/postcss)
+* [cssnext](https://cssnext.github.io/)
+* [PostCSS](https://github.com/postcss/postcss)
 
 
 
