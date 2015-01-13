@@ -2571,8 +2571,9 @@ Once you have named your breakpoints the way you want, you need a way to use the
   }
 
   @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
+    @media #{$breakpoint} {
+      @content;
+    }
   }
 }
 {% endhighlight %}
@@ -2589,8 +2590,8 @@ Once you have named your breakpoints the way you want, you need a way to use the
       @content
 
   @else
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.'
+    @media #{$breakpoint}
+      @content
 {% endhighlight %}
   </div>
 </div>
@@ -2625,6 +2626,10 @@ Not so long ago, there has been a quite hot debate about where should be written
   @include respond-to('small') {
     color: blue;
   }
+
+  @include respond-to("(min-width: 819px)") {
+    color: red;
+  }
 }
 {% endhighlight %}
   </div>
@@ -2635,6 +2640,9 @@ Not so long ago, there has been a quite hot debate about where should be written
 
   +respond-to('small')
     color: blue
+
+  +respond-to("(min-width: 819px)")
+    color: red
 {% endhighlight %}
   </div>
 </div>
@@ -2649,6 +2657,12 @@ Leading to the following CSS output:
 @media (max-width: 800px) {
   .foo {
     color: blue;
+  }
+}
+
+@media (min-width: 819px) {
+  .foo {
+    color: red;
   }
 }
 {% endhighlight %}
