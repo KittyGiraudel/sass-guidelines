@@ -2641,7 +2641,7 @@ Leading to the following CSS output:
   color: red;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .foo {
     color: blue;
   }
