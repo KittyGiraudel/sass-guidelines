@@ -163,9 +163,9 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older brother. The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
-Coming back to choosing your compiler. Actually, it is really up to your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also know that Ruby Sass will always be the reference implementation and will always lead LibSass in features.
+Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features.
 
-On non-Ruby project that need a workflow integration, LibSass will probably be a better idea since it is mostly dedicated to being wrapped. So if you want to use, let's say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
+On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let's say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
 
 
 
@@ -205,13 +205,13 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 ## Other preprocessors
 
-Sass is a preprocessor among other things. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) which is kind of the nerdy unrestricted version of LESS where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Sass is a preprocessor among other things. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) - which is kind of the nerdy, unrestricted version of LESS - where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
 *Why choose Sass over LESS or another preprocessor?* is still a valid question today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (mostly) with original Sass, this is no longer relevant advice.
 
-What I do like with Sass is its conservative approach to CSS. Sass's design is based on strong design principles: much of the design comes naturally out of core designers' beliefs that adding extra features has a complexity cost that needs to be justified by usefulness, and that it should be easy to reason about what a given block of styles is doing looking at that block alone. Also, Sass has a much closer attention to detail than other preprocessors. As far as I can tell, core designers care deeply about supporting every corner-case of CSS compatibility and making sure every general behavior is consistent.
+What I do like with Sass is its conservative approach to CSS. Sass's design is based on strong principles: much of the design approach comes naturally out of the core teams' beliefs that a) adding extra features has a complexity cost that needs to be justified by usefulness and, b) it should be easy to reason about what a given block of styles is doing by looking at that block alone. Also, Sass has a much sharper attention to detail than other preprocessors. As far as I can tell, the core designers care deeply about supporting every corner-case of CSS compatibility and making sure every general behavior is consistent.
 
-In other words, Sass is not a preprocessor aiming at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aiming at solving actual issues; helping to provide useful functionality to CSS where CSS proves shortcoming.
+In other words, Sass is not a preprocessor aimed at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aimed at solving actual issues; helping to provide useful functionality to CSS where CSS falls short.
 
 Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
 
@@ -219,7 +219,7 @@ You can think of postprocessors as a polyfill for unsupported CSS features. For 
 
 The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
 
-While providing tomorrow's syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. Yet, there are some occasions where I believe postprocessors are more suited than Sass and the like, for instance CSS prefixing. But we'll get back to this.
+While providing tomorrow's syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we'll get back to this.
 
 
 
