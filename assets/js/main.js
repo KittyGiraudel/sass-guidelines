@@ -1,7 +1,16 @@
 (function (global) {
 
-  (function (global) {
+  var App = function () {
+    this.initialize();
+  };
 
+  App.prototype.initialize = function () {
+    this.enableSmoothScrolling();
+    this.addHeadingAnchors();
+    this.loadCustomFonts();
+  };
+
+  App.prototype.enableSmoothScrolling = function () {
     var list = document.getElementById('table-of-contents').nextElementSibling;
     var easing = {
       linear: function (t) { return t; },
@@ -63,11 +72,9 @@
     }
 
     list.addEventListener('click', sglScrollmation);
+  };
 
-  }(global));
-
-  (function (global) {
-
+  App.prototype.addHeadingAnchors = function () {
     var headings = document.querySelectorAll('h1:not(.title), h2:not(.baseline), h3');
     var len = headings.length;
     var link, heading, i;
@@ -81,7 +88,23 @@
       link.setAttribute('class', 'anchor-link')
       heading.appendChild(link);
     }
+  };
 
-  }(global));
+  App.prototype.loadCustomFonts = function () {
+      WebFontConfig = {
+        google: { families: ['Droid Sans:400,700', 'Source Code Pro'] }
+      };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                  '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+        wf.async = 1;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+  };
+
+  global.App = App;
+
 }(window));
-
