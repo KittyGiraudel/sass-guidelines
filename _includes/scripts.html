@@ -1,18 +1,9 @@
-<script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/main.min.js' | prepend: site.baseurl }}"></script>
 
 <script>
-  WebFontConfig = {
-    google: { families: ['Droid Sans:400,700', 'Source Code Pro'] }
-  };
-
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-              '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
-    wf.async = 1;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
+document.addEventListener("DOMContentLoaded", function(event) {
+  var app = new App();
+});
 </script>
 
 <script>
