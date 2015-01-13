@@ -2622,7 +2622,7 @@ Not so long ago, there has been a quite hot debate about where should be written
 .foo {
   color: red;
 
-  @include respond-to('small') {
+  @include respond-to('medium') {
     color: blue;
   }
 }
@@ -2633,7 +2633,7 @@ Not so long ago, there has been a quite hot debate about where should be written
 .foo
   color: red
 
-  +respond-to('small')
+  +respond-to('medium')
     color: blue
 {% endhighlight %}
   </div>
@@ -2646,7 +2646,7 @@ Leading to the following CSS output:
   color: red;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .foo {
     color: blue;
   }
