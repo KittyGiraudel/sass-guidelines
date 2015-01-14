@@ -8,6 +8,7 @@
     this.enableSmoothScrolling();
     this.addHeadingAnchors();
     this.loadCustomFonts();
+    this.fixSkipLinks();
   };
 
   App.prototype.enableSmoothScrolling = function () {
@@ -103,6 +104,19 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+  };
+
+  App.prototype.fixSkipLinks = function () {
+    window.addEventListener("hashchange", function(event) {
+      var element = document.getElementById(location.hash.substring(1));
+
+      if (element) {
+        if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+          element.tabIndex = -1;
+        }
+        element.focus();
+      }
+    }, false);
   };
 
   global.App = App;
