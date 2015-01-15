@@ -3732,7 +3732,7 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
 {% highlight yaml %}
-# For SCSS-Lint v0.31.0
+# For SCSS-Lint v0.32.0
 
 linters:
 
@@ -3800,14 +3800,16 @@ linters:
 
   LeadingZero:
     enabled: true
-    style: exclude_zero
+    style: include_zero
 
   MergeableSelector:
     enabled: false
+    force_nesting: false
 
   NameFormat:
     enabled: true
     convention: hyphenated_lowercase
+    allow_leading_underscore: true
 
   NestingDepth:
     enabled: true
@@ -3818,6 +3820,7 @@ linters:
 
   PropertySortOrder:
     enabled: false
+    ignore_unspecified: false
 
   PropertySpelling:
     enabled: true
