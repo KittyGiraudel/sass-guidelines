@@ -315,16 +315,16 @@ Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pr
 
 # Syntax & formatting
 
-If you ask me, the very first thing a styleguide should do is describe the usual guidelines to write code.
+If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
 
-When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines are not only meant to prevent this, but also help when reading and updating of code, by making it look consistent.
+When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.
 
 Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
 * two (2) spaces indents, no tabs;
 * ideally, 80-characters wide lines;
 * properly written multi-line CSS rules;
-* meaningful use of whitespaces.
+* meaningful use of whitespace.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -516,7 +516,7 @@ $length: 0em
   </div>
 </div>
 
-The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, that is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
+The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, is is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
 
 To add a unit to a number, you have to multiply this number by *1 unit*.
 
@@ -545,7 +545,7 @@ $length: $value + px
   </div>
 </div>
 
-Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can somehow be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
+Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -699,7 +699,7 @@ In order to make colors as simple as they can be, my advice would be to respect 
 1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Hexadecimal notation. Preferably lowercase and shortened when possible.
 
-For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Last, hexadecimal is close to indecipherable for the human mind.
+For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Lastly, hexadecimal is close to indecipherable for the human mind.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -728,7 +728,7 @@ For starters, keywords often speak for themselves. The HSL representation is not
   </div>
 </div>
 
-When using HSL or RGB notation, always add a single space after commas (`,`) and no space between parentheses (`(`, `)`) and content.
+When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -780,7 +780,7 @@ $sass-pink: #c69
   </div>
 </div>
 
-At this point, you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
+Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -805,7 +805,7 @@ Doing this would prevent a theme change leading to something like `$sass-pink: b
 
 
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding or substracting lightness to it. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or substracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
 
 The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
 
