@@ -3732,7 +3732,7 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
 {% highlight yaml %}
-# For SCSS-Lint v0.33.0
+# For SCSS-Lint v0.32.0
 
 linters:
 
