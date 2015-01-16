@@ -9,4 +9,4 @@ Feel free to open an issue or to PR [this file](https://github.com/HugoGiraudel/
 
 ## Supporting
 
-Enjoyed Sass Guidelines? [Buy me a beer](https://gumroad.com/l/sass-guildelines)!
+Enjoyed Sass Guidelines? [Buy me a beer](https://gumroad.com/l/sass-guidelines)!
