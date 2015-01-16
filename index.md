@@ -317,7 +317,7 @@ Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pr
 
 If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
 
-When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating code.
+When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.
 
 Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
@@ -805,7 +805,8 @@ Doing this would prevent a theme change leading to something like `$sass-pink: b
 
 
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate a color by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+
 
 The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
 
@@ -3732,7 +3733,7 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
 {% highlight yaml %}
-# For SCSS-Lint v0.31.0
+# For SCSS-Lint v0.32.0
 
 linters:
 
@@ -3800,14 +3801,16 @@ linters:
 
   LeadingZero:
     enabled: true
-    style: exclude_zero
+    style: include_zero
 
   MergeableSelector:
     enabled: false
+    force_nesting: false
 
   NameFormat:
     enabled: true
     convention: hyphenated_lowercase
+    allow_leading_underscore: true
 
   NestingDepth:
     enabled: true
@@ -3818,6 +3821,7 @@ linters:
 
   PropertySortOrder:
     enabled: false
+    ignore_unspecified: false
 
   PropertySpelling:
     enabled: true
