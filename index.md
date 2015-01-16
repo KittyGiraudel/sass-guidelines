@@ -291,7 +291,7 @@ Thanks to my silly experiments like [bitwise operators](https://github.com/HugoG
 
 Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) in some circumstances.
 
-Sometimes, it's better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+Sometimes, it's better to repeat a little to keep the code maintainable, rather than build a top-heavy, unwieldy, unnecessarily complicated system that is the complete opposite.
 
 Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
 
@@ -516,7 +516,9 @@ $length: 0em
   </div>
 </div>
 
+
 The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, is is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
+
 
 To add a unit to a number, you have to multiply this number by *1 unit*.
 
@@ -805,7 +807,8 @@ Doing this would prevent a theme change leading to something like `$sass-pink: b
 
 
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or substracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+
 
 The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
 
@@ -886,7 +889,7 @@ Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike
 
 Lists should respect the following guidelines:
 
-* unless it is too long to fit on a 80-characters line, always display it on a single line;
+* unless it is too long to fit on an 80-character line, always display it on a single line;
 * unless it is used as is for CSS purposes, always use comma as a delimiter;
 * unless it is empty or nested within another list, never write the parenthesis;
 * never add a trailing comma.
@@ -976,7 +979,7 @@ $shadows: $shadows, $shadow
 
 ## Maps
 
-Since Sass 3.3, stylesheets authors can define maps which is the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
+Since Sass 3.3, stylesheet authors can define maps - the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
 
 Maps should be written as follows:
 
@@ -1068,7 +1071,7 @@ If you ever find yourself lost, wondering what kind of crazy magic is happening 
   </div>
 </div>
 
-If you are interested in knowing the depth of the map, add the following function as well. The mixin will display it automatically.
+If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1248,7 +1251,7 @@ I cannot think of many topics where opinions are as divided as they are regardin
 * sticking to the alphabetical order;
 * ordering declarations by type (position, display, colors, font, miscellaneous...).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why animations should appear before the display type? There are a lot of oddities with alphabet ordering.
+There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why would animations appear before the display type? There are a lot of oddities with alphabetical ordering.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1284,7 +1287,7 @@ There are pros and cons for both ways. On one hand, alphabetical order is univer
   </div>
 </div>
 
-On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
+On the other hand, ordering properties by type makes perfect sense. All font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does `overflow` belong, exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
