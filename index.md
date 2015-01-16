@@ -1690,7 +1690,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
 
-As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also constrats well with usual lowercased hyphenated variables.
+As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
