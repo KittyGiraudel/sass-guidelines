@@ -886,7 +886,7 @@ Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike
 
 Lists should respect the following guidelines:
 
-* unless it is too long to fit on a 80-characters line, always display it on a single line;
+* unless it is too long to fit on an 80-character line, always display it on a single line;
 * unless it is used as is for CSS purposes, always use comma as a delimiter;
 * unless it is empty or nested within another list, never write the parenthesis;
 * never add a trailing comma.
@@ -976,7 +976,7 @@ $shadows: $shadows, $shadow
 
 ## Maps
 
-Since Sass 3.3, stylesheets authors can define maps which is the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
+Since Sass 3.3, stylesheet authors can define maps &mdash; the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
 
 Maps should be written as follows:
 
@@ -1068,7 +1068,7 @@ If you ever find yourself lost, wondering what kind of crazy magic is happening 
   </div>
 </div>
 
-If you are interested in knowing the depth of the map, add the following function as well. The mixin will display it automatically.
+If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1248,7 +1248,7 @@ I cannot think of many topics where opinions are as divided as they are regardin
 * sticking to the alphabetical order;
 * ordering declarations by type (position, display, colors, font, miscellaneous...).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why animations should appear before the display type? There are a lot of oddities with alphabet ordering.
+There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why would animations should appear before the display type? There are a lot of oddities with alphabetical ordering.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1284,7 +1284,7 @@ There are pros and cons for both ways. On one hand, alphabetical order is univer
   </div>
 </div>
 
-On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
+On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
