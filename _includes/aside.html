@@ -1,0 +1,23 @@
+<aside class="aside">
+  <h1 class="aside__title">Options</h1>
+  <h2 class="aside__heading">Code syntax</h2>
+  <ul class="aside__radio-list">
+    <li>
+      <input type="radio" name="syntax" id="sass" value="sass" />
+      <label for="sass">Sass</label>
+    </li>
+    <li>
+      <input type="radio" name="syntax" id="sass" value="scss" checked />
+      <label for="sass">SCSS</label>
+    </li>
+  </ul>
+
+  <h2 class="aside__heading">Language</h2>
+  <ul class="aside__language-list">
+    {% for language in site.data.languages %}
+    <li><a href="{% if language.prefix %}/{{ language.prefix }}{% endif %}/">{{ language.label }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <span class="aside__toggle  button-ui" id="aside-toggle">Options</span>
+</aside>

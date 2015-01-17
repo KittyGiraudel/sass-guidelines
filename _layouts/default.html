@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.language }}">
 
   {% include head.html %}
 
-  <body id="top">
+  <body id="top" class="scss">
 
     {% include header.html %}
-
-    <input type="checkbox" id="syntax-toggle" class="visually-hidden" />
-    <label for="syntax-toggle" class="button-ui  button-ui--syntax">Syntax</label>
-
-    <p class="message-ui">Syntax has been changed.</p>
+    {% include aside.html %}
 
     {{ content }}
 

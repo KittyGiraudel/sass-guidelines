@@ -1,5 +1,37 @@
 (function (global) {
 
+  function hasClass(elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+  }
+
+  function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+  }
+
+  function removeClass(elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+      while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+        newClass = newClass.replace(' ' + className + ' ', ' ');
+      }
+      elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+  }
+
+  function toggleClass(elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+  }
+
   var App = function () {
     this.initialize();
   };
@@ -8,6 +40,24 @@
     this.addHeadingAnchors();
     this.loadCustomFonts();
     this.fixSkipLinks();
+    this.bindUI();
+  };
+
+  App.prototype.bindUI = function () {
+    var input = document.querySelectorAll('input[name="syntax"]');
+    var value;
+
+    Array.prototype.slice.call(input).forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        value = this.value;
+        removeClass(document.body, value === 'sass' ? 'scss' : 'sass');
+        addClass(document.body, this.value);
+      });
+    });
+
+    document.getElementById('aside-toggle').addEventListener('click', function (event) {
+      toggleClass(document.body, 'open');
+    });
   };
 
   App.prototype.addHeadingAnchors = function () {

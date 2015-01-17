@@ -2,31 +2,23 @@
  * Dual code blocks
  * SCSS is default, Sass is hidden
  */
-.code-block {
-  > [data-syntax="sass"] {
+body.scss {
+  [data-syntax="sass"] {
     display: none;
   }
 
-  > [data-syntax="scss"] {
+  [data-syntax="scss"] {
     display: block;
   }
 }
 
-/**
- * Syntax toggle checkbox
- * 1. Prevent the page from jumping
- */
-#syntax-toggle {
-  @include respond-to('medium') {
-    position: fixed; /* 1 */
-  }
-
-  &:checked ~ .code-block > [data-syntax="sass"] {
-    display: block;
-  }
-
-  &:checked ~ .code-block > [data-syntax="scss"] {
+body.sass {
+  [data-syntax="scss"] {
     display: none;
+  }
+
+  [data-syntax="sass"] {
+    display: block;
   }
 }
 
