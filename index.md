@@ -31,7 +31,7 @@ Now if you feel like contributing, please know that tweeting about it, spreading
 Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it!
 
 <div class="button-wrapper">
-  <a href="https://gum.co/sass-guildelines" target="_blank" class="button">Support Sass Guidelines</a>
+  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">Support Sass Guidelines</a>
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">Spread the word</a>
 </div>
