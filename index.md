@@ -1,5 +1,6 @@
 ---
 layout: default
+language: en
 ---
 
 # About the author
