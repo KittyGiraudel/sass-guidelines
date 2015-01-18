@@ -38,8 +38,7 @@
 
 .aside__heading {
   margin: 1em 0;
-  border-bottom: 0.25em solid $light-grey;
-  border-top: 0.25em solid $light-grey;
+  background: $light-grey;
   text-transform: uppercase;
   font-size: 1em;
   padding: 0.5em;
@@ -67,16 +66,20 @@
 
 .aside__radio-list {
   list-style: none;
-  padding-left: 1em;
   overflow: hidden;
+  margin: -0.5em 0;
 
   label {
     display: inline-block;
-    margin-left: 0.5em;
     cursor: pointer;
   }
 
+  input {
+    @include prefix(transform, translate(-1px, -1px), webkit moz);
+  }
+
   li {
+    margin: 0;
     float: left;
     width: 50%;
   }
