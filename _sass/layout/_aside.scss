@@ -5,25 +5,19 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+  @include prefix(transform, translateX(-100%), webkit ms);
   background: white;
   box-shadow: 0.3em 0 .25em rgba(black, 0.1);
   transition: .15s cubic-bezier(.32, 1, .53, .8);
 
   @include when-inside('.open') {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    @include prefix(transform, translateX(0), webkit ms);
     overflow: auto;
   }
 
   @include respond-to('medium') {
     width: 250px;
-    -webkit-transform: translateX(-250px);
-    -ms-transform: translateX(-250px);
-    transform: translateX(-250px);
+    @include prefix(transform, translateX(-250px), webkit ms);
   }
 }
 
