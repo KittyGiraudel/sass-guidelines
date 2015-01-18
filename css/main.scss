@@ -12,10 +12,6 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "layout/header";
-@import "layout/footer";
-@import "layout/aside";
-
 @import "components/blockquote";
 @import "components/code";
 @import "components/button";
@@ -25,3 +21,7 @@
 @import "components/heading-anchors";
 @import "components/syntax-toggle";
 @import "components/icons";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/aside";
