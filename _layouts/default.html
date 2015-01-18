@@ -5,12 +5,15 @@
 
   <body id="top" class="scss">
 
+    {% include icons.svg %}
     {% include header.html %}
     {% include aside.html %}
 
     {{ content }}
 
-    <a href="#top" class="button-ui  button-ui--back">Top</a>
+    <a href="#top" class="button-ui  button-ui--back">
+      {% include icons/up.html %}
+    </a>
 
     {% include footer.html %}
 

@@ -19,6 +19,13 @@
   @include respond-to("medium") {
     display: inline-block;
   }
+
+  svg {
+    fill: currentcolor;
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+  }
 }
 
 .button-wrapper {
@@ -39,7 +46,12 @@
   text-align: center;
   font-weight: 400;
 
-  &:hover {
+  svg {
+    fill: currentcolor;
+    display: block;
+  }
+
+  @include on-event {
     color: $secondary-color;
   }
 }

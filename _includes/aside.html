@@ -15,9 +15,11 @@
   <h2 class="aside__heading">Language</h2>
   <ul class="aside__language-list">
     {% for language in site.data.languages %}
-    <li><a href="{% if language.prefix %}/{{ language.prefix }}{% endif %}/">{{ language.label }}</a></li>
+    <li><a href="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</a></li>
     {% endfor %}
   </ul>
 
-  <span class="aside__toggle  button-ui" id="aside-toggle">Options</span>
+  <span class="aside__toggle  button-ui" id="aside-toggle">
+    {% include icons/settings.html %}
+  </span>
 </aside>

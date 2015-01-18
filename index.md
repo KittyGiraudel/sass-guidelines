@@ -10,7 +10,10 @@ My name is [Hugo Giraudel](http://hugogiraudel.com), I am a front-end developer 
 I have also written a couple of Sass libraries, mostly for the heck of it: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) and [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
 <div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">Catch me on Twitter</a>
+  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
+    {% include icons/twitter.html %}
+    Catch me on Twitter
+  </a>
 </div>
 
 
@@ -32,9 +35,15 @@ Now if you feel like contributing, please know that tweeting about it, spreading
 Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it!
 
 <div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">Support Sass Guidelines</a>
+  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
+    {% include icons/dollar.html %}
+    Support Sass Guidelines
+  </a>
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">Spread the word</a>
+  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
+    {% include icons/twitter.html %}
+    Spread the word
+  </a>
 </div>
 
 

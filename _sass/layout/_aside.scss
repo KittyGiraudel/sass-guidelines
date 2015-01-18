@@ -49,7 +49,7 @@
   right: 0;
 
   @include respond-to('medium') {
-    right: -7em;
+    right: -5em;
     left: auto;
   }
 }
