@@ -1,0 +1,59 @@
+cz:
+  label: Czech
+  prefix: cz
+  available: false
+
+da:
+  label: Danish
+  prefix: da
+  available: false
+
+nl:
+  label: Dutch
+  prefix: nl
+  available: false
+
+en:
+  label: English
+  prefix:
+  available: true
+
+fr:
+  label: French
+  prefix: fr
+  available: false
+
+de:
+  label: German
+  prefix: de
+  available: false
+
+gr:
+  label: Greek
+  prefix: gr
+  available: false
+
+it:
+  label: Italian
+  prefix: it
+  available: false
+
+pl:
+  label: Polish
+  prefix: pl
+  available: false
+
+pr:
+  label: Portuguese
+  prefix: pr
+  available: false
+
+ru:
+  label: Russian
+  prefix: ru
+  available: false
+
+sp:
+  label: Spanish
+  prefix: sp
+  available: false

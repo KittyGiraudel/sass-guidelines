@@ -1,0 +1,79 @@
+.aside {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include prefix(transform, translateX(-100%), webkit ms);
+  background: white;
+  box-shadow: 0.3em 0 .25em rgba(black, 0.1);
+  transition: .15s cubic-bezier(.32, 1, .53, .8);
+
+  @include when-inside('.open') {
+    @include prefix(transform, translateX(0), webkit ms);
+    overflow: auto;
+  }
+
+  @include respond-to('medium') {
+    width: 250px;
+    @include prefix(transform, translateX(-250px), webkit ms);
+  }
+}
+
+.aside__title {
+  background: $light-pink;
+  padding: 0.5em;
+  color: white;
+  font-size: 1.25em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.aside__heading {
+  margin: 0;
+  border-bottom: 0.25em solid $light-grey;
+  border-top: 0.25em solid $light-grey;
+  text-transform: capitalize;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  color: $dark-grey;
+}
+
+.aside__toggle {
+  position: absolute;
+  background: white;
+  bottom: 0;
+  right: -4.5em;
+
+  @include when-inside('.open') {
+    right: 0;
+  }
+
+  @include respond-to('medium') {
+    background: transparent;
+  }
+}
+
+.aside__language-list {
+  padding-left: 1em;
+
+  a {
+    font-weight: normal;
+  }
+}
+
+.aside__radio-list {
+  list-style: none;
+  padding-left: 1em;
+
+  label {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
+.disabled-link {
+  cursor: not-allowed;
+  color: mix($dark-grey, white, 80%);
+}

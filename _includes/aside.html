@@ -1,0 +1,31 @@
+<aside class="aside">
+  <h1 class="aside__title">Options</h1>
+  <h2 class="aside__heading">Code syntax</h2>
+  <ul class="aside__radio-list">
+    <li>
+      <input type="radio" name="syntax" id="sass" value="sass" />
+      <label for="sass">Sass</label>
+    </li>
+    <li>
+      <input type="radio" name="syntax" id="sass" value="scss" checked />
+      <label for="sass">SCSS</label>
+    </li>
+  </ul>
+
+  <h2 class="aside__heading">Language</h2>
+  <ul class="aside__language-list">
+    {% for language in site.data.languages %}
+    <li>
+      {% if language[1].available %}
+        <a href="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</a>
+      {% else %}
+        <span class="disabled-link" title="This translation is not available yet.">{{ language[1].label }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <button class="aside__toggle  button-ui" role="button" aria-expanded id="aside-toggle">
+    {% include icons/settings.html %}
+  </button>
+</aside>
