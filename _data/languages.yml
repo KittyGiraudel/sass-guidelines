@@ -1,24 +1,47 @@
-- label: Czech
+cz:
+  label: Czech
   prefix: cz
-- label: Danish
+
+da:
+  label: Danish
   prefix: da
-- label: Dutch
+
+nl:
+  label: Dutch
   prefix: nl
-- label: English
+
+en:
+  label: English
   prefix:
-- label: French
+
+fr:
+  label: French
   prefix: fr
-- label: German
+
+de:
+  label: German
   prefix: de
-- label: Greek
+
+gr:
+  label: Greek
   prefix: gr
-- label: Italian
+
+it:
+  label: Italian
   prefix: it
-- label: Polish
+
+pl:
+  label: Polish
   prefix: pl
-- label: Portuguese
+
+pr:
+  label: Portuguese
   prefix: pr
-- label: Russian
+
+ru:
+  label: Russian
   prefix: ru
-- label: Spanish
+
+sp:
+  label: Spanish
   prefix: sp
