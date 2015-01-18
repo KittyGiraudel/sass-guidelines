@@ -20,11 +20,14 @@
     display: inline-block;
   }
 
+  /**
+   * Icons within buttons
+   * 1. Make them same color as text
+   * 2. Adjust vertical align
+   */
   svg {
-    fill: currentcolor;
-    -webkit-transform: translateY(1px);
-    -ms-transform: translateY(1px);
-    transform: translateY(1px);
+    fill: currentcolor; /* 1 */
+    @include prefix(transform, translateY(1px), webkit ms); /* 2 */
   }
 }
 

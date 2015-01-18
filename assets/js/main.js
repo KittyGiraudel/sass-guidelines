@@ -59,6 +59,10 @@
     document.getElementById('aside-toggle').addEventListener('click', function (event) {
       toggleClass(document.body, 'open');
     });
+
+    document.getElementById('language-picker').addEventListener('change', function (event) {
+      window.location.href = this.value;
+    });
   };
 
   App.prototype.addHeadingAnchors = function () {

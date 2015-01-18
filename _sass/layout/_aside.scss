@@ -19,6 +19,12 @@
     width: 250px;
     @include prefix(transform, translateX(-250px), webkit ms);
   }
+
+  .button {
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
 }
 
 .aside__title {
@@ -31,13 +37,17 @@
 }
 
 .aside__heading {
-  margin: 0;
+  margin: 1em 0;
   border-bottom: 0.25em solid $light-grey;
   border-top: 0.25em solid $light-grey;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1em;
-  padding: 0.5em 1em;
-  color: $dark-grey;
+  padding: 0.5em;
+  color: $dark-pink;
+
+  .aside__title + & {
+    margin-top: 0;
+  }
 }
 
 .aside__toggle {
@@ -55,25 +65,19 @@
   }
 }
 
-.aside__language-list {
-  padding-left: 1em;
-
-  a {
-    font-weight: normal;
-  }
-}
-
 .aside__radio-list {
   list-style: none;
   padding-left: 1em;
+  overflow: hidden;
 
   label {
     display: inline-block;
     margin-left: 0.5em;
+    cursor: pointer;
   }
-}
 
-.disabled-link {
-  cursor: not-allowed;
-  color: mix($dark-grey, white, 80%);
+  li {
+    float: left;
+    width: 50%;
+  }
 }

@@ -7,23 +7,27 @@
       <label for="sass">Sass</label>
     </li>
     <li>
-      <input type="radio" name="syntax" id="sass" value="scss" checked />
-      <label for="sass">SCSS</label>
+      <input type="radio" name="syntax" id="scss" value="scss" checked />
+      <label for="scss">SCSS</label>
     </li>
   </ul>
 
   <h2 class="aside__heading">Language</h2>
-  <ul class="aside__language-list">
-    {% for language in site.data.languages %}
-    <li>
-      {% if language[1].available %}
-        <a href="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</a>
-      {% else %}
-        <span class="disabled-link" title="This translation is not available yet.">{{ language[1].label }}</span>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+
+  <div class="custom-select language-picker">
+    <select id="language-picker">
+      {% for language in site.data.languages %}
+      <option {% if language[1].available == false %}disabled  title="This translation is not available yet."{% endif %} value="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <h2 class="aside__heading">Extras</h2>
+
+  <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
+  <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
+  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+  <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
 
   <button class="aside__toggle  button-ui" role="button" aria-expanded id="aside-toggle">
     {% include icons/settings.html %}

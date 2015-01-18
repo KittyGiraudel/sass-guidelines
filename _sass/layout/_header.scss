@@ -19,6 +19,7 @@
   max-width: none;
   font-size: 6em;
 
+  // Long shadow
   $shadows: ();
   @for $i from 1 through 200 {
     $shadows: append($shadows, ($i * 1px) ($i * 1px) darken($secondary-color, 5%), comma);

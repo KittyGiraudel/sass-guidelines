@@ -9,10 +9,16 @@ blockquote {
   overflow: hidden;
   font-style: italic;
 
+  /**
+   * Make all children containers
+   */
   > * {
     @include container;
   }
 
+  /**
+   * On large screens, add a decorative quote
+   */
   @include respond-to("medium") {
     > :first-child {
       position: relative;
