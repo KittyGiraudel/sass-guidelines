@@ -45,13 +45,14 @@
 
   App.prototype.bindUI = function () {
     var input = document.querySelectorAll('input[name="syntax"]');
-    var value;
 
     Array.prototype.slice.call(input).forEach(function (element) {
       element.addEventListener('click', function (event) {
-        value = this.value;
-        removeClass(document.body, value === 'sass' ? 'scss' : 'sass');
-        addClass(document.body, this.value);
+        if (this.value === 'sass') {
+          addClass(document.body, 'sass');
+        } else {
+          removeClass(document.body, 'sass');
+        }
       });
     });
 
