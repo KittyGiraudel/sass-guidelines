@@ -38,11 +38,13 @@
 
 .aside__heading {
   margin: 1em 0;
-  background: $light-grey;
-  text-transform: uppercase;
-  font-size: 1em;
-  padding: 0.5em;
-  color: $dark-pink;
+  border-bottom: .1em solid;
+  text-transform: capitalize;
+  font-size: .9em;
+  padding: 0.5em 0.75em;
+  color: $dark-grey;
+  text-align: right;
+  font-weight: 400;
 
   .aside__title + & {
     margin-top: 0;
