@@ -1,16 +1,28 @@
-html {
-  @include prefix(box-sizing, border-box, webkit moz);
-}
-
+/**
+ * Make all elements inherit from `html` box-sizing
+ */
 * {
   @include prefix(box-sizing, inherit, webkit moz);
 }
 
+/**
+ * Redefine box-sizing on the root element
+ */
+html {
+  @include prefix(box-sizing, border-box, webkit moz);
+}
+
+/**
+ * Basic typography styles
+ */
 body {
   font: 1.125em/1.4 $text-font-stack;
   color: #333;
 }
 
+/**
+ * Links
+ */
 a {
   text-decoration: none;
   color: $main-color;
@@ -22,6 +34,9 @@ a {
   }
 }
 
+/**
+ * Inline code
+ */
 :not(pre) > code {
   color: #6b717f;
 }
