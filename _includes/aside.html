@@ -15,7 +15,13 @@
   <h2 class="aside__heading">Language</h2>
   <ul class="aside__language-list">
     {% for language in site.data.languages %}
-    <li><a href="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</a></li>
+    <li>
+      {% if language[1].available %}
+        <a href="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</a>
+      {% else %}
+        <span class="disabled-link" title="This translation is not available yet.">{{ language[1].label }}</span>
+      {% endif %}
+    </li>
     {% endfor %}
   </ul>
 
