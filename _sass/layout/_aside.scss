@@ -58,11 +58,7 @@
   padding-left: 1em;
 
   a {
-    color: $dark-grey;
-
-    @include on-event {
-      color: $light-pink;
-    }
+    font-weight: normal;
   }
 }
 
@@ -74,4 +70,9 @@
     display: inline-block;
     margin-left: 0.5em;
   }
+}
+
+.disabled-link {
+  cursor: not-allowed;
+  color: mix($dark-grey, white, 80%);
 }
