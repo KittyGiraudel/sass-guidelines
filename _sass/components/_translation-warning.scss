@@ -1,0 +1,11 @@
+.translation-warning {
+  margin: 0;
+  @include vertical-rhythm;
+  background: $quote-background;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.translation-warning > p {
+  @include container;
+}
