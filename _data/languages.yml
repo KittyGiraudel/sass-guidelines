@@ -2,58 +2,104 @@ cz:
   label: Czech
   prefix: cz
   available: false
+  translators:
+    - name: Pavel Antolík
+      link: https://github.com/pavelantolik
 
 da:
   label: Danish
   prefix: da
   available: false
+  translators:
+    - name: Patrick Redzdaz
+      link: https://github.com/PatrickKDK
 
 nl:
   label: Dutch
   prefix: nl
   available: false
+  translators:
+    - name: Tom de Wit
+      link: https://github.com/ttomdewit
 
 en:
   label: English
   prefix:
   available: true
+  translators: []
 
 fr:
   label: French
   prefix: fr
   available: false
+  translators:
+    - name: Pierre Choffe
+      link: https://github.com/pierrechoffe
 
 de:
   label: German
   prefix: de
   available: false
+  translators:
+    - name: Kai Brueckers
+      link: https://github.com/kaibrueckers
+    - name: Al
+      link: https://github.com/altembo
 
 gr:
   label: Greek
   prefix: gr
   available: false
+  translators:
+    - name: Adonis K.
+      link: https://github.com/varemenos
+    - name: Konstantinos Margaritis
+      link: https://github.com/kmargaritis
 
 it:
   label: Italian
   prefix: it
   available: false
+  translators:
+    - name: Simone Rescio
+      link: https://github.com/srescio
 
 pl:
   label: Polish
   prefix: pl
   available: false
+  translators:
+    - name: Andrzej Kłapeć
+      link: https://github.com/klapec
 
-pr:
+pt:
   label: Portuguese
-  prefix: pr
+  prefix: pt
   available: false
+  translators:
+    - name: Ricardo Magalhães
+      link: https://github.com/magalhini
+    - name: Sara Vieira
+      link: https://github.com/saravieira
+    - name: Eduardo Bouças
+      link: https://github.com/eduardoboucas
 
 ru:
   label: Russian
   prefix: ru
   available: false
+  translators:
+    - name: Даниил Пронин
+      link: https://github.com/grawl
+    - name: Pavel Demyanenko
+      link: https://github.com/PavelDemyanenko
 
 sp:
   label: Spanish
   prefix: sp
   available: false
+  translators:
+    - name: Sonia Conde
+      link: https://github.com/soniar4i
+    - name: David Khourshid
+      link: https://github.com/davidkpiano
