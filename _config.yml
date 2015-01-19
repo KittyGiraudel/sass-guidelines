@@ -10,5 +10,8 @@ github_username:  HugoGiraudel
 # Build settings
 markdown: kramdown
 
+kramdown:
+    transliterated_header_ids: true
+
 sass:
     style: :compressed
