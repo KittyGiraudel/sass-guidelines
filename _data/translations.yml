@@ -77,7 +77,7 @@ pl:
   baseline:
     content: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
   footer:
-    content: "Stworzone z miłością przez <a href='http://hugogiraudel.com'>Hugo Giraudel</a>, tłumaczenie <a href='http://github.com/klapec'>Andrzej Kłapeć</a> i <a href='http://github.com/matchabros'>Mateusz Chabros</a>"
+    content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
 
 pt:
   donate:
