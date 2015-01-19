@@ -1,6 +1,6 @@
 cz:
   label: Czech
-  prefix: cz
+  prefix: /cz/
   available: false
   translators:
     - name: Pavel Antolík
@@ -8,7 +8,7 @@ cz:
 
 da:
   label: Danish
-  prefix: da
+  prefix: /da/
   available: false
   translators:
     - name: Patrick Redzdaz
@@ -16,7 +16,7 @@ da:
 
 nl:
   label: Dutch
-  prefix: nl
+  prefix: /nl/
   available: false
   translators:
     - name: Tom de Wit
@@ -24,13 +24,13 @@ nl:
 
 en:
   label: English
-  prefix:
+  prefix: /
   available: true
   translators: []
 
 fr:
   label: French
-  prefix: fr
+  prefix: /fr/
   available: false
   translators:
     - name: Pierre Choffe
@@ -38,7 +38,7 @@ fr:
 
 de:
   label: German
-  prefix: de
+  prefix: /de/
   available: false
   translators:
     - name: Kai Brueckers
@@ -48,7 +48,7 @@ de:
 
 gr:
   label: Greek
-  prefix: gr
+  prefix: /gr/
   available: false
   translators:
     - name: Adonis K.
@@ -58,7 +58,7 @@ gr:
 
 it:
   label: Italian
-  prefix: it
+  prefix: /it/
   available: false
   translators:
     - name: Simone Rescio
@@ -66,7 +66,7 @@ it:
 
 pl:
   label: Polish
-  prefix: pl
+  prefix: /pl/
   available: false
   translators:
     - name: Andrzej Kłapeć
@@ -74,7 +74,7 @@ pl:
 
 pt:
   label: Portuguese
-  prefix: pt
+  prefix: /pt/
   available: false
   translators:
     - name: Ricardo Magalhães
@@ -86,7 +86,7 @@ pt:
 
 ru:
   label: Russian
-  prefix: ru
+  prefix: /ru/
   available: false
   translators:
     - name: Даниил Пронин
@@ -96,7 +96,7 @@ ru:
 
 sp:
   label: Spanish
-  prefix: sp
+  prefix: /sp/
   available: false
   translators:
     - name: Sonia Conde
