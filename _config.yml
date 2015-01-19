@@ -7,11 +7,13 @@ url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
 github_username:  HugoGiraudel
 
+safe: true
+
 # Build settings
 markdown: kramdown
 
-kramdown:
-    transliterated_header_ids: true
+# kramdown:
+#    transliterated_header_ids: true
 
 sass:
     style: :compressed
