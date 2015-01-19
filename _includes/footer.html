@@ -1,1 +1,6 @@
-{% include footer/{{ page.language }}.html %}
+<footer role="contentinfo" class="footer">
+  <div class="container">
+    {% capture prefix %}&copy;&nbsp;{{ site.time | date: '%Y' }}&nbsp;&mdash;&nbsp;{% endcapture %}
+    {{ site.data.translations[page.language].footer.content|prepend:prefix|markdownify }}
+  </div>
+</footer>
