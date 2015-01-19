@@ -1,0 +1,107 @@
+cz:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+da:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+nl:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+en:
+  donate:
+    content: "If you enjoy Sass Guidelines, please consider supporting them."
+    button: "Support Sass Guidelines"
+  baseline:
+    content: "An opinionated styleguide for writing sane, maintainable and scalable Sass."
+  footer:
+    content: "Made with love by [Hugo Giraudel](http://hugogiraudel.com)"
+
+fr:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+de:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+gr:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+it:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+pl:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+pt:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+ru:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
+
+sp:
+  donate:
+    content: ""
+    button: ""
+  baseline:
+    content: ""
+  footer:
+    content: ""
