@@ -72,12 +72,12 @@ it:
 
 pl:
   donate:
-    content: ""
-    button: ""
+    content: "Jeśli spodobał Ci się Sass Guidelines, proszę byś rozważył jego wsparcie."
+    button: "Wesprzyj Sass Guidelines"
   baseline:
-    content: ""
+    content: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
   footer:
-    content: ""
+    content: "Stworzone z miłością przez <a href='http://hugogiraudel.com'>Hugo Giraudel</a>, tłumaczenie <a href='http://github.com/klapec'>Andrzej Kłapeć</a> i <a href='http://github.com/matchabros'>Mateusz Chabros</a>"
 
 pt:
   donate:
