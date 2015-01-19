@@ -111,16 +111,16 @@ I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik,
   * [Menadżer breakpointów](#menader-breakpointw)
   * [Używanie media queries](#uywanie-media-queries)
 * [Zmienne](#zmienne)
-  * [Zasięg](#zasig)
+  * [Zasięg (scope)](#zasig-scope)
   * [Flaga !default](#flaga-default)
   * [Flaga !global](#flaga-global)
   * [Wiele zmiennych lub map](#wiele-zmiennych-lub-map)
-* [Rozwinięcia](#rozwinicia)
+* [Extendy](#extendy)
 * [Mixiny](#mixiny)
   * [Podstawy](#podstawy)
   * [Listy argumentów](#listy-argumentw)
   * [Mixiny a vendor prefixy](#mixiny-a-vendor-prefixy)
-* [Instrukcje warunkowe](#instrukcje-warunkowe)
+* [Instrukcje warunkowe (conditionals)](#instrukcje-warunkowe-conditionals)
 * [Pętle](#ptle)
   * [Each](#each)
   * [For](#for)
@@ -190,11 +190,11 @@ W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z 
 
 Panuje powszechnie dosyć spore zamieszanie, jeśli chodzi o znaczenie nazwy *Sass* i nie jest to bez powodu. Sass bowiem jest zarówno określeniem dla preprocesora, jak i swojej składni. Może to się wydawać nie do końca jasne, prawda?
 
-Prawda jest taka, że Sass początkowo był określeniem dla składni, której cechą charakterystyczną była wrażliwość na wcięcia. Wkrótce potem, deweloperzy zarządzający Sassem postanowili zacieśnić różnicę między Sassem a CSSem udostępniając przyjazną CSSowi składnię zwaną *SCSS*, czyli *Sassy CSS*. Głównym założeniem temu przyświecającym było to, że jeśli coś jest zgodne z CSSem, jest też zgodne z SCSSem. 
+Prawda jest taka, że Sass początkowo był określeniem dla składni, której cechą charakterystyczną była wrażliwość na indentację. Wkrótce potem, deweloperzy zarządzający Sassem postanowili zacieśnić różnicę między Sassem a CSSem udostępniając przyjazną CSSowi składnię zwaną *SCSS*, czyli *Sassy CSS*. Głównym założeniem temu przyświecającym było to, że jeśli coś jest zgodne z CSSem, jest też zgodne z SCSSem. 
 
-Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko nie wielkimi literami, [proszę](http://sassnotsass.com)), znany także jako *wcięta składnia*, i SCSS. Wybór między nimi należy tak na prawdę tylko do Ciebie, bowiem obie są zgodne ze sobą jeśli chodzi o funkcjonalność. Różnica dotyczy tylko i wyłącznie kwestii estetycznych. 
+Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko nie wielkimi literami, [proszę](http://sassnotsass.com)), znany także jako *wcięta składnia*, i SCSS. Wybór między nimi należy tak naprawdę tylko do Ciebie, bowiem obie są zgodne ze sobą jeśli chodzi o funkcjonalność. Różnica dotyczy tylko i wyłącznie kwestii estetycznych. 
 
-Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu, drobnych dodatków do samego CSSa.
+Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu drobnych dodatków do samego CSSa.
 
 Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem.
 
@@ -215,17 +215,17 @@ Sass jest jednym z wielu dostępnych preprocesorów. Jego głównym konkurentem 
 
 *Dlaczego wybrać Sass zamiast LESS czy innego preprocesora?* jest wciąż aktualnym dziś pytaniem. Nie tak dawno temu rekomendowaliśmy Sass dla projektów bazujących dla Ruby właśnie dlatego, że był on pierwszym preprocesorem stworzonym w Ruby i dobrze współgrał z Ruby on Rails. Teraz, gdy LibSass nadgonił (w zasadzie) z oryginalnym Sassem, ten argument nie jest do końca właściwym.
 
-Tym, co lubię w Sassie, jest jego konserwatywne podejście do CSSa. Design Sassa jest oparty na silnych podstawach: większość z rozwiązań składających się na Sass wynika z założenia twórców, że a) implementowanie dodatkowych funkcjonalności, z uwagi na ich kompleksowość, powinno być uzasadnione faktyczną ich użytecznością i b), że nie powinny one stwarzać trudności przy ocenie tego, co dany blok stylów robi. Ponadto, Sass zdaje się mieć znacznie lepsze podejście do detali od innych preprocesorów. Główni deweloperzy Sassa przykładają szczególną wagę do wspierania każdego możliwego wariantu dotyczącego pracy z CSSem i do tego, by wszystko było ze sobą wspójne.
+Tym, co lubię w Sassie, jest jego konserwatywne podejście do CSSa. Design Sassa jest oparty na silnych podstawach: większość z rozwiązań składających się na Sass wynika z założenia twórców, że a) implementowanie dodatkowych funkcjonalności, z uwagi na ich kompleksowość, powinno być uzasadnione faktyczną ich użytecznością i b), że nie powinny one stwarzać trudności przy ocenie tego, co dany blok stylów robi. Ponadto, Sass zdaje się mieć znacznie lepsze podejście do detali od innych preprocesorów. Główni deweloperzy Sassa przykładają szczególną wagę do wspierania każdego możliwego wariantu dotyczącego pracy z CSSem i do tego, by wszystko było ze sobą spójne.
 
 Innymi słowy, Sass nie jest tym preprocesorem, który zadowoli takich programistów jak ja poprzez dodawanie nadzwyczajnych funkcjonalności ponad to, co jest zawarte w języku, który od początku nie był do tego stworzony. Jest to oprogramowanie służące do rozwiązywania faktycznych problemów, pomagające w dostarczeniu użytecznych funkcjonalności do CSSa tam, gdzie mu ich brakuje.
 
 Pomijając na chwilę kwestię preprocesorów, powinniśmy tutaj poruszyć też kwestię postprocesorów, które ostatnimi czasy stały się niesamowicie popularne. Stało się to głównie dzięki projektom takim jak [PostCSS](https://github.com/postcss/postcss) i [cssnext](https://cssnext.github.io/). Postprocesory są zasadniczo tym samym co preprocesory, oprócz tego że nie zapewniają one niczego ponad funkcjonalność, która ma się pojawić w nadchodzących wydaniach składni CSS.
 
-Możesz myśleć o postprocesorach jako polyfillach dla niewspieranych funkcjonalności CSSa. Dla przykłądu, dają Ci one możliwość pisania zmiennych w sposób, o jakim mówi [specyfikacja CSS](http://dev.w3.org/csswg/css-variables/). Takie arkusze stylów kompiluje się potem za pomocą postprocesora, w rezultacie czego wszystkie zmienne zastępowane są faktycznymi wartościami, zupełnie jak w przypadku Sassa.
+Możesz myśleć o postprocesorach jako polyfillach dla niewspieranych funkcjonalności CSSa. Dla przykładu, dają Ci one możliwość pisania zmiennych w sposób, o jakim mówi [specyfikacja CSS](http://dev.w3.org/csswg/css-variables/). Takie arkusze stylów kompiluje się potem za pomocą postprocesora, w rezultacie czego wszystkie zmienne zastępowane są faktycznymi wartościami, zupełnie jak w przypadku Sassa.
 
 Postprocesorom przyświeca idea dostarczania nowych, projektowanych dopiero funkcjonalności CSSa (takich jak zmienne) tym przeglądarkom, które tego obecnie nie wspierają. Gdy zaś rozwiązania te zaczną być powszechnie obsługiwane, postprocesor przestanie działać na rzecz przeglądarki.
 
-Podczas gdy umożliwianie korzystania ze przyszłej składni jest czymś, co zasługuje na pochwałę, nadal preferuję korzystać z Sassa. Są jednak rzeczy, do których postprocesor zdaje się być bardziej odpowiednim narzędziem niż Sass - prefixowanie CSSa dla przykładu - jednak do tego jeszcze tutaj wrócimy.
+Podczas gdy umożliwianie korzystania z przyszłej składni jest czymś, co zasługuje na pochwałę, nadal preferuję korzystać z Sassa. Są jednak rzeczy, do których postprocesor zdaje się być bardziej odpowiednim narzędziem niż Sass - prefixowanie CSSa dla przykładu - jednak do tego jeszcze tutaj wrócimy.
 
 
 
@@ -265,7 +265,7 @@ Nie wymaga to zatem podkreślenia, że im więcej deweloperów jest zaangażowan
   <ul>
     <li>budują i utrzymują produkty przez określony okresu czasu;</li>
     <li>składają się z deweloperów o różnych umiejętnościach i specjalizacjach;</li>
-    <li>mają liczbę różnych deweloperów pracujących nad danym produktem jednocześnie;</li>
+    <li>mają wielu różnych deweloperów pracujących nad danym produktem jednocześnie;</li>
     <li>regularnie wprowadzają nowych pracowników;</li>
     <li>posiadają określoną liczbę baz kodu, z których deweloperzy na bieżąco korzystają.</li>
   </ul>
@@ -294,7 +294,7 @@ Koniec końców, jeżeli miałbym określić jedyną rzecz jaką chciałbym, by�
 
 Dzięki moim zabawnym eksperymentom, takim jak [operator bitowy](https://github.com/HugoGiraudel/SassyBitwise), [iteratory i generatory](https://github.com/HugoGiraudel/SassyIteratorsGenerators) czy [parser JSON](https://github.com/HugoGiraudel/SassyJSON) napisanym w Sassie, możemy się przekonać jak dużo jest możliwe dzięki Sassowi.
 
-Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien dokładać do niego zbyt wysokiego stopnia skomplikowania. [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](http://pl.wikipedia.org/wiki/DRY) (Don't Repeat Yourself) w niektórych przypadkach.
+Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien dokładać do niego zbyt wysokiego stopnia skomplikowania. [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](http://pl.wikipedia.org/wiki/DRY) (Don't Repeat Yourself) w niektórych przypadkach.
 
 Czasami warto się trochę powtórzyć i dzięki temu sprawić, że nasz kod stanie się łatwiejszy do utrzymania. Jest to zdecydowanie lepsze rozwiązanie niż ciężki, niekontrolowalny i niepotrzebnie skomplikowany kod, którego utrzymanie w dłuższej perspektywie jest wręcz niemożliwe.
 
@@ -326,7 +326,7 @@ Kiedy CSSem w tym samym projekcie zajmuje się kilku deweloperów, zazwyczaj jes
 
 W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-* wcięcia składające się z (2) spacji, bez tabulatorów,
+* indentacje składające się z (2) spacji, bez tabulatorów,
 * najlepiej 80 znaków w linii,
 * prawidłowo napisanych wieloliniowych reguł CSSa,
 * sensownego użycia tzw. znaków niedrukowalnych (whitespace). 
@@ -351,7 +351,7 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Oparta na wcięciach składnia Sass wymusza określone standardy kodu
+// Oparta na indentacjach składnia Sass wymusza określone standardy kodu
 // więc kwestię nawiasów kwadratowych mamy z głowy
 .foo
   display: block
@@ -361,7 +361,7 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
   </div>
 </div>
 
-W tej sekcji nie zajmiemy się jeszcze zagadnieniem organizacji plików. Poruszone to zostanie w [dalszym miejscu](#architektura)
+W tej sekcji nie zajmiemy się jeszcze zagadnieniem organizacji plików. Poruszone to zostanie w [dalszym miejscu](#architektura).
 
 
 
@@ -374,11 +374,11 @@ CSS nie wymaga by łańcuchy (ciągi) znaków były umieszczane między cudzysł
 
 Z tego powodu Sass *także* nie wymaga, by ciągi znajdowały się między cudzysłowami. Co ciekawe (i na całe szczęście), ciąg umieszczony między takimi znakami jest dokładnie równy ciągowi bez cudzysłowów (`'abc'` jest ściśle równy `abc`).
 
-Języki programowania, które nie wymagają by łańcuchy znaków były umieszczane między cudzysłowami, należą jednak do żadkości i z tego też powodu **ciągi powinny być zawsze otoczone znakami pojedynczych cudzysłowów** w Sassie (pojedyncze z tego względu, że na standardowej klawiaturze QWERTY łatwiej jest ich użyć, niż podwójnych). Oprócz spójności z innymi językami, łącznie z kuzynem CSS - JavaScriptem, jest także szereg innych dla tego powodów:
+Języki programowania, które nie wymagają by łańcuchy znaków były umieszczane między cudzysłowami, należą jednak do rzadkości i z tego też powodu **ciągi powinny być zawsze otoczone znakami pojedynczych cudzysłowów** w Sassie (pojedyncze z tego względu, że na standardowej klawiaturze QWERTY łatwiej jest ich użyć, niż podwójnych). Oprócz spójności z innymi językami, łącznie z kuzynem CSS - JavaScriptem, jest także szereg innych dla tego powodów:
 
-* nazwy kolorów traktowane są jako faktyczne kolory, gdy są pozbawione cudzysłowów, co może prowadzić do poważnych problemów;
-* większość rozwiązań do podświetlania składni (syntax highlighters) może mieć problem z ciągami pozbawionymi cudzysłowów;
-* poprawia to ogólną czytelność;
+* nazwy kolorów traktowane są jako faktyczne kolory, gdy są pozbawione cudzysłowów, co może prowadzić do poważnych problemów,
+* większość rozwiązań do podświetlania składni (syntax highlighters) może mieć problem z ciągami pozbawionymi cudzysłowów,
+* poprawia to ogólną czytelność,
 * nie ma absolutnie żadnego słusznego powodu, by nie umieszczać ciągów pomiędzy cudzysłowami.
 
 <div class="code-block">
@@ -409,7 +409,7 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 </div>
 
 <div class="note">
-  <p>W poprzednim przykładzie, <code>sans-serif</code> nie zostało umieszczone pomiędzy cudzysłowami ponieważ jest to specyficzna dla CSSa reguła i nie powinna ona się znajdować między takimi znakami.</p>
+  <p>W powyższym przykładzie, <code>sans-serif</code> nie zostało umieszczone pomiędzy cudzysłowami ponieważ jest to specyficzna dla CSSa reguła i nie powinna ona się znajdować między takimi znakami.</p>
 </div>
 
 Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
@@ -461,7 +461,7 @@ W Sassie, liczby są typem danych w którego skład wchodzą zarówno liczby nie
 
 ### Zera
 
-Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich liczba wynosi mniej niż jeden. Nigdy nie dodawaj zer końcowych.
+Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość wynosi mniej niż jeden. Nigdy nie dodawaj zer końcowych.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -609,7 +609,7 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-Dodając jednostkę jako ciąg do liczby uzyskasz ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej też określenie jednostki również skutkować będzie otrzymaniem łańcuchem. A przecież tego nie chcesz.
+Dodając jednostkę jako ciąg do liczby uzyskasz ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież tego nie chcesz.
 
 
 
@@ -658,7 +658,7 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 {% highlight scss %}
 /**
  * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem, 
- * która pozwala mi na wyrównanie góry `.foo` z jego rodzicem. 
+ * która pozwala mi na wyrównanie góry `.foo` z jego parentem. 
  * Najlepiej by jednak było, gdybyśmy to porządnie zrobili.
  */
 .foo {
@@ -670,7 +670,7 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 {% highlight sass %}
 /**
  * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem, 
- * która pozwala mi na wyrównanie góry `.foo` z jego rodzicem. 
+ * która pozwala mi na wyrównanie góry `.foo` z jego parentem. 
  * Najlepiej by jednak było, gdybyśmy to porządnie zrobili.
  */
 .foo
@@ -815,9 +815,9 @@ Robiąc to w ten sposób zapobiegasz sytuacji, w której zmiana motywu doprowadz
 
 
 
-Funkcje służące zarówno [`rozjaśnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie do tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
+Funkcje służące zarówno [`rozjaśnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie od tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
-Rzecz w tym, że te funkcje często nie prowadzą to takich rezultatów, jakich od nich oczekujemy. Z drugiej jednak strony, funkcja [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) jest ciekawym rozwiązaniem dla rozjaśniania lub przyciemniania barw. Robi to poprzez mieszanie koloru z barwą `white` (białą), lub `black` (czarną).
+Rzecz w tym, że te funkcje często nie prowadzą do takich rezultatów, jakich od nich oczekujemy. Z drugiej jednak strony, funkcja [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) jest ciekawym rozwiązaniem dla rozjaśniania lub przyciemniania barw. Robi to poprzez mieszanie koloru z barwą `white` (białą), lub `black` (czarną).
 
 Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnianych, jest niewątpliwie fakt, że zapewnia ona progresywne przejście do czerni (lub bieli) w trakcie zmniejszania proporcji głównego koloru, w czasie gdy funkcje `darken` i `lighten` w sposób o wiele bardziej nagły wytracają nasz kolor.
 
@@ -899,9 +899,9 @@ Listy są w Sassie odpowiednikiem tablic (arrays). Lista jest typem płaskiej st
 
 Listy powinny być tworzone według następujących zasad:
 
-* zawsze umieszczaj je na jednej linii, chyba że zajmują więcej niż 80 znaków;
-* zawsze używaj przecinka jako separatora, chyba że cel, do jakiego ma być ona użyta, tego nie zakłada;
-* nigdy nie umieszczaj jej między nawiasami, chyba że jest pusta albo zagnieżdżona wewnątrz innej listy;
+* zawsze umieszczaj je na jednej linii, chyba że zajmują więcej niż 80 znaków,
+* zawsze używaj przecinka jako separatora, chyba że cel, do jakiego ma być ona użyta, tego nie zakłada,
+* nigdy nie umieszczaj jej między nawiasami, chyba że jest pusta albo zagnieżdżona wewnątrz innej listy,
 * nigdy nie dodawaj końcowego przecinka.
 
 <div class="code-block">
@@ -993,13 +993,13 @@ Od wersji 3.3 Sassa, autorzy arkuszy stylów mogą korzystać z map, które są 
 
 Mapy powinny być tworzone w następujący sposób:
 
-* spacja po dwukropku (`:`);
-* nawias otwierający (`(`) powinien się znajdować na tej samej linii co dwukropek (`:`);
-* **klucze umieszczone między cudzysłowami** jeśli są łańcuchami (co stanowi 99% przypadków);
-* każda para klucz–wartość na osobnej linii;
-* przecienk (`,`) na końcu każdej pary klucz–wartość;
-* **końcowy przecinek** (`,`) przy ostatnim elemencie, dzięki czemu łatwiej nam będzie dodawać, usuwać czy zmieniać kolejność składników mapy;
-* nawias zamykający (`)`) na osobnej linii;
+* spacja po dwukropku (`:`),
+* nawias otwierający (`(`) powinien się znajdować na tej samej linii co dwukropek (`:`),
+* **klucze umieszczone między cudzysłowami** jeśli są łańcuchami (co stanowi 99% przypadków),
+* każda para klucz–wartość na osobnej linii,
+* przecienk (`,`) na końcu każdej pary klucz–wartość,
+* **końcowy przecinek** (`,`) przy ostatnim elemencie, dzięki czemu łatwiej nam będzie dodawać, usuwać czy zmieniać kolejność składników mapy,
+* nawias zamykający (`)`) na osobnej linii,
 * bez spacji czy nowej linii między zamykającym nawiasem (`)`) a średnikiem (`;`).
 
 Przykład:
@@ -1141,12 +1141,12 @@ Jeśli jesteś zainteresowany głębokością danej mapy, dodaj również poniż
 
 W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie podstawowe zasady dot. pisania zestawów reguł w CSSie (a przynajmniej te, które są przyjęte m.in. przez [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-* powiązane selektory umieszczamy na tej samej linii; niezwiązane ze sobą zaczynamy od nowej;
-* nawias otwierający (`{`) oddzielony od ostatniego selektora pojedynczą spacją;
-* każda deklaracja na swojej osobnej linii;
-* spacja po przecinku (`:`);
-* końcowy średnik (`;`) na końcu każdej deklaracji;
-* zamykający nawias (`}`) na osobnej linii;
+* powiązane selektory umieszczamy na tej samej linii; niezwiązane ze sobą zaczynamy od nowej,
+* nawias otwierający (`{`) oddzielony od ostatniego selektora pojedynczą spacją,
+* każda deklaracja na swojej osobnej linii,
+* spacja po przecinku (`:`),
+* końcowy średnik (`;`) na końcu każdej deklaracji,
+* zamykający nawias (`}`) na osobnej linii,
 * nowa linia po zamykającym nawiasie (`}`).
 
 Przykład:
@@ -1191,10 +1191,10 @@ Przykład:
 
 Dodając do powyższych reguł związanych z samym CSSem warto też zwrócić uwagę, by:
 
-* lokalne zmienne zostały nie tylko zadeklarowane przed innymi deklaracjami, ale także rozdzielone przed nimi pojedynczą, pustą linią;
-* wywołania mixinów bez `@content` (dodatkowych deklaracji) znajdowały się przed innymi deklaracjami;
-* zagnieżdżone selektory zawsze zaczynały się od nowej linii;
-* mixiny z `@content` (deklaracjami) pojawiały się po wszelkich zagnieżdżonych selektorach;
+* lokalne zmienne zostały nie tylko zadeklarowane przed innymi deklaracjami, ale także rozdzielone przed nimi pojedynczą, pustą linią,
+* wywołania mixinów bez `@content` (dodatkowych deklaracji) znajdowały się przed innymi deklaracjami,
+* zagnieżdżone selektory zawsze zaczynały się od nowej linii,
+* mixiny z `@content` (deklaracjami) pojawiały się po wszelkich zagnieżdżonych selektorach,
 * nie było pustej linii po zamykającym nawiasie (`}`).
 
 Przykład:
@@ -1256,9 +1256,9 @@ Przykład:
 
 ## Sortowanie deklaracji
 
-Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak bardzo podzielone, jak jest to w przypadku sortowania deklaracji w CSSie. W szczególności, należy tu mówić o dwóch poglądach:
+Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak bardzo podzielone, jak jest to w przypadku sortowania deklaracji w CSSie. W szczególności należy tu mówić o dwóch poglądach:
 
-* porządek alfabetyczny;
+* porządek alfabetyczny,
 * porządkowanie deklaracji ze względu na ich typ (pozycja, `display`, kolory, czcionki i inne...).
 
 Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne jest uniwersalne (przynajmniej dla języków opartych o alfabet łaciński), więc przynajmniej nie sprawia ono większego problemu. Moim jednak zdaniem, nieumieszczanie własności takich jak `bottom` i `top` obok siebie jest pomysłem conajmniej dziwnym. Dlaczego też deklaracje dot. animacji miały by się znajdować przed własnością `display`? Jak można się domyśleć, w sortowaniu alfabetycznym nie trudno się doszukać szeregu takich nieścisłości.
@@ -1297,7 +1297,7 @@ Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne 
   </div>
 </div>
 
-Z drugiej zaś strony, porządkowanie własności według typu zdaje się mieć sens. Każda deklaracja związana z czcionkami jest obok siebie, `top` i `bottom` są znowu razem, a czytanie takiego zestawu reguł zdaje się być przyjemnością. Jednak o ile nie trzymasz się reguł określonych konwencji, takich jak [Idiomatic CSS](https://github.com/necolas/idiomatic-css), niektóre kwestie pozostają problematyczne. Jak, na przykład, umieścić własność `white-space`? W grupie czcionek, czy obok `display`? Co zrobić z `overflow`? Wreszcie, jaka jest kolejność wewnątrz danej grupy tematycznej (czyżby alfabetyczna, o ironio)?
+Z drugiej zaś strony, porządkowanie własności według typu zdaje się mieć sens. Każda deklaracja związana z czcionkami jest obok siebie, `top` i `bottom` są znowu razem, a czytanie takiego zestawu reguł zdaje się być przyjemnością. Jednak o ile nie trzymasz się reguł określonych konwencji, takich jak [Idiomatic CSS](https://github.com/necolas/idiomatic-css), niektóre kwestie pozostają problematyczne. Gdzie, na przykład, umieścić własność `white-space`? W grupie czcionek, czy obok `display`? Co zrobić z `overflow`? Wreszcie, jaka jest kolejność wewnątrz danej grupy tematycznej (czyżby alfabetyczna, o ironio)?
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1369,11 +1369,11 @@ Istnieje również inny interesujący pogląd na porządkowanie reguł zwany [Co
   </div>
 </div>
 
-Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że ponad 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
+Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
 
 <figure role="group">
   <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie</figcaption>
+  <figcaption>Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie.</figcaption>
 </figure> 
 
 Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam Tobie, bądź tylko w swym wyborze konsekwentny.
@@ -1401,11 +1401,11 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
 
 ## Zagnieżdżanie selektorów
 
-Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloperów, jest niewątpliwie *zagnieżdżanie selektorów*. Rozwiązanie to pozwala autorom arkuszy stylów na używanie z długich, wieloczłonowych selektorów rozbijając je na krótsze i zagnieżdżając je.
+Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloperów, jest niewątpliwie *zagnieżdżanie selektorów*. Rozwiązanie to pozwala autorom arkuszy stylów na używanie z długich, wieloczłonowych selektorów rozbijając je na krótsze i zagnieżdżanie ich.
 
 ### Generalna zasada
 
-Na przykład, poniższe zagnieżdżanie w Sassie:
+Na przykład, poniższe zagnieżdżenie w Sassie:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1492,7 +1492,7 @@ Aby zapobiec temu typu sytuacjom, **unikamy zagnieżdżania selektorów jeśli t
 
 ### Wyjątki
 
-Przede wszystkim, dozwolone jest – a nawet rekomendowane – zagnieżdżanie pseudo-klas i pseudo-elementów wewnątrz wstępnych selektorów.
+Przede wszystkim, dozwolone jest – a nawet rekomendowane – zagnieżdżanie pseudo-klas i pseudo-elementów wewnątrz selektorów.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1652,7 +1652,7 @@ Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz si
 
 # Konwencje nazw
 
-W tej sekcji nie zajmiemy się konwencjami na nazywanie elementów składni CSSa, które to mają za zadanie pomóc w łatwości utrzymania i skalowania kodu; nie tylko decyzja w tej kwestii należy do Ciebie, ale nie jest to też coś, co należy do zakresu merytorycznego przewodnika po stylu w Sassie. Zalecam tym samym zapoznanie się z [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+W tej sekcji nie zajmiemy się konwencjami na nazywanie elementów składni CSSa, które to mają za zadanie pomóc w łatwości utrzymania i skalowania kodu; nie tylko decyzja w tej kwestii należy do Ciebie, ale nie jest to też coś, co należy do zakresu merytorycznego tego przewodnika. Zalecam tym samym zapoznanie się z [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Jest jednak w Sassie kilka rzeczy posługujących się nazwami i ważne jest, by nazywać je w sposób, dzięki któremu Twój kod będzie spójny i czytelny:
 
@@ -1706,7 +1706,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 Jeśli jesteś deweloperem pracującym z frameworkami czy też zajmujesz się określonymi bibliotekami, prawdopodobnie często w pracy wykorzystujesz zmienne, których z zasady nie należy zmieniać, niezależnie od sytuacji – a więc ze stałymi. Niestety (albo stety?), Sass nie zapewnia takiej funkcjonalności, dlatego też musimy się ograniczyć do korzystania określonego nazewnictwa, by wywołać taki efekt.
 
-Jak w przypadku wielu innych języków programowania, zalecam korzystanie z nazw opartych o wielkie litery, rozdzielane znakami podkreślenia, celem oznaczenia stałych. Nie tylko jest to już przyjętą konwencją, ale także wyraźnie kontrastuje ze zmiennymi pisanymi małymi literami, rozdzielanymi myślnikami.
+Jak w przypadku wielu innych języków programowania, zalecam korzystanie z nazw opartych o wielkie litery, rozdzielane znakami podkreślenia, aby oznaczyć stałe. Nie tylko jest to już przyjętą konwencją, ale także wyraźnie kontrastuje ze zmiennymi pisanymi małymi literami, rozdzielanymi myślnikami.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1788,15 +1788,15 @@ $sj-configuration: ( ... )
 
 # Komentarze
 
-CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli Ty, lub ktoś inny, ma zamiar czytać i aktualizować ten kod po upływie jakiegoś dłuższego okresu czasu. Warto zapobiec sytuacji, w której Ty albo ktoś inny znajdzie się w sytuacji typu *Ja-tego-nie-pisałem-o-matko*.
+CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli Ty, lub ktoś inny, ma zamiar czytać i aktualizować ten kod po upływie jakiegoś dłuższego okresu czasu. Warto zapobiec sytuacji, w której Ty albo ktoś inny znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko*.
 
 Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto używać komentarzy. Mogą one objaśniać takie rzeczy, jak:
 
-* strukturę i/lub rolę danego pliku;
-* cel, dla którego stworzony został dany zestaw reguł;
-* idea przyświecająca magicznej liczbie;
-* powód dla określonej deklaracji;
-* ustalony porządek deklaracji;
+* strukturę i/lub rolę danego pliku,
+* cel, dla którego stworzony został dany zestaw reguł,
+* ideę przyświecającą magicznej liczbie,
+* powód dla określonej deklaracji,
+* ustalony porządek deklaracji,
 * tok myślenia użyty do stworzenia określonych rzeczy.
 
 Prawdopodobnie pominąłem tu wiele innych ważnych sytuacji. Pisanie komentarzy nie zajmuje jednak tak dużo czasu, jakby to się mogło wydawać, dlatego też warto to robić w trakcie pisania kodu. Powrót do niego później, by dodać jakiś komentarz jest nie tylko pomysłem nierealistycznym, ale jest to także dosyć męczące.
@@ -1884,7 +1884,7 @@ SassDoc zapewnia dwie różne składnie dla komentarzy: albo w stylu języka C, 
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 /**
- * Użyta w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
+ * Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
  * @type Length
  */
 $vertical-rhythm-baseline: 1.5rem;
@@ -1893,7 +1893,7 @@ $vertical-rhythm-baseline: 1.5rem;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 /**
- * Użyta w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
+ * Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
  * @type Length
  */
 $vertical-rhythm-baseline: 1.5rem
@@ -1904,14 +1904,14 @@ $vertical-rhythm-baseline: 1.5rem
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Użyta w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
+/// Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
 /// @type Length
 $vertical-rhythm-baseline: 1.5rem;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Użyta w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
+/// Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
 /// @type Length
 $vertical-rhythm-baseline: 1.5rem
 {% endhighlight %}
@@ -1927,7 +1927,7 @@ Nie ma szczególnej przewagi jednej składni nad drugą, dlatego wybierz tą, kt
 SassDoc spełnia dwie zasadnicze funkcje:
 
 * wymusza ustandaryzowane komentarze z użyciem systemu opartego o przypisy, dla wszystkich elementów publicznego lub prywatnego API;
-* pozwala na generowanie w HTMLu dokumentacji danego API z użyciem jednego z wielu mechanizmów. (program w terminalu, Grunt, Gulp, Broccoli, Node...)
+* pozwala na generowanie w HTMLu dokumentacji danego API z użyciem jednego z wielu mechanizmów. (program CLI, Grunt, Gulp, Broccoli, Node...)
 
 <figure role="group">
 <img alt="Documentation generated by SassDoc" src="/assets/images/sassdoc-preview.png" />
@@ -2066,8 +2066,8 @@ Istnieje olbrzymia różnica pomiędzy czymś, co *działa*, a tym co *działa d
 
 Komponenty mogą reprezentować wszystko, o tyle o ile:
 
-* spełniają one tylko jedno zadanie;
-* mogą być wielokrotne użyte, w wielu miejscach w projekcie;
+* spełniają one tylko jedno zadanie,
+* mogą być wielokrotne użyte, w wielu miejscach w projekcie,
 * są niezależne.
 
 
@@ -2082,7 +2082,7 @@ Zdecydowana większość elementów interfejsu może być traktowana jako małe 
 
 ## Wzór 7-1
 
-Wróćmy na chwilę do kwestii architektury. W swoich projektach korzystam zazwyczaj z czegoś, co nazywam *wzorem 7-1*: 7 folderów, 1 plik. W dużym skrócie, opiera się on na skategoryzowaniu wszystkich plików cząstkowych (partials) w 7 różnych folderów i na jednym pliku, który znajduje się w folderze głównym (zazwyczaj nazywam ten plik `main.scss`) i importuje wszystkie te części składowe do jednego arkusza stylów.
+Wróćmy na chwilę do kwestii architektury. W swoich projektach korzystam zazwyczaj z czegoś, co nazywam *wzorem 7-1*: 7 folderów, 1 plik. W dużym skrócie, opiera się to na skategoryzowaniu wszystkich plików cząstkowych (partials) w 7 różnych folderów i na jednym pliku, który znajduje się w folderze głównym (zazwyczaj nazywam ten plik `main.scss`) i importuje wszystkie te części składowe do jednego arkusza stylów.
 
 * `base/`
 * `components/`
@@ -2134,7 +2134,7 @@ sass/
 |
 |– themes/
 |   |– _theme.scss       # Główny motyw
-|   |– _admin.scss       # Główny dla panelu administratora
+|   |– _admin.scss       # Motyw dla panelu administratora
 |   ...                  # Itd…
 |
 |– utils/
@@ -2239,7 +2239,7 @@ Podstawową zasadą dla tego folderu jest to, by żaden ze znajdujących się w 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss` (często nazywane `_helpers.scss`)
 
 <div class="note">
   <p>Folder <code>utils/</code> może być także nazwany folderem <code>helpers/</code>, <code>sass-helpers/</code> lub <code>sass-utils/</code>, w zależności od Twojego upodobania.</p>
@@ -2256,7 +2256,7 @@ Wreszcie, wiele projektów skorzysta także z obecności folderu `vendors/`, kt�
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-Jeśli zmuszony jesteś do nadpisania jakiejkolwiek z sekcji danego pliku zewnętrznego, zalecam utworzenie ósmego folderu nazwanego `vendors-extensions/`, w którym pliki zawierające reguły nadpisujące powinny nazywać się tak jak te pliki, które są tym samym nadpisywane.
+Jeśli zmuszony jesteś do nadpisania jakiejkolwiek z sekcji danego pliku zewnętrznego, zalecam utworzenie ósmego folderu nazwanego `vendors-extensions/`, w którym pliki zawierające reguły nadpisujące powinny nazywać się tak jak te pliki, które są nimi nadpisywane.
 
 Na przykład, `vendors-extensions/_bootstrap.scss` będzie plikiem zawierającym wszystkie reguły CSS, których przeznaczeniem jest zmodyfikowanie niektórych ze standardowych dla Bootstrapa reguł. Służy to uniknięciu edytowania oryginalnych plików zewnętrznych, co samo w sobie nie należy do najlepszych pomysłów.
 
@@ -2264,7 +2264,7 @@ Na przykład, `vendors-extensions/_bootstrap.scss` będzie plikiem zawierającym
 
 ### Główny plik
 
-Główny plik (zazwyczaj nazywany jako `main.scss`) powinien być jedynym plikiem Sassa z całej bazy kodu, którego nazwa nie rozpoczyna się od podkreslnika. Plik ten nie powinien zawierać nic poza deklaracjami `@import` i komentarzami.
+Główny plik (zazwyczaj nazywany jako `main.scss`) powinien być jedynym plikiem Sassa z całej bazy kodu, którego nazwa nie rozpoczyna się od podkreślnika. Plik ten nie powinien zawierać nic poza deklaracjami `@import` i komentarzami.
 
 Pliki powinne być importowane z uwzględnieniem folderów, w których się znajdują, jeden po drugim w następującej kolejności:
 
@@ -2278,9 +2278,9 @@ Pliki powinne być importowane z uwzględnieniem folderów, w których się znaj
 
 Celem zapewnienia lepszej przejrzystości, plik główny powinien respektować poniższe zasady:
 
-* jeden plik dla każdej deklaracji `@import`;
-* jeden `@import` na linię;
-* bez nowej linii pomiędzy importami z tego samego folderu;
+* jeden plik dla każdej deklaracji `@import`,
+* jeden `@import` na linię,
+* bez nowej linii pomiędzy importami z tego samego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
 <div class="code-block">
@@ -2350,12 +2350,12 @@ Celem zapewnienia lepszej przejrzystości, plik główny powinien respektować p
   </div>
 </div>
 
-Istnieje także inne podejście do importowania plików cząstkowych, które wydaje mi się równie poprawne. Z jednej strony, plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. W każdym jednak razie, decyzję pozostawiam Tobie. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
+Istnieje także inne podejście do importowania plików cząstkowych (partiali), które wydaje mi się równie poprawne. W tym przypadku z jednej strony plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. W każdym jednak razie, decyzję pozostawiam Tobie. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
 
-* jeden `@import` na folder;
-* importowane pliki pod `@import`;
-* każdy plik na swojej linii;
-* pusta linia po ostatnim imporcie dla danego folderu;
+* jeden `@import` na folder,
+* importowane pliki pod `@import`,
+* każdy plik na swojej linii,
+* pusta linia po ostatnim imporcie dla danego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
 <div class="code-block">
@@ -2441,7 +2441,7 @@ Istnieje także inne podejście do importowania plików cząstkowych, które wyd
 
 <div class="note">
   <p>Aby nie importować pojedynczo każdego z plików, powstało rozszerzenie do Ruby Sass zwane <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, które umożliwia wykorzystywanie tzw. glob patterns w <code>@import</code> Sassa, takich jak <code>@import "components/*"</code>.</p>
-  <p>Niemniej jednak nie zalecam korzystania z tego rozwiązania, bowiem importuje ono pliki według porządku alfabetycznego, co jest prawdopodobnie nie tym, czego oczekujesz. Zwłaszcza w przypadkach, gdy mamy do czynienia z językiem wrażliwym na kolejność plików, z jakim niewątpliwie mamy tutaj do czynienia.</p>
+  <p>Niemniej jednak nie zalecam korzystania z tego rozwiązania, bowiem importuje ono pliki według porządku alfabetycznego, co jest prawdopodobnie nie tym, czego oczekujesz. Zwłaszcza w przypadkach, gdy mamy do czynienia z językiem wrażliwym na kolejność plików, jakim niewątpliwie jest CSS.</p>
 </div>
 
 
@@ -2451,7 +2451,7 @@ Istnieje także inne podejście do importowania plików cząstkowych, które wyd
 
 ## Plik wstydu
 
-Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry'ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, do tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
+Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry'ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -2460,7 +2460,7 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
  * Fix dla szczegółowości nawigacji.
  *
  * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
- * selektory nawigacji (`.site-nav a {}`). Użyj !Important by go napidać
+ * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
  * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
  */
 .site-nav a {
@@ -2474,7 +2474,7 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
  * Fix dla szczegółowości nawigacji.
  *
  * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
- * selektory nawigacji (`.site-nav a {}`). Użyj !Important by go napidać
+ * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
  * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
  */
 .site-nav a
@@ -2502,7 +2502,7 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
 
 # Responsive Web Design i breakpointy
 
-Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia. Zwłaszcza teraz, gdy jest ono obecne dosłownie wszędzie. Mógłbyś jednak zapytać *dlaczego przewodnik dla stylu Sassa zawiera sekcję poświęconą RWD?* Tak na prawdę to jest kilka rzeczy, które można zrobić aby pracowało się z breakpointami przyjemniej, dlatego też postanowiłem poruszyć ten temat tutaj.
+Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia. Zwłaszcza teraz, gdy jest ono obecne dosłownie wszędzie. Mógłbyś jednak zapytać *dlaczego przewodnik dla stylu Sassa zawiera sekcję poświęconą RWD?* Tak naprawdę to jest kilka rzeczy, które można zrobić aby pracowało się z breakpointami przyjemniej, dlatego też postanowiłem poruszyć ten temat tutaj.
 
 
 
@@ -2620,7 +2620,7 @@ W momencie gdy Twoje breakpointy są już nazwane, potrzebujesz sposobu by ich u
 
 <div class="note">
   <p>Oczywiście, jest to dosyć uproszczone podejście do zarządzania breakpointami, które nie spełni oczekiwań w przypadku konstrukcji bardziej złożonych.</p>
-  <p>Jeśli potrzebujesz rozwiązania bardziej rozbudowanego, zalecam nie odkrywać Ameryki na nowo, sprawdź natomiast coś, co jest już sprawdzone, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Jeśli potrzebujesz rozwiązania bardziej rozbudowanego, zalecam nie odkrywać Ameryki na nowo lecz sprawdzić to, co już istnieje, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 
@@ -2678,9 +2678,9 @@ Co prowadzi do następującego CSSu:
 }
 {% endhighlight %}
 
-Możesz usłyszeć opinie, że taka konwencja prowadzi do duplikowania media queries w wynikowym CSSie. Jest to niewątpliwie prawdą. Należy jednak zaznaczyć, że [przeprowadzono w tej kwestii testy](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries), które wykazały że nie ma to żadnego znaczenia, w momencie gdy Gzip (lub inna metoda kompresji) została użyta na serwerze:
+Możesz usłyszeć opinie, że taka konwencja prowadzi do duplikowania media queries w wynikowym CSSie. Jest to niewątpliwie prawdą. Należy jednak zaznaczyć, że [przeprowadzono w tej kwestii testy](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries), które wykazały że nie ma to żadnego znaczenia, w momencie gdy Gzip (lub inna metoda kompresji) został użyty na serwerze:
 
-> … rozstrzygając zagadnienie łączenia bądź rozbijania Media Queries w wielu miejscach i konsekwencji, jakie oba rozwiązania niosą dla kwestii wydajności, doszliśmy do wniosku, że różnica jest conajmniej minimalna, w zasadzie nieistniejąca.<br>
+> … rozstrzygając zagadnienie łączenia bądź rozbijania Media Queries w wielu miejscach i konsekwencji, jakie oba rozwiązania niosą dla kwestii wydajności, doszliśmy do wniosku, że różnica jest conajmniej minimalna, a w zasadzie nieistniejąca.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), odnośnie [Breakpoint](http://breakpoint-sass.com/)
 
 Jeśli jednak masz obawy co do duplikowania media queries, istnieją takie narzędzia do ich scalania, jak [ten gem](https://github.com/aaronjensen/sass-media_query_combiner). Muszę Cię jednak ostrzec przed możliwymi skutkami ubocznymi przenoszenia z miejsca na miejsce kodu CSS. Należy wszak pamiętać, że w tym wypadku kolejność źródłowa ma kluczowe znaczenie.
@@ -2707,26 +2707,26 @@ Jeśli jednak masz obawy co do duplikowania media queries, istnieją takie narz�
 
 Zmienne należą do istoty każdego języka programowania. Pozwalają nam na wielokrotne użycie określonych wartości bez potrzeby ich kopiowania. Przede wszystkim jednak, umożliwiają nam one aktualizowanie tych wartości w bardzo łatwy sposób.
 
-Można jednak powiedzieć, że CSS jest niczym innym jak jednym wielkim kotłem pełnym wielu różności. W przeciwieństwie do innych języków, CSS nie zna koncepcji zasięgu widoczności. Możliwość powstania konfliktu nazw musimy mieć więc stale na uwadze, jeśli dodajemy nowe zmienne.
+Można jednak powiedzieć, że CSS jest niczym innym jak jednym wielkim kotłem pełnym wielu różności. W przeciwieństwie do innych języków, CSS nie zna koncepcji zasięgu widoczności (scope). Możliwość powstania konfliktu nazw musimy mieć więc stale na uwadze, jeśli dodajemy nowe zmienne.
 
 Moja rada jest następujące: twórzmy zmienne tylko wtedy, kiedy ich istnienie ma sens. Nie róbmy tego pochopnie bo to nam w niczym nie pomoże. Nowa zmienna powinna być tworzona kiedy spełnione są następujące warunki:
 
-* określona wartość powtarza się conajmniej dwa razy;
-* określona wartość będzie w przyszłości aktualizowana, co najmniej raz;
+* określona wartość powtarza się conajmniej dwa razy,
+* określona wartość będzie w przyszłości aktualizowana, co najmniej raz,
 * wszystkie wystąpienia danej wartości są powiązane ze zmienną (nie przez przypadek).
 
-Zasadniczo nie ma powodu, aby deklarować zmienną która nigdy nie będzie aktualizowana albo taką, która będzie użyta tylko w jednym miejscu.
+Zasadniczo nie ma powodu aby deklarować zmienną która nigdy nie będzie aktualizowana albo taką, która będzie użyta tylko w jednym miejscu.
 
 
 
 
 
 
-## Zasięg
+## Zasięg (scope)
 
-Zasięg widoczności zmiennych w Sassie zmienił się w trakcie jego historii. Do niedawna, zmienne deklarowane w ramach zestawów reguł, czy też innych zakresów, standardowo traktowane były jako zmienne lokalne. Co ciekawe jednak, w przypadku gdy istniała już globalna zmienna o tej samej nazwie, mogła ona zostać nadpisana przez tą przypisaną lokalnie. Od czasu wersji 3.4, Sass już właściwie radzi sobie z koncepcją zasięgów i zamiast tego tworzy teraz nową, lokalną zmienną.
+Zasięg widoczności (scope) zmiennych w Sassie zmienił się w trakcie jego historii. Do niedawna, zmienne deklarowane w ramach zestawów reguł, czy też innych zakresów, standardowo traktowane były jako zmienne lokalne. Co ciekawe jednak, w przypadku gdy istniała już globalna zmienna o tej samej nazwie, mogła ona zostać nadpisana przez tą przypisaną lokalnie. Od czasu wersji 3.4, Sass już właściwie radzi sobie z koncepcją zasięgów i zamiast tego tworzy teraz nową, lokalną zmienną.
 
-Dokumentacja traktuje także o *przysłanianiu globalnych zmiennych (variable shadowing)*. Deklarując zmienną o lokalnym zasięgu, która z kolei już istnieje w zasięgu globalnym, ta lokalna *przysłania* tą globalną. Mówiąc wprost, nadpisuje ją na potrzeby lokalnego zasięgu.
+Dokumentacja traktuje także o *przysłanianiu globalnych zmiennych (variable shadowing)*. Deklarując zmienną o lokalnym zasięgu, która z kolei już istnieje w zasięgu globalnym, ta lokalna *przysłania* tą globalną. Mówiąc wprost, nadpisuje ją na potrzeby lokalnego zasięgu (scope'u).
 
 Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
@@ -2799,7 +2799,7 @@ $variable: 'initial value' !global
 
 ## Flaga `!default`
 
-Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być zadeklarowane ze zmienną `!default`, dzięki czemu będą one mogły być nadpisane.
+Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być zadeklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -2814,7 +2814,7 @@ $baseline: 1em !default
   </div>
 </div>
 
-Dzięki temu, deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem Twojej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
+Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem Twojej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -2937,7 +2937,7 @@ $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 
 
-# Rozwinięcia
+# Extendy
 
 Dyrektywa `@extend` jest jedną z tych funkcjonalności Sassa, która sprawiła że Sass stał się tak popularny. Warto w tym miejscu przypomnieć, że dyrektywa ta pozwala na przekazanie Sassowi, żeby potraktował element A tak, jakby pasował także do selektora B. Nie ulega wątpliwości, że może to być pomocne przy pisaniu modułowego CSSa.
 
@@ -2945,7 +2945,7 @@ Niemniej jednak muszę Cię przestrzec przed tą dyrektywą. Nie ujmując jej zd
 
 * gdzie zostanie dodany mój obecny selektor?
 * czy może to spowodować jakieś niepożądane efekty?
-* jak obszerny będzie kod CSS, wygenerowany z tego pojedynczego rozwinięcia?
+* jak obszerny będzie kod CSS, wygenerowany z tego pojedynczego extendu?
 
 Rezultat tego może być albo znikomy, albo katastrofalny w skutkach. Z tego też powodu, moją pierwszą radą będzie unikanie dyrektywy `@extend`. Może to zabrzmieć brutalnie, ale koniec końców może Ci to zaoszczędzić wiele problemów.
 
@@ -2956,9 +2956,9 @@ Mimo to, jest takie powiedzenie jak:
 
 Są bowiem sytuacje w których rozwijanie selektorów może być pomocne i warte uwagi. Miej jednak w pamięci poniższe zasady, by nie wpakować się w tarapaty:
 
-* Korzystaj z rozwinięć w ramach tego samego modułu.
-* Korzystaj z rozwinięć tylko na selektorach zastępczych.
-* Upewnij się, by selektor zastępczy który rozwijasz jest użyty w arkuszu tak rzadko, jak to jest możliwe.
+* Korzystaj z extendów w ramach tego samego modułu.
+* Korzystaj z extendów tylko na placeholderach.
+* Upewnij się, by placeholder który rozwijasz był użyty w arkuszu tak rzadko, jak to jest możliwe.
 
 Jeśli zamierzasz korzystać z tej dyrektywy, musisz także wiedzieć, że nie współpracuje on dobrze z blokami `@media`. Jak zapewne wiesz, Sass nie potrafi rozwijać zewnętrznych selektorów z wnętrza media query. Kompilator w takich przypadkach po prostu się wysypuje, mówiąc Ci jednocześnie, że tak się nie robi. Nie jest to zbyt przyjemne.
 
@@ -3023,7 +3023,7 @@ Podsumowując, **przestrzegam przed korzystaniem z dyrektywy `@extend`**, chyba 
 
 Mixiny są jedną z tych funkcjonalności Sassa, z których się najczęściej korzysta. Są one kluczowe dla ponownego wykorzystywania komponentów i dla zgodności z zasadą DRY. I słusznie: mixiny pozwalają twórcom na definiowanie stylów które mogą być wykorzystywane wszędzie w arkuszu stylu bez potrzeby korzystania z niesemantycznych klas, takich jak `.float-left`.
 
-Mogą one zawierać pełne reguły CSS i zasadniczo wszystko, co wszędzie indziej w dokumencie Sassa jest dozwolone, może być użyte. Mogą one nawet przyjmować argumenty, zupełnie jak funkcje. Nie trzeba więc dodawać, że możliwości są niemal nieograniczone.
+Mogą one zawierać pełne reguły CSS i zasadniczo wszystko, co wszędzie indziej w dokumencie Sassa jest dozwolone, może być użyte. Mogą one nawet przyjmować argumenty, zupełnie jak funkcje. Nie trzeba więc dodawać, że ich możliwości są niemal nieograniczone.
 
 Czuję jednak potrzebę by ostrzec Cię przed nadużywaniem mocy mixinów. Należy mieć bowiem ciągle na uwadze pojęcie *prostoty*. Może to się wydawać kuszące, by budować potężne, rozbudowane mixiny. Jest to jedna gruba przesada i, niestety, wielu deweloperów cierpi na tą chorobę. Nie staraj się by Twój kod robił wszystko na raz. Jeśli dany mixin rozwinie się na więcej niż 20 linii, rozważ wydzielenie z niego części albo po prostu zastanów się nad nim i przepisz go jeszcze raz.
 
@@ -3039,7 +3039,7 @@ Mając to na uwadze, mixiny są niezwykle przydatne i, bez wątpienia, powiniene
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Pomocnik do oczyszczenia floatów
+/// Helper do oczyszczania floatów
 /// @author Nicolas Gallagher
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 @mixin clearfix {
@@ -3053,7 +3053,7 @@ Mając to na uwadze, mixiny są niezwykle przydatne i, bez wątpienia, powiniene
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Pomocnik do oczyszczenia floatów
+/// Helper do oczyszczania floatów
 /// @author Nicolas Gallagher
 /// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 @mixin clearfix
@@ -3070,7 +3070,7 @@ Innym słusznym przykładem może być mixin do określenia rozmiarów elementu,
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Pomocnik do określenia rozmiarów elementu
+/// Helper do określania rozmiarów elementu
 /// @author Hugo Giraudel
 /// @param {Length} $width
 /// @param {Length} $height
@@ -3082,7 +3082,7 @@ Innym słusznym przykładem może być mixin do określenia rozmiarów elementu,
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Pomocnik do określenia rozmiarów elementu
+/// Helper do określania rozmiarów elementu
 /// @author Hugo Giraudel
 /// @param {Length} $width
 /// @param {Length} $height
@@ -3195,9 +3195,9 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 ## Mixiny a vendor prefixy
 
-Definiowanie własnych mixinów do radzenia sobie z vendor prefixami dla niewspieranych lub częściowo wspieranych własności CSS może być kuszące. My jednak tego nie chcemy. Przede wszystkim, jeśli możesz użyć [Autoprefixera](https://github.com/postcss/autoprefixer), rób to. Został on napisany do tego celu i zrobi to bez wątpienia lepiej. 
+Definiowanie własnych mixinów do radzenia sobie z vendor prefixami dla niewspieranych lub częściowo wspieranych własności CSS może być kuszące. My jednak tego nie chcemy. Przede wszystkim, jeśli możesz użyć [Autoprefixera](https://github.com/postcss/autoprefixer), zrób to. Został on napisany do tego celu i zrobi to bez wątpienia lepiej. 
 
-Niestety, są przypadki w których z Autoprefixera skorzystać nie możemy. Jeśli natomiast używasz [Bourbona](http://bourbon.io/) albo [Compassu](http://compass-style.org/), zapewne wiesz że oba rozwiązania zapewniają możliwość poradzenia sobie z vendor prefixami za Ciebie.
+Niestety, zdarzają się przypadki w których z Autoprefixera skorzystać nie możemy. Jeśli natomiast używasz [Bourbona](http://bourbon.io/) albo [Compassu](http://compass-style.org/), zapewne wiesz że oba rozwiązania zapewniają możliwość poradzenia sobie z vendor prefixami za Ciebie.
 
 Jeśli jednak nie możesz skorzystać ani z Autoprefixera, ani z Bourbona czy Compassu, wtedy i tylko wtedy, możesz tworzyć własne mixiny dla prefixowania własności CSSa. Ale proszę, nie twórz pojedynczych mixinów dla każdej z własności.
 
@@ -3297,16 +3297,16 @@ Proszę mieć jednak na uwadze, że jest to dosyć kiepskie rozwiązanie. Na prz
 
 
 
-# Instrukcje warunkowe
+# Instrukcje warunkowe (conditionals)
 
 Jak już prawdopodobnie wiesz, Sass zapewnie wsparcie dla instrukcji warunkowych poprzez dyrektywy `@if` i `@else`. O ile nie masz średnio lub bardzo skomplikowanych rozwiązań w swoim kodzie, nie ma potrzeby dla instrukcji warunkowych w Twoich arkuszach. W zasadzie to one głównie istnieją dla potrzeb bibliotek i frameworków.
 
 W każdym razie, jeśli kiedykolwiek będziesz potrzebował z nich skorzystać, zrób to w zgodności z poniższymi zasadami:
 
-* Bez nawiasów, chyba że są potrzebne;
-* Jedna pusta linia przed `@if`;
-* Kod po nawiasie otwierającym (`{`) na następnej linii;
-* `@else` na tej samej linii, co nawias zamykający (`}`);
+* Bez nawiasów, chyba że są potrzebne,
+* Jedna pusta linia przed `@if`,
+* Kod po nawiasie otwierającym (`{`) na następnej linii,
+* `@else` na tej samej linii, co nawias zamykający (`}`),
 * Nowa pusta linia po ostatnim nawiasie zamykającym (`}`), chyba że następna linia zaczyna się od takiego nawiasu (`}`).
 
 <div class="code-block">
@@ -3484,7 +3484,7 @@ Iterując wewnątrz mapy, zawsze używaj `$key` i `$value` jako nazw zmiennych b
 
 Upewnij się także, by respektować poniższe zasady dla lepszej czytelności kodu:
 
-* Zostawiaj pustą linię przed `@each`;
+* Zostawiaj pustą linię przed `@each`,
 * Zostawiaj pustą linię po nawiasie zamykającym (`}`), chyba że następna linia zawiera taki właśnie nawias.
 
 
@@ -3494,7 +3494,7 @@ Upewnij się także, by respektować poniższe zasady dla lepszej czytelności k
 
 ## For
 
-Pętle `@for` mogą wydawać się użyteczne w połączeniu z pseudo-klasą `:nth-*` w CSSie. Za wyjątkiem tych sytuacji, zaleca się byś preferował pętle `@each` jeśli na prawdę *musisz* iterować wewnątrz czegoś.
+Pętle `@for` mogą wydawać się użyteczne w połączeniu z pseudo-klasą `:nth-*` w CSSie. Z wyjątkiem tych sytuacji, zaleca się byś preferował pętle `@each` jeśli naprawdę *musisz* iterować wewnątrz czegoś.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -3515,11 +3515,11 @@ Pętle `@for` mogą wydawać się użyteczne w połączeniu z pseudo-klasą `:nt
   </div>
 </div>
 
-Zawsze używaj `$i` jako nazwy zmiennej by trzymać się ustalonej konwencji i, chyba że masz ku temu jakiś na prawdę ważny powód, nigdy nie używaj słowa `to`. Korzystaj zawsze z `through`. Wielu deweloperów nawet nie zdaje sobie sprawy z tego, że Sass daje taką możliwość.
+Zawsze używaj `$i` jako nazwy zmiennej by trzymać się ustalonej konwencji i, chyba że masz ku temu jakiś naprawdę ważny powód, nigdy nie używaj słowa `to`. Korzystaj zawsze z `through`. Wielu deweloperów nawet nie zdaje sobie sprawy z tego, że Sass daje taką możliwość.
 
 Pamiętaj także o następujących zasadach:
 
-* Zawsze umieszczaj nową linię przed `@each`;
+* Zawsze umieszczaj nową linię przed `@each`,
 * Zostawiaj pustą linię po nawiasie zamykającym (`}`), chyba że następna linia zawiera taki właśnie nawias.
 
 
@@ -3608,7 +3608,7 @@ Jeśli podana wartość okaże się nie mieć jednostki, funkcja z góry zakład
 
 ## Błędy
 
-Błędy, w odróżnieniu do ostrzeżeń, zatrzymują kompilator i zapobiegają jego dalszemu działaniu. W dużym skrócie, zatrzymują proces kompilacji i wyświetlają wiadomość w strumieniu wyjścia, a także w tzw. śladzie stosu (stack trace), co pomaga w debugowaniu. Z tego też powodu błędu powinny być wysyłane w sytuacji, gdy nie ma innej możliwości by program mógł działać dalej. Kiedy to jest tylko możliwe, spróbuj obejść ten problem i wyświetlać zamiast tego ostrzeżenie.
+Błędy, w odróżnieniu do ostrzeżeń, zatrzymują kompilator i zapobiegają jego dalszemu działaniu. W dużym skrócie, zatrzymują proces kompilacji i wyświetlają wiadomość w strumieniu wyjścia (output), a także w tzw. śladzie stosu (stack trace), co pomaga w debugowaniu. Z tego też powodu błędu powinny być wysyłane w sytuacji, gdy nie ma innej możliwości by program mógł działać dalej. Kiedy to jest tylko możliwe, spróbuj obejść ten problem i wyświetlać zamiast tego ostrzeżenie.
 
 Dla przykładu, powiedzmy że budujesz funkcję wydobywającą wartość z danej mapy. Mógłbyś wysyłać błąd za każdym razem, gdy żądany klucz nie istnieje.
 
@@ -3680,20 +3680,20 @@ $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 Jedną z niewątpliwych zalet preprecessora CSS tak popularnego jak Sass jest to, że dostępny jest cały ekosystem frameworków, pluginów, bibliotek i narzędzi. Po 8 latach od powstania, zbliżamy się do momentu w którym [wszystko co może być napisane w Sassie, zostało napisane w Sassie](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego minimum. Zarządzanie zależnościami jest swoistym piekłem, którego częścią zdecydowanie nie chcesz być. Poza tym, potrzeba korzystania z zewnętrznych zależności, w odniesieniu do Sassa, jest mała, jeśli nie znikoma.
+Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego minimum. Zarządzanie zależnościami jest swoistym piekłem, w którym na pewno nie chciałbyś się znaleźć. Poza tym, potrzeba korzystania z zewnętrznych zależności, w odniesieniu do Sassa, jest mała, jeśli nie znikoma.
 
 
 
 
 ## Compass
 
-[Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić. 
+[Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany został przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić. 
 
 Osobiście nie korzystam już z Compassa. Głównym tego powodem jest fakt, że powoduje on znaczne jego spowolnienie. Ruby Sass jest powolne samo w sobie, więc dodawanie więcej Ruby i Sassa ponad to wcale nie pomaga.
 
-Rzecz w tym, że tak na prawdę używa się bardzo małego procenta całej funkcjonalności tego frameworka. Compass jest olbrzymi. Mixiny dla zapewnienia kompatybilności pomiędzy przeglądarkami to tylko wierzchołek góry lodowej. Funkcje matematyczne, funkcje pomagające z obrazkami, spriting... Compass dodaje bardzo dużo funkcjonalności.
+Rzecz w tym, że tak naprawdę używa się bardzo małego procenta całej funkcjonalności tego frameworka. Compass jest olbrzymi. Mixiny dla zapewnienia kompatybilności pomiędzy przeglądarkami to tylko wierzchołek góry lodowej. Funkcje matematyczne, funkcje pomagające z obrazkami, spriting... Compass dodaje bardzo dużo funkcjonalności.
 
-Niestety, można powiedzieć że to są tylko słodycze, a na prawdę brak jest jakiejś *zabójczej* funkcjonalności. Wyjątkiem może być funkcja budowania sprite'ów, która jest *na prawdę świetna*, lecz [Grunticon](https://github.com/filamentgroup/grunticon) i [Grumpicon](http://grumpicon.com/) robią to równie dobrze i mają ponadto tą zaletę, że można je dołączyć do zautomatyzowanego procesu budowania (jeśli z takiego korzystamy).
+Niestety, można powiedzieć że to są tylko słodycze, a naprawdę brak jest jakiejś *zabójczej* funkcjonalności. Wyjątkiem może być funkcja budowania sprite'ów, która jest *naprawdę świetna*, lecz [Grunticon](https://github.com/filamentgroup/grunticon) i [Grumpicon](http://grumpicon.com/) robią to równie dobrze i mają ponadto tą zaletę, że można je dołączyć do zautomatyzowanego procesu budowania (jeśli z takiego korzystamy).
 
 W każdym bądź razie, w żadnym wypadku nie zabraniam używania Compassu, chociaż też go nie polecam, zwłaszcza że nie jest on kompatybilny z LibSass (nawet jeśli pewne zamiary zostały w tym kierunku poczynione). Jeśli jest Ci on pomocny, w porządku, ale nie wydaje mi się żeby jego zalety przewyższały jego wady.
 
@@ -3717,13 +3717,13 @@ W każdym bądź razie, w żadnym wypadku nie zabraniam używania Compassu, choc
 
 ## Systemy gridów
 
-Pomijanie kwestii systemów gridów jest w dobie Responsive Web Designu obecnie niemożliwe. Sprawienie, by design wyglądał spójnie i poprawnie na urządzeniach o różnych rozmiarach, stosujemy różnego rodzaju systemy "kratek", zwanych gridami, by odpowiednio rozłożyć wszystkie elementy. Z kolei aby uniknąć potrzeby ręcznego pisania takiego systemu za każdym razem od nowa, niektórzy wspaniali ludzie postanowili udostępnić ich rozwiązania i sprawili, że są one dostęne do wielokrotnego użytku.
+Pomijanie kwestii systemów gridów jest w dobie Responsive Web Designu obecnie niemożliwe. Aby sprawić, by design wyglądał spójnie i poprawnie na urządzeniach o różnych rozmiarach, stosujemy różnego rodzaju systemy "kratek", zwanych gridami, odpowiednio rozkładające wszystkie elementy. Z kolei aby uniknąć potrzeby ręcznego pisania takiego systemu za każdym razem od nowa, niektórzy wspaniali ludzie postanowili udostępnić ich rozwiązania i sprawili, że są one dostęne do wielokrotnego użytku.
 
-Powiedzmy sobie jednak szczerze: nie jestem wielkim fanem systemów gridów. Oczywiście, dostrzegam ich potencjał, jednak zdecydowana większość z nich jest zdecydowanie zbyt skomplikowana i rozbudowana, a tak na prawdę używa się ich do rysowania czerwonych kolumn na białych tłach w trakcie prezentacji designerów. Kiedy ostatnio zdażyło Ci się pomyśleć, *jak bardzo jestem wdzięczny, że wreszcie mogę zbudować grid dla kolumn 2-5-3.1-π*? Właśnie, nigdy. Z tego też powodu w większości przypadków wystarczy Ci proste rozwiązanie oparte o system 12 kolumn, nic nadzwyczajnego.
+Powiedzmy sobie jednak szczerze: nie jestem wielkim fanem systemów gridów. Oczywiście, dostrzegam ich potencjał, jednak zdecydowana większość z nich jest zbyt skomplikowana i rozbudowana, a tak naprawdę używa się ich do rysowania czerwonych kolumn na białych tłach w trakcie prezentacji designerów. Kiedy ostatnio zdażyło Ci się pomyśleć, *wreszcie mogę zbudować grid dla kolumn 2-5-3.1-π*? Właśnie, nigdy. Z tego też powodu w większości przypadków wystarczy Ci proste rozwiązanie oparte o system 12 kolumn, nic nadzwyczajnego.
 
 Jeśli korzystasz z frameworków, takich jak [Bootstrap](http://getbootstrap.com/) czy [Foundation](http://foundation.zurb.com/), taki system gridów jest najprawdopodobniej już dołączony i to z tego rozwiązania polecam Ci korzystać, zamiast dołączać do projektu jakąś kolejną zależność.
 
-Jeśli nie jesteś przywiązany do określonego systemu, zapewne ucieszysz się na wiadomość, że obecnie dostępne są na prawdę dobre, oparte o Sassie, systemy gridów: [Susy](http://susy.oddbird.net/) i [Singularity](http://singularity.gs/). Oba zapewniają funkcjonalność znacznie wykraczającą poza Twoje potrzeby, więc wybierając jeden z nich możesz mieć pewność, że spełni on swoje zadanie we wszelkich możliwych&mdash;nawet tych najbardziej egzotycznych&mdash;sytuacjach. Moim zdaniem Susy ma trochę lepszą społeczność wokół siebie, ale to tylko moje zdanie.
+Jeśli nie jesteś przywiązany do określonego systemu, zapewne ucieszysz się na wiadomość, że obecnie dostępne są naprawdę dobre, oparte o Sassie, systemy gridów: [Susy](http://susy.oddbird.net/) i [Singularity](http://singularity.gs/). Oba zapewniają funkcjonalność znacznie wykraczającą poza Twoje potrzeby, więc wybierając jeden z nich możesz mieć pewność, że spełni on swoje zadanie we wszelkich możliwych, nawet tych najbardziej egzotycznych, sytuacjach. Moim zdaniem Susy ma trochę lepszą społeczność wokół siebie, ale to tylko moje zdanie.
 
 Możesz też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). W każdym bądź razie, wybór nie będzie miał olbrzymiego wpływu na styl Twojego kodu, więc swoboda decyzji należy tylko i wyłącznie do Ciebie.
 
@@ -3749,7 +3749,7 @@ Możesz też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-gri
 
 ## SCSS-lint
 
-Prześwietlanie (linting) kodu jest zagadnieniem o bardzo dużej wadze. Zazwyczaj podążanie za sprawdzonymi wytycznymi, m.in. określonymi w tym przewodniku, redukuje ilość pomyłek w kodzie ale jednocześnie nie zapominajmy, że każdemu zdarzają się błędy i zawsze będzie coś do poprawki. Można śmiało powiedzieć, że linting kodu jest równie ważny co odpowiednie komentowanie go.
+Prześwietlanie (linting) kodu jest zagadnieniem o bardzo dużej wadze. Zazwyczaj podążanie za sprawdzonymi wytycznymi, m.in. określonymi w tym przewodniku, redukuje ilość pomyłek w kodzie. Nie zapominajmy jednocześnie, że każdemu zdarzają się błędy i zawsze będzie coś do poprawki. Można więc śmiało stwierdzić, że linting kodu jest równie ważny co odpowiednie komentowanie go.
 
 [SCSS-lint](https://github.com/causes/scss-lint) jest narzędziem, które pomoże Ci w utrzymaniu Twoich plików SCSS w czystości i zapewni ich czytelność. Jest ono w pełni konfigurowalne i jednocześnie bardzo proste w integracji z Twoimi innymi narzędziami.
 
@@ -3954,26 +3954,26 @@ linters:
 
 Podsumowując, chcemy:
 
-* Wcięć składających się z dwóch (2) spacji, bez tabulatora;
-* Linii szerokich na 80 znaków;
-* Prawidłowo napisanego wieloliniowego CSSu;
-* Sensownego użytku ze znaków niedrukowalnych (whitespaces);
-* Ciągów i URLi umieszczanych w cudzysłowach (pojedynczych);
-* Braku końcowych 0, obowiązkowych poprzedzających zerach;
-* Obliczeń zawartych w nawiasach;
-* Braku magicznych numerów;
-* Barw wyrażanych słownie > HSL > RGB > w systemie szestkowym;
-* List rozdzielanych przecinkami;
-* Braku następczych przecinków w listach (jako że są listy są wstawiane);
-* Następczych przecinków w mapach;
-* Braku zagnieżdżania selektorów, z wyjątkiem pseudo-klas i pseudo-elementów;
-* Nazw rozgraniczanych myślnikami;
-* Rozbudowanych komentarzy;
-* Komentarzy opartych o API SassDoc;
-* Ograniczonego użytku `@extend`;
-* Prostszych mixinów;
-* Tak mało pętli jak to tylko możliwe, braku `@while`;
-* Ograniczenia liczby zależności;
-* Sensownego używania ostrzeżeń i błędów;
+* Indentacji składających się z dwóch (2) spacji, bez tabulatora,
+* Linii szerokich na 80 znaków,
+* Prawidłowo napisanego wieloliniowego CSSu,
+* Sensownego użytku ze znaków niedrukowalnych (whitespaces),
+* Ciągów i URLi umieszczanych w cudzysłowach (pojedynczych),
+* Braku końcowych 0, obowiązkowych poprzedzających zerach,
+* Obliczeń zawartych w nawiasach,
+* Braku magicznych liczb,
+* Barw wyrażanych słownie > w formacie HSL > w formacie RGB > w systemie szestkowym,
+* List rozdzielanych przecinkami,
+* Braku następczych przecinków w listach (jako że listy są wstawiane (inlined)),
+* Następczych przecinków w mapach,
+* Braku zagnieżdżania selektorów, z wyjątkiem pseudo-klas i pseudo-elementów,
+* Nazw rozgraniczanych myślnikami,
+* Rozbudowanych komentarzy,
+* Komentarzy opartych o API SassDoc,
+* Ograniczonego użytku `@extend`,
+* Prostszych mixinów,
+* Tak mało pętli jak to tylko możliwe, braku `@while`,
+* Ograniczenia liczby zależności,
+* Sensownego używania ostrzeżeń i błędów.
 
 {% include donate.html %}
