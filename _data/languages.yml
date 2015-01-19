@@ -67,7 +67,7 @@ it:
 pl:
   label: Polish
   prefix: /pl/
-  available: false
+  available: true
   translators:
     - name: Andrzej Kłapeć
       link: https://github.com/klapec
