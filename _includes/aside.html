@@ -21,7 +21,7 @@
   <div class="custom-select language-picker">
     <select id="language-picker">
       {% for language in site.data.languages %}
-      <option {% if language[1].available == false %}disabled  title="This translation is not available yet."{% endif %} value="{% if language[1].prefix %}/{{ language[1].prefix }}{% endif %}/">{{ language[1].label }}</option>
+      <option {% if language[1].available == false %}disabled  title="This translation is not available yet."{% endif %} value="{{ language[1].prefix }}">{{ language[1].label }}</option>
       {% endfor %}
     </select>
   </div>
