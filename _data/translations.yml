@@ -1,3 +1,15 @@
+# Extra notes
+#
+# 1. Add a final full stop at the end of `baseline.content` and `donate.content`.
+#
+# 2. Do not add a final full stop at the end of `donate.button` and `footer.content`.
+#
+# 3. Content in `footer.content` should be Markdown.
+#    Please, do write links as follow:
+#    [Hugo Giraudel](http://hugogiraudel.com)
+#    Not:
+#    <a href="http://hugogiraudel.com">Hugo Giraudel</a>
+
 cz:
   donate:
     content: ""
