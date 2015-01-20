@@ -175,7 +175,7 @@ In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync 
 
 Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features.
 
-On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let's say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
+On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use NodeJS for example; [node-sass](https://github.com/sass/node-sass) provides binding between NodeJS and LibSass.
 
 
 
