@@ -6,14 +6,15 @@ baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
 github_username:  HugoGiraudel
-
+exclude: ['node_modules']
 safe: true
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
-# kramdown:
-#    transliterated_header_ids: true
+redcarpet:
+    extensions: [with_toc_data]
 
 sass:
     style: :compressed
+
