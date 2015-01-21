@@ -58,80 +58,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
 
 # Table of Contents
 
-* [About The Author](#about-the-author)
-* [Contributing](#contributing)
-* [About Sass](#about-sass)
-  * [Ruby Sass Or LibSass](#ruby-sass-or-libsass)
-  * [Sass Or SCSS](#sass-or-scss)
-  * [Other Preprocessors](#other-preprocessors)
-* [Introduction](#introduction)
-  * [Why A Styleguide](#why-a-styleguide)
-  * [Disclaimer](#disclaimer)
-  * [Key Principles](#key-principles)
-* [Syntax & Formatting](#syntax--formatting)
-  * [Strings](#strings)
-  * [Numbers](#numbers)
-    * [Zeros](#zeros)
-    * [Units](#units)
-    * [Calculations](#calculations)
-    * [Magic numbers](#magic-numbers)
-  * [Colors](#colors)
-    * [Color formats](#color-formats)
-    * [Colors and variables](#colors-and-variables)
-    * [Lightening and Darkening Colors](#lightening-and-darkening-colors)
-  * [Lists](#lists)
-  * [Maps](#maps)
-    * [Debugging A Sass Map](#debugging-a-sass-map)
-  * [CSS Ruleset](#css-ruleset)
-  * [Declaration Sorting](#declaration-sorting)
-  * [Selector Nesting](#selector-nesting)
-    * [General Rule](#general-rule)
-    * [Exceptions](#exceptions)
-* [Naming Conventions](#naming-conventions)
-  * [Constants](#constants)
-  * [Namespace](#namespace)
-* [Commenting](#commenting)
-  * [Writing Comments](#writing-comments)
-  * [Documentation](#documentation)
-* [Architecture](#architecture)
-  * [Components](#components)
-  * [The 7-1 pattern](#the-7-1-pattern)
-    * [Base Folder](#base-folder)
-    * [Components Folder](#components-folder)
-    * [Layout Folder](#layout-folder)
-    * [Pages Folder](#pages-folder)
-    * [Themes Folder](#themes-folder)
-    * [Utils Folder](#utils-folder)
-    * [Vendors Folder](#vendors-folder)
-    * [Main file](#main-file)
-  * [Shame file](#shame-file)
-* [Responsive Web Design and Breakpoints](#responsive-web-design-and-breakpoints)
-  * [Naming Breakpoints](#naming-breakpoints)
-  * [Breakpoint manager](#breakpoint-manager)
-  * [Media Queries Usage](#media-queries-usage)
-* [Variables](#variables)
-  * [Scoping](#scoping)
-  * [!default Flag](#default-flag)
-  * [!global Flag](#global-flag)
-  * [Multiple Variables Or Map](#multiple-variables-or-maps)
-* [Extend](#extend)
-* [Mixins](#mixins)
-  * [Basics](#basics)
-  * [Arguments list](#arguments-list)
-  * [Mixins and Vendor Prefixes](#mixins-and-vendor-prefixes)
-* [Conditional statements](#conditional-statements)
-* [Loops](#loops)
-  * [Each](#each)
-  * [For](#for)
-  * [While](#while)
-* [Warnings and errors](#warnings-and-errors)
-  * [Warnings](#warnings)
-  * [Errors](#errors)
-* [Tools](#tools)
-  * [Compass](#compass)
-  * [Grid Systems](#grid-systems)
-  * [SCSS-lint](#scss-lint)
-* [Too Long; Didn't Read](#too-long-didnt-read)
+<div id="toc"></div>
 
 
 
@@ -3713,11 +3640,9 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 
 [SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
 
-Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup (for SCSS-Lint v0.32.0):
 
 {% highlight yaml %}
-# For SCSS-Lint v0.32.0
-
 linters:
 
   BangFormat:

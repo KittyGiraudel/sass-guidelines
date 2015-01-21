@@ -37,7 +37,7 @@ I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik,
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %} 
+    {% include icons/dollar.html %}
     Wesprzyj Sass Guidelines
   </a>
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
@@ -59,81 +59,7 @@ I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik,
 
 # Spis treści
 
-* [O autorze](#o-autorze)
-* [Pomoc w tworzeniu](#pomoc-w-tworzeniu)
-* [O Sass-ie](#o-sassie)
-  * [Ruby Sass czy LibSass](#ruby-sass-czy-libsass)
-  * [Sass czy SCSS](#sass-czy-scss)
-  * [Inne preprocesory](#inne-preprocesory)
-* [Wprowadzenie](#wprowadzenie)
-  * [Czemu służy ten przewodnik](#czemu-suy-ten-przewodnik)
-  * [Zastrzeżenie](#zastrzeenie)
-  * [Kluczowe reguły](#kluczowe-reguy)
-* [Składnia i formatowanie](#skadnia-i-formatowanie)
-  * [Ciągi znaków](#cigi-znakw)
-  * [Liczby](#liczby)
-    * [Zera](#zera)
-    * [Jednostki](#jednostki)
-    * [Obliczenia](#obliczenia)
-    * [Liczby magiczne](#liczby-magiczne)
-  * [Barwy](#barwy)
-    * [Formaty barw](#formaty-barw)
-    * [Barwy i zmienne](#barwy-i-zmienne)
-    * [Rozjaśnianie i przyciemnianie barw](#rozjanianie-i-przyciemnianie-barw)
-  * [Listy](#listy)
-  * [Mapy](#mapy)
-    * [Debugowanie map Sassa](#debugowanie-map-sassa)
-  * [Reguły dotyczące CSSa](#reguy-dotyczce-cssa)
-  * [Sortowanie deklaracji](#sortowanie-deklaracji)
-  * [Zagnieżdżanie selektorów](#zagniedanie-selektorw)
-    * [Generalna zasada](#generalna-zasada)
-    * [Wyjątki](#wyjtki)
-* [Konwencje nazw](#konwencje-nazw)
-  * [Stałe](#stae)
-  * [Przestrzenie nazw](#przestrzenie-nazw)
-* [Komentarze](#komentarze)
-  * [Pisanie komentarzy](#pisanie-komentarzy)
-  * [Dokumentowanie](#dokumentowanie)
-* [Architektura](#architektura)
-  * [Komponenty](#komponenty)
-  * [Wzór 7-1](#wzr-7-1)
-    * [Folder base](#folder-base)
-    * [Folder components](#folder-components)
-    * [Folder layout](#folder-layout)
-    * [Folder pages](#folder-pages)
-    * [Folder themes](#folder-themes)
-    * [Folder utils](#folder-utils)
-    * [Folder vendors](#folder-vendors)
-    * [Główny plik](#gwny-plik)
-  * [Plik wstydu](#plik-wstydu)
-* [Responsive Web Design i breakpointy](#responsive-web-design-i-breakpointy)
-  * [Nazywanie breakpointów](#nazywanie-breakpointw)
-  * [Menadżer breakpointów](#menader-breakpointw)
-  * [Używanie media queries](#uywanie-media-queries)
-* [Zmienne](#zmienne)
-  * [Zasięg (scope)](#zasig-scope)
-  * [Flaga !default](#flaga-default)
-  * [Flaga !global](#flaga-global)
-  * [Wiele zmiennych lub map](#wiele-zmiennych-lub-map)
-* [Extendy](#extendy)
-* [Mixiny](#mixiny)
-  * [Podstawy](#podstawy)
-  * [Listy argumentów](#listy-argumentw)
-  * [Mixiny a vendor prefixy](#mixiny-a-vendor-prefixy)
-* [Instrukcje warunkowe (conditionals)](#instrukcje-warunkowe-conditionals)
-* [Pętle](#ptle)
-  * [Each](#each)
-  * [For](#for)
-  * [While](#while)
-* [Ostrzeżenia i błędy](#ostrzeenia-i-bdy)
-  * [Ostrzeżenia](#ostrzeenia)
-  * [Błędy](#bdy)
-* [Narzędzia](#narzdzia)
-  * [Compass](#compass)
-  * [Systemy gridów](#systemy-gridw)
-  * [SCSS-lint](#scss-lint)
-* [Za długie; nie czytałem](#za-dugie-nie-czytaem)
-
+<div id="toc"></div>
 
 
 
@@ -190,9 +116,9 @@ W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z 
 
 Panuje powszechnie dosyć spore zamieszanie, jeśli chodzi o znaczenie nazwy *Sass* i nie jest to bez powodu. Sass bowiem jest zarówno określeniem dla preprocesora, jak i swojej składni. Może to się wydawać nie do końca jasne, prawda?
 
-Prawda jest taka, że Sass początkowo był określeniem dla składni, której cechą charakterystyczną była wrażliwość na indentację. Wkrótce potem, deweloperzy zarządzający Sassem postanowili zacieśnić różnicę między Sassem a CSSem udostępniając przyjazną CSSowi składnię zwaną *SCSS*, czyli *Sassy CSS*. Głównym założeniem temu przyświecającym było to, że jeśli coś jest zgodne z CSSem, jest też zgodne z SCSSem. 
+Prawda jest taka, że Sass początkowo był określeniem dla składni, której cechą charakterystyczną była wrażliwość na indentację. Wkrótce potem, deweloperzy zarządzający Sassem postanowili zacieśnić różnicę między Sassem a CSSem udostępniając przyjazną CSSowi składnię zwaną *SCSS*, czyli *Sassy CSS*. Głównym założeniem temu przyświecającym było to, że jeśli coś jest zgodne z CSSem, jest też zgodne z SCSSem.
 
-Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko nie wielkimi literami, [proszę](http://sassnotsass.com)), znany także jako *wcięta składnia*, i SCSS. Wybór między nimi należy tak naprawdę tylko do Ciebie, bowiem obie są zgodne ze sobą jeśli chodzi o funkcjonalność. Różnica dotyczy tylko i wyłącznie kwestii estetycznych. 
+Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko nie wielkimi literami, [proszę](http://sassnotsass.com)), znany także jako *wcięta składnia*, i SCSS. Wybór między nimi należy tak naprawdę tylko do Ciebie, bowiem obie są zgodne ze sobą jeśli chodzi o funkcjonalność. Różnica dotyczy tylko i wyłącznie kwestii estetycznych.
 
 Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu drobnych dodatków do samego CSSa.
 
@@ -329,7 +255,7 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
 * indentacje składające się z (2) spacji, bez tabulatorów,
 * najlepiej 80 znaków w linii,
 * prawidłowo napisanych wieloliniowych reguł CSSa,
-* sensownego użycia tzw. znaków niedrukowalnych (whitespace). 
+* sensownego użycia tzw. znaków niedrukowalnych (whitespace).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -657,8 +583,8 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 /**
- * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem, 
- * która pozwala mi na wyrównanie góry `.foo` z jego parentem. 
+ * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem,
+ * która pozwala mi na wyrównanie góry `.foo` z jego parentem.
  * Najlepiej by jednak było, gdybyśmy to porządnie zrobili.
  */
 .foo {
@@ -669,8 +595,8 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 /**
- * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem, 
- * która pozwala mi na wyrównanie góry `.foo` z jego parentem. 
+ * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem,
+ * która pozwala mi na wyrównanie góry `.foo` z jego parentem.
  * Najlepiej by jednak było, gdybyśmy to porządnie zrobili.
  */
 .foo
@@ -1374,7 +1300,7 @@ Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opub
 <figure role="group">
   <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
   <figcaption>Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie.</figcaption>
-</figure> 
+</figure>
 
 Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam Tobie, bądź tylko w swym wyborze konsekwentny.
 
@@ -1526,7 +1452,7 @@ Przede wszystkim, dozwolone jest – a nawet rekomendowane – zagnieżdżanie p
 
 Użycie zagnieżdżania selektorów dla pseudo-klas i pseudo-elementów nie tylko ma sens (wszak dotyczy ono blisko powiązanych ze sobą selektorów), ale także pomaga w utrzymaniu całości komponentu w jednym miejscu.
 
-Ponadto, uzasadnionym jest także umieszczanie niezależnych klas, takich jak `.is-active`, w ramach selektora danego komponentu. 
+Ponadto, uzasadnionym jest także umieszczanie niezależnych klas, takich jak `.is-active`, w ramach selektora danego komponentu.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -2511,7 +2437,7 @@ Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia.
 
 ## Nazywanie breakpointów
 
-Wydaje mi się, że można spokojnie powiedzieć, że media queries nie powinny być podporządkowane konkretnym urządzeniom. Dla przykładu, celowanie w iPady czy telefony Blackberry jest niewątpliwie złym pomysłem. Media queries powinny zajmować się pewnym zakresem rozmiarów ekranów, do czasu kiedy design ulega załamaniu i następna media query zaczyna obowiązywać. 
+Wydaje mi się, że można spokojnie powiedzieć, że media queries nie powinny być podporządkowane konkretnym urządzeniom. Dla przykładu, celowanie w iPady czy telefony Blackberry jest niewątpliwie złym pomysłem. Media queries powinny zajmować się pewnym zakresem rozmiarów ekranów, do czasu kiedy design ulega załamaniu i następna media query zaczyna obowiązywać.
 
 Z tych samych powodów, breakpointy nie powinny być nazywane w nawiązaniu do konkretnych urządzeń, lecz bardziej ogólnie. Zwłaszcza teraz, gdy telefony stają się większe niż niektóre tablety, niektóre zaś tablety większe niż komputery o małych ekranach, i tak dalej...
 
@@ -3195,7 +3121,7 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 ## Mixiny a vendor prefixy
 
-Definiowanie własnych mixinów do radzenia sobie z vendor prefixami dla niewspieranych lub częściowo wspieranych własności CSS może być kuszące. My jednak tego nie chcemy. Przede wszystkim, jeśli możesz użyć [Autoprefixera](https://github.com/postcss/autoprefixer), zrób to. Został on napisany do tego celu i zrobi to bez wątpienia lepiej. 
+Definiowanie własnych mixinów do radzenia sobie z vendor prefixami dla niewspieranych lub częściowo wspieranych własności CSS może być kuszące. My jednak tego nie chcemy. Przede wszystkim, jeśli możesz użyć [Autoprefixera](https://github.com/postcss/autoprefixer), zrób to. Został on napisany do tego celu i zrobi to bez wątpienia lepiej.
 
 Niestety, zdarzają się przypadki w których z Autoprefixera skorzystać nie możemy. Jeśli natomiast używasz [Bourbona](http://bourbon.io/) albo [Compassu](http://compass-style.org/), zapewne wiesz że oba rozwiązania zapewniają możliwość poradzenia sobie z vendor prefixami za Ciebie.
 
@@ -3687,7 +3613,7 @@ Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego min
 
 ## Compass
 
-[Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany został przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić. 
+[Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany został przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić.
 
 Osobiście nie korzystam już z Compassa. Głównym tego powodem jest fakt, że powoduje on znaczne jego spowolnienie. Ruby Sass jest powolne samo w sobie, więc dodawanie więcej Ruby i Sassa ponad to wcale nie pomaga.
 
@@ -3753,11 +3679,9 @@ Prześwietlanie (linting) kodu jest zagadnieniem o bardzo dużej wadze. Zazwycza
 
 [SCSS-lint](https://github.com/causes/scss-lint) jest narzędziem, które pomoże Ci w utrzymaniu Twoich plików SCSS w czystości i zapewni ich czytelność. Jest ono w pełni konfigurowalne i jednocześnie bardzo proste w integracji z Twoimi innymi narzędziami.
 
-Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do tych opisanych w tym przewodniku. Aby skonfigurować SCSS-lint w pełnej zgodności z Sass Guidelines, zalecam następujące jego ustawienia:
+Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do tych opisanych w tym przewodniku. Aby skonfigurować SCSS-lint w pełnej zgodności z Sass Guidelines, zalecam następujące jego ustawienia (SCSS-Lint v0.32.0):
 
 {% highlight yaml %}
-# For SCSS-Lint v0.32.0
-
 linters:
 
   BangFormat:
