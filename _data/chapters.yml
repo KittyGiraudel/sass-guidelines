@@ -1,0 +1,50 @@
+- name: author
+  donate: false
+
+- name: contributing
+  donate: false
+
+- name: sass
+  donate: false
+
+- name: introduction
+  donate: false
+
+- name: syntax
+  donate: true
+
+- name: naming
+  donate: false
+
+- name: comments
+  donate: false
+
+- name: architecture
+  donate: false
+
+- name: rwd
+  donate: true
+
+- name: variables
+  donate: false
+
+- name: extend
+  donate: false
+
+- name: mixins
+  donate: false
+
+- name: conditions
+  donate: true
+
+- name: loops
+  donate: false
+
+- name: errors
+  donate: false
+
+- name: tools
+  donate: false
+
+- name: tldr
+  donate: true
