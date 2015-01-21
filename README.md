@@ -1,6 +1,8 @@
 Sass Guidelines
 ===============
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HugoGiraudel/sass-guidelines?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Guidelines for writing sane, maintainable and scalable Sass.
 
 ## Contributing
