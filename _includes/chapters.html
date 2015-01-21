@@ -1,0 +1,8 @@
+{% for chapter in site.data.chapters %}
+  {% capture file_path %}/{{ page.language }}/{{ chapter.name }}.md{% endcapture %}
+  {% include_relative {{ file_path }} %}
+
+  {% if chapter.donate %}
+    {% include donate.html %}
+  {% endif %}
+{% endfor %}
