@@ -5,7 +5,8 @@ all: min
 min: assets/js/main.min.js
 
 assets/js/main.min.js: \
-	assets/js/main.js
+	assets/js/main.js \
+	assets/js/toc.js
 	cat $^ | $(UGLIFY) > $@
 
 clean:
