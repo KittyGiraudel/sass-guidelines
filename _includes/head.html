@@ -14,4 +14,9 @@
 
   <!-- Thanks to Sass-lang.com for the icon -->
   <link href="http://sass-lang.com/assets/img/ico/favicon-0ccd2d9d.png" rel="shortcut icon">
+
+  <style>
+  {% for language in site.data.translations %}{% if language[1].note != "" %}:lang({{ language[0] }}) .note > p:first-child::before { content: "{{ language[1].note }} — "; }
+  {% endif %}{% endfor %}
+  </style>
 </head>
