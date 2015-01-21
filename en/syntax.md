@@ -1,3 +1,4 @@
+
 # Syntax & formatting
 
 If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
@@ -1306,3 +1307,6 @@ As with everything, the specifics are somewhat irrelevant, consistency is key. I
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+
+
+
