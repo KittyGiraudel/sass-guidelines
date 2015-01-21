@@ -3,4 +3,4 @@ layout: default
 language: en
 ---
 
-{% include chapters.html %}
+{% include chapters.html path = "/en/" %}
