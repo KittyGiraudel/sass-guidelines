@@ -18,6 +18,7 @@ cz:
     content: ""
   footer:
     content: ""
+  note: ""
 
 da:
   donate:
@@ -27,6 +28,7 @@ da:
     content: ""
   footer:
     content: ""
+  note: ""
 
 nl:
   donate:
@@ -36,6 +38,7 @@ nl:
     content: ""
   footer:
     content: ""
+  note: ""
 
 en:
   donate:
@@ -45,6 +48,7 @@ en:
     content: "An opinionated styleguide for writing sane, maintainable and scalable Sass."
   footer:
     content: "Made with love by [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Note"
 
 fr:
   donate:
@@ -54,6 +58,7 @@ fr:
     content: ""
   footer:
     content: ""
+  note: "Note"
 
 de:
   donate:
@@ -63,6 +68,7 @@ de:
     content: ""
   footer:
     content: ""
+  note: ""
 
 gr:
   donate:
@@ -72,6 +78,7 @@ gr:
     content: ""
   footer:
     content: ""
+  note: ""
 
 it:
   donate:
@@ -81,6 +88,7 @@ it:
     content: ""
   footer:
     content: ""
+  note: ""
 
 pl:
   donate:
@@ -90,6 +98,7 @@ pl:
     content: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
   footer:
     content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
+  note: "Uwaga"
 
 pt:
   donate:
@@ -99,6 +108,7 @@ pt:
     content: ""
   footer:
     content: ""
+  note: ""
 
 ru:
   donate:
@@ -108,6 +118,7 @@ ru:
     content: ""
   footer:
     content: ""
+  note: ""
 
 sp:
   donate:
@@ -117,3 +128,4 @@ sp:
     content: ""
   footer:
     content: ""
+  note: ""

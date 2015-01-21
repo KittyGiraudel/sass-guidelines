@@ -18,26 +18,3 @@
     font-weight: 700;
   }
 }
-
-$languages: (
-  'cz': '',
-  'da': '',
-  'nl': '',
-  'en': 'Note',
-  'fr': 'Note',
-  'de': '',
-  'gr': '',
-  'it': '',
-  'pl': 'Uwaga',
-  'pr': '',
-  'ru': '',
-  'sp': '',
-);
-
-@each $language, $translation in $languages {
-  @if str-length($translation) > 0 {
-    :lang(#{$language}) .note > p:first-child::before {
-      content: quote($translation + " — ");
-    }
-  }
-}
