@@ -1,3 +1,4 @@
+
 # Extend
 
 The `@extend` directive has to be one of the features that made Sass so popular a couple of years ago. As a reminder, it makes it possible to tell Sass to style an element A exactly as though it also matched selector B. Needless to say this can end up being a valuable ally when writing modular CSS.

@@ -1,3 +1,4 @@
+
 # Contributing
 
 Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously, knowing that you liked this styleguide is already much appreciated!

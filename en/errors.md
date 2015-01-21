@@ -1,3 +1,4 @@
+
 # Warnings and Errors
 
 If there is a feature that is often overlooked by Sass developers, it is the ability to dynamically output warnings and errors. Indeed, Sass comes with three custom directives to print content in the standard output system (CLI, compiling app...):

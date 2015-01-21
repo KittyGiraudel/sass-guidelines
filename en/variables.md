@@ -1,3 +1,4 @@
+
 # Variables
 
 Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
