@@ -59,7 +59,7 @@ I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik,
 
 # Spis treści
 
-<div id="toc"></div>
+<div id="toc"><noscript>Client-side JavaScript is required to build the table of contents. Sorry!</noscript></div>
 
 
 

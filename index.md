@@ -58,7 +58,7 @@ Last but not least before we start: if you enjoyed this document, or if it is us
 
 # Table of Contents
 
-<div id="toc"></div>
+<div id="toc"><noscript>Client-side JavaScript is required to build the table of contents. Sorry!</noscript></div>
 
 
 
