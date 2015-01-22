@@ -1,4 +1,5 @@
 cz:
+  version: 1.0.0
   label: Czech
   prefix: /cz/
   available: false
@@ -7,6 +8,7 @@ cz:
       link: https://github.com/pavelantolik
 
 da:
+  version: 1.0.0
   label: Danish
   prefix: /da/
   available: false
@@ -15,6 +17,7 @@ da:
       link: https://github.com/PatrickKDK
 
 nl:
+  version: 1.0.0
   label: Dutch
   prefix: /nl/
   available: false
@@ -23,12 +26,14 @@ nl:
       link: https://github.com/ttomdewit
 
 en:
+  version: 1.0.0
   label: English
   prefix: /
   available: true
   translators: []
 
 fr:
+  version: 1.0.0
   label: French
   prefix: /fr/
   available: false
@@ -37,6 +42,7 @@ fr:
       link: https://github.com/pierrechoffe
 
 de:
+  version: 1.0.0
   label: German
   prefix: /de/
   available: false
@@ -47,6 +53,7 @@ de:
       link: https://github.com/altembo
 
 gr:
+  version: 1.0.0
   label: Greek
   prefix: /gr/
   available: false
@@ -57,6 +64,7 @@ gr:
       link: https://github.com/kmargaritis
 
 it:
+  version: 1.0.0
   label: Italian
   prefix: /it/
   available: false
@@ -65,6 +73,7 @@ it:
       link: https://github.com/srescio
 
 pl:
+  version: 1.0.0
   label: Polish
   prefix: /pl/
   available: true
@@ -75,6 +84,7 @@ pl:
       link: http://github.com/matchabros
 
 pt:
+  version: 1.0.0
   label: Portuguese
   prefix: /pt/
   available: false
@@ -87,6 +97,7 @@ pt:
       link: https://github.com/eduardoboucas
 
 ru:
+  version: 1.0.0
   label: Russian
   prefix: /ru/
   available: false
@@ -97,6 +108,7 @@ ru:
       link: https://github.com/PavelDemyanenko
 
 sp:
+  version: 1.0.0
   label: Spanish
   prefix: /sp/
   available: false

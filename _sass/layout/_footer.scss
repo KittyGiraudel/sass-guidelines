@@ -4,6 +4,14 @@
 .footer {
   background: $note-background;
   text-align: center;
-  padding: 1em;
+  padding: 1rem;
   margin-top: 2rem;
+}
+
+.footer__metadata {
+  margin-bottom: 0;
+}
+
+.footer__authors {
+  font-size: .9em;
 }

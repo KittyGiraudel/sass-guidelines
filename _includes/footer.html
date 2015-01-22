@@ -1,6 +1,6 @@
 <footer role="contentinfo" class="footer">
   <div class="container">
-    {% capture prefix %}&copy;&nbsp;{{ site.time | date: '%Y' }}&nbsp;&mdash;&nbsp;{% endcapture %}
-    {{ site.data.translations[page.language].footer.content|prepend:prefix|markdownify }}
+    <p class="footer__metadata">&copy;&nbsp;{{ site.time | date: '%Y' }}&nbsp;&mdash;&nbsp;v{{ site.data.languages[page.language].version }}</p>
+    <div class="footer__authors">{{ site.data.translations[page.language].footer.content|markdownify }}</div>
   </div>
 </footer>
