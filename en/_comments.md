@@ -137,24 +137,24 @@ Here is an example of a mixin extensively documented with SassDoc:
 /// @param {Length} $height ($width) - Element's `height`
 ///
 /// @example scss - Usage
-/// .foo {
-///   @include size(10em);
-/// }
+///   .foo {
+///     @include size(10em);
+///   }
 ///
-/// .bar {
-///   @include size(100%, 10em);
-/// }
+///   .bar {
+///     @include size(100%, 10em);
+///   }
 ///
 /// @example css - CSS output
-/// .foo {
-///   width: 10em;
-///   height: 10em;
-/// }
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
 ///
-/// .bar {
-///   width: 100%;
-///   height: 10em;
-/// }
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
@@ -173,22 +173,22 @@ Here is an example of a mixin extensively documented with SassDoc:
 /// @param {Length} $height ($width) - Element's `height`
 ///
 /// @example scss - Usage
-/// .foo
-///   +size(10em)
+///   .foo
+///     +size(10em)
 ///
-/// .bar
-///   +size(100%, 10em)
+///   .bar
+///     +size(100%, 10em)
 ///
 /// @example css - CSS output
-/// .foo {
-///   width: 10em;
-///   height: 10em;
-/// }
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
 ///
-/// .bar {
-///   width: 100%;
-///   height: 10em;
-/// }
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
 =size($width, $height: $width)
   width: $width
   height: $height
