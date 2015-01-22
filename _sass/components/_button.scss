@@ -3,7 +3,7 @@
  */
 .button {
   @include vertical-rhythm;
-  padding: 1em;
+  padding: 1rem;
   border: .25em solid;
   color: $secondary-color;
   display: block;
@@ -33,14 +33,14 @@
 
 .button-wrapper {
   text-align: center;
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 .button-ui {
   display: block;
   cursor: pointer;
-  margin: 1em;
-  padding: .5em;
+  margin: 1rem;
+  padding: .5rem;
   font-size: .8em;
   border-radius: .35em;
   color: #999;
@@ -52,6 +52,7 @@
   svg {
     fill: currentcolor;
     display: block;
+    margin: 0 auto;
   }
 
   @include on-event {

@@ -4,7 +4,7 @@
 .note {
   @include vertical-rhythm;
   background: $note-background;
-  padding: 2em;
+  padding: 2rem;
 
   > :first-child {
     margin-top: 0;
