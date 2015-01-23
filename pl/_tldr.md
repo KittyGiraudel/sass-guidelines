@@ -1,5 +1,5 @@
 
-# Za długie; nie czytałem
+# Too long; Didn't read
 
 Podsumowując, chcemy:
 
