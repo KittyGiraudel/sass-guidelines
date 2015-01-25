@@ -38,8 +38,8 @@ fr:
   prefix: /fr/
   available: false
   translators:
-    - name: Pierre Choffe
-      link: https://github.com/pierrechoffe
+    - name: Pierre Choffé
+      link: http://la-cascade.ghost.io
 
 de:
   version: 1.0.0
