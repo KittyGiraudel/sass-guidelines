@@ -52,10 +52,10 @@ en:
 
 fr:
   donate:
-    content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir"
+    content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir."
     button: "Soutenir Sass Guidelines"
   baseline:
-    content: "Un guide de style engagé pour un Sass sain, maintenable et extensible"
+    content: "Un guide de style engagé pour un Sass sain, maintenable et extensible."
   footer:
     content: "Fait avec amour par [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Note"
