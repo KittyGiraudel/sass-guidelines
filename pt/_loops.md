@@ -1,18 +1,18 @@
 
-# Loops
+# _Loops_
 
-Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
+Visto Sass providenciar estruturas de dados complexas, tal como _[lists](#lists)_ e _[maps](#maps)_, não é surpresa providenciar também formas de iterar sobre essas entidades.
 
-However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and that it actually solves an issue.
-
-
+No entanto, a presença de _loops_ normalmente implica lógica moderadamente complexa que provavelmente não pertence a Sass. Antes de usar um _loop_, certifiquem-se que tal faz sentido e que realmente resolve um problema.
 
 
 
 
-## Each
 
-The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+
+## _Each_
+
+O _loop_ `@each` é definitivamente o mais usado dos três _loops_ que Sass oferece. Apresenta uma API simples para iterar uma _list_ ou _map_.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -33,7 +33,7 @@ The `@each` loop is definitely the most-used out of the three loops provided by 
   </div>
 </div>
 
-When iterating on a map, always use `$key` and `$value` as variable names to enforce consistency.
+Ao iterar um _map_, usem sempre `$key` e `$value` como nomes de variáveis para forçar consistência.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -54,10 +54,10 @@ When iterating on a map, always use `$key` and `$value` as variable names to enf
   </div>
 </div>
 
-Also be sure to respect those guidelines to preserve readability:
+Também façam questão de respeitar as seguintes diretrizes para preservar a legibilidade:
 
-* Always an empty new line before `@each`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
+* Colocar sempre uma linha em branco antes do `@each`;
+* Colocar sempre uma linha em branco antes da chaveta de fecho (`}`) a menos que a próxima linha seja uma chaveta de fecho (`}`).
 
 
 
@@ -66,7 +66,7 @@ Also be sure to respect those guidelines to preserve readability:
 
 ## For
 
-The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *have to* iterate over something.
+O _loop_ `@for` poderá ser útil quando combinado com as pseudo-classes `:nth-*` de CSS. À exceção destes cenários, é preferível um _loop_ `@each` se *têm* de iterar sobre algo.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -87,12 +87,12 @@ The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes.
   </div>
 </div>
 
-Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+Usem sempre `$i` como nome de variável para manter a convenção comum e a menos que tenham boa razão para tal, nunca usem a palavra-chave `to`: usem sempre `through`. Muitos programadores não sabem que Sass oferece esta variação; usá-la poderá levar a confusão.
 
-Also be sure to respect those guidelines to preserve readability:
+Também não se esqueçam de respeitar as seguintes diretrizes para preservar a legibilidade:
 
-* Always an empty new line before `@each`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
+* Colocar sempre uma linha em branco antes do `@each`;
+* Colocar sempre uma linha em branco antes da chaveta de fecho (`}`) a menos que a próxima linha seja uma chaveta de fecho (`}`).
 
 
 
@@ -101,4 +101,4 @@ Also be sure to respect those guidelines to preserve readability:
 
 ## While
 
-The `@while` loop has absolutely no use case in a real Sass project, especially since there is no way to break a loop from the inside. **Do not use it**.
+O _loop_ `@while` não possui absolutamente nenhum uso real num projeto de Sass, especialmente porque não é possível quebrar o _loop_ por dentro. **Não usar**.
