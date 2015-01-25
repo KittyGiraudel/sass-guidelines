@@ -36,7 +36,7 @@ fr:
   version: 1.0.0
   label: French
   prefix: /fr/
-  available: false
+  available: true
   translators:
     - name: Pierre Choffé
       link: http://la-cascade.ghost.io

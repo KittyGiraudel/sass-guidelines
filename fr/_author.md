@@ -6,5 +6,8 @@ Je m'appelle [Hugo Giraudel](http://hugogiraudel.com), je suis un développeur f
 J'ai également rédigé quelques bibliothèques Sass, pour le plaisir&nbsp;: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) et [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
 <div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">Suivez-moi sur Twitter</a>
+  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
+    {% include icons/twitter.html %}
+    Suivez-moi sur Twitter
+  </a>
 </div>
