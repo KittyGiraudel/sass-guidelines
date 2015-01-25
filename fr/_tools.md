@@ -80,10 +80,9 @@ Il est important de faire l'analyse statique (*lint*) de votre code. Si vous sui
 
 [SCSS-lint](https://github.com/causes/scss-lint) est un outil qui vous aide à conserver des fichiers SCSS propres et lisibles. Il est entièrement personnalisable et facile à intégrer à vos outils de développement.
 
-Par chance, les recommandations de SCSS-lint sont très similaires à celles de ce document. Si vous voulez configurer SCSS-lint selon les recommandations décrites ici, je vous propose la configuration suivante&nbsp;:
+Par chance, les recommandations de SCSS-lint sont très similaires à celles de ce document. Si vous voulez configurer SCSS-lint selon les recommandations décrites ici, je vous propose la configuration suivante (SCSS-Lint v0.32.0)&nbsp;:
 
 {% highlight yaml %}
-# For SCSS-Lint v0.32.0
 
 linters:
 
