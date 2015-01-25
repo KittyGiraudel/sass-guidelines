@@ -1,28 +1,28 @@
 
-# Syntax & formatting
+# Formatação e sintaxe
 
-If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
+Se me perguntarem, a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
 
-When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.
+Quando vários programadores estão responsáveis por escrever CSS simultaneamente nos mesmos projectos, é apenas uma questão de tempo até que um deles comece a escrever as coisas à sua maneira. Guias de estilo que promovam consistência não só previnem isto, mas ajudam também à leitura e manutenção do código.
 
-Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
+Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-* two (2) spaces indents, no tabs;
-* ideally, 80-characters wide lines;
-* properly written multi-line CSS rules;
-* meaningful use of whitespace.
+* dois (2) espaços de indentação, em vez de tabs;
+* idealmente, linhas de no máximo 80 caráteres
+* regras de CSS multi-linha devidamente escritas
+* uso significativo de espaço em branco
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   display: block;
   overflow: hidden;
   padding: 0 1em;
 }
 
-// Nope
+// Não
 .foo {
     display: block; overflow: hidden;
 
@@ -32,8 +32,8 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Since Sass indented-syntax forces those coding standards
-// There is no wrong way of proceeding
+// Uma vez que Sass força estes padrões de indentação,
+// não há como errar aqui.
 .foo
   display: block
   overflow: hidden
@@ -42,7 +42,7 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
   </div>
 </div>
 
-We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
+Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos este tópico na [secção de arquitetura](#arquitetura).
 
 
 
@@ -51,59 +51,60 @@ We will not tackle the question of file organization in this section. It is the 
 
 ## Strings
 
-CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance: it doesn't matter whether you wrap them in quotes for the CSS parser.
+CSS não necessita que strings apareçam entre aspas, nem mesmo as que contêm espaços. Peguemos no exemplo de font-family: não importa se utilizamos aspas no início e no fim.
 
-Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
+Graças a isto, Sass *também* não necessita que as strings sejam entre aspas. Melhor ainda (e *felizmente*), uma string entre aspas é estritamente equivalente à sua irmã gémea sem aspas (por ex., `'abc'` é estritamente igual a `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+Dito isto, linguagens que não necessitam de aspas à volta de strings são uma minoria e, desta forma, **strings devem sempre ser escritas com aspas curvas simples (também chamadas plicas)** em Sass (as aspas simples `'` são mais fáceis de escrever do que as duplas `"` em teclados *qwerty*). Para além de consistência com outras linguagens, incluindo Javascript, existem outros motivos para esta escolha:
 
-* color names are treated as colors when unquoted, which can lead to serious issues;
-* most syntax highlighters will choke on unquoted strings;
-* it helps general readability;
-* there is no valid reason not to quote strings.
+* nomes de cores são tratados como cores quando não possuem aspas, o que pode levar a conflitos;
+* a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
+* ajuda em geral à leitura
+* não existe uma razão válida para não as usar
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
 
-// Nope
+// Não
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
 
-// Nope
+// Não
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
 
-// Nope
+// Não
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
 
-// Nope
+// Não
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 {% endhighlight %}
   </div>
 </div>
 
 <div class="note">
-  <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
+  <p>No exemplo anterior, <code>sans-serif</code> não está sob aspas porque representa um valor concreto de CSS.</p>
 </div>
 
-URLs should be quoted as well, for the same reasons as above:
+URLs também devem seguir a mesma regra:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   background-image: url('/images/kittens.jpg');
 }
 
-// Nope
+// Não
 .foo {
   background-image: url(/images/kittens.jpg);
 }
@@ -111,11 +112,11 @@ URLs should be quoted as well, for the same reasons as above:
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo
   background-image: url('/images/kittens.jpg')
 
-// Nope
+// Não
 .foo
   background-image: url(/images/kittens.jpg)
 {% endhighlight %}
@@ -124,7 +125,7 @@ URLs should be quoted as well, for the same reasons as above:
 
 
 
-### Further Reading
+### Leitura adicional
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -134,26 +135,26 @@ URLs should be quoted as well, for the same reasons as above:
 
 
 
-## Numbers
+## Números
 
-In Sass, number is a data type including everything from unitless numbers to lengths, durations, frequencies, angles and so on. This allows calculations to be run on such measures.
+Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
 
 
 
 ### Zeros
 
-Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
+Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   padding: 2em;
   opacity: 0.5;
 }
 
-// Nope
+// Não
 .foo {
   padding: 2.0em;
   opacity: .5;
@@ -162,12 +163,12 @@ Numbers should display leading zeros before a decimal value less than one. Never
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo
   padding: 2em
   opacity: 0.5
 
-// Nope
+// Não
 .foo
   padding: 2.0em
   opacity: .5
@@ -177,44 +178,44 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 
 
-### Units
+### Unidades
 
-When dealing with lengths, a `0` value should never ever have a unit.
+Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $length: 0;
 
-// Nope
+// Não
 $length: 0em;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 $length: 0
 
-// Nope
+// Não
 $length: 0em
 {% endhighlight %}
   </div>
 </div>
 
-The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, is is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
+O erro mais comum que me consigo lembrar no que diz respeito a números em Sass, é pensar que as unidades representam strings que podem ser adicionadas livremente a um número. Enquanto isto pode parecer verdadeiro, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
-To add a unit to a number, you have to multiply this number by *1 unit*.
+Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $value: 42;
 
-// Yep
+// Sim
 $length: $value * 1px;
 
-// Nope
+// Não
 $length: $value + px;
 {% endhighlight %}
   </div>
@@ -222,16 +223,17 @@ $length: $value + px;
 {% highlight sass %}
 $value: 42
 
-// Yep
+// Sim
 $length: $value * 1px
 
-// Nope
+// Não
 $length: $value + px
 {% endhighlight %}
   </div>
 </div>
 
-Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
+Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -260,19 +262,20 @@ $value: 0px + 1in
   </div>
 </div>
 
-In the end, it really depends on what you are trying to achieve. Just keep in mind that adding the unit as a string is not a good way to proceed.
+No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se apenas que adicionar o número-unidade como string não é uma boa prática.
 
-To remove the unit of a value, you have to divide it by *one unit of its kind*.
+Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $length: 42px;
 
-// Yep
+// Sim
 $value: $length / 1px;
 
-// Nope
+// Não
 $value: str-slice($length + unquote(''), 1, 2);
 {% endhighlight %}
   </div>
@@ -280,32 +283,33 @@ $value: str-slice($length + unquote(''), 1, 2);
 {% highlight sass %}
 $length: 42px
 
-// Yep
+// Sim
 $value: $length / 1px
 
-// Nope
+// Não
 $value: str-slice($length + unquote(''), 1, 2)
 {% endhighlight %}
   </div>
 </div>
 
-Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
+Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
 
 
 
-### Calculations
+### Cálculos
 
-**Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
+**Cálculos numéricos de maior prioridade devem sempre estar presentes entre parênteses**. Isto não só melhora significativamente a sua leitura, como evita que aconteçam alguns casos extremos como forçar Sass a avaliar e computar o conteúdo entre parênteses.
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   width: (100% / 3);
 }
 
-// Nope
+// Não
 .foo {
   width: 100% / 3;
 }
@@ -313,11 +317,11 @@ Appending a unit as a string to a number results in a string, preventing any add
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo
   width: (100% / 3)
 
-// Nope
+// Não
 .foo
   width: 100% / 3
 {% endhighlight %}
@@ -326,18 +330,18 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 
 
-### Magic numbers
+### Números mágicos
 
-"Magic number" is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it's just a random number that happens to *just work*™ yet is not tied to any logical explanation.
+"Números mágicos" (Magic number) diz respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por trás dele.
 
-Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for why a number works, add an extensive comment explaining how you got there and why you think it works. Admitting you don't know why something works is still more helpful to the next developer than them having to figure out what's going on from scratch.
+Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 /**
- * 1. Magic number. This value is the lowest I could find to align the top of
- * `.foo` with its parent. Ideally, we should fix it properly.
+ * 1. Número mágico. Este é o valor mais baixo que encontrei para alinhar o topo
+ * de `.foo` com o elemento pai. Idealmente devíamos corrigir isto.
  */
 .foo {
   top: 0.327em; /* 1 */
@@ -347,8 +351,8 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 /**
- * 1. Magic number. This value is the lowest I could find to align the top of
- * `.foo` with its parent. Ideally, we should fix it properly.
+ * 1. Número mágico. Este é o valor mais baixo que encontrei para alinhar o topo
+ * de `.foo` com o elemento pai. Idealmente devíamos corrigir isto.
  */
 .foo
   top: 0.327em /* 1 */
@@ -358,7 +362,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -370,32 +374,35 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 
 
 
-## Colors
+## Cores
 
-Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções poderosas](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 
 
-### Color formats
+### Formatos de cores
+
+De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatores de cores:
 
 In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
 
-1. [CSS color keywords](http://www.w3.org/TR/css3-color/#svg-color);
-1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
-1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
-1. Hexadecimal notation. Preferably lowercase and shortened when possible.
+1. [Chaves de cores CSS](http://www.w3.org/TR/css3-color/#svg-color);
+1. [Anotação HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
+1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
+1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Lastly, hexadecimal is close to indecipherable for the human mind.
+Para começar, as chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e valor. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   color: red;
 }
 
-// Nope
+// Não
 .foo {
   color: #FF0000;
 }
@@ -403,29 +410,31 @@ For starters, keywords often speak for themselves. The HSL representation is not
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo
   color: red
 
-// Nope
+// Não
 .foo
   color: #FF0000
 {% endhighlight %}
   </div>
 </div>
 
+Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
+
 When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 .foo {
   color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
-// Nope
+// Não
 .foo {
   color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
@@ -434,12 +443,12 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo
   color: rgba(0, 0, 0, 0.1)
   background: hsl(300, 100%, 100%)
 
-// Nope
+// Não
 .foo
   color: rgba(0,0,0,0.1)
   background: hsl( 300, 100%, 100% )
@@ -449,9 +458,10 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
 
 
 
-### Colors and variables
+### Cores e variáveis
 
-When using a color more than once, store it in a variable with a meaningful name representing the color.
+No caso de utilizarmos uma cor mais que uma vez, será provavelmente útil guardá-la numa variável cujo nome diga algo sobre essa cor.
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -465,6 +475,8 @@ $sass-pink: #c69
 {% endhighlight %}
   </div>
 </div>
+
+Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso estiver demasiado preso a um tema, eu não recomendaria utilizar a variável desta forma. Em vez disso, devemos guardá-la numa variável cujo nome explique como deve ser utilizada.
 
 Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
 
@@ -481,43 +493,42 @@ $main-theme-color: $sass-pink
   </div>
 </div>
 
-Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
+Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`.
 
 
 
-### Lightening and darkening colors
+### Clarear e Escurecer cores
 
+Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) como o escurecer [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) representam funções que permitem manipular a luz de uma cor no espaço HSL adicionando ou subtraindo ao valor do espaço HSL. Basicamente, representam atalhos para o parâmetro `$lightness` do método de ajuste de cor [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
+É importante referir que estas funções muitas vezes não geral os resultados que se esperaria. Por outro lado, a função de mistura [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) é uma boa forma de escurecer ou clarear uma cor misturando-a com branco ou preto.
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or substracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
-
-The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
-
-The benefit of using `mix` rather than one of the two aforementioned functions is that it will progressively go to black (or white) as you decrease the proportion of the color, whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor aos extremos de branco ou preto.
 
 <figure role="group">
   <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
-  <figcaption>Illustration of the difference between <code>lighten</code>/<code>darken</code> and <code>mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
+  <figcaption>Diferenças entre <code>lighten</code>/<code>darken</code> e <code>mix</code> por <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 
-If you don't want to write the `mix` function every time, you can create two easy-to-use functions `tint` and `shade` (which are also a part of [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) to do the same thing:
+Se não quiserem escrever a função `mix` todas as vezes, podem criar duas funções fáceis-de-usar `tint` e `shade` (que já fazem parte de [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) que fazem essencialmente o mesmo:
+
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Slightly lighten a color
+/// Clarear ligeiramente uma cor
 /// @access public
-/// @param {Color} $color - color to tint
-/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @param {Color} $color - cor
+/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
 /// @return {Color}
 @function tint($color, $percentage) {
   @return mix($color, white, $percentage);
 }
 
-/// Slightly darken a color
+/// Escurecer ligeiramente uma cor
 /// @access public
-/// @param {Color} $color - color to shade
-/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @param {Color} $color - cor
+/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
 /// @return {Color}
 @function shade($color, $percentage) {
   @return mix($color, black, $percentage);
@@ -526,18 +537,18 @@ If you don't want to write the `mix` function every time, you can create two eas
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Slightly lighten a color
+/// Clarear ligeiramente uma cor
 /// @access public
-/// @param {Color} $color - color to tint
-/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @param {Color} $color - cor
+/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
 /// @return {Color}
 @function tint($color, $percentage)
   @return mix($color, white, $percentage)
 
-/// Slightly darken a color
+/// Escurecer ligeiramente uma cor
 /// @access public
-/// @param {Color} $color - color to shade
-/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @param {Color} $color - cor
+/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
 /// @return {Color}
 @function shade($color, $percentage)
   @return mix($color, black, $percentage)
@@ -546,12 +557,12 @@ If you don't want to write the `mix` function every time, you can create two eas
 </div>
 
 <div class="note">
-  <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>'s but with a clearer calling convention. The scaling factor isn't exactly the same though.</p>
+  <p>A função<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> permite efetuar um escalamento das propriedades mais fluído tendo em conta o quão alto ou baixo o seu valor já é. Deverá oferecer resultados que são tão agradáveis como o `mix` mas com uma convenção mais clara. O fator de escada não é exactamente o mesmo, no entanto.</p>
 </div>
 
 
 
-### Further reading
+### Leitura adicional
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -578,22 +589,22 @@ Lists should respect the following guidelines:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $font-stack: 'Helvetica', 'Arial', sans-serif;
 
-// Nope
+// Não
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif;
 
-// Nope
+// Não
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
-// Nope
+// Não
 $font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// Nope
+// Não
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
   </div>
@@ -602,19 +613,19 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
 // Yep
 $font-stack: 'Helvetica', 'Arial', sans-serif
 
-// Nope (since it is not supported)
+// Não (since it is not supported)
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif
 
-// Nope
+// Não
 $font-stack: 'Helvetica' 'Arial' sans-serif
 
-// Nope
+// Não
 $font-stack: ('Helvetica', 'Arial', sans-serif)
 
-// Nope
+// Não
 $font-stack: ('Helvetica', 'Arial', sans-serif,)
 {% endhighlight %}
   </div>
@@ -630,7 +641,7 @@ $shadows: 0 42px 13.37px hotpink;
 // Yep
 $shadows: append($shadows, $shadow, comma);
 
-// Nope
+// Não
 $shadows: $shadows, $shadow;
 {% endhighlight %}
   </div>
@@ -641,7 +652,7 @@ $shadows: 0 42px 13.37px hotpink
 // Yep
 $shadows: append($shadows, $shadow, comma)
 
-// Nope
+// Não
 $shadows: $shadows, $shadow
 {% endhighlight %}
   </div>
@@ -685,7 +696,7 @@ $breakpoints: (
   'large': 1200px,
 );
 
-// Nope
+// Não
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
   </div>
@@ -694,13 +705,13 @@ $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 // Yep
 $breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
 
-// Nope
+// Não
 $breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
 
-// Nope
+// Não
 $breakpoints: (small: 767px, medium: 992px, large: 1200px,)
 
-// Nope (since it is not supported)
+// Não (since it is not supported)
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
@@ -833,7 +844,7 @@ Illustration:
   margin: 0 auto;
 }
 
-// Nope
+// Não
 .foo,
 .foo-bar, .baz {
     display: block;
@@ -850,7 +861,7 @@ Illustration:
   overflow: hidden
   margin: 0 auto
 
-// Nope
+// Não
 .foo,
 .foo-bar, .baz
     display: block
