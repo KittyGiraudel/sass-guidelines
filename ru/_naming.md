@@ -1,0 +1,124 @@
+
+# Соглашения по именованию
+
+В этом разделе мы не будем иметь дело с лучшими конвенциями CSS именования для сопровождения и масштабирования; не только потому, что это остается за вами, это также из области руководства по стилям для Sass. Я предлагаю те, которые рекомендованы [CSS Руководством](http://cssguidelin.es/#naming-conventions).
+
+Есть несколько вещей, которые вы можете называть в Sass, и очень важно, чтобы названия были хорошими, чтобы весь код выглядил последовательным и легко читался:
+
+* переменные;
+* функции;
+* миксины.
+
+Sass заполнители намеренно исключены из этого списка, так как они могут быть рассмотрены как обычные селекторы CSS и использовать теже принципы именования как и классы.
+
+Что касается переменных, функций и миксинов, мы будем придерживаться чего-то очень *CSS-ого*: **нижние подчеркивание и дефисы**, и, прежде всего смысл.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+$vertical-rhythm-baseline: 1.5rem;
+
+@mixin size($width, $height: $width) {
+  // ...
+}
+
+@function opposite-direction($direction) {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+$vertical-rhythm-baseline: 1.5rem
+
+=size($width, $height: $width)
+  // ...
+
+@function opposite-direction($direction)
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
+
+
+### Дальнейшее чтение
+
+* [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
+
+
+
+
+
+
+## Константы
+
+Если вы разработчик фреймворка или библиотеки, вам бы пришлось иметь дело с переменными, которые не предназначены для обновления при любых обстоятельствах: константами. К сожалению (или к счастью?), Sass не дает какой-либо способ определения таких переменных, поэтому мы должны придерживаться строгих соглашений об именование.
+
+Как и для многих языков, я предлагаю делать константы переменными в верхнем регистре. Это не только очень старое соглашение, но это также хорошо контрастирует с обычными строчными переменными.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+$CSS_POSITIONS: top, right, bottom, left, center;
+
+// Nope
+$css-positions: top, right, bottom, left, center;
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+$CSS_POSITIONS: top, right, bottom, left, center
+
+// Nope
+$css-positions: top, right, bottom, left, center
+{% endhighlight %}
+  </div>
+</div>
+
+
+
+### Дальнейшее чтение
+
+* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+
+
+
+
+
+
+## Пространство имен
+
+Если вы собираетесь распространять ваш Sass код, например, как библиотеку, фрейворк, сетку или что угодно, вы, возможно, захотите рассмотреть пространства имен всех своих переменных, функций,  миксинов и заполнителей, так чтобы они не конфликтовали с чьим-либо кодом.
+
+Например, если вы работаете над проектом *Sassy Unicorn*, который предназначен для использования разработчиками по всему миру (кто бы не хотел, не так ли?), Вы можете рассмотреть возможность использования `su-` как пространство имен. Это достаточно конкретно, чтобы предотвратить любые конфликты имен и достаточно коротко, чтобы не быть болью при написание кода.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+$su-configuration: ( ... );
+
+@function su-rainbow($unicorn) {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+$su-configuration: ( ... )
+
+@function su-rainbow($unicorn)
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
+<div class="note">
+  <p>Обратите внимание, что автоматическая генерация пространств имен, безусловно, цель для предстоящего проекта <code>@import</code> Sass 4.0. Так как это становится все ближе и ближе, то использование библиотек с пространством имен написанным вручную может стать сложнее в использование.</p>
+</div>
+
+### Дальнейшее чтение
+
+* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

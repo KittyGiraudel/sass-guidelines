@@ -112,13 +112,13 @@ pt:
 
 ru:
   donate:
-    content: ""
-    button: ""
+    content: "Если вам понравилось Sass руководство, пожалуйста, поддержите его."
+    button: "Поддержите Sass руководство"
   baseline:
-    content: ""
+    content: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
   footer:
-    content: ""
-  note: ""
+    content: "Сделано с любовью [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Заметка"
 
 sp:
   donate:
