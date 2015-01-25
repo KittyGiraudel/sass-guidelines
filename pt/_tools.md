@@ -1,9 +1,9 @@
 
-# Tools
+# Ferramentas
 
-What's nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+O que um pré-processador de CSS tão popular como Sass tem de bom é que vem com todo um ecossistema de _frameworks_, _plugins_, bibliotecas e ferramentas. Após 8 anos de existência, estamos cada vez mais perto do ponto onde [tudo o que pode ser escrito em Sass foi escrito em Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
+No entanto, o meu conselho seria para reduzir o número de dependências ao estritamente necessário. Gerir dependências é uma espécie de inferno do qual não querem fazer parte. Além disso, há pouca ou nenhuma necessidade de dependências externas no que toca a Sass.
 
 
 
@@ -12,23 +12,23 @@ However my advice would to be to lower the number of dependencies to the strict 
 
 ## Compass
 
-[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don't see it dramatically losing in popularity for a while, if you want my opinion.
+[Compass](http://compass-style.org/) é a _framework_ principal de Sass por aí. Desenvolvida por [Chris Eppstein](https://twitter.com/chriseppstein), um dos designers principais do Sass, não a vejo a perder popularidade drasticamente durante uns tempos, se querem a minha opinião.
 
-Still, I do not use Compass anymore, the main reason is that it slows Sass down a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it doesn't really help.
+Mesmo assim, já não uso Compass, a razão principal sendo que abranda muito processamento de Sass. Sass em Ruby é bastante lento por si só, então adicionar mais Ruby e Sass por cima não ajuda de verdade.
 
-The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the tip of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
+De verdade, usamos muito pouco de toda a _framework_. Compass é enorme. _Mixins_ de compatibilidade inter-browser é apenas a ponta do icebergue. Funções matemáticas, auxiliares de images, _spriting_... Há muito que pode ser feito com esta grande peça de software.
 
-Unfortunately, this is all sugar and there is no killer feature in there. An exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+Infelizmente, isto tudo é apenas agradável, mas não essencial. Uma exceção poderia ser feita do construtor de _sprites_, que é *realmente bom*, mas [Grunticon](https://github.com/filamentgroup/grunticon) e [Grumpicon](http://grumpicon.com/) dão para a despesa, e têm o benefício de poderem ser integrados no _building process_.
 
-Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough, but I don't think you'll get much from it at the end of the day.
+De qualquer forma, eu não proíbo o uso de Compass embora também não o recomende, especialmente visto que não é compatível com LibSass (mesmo que esforços tenham sido desenvolvidos nessa direção). Se se sentem melhor em usá-la, é justo, mas não acho que tirarão muito dela no final do dia.
 
 <div class="note">
-  <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
+  <p>Sass em Ruby está de momento a sofrer otimizações notáveis que são especificamente orientadas a estilos altamente baseados em lógica, com muitas funções e _mixins_. Estas mudanças deverão melhorar dramaticamente o seu desempenho, até ao ponto onde Compass e outras _frameworks_ já não abrandarão Sass.</p>
 </div>
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,21 +39,21 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 
 
-## Grid systems
+## Sistemas de grelhas
 
-Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+Não usar um sistema de grelhas bão é opção, agora que _Responsive Web Design_ é ominpresente. Para mantar designs consistentes e sólidos em todos os tamanhos, usamos um tipo de grelha para dispor os elementos. Para evitar ter que programar estas grelhas uma e outra vez, algumas mentes brilhantes tornaram as suas reutilizáveis.
 
-Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+Deixem-me ser direto: não sou grande fão de sistemas de grelhas. Claro que vejo o potencial, mas penso que a maior parte deles são completamente exagerados e são maioritariamente usados para desenhar colunas vermelhas num fundo branco em apresentações totós de designers. Quando foi a última vez que que pensaram *graças-a-Deus-que-tenho-esta-ferramenta-para-construir-esta-grelha-de-2-5-3.1-π*? Exatamente, nunca. Porque na maior parte dos casos, apenas querem a grelha comum de 12 colunas, nada de especial.
 
-If you are using a CSS framework for your project like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
+Se estão a usar uma _framework_ de CSS para o vosso projecto como [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), é provável que já incluam um sistema de grelhas que eu recomendo que usem de forma a evitar ter que lidar com mais uma dependência.
 
-If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases&mdash;even the most nifty ones&mdash;will be covered. If you ask me, Susy has a slightly better community, but that's my opinion.
+Se não estiverem presos a um sistema de grelhas específico, gostarão de saber que há dois sistemas de grelhas topo de gama: [Susy](http://susy.oddbird.net/) e [Singularity](http://singularity.gs/). Ambos fazem muito mais do que alguma vez irão precisar, por isso podem escolher o que preferirem de entre os dois e terão a certeza que todos os vossos casos extremos&mdash;mesmo os mais rebuscados&mdash;estarão cobertos. Se me perguntarem, Susy possui uma comunidade ligeiramente melhor, mas é apenas a minha opinião.
 
-Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
+Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). No final de contas, a escolha não terá muito impacto no vosso guia de estilos, por isso fica ao vosso critério.
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -73,11 +73,11 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 
 ## SCSS-lint
 
-Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody's perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão important quanto documentá-lo.
 
-[SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
+[SCSS-lint](https://github.com/causes/scss-lint) é uma ferramenta importante para vos ajudar a manter os vossos ficheiros SCSS limpos e legíveis. É completamente personalizável e fácil de integrar com as vossas ferramentas.
 
-Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descritas neste documento. De forma a configurar SCSS-lint de acordo com as Sass Guidelines, recomendo a seguinte configuração:
 
 {% highlight yaml %}
 # For SCSS-Lint v0.32.0
@@ -251,13 +251,13 @@ linters:
 {% endhighlight %}
 
 <div class="note">
-  <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Se pretendem ligar o SCSS-lint no vosso _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 
 
-### Further reading
+### Leitura adicional
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
