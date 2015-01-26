@@ -325,7 +325,7 @@ Afin d'assurer une bonne lisibilité, le fichier principal devrait respecter ces
 Il existe une autre façon d'importer les partiels, que je considère également valable. D'un côté, elle rend le fichier plus lisible. D'un autre côté, elle rend la mise à jour moins aisée. En tout cas, c'est à vous de décider, ce n'est pas très important. Dans cette façon de faire, le fichier principal doit respecter ces recommandations&nbsp;:
 
 
-* un `@import`par dossier ;
+* un `@import` par dossier ;
 * retour à la ligne après `@import` ;
 * chaque fichier sur sa propre ligne ;
 * un saut de ligne après le dernier import d'un dossier ;
