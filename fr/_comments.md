@@ -1,15 +1,15 @@
 
 # Commentaires
 
-CSS est un langage délicat, plein de hacks et de bizarreries. C'est pourquoi il doit être accompagné de commentaires abondants, surtout si vous, ou quelqu'un d'autre, prévoyez de relire et de mettre à jour le code dans 6 mois ou 1 an. Ne vous mettez pas dans la situation de dire, ou laisser dire *oh p... c'est pas moi qui ai écrit ça, mais pourquoi, pourquoi???*.
+CSS est un langage délicat, plein de hacks et de bizarreries. C'est pourquoi il doit être accompagné de commentaires abondants, surtout si vous, ou quelqu'un d'autre, prévoyez de relire et de mettre à jour le code dans 6 mois ou 1 an. Ne vous mettez pas dans la situation de dire, ou laisser dire *oh p... c'est pas moi qui ai écrit ça, mais pourquoi, pourquoi&nbsp;!?*.
 
 Quelle que soit la simplicité de CSS, les commentaires sont toujours utiles. Vous pourriez expliquer par exemple&nbsp;:
 
-* la structure et/ou le rôle d'un fichier ;
-* l'objectif d'un jeu de règles ;
-* l'idée cachée derrière un nombre magique ;
-* les raisons d'une déclaration CSS particulière ;
-* l'ordre des déclarations CSS ;
+* la structure et/ou le rôle d'un fichier&nbsp;;
+* l'objectif d'un jeu de règles&nbsp;;
+* l'idée cachée derrière un nombre magique&nbsp;;
+* les raisons d'une déclaration CSS particulière&nbsp;;
+* l'ordre des déclarations CSS&nbsp;;
 * l'idée qui a abouti à une certaine façon de faire.
 
 Je pourrais certainement citer encore bien d'autres raisons. Les commentaires prennent très peu de temps lorsqu'on les écrit dans la continuité du code, par conséquent veillez à les écrire au bon moment. Revenir sur un bout de code pour le commenter est non seulement irréaliste mais également très ennuyeux.
@@ -28,7 +28,7 @@ Idéalement, tout jeu de règles CSS devrait être précédé d'un commentaire (
 /**
  * Helper class pour tronquer et ajouter une ellipse à une chaîne
  * de caractères trop longue pour tenir sur une ligne
- * 1. Empêche le retour automatique à la ligne, 
+ * 1. Empêche le retour automatique à la ligne,
  * force l'affichage sur une seule ligne.
  * 2. Ajoute une ellipse à la fin de la ligne si dépassement.
  */
@@ -44,7 +44,7 @@ Idéalement, tout jeu de règles CSS devrait être précédé d'un commentaire (
 /**
  * Helper class pour tronquer et ajouter une ellipse à une chaîne
  * de caractères trop longue pour tenir sur une ligne
- * 1. Empêcher le retour automatique à la ligne, 
+ * 1. Empêcher le retour automatique à la ligne,
  * force l'affichage sur une seule ligne.
  * 2. Ajoute une ellipse à la fin de la ligne si dépassement.
  */
@@ -79,11 +79,9 @@ $imported-modules: append($imported-modules, $module) !global
 
 
 
-### Lecture complémentaire
+### Lectures complémentaires
 
 * [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
-
-{% include donate.html %}
 
 
 
@@ -94,7 +92,7 @@ $imported-modules: append($imported-modules, $module) !global
 
 Chaque variable, fonction, mixin et placeholder destiné à être réutilisé dans le code devrait être documenté en tant que partie de l'API globale à l'aide de [SassDoc](http://sassdoc.com).
 
-SassDoc propose deux syntaxes différentes pour les commentaires, le style C ou en ligne. Par exemple, les deux extraits de code suivants sont des commentaires valables pour SassDoc&nbsp;: 
+SassDoc propose deux syntaxes différentes pour les commentaires, le style C ou en ligne. Par exemple, les deux extraits de code suivants sont des commentaires valables pour SassDoc&nbsp;:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -142,7 +140,7 @@ Il n'y a pas d'avantage particulier à utiliser l'une ou l'autre méthode, chois
 
 SassDoc a deux rôles principaux&nbsp;:
 
-* imposer une standardisation des commentaires utilisant un système basé sur les annotations, pour tout ce qui fait partie d'une API publique ou privée&nbsp;; 
+* imposer une standardisation des commentaires utilisant un système basé sur les annotations, pour tout ce qui fait partie d'une API publique ou privée&nbsp;;
 * permettre de générer une version HTML de la documentation API en utilisant n'importe quel endpoint SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
 <figure role="group">
@@ -168,7 +166,7 @@ Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 ///   .foo {
 ///     @include size(10em);
 ///   }
-/// 
+///
 ///   .bar {
 ///     @include size(100%, 10em);
 ///   }
@@ -178,7 +176,7 @@ Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 ///     width: 10em;
 ///     height: 10em;
 ///   }
-/// 
+///
 ///   .bar {
 ///     width: 100%;
 ///     height: 10em;
@@ -203,7 +201,7 @@ Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 /// @example scss - Utilisation
 ///   .foo
 ///     +size(10em)
-/// 
+///
 ///   .bar
 ///     +size(100%, 10em)
 ///
@@ -212,7 +210,7 @@ Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 ///     width: 10em;
 ///     height: 10em;
 ///   }
-///  
+///
 ///   .bar {
 ///     width: 100%;
 ///     height: 10em;

@@ -1,7 +1,7 @@
 
 # Outils
 
-Le truc sympa avec un préprocesseur CSS aussi populaire que Sass  est qu'il est accompagné de tout un écosystème de frameworks, plugins, bibliothèques et outils. Après 8 ans d'existence, nous sommes proches du point où [tout ce qui peut être écrit en Sass a été écrit en Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Ce qui est bien avec un préprocesseur CSS aussi populaire que Sass est qu'il est accompagné de tout un écosystème de frameworks, plugins, bibliothèques et outils. Après 8 ans d'existence, nous sommes proches du point où [tout ce qui peut être écrit en Sass a été écrit en Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Mon conseil toutefois est de restreindre le nombre de dépendances au strict minimum. La gestion des dépendances est un enfer que vous pouvez vous épargner. De plus, il n'y a pas besoin de beaucoup de dépendances avec un langage comme Sass.
 
@@ -14,11 +14,11 @@ Mon conseil toutefois est de restreindre le nombre de dépendances au strict min
 
 [Compass](http://compass-style.org/) est le principal framework Sass aujourd'hui. Développé par [Chris Eppstein](https://twitter.com/chriseppstein), l'un des deux concepteurs de Sass, il est encore là pour un bout de temps.
 
-À titre personnel, je ne l'utilise plus car il ralentit considérablement Sass. Ruby Sass en lui-même est déjà assez lent, et l'ajout de Ruby et de Sass supplémentaires n'arrange pas les choses. 
+À titre personnel, je ne l'utilise plus car il ralentit considérablement Sass. Ruby Sass en lui-même est déjà assez lent, et l'ajout de code Ruby et Sass supplémentaire n'arrange pas les choses.
 
-En fait, nous n'utilisons qu'une petite partie du framework. Compass est énorme. Les mixins de compatibilité navigateurs ne sont que la partie visible de l'iceberg. Fonctions mathématiques, helpers pour les images, sprites... il y a tant de choses possibles avec ce formidable logiciel.
+En fait, nous n'utilisons qu'une petite partie du framework. Compass est énorme. Les mixins de compatibilité navigateurs ne sont que la partie visible de l'iceberg. Fonctions mathématiques, helpers pour les images, sprites... il y a tant de choses possibles avec ce formidable outil.
 
-Malheureusement, il s'agit pour l'essentiel de *sucre syntactique* mais pas de fonctionnalités exceptionnelles. Une exception serait la fonctionnalité de construction de sprites, mais [Grunticon](https://github.com/filamentgroup/grunticon) et [Grumpicon](http://grumpicon.com/) font le même travail aussi bien, avec l'avantage d'être pluggables dans le process de construction.
+Malheureusement, il s'agit pour l'essentiel de *sucre syntactique* mais pas de fonctionnalités exceptionnelles. Une exception serait la fonctionnalité de construction de sprites, mais [Grunticon](https://github.com/filamentgroup/grunticon) et [Grumpicon](http://grumpicon.com/) font le même travail aussi bien, avec l'avantage d'être pluggables dans le process de déployement.
 
 Rien n'interdit d'utiliser Compass, je ne le recommande pas toutefois, d'autant qu'il n'est pas compatible avec LibSass (bien que des efforts aient été faits dans cette direction).
 
@@ -48,7 +48,7 @@ Soyons clairs pour commencer&nbsp;: je ne suis pas un grand fan des systèmes de
 
 Si vous utilisez un framework CSS pour votre projet, comme [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), il y a des chances qu'ils comprennent déjà un système de grilles, auquel cas je vous recommande de l'utiliser pour éviter d'avoir à gérer une dépendance supplémentaire.
 
-Dans le cas contraire, vous serez content de savoir qu'il existe deux gestionnaires de grilles de premier ordre, basé sur Sass&nbsp;: [Susy](http://susy.oddbird.net/) et [Singularity](http://singularity.gs/). Tous deux font bien plus que ce dont vous aurez jamais besoin, vous pouvez choisir celui que vous préférez et être sûrs qu'ils répondront à vos besoins même les plus complexes. À mon avis, Susy a une communauté plus importante, mais c'est juste mon opinion.
+Dans le cas contraire, vous serez content de savoir qu'il existe deux gestionnaires de grilles de premier ordre, basé sur Sass&nbsp;: [Susy](http://susy.oddbird.net/) et [Singularity](http://singularity.gs/). Tous deux font bien plus que ce dont vous aurez jamais besoin, vous pouvez donc choisir celui que vous préférez et être sûr qu'il répondra à vos besoins même les plus complexes. À mon avis, Susy a une communauté plus importante, mais ce n'est jamais que mon opinion.
 
 Vous pouvez également choisir quelque chose de plus simple comme [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Au bout du compte, votre choix n'aura pas beaucoup d'impact sur votre style de code, donc c'est vraiment selon vos goûts et besoins.
 
@@ -75,15 +75,13 @@ Vous pouvez également choisir quelque chose de plus simple comme [csswizardry-g
 
 ## SCSS-lint
 
-Il est important de faire l'analyse statique (*lint*) de votre code. Si vous suivez les recommandations d'un guide de style, vous réduirez grandement le nombre d'erreurs mais nul n'est parfait et on peut toujours s'améliorer. On peut donc dire que faire l'analyse statique du code est aussi important que le commenter. 
-
+Il est important de faire l'analyse statique (*lint*) de votre code. Si vous suivez les recommandations d'un guide de style, vous réduirez grandement le nombre d'erreurs mais nul n'est parfait et on peut toujours s'améliorer. On peut donc dire que faire l'analyse statique du code est aussi important que le commenter.
 
 [SCSS-lint](https://github.com/causes/scss-lint) est un outil qui vous aide à conserver des fichiers SCSS propres et lisibles. Il est entièrement personnalisable et facile à intégrer à vos outils de développement.
 
 Par chance, les recommandations de SCSS-lint sont très similaires à celles de ce document. Si vous voulez configurer SCSS-lint selon les recommandations décrites ici, je vous propose la configuration suivante (SCSS-Lint v0.32.0)&nbsp;:
 
 {% highlight yaml %}
-
 linters:
 
   BangFormat:
@@ -253,8 +251,8 @@ linters:
 {% endhighlight %}
 
 <div class="note">
-  <p>Au cas où vous voudriez intégrer SCSS lint à votre process de développement Grunt, il existe un plugin appelé <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>De plus, si vous cherchez une application soignée qui fonctionne avec SCSS-lint et autres, les ingénieurs de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) travaillent à <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Au cas où vous voudriez intégrer SCSS-lint à votre processus de développement Grunt, il existe un plugin appelé <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>De plus, si vous cherchez une application soignée qui fonctionne avec SCSS-lint et autres, les ingénieurs de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) travaillent sur <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 

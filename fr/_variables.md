@@ -8,9 +8,9 @@ Cependant, CSS n'est rien d'autre qu'un grand panier contenant tous nos oeufs. C
 Mon conseil serait de ne créer de variables que lorsque cela fait vraiment sens. Ne créez pas de nouvelles variables juste pour le plaisir, ça n'améliorera en rien votre code. Une nouvelle variable ne devrait être créée que lorsque les critères suivants sont réunis&nbsp;:
 
 
-* La valeur est répétée au moins deux fois ;
-* il y a des chances que la valeur soit mise à jour au moins une fois ;
-* toutes les occurrences de la valeur sont liées à la variable (càd pas par coincidence).
+* La valeur est répétée au moins deux fois&nbsp;;
+* il y a des chances que la valeur soit mise à jour au moins une fois&nbsp;;
+* toutes les occurrences de la valeur sont liées à la variable (c'est-à-dire pas par coïncidence).
 
 Rien ne sert de déclarer une variable qui ne sera jamais mise à jour ou qui n'est utilisée qu'à un seul endroit.
 
@@ -21,9 +21,9 @@ Rien ne sert de déclarer une variable qui ne sera jamais mise à jour ou qui n'
 
 ## Scoping
 
-Le scoping des variables dans Sass a évolué avec les années. Jusqu'à récemment, les déclarations de variables à l'intérieur d'un jeu de règles et autres portées étaient locaux par défaut. Cependant, lorsqu'il y avait déjà une variable globale portant le même nom, la déclaration locale modifiait la variable globale. Depuis la version 3.4, Sass traite correctement le concept de portée et crée une nouvelle variable locale.
+Le scoping des variables dans Sass a évolué avec les années. Jusqu'à récemment, les déclarations de variables à l'intérieur d'un jeu de règles et autres portées étaient locales par défaut. Cependant, lorsqu'il y avait déjà une variable globale portant le même nom, la déclaration locale modifiait la variable globale. Depuis la version 3.4, Sass traite correctement le concept de portée et crée une nouvelle variable locale.
 
-La documentation parle de *global variable shadowing*. Lorsqu'on déclare à un niveau local (sélecteur, fonction, mixin,...) une variable qui existe déjà à un niveau global, on dit que la variable locale *masque* la variable globale. Autrement dit, elle prend le pas sur la variable globale au niveau local.
+La documentation parle de *global variable shadowing*. Lorsqu'on déclare à un niveau local (sélecteur, fonction, mixin,...) une variable qui existe déjà au niveau global, on dit que la variable locale *masque* la variable globale. Autrement dit, elle prend le pas sur la variable globale au niveau local.
 
 Le petit code qui suit explique le concept de *variable shadowing*&nbsp;:
 
@@ -52,7 +52,7 @@ $variable: 'initial value' !global;
   content: $variable;
 }
 
-// Impression de la variable dans un autre sélecteur qui ne masque pas. 
+// Impression de la variable dans un autre sélecteur qui ne masque pas.
 // C'est la variable **globale**, comme on s'y attendait.
 .other-local-scope::before {
   content: $variable;
@@ -80,15 +80,13 @@ $variable: 'initial value' !global
   // C'est la variable **locale**, car elle masque la variable globale.
   content: $variable
 
-// Impression de la variable dans un autre sélecteur qui ne masque pas. 
+// Impression de la variable dans un autre sélecteur qui ne masque pas.
 // C'est la variable **globale**, comme on s'y attendait.
 .other-local-scope::before
   content: $variable
 {% endhighlight %}
   </div>
 </div>
-
-{% include donate.html %}
 
 
 
@@ -148,7 +146,7 @@ $baseline: 2em
 
 ## Le flag `!global`
 
-Le flag `!global` ne doit être utilisé que lorsque on veut qu'une variable locale prenne le pas sur une variable globale. Lorsqu'on définit une variable au niveau racine, le flag `!global` doit être omis.
+Le flag `!global` ne doit être utilisé que lorsque l'on veut qu'une variable locale prenne le pas sur une variable globale. Lorsqu'on définit une variable à la racine, le flag `!global` doit être omis.
 
 
 <div class="code-block">

@@ -14,7 +14,7 @@ Mais je dois vous mettre en garde contre l'abus de mixins. Là encore, le plus i
 
 ## Les bases
 
-Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (càd pas par pure coincidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d'être regroupé dans un mixin (sans argument).
+Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (c'est-à-dire pas par pure coïncidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d'être déclaré dans un mixin (sans argument).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -70,7 +70,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
   width: $width
   height: $height
 {% endhighlight %}
-  </div> 
+  </div>
 </div>
 
 
@@ -88,7 +88,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 ## Listes d'Arguments
 
-Lorsque vous avez affaire à un nombre inconnu d'arguments dans un mixin, utilisez toujours une `arglist` plutôt qu'une liste. On peut voir `arglist` comme le 8e type de données Sass, caché et non documenté, qui est implicitement utilisé lorsqu'on passe un nombre arbitraire d'arguments dans un mixin ou une fonction dont la signature contient `...`. 
+Lorsque vous avez affaire à un nombre inconnu d'arguments dans un mixin, utilisez toujours une `arglist` plutôt qu'une liste. On peut voir `arglist` comme le 8<sup>e</sup> type de données de Sass, caché et non documenté, qui est implicitement utilisé lorsqu'on passe un nombre arbitraire d'arguments dans un mixin ou une fonction dont la signature contient `...`.
 
 
 <div class="code-block">
@@ -109,9 +109,9 @@ Lorsque vous avez affaire à un nombre inconnu d'arguments dans un mixin, utilis
   </div>
 </div>
 
-Quand vous construisez un mixin qui accepte quelques arguments (disons 3 ou plus), pensez à deux fois avant de les merger sous forme de liste ou de map en croyant que ce sera plus facile que des les passer un par un.
+Quand vous construisez un mixin qui accepte quelques arguments (disons 3 ou plus), pensez à deux fois avant de les merger sous forme de liste ou de map en croyant que ce sera plus facile que de les passer un par un.
 
-Sass gère très intelligemment les mixins et les déclarations de fonction, vous pouvez passer une liste ou une map comme une `arglist` dans une fonction ou un mixin de façon à ce qu'ils soient parsés comme une série d'arguments. 
+Sass gère très intelligemment les mixins et les déclarations de fonction, vous pouvez passer une liste ou une map comme une `arglist` dans une fonction ou un mixin de façon à ce qu'ils soient traités comme une série d'arguments.
 
 
 <div class="code-block">
@@ -175,13 +175,13 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 
 
-## Mixins et préfixes vendeurs
+## Mixins et préfixes constructeurs
 
-Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes vendeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n'allons pas faire cela. D'abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allègera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l'être.
+Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes constructeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n'allons pas faire cela. D'abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allègera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l'être.
 
-Malheureusement, Autoprefixer n'est pas toujours une option envisageable. Si vous utilisez [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu'ils proposent tous les deux une collection de mixins qui traitent les préfixes vendeurs pour vous. Utilisez-les.
+Malheureusement, Autoprefixer n'est pas toujours une option envisageable. Si vous utilisez [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu'ils proposent tous les deux une collection de mixins qui traitent les préfixes constructeurs pour vous. Utilisez-les.
 
-Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe vendeur.
+Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe constructeur.
 
 
 <div class="code-block">
