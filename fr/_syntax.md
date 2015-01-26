@@ -297,7 +297,7 @@ Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le
 
 ### Calculs
 
-**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s'en trouve considérablement améliorée, mais les éventuels cas *borderlines* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
+**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s'en trouve considérablement améliorée, mais les éventuels cas *borderline* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

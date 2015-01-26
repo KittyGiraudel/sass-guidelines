@@ -18,7 +18,7 @@ Mon conseil toutefois est de restreindre le nombre de dépendances au strict min
 
 En fait, nous n'utilisons qu'une petite partie du framework. Compass est énorme. Les mixins de compatibilité navigateurs ne sont que la partie visible de l'iceberg. Fonctions mathématiques, helpers pour les images, sprites... il y a tant de choses possibles avec ce formidable outil.
 
-Malheureusement, il s'agit pour l'essentiel de *sucre syntactique* mais pas de fonctionnalités exceptionnelles. Une exception serait la fonctionnalité de construction de sprites, mais [Grunticon](https://github.com/filamentgroup/grunticon) et [Grumpicon](http://grumpicon.com/) font le même travail aussi bien, avec l'avantage d'être pluggables dans le process de déployement.
+Malheureusement, il s'agit pour l'essentiel de *sucre syntactique* mais pas de fonctionnalités exceptionnelles. Une exception serait la fonctionnalité de construction de sprites, mais [Grunticon](https://github.com/filamentgroup/grunticon) et [Grumpicon](http://grumpicon.com/) font le même travail aussi bien, avec l'avantage d'être pluggables dans le process de déploiement.
 
 Rien n'interdit d'utiliser Compass, je ne le recommande pas toutefois, d'autant qu'il n'est pas compatible avec LibSass (bien que des efforts aient été faits dans cette direction).
 
