@@ -34,7 +34,7 @@
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
 
-  <button class="aside__toggle  button-ui" role="button" aria-expanded id="aside-toggle">
+  <button data-toggle="aside" class="aside__toggle  button-ui" role="button" aria-expanded>
     {% include icons/settings.html %}
   </button>
 </aside>

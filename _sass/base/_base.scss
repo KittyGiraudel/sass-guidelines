@@ -23,7 +23,9 @@ body {
 /**
  * Links
  */
-a {
+a,
+.link-like {
+  cursor: pointer;
   text-decoration: none;
   color: $main-color;
   font-weight: 700;
