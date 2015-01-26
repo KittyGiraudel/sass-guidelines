@@ -38,6 +38,7 @@ On non-Ruby projects that need a workflow integration, LibSass is probably a bet
 ### Further reading
 
 * [LibSass](https://github.com/sass/libsass)
+* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
