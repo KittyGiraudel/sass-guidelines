@@ -32,7 +32,7 @@
     * [Exceptions](#exceptions)
 * [Conventions de nommage](#conventions-de-nommage)
   * [Constantes](#constantes)
-  * [Espace de nom](#espace-de-nom)
+  * [Namespaces](#namespaces)
 * [Commentaires](#commentaires)
   * [Écrire des commentaires](#crire-des-commentaires)
   * [Documentation](#documentation)
