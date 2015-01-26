@@ -10,9 +10,7 @@
 
     <h2 class="baseline">{{ site.data.translations[page.language].baseline.content }}</h2>
 
-    {% if page.language != 'en' %}
-      {% include translation-warning.html %}
-    {% endif %}
+    {% include translation-warning.html %}
 
     {% include aside.html %}
 

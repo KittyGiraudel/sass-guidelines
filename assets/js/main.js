@@ -56,8 +56,10 @@
       });
     });
 
-    document.getElementById('aside-toggle').addEventListener('click', function (event) {
-      toggleClass(document.body, 'open');
+    Array.prototype.slice.call(document.querySelectorAll('[data-toggle="aside"]')).forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        toggleClass(document.body, 'open');
+      });
     });
 
     document.getElementById('language-picker').addEventListener('change', function (event) {
