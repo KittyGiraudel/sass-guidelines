@@ -651,6 +651,7 @@ $shadows: $shadows, $shadow
 
 ### Further reading
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 
