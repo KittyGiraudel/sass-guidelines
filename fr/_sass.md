@@ -48,9 +48,9 @@ Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous
 
 ## Sass ou SCSS
 
-Il règne encore une certaine confusion autour du nom*Sass*, et pour une bonne raison&nbsp;: Sass désigne à la fois le préprocesseur et sa propre syntaxe. Pas très commode, n'est-ce pas&nbsp;?
+Il règne encore une certaine confusion autour du nom *Sass*, et pour une bonne raison&nbsp;: Sass désigne à la fois le préprocesseur et sa propre syntaxe. Pas très commode, n'est-ce pas&nbsp;?
 
-En fait, Sass désignait à l'origine une syntaxe dont la caractéristique était d'être basée sur l'indentation. Rapidement, les développeurs de Sass ont décidé de rapprocher Sass et CSS en proposant une syntaxe compatible avec CSS, appelée SCSS (pour *Sassy CSS* qu'on peut traduire par *CSS à la Sass* ou *CSS classieux*). Sa devise&nbsp;: Si c'est valide en CSS, c'est du SCSS valide.
+En fait, Sass désignait à l'origine une syntaxe dont la caractéristique était d'être basée sur l'indentation. Rapidement, les développeurs de Sass ont décidé de rapprocher Sass et CSS en proposant une syntaxe compatible avec CSS, appelée SCSS (pour *Sassy CSS* qu'on peut traduire par *CSS à la Sass* ou *CSS classieux*). Sa devise&nbsp;: si c'est valide en CSS, c'est du SCSS valide.
 
 Depuis lors, Sass (le préprocesseur) propose deux syntaxes différentes&nbsp;: Sass (pas tout en majuscules, [s'il vous plaît](http://sassnotsass.com)), qu'on appelle aussi *la syntaxe indentée*, et SCSS. Vous pouvez utiliser celle que vous voulez, les deux sont strictement équivalentes en termes de fonctionnalités. C'est donc une question d'esthétique personnelle.
 
@@ -74,9 +74,9 @@ Sass est un préprocesseur parmi d'autres. Son concurrent le plus sérieux est [
 
 *Pourquoi choisir Sass plutôt que LESS ou un autre préprocesseur ?* Cette question peut toujours se poser aujourd'hui. Il n'y a pas si longtemps, l'argumentation aurait porté sur l'avantage de Sass dans les projets basés sur Ruby. Aujourd'hui que LibSass est synchronisé avec Ruby Sass, ce sont les performances de Sass qu'on pourrait mettre en avant.
 
-Ce que j'aime avec Sass c'est son approche conservatrice de CSS. La conception de Sass est basée sur quelques principes forts&nbsp;: pour l'essentiel, elle découle de la conviction de ses concepteurs que (a) l'ajout de nouvelles fonctionnalités a un coût lié à leur complexité qui doit être justifié par leur utilité réelle et (b) on doit pouvoir comprendre facilement ce que fait un bloc de styles en regardant ce seul bloc. De plus, Sass est beaucoup plus attentif aux détails que les autres préprocesseurs. De ce que je peux constater, ses concepteurs sont extrêmement soucieux de supporter tous les cas d'usage de CSS même les plus limites, et d'assurer la cohérence globale. 
+Ce que j'aime avec Sass c'est son approche conservatrice de CSS. La conception de Sass est basée sur quelques principes forts&nbsp;: pour l'essentiel, elle découle de la conviction de ses concepteurs que (a) l'ajout de nouvelles fonctionnalités a un coût lié à leur complexité qui doit être justifié par leur utilité réelle et (b) on doit pouvoir comprendre facilement ce que fait un bloc de styles en regardant ce seul bloc. De plus, Sass est beaucoup plus attentif aux détails que les autres préprocesseurs. De ce que je peux constater, ses concepteurs sont extrêmement soucieux de supporter tous les cas d'usage de CSS même les plus *borderlines*, et d'assurer la cohérence globale.
 
-En d'autres termes, Sass n'est pas un préprocesseur destiné à faire plaisir à des nerdy comme moi en ajoutant des fonctionnalités extraordinaires à un langage dont l'intention n'a jamais été de supporter une logique. C'est un logiciel créé pour résoudre de vrais problèmes, qui aide les développeurs en ajoutant des fonctionnalités utiles à CSS lorsque celui-ci se révèle insatisfaisant.
+En d'autres termes, Sass n'est pas un préprocesseur destiné à faire plaisir à des nerdy comme moi en ajoutant des fonctionnalités extraordinaires à un langage dont l'intention n'a jamais été de supporter des structures logiques. C'est un logiciel créé pour résoudre de vrais problèmes, qui aide les développeurs en ajoutant des fonctionnalités utiles à CSS lorsque celui-ci se révèle insatisfaisant.
 
 À côté des préprocesseurs, nous devons aussi mentionner les postprocesseurs dont on a beaucoup parlé dernièrement, principalement grâce à [PostCSS](https://github.com/postcss/postcss) et à [cssnext](https://cssnext.github.io/). Les postprocesseurs sont assez proches des préprocesseurs, à ceci près qu'ils ne font qu'ajouter la syntaxe future de CSS.
 

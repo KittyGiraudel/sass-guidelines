@@ -21,10 +21,10 @@ Personnellement j'utilise une approche assez similaire à [SMACSS](https://smacs
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 * [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
+* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 
 
@@ -33,7 +33,7 @@ Personnellement j'utilise une approche assez similaire à [SMACSS](https://smacs
 
 ## Composants
 
-Il y a une différence essentielle entre un projet *qui marche* et un *bon* projet. Encore une fois, CSS est un langage confus <sup>[citation needed]</sup>. Moins nous avons de CSS et mieux nous nous portons. Nous ne voulons pas avoir à gérer des mégabytes de code CSS. Pour conserver des feuilles de styles concises et efficaces —&nbsp;ce ne sera pas une surprise pour vous&nbsp;— il est généralement utile de voir l'interface comme un ensemble de composants.
+Il y a une différence essentielle entre un projet *qui marche* et un *bon* projet. Encore une fois, CSS est un langage confus <sup>[citation requise]</sup>. Moins nous avons de CSS et mieux nous nous portons. Nous ne voulons pas avoir à gérer des mégaoctets de code CSS. Pour conserver des feuilles de styles concises et efficaces —&nbsp;ce ne sera pas une surprise pour vous&nbsp;— il est généralement utile de voir l'interface comme un ensemble de composants.
 
 Les composants peuvent être ce qu'on veut, du moment que&nbsp;:
 
@@ -69,10 +69,10 @@ Et bien sûr&nbsp;:
 
 <figure role="group">
   <img src="/assets/images/sass-wallpaper.jpg" alt="One file to rule them all, One file to find Them, One file to bring them all, And in the Sass way merge them." />
-  <figcaption>Wallpaper par <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
+  <figcaption>Fond d'écran par <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
 </figure>
 
-Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;: 
+Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
 
 <div class="highlight"><pre><code>
 sass/
@@ -174,14 +174,14 @@ Pour les plus petits composants, il y a le dossier `components/`. Alors que `lay
 
 ### Dossier Pages
 
-Si vous avez des styles spécifiques à certaines pages, il est préférable de les inclure à l'intérieur d'un dossier `pages/` dans un fichier portant le nom de la page. Par exemple, il n'est pas rare d'avoir des styles très spécifiques pour la page d'accueil, d'où le besoin d'un fichier `_home.scss` dans `pages/`.
+Si vous avez des styles spécifiques à certaines pages, il est préférable de les inclure à l'intérieur d'un dossier `pages/` dans un fichier portant le nom de la page. Par exemple, il n'est pas rare d'avoir des styles très spécifiques pour la page d'accueil, d'où la nécessité d'un fichier `_home.scss` dans `pages/`.
 
 
 * `_home.scss`
 * `_contact.scss`
 
 <div class="note">
-  <p>Selon votre process de déploiement, ces fichiers peuvent être appelés individuellement pour éviter de les mélanger aux autres dans la feuille de style finale. Cela dépend vraiment de vous.</p>
+  <p>Selon votre processus de déploiement, ces fichiers peuvent être appelés individuellement pour éviter de les mélanger aux autres dans la feuille de style finale. Cela dépend vraiment de vous.</p>
 </div>
 
 
@@ -195,7 +195,7 @@ Dans des sites ou applications de grande envergure, il n'est pas rare d'avoir pl
 * `_admin.scss`
 
 <div class="note">
-  <p>On est ici dans des considérations très spécifiques aux projets, et il est probable que ce dossier n'existera pas dans bien des projets.</p>
+  <p>On est ici dans des considérations très spécifiques aux projets, et il est probable que ce dossier n'existera pas dans bien des cas.</p>
 </div>
 
 
@@ -227,9 +227,9 @@ Et *last but not least*, la plupart des projets comportent un dossier `vendors/`
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-Si vous devez remplacer une section d'un fichier `vendor`, je recommande de créer un 8e dossier nommé `vendors-extensions/` dans lequel vous aurez des fichiers nommés en fonction du `vendor` qu'ils remplacent.
+Si vous devez remplacer une section d'un fichier *vendor*, je recommande de créer un 8<sup>e</sup> dossier nommé `vendors-extensions/` dans lequel vous aurez des fichiers nommés en fonction du *vendor* qu'ils remplacent.
 
-Par exemple, `vendors-extensions/_boostrap.scss` serait un fichier contenant toutes les règles CSS qui re-déclarent le CSS par défaut de Bootstrap. Vous éviterez ainsi de modifier les fichiers `vendor` eux-mêmes, ce qui n'est pas conseillé.
+Par exemple, `vendors-extensions/_boostrap.scss` serait un fichier contenant toutes les règles CSS qui re-déclarent le CSS par défaut de Bootstrap. Vous éviterez ainsi de modifier les fichiers *vendors* eux-mêmes, ce qui n'est pas conseillé.
 
 
 ### Fichier principal
@@ -249,10 +249,10 @@ Les fichiers doivent être importés en fonction du dossier dans lequel ils sont
 
 Afin d'assurer une bonne lisibilité, le fichier principal devrait respecter ces recommandations&nbsp;:
 
-* un fichier par `@import` ;
-* un `@import` par ligne ;
-* pas de saut de ligne entre 2 imports provenant du même dossier ;
-* un saut de ligne après le dernier import d'un dossier ;
+* un fichier par `@import`&nbsp;;
+* un `@import` par ligne&nbsp;;
+* pas de saut de ligne entre 2 imports provenant du même dossier&nbsp;;
+* un saut de ligne après le dernier import d'un dossier&nbsp;;
 * les extensions fichiers et les underscores initiaux doivent être omis.
 
 <div class="code-block">
@@ -433,8 +433,8 @@ Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswiz
 /**
  * Réparation du problème de spécificité sur la Nav.
  *
- * Quelqu'un a utilisé un ID dans le code du header (`#header a {}`) qui 
- * prend le pas sur les sélecteurs nav (`.site-nav a {}`). Utiliser !important 
+ * Quelqu'un a utilisé un ID dans le code du header (`#header a {}`) qui
+ * prend le pas sur les sélecteurs nav (`.site-nav a {}`). Utiliser !important
  * pour l'écraser en attendant de trouver le temps de refactoriser le header.
  */
 .site-nav a {

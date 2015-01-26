@@ -6,10 +6,10 @@ Vous savez probablement déjà que Sass fournit des structures conditionnelles v
 Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nbsp;:
 
 
-* Pas de parenthèses sauf si elles sont nécessaires ;
-* Toujours un saut de ligne avant `@if`;
-* Toujours un renvoi à la ligne après l'accolade ouvrante (`{`);
-* `@else` sur la même ligne que l'accolade fermante qui précède (`}`).
+* Pas de parenthèses sauf si elles sont nécessaires&nbsp;;
+* Toujours un saut de ligne avant `@if`&nbsp;;
+* Toujours un renvoi à la ligne après l'accolade ouvrante (`{`)&nbsp;;
+* `@else` sur la même ligne que l'accolade fermante qui précède (`}`)&nbsp;;
 * Toujours un saut de ligne après l'accolade fermante finale (`}`) sauf si la ligne suivante est aussi une accolade fermante (`}`).
 
 <div class="code-block">
@@ -77,7 +77,7 @@ Lorsqu'on teste si une valeur est fausse, on utilise toujours le mot-clé `not` 
   </div>
 </div>
 
-Lorsqu'on utilise des structures conditionnelles à l'intérieur d'une fonction, toujours s'assurer que la fonction a un statement `@return` en dehors de tout bloc conditionnel.
+Lorsqu'on utilise des structures conditionnelles à l'intérieur d'une fonction, toujours s'assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

@@ -1,7 +1,7 @@
 
 # Syntaxe & formatage
 
-À mon avis, la première chose que devrait proposer un guide de style est de décrire la façon dont notre code doit être écrit, du point vue de son aspect. 
+À mon avis, la première chose que devrait proposer un guide de style est de décrire la façon dont notre code doit être écrit, du point vue de son aspect.
 
 Lorsque plusieurs développeurs sont impliqués dans l'écriture de CSS sur un même projet, il ne faut pas longtemps avant que l'un d'entre eux commence à faire les choses à sa façon. Les directives servent à éviter cette perte de cohérence, mais aussi à aider chacun à lire et à mettre à jour le code.
 
@@ -58,8 +58,8 @@ C'est pourquoi dans Sass les chaînes de caractères n'ont pas non plus à être
 Ceci étant, les langages qui ne requièrent pas d'envelopper les chaînes de caractères entre guillemets sont une infime minorité, c'est la raison pour laquelle **les chaînes de caractères devraient toujours être entourées de guillemets simples** dans Sass (pourquoi des guillemets simples&nbsp;? parce qu'ils sont plus faciles à taper sur un clavier *qwerty*). À part la cohérence avec d'autres langages, dont JavaScript le cousin de CSS, il y a plusieurs raisons à ce choix&nbsp;:
 
 * les noms de couleurs sont traités comme des couleurs lorsqu'ils ne sont pas entre guillemets, ce qui peut conduire à de sérieux problèmes&nbsp;;
-* la plupart des colorations syntaxiques ne fonctionneront pas sans les guillemets ;
-* la lisibilité est améliorée ;
+* la plupart des colorations syntaxiques fonctionnent mieux avec les guillemets&nbsp;;
+* la lisibilité est améliorée&nbsp;;
 * il n'y a pas de raison valable de ne pas utiliser de guillemets.
 
 
@@ -234,7 +234,6 @@ $length: $value + px
 
 Remarquez qu'en ajoutant *0 membre de cette unité* on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l'ajout de *0 unité* peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas&nbsp;:
 
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -292,13 +291,13 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-Si vous ajoutez (*append*) une unité sous forme de chaîne de caractères à un nombre, le résultat est une chaîne de caractères, ce qui vous empêche d'effectuer toute opération sur la valeur. De même avec l'opération *slice* si vous découpez la partie numérique d'un nombre —&nbsp;ce qui n'est sans doute pas le résultat souhaité.
+Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le résultat est une chaîne de caractères, ce qui vous empêche d'effectuer toute opération sur la valeur. De même avec l'opération `slice` si vous découpez la partie numérique d'un nombre —&nbsp;ce qui n'est sans doute pas le résultat souhaité.
 
 
 
 ### Calculs
 
-**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s'en trouve considérablement améliorée, mais les éventuels cas limites sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
+**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s'en trouve considérablement améliorée, mais les éventuels cas *borderlines* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -331,16 +330,16 @@ Si vous ajoutez (*append*) une unité sous forme de chaîne de caractères à un
 
 ### Nombres magiques
 
-L'expression "nombre magique" est un [vieux terme de programmation](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) qui désigne *une constante numérique non nommée*.  Quelque chose comme un nombre aléatoire *qui fonctionne* sans qu'on sache dire exactement pourquoi.
+L'expression "nombre magique" est un [vieux terme de programmation](http://fr.wikipedia.org/wiki/Nombre_magique_(programmation)#Constantes_num.C3.A9riques_non-nomm.C3.A9es) qui désigne *une constante numérique non nommée*.  Quelque chose comme un nombre aléatoire *qui fonctionne* sans que l'on sache dire exactement pourquoi.
 
-Inutile de le dire, **les nombres magiques sont une plaie et doivent être évités à tout prix**. Si vous ne pouvez pas expliquer logiquement la raison pour laquelle un nombre fonctionne, ajoutez un commentaire détaillant la façon dont vous êtes arrivé à ce nombre et pourquoi vous pensez qu'il est approprié. Il vaut mieux expliquer pourquoi vous ne comprenez pas comment quelque chose fonctionne que de laisser au développeur qui vous suivra le soin de comprendre les raisons de votre choix.
+Est-il utile de préciser que **les nombres magiques sont une plaie et doivent être évités à tout prix** ? Si vous ne pouvez pas expliquer logiquement la raison pour laquelle un nombre fonctionne, ajoutez un commentaire détaillant la façon dont vous êtes arrivé à ce nombre et pourquoi vous pensez qu'il est approprié. Il vaut mieux expliquer pourquoi vous ne comprenez pas comment quelque chose fonctionne que de laisser au développeur qui vous suivra le soin de comprendre les raisons de votre choix.
 
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 /**
- * 1. Nombre magique. C'est la plus petite valeur que j'ai trouvée pour 
+ * 1. Nombre magique. C'est la plus petite valeur que j'ai trouvée pour
  * aligner le haut de `.foo` avec son parent. Idéalement, à corriger.
  */
 .foo {
@@ -385,11 +384,11 @@ Les couleurs occupent une place importante dans le langage CSS. Naturellement, S
 Pour simplifier les couleurs autant que possible, mon conseil est de respecter l'ordre de préférence suivant pour les formats&nbsp;:
 
 1. [Mots-clés de couleurs CSS](http://www.w3.org/TR/css3-color/#svg-color);
-2. [Notation HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
-3. [Notation RGB](http://en.wikipedia.org/wiki/RGB_color_model);
+2. [Notation HSL](http://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re);
+3. [Notation RGB](http://fr.wikipedia.org/wiki/Rouge_vert_bleu);
 4. Notation hexadécimale. De préférence en minuscules et en version raccourcie lorsque c'est possible.
 
-Pour commencer, les mots-clés parlent souvent par eux-mêmes. La représentation HSL quant à elle est non seulement la plus simple à comprendre<sup>[citation needed]</sup>, mais également celle qui nous permet le plus aisément d'ajuster les couleurs en modifiant la teinte (Hue), la saturation et la luminosité. RGB nous aide à repérer tout de suite si la couleur tient plus du bleu, du vert ou du rouge, mais il ne nous permet pas de construire facilement une couleur à partir des trois. Enfin, la notation hexadécimale est à peu près indéchiffrable pour un cerveau humain.
+Pour commencer, les mots-clés parlent souvent par eux-mêmes. La représentation HSL quant à elle est non seulement la plus simple à comprendre<sup>[citation requise]</sup>, mais également celle qui nous permet le plus aisément d'ajuster les couleurs en modifiant la teinte (hue), la saturation et la luminosité. RGB nous aide à repérer tout de suite si la couleur tient plus du bleu, du vert ou du rouge, mais il ne nous permet pas de construire facilement une couleur à partir des trois. Enfin, la notation hexadécimale est à peu près indéchiffrable pour un cerveau humain.
 
 
 <div class="code-block">
@@ -489,17 +488,15 @@ $main-theme-color: $sass-pink
 
 De cette façon vous éviterez qu'une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`.
 
-{% include donate.html %}
-
 
 
 ### Éclaircir et obscurcir les couleurs
 
-Les fonctions [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) et [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulent la luminosité d'une couleur dans l'espace HSL en augmentant ou en diminuant sa valeur. En fait, elles  ne sont rien d'autre que des alias du paramètre `$lightness` de la fonction [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
+Les fonctions [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) et [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulent la luminosité d'une couleur dans l'espace HSL en augmentant ou en diminuant sa valeur. En fait, elles ne sont rien d'autre que des alias du paramètre `$lightness` de la fonction [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
 Toutefois, il arrive souvent que ces fonctions ne produisent pas le résultat escompté. La fonction [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) est une autre façon d'éclaircir une couleur en la mélangeant à du blanc ou à du noir.
 
-L'avantage d'utiliser `mix` plutôt que les deux fonctions précédemment citées est qu'elle permet d'aller très progressivement vers le noir (ou vers le blanc) à mesure qu'on diminue la proportion de la couleur initiale, alors que `darken` et `lighten` font passer très rapidement la couleur au noir ou au blanc&nbsp;:
+L'avantage d'utiliser `mix` plutôt que les deux fonctions précédemment citées est qu'elle permet d'aller très progressivement vers le noir (ou vers le blanc) à mesure que l'on diminue la proportion de la couleur initiale, alors que `darken` et `lighten` font passer très rapidement la couleur au noir ou au blanc&nbsp;:
 
 
 <figure role="group">
@@ -507,7 +504,7 @@ L'avantage d'utiliser `mix` plutôt que les deux fonctions précédemment citée
   <figcaption>Illustration de la différence entre <code>lighten</code>/<code>darken</code> et <code>mix</code> par <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 
-Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez créer deux fonctions faciles à utiliser,  `tint` et `shade` (qui sont incluses dans [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) pour obtenir la même chose&nbsp;:
+Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez créer deux fonctions faciles à utiliser, `tint` et `shade` (qui sont incluses dans [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) pour obtenir la même chose&nbsp;:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -577,9 +574,9 @@ Les listes sont l'équivalent des arrays (tables) dans Sass. Une liste est une s
 
 Les listes doivent respecter les recommandations suivantes&nbsp;:
 
-* affichage sur une seule ligne, sauf si elles comptent plus de 80 caractères ;
-* toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS ;
-* ne jamais utiliser les parenthèses, sauf si la liste est vide ou imbriquée ;
+* affichage sur une seule ligne, sauf si elles comptent plus de 80 caractères&nbsp;;
+* toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS&nbsp;;
+* ne jamais utiliser les parenthèses, sauf si la liste est vide ou imbriquée&nbsp;;
 * ne jamais ajouter de virgule après le dernier élément de la liste.
 
 <div class="code-block">
@@ -667,17 +664,17 @@ $shadows: $shadows, $shadow
 
 ## Maps
 
-Depuis Sass 3.3, les auteurs de feuilles de styles peuvent définir des maps, qui sont l'équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d'association), des hashs ou même des objets JavaScript. Une map est une structure de données qui "mappe" (c'est à dire qui met en correspondance) des clés (keys) —&nbsp;lesquelles peuvent être de n'importe quel type, y compris des maps, ce que toutefois je ne recommanderais pas&nbsp;— et des valeurs (values) de tout type.
+Depuis Sass 3.3, les auteurs de feuilles de styles peuvent définir des *maps*, qui sont l'équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d'association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) —&nbsp;lesquelles peuvent être de n'importe quel type, y compris des maps, ce que toutefois je ne recommanderais pas&nbsp;— et des valeurs (values) de tout type.
 
 Les maps doivent être écrites comme suit&nbsp;:
 
-* un espace après les deux-points (`:`) ;
-* parenthèse ouvrante (`(`) sur la même ligne que les deux-points (`:`) ;
-* **clés entre guillemets** si ce sont des chaînes de caractères (soit 99% des cas) ;
-* chaque paire clé/valeur sur sa propre ligne ;
-* virgule (`,`) à la fin de chaque clé/valeur ;
-* **virgule finale** (`,`) après le dernier item pour faciliter l'ajout, la suppression ou la réorganisation d'items ;
-* parenthèse fermante (`)`) sur sa propre ligne ;
+* un espace après les deux-points (`:`)&nbsp;;
+* parenthèse ouvrante (`(`) sur la même ligne que les deux-points (`:`)&nbsp;;
+* **clés entre guillemets** si ce sont des chaînes de caractères (soit 99% des cas)&nbsp;;
+* chaque paire clé/valeur sur sa propre ligne&nbsp;;
+* virgule (`,`) à la fin de chaque clé/valeur&nbsp;;
+* **virgule finale** (`,`) après le dernier item pour faciliter l'ajout, la suppression ou la réorganisation d'items&nbsp;;
+* parenthèse fermante (`)`) sur sa propre ligne&nbsp;;
 * pas d'espace ni de retour à la ligne entre la parenthèse finale et le point-virgule final.
 
 Illustration :
@@ -760,7 +757,7 @@ Si vous êtes perdu, ou si vous vous demandez quelles opérations magiques se d�
   </div>
 </div>
 
-Si vous voulez connaître la profondeur de la map, ajoutez également la fonction suivante. Le mixin s'affichera automatiquement.
+Si vous voulez connaître la profondeur de la map, ajoutez également la fonction suivante. Le mixin l'affichera automatiquement.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -818,15 +815,15 @@ Si vous voulez connaître la profondeur de la map, ajoutez également la fonctio
 
 ## Ensemble de règles CSS
 
-Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrait écrire une règle CSS (du moins selon la plupart des recommandations, dont [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrait écrire une règle CSS (du moins selon la plupart des recommandations, dont [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset))&nbsp;:
 
-* les sélecteurs liés sur la même ligne, sinon sur une ligne différente ;
-* l'accolade ouvrante (`{`) sur la ligne du dernier sélecteur ;
-* un espace avant l'accolade ouvrante (`{`) ;
-* notre première déclaration sur une nouvelle ligne après l'accolade ouvrante (`{`) ;
-* chaque déclaration sur une même ligne ;
-* un espace après les deux-points (`:`) ;
-* l'accolade fermante (`}`) sur sa propre ligne ;
+* les sélecteurs liés sur la même ligne, sinon sur une ligne différente&nbsp;;
+* l'accolade ouvrante (`{`) sur la ligne du dernier sélecteur&nbsp;;
+* un espace avant l'accolade ouvrante (`{`)&nbsp;;
+* notre première déclaration sur une nouvelle ligne après l'accolade ouvrante (`{`)&nbsp;;
+* chaque déclaration sur une même ligne&nbsp;;
+* un espace après les deux-points (`:`)&nbsp;;
+* l'accolade fermante (`}`) sur sa propre ligne&nbsp;;
 * une nouvelle ligne après l'accolade fermante.
 
 
@@ -873,10 +870,10 @@ Illustration:
 
 En plus de ces recommandations liées à CSS, nous devons être attentifs aux points suivants&nbsp;:
 
-* les variables locales doivent être déclarées avant toute autre déclaration, puis séparées des autres par une ligne ;
-* les inclusions de mixins sans `@content` doivent venir avant toute déclaration ;
-* les sélecteurs imbriqués doivent toujours apparaître sur une nouvelle ligne ;
-* les inclusions de mixins avec `@content` doivent apparaître après les sélecteurs imbriqués ;
+* les variables locales doivent être déclarées avant toute autre déclaration, puis séparées des autres par une ligne&nbsp;;
+* les inclusions de mixins sans `@content` doivent venir avant toute déclaration&nbsp;;
+* les sélecteurs imbriqués doivent toujours apparaître sur une nouvelle ligne&nbsp;;
+* les inclusions de mixins avec `@content` doivent apparaître après les sélecteurs imbriqués&nbsp;;
 * pas de saut de ligne avant une accolade fermante (`}`).
 
 Illustration:
@@ -938,12 +935,12 @@ Illustration:
 
 ## Ordre des déclarations
 
-Je ne connais aucun autre sujet où les opinions soient aussi partagées qu'en ce qui concerne l'ordre des déclarations CSS. Concrètement, deux opinions s'opposent&nbsp;: 
+Je ne connais aucun autre sujet où les opinions sont aussi partagées qu'en ce qui concerne l'ordre des déclarations CSS. Concrètement, deux opinions s'opposent&nbsp;:
 
-* s'en tenir à l'ordre alphabétique ;
+* s'en tenir à l'ordre alphabétique&nbsp;;
 * classer les déclarations par type (position, display, color, font, autres...).
 
-Il y a du pour et du contre dans chacune. D'un côté, l'ordre alphabétique est universel (du moins pour les langues utilisant l'alphabet latin), donc il n'y a pas de dispute possible quant à la position d'un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l'une derrière l'autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L'ordre alphabétique crée de nombreuses bizarreries. 
+Il y a du pour et du contre dans chacune. D'un côté, l'ordre alphabétique est universel (du moins pour les langues utilisant l'alphabet latin), donc il n'y a pas de dispute possible quant à la position d'un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l'une derrière l'autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L'ordre alphabétique crée de nombreuses bizarreries.
 
 
 <div class="code-block">
@@ -1017,7 +1014,7 @@ D'un autre côté, ordonner par propriété semble parfaitement logique. Les dé
   </div>
 </div>
 
-Il existe encore un autre modèle d'ordonnancement des types,  [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), qui semble assez populaire lui aussi. Concentric CSS s'appuie sur le modèle de boîte pour définir l'ordre&nbsp;: il part de l'extérieur pour aller vers l'intérieur.
+Il existe encore un autre modèle d'ordonnancement des types, [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), qui semble assez populaire lui aussi. Concentric CSS s'appuie sur le modèle de boîte pour définir l'ordre&nbsp;: il part de l'extérieur pour aller vers l'intérieur.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1308,7 +1305,7 @@ Nous pouvons réécrire notre exemple précédent ainsi&nbsp;:
   </div>
 </div>
 
-Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l'imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l'équipe est d'accord avec cette façon de faire.
+Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l'imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l'équipe soit d'accord avec cette façon de faire.
 
 
 
