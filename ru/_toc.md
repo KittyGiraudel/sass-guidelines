@@ -32,7 +32,7 @@
     * [Исключения](#exceptions)
 * [Соглашения по именованию](#naming-conventions)
   * [Константы](#constants)
-  * [Пространство имен](#namespace)
+  * [Пространство имён](#namespace)
 * [Комментирвание](#commenting)
   * [Написание комментариев](#writing-comments)
   * [Документирование](#documentation)
