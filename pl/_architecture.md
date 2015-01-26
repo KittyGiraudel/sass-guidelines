@@ -23,10 +23,10 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 * [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
+* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 
 
