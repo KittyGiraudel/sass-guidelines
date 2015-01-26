@@ -35,7 +35,7 @@ Commençons par le commencement&nbsp;: **ceci n'est pas un guide de style CSS**.
 
 Par ailleurs, ce guide de style est personnel et par conséquent **très engagé**. Vous pouvez le voir comme un ensemble de méthodologies et de conseils que j'ai polis et donnés pendant des années. Il me donne aussi l'opportunité de faire des liens vers un bon nombre de ressources instructives, n'hésitez pas à vous reporter aux *lectures complémentaires*.
 
-Bien sûr, ce n'est pas la seule façon de faire, et cela correspondra ou pas à votre projet. Vous pouvez choisir ce qui vous intéresse et l'adapter à vos propres besoins. Comme on dit, *ça dépend de votre expérience*.
+Bien sûr, ce n'est pas la seule façon de faire, et cela correspondra ou pas à votre projet. Vous pouvez choisir ce qui vous intéresse et l'adapter à vos propres besoins. Comme on dit, *ça dépend*.
 
 
 
@@ -46,9 +46,9 @@ Bien sûr, ce n'est pas la seule façon de faire, et cela correspondra ou pas à
 
 Au bout du compte, s'il est une chose que je souhaite que vous reteniez de ce guide c'est que **Sass devrait toujours rester aussi simple que possible**.
 
-Mes petites expériences stupides avec Sass, comme [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) et [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) ont montré tout ce qu'on peut faire avec ce préprocesseur.
+Mes petites expériences stupides avec Sass, comme [les opérateurs *bitwise*](https://github.com/HugoGiraudel/SassyBitwise), [les itérateurs et générateurs](https://github.com/HugoGiraudel/SassyIteratorsGenerators) ou encore [un parser JSON](https://github.com/HugoGiraudel/SassyJSON) ont montré tout ce qu'on peut faire avec ce préprocesseur.
 
-Cependant, CSS est un langage simple. L'intention de Sass est d'écrire du CSS, par conséquent il ne devrait pas être plus compliqué que le bon vieux CSS. Le [principe KISS](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) est essentiel ici et il devrait même prendre le pas sur le [principe DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) dans certaines circonstances.
+Cependant, CSS est un langage simple. L'intention de Sass est d'écrire du CSS, par conséquent il ne devrait pas être plus compliqué que le bon vieux CSS. Le [principe KISS](http://fr.wikipedia.org/wiki/Principe_KISS) (Keep It Simple Stupid) est essentiel ici et il devrait même prendre le pas sur le [principe DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas) (Don't Repeat Yourself) dans certaines circonstances.
 
 Parfois, il vaut mieux se répéter un peu pour conserver un code maintenable plutôt que construire un système lourd et inutilement compliqué qui devient difficile à maintenir en raison de sa complexité.
 
@@ -58,7 +58,7 @@ Encore une citation de [Harry Roberts](https://csswizardry.com)&nbsp;: **le prag
 
 ### Lectures complémentaires
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* [Principe KISS](http://fr.wikipedia.org/wiki/Principe_KISS)
+* [Principe DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
 
