@@ -1,7 +1,7 @@
 
 # Too Long; Didn't read
 
-En résumé, nous voulons&nbps;:
+En résumé, nous voulons&nbsp;:
 
 * Une indentation à deux (2) espaces, pas de tabulation&nbsp;;
 * Pas plus de 80 caractères par ligne&nbsp;;

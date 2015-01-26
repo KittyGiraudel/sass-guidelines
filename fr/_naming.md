@@ -89,7 +89,7 @@ $css-positions: top, right, bottom, left, center
 
 
 
-## Espace de nom
+## Namespaces
 
 Si vous avez l'intention de distribuer votre code Sass, sous forme de bibliothèque, de framework, de système de grille ou autre, il peut s'avérer intéressant de donner un *namespace* à vos variables, fonctions, mixins et placeholders de façon à ce qu'ils n'entrent pas en conflit avec le code d'une autre personne.
 
@@ -117,7 +117,7 @@ $su-configuration: ( ... )
 </div>
 
 <div class="note">
-  <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d' <code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>
+  <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d'&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>
 </div>
 
 ### Lectures complémentaires
