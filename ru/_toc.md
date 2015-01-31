@@ -53,7 +53,7 @@
   * [Управление точками остановки](#breakpoint-manager)
   * [Использование медиа-запросов](#media-queries-usage)
 * [Переменные](#variables)
-  * [Контекст](#scoping)
+  * [Области видимости](#scoping)
   * [Флаг !default](#default-flag)
   * [Флаг !global](#global-flag)
   * [Много переменных или карты](#multiple-variables-or-maps)
