@@ -50,7 +50,7 @@
   * [Файл позора](#shame-file)
 * [Адаптивный веб-дизайн и точки остановки](#responsive-web-design-and-breakpoints)
   * [Именование точек остановки](#naming-breakpoints)
-  * [Менеджер точек остановки](#breakpoint-manager)
+  * [Управление точками остановки](#breakpoint-manager)
   * [Использование медиа-запросов](#media-queries-usage)
 * [Переменные](#variables)
   * [Контекст](#scoping)
