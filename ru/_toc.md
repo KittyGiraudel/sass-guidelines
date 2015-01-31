@@ -57,7 +57,7 @@
   * [Флаг !default](#default-flag)
   * [Флаг !global](#global-flag)
   * [Много переменных или карты](#multiple-variables-or-maps)
-* [Расширение](#extend)
+* [Extend](#extend)
 * [Примеси](#mixins)
   * [Основы](#basics)
   * [Список аргументов](#arguments-list)
