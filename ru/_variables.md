@@ -184,7 +184,7 @@ $baseline: 2em !global
 /// @access private
 /// @type Map
 /// @prop {String} key - Имя слоя
-/// @prop {Number} valye - значение Z, соответствущее ключу
+/// @prop {Number} value - значение Z, соответствущее ключу
 $z-indexes: (
   'modal': 5000,
   'dropdown': 4000,
@@ -208,7 +208,7 @@ $z-indexes: (
 /// @access private
 /// @type Map
 /// @prop {String} key - Имя слоя
-/// @prop {Number} valye - значение Z, соответствущее ключу
+/// @prop {Number} value - значение Z, соответствущее ключу
 $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 /// Получение значения z-index из имени слоя
