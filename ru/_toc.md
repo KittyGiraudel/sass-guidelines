@@ -72,6 +72,6 @@
   * [Ошибки](#errors)
 * [Инструменты](#tools)
   * [Compass](#compass)
-  * [Сетки](#grid-systems)
+  * [Системы сеток](#grid-systems)
   * [SCSS-lint](#scss-lint)
 * [Слишком долго; Не читал](#too-long-didnt-read)
