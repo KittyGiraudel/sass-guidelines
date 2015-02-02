@@ -1,7 +1,7 @@
 
 # Formatação e sintaxe
 
-Se me perguntarem, a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
+Se me perguntarem a mim, diria que a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
 
 Quando vários programadores estão responsáveis por escrever CSS simultaneamente nos mesmos projectos, é apenas uma questão de tempo até que um deles comece a escrever as coisas à sua maneira. Guias de estilo que promovam consistência não só previnem isto, mas ajudam também à leitura e manutenção do código.
 
@@ -42,7 +42,7 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
   </div>
 </div>
 
-Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos este tópico na [secção de arquitetura](#arquitetura).
+Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos esse tópico na [secção de arquitetura](#arquitetura).
 
 
 
@@ -59,8 +59,8 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 
 * nomes de cores são tratados como cores quando não possuem aspas, o que pode levar a conflitos;
 * a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
-* ajuda em geral à leitura
-* não existe uma razão válida para não as usar
+* ajuda em geral à leitura;
+* não existe uma razão válida para não as usar;
 
 
 <div class="code-block">
@@ -137,7 +137,7 @@ URLs também devem seguir a mesma regra:
 
 ## Números
 
-Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
+Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, a frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
 
 
 
@@ -203,7 +203,7 @@ $length: 0em
   </div>
 </div>
 
-O erro mais comum que me consigo lembrar no que diz respeito a números em Sass, é pensar que as unidades representam strings que podem ser adicionadas livremente a um número. Enquanto isto pode parecer verdadeiro, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
+O erro mais comum que me consigo lembrar no que diz respeito a números em Sass, é pensar que as unidades representam strings que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
@@ -332,7 +332,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 ### Números mágicos
 
-"Números mágicos" (Magic number) diz respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por trás dele.
+"Números mágicos" (Magic number) dizem respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
@@ -376,22 +376,20 @@ Escusado será dizer que **números mágicos são uma praga e devem ser evitados
 
 ## Cores
 
-Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções poderosas](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções úteis para tal](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 
 
 ### Formatos de cores
 
-De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatores de cores:
-
-In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
+De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatação de cores:
 
 1. [Chaves de cores CSS](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Anotação HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-Para começar, as chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e valor. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Para começar, as chaves de cor normalmente falam por si só. A representação em HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e valor. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
 
 <div class="code-block">
@@ -422,8 +420,6 @@ Para começar, as chaves de cor normalmente falam por si só. A representação 
 </div>
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
-
-When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -478,8 +474,6 @@ $sass-pink: #c69
 
 Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso estiver demasiado preso a um tema, eu não recomendaria utilizar a variável desta forma. Em vez disso, devemos guardá-la numa variável cujo nome explique como deve ser utilizada.
 
-Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -503,7 +497,7 @@ Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Funct
 
 É importante referir que estas funções muitas vezes não geral os resultados que se esperaria. Por outro lado, a função de mistura [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) é uma boa forma de escurecer ou clarear uma cor misturando-a com branco ou preto.
 
-A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor aos extremos de branco ou preto.
+A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor para os extremos de branco ou preto.
 
 <figure role="group">
   <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
