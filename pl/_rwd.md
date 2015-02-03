@@ -165,6 +165,7 @@ Nie tak dawno temu, w społeczności pojawiła się dosyć burzliwa dyskusja na 
 
 Co prowadzi do następującego CSSu:
 
+<div>
 {% highlight css %}
 .foo {
   color: red;
@@ -176,6 +177,7 @@ Co prowadzi do następującego CSSu:
   }
 }
 {% endhighlight %}
+</div>
 
 Możesz usłyszeć opinie, że taka konwencja prowadzi do duplikowania media queries w wynikowym CSSie. Jest to niewątpliwie prawdą. Należy jednak zaznaczyć, że [przeprowadzono w tej kwestii testy](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries), które wykazały że nie ma to żadnego znaczenia, w momencie gdy Gzip (lub inna metoda kompresji) został użyty na serwerze:
 

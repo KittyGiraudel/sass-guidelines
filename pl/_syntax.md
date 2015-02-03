@@ -1111,11 +1111,13 @@ Na przykład, poniższe zagnieżdżenie w Sassie:
 
 ... wygeneruje taki kod CSS:
 
+<div>
 {% highlight css %}
 .foo .bar:hover {
   color: red;
 }
 {% endhighlight %}
+</div>
 
 Oprócz tego, od momentu wydania Sassa w wersji 3.3 możliwe jest odwoływanie się do obecnego selektora poprzez (`&`), celem wygenerowania bardziej złożonego selektora. Dla przykładu:
 

@@ -1111,11 +1111,13 @@ Par exemple, l'imbrication Sass suivante&nbsp;:
 
 ... génèrera ce CSS&nbsp;:
 
+<div>
 {% highlight css %}
 .foo .bar:hover {
   color: red;
 }
 {% endhighlight %}
+</div>
 
 En suivant la même idée, il est possible depuis Sass 3.3 d'utiliser la référence au sélecteur courant (`&`) pour générer des sélecteurs avancés, par exemple&nbsp;:
 
