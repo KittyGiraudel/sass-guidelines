@@ -1101,11 +1101,13 @@ For instance, the following Sass nesting:
 
 ... will generate this CSS:
 
+<div>
 {% highlight css %}
 .foo .bar:hover {
   color: red;
 }
 {% endhighlight %}
+</div>
 
 Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
 

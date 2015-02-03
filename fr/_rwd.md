@@ -165,6 +165,7 @@ Il y a peu, un débat faisait rage sur la question de savoir où placer les medi
 
 Ce qui conduit au résultat suivant en CSS&nbsp;:
 
+<div>
 {% highlight css %}
 .foo {
   color: red;
@@ -176,6 +177,7 @@ Ce qui conduit au résultat suivant en CSS&nbsp;:
   }
 }
 {% endhighlight %}
+</div>
 
 On vous dira que cette convention a pour effet la duplication de media queries en CSS, et c'est absolument vrai, même si des [tests ont été réalisés](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) qui montrent que cela n'a pas d'importance une fois que Gzip (ou équivalent) a fait son oeuvre&nbsp;:
 
