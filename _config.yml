@@ -10,10 +10,10 @@ github_username:  HugoGiraudel
 safe: true
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
-# kramdown:
-#     transliterated_header_ids: true
+redcarpet:
+    extensions: [with_toc_data]
 
 sass:
     style: :compressed
