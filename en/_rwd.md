@@ -163,6 +163,7 @@ Not so long ago, there has been a quite hot debate about where should be written
 
 Leading to the following CSS output:
 
+<div>
 {% highlight css %}
 .foo {
   color: red;
@@ -174,6 +175,7 @@ Leading to the following CSS output:
   }
 }
 {% endhighlight %}
+</div>
 
 You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn't matter once Gzip (or any equivalent) has done its thing:
 
