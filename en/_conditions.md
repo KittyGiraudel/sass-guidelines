@@ -76,6 +76,35 @@ When testing for a falsy value, always use the `not` keyword rather than testing
   </div>
 </div>
 
+Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+@if $value == 42 {
+  // ...
+}
+
+// Nope
+@if 42 == $value {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+@if $value == 42
+  // ...
+
+// Nope
+@if 42 == $value
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
 When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
 
 <div class="code-block">
