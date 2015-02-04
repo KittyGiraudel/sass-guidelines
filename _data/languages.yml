@@ -100,7 +100,7 @@ ru:
   version: 1.0.0
   label: Russian
   prefix: /ru/
-  available: false
+  available: true
   translators:
     - name: Даниил Пронин
       link: https://github.com/grawl
