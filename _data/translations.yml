@@ -50,16 +50,6 @@ en:
     content: "Made with love by [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Note"
 
-es:
-  donate:
-    content: Si has disfrutado de Sass Guidelines, por favor considera hacer una donación."
-    button: "Donar a Sass Guidelines"
-  baseline:
-    content: "Una guía de estilo subjetiva para desarrollar Sass sano, sostenible y escalable."
-  footer:
-    content: "Hecho con amor por [Hugo Giraudel](http://hugogiraudel.com)"
-  note: "Nota"
-  
 fr:
   donate:
     content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir."
@@ -132,10 +122,11 @@ ru:
 
 sp:
   donate:
-    content: ""
-    button: ""
+    content: Si has disfrutado de Sass Guidelines, por favor considera hacer una donación."
+    button: "Donar a Sass Guidelines"
   baseline:
-    content: ""
+    content: "Una guía de estilo subjetiva para desarrollar Sass sano, sostenible y escalable."
   footer:
-    content: ""
-  note: ""
+    content: "Hecho con amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Nota"
+  
