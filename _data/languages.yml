@@ -117,3 +117,14 @@ sp:
       link: https://github.com/soniar4i
     - name: David Khourshid
       link: https://github.com/davidkpiano
+
+zh:
+  version: 1.0.0
+  label: Chinese
+  prefix: /zh/
+  available: true
+  translators:
+    - name: Airen
+      link: https://github.com/airen
+    - name: Sean Sun
+      link: https://github.com/pinggod
