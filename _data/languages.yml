@@ -122,7 +122,7 @@ zh:
   version: 1.0.0
   label: Chinese
   prefix: /zh/
-  available: false
+  available: true
   translators:
     - name: Airen
       link: https://github.com/airen
