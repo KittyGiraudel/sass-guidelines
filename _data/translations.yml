@@ -129,3 +129,13 @@ sp:
   footer:
     content: ""
   note: ""
+
+zh:
+  donate:
+    content: "如果你喜欢Sass Guidelines,请支持它"
+    button: "支持Sass Guidelines"
+  baseline:
+    content: "编写稳健、可维护和可扩展Sass的编程规范"
+  footer:
+    content: "本文由[Hugo Giraudel](http://hugogiraudel.com)编写和维护"
+  note: "Note"
