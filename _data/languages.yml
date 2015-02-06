@@ -124,7 +124,7 @@ zh:
   prefix: /zh/
   available: true
   translators:
-    - name: Airen
-      link: https://github.com/airen
+    - name: 大漠
+      link: http://www.w3cplus.com
     - name: Sean Sun
       link: https://github.com/pinggod
