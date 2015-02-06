@@ -328,7 +328,7 @@ Al añadir a un número cualquiera, una unidad en forma de cadena, el resultado 
 
 ### Números Mágicos
 
-Un "número mágico" es un término de programación de la [vieja escuela](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica. 
+Un "número mágico" es un término de programación de la [vieja escuela](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica.
 
 No hace falta decir que **los números mágicos son una plaga y que se deben evitar a toda costa**. Cuando no se puede encontrar una explicación razonable a por qué un número funciona, añade un comentario claro y completo explicando como has llegado hasta allí y por qué crees que funciona. Admitir que no sabes por qué algo funciona es mucho más útil para el siguiente desarrollador que dejarle tener que averiguar lo que está pasando desde el principio.
 
@@ -1099,11 +1099,13 @@ Por ejemplo, el siguiente anidamiento Sass:
 
 ...generará el siguiente CSS:
 
+<div>
 {% highlight css %}
 .foo .bar:hover {
   color: red;
 }
 {% endhighlight %}
+</div>
 
 En la misma línea, desde Sass 3.3 es posible usar la referencia al selector actual (`&`) para generar selectores avanzados. Por ejemplo:
 
@@ -1192,7 +1194,7 @@ Para los principiantes, se permite e incluso se recomienda anidar pseudo-clases 
 
 Usar la anidación para las pseudo-clases y pseudo-elementos no solo tiene sentido (porque trata selectores estrechamente relacionados), sino que también ayuda a mantenter todo lo relacionado con un componente en un mismo lugar.
 
-Además, cuando se utilizan clases de estado independientes del dispositivo como `.is-active`, está perfectamente bien anidar bajo el selector del componente para mantenerlo todo ordenado. 
+Además, cuando se utilizan clases de estado independientes del dispositivo como `.is-active`, está perfectamente bien anidar bajo el selector del componente para mantenerlo todo ordenado.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

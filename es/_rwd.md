@@ -163,6 +163,7 @@ No hace mucho tiempo, hubo un debate bastante acalorado acerca de dónde deberí
 
 Resultaría el siguiente bloque CSS:
 
+<div>
 {% highlight css %}
 .foo {
   color: red;
@@ -174,6 +175,7 @@ Resultaría el siguiente bloque CSS:
   }
 }
 {% endhighlight %}
+</div>
 
 Es posible que escuches que este acuerdo dará como resultado en CSS bloques duplicados de *media queries*. Esto es definitivamente cierto. Sin embargo, [se han realizado pruebas](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) y la conclusión es que no importará una vez Gzip (o cualquier equivalente) haya hecho su trabajo:
 
