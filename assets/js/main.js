@@ -114,3 +114,7 @@
   global.App = App;
 
 }(window));
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var app = new App();
+});
