@@ -3,7 +3,7 @@
 
 * [关于作者](#关于作者)
 * [贡献](#贡献)
-* [关于Sass](#关于Sass)
+* [关于Sass](#关于sass)
     * [Ruby Sass Or LibSass](#ruby-sass-or-libsass)
     * [Sass Or SCSS](#sass-or-scss)
     * [其他预编译器](#其他预编译器)
@@ -25,7 +25,7 @@
     * [列表](#列表)
     * [Maps](#maps)
         * [调试Sass map](#调试sass-map)
-    * [CSS规则集](#CSS规则集)
+    * [CSS规则集](#css规则集)
     * [声明顺序](#声明顺序)
     * [选择器嵌套](#选择器嵌套)
         * [一般规则](#一般规则)
