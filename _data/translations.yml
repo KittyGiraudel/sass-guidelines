@@ -120,15 +120,15 @@ ru:
     content: "Сделано с любовью [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Заметка"
 
-sp:
+es:
   donate:
-    content: ""
-    button: ""
+    content: "Si has disfrutado de Sass Guidelines, por favor considera hacer una donación."
+    button: "Donar a Sass Guidelines"
   baseline:
-    content: ""
+    content: "Una guía de estilo comprometida en desarrollar Sass sano, sostenible y escalable."
   footer:
-    content: ""
-  note: ""
+    content: "Hecho con amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Nota"
 
 zh:
   donate:

@@ -107,11 +107,11 @@ ru:
     - name: Pavel Demyanenko
       link: https://github.com/PavelDemyanenko
 
-sp:
+es:
   version: 1.0.0
   label: Spanish
-  prefix: /sp/
-  available: false
+  prefix: /es/
+  available: true
   translators:
     - name: Sonia Conde
       link: https://github.com/soniar4i
