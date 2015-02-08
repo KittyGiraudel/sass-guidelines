@@ -406,11 +406,6 @@ sass/
 </div>
 
 <div class="note">
-  <p>为了不用亲自引入每一个文件， there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>话虽如此，却不推荐它，因为它按照字母顺序引入文件，这往往并不是想要的，特别是处理一个对源文件顺序有所依赖的编程语言的时候。</p>
-</div>
-
-<div class="note">
   <p>为了不用亲自引入每一个文件，有一个叫做<a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>的Ruby Sass扩展程序，使在Sass的<code>@import</code>中,使其做为glob模式，就像这样：<code>@import "components/*"</code></p>
   <p>话虽如此，却不推荐它，因为它按照字母顺序引入文件，这往往并不是想要的，特别是处理一个对源文件顺序有所依赖的编程语言的时候。</p>
 </div>
