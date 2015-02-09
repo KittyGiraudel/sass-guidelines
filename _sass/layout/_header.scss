@@ -6,8 +6,8 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  padding: 2rem 0;
-  margin-bottom: 5rem;
+  padding: 1.5rem 0;
+  margin-bottom: 4.5rem;
   border-bottom: .5em solid darken($secondary-color, 5%);
 }
 
@@ -21,7 +21,7 @@
 
   // Long shadow
   $shadows: ();
-  @for $i from 1 through 200 {
+  @for $i from 1 through 140 {
     $shadows: append($shadows, ($i * 1px) ($i * 1px) darken($secondary-color, 5%), comma);
   }
   text-shadow: $shadows;
