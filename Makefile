@@ -15,5 +15,5 @@ _site/css/critical.css:
 	jekyll build
 
 inline: _site/css/critical.css
-	awk '/<!-- START INLINE -->/ {print; s=1} /<!-- END INLINE -->/ {s=0; print "<style>"; system("cat _site/css/critical.css"); print "</style>"} !s' _includes/head.html > _includes/head.html.tmp
+	awk -f _utils/inline.awk _includes/head.html > _includes/head.html.tmp
 	mv _includes/head.html.tmp _includes/head.html
