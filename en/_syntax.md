@@ -55,7 +55,7 @@ CSS does not require strings to be quoted, not even those containing spaces. Tak
 
 Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** (`'`) in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
 
 * color names are treated as colors when unquoted, which can lead to serious issues;
 * most syntax highlighters will choke on unquoted strings;
@@ -92,6 +92,33 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="note">
   <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
 </div>
+
+### Strings containing quotes
+
+If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Okay
+@warn 'You can\'t do that.';
+
+// Okay
+@warn "You can't do that.";
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Okay
+@warn 'You can\'t do that.'
+
+// Okay
+@warn "You can't do that."
+{% endhighlight %}
+  </div>
+</div>
+
+### URLs
 
 URLs should be quoted as well, for the same reasons as above:
 
