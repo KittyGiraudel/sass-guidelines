@@ -13,6 +13,7 @@
     * [Key Principles](#key-principles)
 * [Syntax & Formatting](#syntax-&-formatting)
     * [Strings](#strings)
+        * [Strings as CSS values](#strings-as-css-values)
         * [Strings containing quotes](#strings-containing-quotes)
         * [URLs](#urls)
     * [Numbers](#numbers)

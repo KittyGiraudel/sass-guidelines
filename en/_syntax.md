@@ -66,32 +66,57 @@ That being said, languages that do not require strings to be quoted are definite
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$direction: 'left';
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+$direction: left;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+$direction: 'left'
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
+$direction: left
 {% endhighlight %}
   </div>
 </div>
 
-<div class="note">
-  <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
+### Strings as CSS values
+
+Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+$font-type: sans-serif;
+
+// Nope
+$font-type: 'sans-serif';
+
+// Okay I guess
+$font-type: unquote('sans-serif');
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+$font-type: sans-serif
+
+// Nope
+$font-type: 'sans-serif'
+
+// Okay I guess
+$font-type: unquote('sans-serif')
+{% endhighlight %}
+  </div>
 </div>
+
+Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
+
+We don't quote the former, but we do wrap the latter in single quotes.
 
 ### Strings containing quotes
 
