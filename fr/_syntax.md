@@ -1053,7 +1053,7 @@ Il existe encore un autre modèle d'ordonnancement des types, [Concentric CSS](h
 Je dois dire que je n'arrive pas à me décider moi-même. Un [récent sondage de CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) a montré que plus de 45% des développeurs ordonnent leurs déclarations par type, contre 14% par ordre alphabétique. 39% le font au hasard, et j'en fais partie.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Tableau montrant comment les développeurs ordonnent leurs déclarations CSS" />
+  <img src="/assets/images/css-order-chart.png" alt="Tableau montrant comment les développeurs ordonnent leurs déclarations CSS" />
   <figcaption>Tableau montrant comment les développeurs ordonnent leurs déclarations CSS</figcaption>
 </figure>
 

@@ -1043,7 +1043,7 @@ $breakpoints: (
 Я должен сказать, что не могу решить это сам. [Недавний опрос на CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) установил, что более 45% разработчиков упорядочивают свойства по их назначению, против 14% в алфавитном порядке. Кроме того, есть 39%, кто делает это случайно, я в том числе.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="График, показывающий, как разработчики упорядочивают свой CSS" />
+  <img src="/assets/images/css-order-chart.png" alt="График, показывающий, как разработчики упорядочивают свой CSS" />
   <figcaption>График, показывающий, как разработчики упорядочивают свой CSS</figcaption>
 </figure>
 

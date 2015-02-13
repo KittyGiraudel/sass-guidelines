@@ -1052,7 +1052,7 @@ Istnieje również inny interesujący pogląd na porządkowanie reguł zwany [Co
 Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
+  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
   <figcaption>Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie.</figcaption>
 </figure>
 

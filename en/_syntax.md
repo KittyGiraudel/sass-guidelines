@@ -1043,7 +1043,7 @@ There is also another interesting subtree of type ordering called [Concentric CS
 I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
+  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
   <figcaption>Chart showing how developers order their CSS declarations</figcaption>
 </figure>
 

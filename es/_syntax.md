@@ -1041,7 +1041,7 @@ También hay otra rama interesante en cuanto al orden de propiedades, llamado [C
 Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determinó que más de un 45% de los desarrolladores ordenan sus declaraciones por tipo, frente el 14% que lo hace alfabéticamente. También hay un 39% que lo hace completamente al azar, incluido yo mismo.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
+  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
   <figcaption>Gráfico que muestra cómo los desarrolladores ordenan sus declaraciones CSS</figcaption>
 </figure>
 

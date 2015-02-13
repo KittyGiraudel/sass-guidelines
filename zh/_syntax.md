@@ -1041,7 +1041,7 @@ $breakpoints: (
 我必须说我不能对此下任何判定。一份[CSS-Tricks做的统计报告](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)确认，超过45%的开发者使用类型顺序声明，而只有14%使用字母顺序。此外还有39%的开发者随意而为，这其中就包括我。
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
+  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
   <figcaption>Chart showing how developers order their CSS declarations</figcaption>
 </figure>
 
