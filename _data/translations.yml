@@ -139,3 +139,13 @@ zh:
   footer:
     content: "本文由[Hugo Giraudel](http://hugogiraudel.com)编写和维护"
   note: "Note"
+
+ko:
+  donate:
+    content: "Sass Guidelines가 맘에 드신다면 후원을 고려해주시기 바랍니다."
+    button: "Sass Guidelines 후원하기"
+  baseline:
+    content: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
+  footer:
+    content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음"
+  note: "주"
