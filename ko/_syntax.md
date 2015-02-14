@@ -620,7 +620,7 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,)
   </div>
 </div>
 
-리스트에 새로운 아이템을 추가할 때는, 언제나 제공된 API를 이용하세요. 수동���로 새로운 아이템을 추가하려고 하지 마세요.
+리스트에 새로운 아이템을 추가할 때는, 언제나 제공된 API를 이용하세요. 수동으로 새로운 아이템을 추가하려고 하지 마세요.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
