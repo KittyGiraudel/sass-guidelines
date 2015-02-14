@@ -1,3 +1,14 @@
+zh:
+  version: 1.0.0
+  label: Chinese
+  prefix: /zh/
+  available: true
+  translators:
+    - name: 大漠
+      link: http://www.w3cplus.com
+    - name: Sean Sun
+      link: https://github.com/pinggod
+
 cz:
   version: 1.0.0
   label: Czech
@@ -6,15 +17,6 @@ cz:
   translators:
     - name: Pavel Antolík
       link: https://github.com/pavelantolik
-
-da:
-  version: 1.0.0
-  label: Danish
-  prefix: /da/
-  available: false
-  translators:
-    - name: Patrick Redzdaz
-      link: https://github.com/PatrickKDK
 
 nl:
   version: 1.0.0
@@ -72,6 +74,15 @@ it:
     - name: Simone Rescio
       link: https://github.com/srescio
 
+ko:
+  version: 1.0.0
+  label: Korean
+  prefix: /ko/
+  available: true
+  translators:
+    - name: Donghee Kim
+      link: https://github.com/kimdhoe
+
 pl:
   version: 1.0.0
   label: Polish
@@ -117,23 +128,3 @@ es:
       link: https://github.com/soniar4i
     - name: David Khourshid
       link: https://github.com/davidkpiano
-
-zh:
-  version: 1.0.0
-  label: Chinese
-  prefix: /zh/
-  available: true
-  translators:
-    - name: 大漠
-      link: http://www.w3cplus.com
-    - name: Sean Sun
-      link: https://github.com/pinggod
-
-ko:
-  version: 1.0.0
-  label: Korean
-  prefix: /ko/
-  available: true
-  translators:
-    - name: Donghee Kim
-      link: https://github.com/kimdhoe
