@@ -496,7 +496,12 @@ $main-theme-color: $sass-pink
 Преимуществом использования `mix` перед одной из двух указанных функций выше является то, что она будет постепенно меняться на чёрный (или белый), когда вы уменьшаете долю цвета, в то время как `darken` и `lighten` быстро меняют цвет на чёрный или белый.
 
 <figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Иллюстрация разницы между функциями darken/lighten и mix в Sass" />
+  <img alt="Иллюстрация разницы между функциями darken/lighten и mix в Sass"
+     sizes="100vw"
+     srcset="/assets/images/lighten-darken-mix_small.png  540w,
+             /assets/images/lighten-darken-mix_medium.png 900w,
+             /assets/images/lighten-darken-mix_large.png 1200w,
+             /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Иллюстрация разницы между функциями <code>lighten</code>/<code>darken</code> и <code>mix</code> в Sass от <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 
