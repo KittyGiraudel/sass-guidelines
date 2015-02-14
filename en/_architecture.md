@@ -119,7 +119,7 @@ sass/
 |   ...                  # Etc…
 |
 |
-`– main.scss             # primary Sass file
+`– main.scss             # Main Sass file
 </code></pre></div>
 
 <div class="note">
