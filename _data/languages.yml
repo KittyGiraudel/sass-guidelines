@@ -128,3 +128,12 @@ zh:
       link: http://www.w3cplus.com
     - name: Sean Sun
       link: https://github.com/pinggod
+
+ko:
+  version: 1.0.0
+  label: Korean
+  prefix: /ko/
+  available: true
+  translators:
+    - name: Donghee Kim
+      link: https://github.com/kimdhoe
