@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{ '/css/full.css' | prepend: site.baseurl }}">
   </noscript>
 
+  <script>document.createElement('picture')</script>
+
+  <script src="{{ '/assets/js/picturefill.min.js' | prepend: site.baseurl }}" async></script>
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- Thanks to Sass-lang.com for the icon -->
