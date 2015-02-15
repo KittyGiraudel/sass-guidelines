@@ -8,7 +8,7 @@ Sass가 `@import` 지시어의 무거운 짐을 짊어진 덕분에 개발 단�
 
 무엇보다도, 폴더의 중요성에 대해서는 아무리 강조해도 지나치지 않습니다. 심지어 작은 규모의 프로젝트에서조차 말입니다. 집에서도 모든 서류를 같은 박스에 넣지는 않는 법입니다. 폴더를 사용하겠죠: 집/아파트용, 은행용, 청구서용, 기타 등등. CSS 프로젝트를 구축할 때도 다르게 할 이유가 없습니다. 나중에 코드로 돌아왔을 때 찾아내기 쉽도록 코드베이스를 의미있는 분리된 폴더로 나누세요.
 
-CSS를 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)류 [Foundation](http://foundation.zurb.com/)류... 이들 모두 훌륭하며, 장단점을 갖고 있습니다.
+CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)류, [Foundation](http://foundation.zurb.com/)류... 이들 모두 훌륭하며, 장단점을 갖고 있습니다.
 
 저 스스로는 [Jonathan Snook](http://snook.ca/)의 [SMACSS](https://smacss.com/)와 아주 비슷한 접근법을 사용하는데, 이것은 간단명료함을 유지하는 데 초점을 맞추고 있습니다.
 

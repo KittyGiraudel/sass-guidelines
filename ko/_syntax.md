@@ -42,7 +42,7 @@
   </div>
 </div>
 
-이 절에서는 파일 구조에 대한 질문과는 씨름하지 않겠습니다. 그것은 [다른 절](#architecture)의 주제입니다.
+이 절에서는 파일 구조에 대한 질문과는 씨름하지 않겠습니다. 그것은 [다른 절](#설계)의 주제입니다.
 
 
 
@@ -566,7 +566,7 @@ $main-theme-color: $sass-pink
 
 ## 리스트
 
-리스트는 Sass에서 배열에 상당하는 개념입니다. 리스트는 어떤 타입의 값이든(리스트도 포함. 이 경우 내포 리스트가 된다) 저장할 수 있게 의도된 ([맵](#maps)과 달리) 평면적인 데이터 구조입니다.
+리스트는 Sass에서 배열에 상당하는 개념입니다. 리스트는 어떤 타입의 값이든(리스트도 포함. 이 경우 내포 리스트가 된다) 저장할 수 있게 의도된 ([맵](#맵)과 달리) 평면적인 데이터 구조입니다.
 
 리스트는 다음의 가이드라인을 준수해야 합니다:
 
@@ -1050,7 +1050,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 이 때문에, 이 스타일가이드에서는 선택을 강요하지 않겠습니다. 여러분이 스타일시트 내내 일관성을 유지하기만 한다면, 맘에 드는 걸로 고르시면 됩니다.
 
 <div class="note">
-  <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
+  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
 </div>
 
 
