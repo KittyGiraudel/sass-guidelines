@@ -16,4 +16,6 @@ figcaption {
   text-align: center;
   font-size: .8em;
   font-style: italic;
+
+  @include beautify-links($figure-background);
 }
