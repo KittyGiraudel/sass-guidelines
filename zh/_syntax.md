@@ -495,7 +495,12 @@ $main-theme-color: $sass-pink
 和上述两个函数相比，使用`mix`的好处是，当你降低颜色的比例时，它会渐进的接近黑色（或者白色），而 `darken` 和`lighten`立即变换颜色到黑色或白色。
 
 <figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
+  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
+     sizes="100vw"
+     srcset="/assets/images/lighten-darken-mix_small.png  540w,
+             /assets/images/lighten-darken-mix_medium.png 900w,
+             /assets/images/lighten-darken-mix_large.png 1200w,
+             /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Illustration of the difference between <code>lighten</code>/<code>darken</code> and <code>mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 

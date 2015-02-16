@@ -500,7 +500,12 @@ L'avantage d'utiliser `mix` plutôt que les deux fonctions précédemment citée
 
 
 <figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Illustration de la différence entre lighten/darken et les fonctions mix de Sass" />
+  <img alt="Illustration de la différence entre lighten/darken et la fonction mix de Sass"
+     sizes="100vw"
+     srcset="/assets/images/lighten-darken-mix_small.png  540w,
+             /assets/images/lighten-darken-mix_medium.png 900w,
+             /assets/images/lighten-darken-mix_large.png 1200w,
+             /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Illustration de la différence entre <code>lighten</code>/<code>darken</code> et <code>mix</code> par <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 

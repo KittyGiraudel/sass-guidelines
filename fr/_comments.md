@@ -144,7 +144,12 @@ SassDoc a deux rôles principaux&nbsp;:
 * permettre de générer une version HTML de la documentation API en utilisant n'importe quel endpoint SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
 <figure role="group">
-<img alt="Documentation générée par SassDoc" src="/assets/images/sassdoc-preview.png" />
+<img alt="Documentation générée par SassDoc"
+     sizes="100vw"
+     srcset="/assets/images/sassdoc-preview_small.png  540w,
+             /assets/images/sassdoc-preview_medium.png 900w,
+             /assets/images/sassdoc-preview_large.png 1200w,
+             /assets/images/sassdoc-preview_huge.png  1590w" />
 <figcaption>Documentation générée par SassDoc</figcaption>
 </figure>
 

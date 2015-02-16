@@ -496,7 +496,12 @@ The thing is, those functions often do not provide the expected result. On the o
 The benefit of using `mix` rather than one of the two aforementioned functions is that it will progressively go to black (or white) as you decrease the proportion of the color, whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
 
 <figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
+  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
+     sizes="100vw"
+     srcset="/assets/images/lighten-darken-mix_small.png  540w,
+             /assets/images/lighten-darken-mix_medium.png 900w,
+             /assets/images/lighten-darken-mix_large.png 1200w,
+             /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Illustration of the difference between <code>lighten</code>/<code>darken</code> and <code>mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 

@@ -502,7 +502,12 @@ Rzecz w tym, że te funkcje często nie prowadzą do takich rezultatów, jakich 
 Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnianych, jest niewątpliwie fakt, że zapewnia ona progresywne przejście do czerni (lub bieli) w trakcie zmniejszania proporcji głównego koloru, w czasie gdy funkcje `darken` i `lighten` w sposób o wiele bardziej nagły wytracają nasz kolor.
 
 <figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
+  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
+     sizes="100vw"
+     srcset="/assets/images/lighten-darken-mix_small.png  540w,
+             /assets/images/lighten-darken-mix_medium.png 900w,
+             /assets/images/lighten-darken-mix_large.png 1200w,
+             /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Ilustracja pokazująca różnicę pomiędzy funkcjami <code>lighten</code>/<code>darken</code> i <code>mix</code>, stworzona przez <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
 
