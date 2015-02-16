@@ -15,13 +15,13 @@
  * Main title
  */
 .title {
-  margin-top: 0;
+  margin: 0;
   max-width: none;
   font-size: 6em;
 
   // Long shadow
   $shadows: ();
-  @for $i from 1 through 140 {
+  @for $i from 1 through 120 {
     $shadows: append($shadows, ($i * 1px) ($i * 1px) darken($secondary-color, 5%), comma);
   }
   text-shadow: $shadows;

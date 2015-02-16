@@ -20,21 +20,33 @@ body {
   color: #333;
 }
 
+
 /**
  * Links
  */
 a,
 .link-like {
-  cursor: pointer;
   text-decoration: none;
-  color: $main-color;
-  font-weight: 700;
+  cursor: pointer;
+  color: inherit;
   transition: .15s;
 
-  @include on-event {
-    color: $secondary-color;
+   @include on-event {
+    color: $main-color;
   }
 }
+
+/**
+ * Custom underlines for links that are neither buttons nor anchor links
+ */
+a:not([class*='button']):not(.anchor-link),
+.link-like {
+  background: -webkit-linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
+  background: linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
+  background-size: 100% 1px;
+}
+
+@include beautify-links(white);
 
 /**
  * Inline code

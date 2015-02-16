@@ -8,4 +8,5 @@
 
 .translation-warning > p {
   @include container;
+  @include beautify-links($quote-background);
 }
