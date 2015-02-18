@@ -62,6 +62,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
+<div class="note">
+  <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
+</div>
+
 
 
 
@@ -86,8 +90,12 @@ Once you have named your breakpoints the way you want, you need a way to use the
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
       @content;
     }
   } @else {
@@ -104,8 +112,12 @@ Once you have named your breakpoints the way you want, you need a way to use the
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 =respond-to($breakpoint)
-  @if map-has-key($breakpoints, $breakpoint)
-    @media #{inspect(map-get($breakpoints, $breakpoint))}
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
       @content
 
   @else
@@ -116,8 +128,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
 </div>
 
 <div class="note">
-  <p>Obviously, this is a fairly simplistic breakpoint manager that will not do the trick when dealing with custom and/or multiple-checks breakpoints.</p>
-  <p>If you need a slightly more permissive breakpoint manager, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 
