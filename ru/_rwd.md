@@ -36,10 +36,10 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$breakpoints: ("medium": (min-width: 800px), "large": (min-width: 1000px), "huge": (min-width: 1200px))
+$breakpoints: ('medium': (min-width: 800px), 'large': (min-width: 1000px), 'huge': (min-width: 1200px))
 
 // Nope
-$breakpoints: ("tablet": (min-width: 800px), "computer": (min-width: 1000px), "tv": (min-width: 1200px))
+$breakpoints: ('tablet': (min-width: 800px), 'computer': (min-width: 1000px), 'tv': (min-width: 1200px))
 {% endhighlight %}
   </div>
 </div>
@@ -58,7 +58,7 @@ $breakpoints: (
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$breakpoints: ("seed": (min-width: 800px), "sprout": (min-width: 1000px), "plant": (min-width: 1200px))
+$breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant': (min-width: 1200px))
 {% endhighlight %}
   </div>
 </div>
