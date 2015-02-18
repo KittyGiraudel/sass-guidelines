@@ -14,6 +14,8 @@ clean:
 _site/css/critical.css:
 	jekyll build
 
-inline: _site/css/critical.css
-	awk -f _utils/inline.awk _includes/head.html > _includes/head.html.tmp
-	mv _includes/head.html.tmp _includes/head.html
+_includes/critical.css:
+	touch _includes/critical.css
+
+inline: _includes/critical.css _site/css/critical.css
+	mv _site/css/critical.css _includes/critical.css
