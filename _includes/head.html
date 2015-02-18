@@ -10,6 +10,8 @@
 
   <style>
   {% include critical.css %}
+  {% for language in site.data.translations %}{% if language[1].note != "" %}:lang({{ language[0] }}) .note > p:first-child::before { content: "{{ language[1].note }} — "; }
+  {% endif %}{% endfor %}
   </style>
 
   <script>function loadCSS(e,t,n,r){"use strict";function u(){var t;for(var r=0;r<o.length;r++){if(o[r].href&&o[r].href.indexOf(e)>-1){t=true}}if(t){i.media=n||"all"}else{setTimeout(u)}}var i=window.document.createElement("link");var s=t||window.document.getElementsByTagName("script")[0];var o=window.document.styleSheets;i.rel="stylesheet";i.href=e;i.media="only x";i.onload=r||function(){};s.parentNode.insertBefore(i,s);u();return i}</script>
@@ -25,12 +27,4 @@
   <script src="{{ '/assets/js/picturefill.min.js' | prepend: site.baseurl }}" async></script>
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <!-- Thanks to Sass-lang.com for the icon -->
-  <link href="http://sass-lang.com/assets/img/ico/favicon-0ccd2d9d.png" rel="shortcut icon">
-
-  <style>
-  {% for language in site.data.translations %}{% if language[1].note != "" %}:lang({{ language[0] }}) .note > p:first-child::before { content: "{{ language[1].note }} — "; }
-  {% endif %}{% endfor %}
-  </style>
 </head>
