@@ -22,13 +22,8 @@
   loadCSS('{{ "/css/full.css" | prepend: site.baseurl }}');
 
   var ua = window.navigator.userAgent,
-      fontType = 'woff';
-
-  if (supportsWoff2) {
-    fontType = 'woff2';
-  } else if(ua.indexOf('Android 4.') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1) {
-    fontType = 'ttf';
-  }
+      ttf = ua.indexOf('Android 4.') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1,
+      fontType = supportsWoff2 ? 'woff2' : (ttf ? 'ttf' : 'woff');
 
   ['DroidSans', 'SourceCodePro'].forEach(function (element) {
     loadCSS('/css/fonts/' + element + '/data-' + fontType + '.css');
