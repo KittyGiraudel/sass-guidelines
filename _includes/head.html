@@ -14,10 +14,27 @@
   {% endif %}{% endfor %}
   </style>
 
-  <script>function loadCSS(e,t,n,r){"use strict";function u(){var t;for(var r=0;r<o.length;r++){if(o[r].href&&o[r].href.indexOf(e)>-1){t=true}}if(t){i.media=n||"all"}else{setTimeout(u)}}var i=window.document.createElement("link");var s=t||window.document.getElementsByTagName("script")[0];var o=window.document.styleSheets;i.rel="stylesheet";i.href=e;i.media="only x";i.onload=r||function(){};s.parentNode.insertBefore(i,s);u();return i}</script>
   <script>
-    loadCSS('{{ "/css/full.css" | prepend: site.baseurl }}');
+  {% include utilities.js %}
   </script>
+
+  <script>
+  loadCSS('{{ "/css/full.css" | prepend: site.baseurl }}');
+
+  var ua = window.navigator.userAgent,
+      fontType = 'woff';
+
+  if (supportsWoff2) {
+    fontType = 'woff2';
+  } else if(ua.indexOf('Android 4.') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1) {
+    fontType = 'ttf';
+  }
+
+  ['DroidSans', 'SourceCodePro'].forEach(function (element) {
+    loadCSS('/css/fonts/' + element + '/data-' + fontType + '.css');
+  });
+  </script>
+
   <noscript>
     <link rel="stylesheet" href="{{ '/css/full.css' | prepend: site.baseurl }}">
   </noscript>
