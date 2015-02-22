@@ -38,7 +38,6 @@
 
   App.prototype.initialize = function () {
     this.addHeadingAnchors();
-    this.loadCustomFonts();
     this.fixSkipLinks();
     this.bindUI();
   };
@@ -81,21 +80,6 @@
       link.setAttribute('class', 'anchor-link')
       heading.appendChild(link);
     }
-  };
-
-  App.prototype.loadCustomFonts = function () {
-      WebFontConfig = {
-        google: { families: ['Droid Sans:400,700', 'Source Code Pro'] }
-      };
-
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-                  '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
-        wf.async = 1;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
   };
 
   App.prototype.fixSkipLinks = function () {
