@@ -90,9 +90,7 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error 'No se ha encontrado un valor para `#{$breakpoint}`. '
          + 'Por favor, asegúrate que está definido en el mapa `$breakpoints`.';
   }

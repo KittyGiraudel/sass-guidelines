@@ -30,8 +30,7 @@ Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Zainicjuj globalną zmienną na poziomie głównym.
-// W tym przypadku, użycie flagi `!global` jest opcjonalne.
-$variable: 'initial value' !global;
+$variable: 'initial value';
 
 // Utwórz mixin, który nadpisuje globalną zmienną.
 @mixin global-variable-overriding {
@@ -60,8 +59,7 @@ $variable: 'initial value' !global;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Zainicjuj globalną zmienną na poziomie głównym.
-// W tym przypadku, użycie flagi `!global` jest opcjonalne.
-$variable: 'initial value' !global
+$variable: 'initial value'
 
 // Utwórz mixin, który nadpisuje globalną zmienną.
 @mixin global-variable-overriding

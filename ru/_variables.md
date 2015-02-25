@@ -30,8 +30,7 @@
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Объявить глобальную переменную на корневом уровне.
-// В этом случае флаг `!global` не обязателен.
-$variable: 'initial value' !global;
+$variable: 'initial value';
 
 // Создать примесь, которая перезаписывает глобальные переменные.
 @mixin global-variable-overriding {
@@ -61,8 +60,7 @@ $variable: 'initial value' !global;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Объявить глобальную переменную на корневом уровне.
-// В этом случае флаг `!global` не обязателен.
-$variable: 'initial value' !global
+$variable: 'initial value'
 
 // Создать примесь, которая перезаписывает глобальные переменные.
 @mixin global-variable-overriding

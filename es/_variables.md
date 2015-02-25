@@ -30,8 +30,7 @@ El siguiente fragmento de código explica el concepto de *sombreado de variable*
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Inicializar una variable global a nivel raiz.
-// En este caso `!global` es opcional.
-$variable: 'valor inicial' !global;
+$variable: 'valor inicial';
 
 // Crear un *mixin* que sobrescribe la variable global.
 @mixin global-variable-overriding {
@@ -60,8 +59,7 @@ $variable: 'valor inicial' !global;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Inicializar una variable global a nivel raiz.
-// En este caso `!global` es opcional.
-$variable: 'initial value' !global
+$variable: 'valor inicial'
 
 // Crear un *mixin* que sobrescribe la variable global.
 @mixin global-variable-overriding
@@ -91,7 +89,7 @@ $variable: 'initial value' !global
 
 
 
-## La bandera `!default` 
+## La bandera `!default`
 
 Cuando se construye una librería, un *framework*, un sistema de retícula o cualquier bloque de Sass que está destinado a ser distribuido y usado por desarrolladores externos, todas las variables de configuración deben estar definidas con la bandera `!default` para que puedan sobrescribirse.
 

@@ -32,8 +32,7 @@ Le petit code qui suit explique le concept de *variable shadowing*&nbsp;:
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Initialise une variable globale au niveau racine.
-// Dans ce cas, le flag `!global` est optionnel.
-$variable: 'initial value' !global;
+$variable: 'initial value';
 
 // Crée un mixin qui prend le pas sur cette variable globale.
 @mixin global-variable-overriding {
@@ -62,8 +61,7 @@ $variable: 'initial value' !global;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Initialise une variable globale au niveau racine.
-// Dans ce cas, le flag `!global` est optionnel.
-$variable: 'initial value' !global
+$variable: 'initial value'
 
 // Crée un mixin qui prend le pas sur cette variable globale.
 @mixin global-variable-overriding

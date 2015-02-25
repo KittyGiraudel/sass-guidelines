@@ -91,9 +91,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error 'Не указано значение для `#{$breakpoint}`. '
          + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
   }

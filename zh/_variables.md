@@ -30,8 +30,7 @@ Sass中变量的作用域在过去几年已经发生了一些改变。直到最�
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Initialize a global variable at root level.
-// In this case, the `!global` flag is optional.
-$variable: 'initial value' !global;
+$variable: 'initial value';
 
 // Create a mixin that overrides that global variable.
 @mixin global-variable-overriding {
@@ -60,8 +59,7 @@ $variable: 'initial value' !global;
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Initialize a global variable at root level.
-// In this case, the `!global` flag is optional.
-$variable: 'initial value' !global
+$variable: 'initial value'
 
 // Create a mixin that overrides that global variable.
 @mixin global-variable-overriding

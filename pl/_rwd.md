@@ -90,9 +90,7 @@ W momencie gdy Twoje breakpointy są już nazwane, potrzebujesz sposobu by ich u
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @error 'Nie znaleziono wartości dla `#{$breakpoint}`. '
          + 'Proszę się upewnić, że jest ona zdefiniowana w mapie `$breakpoints`.';
   }
