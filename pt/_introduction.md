@@ -17,7 +17,7 @@ Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, ma
   <p>Um guia de estilos de código (não um visual) é uma ferramenta de grande valor para equipas que:</p>
   <ul>
   	<li>criem e mantenham produtos durante uma quantidade de tempo considerável;</li>
-    <li>possuam programadores com abilidades e especialidades variadas;</li>
+    <li>possuam programadores com habilidades e especialidades variadas;</li>
     <li>possuam vários programadores a trabalhar num produto num dado momento;</li>
     <li>recebam novos membros regularmente;</li>
     <li>possuam várias _codebases_ que os programadores alternem;</li>
@@ -33,7 +33,7 @@ Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, ma
 
 Em primeiro lugar: **isto não é um guia de estilos de CSS**. Este documento não pretende discutir convenções de nomes para classes em CSS, padrões de módulos ou a questão de utilizar IDs no mundo de CSS. Estas guias dizem apenas respeito a conteúdo específico de Sass.
 
-Para além disso, este guia de estilos é da minha autoria e consequentemente **muito opinionado**. Podem pensar nele como uma coleção de metodologias e conselhos que eu tenho vindo a polir ao longo dos anos. Isto dá-me também a oportunidade de referenciar um punhado de recursos valiosos, por isso certifiquem-se que espreitam a secção de *leitura adicional*.
+Para além disso, este guia de estilos é da minha autoria e consequentemente **muito tendencioso**. Podem pensar nele como uma coleção de metodologias e conselhos que eu tenho vindo a polir ao longo dos anos. Isto dá-me também a oportunidade de referenciar um punhado de recursos valiosos, por isso certifiquem-se que espreitam a secção de *leitura adicional*.
 
 Obviamente, esta não será certamente a única maneira de fazer as coisas, e poderá ou não adequar-se ao vosso projecto. Sintam-se livres de o adaptar às vossas necessidades.
 
@@ -46,7 +46,7 @@ Obviamente, esta não será certamente a única maneira de fazer as coisas, e po
 
 No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **Sass deve ser mantido o mais simples possível**.
 
-Graças às minhas experiências, tais como [operadores  bitwise](https://github.com/HugoGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um parser de JSON](https://github.com/HugoGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
+Graças às minhas experiências, tais como [operadores  bitwise](https://github.com/HugoGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um interpretador de JSON](https://github.com/HugoGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
 
 Apesar de tudo, CSS é uma linguagem simples. Sass, com o propósito de escrever CSS, não deverá tornar-se muito mais complexa que CSS normal. O [princípio KISS](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) é chave, aqui, e deverá manter a precedência sobre o [princípio DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) na maior parte das situações.
 
