@@ -1,26 +1,26 @@
 
-# Too Long; Didn't read
+# Longo Demais; Não Li
 
-To sum up, we want:
+Resumindo, queremos:
 
-* Two (2) spaces indents, no tabs;
-* 80-characters wide lines;
-* Properly written multi-line CSS;
-* Meaningful use of whitespaces;
-* Quoted strings (single quotes) & URLs;
-* No trailing 0, mandatory leading 0;
-* Calculations wrapped in parentheses;
-* No magic numbers;
-* Colors expressed in keywords > HSL > RGB > hexadecimal;
-* Lists separated with commas;
-* No trailing comma in lists (since they are inlined);
-* Trailing comma in maps;
-* No selector nesting except for pseudo-classes and pseudo-elements;
-* Hyphen-delimited naming;
-* Extensive comments;
-* SassDoc-powered API comments;
-* Limited usage of `@extend`;
-* Simple mixins;
-* As few loops as possible, no `@while`;
-* Reduced number of dependencies;
-* Meaningful use of warnings and errors.
+* Indentação de dois (2) espaços, nada de tabulações (_tabs_);
+* Linhas com largura de 80 carateres;
+* CSS multi-linha devidamente escrito;
+* Uso significativo de espaços em branco;
+* _Strings_ e URLs entre aspas (simples);
+* Não usar zeros (0) não significativos à direita da vírgula, mas obrigatórios à esquerda;
+* Cálculos entre parêntises;
+* Nada de _magic numbers_;
+* Cores expressas em palavras > HSL > RGB > hexadecimal;
+* Listas separadas com vírgulas;
+* Não usar vírgulas no fim de listas (visto que são linha única)
+* Vírgula no fim de _maps_;
+* Não encadear seletores exceto para pseudo-classes e pseudo-elementos;
+* Nomenclatura delineada por hífens;
+* Comentários extensivos;
+* Comentários da API ao estilo de SassDoc
+* Uso limitado de `@extend`;
+* _Mixins_ simples;
+* O mínimo de _loops_ possível, não usar `@while`;
+* Número reduzido de dependências;
+* Uso significativo de avisos e erros.

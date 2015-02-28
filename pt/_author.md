@@ -8,6 +8,6 @@ Escrevi também algumas bibliotecas de Sass, algumas delas simplesmente por dive
 <div class="button-wrapper">
   <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    Seguir-me tno Twitter
+    Seguir-me no Twitter
   </a>
 </div>

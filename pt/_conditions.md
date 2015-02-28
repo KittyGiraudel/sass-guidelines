@@ -1,27 +1,27 @@
 
-# Conditional statements
+# Instruções condicionais
 
-You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. Actually, they mainly exist for libraries and frameworks.
+Provavelmente já sabem que Sass fornece instruções condicionais através das diretivas `@if` e `@else`. A menos que possuam alguma lógica média ou altamente complexa no vosso código, não há necessidade para instruções condicionais nas vossas folhas de estilo do dia a dia. De verdade, estas instruções existem maioritariamente para bibliotecas e _frameworks_.
 
-Anyway, if you ever find yourself in need of them, please respect the following guidelines:
+De qualquer forma, se alguma vez necessitarem delas, por favor respeitem as seguintes diretrizes:
 
-* No parentheses unless they are necessary;
-* Always an empty new line before `@if`;
-* Always a line break after the opening brace (`{`);
-* `@else` statements on the same line as previous closing brace (`}`).
-* Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
+* Não usar parêntesis exceto quando necessário;
+* Colocar sempre uma linha em branco antes de um `@if`;
+* Colocar sempre uma linha em branco após abrir chavetas (`{`);
+* Colocar a instrução `@else` na mesma linha que o fecho das chavetas anteriores (`}`);
+* Colocar sempre uma linha em branco após fechar as últimas chavetas (`}`), a menos que a linha seguinte seja uma chaveta de fecho (`}`).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 @if $support-legacy {
   // ...
 } @else {
   // ...
 }
 
-// Nope
+// Não
 @if ($support-legacy == true) {
   // ...
 }
@@ -32,13 +32,13 @@ Anyway, if you ever find yourself in need of them, please respect the following 
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 @if $support-legacy
   // ...
 @else
   // ...
 
-// Nope
+// Não
 @if ($support-legacy == true)
   // ...
 @else
@@ -47,17 +47,17 @@ Anyway, if you ever find yourself in need of them, please respect the following 
   </div>
 </div>
 
-When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
+Quando se testa um valor falso, usem sempre a palavra-chave `not` ao invés de testar contra `false` ou `null`.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 @if not index($list, $item) {
   // ...
 }
 
-// Nope
+// Não
 @if index($list, $item) == null {
   // ...
 }
@@ -65,23 +65,23 @@ When testing for a falsy value, always use the `not` keyword rather than testing
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 @if not index($list, $item)
   // ...
 
-// Nope
+// Não
 @if index($list, $item) == null
   // ...
 {% endhighlight %}
   </div>
 </div>
 
-When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
+Quando se usa instruções condicionais dentro de uma função para devolver um resultado diferente baseado nalguma condição, certifiquem-se que a função ainda possui uma instrução `@return` fora de qualquer bloco condicional.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 @function dummy($condition) {
   @if $condition {
     @return true;
@@ -90,7 +90,7 @@ When using conditional statements within a function to return a different result
   @return false;
 }
 
-// Nope
+// Não
 @function dummy($condition) {
   @if $condition {
     @return true;
@@ -102,14 +102,14 @@ When using conditional statements within a function to return a different result
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 @function dummy($condition)
   @if $condition
     @return true
 
   @return false;
 
-// Nope
+// Não
 @function dummy($condition)
   @if $condition
     @return true
