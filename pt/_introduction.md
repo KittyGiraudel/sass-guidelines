@@ -7,14 +7,14 @@
 
 ## Porquê um guia de estilos?
 
-Um guia de estilos não é apenas um documento agradável à leitura que pretende descrever um estado perfeito para o nosso código. Um guia de estilos é um documento importante no ciclo de vida de um projeto, descrevendo como e porquê o código deve ser escrito. Para pequenos projetos pode parecer excessivo, mas ajuda imenso à manutenção e escalabilidade do código-fonte.
+Um guia de estilos não deve ser só um documento agradável aos olhos que pretende descrever um estado perfeito para o nosso código. Um guia de estilos é um documento importante no ciclo de vida de um projeto, descrevendo como e porquê o código deve ser escrito. Para pequenos projetos isto poderá parecer excessivo, mas ajuda imenso à manutenção e escalabilidade do código-fonte.
 
-Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, mais regras serão necessárias. Da mesma forma, quanto maior o projeto, mais necessário se torna um guia de estilos.
+Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, mais regras serão necessárias. Da mesma forma, quanto maior o projeto, mais útil se torna um guia de estilos.
 
 [Harry Roberts](http://csswizardry.com) refere muito bem nas [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
-  <p>Um guia de estilos de código (não um visual) é uma ferramenta de grande valor para equipas que:</p>
+  <p>Um guia de estilos de código (não-visual) é uma ferramenta de grande valor para equipas que:</p>
   <ul>
   	<li>criem e mantenham produtos durante uma quantidade de tempo considerável;</li>
     <li>possuam programadores com habilidades e especialidades variadas;</li>
@@ -29,7 +29,7 @@ Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, ma
 
 
 
-## Termos de Responsabilidades
+## Termos de Responsabilidade
 
 Em primeiro lugar: **isto não é um guia de estilos de CSS**. Este documento não pretende discutir convenções de nomes para classes em CSS, padrões de módulos ou a questão de utilizar IDs no mundo de CSS. Estas guias dizem apenas respeito a conteúdo específico de Sass.
 
@@ -44,7 +44,7 @@ Obviamente, esta não será certamente a única maneira de fazer as coisas, e po
 
 ## Princípios-chave
 
-No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **Sass deve ser mantido o mais simples possível**.
+No final do dia, se há algum conceito que eu gostava que toda a gente retirasse daqui seria que **Sass deve ser mantido o mais simples possível**.
 
 Graças às minhas experiências, tais como [operadores  bitwise](https://github.com/HugoGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um interpretador de JSON](https://github.com/HugoGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
 
@@ -52,7 +52,7 @@ Apesar de tudo, CSS é uma linguagem simples. Sass, com o propósito de escrever
 
 Por vezes é preferível repetirmo-nos um pouco para manter o código em boas condições de manutenção, em vez de construir um sistema desnecessariamente complicado, convulso e impossível de manter devido à sua complexidade.
 
-Permitam-me ainda citar novamente o [Harry Roberts](https://csswizardry.com), **pragmatismo vence sobre a perfeição**. A determinada altura, vão provavelmente dar por vocês a ir contra as regras aqui descritas. Se fizer sentido, se parecer a atitude correta, simplesmente façam-no. Código é o meio, e nunca o fim.
+Permitam-me ainda citar novamente o [Harry Roberts](https://csswizardry.com), **pragmatismo vence sobre a perfeição**. A determinada altura, vão provavelmente dar por vocês a ir contra as regras aqui descritas. Se tal fizer sentido, se parecer a atitude correta, simplesmente façam-no! O código é o meio, e nunca o fim.
 
 
 
