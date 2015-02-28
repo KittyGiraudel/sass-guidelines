@@ -65,7 +65,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 
 
-### 참고고
+### 참고
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
