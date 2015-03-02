@@ -134,7 +134,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 ## Media Queries Usage
 
-Not so long ago, there has been a quite hot debate about where should be written media queries: should they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
