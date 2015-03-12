@@ -524,7 +524,7 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
 /// @param {Number} $percentage - procent pierwotnego `$color` w zwróconej wartości
 /// @return {Color}
 @function tint($color, $percentage) {
-  @return mix($color, white, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 /// Stopniowo przyciemniaj kolor
@@ -533,7 +533,7 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
 /// @param {Number} $percentage - procent pierwotnego `$color` w zwróconej wartości
 /// @return {Color}
 @function shade($color, $percentage) {
-  @return mix($color, black, $percentage);
+  @return mix(black, $color, $percentage);
 }
 {% endhighlight %}
   </div>
