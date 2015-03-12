@@ -516,7 +516,7 @@ $main-theme-color: $sass-pink
 /// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
 /// @return {Color}
 @function tint($color, $percentage) {
-  @return mix($color, white, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 /// Немного затемнить цвет
@@ -525,7 +525,7 @@ $main-theme-color: $sass-pink
 /// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
 /// @return {Color}
 @function shade($color, $percentage) {
-  @return mix($color, black, $percentage);
+  @return mix(black, $color, $percentage);
 }
 {% endhighlight %}
   </div>

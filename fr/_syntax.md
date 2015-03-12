@@ -520,7 +520,7 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
 /// @param {Number} $percentage - % de`$color` dans la couleur retournée
 /// @return {Color}
 @function tint($color, $percentage) {
-  @return mix($color, white, $percentage);
+  @return mix(white, $color, $percentage);
 }
 
 /// Obscurcir légèrement une couleur
@@ -529,7 +529,7 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
 /// @param {Number} $percentage - % de`$color` dans la couleur retournée
 /// @return {Color}
 @function shade($color, $percentage) {
-  @return mix($color, black, $percentage);
+  @return mix(black, $color, $percentage);
 }
 {% endhighlight %}
   </div>
