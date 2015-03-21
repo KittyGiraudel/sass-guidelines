@@ -68,7 +68,12 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 * `main.scss`
 
 <figure role="group">
-  <img src="/assets/images/sass-wallpaper.jpg" alt="One file to rule them all, One file to find Them, One file to bring them all, And in the Sass way merge them." />
+  <img alt="One file to rule them all, One file to find Them, One file to bring them all, And in the Sass way merge them."
+     sizes="100vw"
+     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
+             /assets/images/sass-wallpaper_medium.jpg 900w,
+             /assets/images/sass-wallpaper_large.jpg 1200w,
+             /assets/images/sass-wallpaper_huge.jpg  1590w" />
   <figcaption>Wallpaper by <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
 </figure>
 
