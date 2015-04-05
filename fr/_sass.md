@@ -84,7 +84,7 @@ On peut voir les postprocesseurs comme un polyfill pour les fonctionnalités CSS
 
 L'idée intéressante derrière les postprocesseurs est qu'une fois la compatibilité acquise (p.ex. une fois que les navigateurs supporteront les variables CSS), le postprocesseur ne les compile plus et laisse le navigateur prendre le relais.
 
-Même s'il peut être intéressant de travailler dès aujourd'hui avec la syntaxe de demain, je préfère pour ma part utiliser Sass pour des tâches plus courantes. Cependant, il est des cas où je pense que les processeurs sont plus adaptés que Sass et les autres —&nbsp;par exemple pour les préfixes CSS&nbsp;— mais nous reviendrons là-dessus tout à l'heure.
+Même s'il peut être intéressant de travailler dès aujourd'hui avec la syntaxe de demain, je préfère pour ma part utiliser Sass pour des tâches plus courantes. Cependant, il est des cas où je pense que les postprocesseur sont plus adaptés que Sass et les autres —&nbsp;par exemple pour les préfixes CSS&nbsp;— mais nous reviendrons là-dessus tout à l'heure.
 
 
 
