@@ -48,7 +48,7 @@ Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta
 
 Gracias a mis tontos experimentos, como por ejemplo: [operadores a nivel de bits](https://github.com/HugoGiraudel/SassyBitwise), [iteradores y generadores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) y [analizador JSON](https://github.com/HugoGiraudel/SassyJSON) en Sass, podemos ser conscientes de lo que se puede hacer con este preprocesador.
 
-Mientras CSS es un lenguaje sencillo. Sass tiene la intención de escribirse igual que CSS y por tanto, no debería ser mucho más complicado de aprender el propio CSS en sí. El [principio KISS](http://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](http://es.wikipedia.org/wiki/No_te_repitas) (Don't Repeat Yourself) en algunas circunstancias.
+Mientras CSS es un lenguaje sencillo. Sass tiene la intención de escribirse igual que CSS y por tanto, no debería ser mucho más complicado de aprender el propio CSS en sí. El [principio KISS](http://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](http://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
 
 Algunas veces es mejor repetirse un poco para que el proyecto sea fácil de mantener, antes que construir un sistema demasiado pesado, inabarcable e innecesariamente complicado que genere un código imposible de mantener porque es demasiado complejo.
 

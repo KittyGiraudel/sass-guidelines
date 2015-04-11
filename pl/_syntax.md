@@ -569,7 +569,7 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 

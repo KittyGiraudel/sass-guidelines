@@ -61,7 +61,7 @@ Cинтаксис Sass опирается на отступы, чтобы изб
 
 ### Дальнейшее чтение
 
-* [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
+* [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
 
 

@@ -62,7 +62,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 * [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
 * [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
 * [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
-* [Bootstrap's Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
+* [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 

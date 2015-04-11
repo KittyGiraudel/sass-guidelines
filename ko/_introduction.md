@@ -48,7 +48,7 @@
 
 Sass로 쓰인 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) 등 저의 실없는 실험들 덕분에 우리는 이 전처리기를 가지고 어떤 일을 할 수 있는지 잘 알고 있습니다.
 
-한편, CSS는 간단한 언어입니다. Sass는 CSS를 작성하도록 의도되었으므로, 보통의 CSS보다 더 복잡해져선 안 됩니다. [KISS 원칙](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid)이 핵심이며 어떤 상황에선 심지어 [DRY 원칙](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself)보다 우선할 수도 있습니다.
+한편, CSS는 간단한 언어입니다. Sass는 CSS를 작성하도록 의도되었으므로, 보통의 CSS보다 더 복잡해져선 안 됩니다. [KISS 원칙](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid)이 핵심이며 어떤 상황에선 심지어 [DRY 원칙](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself)보다 우선할 수도 있습니다.
 
 때로는, 코드를 유지가능하도록 만들기 위해 조금 반복하는 편이 더 낫습니다. 무거운 머리를 가진, 통제하기 힘들고, 불필요하게 복잡한 시스템을 제작하면 지나친 복잡성 때문에 유지관리가 완전히 불가능해질 수 있습니다.
 

@@ -44,7 +44,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 ### Dalsze informacje
 
-* [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
+* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
 
 

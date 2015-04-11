@@ -1,5 +1,5 @@
 
-# Too Long; Didn't read
+# Too Long; Didn’t read
 
 En résumé, nous voulons&nbsp;:
 
@@ -13,12 +13,12 @@ En résumé, nous voulons&nbsp;:
 * Pas de nombres magiques&nbsp;;
 * Couleurs exprimées en mots-clés > HSL > RGB > hexadécimal&nbsp;;
 * Listes séparées par des virgules&nbsp;;
-* Pas de virgule à la fin d'une liste (car elles sont en ligne)&nbsp;;
+* Pas de virgule à la fin d’une liste (car elles sont en ligne)&nbsp;;
 * Virgule finale dans les maps&nbsp;;
-* Pas d'imbrication de sélecteurs, sauf pour les pseudo-classes et les pseudo-éléments&nbsp;;
+* Pas d’imbrication de sélecteurs, sauf pour les pseudo-classes et les pseudo-éléments&nbsp;;
 * Nommage en bas-de-casse avec séparation par tiret&nbsp;;
 * Commentaires extensifs&nbsp;;
-* Documentation d'API avec SassDoc&nbsp;;
+* Documentation d’API avec SassDoc&nbsp;;
 * Utilisation limitée de `@extend`&nbsp;;
 * Mixins simples&nbsp;;
 * Aussi peu de boucles que possible, pas de `@while`&nbsp;;

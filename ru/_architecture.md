@@ -116,7 +116,7 @@ sass/
 |   |– _variables.scss   # Переменные Sass
 |   |– _functions.scss   # Функции Sass
 |   |– _mixins.scss      # Примеси Sass
-|   |– _helpers.scss     # Помощники классов & placeholder'ов
+|   |– _helpers.scss     # Помощники классов & placeholder’ов
 |
 |– vendors/
 |   |– _bootstrap.scss   # Bootstrap

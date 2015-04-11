@@ -44,7 +44,7 @@ $variable: 'initial value';
   // Include the mixin: it overrides the global variable.
   @include global-variable-overriding;
 
-  // Print the variable's value.
+  // Print the variable’s value.
   // It is the **local** one, since it shadows the global one.
   content: $variable;
 }
@@ -72,7 +72,7 @@ $variable: 'initial value'
   // Include the mixin: it overrides the global variable.
   +global-variable-overriding
 
-  // Print the variable's value.
+  // Print the variable’s value.
   // It is the **local** one, since it shadows the global one.
   content: $variable
 
@@ -111,7 +111,7 @@ $baseline: 1em !default
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Developer's own variable
+// Developer’s own variable
 $baseline: 2em;
 
 // Your library declaring `$baseline`
@@ -122,7 +122,7 @@ $baseline: 2em;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Developer's own variable
+// Developer’s own variable
 $baseline: 2em
 
 // Your library declaring `$baseline`
@@ -180,7 +180,7 @@ $baseline: 2em !global
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: (
   'modal': 5000,
@@ -191,7 +191,7 @@ $z-indexes: (
 
 /// Get a z-index value from a layer name
 /// @access public
-/// @param {String} $layer - Layer's name
+/// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer) {
@@ -204,13 +204,13 @@ $z-indexes: (
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 /// Get a z-index value from a layer name
 /// @access public
-/// @param {String} $layer - Layer's name
+/// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer)

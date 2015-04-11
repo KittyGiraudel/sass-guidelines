@@ -33,7 +33,7 @@
 
 @media print {
   .bar {
-    // This doesn't work. Worse: it crashes.
+    // This doesn’t work. Worse: it crashes.
     @extend .foo;
   }
 }
@@ -46,7 +46,7 @@
 
 @media print
   .bar
-    // This doesn't work. Worse: it crashes.
+    // This doesn’t work. Worse: it crashes.
     @extend .foo
 {% endhighlight %}
   </div>

@@ -47,11 +47,11 @@ Koniec końców, jeżeli miałbym określić jedyną rzecz jaką chciałbym, by�
 
 Dzięki moim zabawnym eksperymentom, takim jak [operator bitowy](https://github.com/HugoGiraudel/SassyBitwise), [iteratory i generatory](https://github.com/HugoGiraudel/SassyIteratorsGenerators) czy [parser JSON](https://github.com/HugoGiraudel/SassyJSON) napisanym w Sassie, możemy się przekonać jak dużo jest możliwe dzięki Sassowi.
 
-Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien dokładać do niego zbyt wysokiego stopnia skomplikowania. [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](http://pl.wikipedia.org/wiki/DRY) (Don't Repeat Yourself) w niektórych przypadkach.
+Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien dokładać do niego zbyt wysokiego stopnia skomplikowania. [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](http://pl.wikipedia.org/wiki/DRY) (Don’t Repeat Yourself) w niektórych przypadkach.
 
 Czasami warto się trochę powtórzyć i dzięki temu sprawić, że nasz kod stanie się łatwiejszy do utrzymania. Jest to zdecydowanie lepsze rozwiązanie niż ciężki, niekontrolowalny i niepotrzebnie skomplikowany kod, którego utrzymanie w dłuższej perspektywie jest wręcz niemożliwe.
 
-Poza tym, pozwólcie że zacytuję raz jeszcze [Harry'ego Robertsa](https://csswizardry.com) - **pragmatyzm wygrywa z perfekcjonizmem**. Na jakimś etapie zapewne stwierdzisz, że to co robisz nie jest do końca zgodne z zasadami opisanymi w tym przewodniku. Jeżeli ma to sens, jeżeli wydaje Ci się to prawidłowe - rób to po swojemu. Nie zapominajmy wszak, że kod jest jedynie środkiem, nie celem.
+Poza tym, pozwólcie że zacytuję raz jeszcze [Harry’ego Robertsa](https://csswizardry.com) - **pragmatyzm wygrywa z perfekcjonizmem**. Na jakimś etapie zapewne stwierdzisz, że to co robisz nie jest do końca zgodne z zasadami opisanymi w tym przewodniku. Jeżeli ma to sens, jeżeli wydaje Ci się to prawidłowe - rób to po swojemu. Nie zapominajmy wszak, że kod jest jedynie środkiem, nie celem.
 
 
 

@@ -7,7 +7,7 @@ If there is a feature that is often overlooked by Sass developers, it is the abi
 * `@warn`;
 * `@error`.
 
-Let's put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one stops the compiler while the other does not. I'll let you guess which does what.
+Let’s put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one stops the compiler while the other does not. I’ll let you guess which does what.
 
 Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong, or display a warning when doing an assumption.
 
@@ -68,7 +68,7 @@ If the value happens to be unitless, the function assumes the value is meant to 
 
 Errors, unlike warnings, prevent the compiler from going any further. Basically, they stop the compilation and display a message in the output stream as well as the stack trace, which is handy for debugging. Because of this, errors should be thrown when there is no way for the program to keep running. When possible, try to work around the issue and display a warning instead.
 
-As an example, let's say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
+As an example, let’s say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -76,7 +76,7 @@ As an example, let's say you build a getter function to access values from a spe
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: (
   'modal': 5000,
