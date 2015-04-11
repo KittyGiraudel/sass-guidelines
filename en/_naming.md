@@ -61,19 +61,19 @@ As for many languages, I suggest all-caps snakerized variables when they are con
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$CSS_POSITIONS: top, right, bottom, left, center;
+$CSS_POSITIONS: (top, right, bottom, left, center);
 
 // Nope
-$css-positions: top, right, bottom, left, center;
+$css-positions: (top, right, bottom, left, center);
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$CSS_POSITIONS: top, right, bottom, left, center
+$CSS_POSITIONS: (top, right, bottom, left, center)
 
 // Nope
-$css-positions: top, right, bottom, left, center
+$css-positions: (top, right, bottom, left, center)
 {% endhighlight %}
   </div>
 </div>

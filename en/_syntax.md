@@ -51,11 +51,32 @@ We will not tackle the question of file organization in this section. It is the 
 
 ## Strings
 
+Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or strings (usually unquoted), so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
+
+### Encoding
+
+To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+@charset 'utf-8';
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+@charset 'utf-8'
+{% endhighlight %}
+  </div>
+</div>
+
+### Quotes
+
 CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance: it doesn’t matter whether you wrap them in quotes for the CSS parser.
 
 Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you’ll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS’ cousin JavaScript, there are several reasons for this choice:
+That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** (`'`) in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS’ cousin JavaScript, there are several reasons for this choice:
 
 * color names are treated as colors when unquoted, which can lead to serious issues;
 * most syntax highlighters will choke on unquoted strings;
@@ -66,32 +87,84 @@ That being said, languages that do not require strings to be quoted are definite
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$direction: 'left';
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+$direction: left;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+$direction: 'left'
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
+$direction: left
 {% endhighlight %}
   </div>
 </div>
 
-<div class="note">
-  <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
+### Strings as CSS values
+
+Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+$font-type: sans-serif;
+
+// Nope
+$font-type: 'sans-serif';
+
+// Okay I guess
+$font-type: unquote('sans-serif');
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+$font-type: sans-serif
+
+// Nope
+$font-type: 'sans-serif'
+
+// Okay I guess
+$font-type: unquote('sans-serif')
+{% endhighlight %}
+  </div>
 </div>
+
+Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
+
+We don't quote the former, but we do wrap the latter in single quotes.
+
+### Strings containing quotes
+
+If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Okay
+@warn 'You can\'t do that.';
+
+// Okay
+@warn "You can't do that.";
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Okay
+@warn 'You can\'t do that.'
+
+// Okay
+@warn "You can't do that."
+{% endhighlight %}
+  </div>
+</div>
+
+### URLs
 
 URLs should be quoted as well, for the same reasons as above:
 
@@ -575,28 +648,30 @@ Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike
 
 Lists should respect the following guidelines:
 
-* unless it is too long to fit on an 80-character line, always display it on a single line;
-* unless it is used as is for CSS purposes, always use comma as a delimiter;
-* unless it is empty or nested within another list, never write the parenthesis;
-* never add a trailing comma.
+* either inlined or multilines;
+* necessarily on multilines if too long to fit on an 80-character line;
+* unless used as is for CSS purposes, always comma separated;
+* always wrapped in parenthesis;
+* trailing comma if multilines, not if inlined.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif;
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// Nope
-$font-stack:
+// Yep
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif;
+  sans-serif,
+);
 
 // Nope
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
 // Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif);
+$font-stack: 'Helvetica', 'Arial', sans-serif;
 
 // Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
@@ -605,22 +680,23 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif
-
-// Nope (since it is not supported)
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif
-
-// Nope
-$font-stack: 'Helvetica' 'Arial' sans-serif
-
-// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif)
 
+// Nope (not supported)
+$font-stack: (
+  'Helvetica',
+  'Arial',
+  sans-serif,
+)
+
 // Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif,)
+$font-stack: 'Helvetica' 'Arial' sans-serif;
+
+// Nope
+$font-stack: 'Helvetica', 'Arial', sans-serif;
+
+// Nope
+$font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
   </div>
 </div>
@@ -630,7 +706,7 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
+$shadows: (0 42px 13.37px hotpink);
 
 // Yep
 $shadows: append($shadows, $shadow, comma);
@@ -641,7 +717,7 @@ $shadows: $shadows, $shadow;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
+$shadows: (0 42px 13.37px hotpink);
 
 // Yep
 $shadows: append($shadows, $shadow, comma)
@@ -656,6 +732,7 @@ $shadows: $shadows, $shadow
 
 ### Further reading
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 
@@ -801,6 +878,7 @@ If you are interested in knowing the depth of the map, add the following functio
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
@@ -1052,7 +1130,7 @@ I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tric
   <figcaption>Chart showing how developers order their CSS declarations</figcaption>
 </figure>
 
-Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets.
+Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets (i.e. not the *random* option).
 
 <div class="note">
   <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
