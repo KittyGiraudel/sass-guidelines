@@ -40,16 +40,9 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-
-
 ### Дальнейшее чтение
 
 * [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
-
-
-
-
 
 ## Константы
 
@@ -78,16 +71,9 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-
-
 ### Дальнейшее чтение
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
-
-
-
-
-
 
 ## Пространство имён
 

@@ -3,12 +3,6 @@
 
 Я не думаю, что надо рассказывать, что такое адаптивный веб-дизайн, так как он сейчас везде. Тем не менее, вы можете задаться вопросом: *почему раздел об адаптивном веб-дизайне находится в руководсте по Sass?* На самом деле есть немного вещей, чтобы сделать работу с точками остановки легче, поэтому я подумал, что это неплохая идея – перечислить их здесь.
 
-
-
-
-
-
-
 ## Именование точек остановки
 
 Я думаю, что медиа-запросы не должны быть привязаны к специальным устройствам. Например, определённо плохая идея – специально нацеливаться на iPad или устройства на Blackberry. Медиа-запросы должны обслуживать диапазон размеров экрана, пока нет перехода к следующему медиа-запросу.
@@ -63,17 +57,9 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-
-
-
 ### Дальнейшее чтение
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
-
-
-
-
-
 
 ## Управление точками остановки
 
@@ -121,17 +107,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>Если вам нужно управление отзывчивостью с расширенными настройками, могу порекоммендовать вам не изобретать колесо, а воспользоваться отличными <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> или <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-
-
 ### Дальнейшее чтение
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
-
-
-
-
-
 
 ## Использование медиа-запросов
 
@@ -182,8 +161,6 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 > &mdash; [Сэм Ричардс](https://twitter.com/snugug) относительно [Breakpoint](http://breakpoint-sass.com/)
 
 Теперь, если вы действительно обеспокоены дублированнем медиа-запросов, вы всё ещё можете использовать инструмент, чтобы объединить их, например, [этот gem](https://github.com/aaronjensen/sass-media_query_combiner), однако я должен вас предупредить о возможных побочных эффектах перемещения CSS-кода. Вы остаетёсь без представления о порядке кода, что является важным.
-
-
 
 ### Дальнейшее чтение
 
