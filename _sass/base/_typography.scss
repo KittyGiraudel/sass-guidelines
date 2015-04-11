@@ -61,6 +61,14 @@ h3 {
   text-transform: uppercase;
 }
 
+// Russian do not capitalize every word in a header
+// See https://github.com/HugoGiraudel/sass-guidelines/issues/163
+:lang(ru) {
+  h1, h2, h3 {
+    text-transform: initial;
+  }
+}
+
 /**
  * Images
  */

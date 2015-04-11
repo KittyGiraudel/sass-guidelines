@@ -5,11 +5,6 @@
 
 Тем не менее, я советую снизить количество зависимостей к минимальному. Управление зависимостями чем-то похоже на ад, в котором вы не хотели бы оказаться. Кроме того, нет особой необходимости использовать внешние зависимости, когда работаете с Sass.
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/) – основной фреймворк Sass, разработанный [Крисом Эппстейном](https://twitter.com/chriseppstein), одним из ключевых разработчиков Sass, и я не вижу веских причин для снижения его популярности в последнее время, если вам интересно моё мнение.
@@ -26,18 +21,11 @@
   <p>Ruby Sass в настоящее время подвергается некоторым выдающимся оптимизациям, которые специально предназначены для тяжёлых стилей со множеством функций и примесей. Они должны резко повысить его производительность до точки, когда Compass и другие фреймворки не будут больше замедлять Sass.</p>
 </div>
 
-
-
 ### Дальнейшее чтение
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Системы сеток
 
@@ -51,8 +39,6 @@
 
 Также вы можете использовать что-то немного более непринужденное, как [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). В общем, ваш выбор не будет иметь большого влияния на стиль написания кода, так что это в значительной степени зависит от вас.
 
-
-
 ### Дальнейшее чтение
 
 * [Singularity](http://singularity.gs/)
@@ -65,11 +51,6 @@
 * [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
-
-
-
-
 
 ## SCSS-lint
 
@@ -85,8 +66,6 @@
   <p>Если вы хотите подключить SCSS-lint в процесс сборки Grunt, вам будет приятно знать, что есть расширение Grunt для этого – <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Кроме того, если вы в погоне за приложением, которое работает с SCSS-lint и тому подобным, ребята из <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) работают над <a href="https://houndci.com/">Hound</a>.</p>
 </div>
-
-
 
 ### Дальнейшее чтение
 
