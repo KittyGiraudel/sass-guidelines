@@ -1,16 +1,16 @@
 
 # Structures conditionnelles
 
-Vous savez probablement déjà que Sass fournit des structures conditionnelles via les directives `@if` and `@else`. Vous n'avez sans doute pas besoin de structures conditionnelles dans vos feuilles de style habituelles, en fait elles existent essentiellement pour les bibliothèques et les frameworks.
+Vous savez probablement déjà que Sass fournit des structures conditionnelles via les directives `@if` and `@else`. Vous n’avez sans doute pas besoin de structures conditionnelles dans vos feuilles de style habituelles, en fait elles existent essentiellement pour les bibliothèques et les frameworks.
 
 Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nbsp;:
 
 
 * Pas de parenthèses sauf si elles sont nécessaires&nbsp;;
 * Toujours un saut de ligne avant `@if`&nbsp;;
-* Toujours un renvoi à la ligne après l'accolade ouvrante (`{`)&nbsp;;
-* `@else` sur la même ligne que l'accolade fermante qui précède (`}`)&nbsp;;
-* Toujours un saut de ligne après l'accolade fermante finale (`}`) sauf si la ligne suivante est aussi une accolade fermante (`}`).
+* Toujours un renvoi à la ligne après l’accolade ouvrante (`{`)&nbsp;;
+* `@else` sur la même ligne que l’accolade fermante qui précède (`}`)&nbsp;;
+* Toujours un saut de ligne après l’accolade fermante finale (`}`) sauf si la ligne suivante est aussi une accolade fermante (`}`).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -48,7 +48,7 @@ Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nb
   </div>
 </div>
 
-Lorsqu'on teste si une valeur est fausse, on utilise toujours le mot-clé `not` plutôt que de tester sur `false` ou `null`.
+Lorsqu’on teste si une valeur est fausse, on utilise toujours le mot-clé `not` plutôt que de tester sur `false` ou `null`.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -77,7 +77,7 @@ Lorsqu'on teste si une valeur est fausse, on utilise toujours le mot-clé `not` 
   </div>
 </div>
 
-Lorsqu'on utilise des structures conditionnelles à l'intérieur d'une fonction, toujours s'assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
+Lorsqu’on utilise des structures conditionnelles à l’intérieur d’une fonction, toujours s’assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

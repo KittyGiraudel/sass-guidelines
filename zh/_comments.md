@@ -80,7 +80,7 @@ $imported-modules: append($imported-modules, $module) !global
 
 ### 扩展阅读
 
-* [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
+* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
 
 
@@ -138,8 +138,8 @@ SassDoc主要有两个作用：
 ///
 /// @access public
 ///
-/// @param {Length} $width - Element's `width`
-/// @param {Length} $height ($width) - Element's `height`
+/// @param {Length} $width - Element’s `width`
+/// @param {Length} $height ($width) - Element’s `height`
 ///
 /// @example scss - Usage
 ///   .foo {
@@ -174,8 +174,8 @@ SassDoc主要有两个作用：
 ///
 /// @access public
 ///
-/// @param {Length} $width - Element's `width`
-/// @param {Length} $height ($width) - Element's `height`
+/// @param {Length} $width - Element’s `width`
+/// @param {Length} $height ($width) - Element’s `height`
 ///
 /// @example scss - Usage
 ///   .foo

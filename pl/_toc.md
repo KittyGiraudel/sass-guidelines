@@ -74,4 +74,4 @@
     * [Compass](#compass)
     * [Systemy gridów](#systemy-gridów)
     * [SCSS-lint](#scss-lint)
-* [Too long; Didn't read](#too-long;-didn't-read)
+* [Too long; Didn’t read](#too-long;-didn’t-read)

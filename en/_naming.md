@@ -1,7 +1,7 @@
 
 # Naming conventions
 
-In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it's also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it’s also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
 
@@ -44,7 +44,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 ### Further reading
 
-* [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
+* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
 
 
@@ -91,9 +91,9 @@ $css-positions: top, right, bottom, left, center
 
 ## Namespace
 
-If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else's code.
+If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn't, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

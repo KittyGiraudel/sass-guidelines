@@ -47,7 +47,7 @@
 
 感谢我过去使用Sass时傻傻的尝试，比如 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise)、[iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) 和 [a JSON parser](https://github.com/HugoGiraudel/SassyJSON)，从而认识到了可以用预处理器来做什么。
 
-同时，CSS是一门简单的语言，那么Sass在书写常规CSS的时候就不应该更复杂。[KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid)在这里是一个核心原则，甚至在有些情况下要优先于[DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself)。
+同时，CSS是一门简单的语言，那么Sass在书写常规CSS的时候就不应该更复杂。[KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid)在这里是一个核心原则，甚至在有些情况下要优先于[DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself)。
 
 有时候，一点点重复可以更好的保持代码的可维护性，而不是建立一个头重脚轻、臃肿复杂、不可维护的系统。
 

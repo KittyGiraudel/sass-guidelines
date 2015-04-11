@@ -60,7 +60,7 @@ Sass的空白敏感语法通过缩进以摆脱大括号、分号和其他符号�
 
 ### 扩展阅读
 
-* [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
+* [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
 
 

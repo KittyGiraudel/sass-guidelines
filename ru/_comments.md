@@ -80,7 +80,7 @@ $imported-modules: append($imported-modules, $module) !global
 
 ### Дальнейшее чтение
 
-* [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
+* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
 
 

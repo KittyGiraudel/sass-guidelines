@@ -1,16 +1,16 @@
 
 # Avertissements et erreurs
 
-S'il est une fonctionnalité de Sass souvent délaissée par les développeurs, c'est sa capacité à retourner dynamiquement des messages d'avertissement et d'erreur. Sass vient en effet avec trois directives permettant d'imprimer un contenu dans le système de sortie standard (CLI, compiling app...)&nbsp;:
+S’il est une fonctionnalité de Sass souvent délaissée par les développeurs, c’est sa capacité à retourner dynamiquement des messages d’avertissement et d’erreur. Sass vient en effet avec trois directives permettant d’imprimer un contenu dans le système de sortie standard (CLI, compiling app...)&nbsp;:
 
 
 * `@debug`;
 * `@warn`;
 * `@error`.
 
-Mettons `@debug` de côté puisqu'il est clairement prévu pour déboguer SassScript, ce qui n'est pas notre objet ici. Il nous reste `@warn` et `@error` qui sont semblables sauf sur un point&nbsp;: l'un stoppe le compilateur, l'autre non —&nbsp;je suppose que vous savez lequel fait quoi.
+Mettons `@debug` de côté puisqu’il est clairement prévu pour déboguer SassScript, ce qui n’est pas notre objet ici. Il nous reste `@warn` et `@error` qui sont semblables sauf sur un point&nbsp;: l’un stoppe le compilateur, l’autre non —&nbsp;je suppose que vous savez lequel fait quoi.
 
-Il y a bien des possibilités d'avertissements et d'erreurs dans Sass, n'importe quel mixin ou fonction qui attend un argument ou un type spécifique pourrait envoyer une erreur si quelque chose n'allait pas ou afficher un avertissement lorsque vous faites une hypothèse.
+Il y a bien des possibilités d’avertissements et d’erreurs dans Sass, n’importe quel mixin ou fonction qui attend un argument ou un type spécifique pourrait envoyer une erreur si quelque chose n’allait pas ou afficher un avertissement lorsque vous faites une hypothèse.
 
 
 
@@ -59,7 +59,7 @@ Prenez par exemple cette fonction de [Sass-MQ](https://github.com/sass-mq/sass-m
   </div>
 </div>
 
-Si la valeur entrée se trouve être sans unité, la fonction suppose qu'elle est exprimée en pixels. Il est toutefois risqué de le faire sans avertir l'auteur que le logiciel a fait quelque chose qui pourrait être inattendu.
+Si la valeur entrée se trouve être sans unité, la fonction suppose qu’elle est exprimée en pixels. Il est toutefois risqué de le faire sans avertir l’auteur que le logiciel a fait quelque chose qui pourrait être inattendu.
 
 
 
@@ -68,9 +68,9 @@ Si la valeur entrée se trouve être sans unité, la fonction suppose qu'elle es
 
 ## Erreurs
 
-Contrairement aux avertissements, les erreurs empêchent le compilateur d'aller plus loin. Elles stoppent la compilation et affichent un message pratique pour le débogage. C'est la raison pour laquelle les erreurs ne devraient être envoyées que lorsqu'il est impossible au programme d'aller plus loin. Si possible, essayez de contourner le problème et d'afficher un avertissement à la place.
+Contrairement aux avertissements, les erreurs empêchent le compilateur d’aller plus loin. Elles stoppent la compilation et affichent un message pratique pour le débogage. C’est la raison pour laquelle les erreurs ne devraient être envoyées que lorsqu’il est impossible au programme d’aller plus loin. Si possible, essayez de contourner le problème et d’afficher un avertissement à la place.
 
-Par exemple, admettons que vous construisez une fonction *getter* pour accéder à des valeurs à partir d'une map spécifique. Vous pourriez envoyer une erreur si la clé requise n'existe pas dans la map.
+Par exemple, admettons que vous construisez une fonction *getter* pour accéder à des valeurs à partir d’une map spécifique. Vous pourriez envoyer une erreur si la clé requise n’existe pas dans la map.
 
 
 <div class="code-block">
@@ -79,7 +79,7 @@ Par exemple, admettons que vous construisez une fonction *getter* pour accéder 
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: (
   'modal': 5000,
@@ -90,7 +90,7 @@ $z-indexes: (
 
 /// Get a z-index value from a layer name
 /// @access public
-/// @param {String} $layer - Layer's name
+/// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer) {
@@ -108,13 +108,13 @@ $z-indexes: (
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 /// Get a z-index value from a layer name
 /// @access public
-/// @param {String} $layer - Layer's name
+/// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer)

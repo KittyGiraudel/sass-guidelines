@@ -62,7 +62,7 @@ Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다�
 
 ### 참고
 
-* [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
+* [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
 
 

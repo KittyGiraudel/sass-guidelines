@@ -5,7 +5,7 @@ Variables are the essence of any programming language. They allow us to reuse va
 
 However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won't help. A new variable should be created only when all of the following criteria are met:
+My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
 
 * the value is repeated at least twice;
 * the value is likely to be updated at least once;
@@ -44,7 +44,7 @@ $variable: 'initial value';
   // Include the mixin: it overrides the global variable.
   @include global-variable-overriding;
 
-  // Print the variable's value.
+  // Print the variable’s value.
   // It is the **local** one, since it shadows the global one.
   content: $variable;
 }
@@ -72,7 +72,7 @@ $variable: 'initial value'
   // Include the mixin: it overrides the global variable.
   +global-variable-overriding
 
-  // Print the variable's value.
+  // Print the variable’s value.
   // It is the **local** one, since it shadows the global one.
   content: $variable
 
@@ -111,7 +111,7 @@ Thanks to this, a developer can define his own `$baseline` variable *before* imp
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Developer's own variable
+// Developer’s own variable
 $baseline: 2em;
 
 // Your library declaring `$baseline`
@@ -122,7 +122,7 @@ $baseline: 2em;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Developer's own variable
+// Developer’s own variable
 $baseline: 2em
 
 // Your library declaring `$baseline`
@@ -191,7 +191,7 @@ $z-indexes: (
 
 /// Get a z-index value from a layer name
 /// @access public
-/// @param {String} $layer - Layer's name
+/// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer) {
@@ -204,7 +204,7 @@ $z-indexes: (
 /// Z-indexes map, gathering all Z layers of the application
 /// @access private
 /// @type Map
-/// @prop {String} key - Layer's name
+/// @prop {String} key - Layer’s name
 /// @prop {Number} value - Z value mapped to the key
 $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 

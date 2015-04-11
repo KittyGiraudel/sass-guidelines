@@ -1,7 +1,7 @@
 
 # Table des matières
 
-* [Sur l'auteur](#sur-l'auteur)
+* [Sur l’auteur](#sur-l’auteur)
 * [Contributions](#contributions)
 * [À propos de Sass](#À-propos-de-sass)
       * [Ruby Sass Ou LibSass](#ruby-sass-ou-libsass)
@@ -60,7 +60,7 @@
 * [Extend](#extend)
 * [Mixins](#mixins)
     * [Les bases](#les-bases)
-    * [Listes d'arguments](#listes-d'arguments)
+    * [Listes d’arguments](#listes-d’arguments)
     * [Mixins et préfixes constructeurs](#mixins-et-préfixes-constructeurs)
 * [Structures conditionnelles](#structures-conditionnelles)
 * [Boucles](#boucles)
@@ -74,4 +74,4 @@
     * [Compass](#compass)
     * [Systèmes de grilles](#systèmes-de-grilles)
     * [SCSS-lint](#scss-lint)
-* [Too Long; Didn't Read](#too-long;-didn't-read)
+* [Too Long; Didn’t Read](#too-long;-didn’t-read)
