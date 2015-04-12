@@ -77,6 +77,35 @@ Lorsqu’on teste si une valeur est fausse, on utilise toujours le mot-clé `not
   </div>
 </div>
 
+Veillez à toujours mettre la partie variable à gauche de la déclaration et le résultat (in)attendu à droite. Les structures conditionnelles inversées sont souvent plus difficiles à lire, surtout pour les développeurs inexpérimentés.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+@if $value == 42 {
+  // ...
+}
+
+// Nope
+@if 42 == $value {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+@if $value == 42
+  // ...
+
+// Nope
+@if 42 == $value
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
 Lorsqu’on utilise des structures conditionnelles à l’intérieur d’une fonction, toujours s’assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
 
 <div class="code-block">
