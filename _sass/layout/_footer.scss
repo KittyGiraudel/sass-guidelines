@@ -6,6 +6,8 @@
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+
+  @include beautify-links($note-background);
 }
 
 .footer__metadata {
