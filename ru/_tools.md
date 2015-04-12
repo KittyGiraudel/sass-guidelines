@@ -21,7 +21,7 @@
   <p>Ruby Sass в настоящее время подвергается некоторым выдающимся оптимизациям, которые специально предназначены для тяжёлых стилей со множеством функций и примесей. Они должны резко повысить его производительность до точки, когда Compass и другие фреймворки не будут больше замедлять Sass.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,7 +39,7 @@
 
 Также вы можете использовать что-то немного более непринужденное, как [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). В общем, ваш выбор не будет иметь большого влияния на стиль написания кода, так что это в значительной степени зависит от вас.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -67,7 +67,7 @@
   <p>Кроме того, если вы в погоне за приложением, которое работает с SCSS-lint и тому подобным, ребята из <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) работают над <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

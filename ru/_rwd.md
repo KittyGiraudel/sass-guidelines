@@ -57,7 +57,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -107,7 +107,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>Если вам нужно управление отзывчивостью с расширенными настройками, могу порекоммендовать вам не изобретать колесо, а воспользоваться отличными <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> или <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -162,7 +162,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 Теперь, если вы действительно обеспокоены дублированнем медиа-запросов, вы всё ещё можете использовать инструмент, чтобы объединить их, например, [этот gem](https://github.com/aaronjensen/sass-media_query_combiner), однако я должен вас предупредить о возможных побочных эффектах перемещения CSS-кода. Вы остаетёсь без представления о порядке кода, что является важным.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)

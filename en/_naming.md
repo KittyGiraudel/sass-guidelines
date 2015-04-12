@@ -15,7 +15,7 @@ Regarding variables, functions and mixins, we stick to something very *CSS-y*: *
 
 {% include snippets/naming/01/index.html %}
 
-### Further reading
+###### Further reading
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -27,7 +27,7 @@ As for many languages, I suggest all-caps snakerized variables when they are con
 
 {% include snippets/naming/02/index.html %}
 
-### Further Reading
+###### Further reading
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -43,6 +43,6 @@ For instance, if you work on a *Sassy Unicorn* project that is meant to be used 
   <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
 </div>
 
-### Further reading
+###### Further reading
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

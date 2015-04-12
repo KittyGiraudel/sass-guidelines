@@ -40,7 +40,7 @@ Algunas veces es mejor repetirse un poco para que el proyecto sea fácil de mant
 
 También, si me permites que cite a [Harry Roberts](https://csswizardry.com) una vez más, **el pragmatismo prevalece sobre la perfección**. En algún momento, es probable que te des cuenta que estás yendo en contra de las reglas descritas aquí. Si tiene sentido, si crees que está bien, hazlo. El código solo es un medio, no un fin.
 
-### Más información
+###### Más información
 
 * [El principio KISS](http://es.wikipedia.org/wiki/Principio_KISS)
 * [El principio DRY](http://es.wikipedia.org/wiki/No_te_repitas)

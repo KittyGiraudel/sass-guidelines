@@ -116,7 +116,7 @@ URL тоже должны быть в кавычках, по тем же при�
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -335,7 +335,7 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -518,7 +518,7 @@ $main-theme-color: $sass-pink
   <p>Функция <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> разработана, чтобы изменять свойства более плавно, принимая во внимание, насколько они уже изменены. Результат так же хорош, как и от <code>mix</code>, но с более удобным вызовом. Хотя, множитель масштабирования – не совсем то же самое.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -609,7 +609,7 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [SassyLists](http://sassylists.com)
 
@@ -743,7 +743,7 @@ $breakpoints: (
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -860,7 +860,7 @@ $breakpoints: (
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -992,7 +992,7 @@ $breakpoints: (
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Недавние исследования</a> показали, что использование <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (которое использует <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">упорядочивание по типу</a>) помогает уменьшить общий размер файла на 2.7% при сжатии Gzip, в сравнении с 1.3%, когда происходит упорядочение по алфавиту.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1231,7 +1231,7 @@ $breakpoints: (
 
 Как и везде, специфика несколько неуместна, последовательность является ключевым фактором. Если вы чувствуете, что полностью уверены во вложенности селекторов, тогда используйте ее. Просто убедитесь, что вся ваша команда справится с этим.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

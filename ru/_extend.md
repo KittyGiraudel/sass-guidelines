@@ -62,7 +62,7 @@
 
 Подводя итог, я бы **не рекомендовал использовать указание `@extend`**, исключая только некоторые конкретные обстоятельства, но я не буду заходить так далеко, чтобы запрещать её.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

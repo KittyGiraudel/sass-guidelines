@@ -71,7 +71,7 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
@@ -212,7 +212,7 @@ SassDoc выполняет две основные роли:
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

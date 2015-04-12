@@ -68,7 +68,7 @@
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
@@ -150,7 +150,7 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
@@ -241,7 +241,7 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 Пожалуйста, помните о том, что это плохое решение. Например, это не поможет справиться со сложными placeholder’ами, такими как те, которые нужны для Flexbox. Поэтому использование Autoprefixer будет куда лучшим вариантом.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

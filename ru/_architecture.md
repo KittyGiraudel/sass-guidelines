@@ -15,7 +15,7 @@
   <p>Я понял, что в основном архитектура зависит от проекта. Используйте или адаптируйте предложенное решение так, чтобы вы имели дело с системой, которая соответствует вашим потребностям.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -420,7 +420,7 @@ sass/
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
