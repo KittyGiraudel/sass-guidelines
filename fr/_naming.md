@@ -61,19 +61,19 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Oui
-$CSS_POSITIONS: top, right, bottom, left, center;
+$CSS_POSITIONS: (top, right, bottom, left, center);
 
 // Non
-$css-positions: top, right, bottom, left, center;
+$css-positions: (top, right, bottom, left, center);
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Oui
-$CSS_POSITIONS: top, right, bottom, left, center
+$CSS_POSITIONS: (top, right, bottom, left, center)
 
 // Non
-$css-positions: top, right, bottom, left, center
+$css-positions: (top, right, bottom, left, center)
 {% endhighlight %}
   </div>
 </div>
