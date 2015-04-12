@@ -125,18 +125,18 @@ Sass gère très intelligemment les mixins et les déclarations de fonction, vou
 @include dummy(true, 42, 'kittens');
 
 // Oui mais Non
-$params: true, 42, 'kittens';
+$params: (true, 42, 'kittens');
 $value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
 
 // Oui
-$params: true, 42, 'kittens';
+$params: (true, 42, 'kittens');
 @include dummy($params...);
 
 // Oui
 $params: (
   'c': 'kittens',
   'a': true,
-  'b': 42
+  'b': 42,
 );
 @include dummy($params...);
 {% endhighlight %}
@@ -150,15 +150,15 @@ $params: (
 +dummy(true, 42, 'kittens')
 
 // Oui mais Non
-$params: true, 42, 'kittens'
+$params: (true, 42, 'kittens')
 $value: dummy(nth($params, 1), nth($params, 2), nth($params, 3))
 
 // Oui
-$params: true, 42, 'kittens'
+$params: (true, 42, 'kittens')
 +dummy($params...)
 
 // Oui
-$params: ( 'c': 'kittens', 'a': true, 'b': 42, )
+$params: ( 'c': 'kittens', 'a': true, 'b': 42,)
 +dummy($params...)
 {% endhighlight %}
   </div>
@@ -249,14 +249,14 @@ L’utilisation de ce mixin devrait être assez simple&nbsp;:
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 .foo {
-  @include prefix(transform, rotate(90deg), webkit ms);
+  @include prefix(transform, rotate(90deg), ('webkit', 'ms');
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 .foo
-  +prefix(transform, rotate(90deg), webkit ms)
+  +prefix(transform, rotate(90deg), ('webkit', 'ms')
 {% endhighlight %}
   </div>
 </div>

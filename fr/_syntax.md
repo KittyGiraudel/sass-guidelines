@@ -51,11 +51,32 @@ Nous n’aborderons pas la question de l’organisation des fichiers dans cette 
 
 ## Chaînes de caractères
 
+Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
+
+### Encodage
+
+Afin d’éviter tout problème potentiel lié à l’encodage des caractères, il est recommandé de forcer l’encodage [UTF-8](http://fr.wikipedia.org/wiki/UTF-8) dans le [fichier principal](#fichier-principal) en utilisant la directive `@charset`. Assurez-vous que ce soit le premier élément de la feuille de style et qu’il n’y ait aucun caractère de quelque nature en amont.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+@charset 'utf-8';
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+@charset 'utf-8'
+{% endhighlight %}
+  </div>
+</div>
+
+### Guillemets
+
 En CSS, les chaînes de caractères n’ont pas à être entourées de guillemets, pas même celles qui contiennent des espaces. Prenez les noms de `font-family` par exemple&nbsp;: peu importe qu’elles soient ou non entre guillemets.
 
 C’est pourquoi dans Sass les chaînes de caractères n’ont pas non plus à être entourées de guillemets. Mieux, (et heureusement) une chaîne de caractères entre guillemets est strictement équivalente à sa jumelle sans guillemets (p.ex. `'abc'` est strictement égale à `abc`).
 
-Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de caractères entre guillemets sont une infime minorité, c’est la raison pour laquelle **les chaînes de caractères devraient toujours être entourées de guillemets simples** dans Sass (pourquoi des guillemets simples&nbsp;? parce qu’ils sont plus faciles à taper sur un clavier *qwerty*). À part la cohérence avec d’autres langages, dont JavaScript le cousin de CSS, il y a plusieurs raisons à ce choix&nbsp;:
+Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de caractères entre guillemets sont une infime minorité, c’est la raison pour laquelle **les chaînes de caractères devraient toujours être entourées de guillemets simples** (`'`) dans Sass (pourquoi des guillemets simples&nbsp;? parce qu’ils sont plus faciles à taper sur un clavier *qwerty*). À part la cohérence avec d’autres langages, dont JavaScript le cousin de CSS, il y a plusieurs raisons à ce choix&nbsp;:
 
 * les noms de couleurs sont traités comme des couleurs lorsqu’ils ne sont pas entre guillemets, ce qui peut conduire à de sérieux problèmes&nbsp;;
 * la plupart des colorations syntaxiques fonctionnent mieux avec les guillemets&nbsp;;
@@ -67,32 +88,84 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Oui
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$direction: 'left';
 
 // Non
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
+$direction: left;
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+$direction: 'left'
+
+// Nope
+$direction: left
+{% endhighlight %}
+  </div>
+</div>
+
+### Chaînes comme valeurs CSS
+
+Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+$font-type: sans-serif;
 
 // Non
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+$font-type: 'sans-serif';
+
+// Moyen mais yep
+$font-type: unquote('sans-serif');
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Oui
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+$font-type: sans-serif
 
 // Non
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
+$font-type: 'sans-serif'
 
-// Non
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
+// Moyen mais yep
+$font-type: unquote('sans-serif')
 {% endhighlight %}
   </div>
 </div>
 
-<div class="note">
-  <p>Dans l’exemple qui précède, <code>sans-serif</code> n’est pas entre guillemets car il s’agit d’une valeur CSS spécifique, qui ne doit donc pas en comporter.</p>
+Il convient de faire une distinction entre les chaînes de caractères qui sont des valeurs CSS (il s'agit d’identifiants CSS) comme dans l’exemple qui précède, et les chaînes de caractères correspondant à des types de données Sass (par exemple les clés des maps).
+
+On ne met pas de guillemets pour les premières, mais il en faut pour ces dernières.
+
+### Chaînes contenant des guillemets
+
+Si une chaîne de caractères contient un ou plusieurs guillemets simples, on peut éviter l’utilisation d’échappements répétés en enveloppant la chaîne à l’intérieur de guillemets doubles (`"`) .
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Okay
+@warn 'You can\'t do that.';
+
+// Okay
+@warn "You can't do that.";
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Okay
+@warn 'You can\'t do that.'
+
+// Okay
+@warn "You can't do that."
+{% endhighlight %}
+  </div>
 </div>
+
+### URLs
 
 Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-dessus&nbsp;:
 
@@ -579,28 +652,30 @@ Les listes sont l’équivalent des arrays (tables) dans Sass. Une liste est une
 
 Les listes doivent respecter les recommandations suivantes&nbsp;:
 
-* affichage sur une seule ligne, sauf si elles comptent plus de 80 caractères&nbsp;;
+* sur une ligne ou sur plusieurs lignes&nbsp;;
+* impérativement sur plusieurs lignes si elles comptent plus de 80 caractères&nbsp;;
 * toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS&nbsp;;
-* ne jamais utiliser les parenthèses, sauf si la liste est vide ou imbriquée&nbsp;;
-* ne jamais ajouter de virgule après le dernier élément de la liste.
+* toujours entre parenthèses&nbsp;;
+* ajouter une virgule après le dernier élément de la liste si elle compte plusieurs lignes.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Oui
-$font-stack: 'Helvetica', 'Arial', sans-serif;
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 
 // Non
-$font-stack:
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif;
+  sans-serif,
+);
 
 // Non
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
 // Non
-$font-stack: ('Helvetica', 'Arial', sans-serif);
+$font-stack: 'Helvetica', 'Arial', sans-serif;
 
 // Non
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
@@ -609,19 +684,19 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Oui
-$font-stack: 'Helvetica', 'Arial', sans-serif
+$font-stack: ('Helvetica', 'Arial', sans-serif)
 
 // Non (affichage non supporté)
-$font-stack:
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif
-
+  sans-serif,
+)
 // Non
 $font-stack: 'Helvetica' 'Arial' sans-serif
 
 // Non
-$font-stack: ('Helvetica', 'Arial', sans-serif)
+$font-stack: 'Helvetica', 'Arial', sans-serif
 
 // Non
 $font-stack: ('Helvetica', 'Arial', sans-serif,)
@@ -634,7 +709,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
+$shadows: (0 42px 13.37px hotpink);
 
 // Oui
 $shadows: append($shadows, $shadow, comma);
@@ -645,7 +720,7 @@ $shadows: $shadows, $shadow;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
+$shadows: (0 42px 13.37px hotpink)
 
 // Oui
 $shadows: append($shadows, $shadow, comma)
@@ -658,8 +733,9 @@ $shadows: $shadows, $shadow
 
 
 
-### Lecture complémentaire
+### Lectures complémentaires
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 
@@ -806,6 +882,7 @@ Si vous voulez connaître la profondeur de la map, ajoutez également la fonctio
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
@@ -1062,7 +1139,7 @@ Je dois dire que je n’arrive pas à me décider moi-même. Un [récent sondage
   <figcaption>Tableau montrant comment les développeurs ordonnent leurs déclarations CSS</figcaption>
 </figure>
 
-C’est la raison pour laquelle je ne recommande pas de choix particulier dans ce guide de style. Choisisssez celui que vous préférez, du moment qu’il reste cohérent tout au long de vos feuilles de style.
+C’est la raison pour laquelle je ne recommande pas de choix particulier dans ce guide de style. Choisisssez celui que vous préférez, du moment qu’il reste cohérent tout au long de vos feuilles de style (en d'autres termes&nbsp;: pas l'option <em>au hasard</em>).
 
 <div class="note">
   <p>Une <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>

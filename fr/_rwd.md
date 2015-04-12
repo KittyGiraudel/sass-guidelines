@@ -62,7 +62,9 @@ $breakpoints: ('graine': (min-width: 800px), 'pousse': (min-width: 1000px), 'pla
   </div>
 </div>
 
-
+<div class="note">
+  <p>L’exemple qui précède utilise des maps imbriquées pour définir les points de rupture, mais tout dépend de la façon dont vous gérez vos points de rupture. On pourrait tout aussi bien choisir des chaînes de caractères plutôt que des maps internes, pour plus de flexibilité (p.ex. <code>'(min-width: 800px)'</code>).</p>
+</div>
 
 
 ### Lectures complémentaires
@@ -86,8 +88,12 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
       @content;
     }
   } @else {
@@ -104,8 +110,12 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 =respond-to($breakpoint)
-  @if map-has-key($breakpoints, $breakpoint)
-    @media #{inspect(map-get($breakpoints, $breakpoint))}
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
       @content
 
   @else
@@ -116,8 +126,7 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
 </div>
 
 <div class="note">
-  <p>Évidemment, c’est un gestionnaire de points de rupture assez simpliste, qui ne suffira pas lorsque vous devrez gérer des points personnalisés ou multi-critères.</p>
-  <p>Si vous avez besoin d’un gestionnaire plus permissif, et si vous ne voulez pas réinventer la roue, je vous recommande <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a> qui ont fait leurs preuves.</p>
+  <p>Évidemment, c’est un gestionnaire de points de rupture assez simpliste, si vous avez besoin d’un gestionnaire plus permissif, et si vous ne voulez pas réinventer la roue, je vous recommande <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a> qui ont fait leurs preuves.</p>
 </div>
 
 
