@@ -51,11 +51,11 @@ Nous n’aborderons pas la question de l’organisation des fichiers dans cette 
 
 ## Chaînes de caractères
 
-Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu'on utilise ces chaînes dans Sass.
+Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
 
 ### Encodage
 
-Afin d'éviter tout problème potentiel lié à l'encodage des caractères, il est recommandé de forcer l'encodage [UTF-8](http://en.wikipedia.org/wiki/UTF-8) dans le [fichier principal](#fichier-principal) en utilisant la directive `@charset`. Assurez-vous que c'est le premier élément de la feuille de style et qu'il n'y a aucun caractère de quelque nature en amont.
+Afin d’éviter tout problème potentiel lié à l’encodage des caractères, il est recommandé de forcer l’encodage [UTF-8](http://fr.wikipedia.org/wiki/UTF-8) dans le [fichier principal](#fichier-principal) en utilisant la directive `@charset`. Assurez-vous que ce soit le premier élément de la feuille de style et qu’il n’y ait aucun caractère de quelque nature en amont.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -107,7 +107,7 @@ $direction: left
 
 ### Chaînes comme valeurs CSS
 
-Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C'est pourquoi on ne met jamais de guillemets autour de ces valeurs.
+Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -118,7 +118,7 @@ $font-type: sans-serif;
 // Non
 $font-type: 'sans-serif';
 
-//Ok je pense :
+// Moyen mais yep
 $font-type: unquote('sans-serif');
 {% endhighlight %}
   </div>
@@ -130,19 +130,19 @@ $font-type: sans-serif
 // Non
 $font-type: 'sans-serif'
 
-//Ok je pense :
+// Moyen mais yep
 $font-type: unquote('sans-serif')
 {% endhighlight %}
   </div>
 </div>
 
-Il convient de faire une distinction entre les chaînes de caractères qui sont des valeurs CSS (il s'agit d'identifiants CSS) comme dans l'exemple qui précède, et les chaînes de caractères correspondant à des types de données Sass (par exemple les map keys).
+Il convient de faire une distinction entre les chaînes de caractères qui sont des valeurs CSS (il s'agit d’identifiants CSS) comme dans l’exemple qui précède, et les chaînes de caractères correspondant à des types de données Sass (par exemple les clés des maps).
 
 On ne met pas de guillemets pour les premières, mais il en faut pour ces dernières.
 
 ### Chaînes contenant des guillemets
 
-Si une chaîne de caractères contient un ou plusieurs guillemets simples, on peut éviter l'utilisation d'échappements répétés en enveloppant la chaîne à l'intérieur de guillemets doubles (`"`) .
+Si une chaîne de caractères contient un ou plusieurs guillemets simples, on peut éviter l’utilisation d’échappements répétés en enveloppant la chaîne à l’intérieur de guillemets doubles (`"`) .
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -656,7 +656,7 @@ Les listes doivent respecter les recommandations suivantes&nbsp;:
 * impérativement sur plusieurs lignes si elles comptent plus de 80 caractères&nbsp;;
 * toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS&nbsp;;
 * toujours entre parenthèses&nbsp;;
-* ajouter une virgule après le dernier élément de la liste si elle compte plsuieurs lignes.
+* ajouter une virgule après le dernier élément de la liste si elle compte plusieurs lignes.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

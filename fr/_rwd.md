@@ -63,7 +63,7 @@ $breakpoints: ('graine': (min-width: 800px), 'pousse': (min-width: 1000px), 'pla
 </div>
 
 <div class="note">
-  <p>L'exemple qui précède utilise des maps imbriquées pour définir les points de rupture, mais tout dépend de la façon dont vous gérez vos points de rupture. On pourrait tout aussi bien choisir des chaînes de caractères plutôt que des maps internes, pour plus de flexibilité (p.ex. <code>'(min-width: 800px)'</code>).</p>
+  <p>L’exemple qui précède utilise des maps imbriquées pour définir les points de rupture, mais tout dépend de la façon dont vous gérez vos points de rupture. On pourrait tout aussi bien choisir des chaînes de caractères plutôt que des maps internes, pour plus de flexibilité (p.ex. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
 
