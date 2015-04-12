@@ -690,13 +690,13 @@ $font-stack: (
 )
 
 // Nope
-$font-stack: 'Helvetica' 'Arial' sans-serif;
+$font-stack: 'Helvetica' 'Arial' sans-serif
 
 // Nope
-$font-stack: 'Helvetica', 'Arial', sans-serif;
+$font-stack: 'Helvetica', 'Arial', sans-serif
 
 // Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif,);
+$font-stack: ('Helvetica', 'Arial', sans-serif,)
 {% endhighlight %}
   </div>
 </div>
@@ -717,7 +717,7 @@ $shadows: $shadows, $shadow;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$shadows: (0 42px 13.37px hotpink);
+$shadows: (0 42px 13.37px hotpink)
 
 // Yep
 $shadows: append($shadows, $shadow, comma)
