@@ -37,6 +37,7 @@ blockquote {
  * Headings
  */
 h1, h2, h3 {
+  @include prefix(hyphens, auto, webkit moz);
   text-transform: capitalize;
   position: relative;
 
@@ -67,11 +68,4 @@ h3 {
   h1, h2, h3 {
     text-transform: initial;
   }
-}
-
-/**
- * Images
- */
-img {
-  max-width: 100%;
 }
