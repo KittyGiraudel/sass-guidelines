@@ -62,10 +62,16 @@ h3 {
   text-transform: uppercase;
 }
 
-// Russian do not capitalize every word in a header
-// See https://github.com/HugoGiraudel/sass-guidelines/issues/163
 :lang(ru) {
+  // Russian l10n extensions
   h1, h2, h3 {
+    // Do not capitalize every word in a header
+    // See https://github.com/HugoGiraudel/sass-guidelines/issues/163
     text-transform: initial;
+    // Use hyphens
+    // See https://github.com/HugoGiraudel/sass-guidelines/issues/166#issuecomment-91924154
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
   }
 }
