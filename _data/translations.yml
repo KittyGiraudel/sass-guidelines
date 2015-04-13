@@ -147,5 +147,5 @@ ko:
   baseline:
     content: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
   footer:
-    content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음"
+      content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
   note: "주"
