@@ -137,7 +137,7 @@ zh:
   baseline:
     content: "编写稳健、可维护和可扩展Sass的编程规范"
   footer:
-    content: "本文由[Hugo Giraudel](http://hugogiraudel.com)编写和维护"
+    content: "本文由[Hugo Giraudel](http://hugogiraudel.com)编写和维护，经 [Sean Sun](https://github.com/pinggod) 和 [大漠](http://www.w3cplus.com/) 整理翻译为中文。"
   note: "Note"
 
 ko:
