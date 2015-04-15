@@ -5,7 +5,7 @@ En mi opinión, la primera cosa que debe hacer una guía de estilo es describir 
 
 Cuando varios desarrolladores están involucrados en la escritura CSS dentro del mismo proyecto o proyectos, es sólo cuestión de tiempo antes de que uno de ellos empiece a hacer las cosas a su manera. Las guías de estilo que fomentan la coherencia no solo previenen esto, sino que también ayudan a la hora de leer y actualizar el código.
 
-A grandes rasgos, lo que queremos (tímidamente inspirados en [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) es):
+A grandes rasgos, lo que queremos (humildemente inspirados en [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) es):
 
 * dos (2) espacios en blanco, en lugar de tabulaciones;
 * idealmente, líneas de 80 caracteres;
@@ -72,9 +72,9 @@ Para evitar cualquier posible problema con la codificación de caracteres, es mu
 
 ### Comillas
 
-En CSS, las cadenas de caracteres no tienen por qué estar entre comillas, ni siquiera aquellas que contienen espacios. Toma como ejemplo, los nombres de las tipografías: no importa si las pones entre comillas o no para que el analizador sintáctico de CSS las entienda.
+En CSS, las cadenas de caracteres no tienen por qué estar entre comillas, ni siquiera aquellas que contienen espacios. Toma como ejemplo, los nombres de las tipografías: no importa si las pones entre comillas o no para que el analizador sintáctico CSS las entienda.
 
-Debido a esto, Sass *tampoco* necesita que las cadenas estén entre comillas. Incluso mejor (y con *suerte* me darás la razón) una cadena entre comillas es aquivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
+Debido a esto, Sass *tampoco* necesita que las cadenas estén entre comillas. Incluso mejor (y con *suerte* me darás la razón) una cadena entre comillas es equivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
 
 Aun así, los lenguajes que no requieren que las cadenas estén entre comillas, son definitivamente una minoría, y es por lo que **las cadenas siempre deben ir entre comillas simples** (`'`) en Sass (las comillas simples son mucho más fáciles de escribir en los teclados *qwerty*). Además de la coherencia con otros lenguajes, entre ellos el primo de CSS, Javascript, hay otras razones para esta elección:
 
@@ -103,7 +103,6 @@ $direction: left
 {% endhighlight %}
   </div>
 </div>
-
 
 ### Cadenas como valores CSS
 
@@ -139,7 +138,6 @@ $font-type: unquote('sans-serif')
 Por lo tanto, podemos hacer una distinción entre las cadenas destinadas a ser utilizadas como valores CSS (identificadores CSS) como en el ejemplo anterior, y las cadenas cuando se trata con tipos de datos Sass, por ejemplo, en mapas.
 
 No ponemos entre comillas la primera, pero si envolvemos la segunda entre comillas simples.
-
 
 ### Cadenas que contienen comillas
 
@@ -201,7 +199,7 @@ Las URLs deben ir entre comillas simples por las mismas razones que se explican 
 
 ### Más información
 
-* [Todo lo que necesita saber sobre la interpolación en Sass -En inglés](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [Todo lo que necesitas saber sobre la interpolación en Sass -En inglés](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings -En inglés](https://github.com/HugoGiraudel/SassyStrings)
 
 
@@ -364,7 +362,7 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-Al añadir a un número cualquiera, una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. En un valor, separar la parte numérica de su unidad también devuelve una cadena. Esto no es lo que quieres.
+Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. En un valor, separar la parte numérica de su unidad también devuelve una cadena. Esto no es lo que quieres.
 
 
 
@@ -460,7 +458,7 @@ Con el objetivo de que trabajar con los colores sea tan simple como sea posible,
 1. [Notación RGB](http://es.wikipedia.org/wiki/RGB);
 1. Notación hexadecimal. Preferiblemente en minúsculas y en formato corto cuando sea posible.
 
-Para principiantes, las palabras reservadas a menudo hablan por si mismas. La representación HSL no solo es la más sencilla de comprender para el cerebro humano<sup>[cita requerida]</sup>, sino que también facilita a los autores de las hojas de estilo modificar el color al ajutar el tono, la saturación y la luminosidad de forma individual. RGB todavía tiene la ventaja de mostrar de inmediato si el color tiene más de azul, o de verde o de rojo, pero no signifia que sea fácil construir un color con estas tres partes. Por último, el formato hexadecimal está cerda de ser indescifrable para la mente humana.
+Para principiantes, las palabras reservadas a menudo hablan por si mismas. La representación HSL no solo es la más sencilla de comprender para el cerebro humano<sup>[cita requerida]</sup>, sino que también facilita a los autores de las hojas de estilo modificar el color al ajutar el tono, la saturación y la luminosidad de forma individual. RGB todavía tiene la ventaja de mostrar de inmediato si el color tiene más de azul, o de verde o de rojo, pero no signifia que sea fácil construir un color con estas tres partes. Por último, el formato hexadecimal está cerca de ser indescifrable para la mente humana.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -562,7 +560,7 @@ Al hacer esto, evitarás que algún cambio en el tema resulte algo como `$sass-p
 
 ### Aclarando Y Oscureciendo Colores
 
-Tanto las funciones de [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) (aclarar) como de [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) (oscurecer) manipulan la luminosidad de un color en el espacio HSL al añadir o restar luminosidad a dicho espacio. Básicamente, son alias para el parámetro `$lightness` de la función [`Ajuste de tono`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method)
+Tanto las funciones [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) (aclarar) como [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) (oscurecer) manipulan la luminosidad de un color en el espacio HSL al añadir o restar luminosidad a dicho espacio. Básicamente, son alias para el parámetro `$lightness` de la función [`Ajuste de tono`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method)
 
 La cuestión es que esas funciones a menudo no proporcionan el resultado esperado. Por otro lado, la función [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) (mezcla) es una buena manera para aclarar u oscurecer un color al mezclarlo con `blanco` or `negro`.
 
@@ -834,7 +832,7 @@ Si alguna vez te encuentras perdido, preguntándote qué clase de magia loca est
   </div>
 </div>
 
-Si tienes interés en conocer la profundidad del mapa, puedes añadir también la siguiente función. El *mixin* lo mostrará automáticamente.
+Si tienes interés en conocer la profundidad del mapa, añade la siguiente función. El *mixin* lo mostrará automáticamente.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -893,7 +891,7 @@ Si tienes interés en conocer la profundidad del mapa, puedes añadir también l
 
 ## Conjunto De Reglas CSS
 
-llegados a este punto, esto es sobretodo una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjuto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo la [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Llegados a este punto, esto es sobretodo una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjuto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * los selectores relacionados deben ir en la misma línea; los selectores no vinculados en nuevas líneas;
 * la llave de apertura (`{`) deben ir separada por un espacio del selector;
@@ -943,7 +941,7 @@ Ejemplo:
   </div>
 </div>
 
-Adicionalmente a esta guía, queremos prestar especial atención a las siguientes pautas:
+Adicionalmente a esas guía CSS, queremos prestar especial atención a las siguientes pautas:
 
 * las variables locales se declaran antes que cualquier otra y están espaciadas por un salto de línea;
 * las llamadas a *mixin* sin `@content` deben ir antes de cualquier declaración;
@@ -1015,7 +1013,7 @@ No se me ocurren muchos temas donde las opiniones se dividen tanto como en lo qu
 * mantener un estricto orden alfabético;
 * ordenar las declaraciones por tipo (posición, *display*, colores, tipografía, varios...).
 
-Hay pros y contras para estas dos posturas. Por una parte, el orden alfabético es universal (por lo mejos para los idiomas que usan el alfabeto latino) así que no hay discusión posible a la hora de poner una propiedad antes que otra. Sin embargo, me parece extremadamente raro ver que propiedades como, `bottom` y `top` no estén la una justo después de la otra. ¿Por qué las animaciones deben aparecer antes que la forma de `display`? Hay muchas rarezas con respecto al orden alfabético.
+Hay pros y contras para estas dos posturas. Por una parte, el orden alfabético es universal (por lo menos para los idiomas que usan el alfabeto latino) así que no hay discusión posible a la hora de poner una propiedad antes que otra. Sin embargo, me parece extremadamente raro ver que propiedades como, `bottom` y `top` no estén la una justo después de la otra. ¿Por qué las animaciones deben aparecer antes que el tipo de display? Hay muchas rarezas con respecto al orden alfabético.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1154,7 +1152,7 @@ Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo.
 
 ## Anidamiento De Selectores
 
-una característica particular que aporta Sass y que está siendo muy mal utilizada por muchos desarrolladores es el *anidamiento o anidación de selectores*. El anidamiento de selectores ofrece una manera para que los autores de las hojas de estilo puedan calcular selectores largos anidando selectores más cortos entre ellos.
+Una característica particular que aporta Sass y que está siendo muy mal utilizada por muchos desarrolladores es el *anidamiento o anidación de selectores*. El anidamiento de selectores ofrece una manera para que los autores de las hojas de estilo puedan calcular selectores largos anidando selectores más cortos entre ellos.
 
 ### Regla General
 
@@ -1304,7 +1302,7 @@ Además, cuando se utilizan clases de estado independientes del dispositivo como
   </div>
 </div>
 
-Por último, pero no menos importante, cuando se da estilo a un elemento, pues este pasa a estar contenido en otro elemento específico, también está muy bien utilizar la anidación para mantener todo lo relacionado con el componente en el mismo lugar.
+Por último, pero no menos importante, cuando se da estilo a un elemento, este pasa a estar contenido en otro elemento específico, también está muy bien utilizar la anidación para mantener todo lo relacionado con el componente en el mismo lugar.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

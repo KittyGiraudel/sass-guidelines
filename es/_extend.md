@@ -18,11 +18,11 @@ Dicho esto, ya sabes el dicho:
 
 Hay escenarios donde los selectores *extend* pueden ser de gran ayuda e incluso, merecen la pena. Sin embargo, ten siempre presente las siguientes reglas para que no te metas en problemas:
 
-* Utiliza *extend* dentro de un módulo, no a través de varios.
+* Utiliza *extend* dentro de un módulo, no en varios.
 * Utiliza *extend* exclusivamente en *placeholders* no en el selector actual.
 * Asegurate que el *placeholder* que extiendes está presente lo menos posible en las hojas de estilo.
 
-Si vas a utilizar *extend*, dejame recordarte que no se lleva muy bien con los bloques `@media`. Como ya sabrás, Sass es incapaz de extender un selector exterior desde el interior de una *media query*. Al hacerlo el compilador se bloquea, diciéndote que no puedes hacer esto. No está bien. Especialmente porque las *media queries* son lo más usado ultimamente.
+Si vas a utilizar *extend*, déjame recordarte que no se lleva muy bien con los bloques `@media`. Como ya sabrás, Sass es incapaz de extender un selector exterior desde el interior de una *media query*. Al hacerlo el compilador se bloquea, diciéndote que no puedes hacer esto. No está bien. Especialmente porque las *media queries* son lo más usado últimamente.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -56,7 +56,7 @@ Si vas a utilizar *extend*, dejame recordarte que no se lleva muy bien con los b
 > Solo puedes usar @extend en un selector dentro de una misma directiva.
 
 <div class="note">
-  <p>Frecuentemente se dice que <code>@extend</code> ayuda con tamaño del archivo ya que combina selectores en lugar de propiedades duplicadas. Esto es verdad, sin embargo la diferencia es insignificante ya que <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> hará esta compresión.</p>
+  <p>Frecuentemente se dice que <code>@extend</code> ayuda con el tamaño del archivo, ya que combina selectores en lugar de propiedades duplicadas. Esto es verdad, sin embargo la diferencia es insignificante ya que <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> hará esta compresión.</p>
   <p>Dicho esto, si no puedes usar Gzip (o algo equivalente) entonces cambiar a un enfoque <code>@extend</code> puede que no sea tan malo, siempre y cuando sepas lo que estás haciendo.</p>
 </div>
 

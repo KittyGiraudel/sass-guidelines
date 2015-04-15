@@ -1,9 +1,9 @@
 
 # Comentarios
 
-CSS es un lenguajes complicado, lleno de *hacks* y rarezas. Debido a esto, debería de tener muchos muchos comentarios, especialmente si tú o alguien más tiene la intención de leer y actualizar el código dentro de 6 mese o 1 año. No dejes que ni tú, ni nadie se encuentre en la situación de: *yo-no-escribí-esto-oh-dios-mio-por-qué*.
+CSS es un lenguajes complicado, lleno de *hacks* y rarezas. Debido a esto, debería de tener muchos muchos comentarios, especialmente si tú o alguien más tiene la intención de leer y actualizar el código dentro de 6 meses o 1 año. No dejes que ni tú, ni nadie se encuentre en la situación de: *yo-no-escribí-esto-oh-dios-mio-por-qué*.
 
-Siendo tan simple como es CSS, aún queda sitio para muchos comentarios. Estos podrían explicar:
+Tan simple como pueda ser CSS, aún queda sitio para muchos comentarios. Estos podrían explicar:
 
 * la estructura y/o la función de un archivo;
 * el objetivo de un conjunto de reglas;
@@ -21,7 +21,7 @@ Y probablemente haya olvidado muchas otras diversas razones para realizar coment
 
 ## Escribiendo Comentarios
 
-Idealmente, *cualquier* conjunto de reglas CSS debe ir precedida por un comentario estilo-C explicando el objetivo del bloque CSS. Estos comentarios también deben dar una explicación numerada respecto a partes específicas del conjunto de reglas. Por ejemplo:
+Idealmente, *cualquier* conjunto de reglas CSS debería ir precedida por un comentario estilo-C explicando el objetivo del bloque CSS. Estos comentarios también deben dar una explicación numerada respecto a partes específicas del conjunto de reglas. Por ejemplo:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -63,14 +63,14 @@ Cuando se comenta una sección específica de Sass, utiliza los comentarios de l
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Añadir el módulo actual a la lista de módulos importados.
-// se requier un indicador `!global` para que pueda actualizar la variable global.
+// se requiere un indicador `!global` para que pueda actualizar la variable global.
 $imported-modules: append($imported-modules, $module) !global;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight scss %}
 // Añadir el módulo actual a la lista de módulos importados.
-// se requier un indicador `!global` para que pueda actualizar la variable global.
+// se requiere un indicador `!global` para que pueda actualizar la variable global.
 $imported-modules: append($imported-modules, $module) !global;
 {% endhighlight %}
   </div>

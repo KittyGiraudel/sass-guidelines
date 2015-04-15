@@ -20,7 +20,7 @@ Sobra decir, que cuantos más desarrolladores participen en el proyecto, más ne
     <li>tienen desarrolladores con diferentes habilidades y especialidades;</li>
     <li>tienen un número variable de desarrolladores que trabajan en el proyecto en un momento determinado;</li>
     <li>hay una constante contratación de personal nuevo;</li>
-    <li>tienen una serie de código base en los que los desarrolladores entran y salen constantemente.</li>
+    <li>tienen una serie de código base en el que los desarrolladores entran y salen constantemente.</li>
   </ul>
 </blockquote>
 
@@ -48,11 +48,11 @@ Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta
 
 Gracias a mis tontos experimentos, como por ejemplo: [operadores a nivel de bits](https://github.com/HugoGiraudel/SassyBitwise), [iteradores y generadores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) y [analizador JSON](https://github.com/HugoGiraudel/SassyJSON) en Sass, podemos ser conscientes de lo que se puede hacer con este preprocesador.
 
-Mientras CSS es un lenguaje sencillo. Sass tiene la intención de escribirse igual que CSS y por tanto, no debería ser mucho más complicado de aprender el propio CSS en sí. El [principio KISS](http://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](http://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
+Mientras CSS es un lenguaje sencillo. Sass busca escribirse igual que CSS y por tanto, no debería ser mucho más complicado de aprender que el propio CSS en sí. El [principio KISS](http://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](http://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
 
 Algunas veces es mejor repetirse un poco para que el proyecto sea fácil de mantener, antes que construir un sistema demasiado pesado, inabarcable e innecesariamente complicado que genere un código imposible de mantener porque es demasiado complejo.
 
-También, si me permites que cite a [Harry Roberts](https://csswizardry.com) una vez más, **el pragmatismo prevalece sobre la perfección**. En algún momento, es probable que te des cuenta que estás llendo en contra de las reglas descritas aquí. Si tiene sentido, si crees que está bien, hazlo. El código solo es un medio, no un fin.
+También, si me permites que cite a [Harry Roberts](https://csswizardry.com) una vez más, **el pragmatismo prevalece sobre la perfección**. En algún momento, es probable que te des cuenta que estás yendo en contra de las reglas descritas aquí. Si tiene sentido, si crees que está bien, hazlo. El código solo es un medio, no un fin.
 
 
 

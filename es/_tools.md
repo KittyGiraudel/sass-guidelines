@@ -12,18 +12,18 @@ Sin embargo, mi consejo es que debes disminuir al mínimo el número de dependen
 
 ## Compass
 
-[Compass](http://compass-style.org/) el el principal *framework* de Sass actualmente. Desarrollado por [Chris Eppstein](https://twitter.com/chriseppstein), uno de los diseñadores de Sass, si quieres mi opinión, no creo que vaya a perder dramáticamente su popularidad en un futuro cercano.
+[Compass](http://compass-style.org/) es el principal *framework* de Sass. Desarrollado por [Chris Eppstein](https://twitter.com/chriseppstein), uno de los diseñadores de Sass, si quieres mi opinión, no creo que vaya a perder drásticamente su popularidad en un futuro cercano.
 
 Aún asi, yo no uso Compass, la razón principal es que ralentiza muchísimo a Sass. Ruby Sass es bastante lento por si mismo, así que añadirle más Ruby y más Sass por encima no ayuda demasiado.
 
-El punto es que usamos muy poco del *framework*. Compass es enorme. Los *mixins* de compatibilidad entre navegadores son solo la punta del iceberg. Funciones matemáticas, utilidades de imagen, *spriting*... Hay muchas cosas que puedes hacer con este gran software.
+Lo que ocurre es que usamos una parte muy pequeña del *framework*. Compass es enorme. Los *mixins* de compatibilidad entre navegadores son solo la punta del iceberg. Funciones matemáticas, utilidades de imagen, *spriting*... Hay muchas cosas que puedes hacer con este gran software.
 
-Desafortunadamente, toda este azucar no proporciona ninguna característica impresionante. Se puede hacer una excepción con el constructor de *sprites* que aun así no es tan *impresionante*. Pero por ejemplo [Grunticon](https://github.com/filamentgroup/grunticon) y [Grumpicon](http://grumpicon.com/) cumplen la misma función también y además tienen la ventaja de poderse conectar durante el proceso de construcción.
+Desafortunadamente, toda esta azucar no proporciona ninguna característica impresionante. Se puede hacer una excepción con el constructor de *sprites* que es *muy bueno*. Pero por ejemplo [Grunticon](https://github.com/filamentgroup/grunticon) y [Grumpicon](http://grumpicon.com/) cumplen la misma función también y además tienen la ventaja de poderse conectar durante el proceso de construcción.
 
 De todas formas, no prohíbo el uso de Compass aunque tampoco lo recomiendo, especialmente dado que no es compatible con LibSass (aunque se han hecho muchos esfuerzos para ir en esa dirección). Si te sientes mejor utilizándolo, lo veo justo, pero no creas que obtendrás mucho al final del día.
 
 <div class="note">
-  <p>Ruby Sass tiene algunas optimizaciones importantes pendientes y que están específicamente orientadas a los estilos de fuerte lógica con muchas funciones y *mixins*. Deberían mejorar drásticamente el rendimiento, hasta un punto donde Compass u otros *frameworks* no volverán a ralentizas a Sass nunca más.</p>
+  <p>Ruby Sass tiene algunas optimizaciones importantes pendientes y que están específicamente orientadas a los estilos de fuerte lógica con muchas funciones y *mixins*. Deberían mejorar drásticamente el rendimiento, hasta un punto donde Compass u otros *frameworks* no volverán a ralentizar a Sass nunca más.</p>
 </div>
 
 
@@ -42,7 +42,7 @@ De todas formas, no prohíbo el uso de Compass aunque tampoco lo recomiendo, esp
 
 ## Sistemas De Retícula
 
-No parece una opción no utilizar un sistema de retícula ahora que el *Responsive Web Design* está por todas partes. Para que los diseños parezcan consistententes y coherentes en todos los tamaños, utilizamos algo así como una retícula para disponer los elementos. Para evitar tener que escribir el código de esta retícula una y otra vez, algunas mentes brillantes desarrollaron una retícula reutilizable.
+No es una opción no utilizar un sistema de retícula ahora que el *Responsive Web Design* está por todas partes. Para que los diseños parezcan consistententes y coherentes en todos los tamaños, utilizamos algo así como una retícula para disponer los elementos. Para evitar tener que escribir el código de esta retícula una y otra vez, algunas mentes brillantes desarrollaron una retícula reutilizable.
 
 Déjame ser directo: no soy muy fan de los sistemas de retícula. Por supuesto que veo su potencial, pero creo que muchos de ellos son completamente excesivos y en su mayoría sirven para dibujar columnas rojas sobre un fondo blanco en las presentaciones de diseñadores nerds. ¿Cúando fue la última vez que pensaste *Gracias-a-Dios-tengo-esta-herramienta-para-construir-retículas-de-2-5-3.2-π*?. Eso es, nunca. Porque en la mayoría de los casos, quieres usar la típica retícula de 12 columnas. Nada estrafalario.
 
