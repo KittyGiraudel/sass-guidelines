@@ -51,6 +51,27 @@ No abordaremos la cuestión de la organización de archivos en esta sección. Es
 
 ## Cadenas
 
+Lo creas o no, las cadenas juegan un gran papel en los ecosistemas de CSS y Sass. La mayoría de los valores CSS suelen ser longitudes o cadenas (normalmente sin comillas), así que es bastante crucial que cumplas ciertas pautas cuando se trabaja con cadenas en Sass.
+
+### Codificación
+
+Para evitar cualquier posible problema con la codificación de caracteres, es muy recomendable forzar la codificación [UTF-8](http://es.wikipedia.org/wiki/UTF-8) en la [hoja de estilo principal](#hoja-de-estilo-principal) usando la directiva `@charset`. Asegúrate que es el primer elemento de la hoja de estilo y que no hay ningún otro caracter de cualquier tipo antes.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+@charset 'utf-8';
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+@charset 'utf-8'
+{% endhighlight %}
+  </div>
+</div>
+
+### Comillas
+
 En CSS, las cadenas de caracteres no tienen por qué estar entre comillas, ni siquiera aquellas que contienen espacios. Toma como ejemplo, los nombres de las tipografías: no importa si las pones entre comillas o no para que el analizador sintáctico de CSS las entienda.
 
 Debido a esto, Sass *tampoco* necesita que las cadenas estén entre comillas. Incluso mejor (y con *suerte* me darás la razón) una cadena entre comillas es aquivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
