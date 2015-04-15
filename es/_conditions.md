@@ -76,6 +76,35 @@ Cuando se evalúa un valor booleano *falsy*, utiliza siempre la palabra clave `n
   </div>
 </div>
 
+Pon siempre la parte de la variable en la parte izquierda de la sentencia y el (in)esperado resultado en la derecha. Las sentencias condicionales invertidas son con frecuencia, más dificiles de leer, especialmente para desarrolladores inexpertos.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Si
+@if $value == 42 {
+  // ...
+}
+
+// No
+@if 42 == $value {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Si
+@if $value == 42
+  // ...
+
+// No
+@if 42 == $value
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
 Cuando se utilizan sentencias condicionales dentro de una función para devolver un resultado diferente basado en alguna condición, siempre debes de asegurarte que la función tiene una declaracón `@return` fuera de cualquier bloque condicional.
 
 <div class="code-block">
