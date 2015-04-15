@@ -626,49 +626,52 @@ Las listas son el equivalente en Sass a los arreglos (Arrays). Una lista es una 
 
 Las listas deberían respetar las siguientes pautas:
 
-* siempre se mostrará en una sola línea, a menos que sea demasiado larga para caber en una línea de 80 caracteres;
-* siempre se utilizará la coma como separador, a menos que se utilice para propósitos propios de CSS;
-* nunca escribir el paréntesis, a menos que la lista esté vacía o anidada con otra lista;
-* nunca añadir una coma al final.
+* pueden estar en una línea o multilínea
+* usar múltiples líneas si es demasiado larga para caber en una sola línea de 80 caracteres;
+* a menos que se utilice para fines de CSS, siempre se utilizará la coma como separador;
+* siempre encerrada entre paréntesis;
+* arrastra la coma si hay múltiples líneas, pero no cuando es una sola.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Si
-$font-stack: 'Helvetica', 'Arial', sans-serif;
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// No
-$font-stack:
+// Si
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif;
+  sans-serif,
+);
 
 // No
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
 // No
-$font-stack: ('Helvetica', 'Arial', sans-serif);
+$font-stack: 'Helvetica', 'Arial', sans-serif;
 
 // No
-$font-stack: ('Helvetica', 'Arial', sans-serif,);
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Si
-$font-stack: 'Helvetica', 'Arial', sans-serif
+$font-stack: ('Helvetica', 'Arial', sans-serif)
 
-// No (ya que no es compatible)
-$font-stack:
+// No (no compatible)
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif
+  sans-serif,
+)
 
 // No
 $font-stack: 'Helvetica' 'Arial' sans-serif
 
 // No
-$font-stack: ('Helvetica', 'Arial', sans-serif)
+$font-stack: 'Helvetica', 'Arial', sans-serif
 
 // No
 $font-stack: ('Helvetica', 'Arial', sans-serif,)
@@ -681,7 +684,7 @@ Al añadir nuevos elementos a una lista, utiliza siempre la API proporcionada. N
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
+$shadows: (0 42px 13.37px hotpink);
 
 // Si
 $shadows: append($shadows, $shadow, comma);
@@ -692,7 +695,7 @@ $shadows: $shadows, $shadow;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
+$shadows: (0 42px 13.37px hotpink)
 
 // Si
 $shadows: append($shadows, $shadow, comma)
