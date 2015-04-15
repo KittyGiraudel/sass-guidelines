@@ -13,6 +13,8 @@
     * [Principios Clave](#principios-clave)
 * [Sintaxis Y Formato](#sintaxis-y-formato)
     * [Cadenas](#cadenas)
+		* [Cadenas Que Contienen Comillas](#cadenas-que-contienen-comillas)
+		* [URLs](#urls)
     * [Números](#números)
         * [Ceros](#ceros)
         * [Unidades](#unidades)

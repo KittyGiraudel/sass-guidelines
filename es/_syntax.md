@@ -55,7 +55,7 @@ En CSS, las cadenas de caracteres no tienen por qué estar entre comillas, ni si
 
 Debido a esto, Sass *tampoco* necesita que las cadenas estén entre comillas. Incluso mejor (y con *suerte* me darás la razón) una cadena entre comillas es aquivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
 
-Aun así, los lenguajes que no requieren que las cadenas estén entre comillas, son definitivamente una minoría, y es por lo que en Sass **las cadenas siempre deben ir entre comillas simples** (las comillas simples son mucho más fáciles de escribir en los teclados *qwerty*). Además de la coherencia con otros lenguajes, entre ellos el primo de CSS, Javascript, hay otras razones para esta elección:
+Aun así, los lenguajes que no requieren que las cadenas estén entre comillas, son definitivamente una minoría, y es por lo que **las cadenas siempre deben ir entre comillas simples** (`'`) en Sass (las comillas simples son mucho más fáciles de escribir en los teclados *qwerty*). Además de la coherencia con otros lenguajes, entre ellos el primo de CSS, Javascript, hay otras razones para esta elección:
 
 * los nombres de los colores son tratados directamente como colores cuando no están entre comillas, lo que provoca serios problemas;
 * muchos resaltadores de sintaxis se volverían locos sin las cadenas entrecomilladas;
@@ -92,6 +92,33 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="note">
   <p>En el ejemplo anterior, <code>sans-serif</code> no se pone entre comillas porque es un valor CSS específico que tiene que ir sin las comillas.</p>
 </div>
+
+### Cadenas que contienen comillas
+
+Si una cadena contiene una o varias comillas simples, se podría considerar envolver la cadena con comillas dobles (`"`), con el fin de evitar escapar demasiados caracteres dentro de la cadena.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Bien
+@warn 'You can\'t do that.';
+
+// Bien
+@warn "You can't do that.";
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Bien
+@warn 'You can\'t do that.'
+
+// Bien
+@warn "You can't do that."
+{% endhighlight %}
+  </div>
+</div>
+
+### URLs
 
 Las URLs deben ir entre comillas simples por las mismas razones que se explican anteriormente:
 
