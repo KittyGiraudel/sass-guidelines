@@ -228,7 +228,7 @@ Y por último, pero no menos importante, la mayoría de los proyectos tienen una
 
 Si tienes que reemplazar una sección de algún proveedor (*vendor*), te recomiendo que tengas una octava carpeta llamada `vendors-extensions/` en la que puedes poner los archivos que se sobreescribirán nombrados exactamente de la misma manera en la que lo hacen los fabricantes.
 
-Por ejemplo, `vendors-extensions/_boostrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar en el CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
+Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar en el CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
 
 
 
