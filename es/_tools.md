@@ -32,6 +32,7 @@ De todas formas, no prohíbo el uso de Compass aunque tampoco lo recomiendo, esp
 
 * [Compass -En inglés](http://compass-style.org/)
 * [Frameworks Sass: Compass o Bourbon -En inglés](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
+* [¿Por qué ya no uso Compass?](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [¿Es Compass a Sass lo que JQuery es a JavaScript? -En inglés](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
 

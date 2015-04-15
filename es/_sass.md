@@ -39,6 +39,7 @@ En los proyectos que no están en Ruby, pero que necesitan una integración en t
 ### Más información
 
 * [LibSass - En inglés](https://github.com/sass/libsass)
+* [Conociendo LibSass -En inglés](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Compatibiladad Sass - En inglés](http://sass-compatibility.github.io)
 * [Cambiar de Ruby Sass a LibSass - En inglés](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
