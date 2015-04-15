@@ -62,6 +62,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
+<div class="note">
+  <p>Los ejemplos anteriores utilizan mapas anidados para definir los puntos de ruptura, sin embargo, esto realmente depende de qué tipo de gestor de *breakpoints* utilices. Puedes optar por cadenas en lugar de mapas para una mayor flexibilidad (por ejemplo <code>'(min-width: 800px)'</code>).</p>
+</div>
+
 
 
 
@@ -86,8 +90,12 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
 /// @param {String} $breakpoint - Punto de ruptura
 /// @requires $breakpoints
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
       @content;
     }
   } @else {
@@ -104,8 +112,12 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
 /// @param {String} $breakpoint - Punto de ruptura
 /// @requires $breakpoints
 =respond-to($breakpoint)
-  @if map-has-key($breakpoints, $breakpoint)
-    @media #{inspect(map-get($breakpoints, $breakpoint))}
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
       @content
 
   @else
@@ -116,8 +128,7 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
 </div>
 
 <div class="note">
-  <p>Obviamente, este es un gestor de puntos de ruptura bastante simplista que no hará el truco cuando se trate de algo personalizado y/o de mútiples puntos de interrupción.</p>
-  <p>Si necesitas un gestor de puntos de interrupción ligeramente más permisivo, te recomiendo que no reinventes la rueda y utiliza algo que ya esté probado y comprobado, como por ejemplo<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Obviamente, este es un gestor de puntos de ruptura bastante simplista. Si necesitas un gestor de puntos de interrupción ligeramente más permisivo, te recomiendo que no reinventes la rueda y utilices algo que ya esté probado y comprobado, como por ejemplo<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 
