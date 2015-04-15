@@ -66,32 +66,59 @@ Aun así, los lenguajes que no requieren que las cadenas estén entre comillas, 
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Si
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$direction: 'left';
 
 // No
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
-
-// No
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+$direction: left;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Si
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+$direction: 'left'
 
 // No
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
-
-// No
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
+$direction: left
 {% endhighlight %}
   </div>
 </div>
 
-<div class="note">
-  <p>En el ejemplo anterior, <code>sans-serif</code> no se pone entre comillas porque es un valor CSS específico que tiene que ir sin las comillas.</p>
+
+### Cadenas como valores CSS
+
+Los valores CSS específicos como `initial` o `sans-serif` no necesitan estar entre comillas. De hecho, la declaración `font-family: 'sans-serif'` fallará porque CSS está esperando un identificador, no una cadena. Debido a esto, no pondremos estos valores entre comillas.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Si
+$font-type: sans-serif;
+
+// No
+$font-type: 'sans-serif';
+
+// Bien, supongo
+$font-type: unquote('sans-serif');
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Si
+$font-type: sans-serif
+
+// No
+$font-type: 'sans-serif'
+
+// Bien, supongo
+$font-type: unquote('sans-serif')
+{% endhighlight %}
+  </div>
 </div>
+
+Por lo tanto, podemos hacer una distinción entre las cadenas destinadas a ser utilizadas como valores CSS (identificadores CSS) como en el ejemplo anterior, y las cadenas cuando se trata con tipos de datos Sass, por ejemplo, en mapas.
+
+No ponemos entre comillas la primera, pero si envolvemos la segunda entre comillas simples.
+
 
 ### Cadenas que contienen comillas
 
