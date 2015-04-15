@@ -653,6 +653,7 @@ $shadows: $shadows, $shadow
 
 ### Más información
 
+* [Entendiendo las listas Sass -En inglés](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists -En inglés](http://sassylists.com)
 
 
@@ -799,6 +800,7 @@ Si tienes interés en conocer la profundidad del mapa, puedes añadir también l
 
 * [Usando mapas Sass -En inglés](http://www.sitepoint.com/using-sass-maps/)
 * [Depurando mapas Sass -En inglés](http://www.sitepoint.com/debugging-sass-maps/)
+* [Funciones adicionales de mapas en Sass -En inglés](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Verdadero Sass, Verdaderos mapas -En inglés](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Los mapas Sass son geniales -En inglés](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps -En inglés](https://github.com/lunelson/sass-list-maps)
