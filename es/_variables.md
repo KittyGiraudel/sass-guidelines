@@ -106,7 +106,7 @@ $baseline: 1em !default
   </div>
 </div>
 
-Gracias a esto, cualquier desarrollador puede definir su propia variable `$baseline` *antes* de importar tu librería si que su valor sea redefinido.
+Gracias a esto, cualquier desarrollador puede definir su propia variable `$baseline` *antes* de importar tu librería sin que su valor sea redefinido.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

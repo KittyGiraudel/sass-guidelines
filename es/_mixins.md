@@ -1,7 +1,7 @@
 
 # Mixins
 
-Los *Mixins* son una de las características más utilizadas dentro de todo el lenguaje Sass. Son la clave para la reutilización y los componentes DRY. Y por una buena razón: los *mixins* permiten a los desarrolladores definir estilos que pueden volver a usarse a lo largo de la hoja de estilo sin necesidad de recurrir a las clases no semánticas como por ejemplo `.float-left`.
+Los *Mixins* son una de las características más utilizadas dentro de todo el lenguaje Sass. Son la clave para la reutilización y los componentes DRY. Y por una buena razón: los *mixins* permiten a los desarrolladores definir estilos que pueden volver a usarse a lo largo de la hoja de estilo sin necesidad de recurrir a las clases no semánticas, como por ejemplo `.float-left`.
 
 Pueden contener reglas CSS completas y casi todo lo que se permite en cualquier parte de un documento Sass. Incluso pueden pasarse argumentos, al igual que en las funciones. Sobra decir que las posibilidades son infinitas.
 
@@ -177,7 +177,7 @@ $params: ('c': 'kittens', 'a': true, 'b': 42,)
 
 Puede ser tentador definir *mixins* personalizados para manejar prefijos de proveedores (*vendors*) en propiedades CSS que no son compatibles o totalmente soportadas. Pero no queremos esto. Primero, si puedes usar [Autoprefixer](https://github.com/postcss/autoprefixer), utiliza Autoprefixer. Eliminará código Sass de tu proyecto, siempre estará al día y hará un trabajo mejor de lo que lo puedes hacer tu al poner prefijos a las cosas.
 
-Desafortunads, Autoprefixer no siempre es una opción. Si usas [Bourbon](http://bourbon.io/) o [Compass](http://compass-style.org/), seguramente sabrás que ambos proporcinan una coleción de *mixins* que manejan los prefijos de los proveedores por ti. Úsalos.
+Desafortunadamente, Autoprefixer no siempre es una opción. Si usas [Bourbon](http://bourbon.io/) o [Compass](http://compass-style.org/), seguramente sabrás que ambos proporcinan una coleción de *mixins* que manejan los prefijos de los proveedores por ti. Úsalos.
 
 Si no puedes usar Autoprefixer, ni Bourbon, ni Compass, entonces y solo entonces, puedes tener tus propios *mixin* para añadir prefijos a las propiedades CSS. Pero. Por favor, no construyas un *mixin* por propiedad, imprimiendo manualmente cada proveedor (*vendor*).
 
@@ -258,7 +258,7 @@ Entonces usar este *mixin* debería ser muy sencillo:
   </div>
 </div>
 
-Por favor, ten en cuenta que es una mala solución. Por ejemplo, no puede trabajar con *polyfills* complejos como por ejemplo, los necesarios para Flexbox. En ese sentido, utilizar Autoprefixer sería una solución mucho mejor.
+Por favor, ten en cuenta que es una mala solución. No puede trabajar con *polyfills* complejos como por ejemplo, los necesarios para Flexbox. En ese sentido, utilizar Autoprefixer sería una solución mucho mejor.
 
 
 

@@ -162,7 +162,7 @@ La carpeta `layout/` contiene todo lo que tiene que ver con la disposición del 
 
 ### Carpeta Componentes
 
-Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `layout/` tiene una visión *macro* (definiendo la estructura global), `componentes/` está mucho más centrado en los *widgets*. Contiene todo tipo de módulos específicos como un *slider*, un *loader*, un *widget*, y básicamente todo lo que esté en esa misma línea. Por lo genera hay un montón de archivos en `components/` ya que todo el sitio o la aplicación debería estar compuesto en su mayoría, de pequeños módulos.
+Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `layout/` tiene una visión *macro* (definiendo la estructura global), `componentes/` está mucho más centrado en los *widgets*. Contiene todo tipo de módulos específicos como un *slider*, un *loader*, un *widget*, y básicamente todo lo que esté en esa misma línea. Por lo general hay un montón de archivos en `components/` ya que todo el sitio o la aplicación debería estar compuesto en su mayoría, de pequeños módulos.
 
 * `_media.scss`
 * `_carousel.scss`
@@ -176,7 +176,7 @@ Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `lay
 
 ### Carpeta Páginas
 
-Si tienes estilos específicos para cada página, es mejor ponerlos en una carpeta `paginas/`, dentro de un archivo que lleva el nombre de la página en sí. Por ejemplo, es muy común tener muchos estílos específicos para la página principal, lo que hay la necesidad de tener un archivo `_home.scss` en la carpeta `paginas/`.
+Si tienes estilos específicos para cada página, es mejor ponerlos en una carpeta `paginas/`, dentro de un archivo que lleva el nombre de la página en sí. Por ejemplo, es muy común tener muchos estílos específicos para la página principal, por lo que hay la necesidad de tener un archivo `_home.scss` en la carpeta `paginas/`.
 
 * `_home.scss`
 * `_contact.scss`
@@ -236,7 +236,7 @@ Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene tod
 
 El archivo principal (normalmente llamado `main.scss`) debe ser el único archivo Sass de todo el código que no empieza con guión bajo. Este archivo no debería contener nada más que `@import` y comentarios.
 
-Los archivos debe de importarse según la carpeta que los conteniene, una después de la otra en el siguiente orden:
+Los archivos deben de importarse según la carpeta que los contiene, una después de la otra en el siguiente orden:
 
 1. `proveedores/`
 1. `utilidades/`
@@ -321,7 +321,7 @@ Con el fin de mantener la legibilidad, el archivo principal debe respetar las si
   </div>
 </div>
 
-Hay otra forma de importar las partes de un proyecto también que me parece válida. La parte positiva, es que hace que el archivo sea más legible. Pero por otro lado, las actualizaciones son un poco más dolorosas. De todos modos, voy a dejarte decidir qué es lo mejor, pues no importa demasiado. Para esta manera de hacer las cosas, el archivo principal debe respetar las siguientes pautas:
+Hay otra forma de importar las partes de un proyecto que también que me parece válida. La parte positiva, es que hace que el archivo sea más legible. Pero por otro lado, las actualizaciones son un poco más dolorosas. De todos modos, voy a dejarte decidir qué es lo mejor, pues no importa demasiado. Para esta manera de hacer las cosas, el archivo principal debe respetar las siguientes pautas:
 
 * un `@import` por archivo;
 * un salto de línea después de cada `@import`;
@@ -422,7 +422,7 @@ Hay otra forma de importar las partes de un proyecto también que me parece vál
 
 ## El Archivo De La Verguenza
 
-Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas con las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
+Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

@@ -1,5 +1,4 @@
 
-
 # Responsive Web Design Y Puntos De Ruptura
 
 No creo que sea necesario tener que explicar lo que es el Responsive Web Design ahora que está en todas partes. Sin embargo es posible que te preguntes *¿por qué una sección sobre RWD en una guía de estilo Sass?* En realidad hay pocas cosas que se puedan hacer para facilitar el trabajo con los puntos de ruptura, así que he pensado que no estaría mal hacer una lista con ellos.
@@ -145,7 +144,7 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
 
 ## Uso de Media Queries
 
-No hace mucho tiempo, hubo un debate bastante acalorado acerca de dónde deberían estas escritas las *medias queries*: ¿deberían estar dentro de los selectores (permitido por Sass) o deberían estar completamente separados de ellos? Debo decir que soy un ferviente defensor del sistema *media queries dentro del selector*, ya que creo que juega un buen papel con la idea de *componentes*
+No hace mucho tiempo, hubo un debate bastante acalorado acerca de dónde deberían estas escritas las *medias queries*: ¿deberían estar dentro de los selectores (permitido por Sass) o deberían estar completamente separados de ellos? Debo decir que soy un ferviente defensor del sistema *media queries dentro del selector*, ya que creo que juega un buen papel con la idea de *componentes*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -186,7 +185,7 @@ Resultaría el siguiente bloque CSS:
 {% endhighlight %}
 </div>
 
-Es posible que escuches que este acuerdo dará como resultado en CSS bloques duplicados de *media queries*. Esto es definitivamente cierto. Sin embargo, [se han realizado pruebas](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) y la conclusión es que no importará una vez Gzip (o cualquier equivalente) haya hecho su trabajo:
+Es posible que escuches que este acuerdo dará como resultado en CSS, bloques duplicados de *media queries*. Esto es definitivamente cierto. Sin embargo, [se han realizado pruebas](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) y la conclusión es que no importará una vez Gzip (o cualquier equivalente) haya hecho su trabajo:
 
 > … hemos discutido a fondo si hay consecuencias en el rendimiento entre la combinación frente a la dispersión de *Media Queries* y se llegó a la conclusión de que la diferencia, aunque fea, es en el peor de los casos mínima y esencialmente inexistente en el mejor.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), respecto a los [Puntos de ruptura (Breakpoint)](http://breakpoint-sass.com/)

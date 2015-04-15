@@ -1,7 +1,7 @@
 
 # Sentencias Condicionales
 
-Probablemente ya sabes que que Sass proporciona instrucciones condicionales a través de las directivas `@if` y `@else`. A menos que tengas algún elemento con una lógica demasiada compleja en tu código, no hay necesidad de tener sentencias condicionales en tus hojas de estilo normales. En realidad, se usan principalmente en las librerías y los *frameworks*.
+Probablemente ya sabes que Sass proporciona instrucciones condicionales a través de las directivas `@if` y `@else`. A menos que tengas algún elemento con una lógica demasiado compleja en tu código, no hay necesidad de tener sentencias condicionales en tus hojas de estilo normales. En realidad, se usan principalmente en las librerías y los *frameworks*.
 
 De todas formas, si algún día te encuentras con la necesidad de utilizarlas, por favor, respeta las siguientes pautas:
 
@@ -47,7 +47,7 @@ De todas formas, si algún día te encuentras con la necesidad de utilizarlas, p
   </div>
 </div>
 
-Cuando se evalúa un valor booleano *falsy*, utiliza siempre la palabra clave `not` en lugar de evaluar con `falso` o `null`
+Cuando se evalúa un valor booleano falso, utiliza siempre la palabra clave `not` en lugar de evaluar con `falso` o `null`
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
