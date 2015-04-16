@@ -9,7 +9,7 @@ Hay una característica que muchas veces es pasada por alto por los desarrollado
 
 Dejemos `@debug` al lado, ya que claramente está pensado para depurar SassScript, que no es nuestro propósito aquí. Entonces nos quedamos con `@warn` y `@error` los cuales son notablemente idénticos, salvo porque uno se detiene en el compilador, mientras que el otro no. Voy a dejar que adivines cuál hace qué.
 
-Ahora, hay un montón de espacio en un proyecto Sass para las advertencias y los errores. Básicamente, cualquier mixin o función que espera un tipo o un argumento específico podría lanzar un error si algo sale mal o mostrar una advertencia cuando se hace una suposición.
+Ahora, hay un montón de sitio en un proyecto Sass para las advertencias y los errores. Básicamente, cualquier mixin o función que espera un tipo o un argumento específico podría lanzar un error si algo saliese mal o mostrar una advertencia cuando se hace una suposición.
 
 
 
@@ -26,7 +26,7 @@ Ahora, hay un montón de espacio en un proyecto Sass para las advertencias y los
 
 ## Advertencias
 
-Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor en `px` a `em`, por ejemplo:
+Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor en `px` a `em`:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -66,7 +66,7 @@ Si el valor no tiene unidades, la función asume que el valor estará expresado 
 
 ## Errores
 
-Los errores, a diferencia de las advertencias, impiden al compilador ir más allá. Básicamente, paran la compilación y muestran un mensaje en la consola de salida, así como el rastro de seguimiento del error, lo que suele ser muy útil para la depuración. Debido a esto, los errores aparecerán cuando no hay manera de que el programa continúe funcionando. Cuando sea posible, intenta trata de evitar el problema y mostrar una advertencia en su lugar.
+Los errores, a diferencia de las advertencias, impiden al compilador ir más allá. Básicamente, paran la compilación y muestran un mensaje en la consola de salida, así como el rastro de seguimiento del error, lo que suele ser muy útil para la depuración. Debido a esto, los errores aparecerán cuando no hay manera de que el programa continúe funcionando. Cuando sea posible, trata de evitar el problema y mostrar una advertencia en su lugar.
 
 Como ejemplo, digamos que construyes una función *getter* para acceder a los valores de un mapa específico. Se podría producir un error si la clave solicitada no existe en el mapa.
 

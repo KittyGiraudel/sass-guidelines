@@ -87,7 +87,7 @@ El ciclo `@for` puede ser útil cuando se combina con las pseudo-clases CSS `:nt
   </div>
 </div>
 
-Utiliza siempre `$i` como nombre de variable para mantener la convención habitual, a menos que tengas una muy buena razón para no hacerlo, no uses la palabra clve `to`, es mejor usar siempre `through`. Muchos desarrolladores no saben que Sass ofrece esta variación; usarla podría llevar a confusión.
+Utiliza siempre `$i` como nombre de variable para mantener la convención habitual, a menos que tengas una muy buena razón para no hacerlo, no uses la palabra clave `to`, es mejor usar siempre `through`. Muchos desarrolladores no saben que Sass ofrece esta variación; usarla podría llevar a confusión.
 
 También asegúrate de respetar estas directrices para preservar la legibilidad:
 
