@@ -13,16 +13,10 @@ La idea no es convertir a CSS en un lenguaje de programación totalmente funcion
 
 Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta giuía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
 
-
 ### Más infomación
 
 * [Sass - En inglés](http://sass-lang.com)
 * [Documentación de Sass - En inglés](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
-
-
-
-
-
 
 ## Ruby Sass o LibSass
 
@@ -34,8 +28,6 @@ Volviendo al tema, la tarea de elegir un compilador, en realidad, dependerá de 
 
 En los proyectos que no están en Ruby, pero que necesitan una integración en tu flujo de trabajo, LibSass es probablemente una mejor idea, ya que se dedica a poner dicho código en un contenedor específico para cada lenguaje. Así que si quieres utlizar, por ejemplo, NodeJS,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
 
-
-
 ### Más información
 
 * [LibSass - En inglés](https://github.com/sass/libsass)
@@ -43,13 +35,9 @@ En los proyectos que no están en Ruby, pero que necesitan una integración en t
 * [Compatibiladad Sass - En inglés](http://sass-compatibility.github.io)
 * [Cambiar de Ruby Sass a LibSass - En inglés](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
-
-
-
-
 ## Sass o SCSS
 
-Hay una gran confusión con respecto a la semántica del nombre *Sass*, y por una buena razón: Sass nombra tanto al preprocesador como a su propia sintaxis. No muy adecuado ¿verdad? 
+Hay una gran confusión con respecto a la semántica del nombre *Sass*, y por una buena razón: Sass nombra tanto al preprocesador como a su propia sintaxis. No muy adecuado ¿verdad?
 
 Verás, inicialmente Sass describía una sintaxis en la que su caractarística principal era la de ser sensible a espacios en blanco y tabulaciones. Rápidamente, quienes mantienen Sass dicidieron cerrar la brecha entre Sass y CSS, proporcionando una sintaxis CSS amigable llamada *SCSS* también conocida como *Sassy CSS*. Su lema es: si es CSS válido, es SCSS válido.
 
@@ -59,16 +47,9 @@ La sintaxis sensible a los espacios en blanco de Sass se basa en las tabulacione
 
 Personalmente, prefiero SCSS a Sass ya que es mucho parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <span data-toggle="aside" class="link-like" role="button" aria-expanded>panel de opciones</span>.
 
-
-
 ### Más información
 
 * [¿Cuál es la diferencia entre Sass y SCSS? - En inglés](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Otros Preprocesadores
 
@@ -80,16 +61,13 @@ Lo que me gusta de Sass es su enfoque conservardor con CSS. El diseño de Sass s
 
 En otras palabras, Sass no es un preprocesador enfocado a complacer empollones que quieren-ser-programadores como yo, añadiendo características extraordinarias sobre un lenguaje que no está destinado a soportar ninguna lógica en sus casos de uso. Es un software orientado a la solución de problemas reales; ayudando a proporcionar funcionalidades útiles para CSS, justo donde CSS se queda corto.
 
-Preprocesadores aparte, es necesario mencionar también a los post-procesadores, los cuales han recibido mucha atención en los últimos meses, gracias especialmente a [PostCSS](https://github.com/postcss/postcss) y [cssnext](https://cssnext.github.io/). Los post-procesadores son más o menos el equivalente a los preprocesadores, excepto porque estos no proporcionan ninguna otra cosa que no sea la inminente sintaxis CSS. 
+Preprocesadores aparte, es necesario mencionar también a los post-procesadores, los cuales han recibido mucha atención en los últimos meses, gracias especialmente a [PostCSS](https://github.com/postcss/postcss) y [cssnext](https://cssnext.github.io/). Los post-procesadores son más o menos el equivalente a los preprocesadores, excepto porque estos no proporcionan ninguna otra cosa que no sea la inminente sintaxis CSS.
 
 Piensa en un post-procesador como un *polyfill* para características no soportadas por CSS. Por ejemplo, podrías escribir variables tal y como se describen en las [especificaciones de CSS](http://dev.w3.org/csswg/css-variables/), y luego, compilar tus hojas de estilo con un post-procesador solo para darte cuenta que cada vez que aparece la variable, ésta es reemplazada con su valor, tal y como haría Sass.
 
 La idea detrás de los post-procesadores es que una vez los navegadores soportan nuevas características (por ejemplo, variables CSS), el post-procesador, no las volverá a compilar y dejará que los navegadores se encarguen de ellas.
 
 Aunque proporcionar la sintaxis del mañana parezca una idea noble, tengo que decir, que aún así prefiero usar Sass para la mayoría de las tareas. Sin embargo, hay algunas ocasiones en las que creo que los post-procesadores son más adecuados que Sass y similares - por ejemplo, con los prefijos CSS - pero ya volveremos a ello más adelante.
-
-
-
 
 ### Más información
 

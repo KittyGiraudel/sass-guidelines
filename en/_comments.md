@@ -14,99 +14,27 @@ As simple as CSS can get, there is still a lot of room for comments. These could
 
 And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
 
-
-
-
-
-
 ## Writing comments
 
 Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis
-  white-space: nowrap /* 1 */
-  text-overflow: ellipsis /* 2 */
-  overflow: hidden
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/01.html %}
 
 Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
 When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/comments/02.html %}
 
 ### Further reading
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
-
-
-
-
-
 ## Documentation
 
 Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/03.html %}
 
 <div class="note">
   <p>Three slashes (<code>/</code>) required.</p>
@@ -129,79 +57,7 @@ SassDoc has two major roles:
 
 Here is an example of a mixin extensively documented with SassDoc:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo {
-///     @include size(10em);
-///   }
-///
-///   .bar {
-///     @include size(100%, 10em);
-///   }
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo
-///     +size(10em)
-///
-///   .bar
-///     +size(100%, 10em)
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/comments/04.html %}
 
 ### Further reading
 

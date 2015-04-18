@@ -18,11 +18,6 @@ Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certai
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-
-
-
-
-
 ## Ruby Sass ou LibSass
 
 [Le premier commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) remonte à la fin 2006, il y a plus de 8 ans. Inutile de dire qu’il a fait un long chemin depuis. À l’origine le projet a été développé en Ruby, mais d’autres variantes sont apparues ici et là. Celle qui a rencontré le plus de succès, [LibSass](https://github.com/sass/libsass) (écrite en C) est désormais proche de la compatibilité totale avec la version Ruby originale.
@@ -33,19 +28,12 @@ Pour revenir au choix de votre compilateur, en fait tout dépend de votre projet
 
 Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous utilisez NodeJS par exemple, [node-sass](https://github.com/sass/node-sass) est tout indiqué.
 
-
-
 ### Lectures complémentaires
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass ou SCSS
 
@@ -59,15 +47,9 @@ La syntaxe de Sass repose sur l’indentation pour se débarrasser des accolades
 
 Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus accessible aux développeurs. C’est pourquoi SCSS est la syntaxe par défaut tout au long de ce document. Si vous préférez la syntaxe Sass indentée, vous pouvez choisir cette option dans le <span data-toggle="aside" class="link-like" role="button" aria-expanded>panneau des options</span>.
 
-
 ### Lecture complémentaire
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Autres préprocesseurs
 
@@ -87,12 +69,9 @@ L’idée intéressante derrière les postprocesseurs est qu’une fois la compa
 
 Même s’il peut être intéressant de travailler dès aujourd’hui avec la syntaxe de demain, je préfère pour ma part utiliser Sass pour des tâches plus courantes. Cependant, il est des cas où je pense que les postprocesseurs sont plus adaptés que Sass et les autres —&nbsp;par exemple pour les préfixes CSS&nbsp;— mais nous reviendrons là-dessus tout à l’heure.
 
-
-
 ### Lectures complémentaires
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)
 * [cssnext](https://cssnext.github.io/)
 * [PostCSS](https://github.com/postcss/postcss)
-

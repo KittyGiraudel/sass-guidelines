@@ -1,10 +1,6 @@
 
 # Introducción
 
-
-
-
-
 ## ¿Por Qué Una Guía De Estilo?
 
 Una guía de estilo no es sólo un documento agradable de leer mientras te imaginas tu código perfecto. Se trata de un documento clave en la vida de un proyecto que describe cómo y por qué se debe escribir el código. Puede parecer una exageración para pequeños proyectos, pero ayuda mucho a mantener el código limpio, escalable y fácil de mantener.
@@ -24,11 +20,6 @@ Sobra decir, que cuantos más desarrolladores participen en el proyecto, más ne
   </ul>
 </blockquote>
 
-
-
-
-
-
 ## Renuncia De Responsabilidad
 
 Primero lo primero: **esta no es una guía de estilo de CSS**. Este documento no tratará sobre las convenciones de nomenclatura para las clases CSS, ni sobre los patrones modulares de CSS, ni mucho menos, sobre la cuestión de los IDs en el mundo CSS. Esta guía solo busca estudiar el contenido relacionado específicamente con Sass.
@@ -36,11 +27,6 @@ Primero lo primero: **esta no es una guía de estilo de CSS**. Este documento no
 Además, esta guía de estilo está elaborada por mi mismo y por tanto **es subjetiva y personal**. Piensa en ella como una colección de metodologías y consejos que he reunido y pulido durante los últimos años. También me da la oportunidad de recoger un puñado de recursos interesantes, así que asegurate de echarle un vistazo a los links con más información.
 
 Obviamente, esta no es la única manera de hacer las cosas, y puede que encaje o no en tu proyecto. Siéntete libre de elegir lo que te interese y de adaptarlo a tus necesidades. *Tu experiencia puede variar*.
-
-
-
-
-
 
 ## Principios Clave
 
@@ -53,8 +39,6 @@ Mientras CSS es un lenguaje sencillo. Sass busca escribirse igual que CSS y por 
 Algunas veces es mejor repetirse un poco para que el proyecto sea fácil de mantener, antes que construir un sistema demasiado pesado, inabarcable e innecesariamente complicado que genere un código imposible de mantener porque es demasiado complejo.
 
 También, si me permites que cite a [Harry Roberts](https://csswizardry.com) una vez más, **el pragmatismo prevalece sobre la perfección**. En algún momento, es probable que te des cuenta que estás yendo en contra de las reglas descritas aquí. Si tiene sentido, si crees que está bien, hazlo. El código solo es un medio, no un fin.
-
-
 
 ### Más información
 

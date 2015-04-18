@@ -5,11 +5,6 @@ What’s nice about a CSS preprocessor as popular as Sass is that it comes with 
 
 However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don’t want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don’t see it dramatically losing in popularity for a while, if you want my opinion.
@@ -26,19 +21,12 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
   <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
 </div>
 
-
-
 ### Further reading
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Grid systems
 
@@ -51,8 +39,6 @@ If you are using a CSS framework for your project like [Bootstrap](http://getboo
 If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases&mdash;even the most nifty ones&mdash;will be covered. If you ask me, Susy has a slightly better community, but that’s my opinion.
 
 Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
-
-
 
 ### Further reading
 
@@ -67,11 +53,6 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-
-
-
-
-
 ## SCSS-lint
 
 Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody’s perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
@@ -80,14 +61,12 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01.html %}
 
 <div class="note">
   <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
 </div>
-
-
 
 ### Further reading
 

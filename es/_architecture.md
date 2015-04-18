@@ -15,8 +15,6 @@ Yo mismo, utilizo un método que resulta ser bastante similar a [SMACSS](https:/
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta para que encuentres un sistema que se adapte a tus necesidades.</p>
 </div>
 
-
-
 ### Más información
 
 * [Arquitectura para un proyecto Sass -En inglés](http://www.sitepoint.com/architecture-sass-project/)
@@ -25,11 +23,6 @@ Yo mismo, utilizo un método que resulta ser bastante similar a [SMACSS](https:/
 * [Una introducción a OOCSS -En inglés](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Diseño Web Atómico -En inglés](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, una arquitectura compuesta -En francés](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-
-
-
-
-
 
 ## Componentes
 
@@ -44,11 +37,6 @@ Los componentes pueden ser cualquier cosa, siempre y cuando:
 Por ejemplo, un formulario de búsqueda debería ser tratado como un componente. Debería ser reutilizable, en diferentes lugares, en diferentes páginas y en varias situaciones. No debe depender de su posición en el DOM (pie de página, barra lateral, contenido principal...).
 
 La mayor parte de cualquier interfaz puede concebirse en forma de pequeños componentes y recomiendo encarecidamente que lo hagas. Esto no solo reducirá la cantidad de CSS necesario para todo el proyecto, sino que también se convierte en un código mucho más fácil de mantener que un desorden caótico donde todo está hecho un lío.
-
-
-
-
-
 
 ## El Patron 7-1
 
@@ -78,60 +66,11 @@ Y por supuesto:
 
 Idealmente, podemos llegar a algo como esto:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Reglas tipográficas
-|   ...                  # Etc…
-|
-|– componentes/
-|   |– _buttons.scss     # Botones
-|   |– _carousel.scss    # Carousel
-|   |– _cover.scss       # Cubierta
-|   |– _dropdown.scss    # Dropdown
-|   ...                  # Etc…
-|
-|– layout/
-|   |– _navigation.scss  # Navegación
-|   |– _grid.scss        # Sistema de retícula
-|   |– _header.scss      # Encabezamiento
-|   |– _footer.scss      # Pie de página
-|   |– _sidebar.scss     # Barra lateral
-|   |– _forms.scss       # Formularios
-|   ...                  # Etc…
-|
-|– paginas/
-|   |– _home.scss        # Estilos específicos para la página de inicio
-|   |– _contact.scss     # Estilos específicos para la página de contacto
-|   ...                  # Etc…
-|
-|– temas/
-|   |– _theme.scss       # Tema por defecto
-|   |– _admin.scss       # Tema del administrador
-|   ...                  # Etc…
-|
-|– utilidades/
-|   |– _variables.scss   # Variables Sass
-|   |– _functions.scss   # Funciones Sass
-|   |– _mixins.scss      # Mixins Sass
-|   |– _helpers.scss     # Clases & placeholders
-|
-|– proveedores/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Etc…
-|
-|
-`– main.scss             # Archivo principal de Sass
-</code></pre></div>
+{% include snippets/architecture/01.html %}
 
 <div class="note">
   <p>Los archivos siguen las mismas convenciones de nomenclatura descritas anteriormente: están delimitadas por guiones.</p>
 </div>
-
-
 
 ### Carpeta Base
 
@@ -140,8 +79,6 @@ La carpeta `base/` contiene lo que podríamos llamar el código estándar para e
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
 
 ### Carpeta Layout
 
@@ -158,8 +95,6 @@ La carpeta `layout/` contiene todo lo que tiene que ver con la disposición del 
   <p>La carpeta <code>layout/</code> también se puede llamar <code>partials/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Componentes
 
 Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `layout/` tiene una visión *macro* (definiendo la estructura global), `componentes/` está mucho más centrado en los *widgets*. Contiene todo tipo de módulos específicos como un *slider*, un *loader*, un *widget*, y básicamente todo lo que esté en esa misma línea. Por lo general hay un montón de archivos en `components/` ya que todo el sitio o la aplicación debería estar compuesto en su mayoría, de pequeños módulos.
@@ -172,8 +107,6 @@ Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `lay
   <p>La carpeta <code>components/</code> también se puede llamar <code>modules/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Páginas
 
 Si tienes estilos específicos para cada página, es mejor ponerlos en una carpeta `paginas/`, dentro de un archivo que lleva el nombre de la página en sí. Por ejemplo, es muy común tener muchos estílos específicos para la página principal, por lo que hay la necesidad de tener un archivo `_home.scss` en la carpeta `paginas/`.
@@ -185,8 +118,6 @@ Si tienes estilos específicos para cada página, es mejor ponerlos en una carpe
   <p>Dependiendo de tu proceso de implementación, estos archivos podrían llamarse de manera independiente para evitar que sean fusionados con otros en la hoja de estilos resultante. Todo depende de ti.</p>
 </div>
 
-
-
 ### Carpeta Temas
 
 En grandes proyectos para grandes sitios o aplicaciones, es muy usual tener diferentes temas. Es cierto que hay diferentes maneras de tratar con los temas, pero personalmente, me gusta tenerlos todos en una carpeta `temas/`.
@@ -197,8 +128,6 @@ En grandes proyectos para grandes sitios o aplicaciones, es muy usual tener dife
 <div class="note">
   <p>Los temas son muy específicos para cada proyecto y es probable que no exista en muchos proyectos.</p>
 </div>
-
-
 
 ### Carpeta Utilidades
 
@@ -215,8 +144,6 @@ La regla de oro para esta carpeta es que no debe generar una sola línea de CSS 
   <p>La carpeta <code>utilidades/</code> también se puede llamar <code>helpers/</code>, <code>sass-helpers/</code> o <code>sass-utils/</code>, depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Proveedores
 
 Y por último, pero no menos importante, la mayoría de los proyectos tienen una carpeta `proveedores/` que contiene todos los archivos CSS procedentes de librerías externas y *frameworks* – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, etc. Poner estos archivos en una misma carpeta, es una buena forma de decir "¡Hey! esto no lo he escrito yo, no es mi código y no es mi responsabilidad".
@@ -229,8 +156,6 @@ Y por último, pero no menos importante, la mayoría de los proyectos tienen una
 Si tienes que reemplazar una sección de algún proveedor (*vendor*), te recomiendo que tengas una octava carpeta llamada `vendors-extensions/` en la que puedes poner los archivos que se sobreescribirán nombrados exactamente de la misma manera en la que lo hacen los fabricantes.
 
 Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar en el CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
-
-
 
 ### Archivo Principal
 
@@ -254,72 +179,7 @@ Con el fin de mantener la legibilidad, el archivo principal debe respetar las si
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'proveedores/bootstrap';
-@import 'proveedores/jquery-ui';
-
-@import 'utilidades/variables';
-@import 'utilidades/functions';
-@import 'utilidades/mixins';
-@import 'utilidades/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'componentes/buttons';
-@import 'componentes/carousel';
-@import 'componentes/cover';
-@import 'componentes/dropdown';
-
-@import 'paginas/home';
-@import 'paginas/contact';
-
-@import 'temas/theme';
-@import 'temas/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import proveedores/bootstrap
-@import proveedores/jquery-ui
-
-@import utilidades/variables
-@import utilidades/functions
-@import utilidades/mixins
-@import utilidades/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import componentes/buttons
-@import componentes/carousel
-@import componentes/cover
-@import componentes/dropdown
-
-@import paginas/home
-@import paginas/contact
-
-@import temas/theme
-@import temas/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02.html %}
 
 Hay otra forma de importar las partes de un proyecto que también que me parece válida. La parte positiva, es que hace que el archivo sea más legible. Pero por otro lado, las actualizaciones son un poco más dolorosas. De todos modos, voy a dejarte decidir qué es lo mejor, pues no importa demasiado. Para esta manera de hacer las cosas, el archivo principal debe respetar las siguientes pautas:
 
@@ -329,132 +189,18 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'proveedores/bootstrap',
-  'proveedores/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  proveedores/bootstrap,
-  proveedores/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03.html %}
 
 <div class="note">
   <p>Con el objetivo de no tener que importar cada archivo manualmente, hay una extensión de Ruby Sass llamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, con la que es posible usar patrones globales en Sass <code>@import</code> como <code>@import "components/*"</code>.</p>
   <p>Una vez dicho esto, no lo recomendaría porque importa los archivos siguiendo el orden alfabético que por lo general, no suele ser lo que tu querrías, especialmente cuando se trata de un lenguaje que depende del orden en el que está el código fuente.</p>
 </div>
 
-
-
-
-
-
 ## El Archivo De La Verguenza
 
 Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Arreglo específico para la navegación
- *
- * Alguien utilizó un ID en el código del *header* (`#header a {}`) lo que sobreescribe a
- * los selectores nav (`.site-nav a {}`). Usar !important para anularlo hasta que
- * tenga tiempo de arreglarlo.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Arreglo específico para la navegación
- *
- * Alguien utilizó un ID en el código del *header* (`#header a {}`) lo que sobreescribe a
- * los selectores nav (`.site-nav a {}`). Uso !important para anularlo hasta que
- * tenga tiempo de arreglarlo.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/architecture/04.html %}
 
 ### Más información
 
