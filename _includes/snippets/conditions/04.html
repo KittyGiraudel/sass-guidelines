@@ -1,0 +1,41 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  }
+
+  @return false;
+}
+
+// Nope
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+@function dummy($condition)
+  @if $condition
+    @return true
+
+  @return false;
+
+// Nope
+@function dummy($condition)
+  @if $condition
+    @return true
+  @else
+    @return false
+{% endhighlight %}
+  </div>
+</div>

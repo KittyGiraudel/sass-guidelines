@@ -60,7 +60,7 @@ Prześwietlanie (linting) kodu jest zagadnieniem o bardzo dużej wadze. Zazwycza
 
 Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do tych opisanych w tym przewodniku. Aby skonfigurować SCSS-lint w pełnej zgodności z Sass Guidelines, zalecam następujące jego ustawienia:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01.html %}
 
 <div class="note">
   <p>Jeśli chcesz dołączyć SCSS-lint do Twojego obecnego procesu budowania w Gruncie, śpieszę z dobrą wiadomością - dostępny jest plugin do Grunta o nazwie <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>

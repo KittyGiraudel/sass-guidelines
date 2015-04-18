@@ -1,0 +1,25 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+$value: 42;
+
+// Yep
+$length: $value * 1px;
+
+// Nope
+$length: $value + px;
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+$value: 42
+
+// Yep
+$length: $value * 1px
+
+// Nope
+$length: $value + px
+{% endhighlight %}
+  </div>
+</div>

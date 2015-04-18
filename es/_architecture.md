@@ -66,54 +66,7 @@ Y por supuesto:
 
 Idealmente, podemos llegar a algo como esto:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Reglas tipográficas
-|   ...                  # Etc…
-|
-|– components/
-|   |– _buttons.scss     # Botones
-|   |– _carousel.scss    # Carousel
-|   |– _cover.scss       # Cubierta
-|   |– _dropdown.scss    # Dropdown
-|   ...                  # Etc…
-|
-|– layout/
-|   |– _navigation.scss  # Navegación
-|   |– _grid.scss        # Sistema de retícula
-|   |– _header.scss      # Encabezamiento
-|   |– _footer.scss      # Pie de página
-|   |– _sidebar.scss     # Barra lateral
-|   |– _forms.scss       # Formularios
-|   ...                  # Etc…
-|
-|– pages/
-|   |– _home.scss        # Estilos específicos para la página de inicio
-|   |– _contact.scss     # Estilos específicos para la página de contacto
-|   ...                  # Etc…
-|
-|– themes/
-|   |– _theme.scss       # Tema por defecto
-|   |– _admin.scss       # Tema del administrador
-|   ...                  # Etc…
-|
-|– utils/
-|   |– _variables.scss   # Variables Sass
-|   |– _functions.scss   # Funciones Sass
-|   |– _mixins.scss      # Mixins Sass
-|   |– _helpers.scss     # Clases & placeholders
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Etc…
-|
-|
-`– main.scss             # Archivo principal de Sass
-</code></pre></div>
+{% include snippets/architecture/01.html %}
 
 <div class="note">
   <p>Los archivos siguen las mismas convenciones de nomenclatura descritas anteriormente: están delimitadas por guiones.</p>
@@ -226,72 +179,7 @@ Con el fin de mantener la legibilidad, el archivo principal debe respetar las si
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'proveedores/bootstrap';
-@import 'proveedores/jquery-ui';
-
-@import 'utilidades/variables';
-@import 'utilidades/functions';
-@import 'utilidades/mixins';
-@import 'utilidades/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'componentes/buttons';
-@import 'componentes/carousel';
-@import 'componentes/cover';
-@import 'componentes/dropdown';
-
-@import 'paginas/home';
-@import 'paginas/contact';
-
-@import 'temas/theme';
-@import 'temas/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import proveedores/bootstrap
-@import proveedores/jquery-ui
-
-@import utilidades/variables
-@import utilidades/functions
-@import utilidades/mixins
-@import utilidades/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import componentes/buttons
-@import componentes/carousel
-@import componentes/cover
-@import componentes/dropdown
-
-@import paginas/home
-@import paginas/contact
-
-@import temas/theme
-@import temas/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02.html %}
 
 Hay otra forma de importar las partes de un proyecto que también que me parece válida. La parte positiva, es que hace que el archivo sea más legible. Pero por otro lado, las actualizaciones son un poco más dolorosas. De todos modos, voy a dejarte decidir qué es lo mejor, pues no importa demasiado. Para esta manera de hacer las cosas, el archivo principal debe respetar las siguientes pautas:
 
@@ -301,86 +189,7 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'proveedores/bootstrap',
-  'proveedores/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  proveedores/bootstrap,
-  proveedores/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03.html %}
 
 <div class="note">
   <p>Con el objetivo de no tener que importar cada archivo manualmente, hay una extensión de Ruby Sass llamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, con la que es posible usar patrones globales en Sass <code>@import</code> como <code>@import "components/*"</code>.</p>
@@ -391,35 +200,7 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 
 Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Arreglo específico para la navegación
- *
- * Alguien utilizó un ID en el código del *header* (`#header a {}`) lo que sobreescribe a
- * los selectores nav (`.site-nav a {}`). Usar !important para anularlo hasta que
- * tenga tiempo de arreglarlo.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Arreglo específico para la navegación
- *
- * Alguien utilizó un ID en el código del *header* (`#header a {}`) lo que sobreescribe a
- * los selectores nav (`.site-nav a {}`). Uso !important para anularlo hasta que
- * tenga tiempo de arreglarlo.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/04.html %}
 
 ### Más información
 

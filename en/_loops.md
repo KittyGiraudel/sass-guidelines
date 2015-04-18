@@ -9,45 +9,11 @@ However, the presence of loops usually implies moderately complex logic that pro
 
 The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $theme in $themes {
-  .section-#{$theme} {
-    background-color: map-get($colors, $theme);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $theme in $themes
-  .section-#{$theme}
-    background-color: map-get($colors, $theme)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/01.html %}
 
 When iterating on a map, always use `$key` and `$value` as variable names to enforce consistency.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $key, $value in $map {
-  .section-#{$key} {
-    background-color: $value;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $key, $value in $map
-  .section-#{$key}
-    background-color: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/02.html %}
 
 Also be sure to respect those guidelines to preserve readability:
 
@@ -58,24 +24,7 @@ Also be sure to respect those guidelines to preserve readability:
 
 The `@for` loop might be useful when combined with CSS’ `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *have to* iterate over something.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@for $i from 1 through 10 {
-  .foo:nth-of-type(#{$i}) {
-    border-color: hsl($i * 36, 50%, 50%);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@for $i from 1 through 10
-  .foo:nth-of-type(#{$i})
-    border-color: hsl($i * 36, 50%, 50%)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/03.html %}
 
 Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
 

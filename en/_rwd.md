@@ -9,53 +9,11 @@ I think it is safe to say that media queries should not be tied to specific devi
 
 For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on...
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$breakpoints: (
-  'medium': (min-width: 800px),
-  'large': (min-width: 1000px),
-  'huge': (min-width: 1200px),
-);
-
-// Nope
-$breakpoints: (
-  'tablet': (min-width: 800px),
-  'computer': (min-width: 1000px),
-  'tv': (min-width: 1200px),
-);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$breakpoints: ('medium': (min-width: 800px), 'large': (min-width: 1000px), 'huge': (min-width: 1200px))
-
-// Nope
-$breakpoints: ('tablet': (min-width: 800px), 'computer': (min-width: 1000px), 'tv': (min-width: 1200px))
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/01.html %}
 
 At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$breakpoints: (
-  'seed': (min-width: 800px),
-  'sprout': (min-width: 1000px),
-  'plant': (min-width: 1200px),
-);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant': (min-width: 1200px))
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/02.html %}
 
 <div class="note">
   <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
@@ -69,50 +27,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Responsive manager.
-/// @access public
-/// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
-@mixin respond-to($breakpoint) {
-  $raw-query: map-get($breakpoints, $breakpoint);
-
-  @if $raw-query {
-    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
-
-    @media #{$query} {
-      @content;
-    }
-  } @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Responsive manager.
-/// @access public
-/// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
-=respond-to($breakpoint)
-  $raw-query: map-get($breakpoints, $breakpoint)
-
-  @if $raw-query
-    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
-
-    @media #{$query}
-      @content
-
-  @else
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.'
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/03.html %}
 
 <div class="note">
   <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
@@ -127,44 +42,11 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  color: red;
-
-  @include respond-to('medium') {
-    color: blue;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  color: red
-
-  +respond-to('medium')
-    color: blue
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/04.html %}
 
 Leading to the following CSS output:
 
-<div>
-{% highlight css %}
-.foo {
-  color: red;
-}
-
-@media (min-width: 800px) {
-  .foo {
-    color: blue;
-  }
-}
-{% endhighlight %}
-</div>
+{% include snippets/rwd/05.html %}
 
 You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
 

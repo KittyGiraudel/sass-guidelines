@@ -61,7 +61,7 @@ Il est important de faire l’analyse statique (*lint*) de votre code. Si vous s
 
 Par chance, les recommandations de SCSS-lint sont très similaires à celles de ce document. Si vous voulez configurer SCSS-lint selon les recommandations décrites ici, je vous propose la configuration suivante&nbsp;:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01.html %}
 
 <div class="note">
   <p>Au cas où vous voudriez intégrer SCSS-lint à votre processus de développement Grunt, il existe un plugin appelé <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
