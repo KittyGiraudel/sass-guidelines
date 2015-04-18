@@ -11,139 +11,16 @@ De todas formas, si algún día te encuentras con la necesidad de utilizarlas, p
 * La sentencia `@else` debe ir en la misma línea que la llave de cierre anterior (`}`).
 * Deja siempre una línea en blanco después de la última llave de cierre (`}`) a menos que la siguiente línea tenga otra llave de cierre (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Si
-@if $support-legacy {
-  // ...
-} @else {
-  // ...
-}
-
-// No
-@if ($support-legacy == true) {
-  // ...
-}
-@else {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Si
-@if $support-legacy
-  // ...
-@else
-  // ...
-
-// No
-@if ($support-legacy == true)
-  // ...
-@else
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/01.html %}
 
 Cuando se evalúa un valor booleano falso, utiliza siempre la palabra clave `not` en lugar de evaluar con `falso` o `null`
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Si
-@if not index($list, $item) {
-  // ...
-}
-
-// No
-@if index($list, $item) == null {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Si
-@if not index($list, $item)
-  // ...
-
-// No
-@if index($list, $item) == null
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/02.html %}
 
 Pon siempre la parte de la variable en la parte izquierda de la sentencia y el (in)esperado resultado en la derecha. Las sentencias condicionales invertidas son con frecuencia, más dificiles de leer, especialmente para desarrolladores inexpertos.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Si
-@if $value == 42 {
-  // ...
-}
-
-// No
-@if 42 == $value {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Si
-@if $value == 42
-  // ...
-
-// No
-@if 42 == $value
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/03.html %}
 
 Cuando se utilizan sentencias condicionales dentro de una función para devolver un resultado diferente basado en alguna condición, siempre debes de asegurarte que la función tiene una declaracón `@return` fuera de cualquier bloque condicional.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Si
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// No
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Si
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// No
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04.html %}

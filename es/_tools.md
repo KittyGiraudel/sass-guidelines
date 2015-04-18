@@ -5,11 +5,6 @@ Lo bueno de un preprocesador CSS tan popular como Sass es que viene con un compl
 
 Sin embargo, mi consejo es que debes disminuir al mínimo el número de dependencias. Manejarlas es casi un infierno del que no quieres formar parte. Además, hay pocas cosas que necesiten dependencias externas cuando se habla de Sass.
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/) es el principal *framework* de Sass. Desarrollado por [Chris Eppstein](https://twitter.com/chriseppstein), uno de los diseñadores de Sass, si quieres mi opinión, no creo que vaya a perder drásticamente su popularidad en un futuro cercano.
@@ -26,19 +21,12 @@ De todas formas, no prohíbo el uso de Compass aunque tampoco lo recomiendo, esp
   <p>Ruby Sass tiene algunas optimizaciones importantes pendientes y que están específicamente orientadas a los estilos de fuerte lógica con muchas funciones y *mixins*. Deberían mejorar drásticamente el rendimiento, hasta un punto donde Compass u otros *frameworks* no volverán a ralentizar a Sass nunca más.</p>
 </div>
 
-
-
 ### Más información
 
 * [Compass -En inglés](http://compass-style.org/)
 * [Frameworks Sass: Compass o Bourbon -En inglés](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [¿Por qué ya no uso Compass?](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [¿Es Compass a Sass lo que JQuery es a JavaScript? -En inglés](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Sistemas De Retícula
 
@@ -51,7 +39,6 @@ Si estás usando un *framework* CSS para tu proyecto, como [Bootstrap](http://ge
 Si no trabajas con un sistema de retícula específico, estarás complacido al saber que hay dos motores de retícula de primera categoría para Sass: [Susy](http://susy.oddbird.net/) y [Singularity](http://singularity.gs/). Ambos hacen mucho más de lo que necesitas, así que selecciona el que tu prefieras y asegurate de tratar todos los casos &mdash;incluso los más extremos&mdash;y lo tendrás resuelto. Si me preguntas, Susy tiene una mejor comunidad, pero esa es mi opinión.
 
 O puedes trabajar con algo más casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Con todo, la elección no tendrá mucho impacto en tu estilo de programación, así que todo depende de ti llegados a este punto.
-
 
 ### Más información
 
@@ -66,28 +53,20 @@ O puedes trabajar con algo más casual, como [csswizardry-grids](https://github.
 * [Cómo usar Susy: retículas Sass con super poderes -En inglés](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [Sistema de retículas creativas con Sass y calc() -En inglés](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-
-
-
-
-
 ## SCSS-lint
 
 Limpiar el código es muy importante. Normalmente, seguir las pautas de una guía de estilo reduce la cantidad de errores en el código, pero nadie es perfecto y siempre hay cosas para mejorar. Asi que se puede decir que limpiar el código es tan importante como comentarlo.
-
 
 [SCSS-lint](https://github.com/causes/scss-lint) es una herramienta que te ayuda a mantener tus archivos SCSS limpios y legibles. Es completamente personalizable y fácil de integrar con tus propias herramientas.
 
 Afortunadamente, las recomendaciones para limpiar el código con SCC-lint son muy similares a las descritas en este documento. Con el fin de configurar tu SCSS-lint según *Sass Guidelines*, te recomiendo seguir la siguiente configuración:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01.html %}
 
 <div class="note">
   <p>Si quieres conectar SCSS-lint con Grunt en tu proceso de desarrollo, estarás encantado con saber que hay un *plugin* de Grunt para eso llamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>También, si estás en la búsqueda de una aplicación limpia que trabaje con SCSS-lint y similares, los chicos de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) están trabajando en <a href="https://houndci.com/">Hound</a>.</p>
 </div>
-
-
 
 ### Más información
 

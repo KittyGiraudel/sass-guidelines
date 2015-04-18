@@ -18,11 +18,6 @@ That being said, there are many ways to use these features. Some good, some bad,
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-
-
-
-
-
 ## Ruby Sass or LibSass
 
 [Sass’s first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass](https://github.com/sass/libsass) (written in C) is now close to being fully compatible with the original Ruby version.
@@ -33,19 +28,12 @@ Coming back to choosing your compiler. Actually, it all depends on your project.
 
 On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let’s say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
 
-
-
 ### Further reading
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass or SCSS
 
@@ -59,16 +47,9 @@ Sass’s whitespace-sensitive syntax relies on indentation to get rid of braces,
 
 I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <span data-toggle="aside" class="link-like" role="button" aria-expanded>options panel</span>.
 
-
-
 ### Further reading
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Other preprocessors
 
@@ -87,8 +68,6 @@ You can think of postprocessors as a polyfill for unsupported CSS features. For 
 The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
 
 While providing tomorrow’s syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we’ll get back to this.
-
-
 
 ### Further reading
 
