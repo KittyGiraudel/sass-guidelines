@@ -11,16 +11,16 @@ Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nb
 * `@else` sur la même ligne que l’accolade fermante qui précède (`}`)&nbsp;;
 * Toujours un saut de ligne après l’accolade fermante finale (`}`) sauf si la ligne suivante est aussi une accolade fermante (`}`).
 
-{% include snippets/conditions/01.html %}
+{% include snippets/conditions/01/index.html %}
 
 Lorsqu’on teste si une valeur est fausse, on utilise toujours le mot-clé `not` plutôt que de tester sur `false` ou `null`.
 
-{% include snippets/conditions/02.html %}
+{% include snippets/conditions/02/index.html %}
 
 Veillez à toujours mettre la partie variable à gauche de la déclaration et le résultat (in)attendu à droite. Les structures conditionnelles inversées sont souvent plus difficiles à lire, surtout pour les développeurs inexpérimentés.
 
-{% include snippets/conditions/03.html %}
+{% include snippets/conditions/03/index.html %}
 
 Lorsqu’on utilise des structures conditionnelles à l’intérieur d’une fonction, toujours s’assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
 
-{% include snippets/conditions/04.html %}
+{% include snippets/conditions/04/index.html %}

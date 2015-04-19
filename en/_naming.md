@@ -13,7 +13,7 @@ Sass placeholders are deliberately omitted from this list since they can be cons
 
 Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
 
-{% include snippets/naming/01.html %}
+{% include snippets/naming/01/index.html %}
 
 ### Further reading
 
@@ -25,7 +25,7 @@ If you happen to be a framework developer or library writer, you might find your
 
 As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
 
-{% include snippets/naming/02.html %}
+{% include snippets/naming/02/index.html %}
 
 ### Further Reading
 
@@ -37,7 +37,7 @@ If you intend to distribute your Sass code, in the case of a library, a framewor
 
 For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
 
-{% include snippets/naming/03.html %}
+{% include snippets/naming/03/index.html %}
 
 <div class="note">
   <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>

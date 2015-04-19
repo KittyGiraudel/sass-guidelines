@@ -61,7 +61,7 @@ Linting code is very important. Usually, following guidelines from a styleguide 
 
 Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
 
-{% include snippets/tools/01.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>

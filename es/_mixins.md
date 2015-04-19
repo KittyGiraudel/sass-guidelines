@@ -11,11 +11,11 @@ Pero creo que debo advertirte contra el abuso del poder los *mixins*. De nuevo, 
 
 Dicho esto, los *mixins* son extremadamente útiles y deberías estar usando algunos. La regla de oro es que si detectas un grupo de propiedades CSS que están siempre juntas por alguna razón (es decir, no es una coincidencia), puedes crear un *mixin* en su lugar. Por ejemplo, el [hack micro-clearfix de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) merece ser puesto en un *mixin* (sin argumentos).
 
-{% include snippets/mixins/01.html %}
+{% include snippets/mixins/01/index.html %}
 
 Otro ejemplo válido sería un *mixin* para para darle tamaño a un elemento, definiendo tanto  `width` como `height` al mismo tiempo. No solo significa que el código es más fácil de escribir, sino que también es más fácil de leer.
 
-{% include snippets/mixins/02.html %}
+{% include snippets/mixins/02/index.html %}
 
 ### Más información
 
@@ -27,13 +27,13 @@ Otro ejemplo válido sería un *mixin* para para darle tamaño a un elemento, de
 
 Cuando se trata con un número indeterminado de argumentos en un *mixin*, utiliza siempre una `arglist` (lista de argumentos) en lugar de una lista. Piensa en `arglist` como en el octavo tipo de dato no documentado de Sass que se usa implicitamente cuando se pasa un número arbitrario de argumentos a un *mixin* o una a función que contiene `...`.
 
-{% include snippets/mixins/03.html %}
+{% include snippets/mixins/03/index.html %}
 
 Ahora, cuando se contruye un *mixin* que acepta un puñado de argumentos (entiéndase 3 o más), piénsalo dos veces antes de fusionarlos en una lista o mapa pensando que será más sencillo que pasarlos uno a uno.
 
 Sass es de hecho muy inteligente con los *mixins* y las declaraciones de funciones, tanto, que puedes pasarle una lista o mapa como un *arglist* a una función o *mixin* para que sea analizada como una serie de argumentos.
 
-{% include snippets/mixins/04.html %}
+{% include snippets/mixins/04/index.html %}
 
 ### Más información
 
@@ -47,15 +47,15 @@ Desafortunadamente, Autoprefixer no siempre es una opción. Si usas [Bourbon](ht
 
 Si no puedes usar Autoprefixer, ni Bourbon, ni Compass, entonces y solo entonces, puedes tener tus propios *mixin* para añadir prefijos a las propiedades CSS. Pero. Por favor, no construyas un *mixin* por propiedad, imprimiendo manualmente cada proveedor (*vendor*).
 
-{% include snippets/mixins/05.html %}
+{% include snippets/mixins/05/index.html %}
 
 Hazlo de manera inteligente.
 
-{% include snippets/mixins/06.html %}
+{% include snippets/mixins/06/index.html %}
 
 Entonces usar este *mixin* debería ser muy sencillo:
 
-{% include snippets/mixins/07.html %}
+{% include snippets/mixins/07/index.html %}
 
 Por favor, ten en cuenta que es una mala solución. No puede trabajar con *polyfills* complejos como por ejemplo, los necesarios para Flexbox. En ese sentido, utilizar Autoprefixer sería una solución mucho mejor.
 

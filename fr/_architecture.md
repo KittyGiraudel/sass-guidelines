@@ -67,7 +67,7 @@ Et bien sûr&nbsp;:
 
 Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
 
-{% include snippets/architecture/01.html %}
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>Les fichiers suivent les conventions de nommage décrites précédemment&nbsp;: minuscules et utilisation du trait d’union.</p>
@@ -180,7 +180,7 @@ Afin d’assurer une bonne lisibilité, le fichier principal devrait respecter c
 * un saut de ligne après le dernier import d’un dossier&nbsp;;
 * les extensions fichiers et les underscores initiaux doivent être omis.
 
-{% include snippets/architecture/02.html %}
+{% include snippets/architecture/02/index.html %}
 
 Il existe une autre façon d’importer les partiels, que je considère également valable. D’un côté, elle rend le fichier plus lisible. D’un autre côté, elle rend la mise à jour moins aisée. En tout cas, c’est à vous de décider, ce n’est pas très important. Dans cette façon de faire, le fichier principal doit respecter ces recommandations&nbsp;:
 
@@ -190,7 +190,7 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
 * un saut de ligne après le dernier import d’un dossier ;
 * les extensions fichiers et les underscores initiaux doivent être omis.
 
-{% include snippets/architecture/03.html %}
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>Pour éviter d’avoir à importer chaque fichier manuellement, il y a une extension de Sass Ruby appelée <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, qui permet d’utiliser les patterns glob dans Sass <code>@import</code> tels que <code>@import "components/*"</code>.</p>
@@ -201,7 +201,7 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
 
 Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) et [Chris Coyier](http://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un *fichier de la honte*. Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
 
-{% include snippets/architecture/04.html %}
+{% include snippets/architecture/04/index.html %}
 
 ### Lectures complémentaires
 

@@ -60,7 +60,7 @@
 
 К счастью, рекомендации SCSS-lint очень похожи на те, что описаны в данном документе. Для того, чтобы настроить SCSS-lint в соответствии с Sass Guidelines, я рекомендую следующее:
 
-{% include snippets/tools/01.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>Если вы хотите подключить SCSS-lint в процесс сборки Grunt, вам будет приятно знать, что есть расширение Grunt для этого – <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>

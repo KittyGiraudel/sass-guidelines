@@ -21,23 +21,23 @@ Los documentos hablan de *ocultar o sombrear la variable global*. Cuando se decl
 
 El siguiente fragmento de código explica el concepto de *sombreado de variable*:
 
-{% include snippets/variables/01.html %}
+{% include snippets/variables/01/index.html %}
 
 ## La bandera `!default`
 
 Cuando se construye una librería, un *framework*, un sistema de retícula o cualquier bloque de Sass que está destinado a ser distribuido y usado por desarrolladores externos, todas las variables de configuración deben estar definidas con la bandera `!default` para que puedan sobrescribirse.
 
-{% include snippets/variables/02.html %}
+{% include snippets/variables/02/index.html %}
 
 Gracias a esto, cualquier desarrollador puede definir su propia variable `$baseline` *antes* de importar tu librería sin que su valor sea redefinido.
 
-{% include snippets/variables/03.html %}
+{% include snippets/variables/03/index.html %}
 
 ## La bandera `!global`
 
 La bandera `!global` solo se debe utilizar cuando se sobrescribe una variable global desde un alcance local. Cuando se define una variable a nivel raiz, la bandera `!global` debe ser omitida.
 
-{% include snippets/variables/04.html %}
+{% include snippets/variables/04/index.html %}
 
 ## Variables Múltiples O Mapas
 
@@ -45,4 +45,4 @@ Existen ventajas al utilizar los mapas respecto a las variables múltiples. La p
 
 Otra ventaja de utilizar un mapa es la de tener la capacidad de crear una pequeña función *getter* para proporcionar una API más amigable. Por ejemplo, considera el siguiente código Sass:
 
-{% include snippets/variables/05.html %}
+{% include snippets/variables/05/index.html %}

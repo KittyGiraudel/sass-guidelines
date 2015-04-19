@@ -18,13 +18,13 @@ Je pourrais certainement citer encore bien d’autres raisons. Les commentaires 
 
 Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est à dire `/* ... */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
 
-{% include snippets/comments/01.html %}
+{% include snippets/comments/01/index.html %}
 
 De manière générale, tout ce qui n’est pas évident à première vue devrait être commenté. La documentation n’est *jamais* superflue. Rappelez-vous qu’on ne commente jamais trop, n’hésitez pas à écrire des commentaires sur tout ce qui le mérite.
 
 Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass (c’est à dire `//`) à la place des blocs de commentaires de style C. Les commentaires seront invisibles dans le CSS résultant de la compilation, même en mode étendu pendant le développement.
 
-{% include snippets/comments/02.html %}
+{% include snippets/comments/02/index.html %}
 
 ### Lectures complémentaires
 
@@ -34,7 +34,7 @@ Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass
 
 Chaque variable, fonction, mixin et placeholder destiné à être réutilisé dans le code devrait être documenté en tant que partie de l’API globale à l’aide de [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03.html %}
+{% include snippets/comments/03/index.html %}
 
 <div class="note">
   <p>Trois barres obliques (<code>/</code>) sont requises.</p>
@@ -59,7 +59,7 @@ SassDoc a deux rôles principaux&nbsp;:
 
 Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 
-{% include snippets/comments/04.html %}
+{% include snippets/comments/04/index.html %}
 
 ### Lectures complémentaires
 

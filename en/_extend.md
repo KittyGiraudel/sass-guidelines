@@ -24,7 +24,7 @@ There are scenarios where extending selectors might be helpful and worthwhile. Y
 
 If you are going to use extend, let me also remind you that it does not play well with `@media` blocks. As you may know, Sass is unable to extend an outer selector from within a media query. When doing so, the compiler simply crashes, telling you that you cannot do such a thing. Not great. Especially since media queries are almost all we do know.
 
-{% include snippets/extend/01.html %}
+{% include snippets/extend/01/index.html %}
 
 > You may not @extend an outer selector from within @media.<br>
 > You may only @extend selectors within the same directive.

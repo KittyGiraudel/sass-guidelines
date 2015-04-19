@@ -18,13 +18,13 @@ And I probably forgot a lot of other various reasons as well. Commenting takes v
 
 Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
 
-{% include snippets/comments/01.html %}
+{% include snippets/comments/01/index.html %}
 
 Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
 When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
 
-{% include snippets/comments/02.html %}
+{% include snippets/comments/02/index.html %}
 
 ### Further reading
 
@@ -34,7 +34,7 @@ When commenting a Sass-specific section, use Sass inline comments instead of a C
 
 Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03.html %}
+{% include snippets/comments/03/index.html %}
 
 <div class="note">
   <p>Three slashes (<code>/</code>) required.</p>
@@ -57,7 +57,7 @@ SassDoc has two major roles:
 
 Here is an example of a mixin extensively documented with SassDoc:
 
-{% include snippets/comments/04.html %}
+{% include snippets/comments/04/index.html %}
 
 ### Further reading
 

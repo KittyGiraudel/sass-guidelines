@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Clase que corta y añade puntos suspensivos para que una cadena demasiado larga quepa
+ * en una sola línea
+ * 1. Forzar a que el contenido quepa en una sola línea
+ * 2. Añadir puntos supensivos al final de la línea.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Clase que corta y añada puntos suspensivos para que una cadena demasiado larga quepa
+ * en una sola línea
+ * 1. Forzar a que el contenido quepa en una sola línea
+ * 2. Añadir puntos supensivos al final de la línea.
+ */
+.ellipsis
+  white-space: nowrap /* 1 */
+  text-overflow: ellipsis /* 2 */
+  overflow: hidden
+{% endhighlight %}
+  </div>
+</div>

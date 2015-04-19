@@ -66,7 +66,7 @@ And of course:
 
 Ideally, we can come up with something like this:
 
-{% include snippets/architecture/01.html %}
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
@@ -179,7 +179,7 @@ In order to preserve readability, the main file should respect these guidelines:
 * a new line after the last import from a folder;
 * file extensions and leading underscores omitted.
 
-{% include snippets/architecture/02.html %}
+{% include snippets/architecture/02/index.html %}
 
 There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
 
@@ -189,7 +189,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 * a new line after the last import from a folder;
 * file extensions and leading underscores omitted.
 
-{% include snippets/architecture/03.html %}
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
@@ -200,7 +200,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
 
-{% include snippets/architecture/04.html %}
+{% include snippets/architecture/04/index.html %}
 
 ### Further reading
 

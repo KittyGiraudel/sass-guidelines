@@ -61,7 +61,7 @@ Limpiar el código es muy importante. Normalmente, seguir las pautas de una guí
 
 Afortunadamente, las recomendaciones para limpiar el código con SCC-lint son muy similares a las descritas en este documento. Con el fin de configurar tu SCSS-lint según *Sass Guidelines*, te recomiendo seguir la siguiente configuración:
 
-{% include snippets/tools/01.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>Si quieres conectar SCSS-lint con Grunt en tu proceso de desarrollo, estarás encantado con saber que hay un *plugin* de Grunt para eso llamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>

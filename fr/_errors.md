@@ -21,7 +21,7 @@ Il y a bien des possibilités d’avertissements et d’erreurs dans Sass, n’i
 
 Prenez par exemple cette fonction de [Sass-MQ](https://github.com/sass-mq/sass-mq) qui essaie de convertir une valeur de `px` à `em`&nbsp;:
 
-{% include snippets/errors/01.html %}
+{% include snippets/errors/01/index.html %}
 
 Si la valeur entrée se trouve être sans unité, la fonction suppose qu’elle est exprimée en pixels. Il est toutefois risqué de le faire sans avertir l’auteur que le logiciel a fait quelque chose qui pourrait être inattendu.
 
@@ -31,4 +31,4 @@ Contrairement aux avertissements, les erreurs empêchent le compilateur d’alle
 
 Par exemple, admettons que vous construisez une fonction *getter* pour accéder à des valeurs à partir d’une map spécifique. Vous pourriez envoyer une erreur si la clé requise n’existe pas dans la map.
 
-{% include snippets/errors/02.html %}
+{% include snippets/errors/02/index.html %}

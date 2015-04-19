@@ -12,7 +12,7 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 * properly written multi-line CSS rules;
 * meaningful use of whitespace.
 
-{% include snippets/syntax/01.html %}
+{% include snippets/syntax/01/index.html %}
 
 We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
 
@@ -24,7 +24,7 @@ Believe it or not, strings play quite a large role in both CSS and Sass ecosyste
 
 To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
 
-{% include snippets/syntax/02.html %}
+{% include snippets/syntax/02/index.html %}
 
 ### Quotes
 
@@ -39,13 +39,13 @@ That being said, languages that do not require strings to be quoted are definite
 * it helps general readability;
 * there is no valid reason not to quote strings.
 
-{% include snippets/syntax/03.html %}
+{% include snippets/syntax/03/index.html %}
 
 ### Strings as CSS values
 
 Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
 
-{% include snippets/syntax/04.html %}
+{% include snippets/syntax/04/index.html %}
 
 Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
 
@@ -55,13 +55,13 @@ We don't quote the former, but we do wrap the latter in single quotes.
 
 If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
 
-{% include snippets/syntax/05.html %}
+{% include snippets/syntax/05/index.html %}
 
 ### URLs
 
 URLs should be quoted as well, for the same reasons as above:
 
-{% include snippets/syntax/06.html %}
+{% include snippets/syntax/06/index.html %}
 
 ### Further Reading
 
@@ -76,29 +76,29 @@ In Sass, number is a data type including everything from unitless numbers to len
 
 Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
 
-{% include snippets/syntax/07.html %}
+{% include snippets/syntax/07/index.html %}
 
 ### Units
 
 When dealing with lengths, a `0` value should never ever have a unit.
 
-{% include snippets/syntax/08.html %}
+{% include snippets/syntax/08/index.html %}
 
 The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, it is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
 
 To add a unit to a number, you have to multiply this number by *1 unit*.
 
-{% include snippets/syntax/09.html %}
+{% include snippets/syntax/09/index.html %}
 
 Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
 
-{% include snippets/syntax/10.html %}
+{% include snippets/syntax/10/index.html %}
 
 In the end, it really depends on what you are trying to achieve. Just keep in mind that adding the unit as a string is not a good way to proceed.
 
 To remove the unit of a value, you have to divide it by *one unit of its kind*.
 
-{% include snippets/syntax/11.html %}
+{% include snippets/syntax/11/index.html %}
 
 Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
 
@@ -106,7 +106,7 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 **Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
 
-{% include snippets/syntax/12.html %}
+{% include snippets/syntax/12/index.html %}
 
 ### Magic numbers
 
@@ -114,7 +114,7 @@ Appending a unit as a string to a number results in a string, preventing any add
 
 Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for why a number works, add an extensive comment explaining how you got there and why you think it works. Admitting you don’t know why something works is still more helpful to the next developer than them having to figure out what’s going on from scratch.
 
-{% include snippets/syntax/13.html %}
+{% include snippets/syntax/13/index.html %}
 
 ### Further reading
 
@@ -138,21 +138,21 @@ In order to make colors as simple as they can be, my advice would be to respect 
 
 For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Lastly, hexadecimal is close to indecipherable for the human mind.
 
-{% include snippets/syntax/14.html %}
+{% include snippets/syntax/14/index.html %}
 
 When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
 
-{% include snippets/syntax/15.html %}
+{% include snippets/syntax/15/index.html %}
 
 ### Colors and variables
 
 When using a color more than once, store it in a variable with a meaningful name representing the color.
 
-{% include snippets/syntax/16.html %}
+{% include snippets/syntax/16/index.html %}
 
 Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
 
-{% include snippets/syntax/17.html %}
+{% include snippets/syntax/17/index.html %}
 
 Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
 
@@ -176,7 +176,7 @@ The benefit of using `mix` rather than one of the two aforementioned functions i
 
 If you don’t want to write the `mix` function every time, you can create two easy-to-use functions `tint` and `shade` (which are also a part of [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) to do the same thing:
 
-{% include snippets/syntax/18.html %}
+{% include snippets/syntax/18/index.html %}
 
 <div class="note">
   <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
@@ -202,11 +202,11 @@ Lists should respect the following guidelines:
 * always wrapped in parenthesis;
 * trailing comma if multilines, not if inlined.
 
-{% include snippets/syntax/19.html %}
+{% include snippets/syntax/19/index.html %}
 
 When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
 
-{% include snippets/syntax/20.html %}
+{% include snippets/syntax/20/index.html %}
 
 ### Further reading
 
@@ -230,17 +230,17 @@ Maps should be written as follows:
 
 Illustration:
 
-{% include snippets/syntax/21.html %}
+{% include snippets/syntax/21/index.html %}
 
 ### Debugging a Sass map
 
 If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
 
-{% include snippets/syntax/22.html %}
+{% include snippets/syntax/22/index.html %}
 
 If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
 
-{% include snippets/syntax/23.html %}
+{% include snippets/syntax/23/index.html %}
 
 ### Further reading
 
@@ -268,7 +268,7 @@ At this point, this is mostly revising what everybody knows, but here is how a C
 
 Illustration:
 
-{% include snippets/syntax/24.html %}
+{% include snippets/syntax/24/index.html %}
 
 Adding to those CSS-related guidelines, we want to pay attention to:
 
@@ -280,7 +280,7 @@ Adding to those CSS-related guidelines, we want to pay attention to:
 
 Illustration:
 
-{% include snippets/syntax/25.html %}
+{% include snippets/syntax/25/index.html %}
 
 ### Further reading
 
@@ -295,15 +295,15 @@ I cannot think of many topics where opinions are as divided as they are regardin
 
 There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why would animations should appear before the display type? There are a lot of oddities with alphabetical ordering.
 
-{% include snippets/syntax/26.html %}
+{% include snippets/syntax/26/index.html %}
 
 On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
 
-{% include snippets/syntax/27.html %}
+{% include snippets/syntax/27/index.html %}
 
 There is also another interesting subtree of type ordering called [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), that seems to be quite popular as well. Basically, Concentric CSS relies on the box-model to define an order: starts outside, moves inward.
 
-{% include snippets/syntax/28.html %}
+{% include snippets/syntax/28/index.html %}
 
 I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
 
@@ -335,19 +335,19 @@ One particular feature Sass provides that is being overly misused by many develo
 
 For instance, the following Sass nesting:
 
-{% include snippets/syntax/29.html %}
+{% include snippets/syntax/29/index.html %}
 
 ... will generate this CSS:
 
-{% include snippets/syntax/30.html %}
+{% include snippets/syntax/30/index.html %}
 
 Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
 
-{% include snippets/syntax/31.html %}
+{% include snippets/syntax/31/index.html %}
 
 ... will generate this CSS:
 
-{% include snippets/syntax/32.html %}
+{% include snippets/syntax/32/index.html %}
 
 This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generate `.block__element` and `.block--modifier` selectors based on the original selector (i.e. `.block` in this case).
 
@@ -365,25 +365,25 @@ To prevent such a situation, we **avoid selector nesting as much as possible**. 
 
 For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
 
-{% include snippets/syntax/33.html %}
+{% include snippets/syntax/33/index.html %}
 
 Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
 
 Also, when using component-agnostic state classes such as `.is-active`, it is perfectly fine to nest it under the component’s selector to keep things tidy.
 
-{% include snippets/syntax/34.html %}
+{% include snippets/syntax/34/index.html %}
 
 Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
 
-{% include snippets/syntax/35.html %}
+{% include snippets/syntax/35/index.html %}
 
 When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
 
-{% include snippets/syntax/36.html %}
+{% include snippets/syntax/36/index.html %}
 
 Rewriting our previous example, it would look like this:
 
-{% include snippets/syntax/37.html %}
+{% include snippets/syntax/37/index.html %}
 
 As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
 

@@ -24,7 +24,7 @@ Il y a bien sûr des scénarios dans lesquels l’extension de sélecteurs peut 
 
 Si vous utilisez `@extend`, rappelez-vous également qu’il ne fonctionne pas bien avec les blocs `@media`. Comme vous le savez, Sass ne sait pas étendre un sélecteur extérieur depuis l’intérieur d’une media query. Si vous le faites, le compilateur plante et vous annonce qu’il ne peut pas le faire. Pas terrible, d’autant que les media queries sont monnaie courante aujourd’hui.
 
-{% include snippets/extend/01.html %}
+{% include snippets/extend/01/index.html %}
 
 > You may not @extend an outer selector from within @media.<br>
 > You may only @extend selectors within the same directive.

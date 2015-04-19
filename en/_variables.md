@@ -21,23 +21,23 @@ The docs talk about *global variable shadowing*. When declaring a variable that 
 
 The following code snippet explains the *variable shadowing* concept.
 
-{% include snippets/variables/01.html %}
+{% include snippets/variables/01/index.html %}
 
 ## `!default` flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
 
-{% include snippets/variables/02.html %}
+{% include snippets/variables/02/index.html %}
 
 Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
 
-{% include snippets/variables/03.html %}
+{% include snippets/variables/03/index.html %}
 
 ## `!global` flag
 
 The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
 
-{% include snippets/variables/04.html %}
+{% include snippets/variables/04/index.html %}
 
 ## Multiple variables or maps
 
@@ -45,4 +45,4 @@ There are advantages of using maps rather than multiple distinct variables. The 
 
 Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
 
-{% include snippets/variables/05.html %}
+{% include snippets/variables/05/index.html %}
