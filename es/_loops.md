@@ -5,11 +5,6 @@ Puesto que Sass proporciona estructuras de datos complejas, como por ejemplo [li
 
 Sin embargo, la presencia de bucles generalmente implica una lógica moderadamente compleja que propablemente no pertenece a Sass. Antes de utilizar un bucle, asegúrate de que tiene sentido y que de hecho resuelve un problema.
 
-
-
-
-
-
 ## Each
 
 El bucle `@each` es definitivamente el más utilizado de los tres tipos de bucle que proporciona Sass. Sass ofrece una API limpia para iterar sobre una lista o mapa.
@@ -59,11 +54,6 @@ También asegúrate de respetar estas pautas para preservar la legibilidad:
 * Deja siempre una línea en blanco antes de `@each`;
 * Deja siempre una línea en blanco después de la llave de cierre (`}`) a no ser que la siguiente línea sea otra llave de cierre (`}`).
 
-
-
-
-
-
 ## For
 
 El ciclo `@for` puede ser útil cuando se combina con las pseudo-clases CSS `:nth-*`. A excepción de estos escenarios, es preferible usar un bucle `@each` si *tienes que* iterar sobre algo.
@@ -93,11 +83,6 @@ También asegúrate de respetar estas directrices para preservar la legibilidad:
 
 * Deja siempre una línea en blanco antes de `@each`;
 * DEja siempre una línea en blanco después de la llave de cierre (`}`) a no ser que la siguiente línea sea otra llave de cierre (`}`).
-
-
-
-
-
 
 ## While
 

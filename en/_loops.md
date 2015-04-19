@@ -5,11 +5,6 @@ Because Sass provides complex data structures such as [lists](#lists) and [maps]
 
 However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and that it actually solves an issue.
 
-
-
-
-
-
 ## Each
 
 The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
@@ -59,11 +54,6 @@ Also be sure to respect those guidelines to preserve readability:
 * Always an empty new line before `@each`;
 * Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
 
-
-
-
-
-
 ## For
 
 The `@for` loop might be useful when combined with CSS’ `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *have to* iterate over something.
@@ -93,11 +83,6 @@ Also be sure to respect those guidelines to preserve readability:
 
 * Always an empty new line before `@for`;
 * Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
-
-
-
-
-
 
 ## While
 

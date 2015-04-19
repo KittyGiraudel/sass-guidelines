@@ -3,11 +3,6 @@
 
 반응형 웹 디자인은 이제 어디에서나 볼 수 있는 만큼 따로 소개해야 한다고 생각하진 않습니다. *Sass 스타일가이드에 왜 RWD 섹션이 있는 거야?*라고 자문하실지도 모르겠습니다. 사실 브레이크포인트의 사용을 쉽게 만들기 위해 할 수 있는 일들이 꽤 있고, 그래서 여기에 포함시키는 게 그리 나쁜 아이디어는 아닐 거라 생각했습니다.
 
-
-
-
-
-
 ## 브레이크포인트 이름 짓기
 
 미디어 쿼리가 특정 기기에 의존해서는 안된다고 말해도 과언은 아닐 거라 생각합니다. 예를 들면, 아이패드나 블렉베리 폰을 특정해서 겨냥하는 것은 분명 나쁜 생각입니다. 디자인이 깨지고 다음 미디어 쿼리가 넘겨받기 전까지, 미디어 쿼리는 다양한 스크린 크기를 처리해야 합니다.
@@ -62,17 +57,9 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-
-
-
 ### 참고
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
-
-
-
-
-
 
 ## 브레이크포인트 매니저
 
@@ -120,17 +107,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>만약 좀 더 많은 것을 허용하는 브레이크포인트 매니저가 필요하다면, 새로 만들 것 없이 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a>, <a href="https://github.com/eduardoboucas/include-media">include-media</a>와 같은 효과가 증명된 도구들을 사용하시길 권합니다.</p>
 </div>
 
-
-
 ### 참고
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
-
-
-
-
-
 
 ## 미디어 쿼리 사용법
 
@@ -181,8 +161,6 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 > &mdash; [Sam Richards](https://twitter.com/snugug), [Breakpoint](http://breakpoint-sass.com/)에 관해
 
 정말로 미디어 쿼리의 중복이 신경쓰인다면, [이 gem](https://github.com/aaronjensen/sass-media_query_combiner)과 같은 도구를 이용해 합칠 수 있습니다. 하지만 CSS 코드를 옮길 때 발생할 수 있는 부작용에 대해 경고해야 할 것 같습니다. 여러분은 소스의 순서가 중요하다는 사실을 잘 알고 있습니다.
-
-
 
 ### 참고
 

@@ -13,11 +13,6 @@ My advice would be to only create variables when it makes sense to do so. Do not
 
 Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
 
-
-
-
-
-
 ## Scoping
 
 Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
@@ -84,11 +79,6 @@ $variable: 'initial value'
   </div>
 </div>
 
-
-
-
-
-
 ## `!default` flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
@@ -133,11 +123,6 @@ $baseline: 2em
   </div>
 </div>
 
-
-
-
-
-
 ## `!global` flag
 
 The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
@@ -162,11 +147,6 @@ $baseline: 2em !global
 {% endhighlight %}
   </div>
 </div>
-
-
-
-
-
 
 ## Multiple variables or maps
 

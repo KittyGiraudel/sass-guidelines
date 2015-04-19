@@ -62,8 +62,6 @@ If you are going to use extend, let me also remind you that it does not play wel
 
 To sum up, I would **advise against using the `@extend` directive**, unless under some specific circumstances, but I would not go as far as to forbid it.
 
-
-
 ### Further reading
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)

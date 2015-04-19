@@ -7,10 +7,6 @@
 
 不过我有必要提醒你滥用混合宏的破坏力量。再次重申一遍，使用混合宏的关键是**简洁**。建立混入大量逻辑而极具力量的混合宏看上去确实很有诱惑力。这就是所谓的过度开发，大多数开发者常常因此陷入困境。不要过度逻辑化你的代码，尽量保持一切简洁。如果一个混合宏最后超过了20行，那么它应该被分离成更小的块甚至是重建。
 
-
-
-
-
 ## 基础
 
 话虽如此，混合宏确实非常有用，你应该学习使用它。经验告诉我们，如果你发现有一组CSS属性经常因同一个原因一起出现（非巧合），那么你就可以使用混合宏来代替。比如[Nicolas Gallagher的清除浮动](http://nicolasgallagher.com/micro-clearfix-hack/)应当放入一个混合宏的实例。
@@ -72,18 +68,11 @@
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
-
-
-
-
-
 
 ## 参数列表
 
@@ -161,16 +150,9 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## 混合宏和浏览器前缀
 
@@ -258,7 +240,6 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 </div>
 
 请记住，这是一个糟糕的解决方案。例如，他不能处理那些需要复杂的前缀，比如`flexbox`。在这个意义上说，使用Autoprefixer是一个更好地选择。
-
 
 ### 扩展阅读
 

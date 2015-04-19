@@ -44,11 +44,6 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 
 We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
 
-
-
-
-
-
 ## Strings
 
 Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or strings (usually unquoted), so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
@@ -195,23 +190,14 @@ URLs should be quoted as well, for the same reasons as above:
   </div>
 </div>
 
-
-
 ### Further Reading
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## Numbers
 
 In Sass, number is a data type including everything from unitless numbers to lengths, durations, frequencies, angles and so on. This allows calculations to be run on such measures.
-
-
 
 ### Zeros
 
@@ -247,8 +233,6 @@ Numbers should display leading zeros before a decimal value less than one. Never
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Units
 
@@ -364,8 +348,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
 
-
-
 ### Calculations
 
 **Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
@@ -397,8 +379,6 @@ Appending a unit as a string to a number results in a string, preventing any add
   </div>
 </div>
 
-
-
 ### Magic numbers
 
 "Magic number" is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it’s just a random number that happens to *just work*™ yet is not tied to any logical explanation.
@@ -429,8 +409,6 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -438,16 +416,9 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## Colors
 
 Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
-
-
 
 ### Color formats
 
@@ -520,8 +491,6 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
   </div>
 </div>
 
-
-
 ### Colors and variables
 
 When using a color more than once, store it in a variable with a meaningful name representing the color.
@@ -556,11 +525,7 @@ $main-theme-color: $sass-pink
 
 Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
 
-
-
 ### Lightening and darkening colors
-
-
 
 Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
 
@@ -627,8 +592,6 @@ If you don’t want to write the `mix` function every time, you can create two e
   <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
 </div>
 
-
-
 ### Further reading
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
@@ -636,11 +599,6 @@ If you don’t want to write the `mix` function every time, you can create two e
 * [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## Lists
 
@@ -728,17 +686,10 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## Maps
 
@@ -791,8 +742,6 @@ $breakpoints: (
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Debugging a Sass map
 
@@ -872,8 +821,6 @@ If you are interested in knowing the depth of the map, add the following functio
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -885,11 +832,6 @@ If you are interested in knowing the depth of the map, add the following functio
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## CSS Ruleset
 
@@ -997,16 +939,9 @@ Illustration:
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## Declaration Sorting
 
@@ -1136,8 +1071,6 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
   <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
 </div>
 
-
-
 ### Further reading
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
@@ -1146,11 +1079,6 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## Selector Nesting
 
@@ -1382,16 +1310,8 @@ Rewriting our previous example, it would look like this:
 
 As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
 
-
-
-
-
-
 ### Further reading
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-
-
-

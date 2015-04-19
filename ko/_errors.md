@@ -11,18 +11,11 @@ Sass 개발자들에 의해 간과되는 기능이 하나 있다면, 그것은 �
 
 Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기본적으로 특정 유형의 매개변수를 기대하는 믹신이나 펑션은 뭔가가 잘못되었을 때 오류를 던지거나, 혹은 추정 시에는 경고를 표시합니다.
 
-
-
 ### 참고
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
-
-
-
-
 
 ## 경고
 
@@ -58,11 +51,6 @@ Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기�
 </div>
 
 만약 값에 단위가 없으면 이 펑션은 그 값이 픽셀로 표현되어야 하는 것으로 추정합니다. 이 시점에서, 추정은 위험할 수 있으며 따라서 사용자는 소프트웨어가 예기치 않은 것으로 간주될 수 있는 행동을 했다는 경고를 받아야 합니다.
-
-
-
-
-
 
 ## 오류
 

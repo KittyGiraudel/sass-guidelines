@@ -40,16 +40,9 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
-
-
-
-
 
 ## Constants
 
@@ -78,16 +71,9 @@ $css-positions: (top, right, bottom, left, center)
   </div>
 </div>
 
-
-
 ### Further Reading
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
-
-
-
-
-
 
 ## Namespace
 

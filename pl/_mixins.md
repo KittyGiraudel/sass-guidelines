@@ -7,11 +7,6 @@ Mogą one zawierać pełne reguły CSS i zasadniczo wszystko, co wszędzie indzi
 
 Czuję jednak potrzebę by ostrzec Cię przed nadużywaniem mocy mixinów. Należy mieć bowiem ciągle na uwadze pojęcie *prostoty*. Może to się wydawać kuszące, by budować potężne, rozbudowane mixiny. Jest to jedna gruba przesada i, niestety, wielu deweloperów cierpi na tą chorobę. Nie staraj się by Twój kod robił wszystko na raz. Jeśli dany mixin rozwinie się na więcej niż 20 linii, rozważ wydzielenie z niego części albo po prostu zastanów się nad nim i przepisz go jeszcze raz.
 
-
-
-
-
-
 ## Podstawy
 
 Mając to na uwadze, mixiny są niezwykle przydatne i, bez wątpienia, powinieneś ich używać. Główną zasadą jest w tym przypadku to, że gdy dostrzegasz grupę własności CSS które zawsze występują razem z jakiegoś powodu (nie z przypadku), możesz je umieścić w mixinie. [Micro-clearfix hack od Nicolasa Gallaghera](http://nicolasgallagher.com/micro-clearfix-hack/), na przykład, zasługuje na umieszczenie go w (bezargumentowym) mixinie.
@@ -73,18 +68,11 @@ Innym słusznym przykładem może być mixin do określenia rozmiarów elementu,
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
-
-
-
-
-
 
 ## Listy argumentów
 
@@ -162,16 +150,9 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## Mixiny a vendor prefixy
 
@@ -259,8 +240,6 @@ Użycie takiego mixinu powinno być dosyć jasne:
 </div>
 
 Proszę mieć jednak na uwadze, że jest to dosyć kiepskie rozwiązanie. Na przykład, nie rozwiąże to problemu bardziej skomplikowanych składni, takich jak te wymagane dla Flexboxa. W tych przypadkach, użycie Autoprefixera było by o wiele lepszą opcją.
-
-
 
 ### Dalsze informacje
 

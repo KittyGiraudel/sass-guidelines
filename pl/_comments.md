@@ -14,11 +14,6 @@ Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto u�
 
 Prawdopodobnie pominąłem tu wiele innych ważnych sytuacji. Pisanie komentarzy nie zajmuje jednak tak dużo czasu, jakby to się mogło wydawać, dlatego też warto to robić w trakcie pisania kodu. Powrót do niego później, by dodać jakiś komentarz jest nie tylko pomysłem nierealistycznym, ale jest to także dosyć męczące.
 
-
-
-
-
-
 ## Pisanie komentarzy
 
 Najlepiej jest, gdy *każdy* zestaw reguł jest poprzedzony komentarzem, napisanym w stylu komentarzy z języka C, który objaśnia znaczenie danego bloku kodu. Komentarz ten także może dotyczyć konkretnych reguł. Dla przykładu:
@@ -74,16 +69,9 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## Dokumentowanie
 
@@ -198,8 +186,6 @@ Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Dalsze informacje
 

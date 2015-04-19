@@ -44,11 +44,6 @@
 
 이 절에서는 파일 구조에 대한 질문과는 씨름하지 않겠습니다. 그것은 [다른 절](#설계)의 주제입니다.
 
-
-
-
-
-
 ## 문자열
 
 CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지어 공백을 포함한 경우에도요. 예를 들면 font-family가 있습니다: 따옴표로 감쌌는지 여부는 CSS 파서에게 문제가 되지 않습니다.
@@ -122,23 +117,14 @@ URL 역시 위와 동일한 이유로 따옴표로 감싸여야 합니다:
   </div>
 </div>
 
-
-
 ### 참고
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## 숫자
 
 Sass에서 숫자는 단위가 없는 숫자에서부터 길이, 기간, 빈도, 각도 등에 이르기까지 모든 것을 포함하는 데이터 타입입니다. 덕분에 그런 단위들을 가지고 연산을 하는 것이 가능해집니다.
-
-
 
 ### 영
 
@@ -174,8 +160,6 @@ Sass에서 숫자는 단위가 없는 숫자에서부터 길이, 기간, 빈도,
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 단위
 
@@ -291,8 +275,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 단위를 문자열로서 숫자에 덧붙이면 결과물은 문자열이 되며, 그 값으로 더이상 연산을 할 수 없습니다. 숫자의 숫자 부분을 단위에서 잘라내면 그 결과 역시 문자열이 됩니다. 이것은 여러분이 원하는 것이 아닙니다.
 
-
-
 ### 연산
 
 **최상위 숫자 계산은 언제나 괄호로 감싸져야 합니다**. 이 요건은 가독성을 향상시킬 뿐만 아니라, Sass가 괄호 안의 수치를 계산하도록 강제함으로써 일부 예외적인 상황을 방지합니다.
@@ -324,8 +306,6 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-
-
 ### 매직 넘버
 
 "매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants)입니다. 기본적으로, 이 숫자는 어쩌다보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
@@ -356,8 +336,6 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -365,16 +343,9 @@ $value: str-slice($length + unquote(''), 1, 2)
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## 색
 
 색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 펑션](http://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
-
-
 
 ### 색 서식
 
@@ -447,8 +418,6 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
   </div>
 </div>
 
-
-
 ### 색과 변수
 
 색을 한 번 이상 사용할 때는 색을 대변하는 의미 있는 이름을 붙여 변수에 저장하세요.
@@ -483,11 +452,7 @@ $main-theme-color: $sass-pink
 
 이렇게 함으로써 테마 변경이 `$sass-pink: blue` 같은 사태를 초래하는 것을 방지할 수 있습니다.
 
-
-
 ### 색 명암 조절
-
-
 
 [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 펑션은 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 펑션의 `$lightness` 매개 변수의 가명일 뿐입니다.
 
@@ -554,8 +519,6 @@ $main-theme-color: $sass-pink
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 펑션은 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 펑션은 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
 </div>
 
-
-
 ### 참고
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
@@ -563,11 +526,6 @@ $main-theme-color: $sass-pink
 * [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## 리스트
 
@@ -652,16 +610,9 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### 참고
 
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## 맵
 
@@ -714,8 +665,6 @@ $breakpoints: (
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Sass 맵 디버그
 
@@ -795,8 +744,6 @@ $breakpoints: (
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -807,11 +754,6 @@ $breakpoints: (
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## CSS 규칙
 
@@ -919,16 +861,9 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## 선언 정렬
 
@@ -1058,8 +993,6 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
 </div>
 
-
-
 ### 참고
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
@@ -1068,11 +1001,6 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## 선택자 내포Nesting
 
@@ -1304,16 +1232,8 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 모든 것이 그렇듯이, 세부사항은 크게 상관이 없으며, 일관성이 핵심입니다. 선택자 내포에 충분한 확신이 있다면 선택자 내포를 사용하세요. 단지 여러분의 팀 전체가 그 선택에 동의하는지 확실히 하시면 됩니다.
 
-
-
-
-
-
 ### 참고
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-
-
-

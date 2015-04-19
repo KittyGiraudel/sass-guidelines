@@ -18,11 +18,6 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-
-
-
-
-
 ## Ruby Sass 혹은 LibSass
 
 [Sass의 첫 번째 커밋](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)은 8년 이상이 지난, 2006년 후반까지 거슬러 올라갑니다. 말할 것도 없이 그 이후로 아주 먼 길을 왔습니다. Ruby로 처음에 개발되었고, 여기저기서 다양한 포트들이 튀어나왔죠. 가장 성공적인, (C로 쓰인) [LibSass](https://github.com/sass/libsass)는 현재 원래의 Ruby 버전과의 완전한 호환에 근접해 있습니다.
@@ -33,18 +28,11 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 
 작업 흐름의 통합이 필요한 비(非)Ruby 프로젝트의 경우, 주로 감싸는 용도로 만들어져 있으므로 LibSass가 아마도 더 나은 생각일 것입니다. 그러니까 만약 NodeJS를 사용하고 싶으시다면, 선택은 [node-sass](https://github.com/sass/node-sass)입니다.
 
-
-
 ### 참고
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass 혹은 SCSS
 
@@ -58,22 +46,13 @@ Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다�
 
 저 자신은 CSS에 더 가깝고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 때문에, 이 가이드라인에서는 Sass 대신 SCSS를 사용하도록 하겠습니다.
 
-
-
 ### 참고
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
-
-
-
-
-
 ## 기타 전처리기들
 
 Sass 외에도 여러 전처리기들이 있습니다. 가장 만만찮은 경쟁자는 [LESS](http://lesscss.org/)일 것입니다. 유명한 CSS 프레임워크인 [Bootstrap](http://getbootstrap.com/)이 사용한 덕분에 널리 알려진 NodeJS 기반의 전처리기죠. 너드스럽고, 제한 없는 버전의 LESS처럼 느껴지는 [Stylus](http://learnboost.github.io/stylus/)도 있습니다. 이것은 CSS를 거의 프로그래밍 언어로 바꿔놓기 때문에 원하는 것 대부분을 할 수 있습니다.
-
-
 
 *LESS나 다른 전처리기를 두고 왜 Sass를 선택하는가?* 오늘날에도 여전히 합당한 질문입니다. 얼마 전까진, Sass가 애초에 Ruby로 만들어졌고 Ruby on Rails와 함께 잘 작동했기 때문에 Ruby 기반의 프로젝트에 Sass를 추천하곤 했습니다. 이제 LibSass가 오리지널 Sass를 (거의) 따라잡았기 때문에, 이건 더이상 적절한 조언이 아닙니다.
 
@@ -88,8 +67,6 @@ Sass 외에도 여러 전처리기들이 있습니다. 가장 만만찮은 경�
 후처리기의 배경에 있는 아이디어는 일단 브라우저가 새로운 기능을 지원하게 되면 (예를 들면 CSS 변수), 후처리기가 더이상 그것을 컴파일하지 않고 그 역할을 브라우저가 대체하도록 하는 것입니다.
 
 내일의 문법을 오늘 제공한다는 것은 훌륭한 생각이긴 하나, 전 그래도 대부분의 작업에 Sass를 사용하는 것을 선호합니다. 그러나, 후처리기가 Sass보다 더 적합하다고 믿는 일부의 경우가 있습니다. 예를 들면 CSS 프리픽스 같은 경우입니다. 그러나 이 부분은 나중에 다시 이야기하도록 하겠습니다.
-
-
 
 ### 참고
 

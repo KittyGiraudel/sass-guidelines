@@ -5,11 +5,6 @@ Ponieważ Sass daje możliwość korzystania z kompleksowych struktur danych, ta
 
 Obecność pętli zakłada zazwyczaj stosunkowo skomplikowane rozwiązania, które w arkuszach Sassa znaleźć się raczej nie powinny. Zanim użyjesz pętli zastanów się, czy aby na pewno rozwiąże ona jakiś problem.
 
-
-
-
-
-
 ## Each
 
 Pętla `@each` jest zdecydowanie najczęściej używaną z trzech form pętli dostarczanych przez Sassa. Zapewnia ona czyste API do iteracji wewnątrz listy czy mapy.
@@ -59,11 +54,6 @@ Upewnij się także, by respektować poniższe zasady dla lepszej czytelności k
 * Zostawiaj pustą linię przed `@each`,
 * Zostawiaj pustą linię po nawiasie zamykającym (`}`), chyba że następna linia zawiera taki właśnie nawias.
 
-
-
-
-
-
 ## For
 
 Pętle `@for` mogą wydawać się użyteczne w połączeniu z pseudo-klasą `:nth-*` w CSSie. Z wyjątkiem tych sytuacji, zaleca się byś preferował pętle `@each` jeśli naprawdę *musisz* iterować wewnątrz czegoś.
@@ -93,11 +83,6 @@ Pamiętaj także o następujących zasadach:
 
 * Zawsze umieszczaj nową linię przed `@each`,
 * Zostawiaj pustą linię po nawiasie zamykającym (`}`), chyba że następna linia zawiera taki właśnie nawias.
-
-
-
-
-
 
 ## While
 

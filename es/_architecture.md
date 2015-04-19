@@ -15,8 +15,6 @@ Yo mismo, utilizo un método que resulta ser bastante similar a [SMACSS](https:/
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta para que encuentres un sistema que se adapte a tus necesidades.</p>
 </div>
 
-
-
 ### Más información
 
 * [Arquitectura para un proyecto Sass -En inglés](http://www.sitepoint.com/architecture-sass-project/)
@@ -25,11 +23,6 @@ Yo mismo, utilizo un método que resulta ser bastante similar a [SMACSS](https:/
 * [Una introducción a OOCSS -En inglés](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Diseño Web Atómico -En inglés](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, una arquitectura compuesta -En francés](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-
-
-
-
-
 
 ## Componentes
 
@@ -44,11 +37,6 @@ Los componentes pueden ser cualquier cosa, siempre y cuando:
 Por ejemplo, un formulario de búsqueda debería ser tratado como un componente. Debería ser reutilizable, en diferentes lugares, en diferentes páginas y en varias situaciones. No debe depender de su posición en el DOM (pie de página, barra lateral, contenido principal...).
 
 La mayor parte de cualquier interfaz puede concebirse en forma de pequeños componentes y recomiendo encarecidamente que lo hagas. Esto no solo reducirá la cantidad de CSS necesario para todo el proyecto, sino que también se convierte en un código mucho más fácil de mantener que un desorden caótico donde todo está hecho un lío.
-
-
-
-
-
 
 ## El Patron 7-1
 
@@ -131,8 +119,6 @@ sass/
   <p>Los archivos siguen las mismas convenciones de nomenclatura descritas anteriormente: están delimitadas por guiones.</p>
 </div>
 
-
-
 ### Carpeta Base
 
 La carpeta `base/` contiene lo que podríamos llamar el código estándar para el proyecto. Allí, puedes encontrar el archivo *reset* para reiniciar los estilos CSS, algunas reglas tipográficas y probablemente una hoja de estilo (a la que suelo llamar `_base.scss`) y que define algunos estilos estándar para los elementos HTML que son utilizados habitualmente.
@@ -140,8 +126,6 @@ La carpeta `base/` contiene lo que podríamos llamar el código estándar para e
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
 
 ### Carpeta Layout
 
@@ -158,8 +142,6 @@ La carpeta `layout/` contiene todo lo que tiene que ver con la disposición del 
   <p>La carpeta <code>layout/</code> también se puede llamar <code>partials/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Componentes
 
 Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `layout/` tiene una visión *macro* (definiendo la estructura global), `componentes/` está mucho más centrado en los *widgets*. Contiene todo tipo de módulos específicos como un *slider*, un *loader*, un *widget*, y básicamente todo lo que esté en esa misma línea. Por lo general hay un montón de archivos en `components/` ya que todo el sitio o la aplicación debería estar compuesto en su mayoría, de pequeños módulos.
@@ -172,8 +154,6 @@ Para componentes más pequeños, existe la carpeta `componentes/`. Mientras `lay
   <p>La carpeta <code>components/</code> también se puede llamar <code>modules/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Páginas
 
 Si tienes estilos específicos para cada página, es mejor ponerlos en una carpeta `paginas/`, dentro de un archivo que lleva el nombre de la página en sí. Por ejemplo, es muy común tener muchos estílos específicos para la página principal, por lo que hay la necesidad de tener un archivo `_home.scss` en la carpeta `paginas/`.
@@ -185,8 +165,6 @@ Si tienes estilos específicos para cada página, es mejor ponerlos en una carpe
   <p>Dependiendo de tu proceso de implementación, estos archivos podrían llamarse de manera independiente para evitar que sean fusionados con otros en la hoja de estilos resultante. Todo depende de ti.</p>
 </div>
 
-
-
 ### Carpeta Temas
 
 En grandes proyectos para grandes sitios o aplicaciones, es muy usual tener diferentes temas. Es cierto que hay diferentes maneras de tratar con los temas, pero personalmente, me gusta tenerlos todos en una carpeta `temas/`.
@@ -197,8 +175,6 @@ En grandes proyectos para grandes sitios o aplicaciones, es muy usual tener dife
 <div class="note">
   <p>Los temas son muy específicos para cada proyecto y es probable que no exista en muchos proyectos.</p>
 </div>
-
-
 
 ### Carpeta Utilidades
 
@@ -215,8 +191,6 @@ La regla de oro para esta carpeta es que no debe generar una sola línea de CSS 
   <p>La carpeta <code>utilidades/</code> también se puede llamar <code>helpers/</code>, <code>sass-helpers/</code> o <code>sass-utils/</code>, depende de lo que tu prefieras.</p>
 </div>
 
-
-
 ### Carpeta Proveedores
 
 Y por último, pero no menos importante, la mayoría de los proyectos tienen una carpeta `proveedores/` que contiene todos los archivos CSS procedentes de librerías externas y *frameworks* – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, etc. Poner estos archivos en una misma carpeta, es una buena forma de decir "¡Hey! esto no lo he escrito yo, no es mi código y no es mi responsabilidad".
@@ -229,8 +203,6 @@ Y por último, pero no menos importante, la mayoría de los proyectos tienen una
 Si tienes que reemplazar una sección de algún proveedor (*vendor*), te recomiendo que tengas una octava carpeta llamada `vendors-extensions/` en la que puedes poner los archivos que se sobreescribirán nombrados exactamente de la misma manera en la que lo hacen los fabricantes.
 
 Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar en el CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
-
-
 
 ### Archivo Principal
 
@@ -415,11 +387,6 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
   <p>Una vez dicho esto, no lo recomendaría porque importa los archivos siguiendo el orden alfabético que por lo general, no suele ser lo que tu querrías, especialmente cuando se trata de un lenguaje que depende del orden en el que está el código fuente.</p>
 </div>
 
-
-
-
-
-
 ## El Archivo De La Verguenza
 
 Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
@@ -453,8 +420,6 @@ Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizard
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Más información
 

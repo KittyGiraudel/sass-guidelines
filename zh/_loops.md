@@ -5,11 +5,6 @@
 
 然而，循环的出现意味着存在本不可能出现在Sass中的复杂逻辑。在使用循环之前，务必确定这么做是有道理的，并且确认这么做可以解决问题。
 
-
-
-
-
-
 ## Each
 
 `@each`循环绝对是Sass提供的三个循环方式中最常用的。它提供了一个简洁的API来迭代列表或map。
@@ -64,8 +59,6 @@ Also be sure to respect those guidelines to preserve readability:
 * `each`前添加空行；
 * 除非下一行是右闭大括号（`}`），否则在所有右闭大括号（`}`）后面添加新行。
 
-
-
 ## For
 
 当需要聚合伪类`:nth-*`的时候，使用`@for`循环很有用。除了这些使用场景，如果*必须*迭代最好还是使用`@each`循环。
@@ -95,11 +88,6 @@ Also be sure to respect those guidelines to preserve readability:
 
 * `each`前添加空行；
 * 除非下一行是右闭大括号（`}`），否则在所有右闭大括号（`}`）后面添加新行。
-
-
-
-
-
 
 ## While
 

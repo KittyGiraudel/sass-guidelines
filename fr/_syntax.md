@@ -44,11 +44,6 @@ Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines]
 
 Nous n’aborderons pas la question de l’organisation des fichiers dans cette section. C’est l’objet d’une [autre section](#architecture).
 
-
-
-
-
-
 ## Chaînes de caractères
 
 Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
@@ -82,7 +77,6 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 * la plupart des colorations syntaxiques fonctionnent mieux avec les guillemets&nbsp;;
 * la lisibilité est améliorée&nbsp;;
 * il n’y a pas de raison valable de ne pas utiliser de guillemets.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -196,23 +190,14 @@ Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-d
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## Nombres
 
 Dans Sass, un nombre est une donnée qui peut avoir une unité ou pas et qui décrit une longueur, une durée, une fréquence, un angle, etc. Cela permet d’effectuer des calculs sur les mesures.
-
-
 
 ### Zéros
 
@@ -248,8 +233,6 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Unités
 
@@ -338,7 +321,6 @@ En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous
 
 Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois son unité*.
 
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -365,8 +347,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 </div>
 
 Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le résultat est une chaîne de caractères, ce qui vous empêche d’effectuer toute opération sur la valeur. De même avec l’opération `slice` si vous découpez la partie numérique d’un nombre —&nbsp;ce qui n’est sans doute pas le résultat souhaité.
-
-
 
 ### Calculs
 
@@ -399,14 +379,11 @@ Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le
   </div>
 </div>
 
-
-
 ### Nombres magiques
 
 L’expression "nombre magique" est un [vieux terme de programmation](http://fr.wikipedia.org/wiki/Nombre_magique_(programmation)#Constantes_num.C3.A9riques_non-nomm.C3.A9es) qui désigne *une constante numérique non nommée*.  Quelque chose comme un nombre aléatoire *qui fonctionne* sans que l’on sache dire exactement pourquoi.
 
 Est-il utile de préciser que **les nombres magiques sont une plaie et doivent être évités à tout prix** ? Si vous ne pouvez pas expliquer logiquement la raison pour laquelle un nombre fonctionne, ajoutez un commentaire détaillant la façon dont vous êtes arrivé à ce nombre et pourquoi vous pensez qu’il est approprié. Il vaut mieux expliquer pourquoi vous ne comprenez pas comment quelque chose fonctionne que de laisser au développeur qui vous suivra le soin de comprendre les raisons de votre choix.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -432,8 +409,6 @@ Est-il utile de préciser que **les nombres magiques sont une plaie et doivent �
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -441,16 +416,9 @@ Est-il utile de préciser que **les nombres magiques sont une plaie et doivent �
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## Couleurs
 
 Les couleurs occupent une place importante dans le langage CSS. Naturellement, Sass devient un excellent allié lorsqu’il s’agit de manipuler les couleurs, essentiellement à l’aide de quelques [fonctions puissantes](http://sass-lang.com/documentation/Sass/Script/Functions.html).
-
-
 
 ### Formats de couleurs
 
@@ -462,7 +430,6 @@ Pour simplifier les couleurs autant que possible, mon conseil est de respecter l
 4. Notation hexadécimale. De préférence en minuscules et en version raccourcie lorsque c’est possible.
 
 Pour commencer, les mots-clés parlent souvent par eux-mêmes. La représentation HSL quant à elle est non seulement la plus simple à comprendre<sup>[citation requise]</sup>, mais également celle qui nous permet le plus aisément d’ajuster les couleurs en modifiant la teinte (hue), la saturation et la luminosité. RGB nous aide à repérer tout de suite si la couleur tient plus du bleu, du vert ou du rouge, mais il ne nous permet pas de construire facilement une couleur à partir des trois. Enfin, la notation hexadécimale est à peu près indéchiffrable pour un cerveau humain.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -492,7 +459,6 @@ Pour commencer, les mots-clés parlent souvent par eux-mêmes. La représentatio
 </div>
 
 Si vous utilisez la notation HSL ou RGB, ajoutez toujours un espace après la virgule, mais n’ajoutez pas d’espace entre les parenthèses et le contenu.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -524,8 +490,6 @@ Si vous utilisez la notation HSL ou RGB, ajoutez toujours un espace après la vi
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Couleurs et variables
 
@@ -561,8 +525,6 @@ $main-theme-color: $sass-pink
 
 De cette façon vous éviterez qu’une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`.
 
-
-
 ### Éclaircir et obscurcir les couleurs
 
 Les fonctions [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) et [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulent la luminosité d’une couleur dans l’espace HSL en augmentant ou en diminuant sa valeur. En fait, elles ne sont rien d’autre que des alias du paramètre `$lightness` de la fonction [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
@@ -570,7 +532,6 @@ Les fonctions [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functio
 Toutefois, il arrive souvent que ces fonctions ne produisent pas le résultat escompté. La fonction [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) est une autre façon d’éclaircir une couleur en la mélangeant à du blanc ou à du noir.
 
 L’avantage d’utiliser `mix` plutôt que les deux fonctions précédemment citées est qu’elle permet d’aller très progressivement vers le noir (ou vers le blanc) à mesure que l’on diminue la proportion de la couleur initiale, alors que `darken` et `lighten` font passer très rapidement la couleur au noir ou au blanc&nbsp;:
-
 
 <figure role="group">
   <img alt="Illustration de la différence entre lighten/darken et la fonction mix de Sass"
@@ -631,8 +592,6 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
   <p>La fonction <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> échelonne les propriétés de manière plus fluide en prenant en compte leur degré de luminosité actuelle. Elle donne des résultats aussi beaux que <code>mix</code> mais avec des conventions d’utilisation plus claires. Le facteur d’échelonnage n’est cependant pas le même.</p>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
@@ -640,11 +599,6 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
 * [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## Listes
 
@@ -731,17 +685,10 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## Maps
 
@@ -795,12 +742,9 @@ $breakpoints: (
   </div>
 </div>
 
-
-
 ### Déboguer une map Sass
 
 Si vous êtes perdu, ou si vous vous demandez quelles opérations magiques se déroulent dans une map Sass, pas d’inquiétude, il existe des moyens de s’y retrouver.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -876,8 +820,6 @@ Si vous voulez connaître la profondeur de la map, ajoutez également la fonctio
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -889,11 +831,6 @@ Si vous voulez connaître la profondeur de la map, ajoutez également la fonctio
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## Ensemble de règles CSS
 
@@ -907,8 +844,6 @@ Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrai
 * un espace après les deux-points (`:`)&nbsp;;
 * l’accolade fermante (`}`) sur sa propre ligne&nbsp;;
 * une nouvelle ligne après l’accolade fermante.
-
-
 
 Illustration:
 
@@ -1004,16 +939,9 @@ Illustration:
   </div>
 </div>
 
-
-
 ### Lecture complémentaire
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## Ordre des déclarations
 
@@ -1023,7 +951,6 @@ Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en c
 * classer les déclarations par type (position, display, color, font, autres...).
 
 Il y a du pour et du contre dans chacune. D’un côté, l’ordre alphabétique est universel (du moins pour les langues utilisant l’alphabet latin), donc il n’y a pas de dispute possible quant à la position d’un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l’une derrière l’autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L’ordre alphabétique crée de nombreuses bizarreries.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1060,7 +987,6 @@ Il y a du pour et du contre dans chacune. D’un côté, l’ordre alphabétique
 </div>
 
 D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme  [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?... ô ironie...).
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1145,8 +1071,6 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
   <p>Une <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
@@ -1155,11 +1079,6 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## Imbrication des sélecteurs
 
@@ -1391,14 +1310,8 @@ Nous pouvons réécrire notre exemple précédent ainsi&nbsp;:
 
 Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l’imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l’équipe soit d’accord avec cette façon de faire.
 
-
-
-
-
-
 ### Lectures complémentaires
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-

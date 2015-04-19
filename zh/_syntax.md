@@ -44,9 +44,6 @@
 
 在本部分中不会涉及有关文件组织的问题，相关讨论在[另一节](#architecture)中。
 
-
-
-
 ## 字符串
 
 CSS中不要求字符串必须用引号包裹，甚至是字符串中包含空格的。就拿`font-family`属性来说：无论你是否使用引号包裹，CSS解析器都可以正确解析。
@@ -120,23 +117,14 @@ URL最好也用引号包裹起来，原因和上面所描述一样：
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## 数字
 
 在Sass中，数字类型包括了长度、持续时间、频率、角度等等无单位数字类型。Sass允许在运行中计算这些度量值。
-
-
 
 ### 零值
 
@@ -172,8 +160,6 @@ URL最好也用引号包裹起来，原因和上面所描述一样：
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 单位
 
@@ -289,8 +275,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。
 
-
-
 ### 计算
 
 **最高级运算应该始终被包裹在括号中**。这么做不仅是为了提高可读性，也是为了防止一些Sass强制要求对括号内内容计算的极端情况。
@@ -322,14 +306,11 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-
-
 ### Magic numbers
 
 "幻数"，是<a href="http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants" >古老的学校编程</a>给*未命名数值常数*的命名。基本上，它们只是*能工作*™但没有任何逻辑思维的随机数。
 
 相信不用多说你也会理解，**幻数是一场瘟疫，应不惜一切代价以避免**。当你对数值的解析方式无法找到一个合理解释时，你可以对此提交一个内容宽泛的评论，包括你是怎样遇见这个问题以及你认为它应该怎样工作。承认自己不清楚一些机制的解析方式，远比让以后的开发者从零开始弄清它们更有帮助。
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -355,8 +336,6 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -364,16 +343,9 @@ $value: str-slice($length + unquote(''), 1, 2)
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## 颜色
 
 颜色在CSS中占有重要地位。当涉及到操纵色彩时，Sass通过提供少数的[函数功能](http://sass-lang.com/documentation/Sass/Script/Functions.html)，最终成为了极具价值的助手。
-
-
 
 ### 颜色格式
 
@@ -446,8 +418,6 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-
-
 ### 颜色和变量
 
 当一个颜色被多次调用时，最好用一个有意义的变量名来保存它。
@@ -482,11 +452,7 @@ $main-theme-color: $sass-pink
 
 这样做可以防止一个主题变化而出现此类结果 `$sass-pink: blue`。
 
-
-
 ### 变亮和变暗颜色
-
-
 
 [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)和 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 函数都是通过增加或者减小HSL中颜色的亮度来实现调节的。基本上，它们就是[`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method)函数添加了 `$lightness`参数的别名。
 
@@ -553,8 +519,6 @@ $main-theme-color: $sass-pink
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method">函数的设计初衷是为了更流畅地调试属性——以实际的高低为调试基础。它如同<code>mix</code>一样好用，并且提供了更清晰地调用约定。比例因子并不完全相同。</p>
 </div>
 
-
-
 ### 扩展阅读
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
@@ -562,11 +526,6 @@ $main-theme-color: $sass-pink
 * [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## 列表
 
@@ -651,16 +610,9 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## Maps
 
@@ -713,8 +665,6 @@ $breakpoints: (
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 调试Sass map
 
@@ -794,8 +744,6 @@ $breakpoints: (
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -806,11 +754,6 @@ $breakpoints: (
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## CSS规则集
 
@@ -917,16 +860,9 @@ $breakpoints: (
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## 声明顺序
 
@@ -1056,8 +992,6 @@ $breakpoints: (
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对CSS进行排序，按类型顺序声明，Gzip压缩文件大小平均达到2.7%,而按字母顺序排序压缩的文件大小平均达到1.3%。</p>
 </div>
 
-
-
 ### 扩展阅读
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
@@ -1066,11 +1000,6 @@ $breakpoints: (
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## 选择器嵌套
 
@@ -1166,7 +1095,6 @@ Sass中一个正在被众多开发者滥用的功能，就是**选择器嵌套**
 ### 例外
 
 首先，在最外层选择器中嵌套伪类和伪元素是被允许，也是受推荐的。
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1303,15 +1231,8 @@ Sass中一个正在被众多开发者滥用的功能，就是**选择器嵌套**
 
 这所有的一切，有些是无关紧要的细节，关键是要保持一致性。如果你觉得完全有信心搞定选择器嵌套，然后你就使用了选择器嵌套。可你还要确保你的整个团队也能搞定选择器的嵌套。
 
-
-
-
-
 ### 扩展阅读
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-
-
-

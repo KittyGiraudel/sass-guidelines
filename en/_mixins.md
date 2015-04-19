@@ -7,11 +7,6 @@ They can contain full CSS rules and pretty much everything that is allowed anywh
 
 But I feel I must warn you against abusing the power of mixins. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive amounts of logic. It’s called over-engineering and most developers suffer from it. Don’t over think your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revised.
 
-
-
-
-
-
 ## Basics
 
 That being said, mixins are extremely useful and you should be using some. The rule of thumb is that if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
@@ -73,18 +68,11 @@ Another valid example would be a mixin to size an element, defining both `width`
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
-
-
-
-
-
 
 ## Arguments list
 
@@ -162,16 +150,9 @@ $params: ('c': 'kittens', 'a': true, 'b': 42,)
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## Mixins and vendor prefixes
 
@@ -259,8 +240,6 @@ Then using this mixin should be very straightforward:
 </div>
 
 Please keep in mind this is a poor solution. For instance, it cannot deal with complex polyfills such as those required for Flexbox. In that sense, using Autoprefixer would be a far better option.
-
-
 
 ### Further reading
 

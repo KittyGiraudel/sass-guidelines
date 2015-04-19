@@ -7,11 +7,6 @@ Pueden contener reglas CSS completas y casi todo lo que se permite en cualquier 
 
 Pero creo que debo advertirte contra el abuso del poder los *mixins*. De nuevo, la clave aquí es la *simplicidad*. Puede ser tentador contruir *mixins* extremadamente poderosos y con grandes cantidades de lógica. Se llama exceso de ingeniería y la mayoría de los desarrolladores la padecen. No pienses demasiado tu código y sobre todo busca que sea sencillo. Si un *mixin* ocupa mas o menos unas 20 líneas, debes dividirlo en partes más pequeñas o revisarlo completamente.
 
-
-
-
-
-
 ## Fundamentos
 
 Dicho esto, los *mixins* son extremadamente útiles y deberías estar usando algunos. La regla de oro es que si detectas un grupo de propiedades CSS que están siempre juntas por alguna razón (es decir, no es una coincidencia), puedes crear un *mixin* en su lugar. Por ejemplo, el [hack micro-clearfix de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) merece ser puesto en un *mixin* (sin argumentos).
@@ -73,18 +68,11 @@ Otro ejemplo válido sería un *mixin* para para darle tamaño a un elemento, de
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Mixins Sass para dar un impulso a tu proyecto -En inglés](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [Un mixin de Sass para triángulos CSS -En inglés](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Contruyendo un mixin para un degradado gradial -En inglés](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
-
-
-
-
-
 
 ## Lista De Argumentos
 
@@ -162,16 +150,9 @@ $params: ('c': 'kittens', 'a': true, 'b': 42,)
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Múltiples argumentos en Sass, Listas o Arglis -En inglés](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## Mixins Y Prefijos De Proveedores
 
@@ -259,8 +240,6 @@ Entonces usar este *mixin* debería ser muy sencillo:
 </div>
 
 Por favor, ten en cuenta que es una mala solución. No puede trabajar con *polyfills* complejos como por ejemplo, los necesarios para Flexbox. En ese sentido, utilizar Autoprefixer sería una solución mucho mejor.
-
-
 
 ### Más información
 

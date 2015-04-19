@@ -24,7 +24,6 @@ Il y a bien sûr des scénarios dans lesquels l’extension de sélecteurs peut 
 
 Si vous utilisez `@extend`, rappelez-vous également qu’il ne fonctionne pas bien avec les blocs `@media`. Comme vous le savez, Sass ne sait pas étendre un sélecteur extérieur depuis l’intérieur d’une media query. Si vous le faites, le compilateur plante et vous annonce qu’il ne peut pas le faire. Pas terrible, d’autant que les media queries sont monnaie courante aujourd’hui.
 
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -62,8 +61,6 @@ Si vous utilisez `@extend`, rappelez-vous également qu’il ne fonctionne pas b
 </div>
 
 Pour résumer, je conseille de **ne pas utiliser la directive `@extend`**, sauf dans des circonstances particulières, mais je n’irai pas jusqu’à l’interdire.
-
-
 
 ### Lectures complémentaires
 

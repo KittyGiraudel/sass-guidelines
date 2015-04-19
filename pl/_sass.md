@@ -18,11 +18,6 @@ Tym samym, istnieje wiele sposobów na korzystanie z tych dodatkowych rozwiąza�
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-
-
-
-
-
 ## Ruby Sass czy LibSass
 
 [Pierwszy commit Sassa](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) pochodzi z końca 2006 roku, a więc było to ponad 8 lat temu. Nie trzeba więc dodawać, że Sass przebył dość długą drogę. Choć początkowo rozwijany w Ruby, od tego czasu pojawił się szereg różnych portów. Ten najbardziej kompletny, [LibSass](https://github.com/sass/libsass) (napisany w C), jest bliski do pełnej kompatybilności z oryginalną wersją, napisaną w Ruby.
@@ -33,18 +28,11 @@ Wracając do doboru kompilatora. Tak naprawdę, to wszystko zależy od Twojego p
 
 W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z określonym porządkiem pracy, LibSass będzie prawdopodobnie lepszym rozwiązaniem. Jest on bowiem stworzony pod kątem wykorzystania go przez różne wrappery. Jeśli chcesz go użyć, powiedzmy z NodeJS, [node-sass](https://github.com/sass/node-sass) będzie dla Ciebie idealny.
 
-
-
 ### Dalsze informacje
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass czy SCSS
 
@@ -58,16 +46,9 @@ Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast
 
 Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem.
 
-
-
 ### Dalsze informacje
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Inne preprocesory
 
@@ -86,8 +67,6 @@ Możesz myśleć o postprocesorach jako polyfillach dla niewspieranych funkcjona
 Postprocesorom przyświeca idea dostarczania nowych, projektowanych dopiero funkcjonalności CSSa (takich jak zmienne) tym przeglądarkom, które tego obecnie nie wspierają. Gdy zaś rozwiązania te zaczną być powszechnie obsługiwane, postprocesor przestanie działać na rzecz przeglądarki.
 
 Podczas gdy umożliwianie korzystania z przyszłej składni jest czymś, co zasługuje na pochwałę, nadal preferuję korzystać z Sassa. Są jednak rzeczy, do których postprocesor zdaje się być bardziej odpowiednim narzędziem niż Sass - prefixowanie CSSa dla przykładu - jednak do tego jeszcze tutaj wrócimy.
-
-
 
 ### Dalsze informacje
 

@@ -3,10 +3,6 @@
 
 No creo que sea necesario tener que explicar lo que es el Responsive Web Design ahora que está en todas partes. Sin embargo es posible que te preguntes *¿por qué una sección sobre RWD en una guía de estilo Sass?* En realidad hay pocas cosas que se puedan hacer para facilitar el trabajo con los puntos de ruptura, así que he pensado que no estaría mal hacer una lista con ellos.
 
-
-
-
-
 ## Nombrando Los Puntos De Ruptura
 
 Creo que puedo decir con seguridad que las *medias queries* no deberían estar vinculadas a dispositivos específicos. Por ejemplo, es una mala idea intentar trabajar con tamaños para iPads o teléfonos Blackberry específicamente. Las *medias queries* deberían trabajar con una amplia gama de tamaños de pantalla, justo hasta que el diseño se rompa y la siguiente *media query* haga su función.
@@ -65,17 +61,9 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>Los ejemplos anteriores utilizan mapas anidados para definir los puntos de ruptura, sin embargo, esto realmente depende de qué tipo de gestor de *breakpoints* utilices. Puedes optar por cadenas en lugar de mapas para una mayor flexibilidad (por ejemplo <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-
-
-
 ### Más información
 
 * [Nomenclaturas para Media Queries -En inglés](http://css-tricks.com/naming-media-queries/)
-
-
-
-
-
 
 ## Gestor De Puntos De Ruptura
 
@@ -130,17 +118,10 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
   <p>Obviamente, este es un gestor de puntos de ruptura bastante simplista. Si necesitas un gestor de puntos de interrupción ligeramente más permisivo, te recomiendo que no reinventes la rueda y utilices algo que ya esté probado y comprobado, como por ejemplo<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-
-
 ### Más información
 
 * [Gestionando Responsive Breakpoints en Sass -En inglés](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Enfoques para media queries en Sass -En inglés](http://css-tricks.com/approaches-media-queries-sass/)
-
-
-
-
-
 
 ## Uso de Media Queries
 
@@ -191,8 +172,6 @@ Es posible que escuches que este acuerdo dará como resultado en CSS, bloques du
 > &mdash; [Sam Richards](https://twitter.com/snugug), respecto a los [Puntos de ruptura (Breakpoint)](http://breakpoint-sass.com/)
 
 Ahora, si realmente te preocupa las *media queries* duplicadas, puedes usar una herramienta para fusionarlas como por ejemplo [esta joya](https://github.com/aaronjensen/sass-media_query_combiner) sin embargo, siento que debo advertirte de los posibles efectos secundarios ocasionados al mover el código de lugar. Sabes que el orden del código es importante.
-
-
 
 ### Más información
 

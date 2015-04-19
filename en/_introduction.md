@@ -1,10 +1,6 @@
 
 # Introduction
 
-
-
-
-
 ## Why a styleguide
 
 A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
@@ -24,11 +20,6 @@ Needless to say, the more developers involved on a project, the more code guidel
   </ul>
 </blockquote>
 
-
-
-
-
-
 ## Disclaimer
 
 First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
@@ -36,11 +27,6 @@ First things first: **this is not a CSS styleguide**. This document will not dis
 Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
 
 Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
-
-
-
-
-
 
 ## Key principles
 
@@ -53,8 +39,6 @@ Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should n
 Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
 
 Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
-
-
 
 ### Further reading
 
