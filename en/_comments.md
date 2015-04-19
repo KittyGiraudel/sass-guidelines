@@ -14,11 +14,6 @@ As simple as CSS can get, there is still a lot of room for comments. These could
 
 And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
 
-
-
-
-
-
 ## Writing comments
 
 Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
@@ -76,16 +71,9 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-
-
 ### Further reading
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## Documentation
 
@@ -200,8 +188,6 @@ Here is an example of a mixin extensively documented with SassDoc:
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Further reading
 

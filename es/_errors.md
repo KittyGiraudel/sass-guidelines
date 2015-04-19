@@ -11,18 +11,11 @@ Dejemos `@debug` al lado, ya que claramente está pensado para depurar SassScrip
 
 Ahora, hay un montón de sitio en un proyecto Sass para las advertencias y los errores. Básicamente, cualquier mixin o función que espera un tipo o un argumento específico podría lanzar un error si algo saliese mal o mostrar una advertencia cuando se hace una suposición.
 
-
-
 ### Más información
 
 * [Introdución al manejo de errores -En inglés](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Construcciones de un Logger Mixin -En inglés](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger -En inglés](https://github.com/HugoGiraudel/SassyLogger)
-
-
-
-
-
 
 ## Advertencias
 
@@ -59,11 +52,6 @@ Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq)
 
 Si el valor no tiene unidades, la función asume que el valor estará expresado en píxeles. En este punto, hacer este tipo de hipótesis puede ser arriesgado, por lo que el usuario debe recibir una advertencia de que el software ha hecho algo que podría considerarse inesperado.
 
-
-
-
-
-
 ## Errores
 
 Los errores, a diferencia de las advertencias, impiden al compilador ir más allá. Básicamente, paran la compilación y muestran un mensaje en la consola de salida, así como el rastro de seguimiento del error, lo que suele ser muy útil para la depuración. Debido a esto, los errores aparecerán cuando no hay manera de que el programa continúe funcionando. Cuando sea posible, trata de evitar el problema y mostrar una advertencia en su lugar.
@@ -85,7 +73,7 @@ $z-indexes: (
   'below': -1,
 );
 
-/// Obtener el valor z-index de una capa 
+/// Obtener el valor z-index de una capa
 /// @access public
 /// @param {String} $layer - nombre de la capa
 /// @return {Number}
@@ -109,7 +97,7 @@ $z-indexes: (
 /// @prop {Number} value - valor Z asignado a la clave
 $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
-/// Obtener el valor z-index de una capa 
+/// Obtener el valor z-index de una capa
 /// @access public
 /// @param {String} $layer - Nombre de la capa
 /// @return {Number}

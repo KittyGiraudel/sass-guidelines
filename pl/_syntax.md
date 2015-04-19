@@ -44,11 +44,6 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
 
 W tej sekcji nie zajmiemy się jeszcze zagadnieniem organizacji plików. Poruszone to zostanie w [dalszym miejscu](#architektura).
 
-
-
-
-
-
 ## Ciągi znaków
 
 CSS nie wymaga by łańcuchy (ciągi) znaków były umieszczane między cudzysłowami, nawet te zawierające spacje. Weźmy nazwy font-family dla przykładu: dla parsera CSS nie ma znaczenia, czy otoczymy je cudzysłowami, czy też nie.
@@ -122,23 +117,14 @@ Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## Liczby
 
 W Sassie, liczby są typem danych w którego skład wchodzą zarówno liczby niemianowane (bez jednostek), określenia dla długości, frekwencji, kątów i tak dalej. Pozwala to na przeprowadzanie na tych wartościach obliczeń.
-
-
 
 ### Zera
 
@@ -174,8 +160,6 @@ Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość 
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Jednostki
 
@@ -264,7 +248,6 @@ Ostatecznie zależy to w dużej mierze od tego, co starasz się osiągnąć. Mie
 
 By usunąć jednostkę z określonej wartości, podziel ją przez *jedną jednostkę jej typu*.
 
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -291,8 +274,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 </div>
 
 Dodając jednostkę jako ciąg do liczby uzyskasz ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież tego nie chcesz.
-
-
 
 ### Obliczenia
 
@@ -326,8 +307,6 @@ Ten wymóg nie tylko drastycznie poprawia czytelność kodu, zapobiega on także
   </div>
 </div>
 
-
-
 ### Liczby magiczne
 
 Liczby magiczne są elementem [programowania starego typu](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
@@ -360,8 +339,6 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -369,16 +346,9 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## Barwy
 
 Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się już do tego przyzwyczaić, Sass jest cennym pomocnikiem także w kwestii manipulacji barwami, głównie za zasługą jego [funkcji](http://sass-lang.com/documentation/Sass/Script/Functions.html).
-
-
 
 ### Formaty barw
 
@@ -390,7 +360,6 @@ Aby uczynić zagadnienie dotyczące barw najprostszym jak się tylko da, zaleca�
 4. Określenia szestnastkowe. Najlepiej małymi literami i skrócone, gdy jest to możliwe.
 
 Zaczynając od początku, słowa kluczowe najczęściej mówią same za siebie. Format HSL jest nie tylko najłatwiejszym do pojęcia dla ludziego mózgu<sup>[potrzebne źródło]</sup>, ale także czyni prostym dla osób tworzących arkusze stylów modyfikowanie barw poprzez regulowanie osobno odcienia, nasycenia i jasności. RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób możemy określić, czy dany kolor ma barwę bardziej zbliżoną do niebieskiego, zielonego czy czerwonego, jednak nie czyni on prostym faktyczne budowanie barwy z tych trzech części. Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -452,8 +421,6 @@ Używając systemu HSL czy RGB, zawsze dodawaj pojedynczą spację po przecinku 
   </div>
 </div>
 
-
-
 ### Barwy i zmienne
 
 Jeżeli używasz danej barwy więcej niż jeden raz, umieść ją w zmiennej o nazwie, która w sposób konkretny reprezentuje dany kolor.
@@ -488,12 +455,7 @@ $main-theme-color: $sass-pink
 
 Robiąc to w ten sposób zapobiegasz sytuacji, w której zmiana motywu doprowadzi do czegoś jak `$sass-pink: blue`.
 
-
-
-
 ### Rozjaśnianie i przyciemnianie barw
-
-
 
 Funkcje służące zarówno [`rozjaśnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie od tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
@@ -510,8 +472,6 @@ Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnia
              /assets/images/lighten-darken-mix_huge.png  1590w" />
   <figcaption>Ilustracja pokazująca różnicę pomiędzy funkcjami <code>lighten</code>/<code>darken</code> i <code>mix</code>, stworzona przez <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
 </figure>
-
-
 
 Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stworzyć dwie, proste w użyciu, funkcje `tint` i `shade` (będące, co ciekawe, częścią [Compassa](http://compass-style.org/reference/compass/helpers/colors/#shade)), które dadzą ten sam efekt:
 
@@ -562,9 +522,6 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
   <p>Funkcja <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
 </div>
 
-
-
-
 ### Dalsze informacje
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
@@ -572,11 +529,6 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
 * [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## Listy
 
@@ -661,16 +613,9 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## Mapy
 
@@ -723,8 +668,6 @@ $breakpoints: (
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Debugowanie map Sassa
 
@@ -804,8 +747,6 @@ Jeśli jesteś zainteresowany głębokością danej mapy, dodaj również poniż
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -816,11 +757,6 @@ Jeśli jesteś zainteresowany głębokością danej mapy, dodaj również poniż
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## Reguły dotyczące CSSa
 
@@ -928,16 +864,9 @@ Przykład:
   </div>
 </div>
 
-
-
 ### Dalsze informacje
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## Sortowanie deklaracji
 
@@ -1067,9 +996,6 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
 </div>
 
-
-
-
 ### Dalsze informacje
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
@@ -1078,11 +1004,6 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## Zagnieżdżanie selektorów
 
@@ -1168,8 +1089,6 @@ Metoda ta jest często używana w połączeniu z [konwencją nazewnictwa BEM](ht
 <div class="note">
   <p>Podczas gdy może mieć to małe znaczenie, generowanie nowych selektorów w oparciu o odwołanie (<code>&</code>) do obecnego selektora sprawia, że wyszukiwanie w kodzie tych nowych selektorów staje się nie możliwe, gdyż one faktycznie (ich pełna nazwa) nie istnieją.</p>
 </div>
-
-
 
 Problem zagnieżdżania selektorów leży głównie w tym, iż zmniejszają one czytelność kodu. Trzeba bowiem za każdym razem w myślach określać nazwę selektora, uzależniając ją wszak od poziomu zagnieżdżenia. Nie zawsze jest tym samym do końca wiadomo, jaki będzie rezultat w postaci skompilowanego kodu CSS.
 
@@ -1315,11 +1234,6 @@ Pozwoli nam to zmodyfikować poprzedni przykład, który teraz będzie wygląda�
 </div>
 
 Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz się pewien zagnieżdżania selektorów, korzystaj z tego. Pamiętaj jednak by cały zespół, z którym pracujesz, się temu nie sprzeciwiał.
-
-
-
-
-
 
 ### Dalsze informacje
 

@@ -16,8 +16,6 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
   <p>저는 설계가 대부분의 경우 프로젝트에 한정되어 있다는 사실을 배웠습니다. 여러분의 필요에 맞는 시스템을 사용할 수 있도록 제시된 해법을 마음대로 폐기하거나 조정하세요.</p>
 </div>
 
-
-
 ### 참고
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
@@ -26,11 +24,6 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-
-
-
-
-
 
 ## 컴퍼넌트
 
@@ -45,11 +38,6 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 예를 들면, 검색 폼은 컴퍼넌트로 취급되어야 합니다. 그것은 다른 위치, 다른 페이지에서, 다양한 상황에서 재사용이 가능해야 합니다. DOM에서의 위치(footer, sidebar, main content...)에 의존해서는 안 됩니다.
 
 대부분의 인터페이스는 작은 컴퍼넌트들로 생각될 수 있으며 이러한 인식을 고수할 것을 강력히 추천합니다. 이는 전체 프로젝트에 필요한 CSS의 양을 줄일 뿐만 아니라 모든 것이 혼란스러운 난장판보다 유지를 더 쉽게 만들기도 합니다.
-
-
-
-
-
 
 ## 7-1 패턴
 
@@ -132,8 +120,6 @@ sass/
   <p>파일은 위에서 설명한 작명 관례를 따라 하이픈으로 구분됩니다.</p>
 </div>
 
-
-
 ### Base 폴더
 
 `base/` 폴더는 프로젝트의 보일러플레이트 코드라고 부를 만한 것을 담습니다. 거기에선, 리셋 파일, 타이포그래피 규칙, 그리고 아마도 자주 사용되는 HTML 요소에 대한 표준 스타일을 정의하는 스타일시트(전 `_base.scss`라고 부릅니다)를 찾을 수 있을 것입니다.
@@ -141,8 +127,6 @@ sass/
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
 
 ### Layout 폴더
 
@@ -159,8 +143,6 @@ sass/
   <p><code>layout/</code> 폴더는 <code>partials/</code>라고 불릴 수도 있습니다. 이는 여러분이 선호하는 바에 달렸습니다.</p>
 </div>
 
-
-
 ### Components 폴더
 
 `components/` 폴더에는 더 작은 컴퍼넌트들이 들어갑니다. `layout/`이 (전반적인 뼈대를 정의하는) 거시적인 폴더임에 반해, `components/`는 위젯에 초점을 둡니다. 이 폴더는 슬라이더, 로더, 위젯, 그리고 기본적으로 이들과 비슷한 것을 비롯해 온갖 구체적인 모듈들을 담습니다. 전체 사이트/어플리케이션이 주로 작은 모듈들로 구성되어야 하므로 `components`에는 대개 많은 파일들이 있습니다.
@@ -173,8 +155,6 @@ sass/
   <p><code>components/</code> 폴더는 선호에 따라 <code>modules/</code>라고 불릴 수도 있습니다.</p>
 </div>
 
-
-
 ### Pages 폴더
 
 만약 페이지에 한정된 스타일이 있다면, 그것은 `pages/` 폴더 속, 페이지 이름을 딴 파일에 넣는 것이 좋습니다. 예를 들면, 홈페이지에만 한정된 스타일이 있어 `pages/` 폴더 속 `_home.scss` 파일이 필요해지는 것은 드문 일이 아닙니다.
@@ -186,8 +166,6 @@ sass/
   <p>이 파일들은 배포 과정에 따라, 산출되는 스타일시트에서 다른 파일과 병합되는 것을 피하기 위해 별도로 호출될 수 있습니다. 이것은 여러분이 결정할 문제입니다.</p>
 </div>
 
-
-
 ### Themes 폴더
 
 큰 사이트와 어플리케이션에서 여러 다른 테마들을 갖는 것은 흔히 있는 일입니다. 물론 테마를 다루는 다른 방법들도 있지만, 개인적으로는 `themes/` 폴더에 전부 모아두는 것을 좋아합니다.
@@ -198,8 +176,6 @@ sass/
 <div class="note">
   <p>이것은 프로젝트에 달려있는 것으로 많은 프로젝트에서는 존재할지 않을 가능성이 큽니다.</p>
 </div>
-
-
 
 ### Utils 폴더
 
@@ -216,8 +192,6 @@ sass/
   <p><code>utils/</code> 폴더는 선호에 따라 <code>helpers/</code>, <code>sass-helpers/</code> 혹은 <code>sass-utils/</code>로 불릴 수도 있습니다.</p>
 </div>
 
-
-
 ### Vendors 폴더
 
 그리고 마지막으로 잊지 말아야 할 것으로, 대부분의 프로젝트는 Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered 등의 외부 라이브러리와 프레임워크에서 나오는 모든 CSS 파일을 담고 있는 `vendors/` 폴더를 가집니다. 이들을 같은 폴더에다 치워두는 것은 “저기요, 이건 내가 한 게 아닙니다. 내 코드가 아니고, 나는 책임이 없습니다”라고 말하는 좋은 방법입니다.
@@ -230,8 +204,6 @@ sass/
 만약 어느 벤더의 한 부분을 덮어써야 한다면, 덮어쓰는 벤더의 이름을 그대로 딴 파일들을 담는 여덟 번째 폴더를 만드는 것을 추천합니다.
 
 예를 들면, `vendors-extensions/_boostrap.scss`는 Bootstrap의 기본 CSS 일부를 재선언하는 모든 CSS 규칙을 담고 있는 파일입니다. 이는 벤더 파일 자체를 편집하는 것을 피하기 위함입니다. 그건 대개 좋은 생각이 아니니까요.
-
-
 
 ### Main 파일
 
@@ -416,11 +388,6 @@ sass/
   <p>그렇지만 이것은 대개 원치 않는 방식인 알파벳순에 따라 파일을 불러들이기 때문에 전 추천하지 않습니다. 특히 소스의 순서에 의존하는 언어를 다룰 때는 더욱 그렇습니다.</p>
 </div>
 
-
-
-
-
-
 ## Shame 파일
 
 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com), [Chris Coyier](http://css-tricks.com)에 의해 알려진 흥미로운 개념이 있습니다. 이는 모든 CSS  선언과 핵, 그리고 우리가 자랑스럽게 여기지 않는 것들을 *수치 파일*에 넣는 것으로 이루어집니다. 이 파일은, 극적이게도 `_shame.scss`라고 불리며, 스타일시트의 맨 끝에서, 다른 모든 파일들 다음으로 불러들여질 것입니다.
@@ -454,8 +421,6 @@ sass/
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 참고
 

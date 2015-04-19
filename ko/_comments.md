@@ -14,11 +14,6 @@ CSS는 간단해질 수도 있지만, 그래도 주석의 여지가 많이 있�
 
 그리고 다른 많은 이유들은 잊어버린 것 같습니다. 코드와 함께 바로 이어서 주석을 다는 데는 아주 적은 시간이 소요됩니다. 나중에 코드의 한 부분으로 돌아와서 주석을 다는 것은 완전히 비현실적일 뿐더러 극도로 짜증나는 일입니다.
 
-
-
-
-
-
 ## 주석 쓰기
 
 이상적으로, *어느 것이든* CSS 규칙은 CSS 블록의 요점을 설명하는 C 스타일 주석을 앞세워야 합니다. 이 주석은 규칙의 특정 부분에 대해 번호를 붙인 설명도 제공합니다. 예를 들면:
@@ -76,16 +71,9 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-
-
 ### 참고
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## 문서화
 
@@ -200,8 +188,6 @@ SassDoc으로 문서화된 믹신의 예시입니다:
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 참고
 

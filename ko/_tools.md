@@ -5,11 +5,6 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 하지만 제가 드리는 조언은 의존성의 수를 최소한으로 줄이라는 것입니다. 의존성을 관리하는 것은 여러분이 피해야 할 일종의 지옥입니다. 게다가, Sass의 경우 외부 의존성이 거의 혹은 전혀 필요하지 않습니다.
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/)는 주요 Sass 프레임워크입니다. Sass 의 핵심 디자이너 둘 중 한 명인 [Chris Eppstein](https://twitter.com/chriseppstein)에 의해 개발되었죠. 제 생각으로는 한동안은 그 인기가 크게 떨어질 것 같진 않습니다.
@@ -26,18 +21,11 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
   <p>Ruby Sass는 현재 많은 펑션과 믹신을 가진 복잡한 로직의 스타일을 구체적으로 겨냥한 중요한 최적화 작업 중에 있습니다. 이는 Compass와 다른 프레임워크가 더이상 Sass의 속도를 늦추지 않을 수 있을 정도로 성능을 극적으로 향상시킬 것입니다.</p>
 </div>
 
-
-
 ### 참고
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## 그리드 시스템
 
@@ -51,8 +39,6 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 혹은 [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) 같이 좀 더 가벼운 걸로 갈 수도 있습니다. 대부분의 경우, 뭘 선택하든 여러분의 코딩 스타일에 큰 영향을 미치진 않을 것이므로, 선택은 여러분에게 달렸습니다.
 
-
-
 ### 참고
 
 * [Singularity](http://singularity.gs/)
@@ -65,11 +51,6 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 * [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
-
-
-
-
 
 ## SCSS-lint
 
@@ -85,8 +66,6 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
   <p>SCSS lint를 Grunt 빌드 프로세스에 추가하고 싶으시다면, 기쁘게도 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>라고 하는 Grunt 플러그인이 있습니다.</p>
   <p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="http://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat...)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
 </div>
-
-
 
 ### 참고
 

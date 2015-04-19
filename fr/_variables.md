@@ -7,17 +7,11 @@ Cependant, CSS n’est rien d’autre qu’un grand panier contenant tous nos oe
 
 Mon conseil serait de ne créer de variables que lorsque cela fait vraiment sens. Ne créez pas de nouvelles variables juste pour le plaisir, ça n’améliorera en rien votre code. Une nouvelle variable ne devrait être créée que lorsque les critères suivants sont réunis&nbsp;:
 
-
 * La valeur est répétée au moins deux fois&nbsp;;
 * il y a des chances que la valeur soit mise à jour au moins une fois&nbsp;;
 * toutes les occurrences de la valeur sont liées à la variable (c’est-à-dire pas par coïncidence).
 
 Rien ne sert de déclarer une variable qui ne sera jamais mise à jour ou qui n’est utilisée qu’à un seul endroit.
-
-
-
-
-
 
 ## Scoping
 
@@ -26,7 +20,6 @@ Le scoping des variables dans Sass a évolué avec les années. Jusqu’à réce
 La documentation parle de *global variable shadowing*. Lorsqu’on déclare à un niveau local (sélecteur, fonction, mixin,...) une variable qui existe déjà au niveau global, on dit que la variable locale *masque* la variable globale. Autrement dit, elle prend le pas sur la variable globale au niveau local.
 
 Le petit code qui suit explique le concept de *variable shadowing*&nbsp;:
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -86,15 +79,9 @@ $variable: 'initial value'
   </div>
 </div>
 
-
-
-
-
-
 ## Le flag `!default`
 
 Quand on construit une bibliothèque, un framework, un système de grilles ou n’importe quelle structure Sass destinée à être distribuée et utilisée par des développeurs externes, toutes les variables de configuration doivent être définies avec le flag `!default` ce qui permet qu’elles soient écrasées.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -110,7 +97,6 @@ $baseline: 1em !default
 </div>
 
 De cette manière, un développeur peut définir sa propre variable `$baseline` *avant* d’importer votre bibliothèque sans risquer de voir sa valeur redéfinie.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -137,15 +123,9 @@ $baseline: 2em
   </div>
 </div>
 
-
-
-
-
-
 ## Le flag `!global`
 
 Le flag `!global` ne doit être utilisé que lorsque l’on veut qu’une variable locale prenne le pas sur une variable globale. Lorsqu’on définit une variable à la racine, le flag `!global` doit être omis.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -168,17 +148,11 @@ $baseline: 2em !global
   </div>
 </div>
 
-
-
-
-
-
 ## Variables multiples ou maps
 
 L’utilisation de maps plutôt que de variables multiples et distinctes présente un certain nombre d’avantages. Le principal réside dans la possibilité d’utiliser des boucles sur une map, ce qui n’est pas possible avec des variables distinctes.
 
 Un autre avantage de l’utilisation de maps est la possibilité de créer des fonctions *getter* pour fournir une API plus facile d’usage. Par exemple, considérons le code Sass suivant&nbsp;:
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

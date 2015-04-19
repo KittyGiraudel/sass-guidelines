@@ -3,11 +3,6 @@
 
 无需在此对响应式网页设计多做介绍，它已经无所不在了。但是你可能会疑惑：**为什么在Sass样式指南中会有关于响应式网页设计的章节？**正因为有诸多降低断点使用难度的方式，所以我认为在这里列出来会是个不错的主意。
 
-
-
-
-
-
 ## 命名断点
 
 我认为使用媒体查询而不针对特定设备是安全可靠的做法。特别要指出的是，不应该赞成专门针对iPads或黑莓手机设计媒体查询。媒体查询应该关注屏幕尺寸，直到当前设计遇到阻断而将所有工作过继给下一个媒体查询。
@@ -62,19 +57,12 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-
-
-
 ### 扩展阅读
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
-
-
-
-
-
 ## 断点管理器
+
 一旦用自己钟意的方式命名完断点，就需要有一种方式在实际的媒体查询中使用它。有太多方法可以做这件事，我自己非常乐意使用`map-get()`函数读取断点地图的方法。这套系统简洁而高效。
 
 <div class="code-block">
@@ -119,17 +107,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>如果你希望能更好管理断点，我可以建议你使用类似<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a>或<a href="https://github.com/eduardoboucas/include-media">，没有必要自己重新去造轮子。</p>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
-
-
-
-
-
 
 ## 媒体查询用法
 
@@ -180,8 +161,6 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 > &mdash; [Sam Richards](https://twitter.com/snugug), 关于[Breakpoint](http://breakpoint-sass.com/)的看法
 
 如果现在你仍担心媒体查询的副本问题，你可以使用工具来合并它们，比如[这个gem](https://github.com/aaronjensen/sass-media_query_combiner)，但是我有必要警告你移动相关CSS代码可能会有副作用。 是否了解资源顺序是非常重要的。
-
-
 
 ### 扩展阅读
 

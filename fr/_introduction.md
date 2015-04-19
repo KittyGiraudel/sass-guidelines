@@ -1,10 +1,6 @@
 
 # Introduction
 
-
-
-
-
 ## Pourquoi un guide de style
 
 Un guide de style n’est pas simplement un document agréable à lire, qui décrit l’état idéal de votre code. C’est un document-clé dans la vie d’un projet, qui décrit la façon dont un code devrait être écrit et pourquoi. C’est peut-être beaucoup pour un projet modeste, mais c’est une aide inappréciable pour créer un code propre, extensible et maintenable.
@@ -24,11 +20,6 @@ Il va sans dire que plus il y a de développeurs impliqués dans un projet, plus
   </ul>
 </blockquote>
 
-
-
-
-
-
 ## Avertissement
 
 Commençons par le commencement&nbsp;: **ceci n’est pas un guide de style CSS**. Ce document ne parlera pas des conventions de nommage des classes CSS, des patterns modulaires ou de la questions des IDs dans le monde CSS. Ces recommandations ne traitent que de contenus spécifiques à Sass.
@@ -36,11 +27,6 @@ Commençons par le commencement&nbsp;: **ceci n’est pas un guide de style CSS*
 Par ailleurs, ce guide de style est personnel et par conséquent **très engagé**. Vous pouvez le voir comme un ensemble de méthodologies et de conseils que j’ai polis et donnés pendant des années. Il me donne aussi l’opportunité de faire des liens vers un bon nombre de ressources instructives, n’hésitez pas à vous reporter aux *lectures complémentaires*.
 
 Bien sûr, ce n’est pas la seule façon de faire, et cela correspondra ou pas à votre projet. Vous pouvez choisir ce qui vous intéresse et l’adapter à vos propres besoins. Comme on dit, *ça dépend*.
-
-
-
-
-
 
 ## Principes fondamentaux
 
@@ -54,11 +40,8 @@ Parfois, il vaut mieux se répéter un peu pour conserver un code maintenable pl
 
 Encore une citation de [Harry Roberts](https://csswizardry.com)&nbsp;: **le pragmatisme doit prendre le pas sur la perfection**.  Il est possible qu’à certains moments vous soyez amené à aller contre les règles énoncées ici. Si ça fait sens, si ça vous paraît juste, faites-le. Le code est un moyen, pas une fin en soi.
 
-
-
 ### Lectures complémentaires
 
 * [Principe KISS](http://fr.wikipedia.org/wiki/Principe_KISS)
 * [Principe DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
-

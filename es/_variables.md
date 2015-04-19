@@ -13,11 +13,6 @@ Mi consejo sería que solo crearas variables cuando tenga sentido hacerlo. No in
 
 Básicamente, no hay ningún sentido en declarar una variable que nunca se actualizará o que sólo se usará en un solo lugar.
 
-
-
-
-
-
 ## Scoping O Alcance
 
 La variable *scoping* (alcance) ha cambiado a lo largo de los años. Hasta hace muy poco, las declaraciones de variables dentro de los conjuntos de reglas y otros alcances eran locales por defecto. Sin embargo cuando ya había una variable global con el mismo nombre, la asignación local cambiaría dicha variable global. Desde la versión 3.4, Sass fuerza correctamente el concepto de *scope* y crea una nueva variable local.
@@ -84,11 +79,6 @@ $variable: 'valor inicial'
   </div>
 </div>
 
-
-
-
-
-
 ## La bandera `!default`
 
 Cuando se construye una librería, un *framework*, un sistema de retícula o cualquier bloque de Sass que está destinado a ser distribuido y usado por desarrolladores externos, todas las variables de configuración deben estar definidas con la bandera `!default` para que puedan sobrescribirse.
@@ -133,11 +123,6 @@ $baseline: 2em
   </div>
 </div>
 
-
-
-
-
-
 ## La bandera `!global`
 
 La bandera `!global` solo se debe utilizar cuando se sobrescribe una variable global desde un alcance local. Cuando se define una variable a nivel raiz, la bandera `!global` debe ser omitida.
@@ -162,11 +147,6 @@ $baseline: 2em !global
 {% endhighlight %}
   </div>
 </div>
-
-
-
-
-
 
 ## Variables Múltiples O Mapas
 

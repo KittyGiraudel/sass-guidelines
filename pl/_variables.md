@@ -13,11 +13,6 @@ Moja rada jest następujące: twórzmy zmienne tylko wtedy, kiedy ich istnienie 
 
 Zasadniczo nie ma powodu aby deklarować zmienną która nigdy nie będzie aktualizowana albo taką, która będzie użyta tylko w jednym miejscu.
 
-
-
-
-
-
 ## Zasięg (scope)
 
 Zasięg widoczności (scope) zmiennych w Sassie zmienił się w trakcie jego historii. Do niedawna, zmienne deklarowane w ramach zestawów reguł, czy też innych zakresów, standardowo traktowane były jako zmienne lokalne. Co ciekawe jednak, w przypadku gdy istniała już globalna zmienna o tej samej nazwie, mogła ona zostać nadpisana przez tą przypisaną lokalnie. Od czasu wersji 3.4, Sass już właściwie radzi sobie z koncepcją zasięgów i zamiast tego tworzy teraz nową, lokalną zmienną.
@@ -84,11 +79,6 @@ $variable: 'initial value'
   </div>
 </div>
 
-
-
-
-
-
 ## Flaga `!default`
 
 Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być zadeklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
@@ -133,11 +123,6 @@ $baseline: 2em
   </div>
 </div>
 
-
-
-
-
-
 ## Flaga `!global`
 
 Flaga `!global` powinna być użyta jedynie wtedy, gdy zmienna z lokalnego zasięgu ma nadpisać zmienną globalną. Deklarując zmienną na głównym poziomie, flaga `!global` powinna zostać pominięta.
@@ -162,11 +147,6 @@ $baseline: 2em !global
 {% endhighlight %}
   </div>
 </div>
-
-
-
-
-
 
 ## Wiele zmiennych lub map
 

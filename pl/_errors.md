@@ -11,18 +11,11 @@ Odłóżmy `@debug` na bok, bowiem stworzony on został z myślą o debugowaniu 
 
 Warto także zaznaczyć, że w typowym projekcie Sassa, ostrzeżenia i błędy mogą być zjawiskiem dosyć częstym. Każdy mixin czy funkcja wymagająca określonego argumentu może zgłosić błąd jeśli coś źle pójdzie, albo przynajmniej wyświetlić ostrzeżenie.
 
-
-
 ### Dalsze informacje
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
-
-
-
-
 
 ## Ostrzeżenia
 
@@ -58,11 +51,6 @@ Weźmy za przykład tą funkcję z projektu [Sass-MQ](https://github.com/sass-mq
 </div>
 
 Jeśli podana wartość okaże się nie mieć jednostki, funkcja z góry zakłada, że chodzi tu o piksele. W tym miejscu, takie założenie może być ryzykowne i z tego też powodu użytkownik powinien być ostrzeżony, że oprogramowanie zrobiło coś, co może być uznane za nieoczekiwane.
-
-
-
-
-
 
 ## Błędy
 

@@ -5,11 +5,6 @@
 
 不过，我的建议是最小程度的依赖于各种工具。管理依赖可能会是你特别不想面对的事情。此外，在Sass中很少需要外部依赖。
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/)是Sass中最主要的框架。其开发者[Chris Eppstein](https://twitter.com/chriseppstein)，是Sass的两位核心开发者之一。如果你想听一下我的看法，我想说这个框架一直很流行。
@@ -26,18 +21,11 @@
   <p>Ruby Sass目前正着手进行一些很棒的优化，目标是通过运用诸多函数和混合宏实现具有深度逻辑的样式。它们应该显著改善性能，而这往往是Compass和其他框架拖慢Sass的原因。</p>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## 栅格系统
 
@@ -51,8 +39,6 @@
 
 或者你可以处理地更轻松些，就像使用 [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids)的感觉。总而言之，任何选择都不会对你的代码风格有过多影响，所以这一点上一切取决于你。
 
-
-
 ### 扩展阅读
 
 * [Singularity](http://singularity.gs/)
@@ -65,11 +51,6 @@
 * [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
-
-
-
-
 
 ## SCSS-lint
 
@@ -85,8 +66,6 @@
   <p>如果你想将SCSS-lint插入到Grunt构建过程中，那么Grunt插件<a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>一定会对你有所帮助。</p>
   <p>此外，如果你在寻找一个运行SCSS-lint的简洁工具，那么<a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...)正在开发的<a href="https://houndci.com/">Hound</a>也会对你有所帮助。</p>
 </div>
-
-
 
 ### 扩展阅读
 

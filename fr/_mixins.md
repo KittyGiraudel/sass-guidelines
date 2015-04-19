@@ -7,11 +7,6 @@ Ils contiennent des règles CSS complètes et tout ce qui est permis n’importe
 
 Mais je dois vous mettre en garde contre l’abus de mixins. Là encore, le plus important est la *simplicité*. Il peut être tentant de construire des mixins extrêmement puissants faisant appel massivement à la logique. Cela ressemble à de l’ingénierie excessive et de nombreux développeurs souffrent de cette affection. Ne réfléchissez pas trop et surtout concentrez-vous sur la simplicité. Si un mixin dépasse 20 lignes de code, alors soit il doit être éclaté en parties plus réduites, soit il doit être repensé.
 
-
-
-
-
-
 ## Les bases
 
 Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (c’est-à-dire pas par pure coïncidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d’être déclaré dans un mixin (sans argument).
@@ -73,23 +68,15 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
-
-
-
-
-
 ## Listes d'Arguments
 
 Lorsque vous avez affaire à un nombre inconnu d’arguments dans un mixin, utilisez toujours une `arglist` plutôt qu’une liste. On peut voir `arglist` comme le 8<sup>e</sup> type de données de Sass, caché et non documenté, qui est implicitement utilisé lorsqu’on passe un nombre arbitraire d’arguments dans un mixin ou une fonction dont la signature contient `...`.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -112,7 +99,6 @@ Lorsque vous avez affaire à un nombre inconnu d’arguments dans un mixin, util
 Quand vous construisez un mixin qui accepte quelques arguments (disons 3 ou plus), pensez à deux fois avant de les merger sous forme de liste ou de map en croyant que ce sera plus facile que de les passer un par un.
 
 Sass gère très intelligemment les mixins et les déclarations de fonction, vous pouvez passer une liste ou une map comme une `arglist` dans une fonction ou un mixin de façon à ce qu'ils soient traités comme une série d’arguments.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -164,16 +150,9 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42,)
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## Mixins et préfixes constructeurs
 
@@ -182,7 +161,6 @@ Il pourrait être tentant de définir des mixins personnalisés pour traiter les
 Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si vous utilisez [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu’ils proposent tous les deux une collection de mixins qui traitent les préfixes constructeurs pour vous. Utilisez-les.
 
 Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe constructeur.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -262,9 +240,6 @@ L’utilisation de ce mixin devrait être assez simple&nbsp;:
 </div>
 
 Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne peut pas traiter les polyfills complexes tels que ceux requis pour Flexbox. En ce sens, Autoprefixer est une bien meilleure solution.
-
-
-
 
 ### Lectures complémentaires
 

@@ -15,10 +15,6 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
   <p>Wybór architektury jest, co do zasady, uzależniony od charakteru projektu. Dostosuj swoje podejście do tego w zależności od Twoich potrzeb.</p>
 </div>
 
-
-
-
-
 ### Dalsze informacje
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
@@ -27,11 +23,6 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-
-
-
-
-
 
 ## Komponenty
 
@@ -47,11 +38,6 @@ Komponenty mogą reprezentować wszystko, o tyle o ile:
 Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w róznych miejscach, na różnych stronach i w róznych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
 
 Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomoże Ci on nie tylko zmniejszyć ilość CSSu potrzebnego dla Twojego całego projektu, ale także ułatwi Ci utrzymanie całości kodu w porządku.
-
-
-
-
-
 
 ## Wzór 7-1
 
@@ -134,8 +120,6 @@ sass/
   <p>Pliki są nazywane według tej samej konwencji, o której była mowa wyżej: do rozdzielania używany jest myślnik.</p>
 </div>
 
-
-
 ### Folder base
 
 W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla naszego projektu. Możemy tam umieścić plik odpowiadający za reset podstawowych reguł CSSa, reguły dotyczące typografii i plik (który ja zazwyczaj nazywam `_base.scss`) definiujący podstawowe style dla powszechnie używanych elementów HTMLa.
@@ -143,9 +127,6 @@ W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
-
 
 ### Folder layout
 
@@ -162,10 +143,6 @@ Folder `layout/` zawiera wszystko, co odpowiada za rozmieszczenie elementów na 
   <p>Folder <code>layout/</code> może być także nazwany folderem <code>partials/</code>, w zależności od Twojego upodobania.</p>
 </div>
 
-
-
-
-
 ### Folder components
 
 Dla mniejszych komponentów stworzony został folder `components/`. Podczas gdy `layout/` odpowiada style o charakterze *makro* (definiujące globalną strukturę), `components` kładzie nacisk na widżety. Zawiera on wszystkiego rodzaju moduły, takie jak przyciski, karuzele, rozwijane menu, itd. Z reguły w folderze `components/` znajduje się wiele plików, dlatego że cała strona/aplikacja powinna się składać właśnie z takich drobnych modułów.
@@ -178,10 +155,6 @@ Dla mniejszych komponentów stworzony został folder `components/`. Podczas gdy 
   <p>Folder <code>components/</code> może być także nazwany folderem <code>modules/</code>, w zależności od Twojego upodobania.</p>
 </div>
 
-
-
-
-
 ### Folder pages
 
 Jeśli masz jakieś style związane z konkretnymi podstronami, lepiej jest umieszczać je w folderze `pages/`, w pliku o nazwie określającej konkretną podstronę. Dla przykładu, popularnym jest rozwiązanie skupiania szczegółowych reguł, mających zastosowanie jedynie dla strony głównej w pliku `_home.scss` w folderze `pages/`.
@@ -193,8 +166,6 @@ Jeśli masz jakieś style związane z konkretnymi podstronami, lepiej jest umies
   <p>W zależności od Twojego procesu pracy nad projektem, pliki te mogą odseparowane celem uniknięcia scalania ich z innymi do jednego arkusza stylów. Zależy to tylko i wyłącznie od Ciebie.</p>
 </div>
 
-
-
 ### Folder themes
 
 W przypadku większych stron i aplikacji, często spotyka się osobne motywy. Jest wiele sposobów radzenia sobie z nimi, jednak ja osobiście preferuję przechowywać je wszystkie w folderze `themes/`.
@@ -205,8 +176,6 @@ W przypadku większych stron i aplikacji, często spotyka się osobne motywy. Je
 <div class="note">
   <p>Zależy to w wysokim stopniu od charakteru danego projektu, dlatego też niewykluczone jest, że dla wielu celów taki folder nie będzie w ogóle przydatny.</p>
 </div>
-
-
 
 ### Folder utils
 
@@ -223,8 +192,6 @@ Podstawową zasadą dla tego folderu jest to, by żaden ze znajdujących się w 
   <p>Folder <code>utils/</code> może być także nazwany folderem <code>helpers/</code>, <code>sass-helpers/</code> lub <code>sass-utils/</code>, w zależności od Twojego upodobania.</p>
 </div>
 
-
-
 ### Folder vendors
 
 Wreszcie, wiele projektów skorzysta także z obecności folderu `vendors/`, który to zawierać może wszystkie pliki CSS z różnych zewnętrznych bibliotek i frameworków, takich jak Normalize, Bootstrap, jQueryUI,FancyCarouselSliderjQueryPowered i innych. Umieszczanie ich wszystkich w ramach tego samego folderu jest sposobem na zasygnalizowanie, że "nie ja to napisałem, pochodzi to z zewnątrz i nie należy to do mojej odpowiedzialności".
@@ -237,8 +204,6 @@ Wreszcie, wiele projektów skorzysta także z obecności folderu `vendors/`, kt�
 Jeśli zmuszony jesteś do nadpisania jakiejkolwiek z sekcji danego pliku zewnętrznego, zalecam utworzenie ósmego folderu nazwanego `vendors-extensions/`, w którym pliki zawierające reguły nadpisujące powinny nazywać się tak jak te pliki, które są nimi nadpisywane.
 
 Na przykład, `vendors-extensions/_bootstrap.scss` będzie plikiem zawierającym wszystkie reguły CSS, których przeznaczeniem jest zmodyfikowanie niektórych ze standardowych dla Bootstrapa reguł. Służy to uniknięciu edytowania oryginalnych plików zewnętrznych, co samo w sobie nie należy do najlepszych pomysłów.
-
-
 
 ### Główny plik
 
@@ -422,11 +387,6 @@ Istnieje także inne podejście do importowania plików cząstkowych (partiali),
   <p>Niemniej jednak nie zalecam korzystania z tego rozwiązania, bowiem importuje ono pliki według porządku alfabetycznego, co jest prawdopodobnie nie tym, czego oczekujesz. Zwłaszcza w przypadkach, gdy mamy do czynienia z językiem wrażliwym na kolejność plików, jakim niewątpliwie jest CSS.</p>
 </div>
 
-
-
-
-
-
 ## Plik wstydu
 
 Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry’ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
@@ -460,8 +420,6 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Dalsze informacje
 

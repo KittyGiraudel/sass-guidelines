@@ -7,11 +7,6 @@
 
 하지만 믹신의 힘을 남용하지 말라고 경고해야만 할 것 같습니다. 다시 한 번 말하지만, 핵심은 *간결성*입니다. 거대한 로직을 가진 엄청나게 강력한 믹신을 만들고 싶어질 수 있습니다. 이는 과설계over-engineering라고 하며 대부분의 개발자들이 이것 때문에 괴로워합니다. 여러분의 코드에 대해 너무 복잡하게 생각하지 말고, 무엇보다도 간단히 하세요. 만약 믹신이 20줄을 넘어서게 되었다면, 더 작은 덩어리로 나뉘거나 완전히 수정되어야 합니다.
 
-
-
-
-
-
 ## 기본
 
 믹신은 아주 유용하며 아마 여러분도 사용하고 있을 겁니다. 대략적으로 이야기하자면, (우연이 아닌) 어떤 이유로 항상 같이 모습을 보이는 CSS 속성들의 그룹을 발견하게 되면, 그것들을 믹신에 넣을 수 있습니다. 예를 들면 [Nicolas Gallagher의 마이크로 클리어픽스 핵](http://nicolasgallagher.com/micro-clearfix-hack/)은 (매개변수 없는) 믹신 안에 들어갈 만합니다.
@@ -73,18 +68,11 @@
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
-
-
-
-
-
 
 ## 매개변수 리스트
 
@@ -162,16 +150,9 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
-
-
-
-
 
 ## 믹신과 벤더 프리픽스
 
@@ -259,8 +240,6 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 </div>
 
 이것은 조악한 해결책이라는 점을 명심하세요. 예를 들면, Flexbox에 필요한 것과 같은 복잡한 폴리필은 처리하지 못합니다. 그런 면에서, Autoprefixer를 사용하는 것이 훨씬 나은 선택입니다.
-
-
 
 ### 참고
 

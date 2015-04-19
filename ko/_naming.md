@@ -40,16 +40,9 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-
-
 ### 참고
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
-
-
-
-
 
 ## 상수
 
@@ -78,16 +71,9 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-
-
 ### 참고
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
-
-
-
-
-
 
 ## 네임스페이스
 

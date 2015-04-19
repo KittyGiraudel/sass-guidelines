@@ -40,16 +40,9 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
-
-
-
-
 
 ## Constantes
 
@@ -78,23 +71,15 @@ $css-positions: (top, right, bottom, left, center)
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
-
-
-
-
-
 
 ## Namespaces
 
 Si vous avez l’intention de distribuer votre code Sass, sous forme de bibliothèque, de framework, de système de grille ou autre, il peut s’avérer intéressant de donner un *namespace* à vos variables, fonctions, mixins et placeholders de façon à ce qu’ils n’entrent pas en conflit avec le code d’une autre personne.
 
 Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné à être utilisé par les développeurs du monde entier (qui ne le ferait pas&nbsp;?) il est important d’utiliser un namespace, tel que `su-`, suffisamment spécifique pour éviter toute collision de noms et suffisamment court pour ne pas devenir pénible à écrire.
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

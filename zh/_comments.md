@@ -14,11 +14,6 @@ CSS的实现很简单，但我们需要为此付出巨大的注释量。解释�
 
 在这里，我可能还遗漏了其他各种各样的缘由。在代码完成之时立即注释，往往只需花费一点时间；而过一阵时间再来为一小段代码注释，则是完全不现实和令人恼怒的。
 
-
-
-
-
-
 ## 标示注释
 
 理想上，**任何**CSS规则集之前都应该使用C风格注释来解释CSS块的核心。这个注释也要记录对规则集特定部分编号的解释。比如：
@@ -76,16 +71,9 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-
-
 ### 扩展阅读
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## 文档
 
@@ -200,8 +188,6 @@ SassDoc主要有两个作用：
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 扩展阅读
 

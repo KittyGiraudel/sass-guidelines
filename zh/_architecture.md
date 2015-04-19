@@ -15,8 +15,6 @@
   <p>我认为，项目之间的结构是极其具体的。你完全可以随意摒弃或调整建议方案，拥有最适合自己需求的体系系统。</p>
 </div>
 
-
-
 ### 扩展阅读
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
@@ -25,11 +23,6 @@
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-
-
-
-
-
 
 ## 组件
 
@@ -44,11 +37,6 @@
 例如，搜索框就应该被视为一个组件，可以在不同位置、不同页面、多种环境下重复使用。它不应该受限于DOM中的位置（页脚、侧边栏、主内容区...）。
 
 几乎所有的接口都可以被视为小组件，而且强烈建议坚持这种模式。这不仅仅会精简整个项目中CSS的代码量，而且也会比维护一个到处无逻辑的烂摊子容易得多。
-
-
-
-
-
 
 ## 7-1模式
 
@@ -131,8 +119,6 @@ sass/
   <p>使用命名约定描述文件，使用连字符分隔。</p>
 </div>
 
-
-
 ### Base文件夹
 
 `base/`文件夹存放项目中的模板文件。在这里，可以找到重置文件、排版规范文件或者一个样式表（我通常命名为`_base.scss`）——定义一些HTML元素公认的标准样式。
@@ -140,8 +126,6 @@ sass/
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
-
-
 
 ### Layout文件夹
 
@@ -158,8 +142,6 @@ sass/
   <p><code>layout/</code>文件夹也会被称为<code>partials/</code>, 具体使用情况取决于个人喜好。</p>
 </div>
 
-
-
 ### Components文件夹
 
 对于小型组件来说，有一个`components/`文件夹来存放。相对于`layout/`的*宏观*（定义全局线框结构），`components/`更专注于局部组件。该文件夹包含各类具体模块，基本上是所有的独立模块，比如一个滑块、一个加载块、一个部件……由于整个网站或应用程序主要由微型模块构成，`components/`中往往有大量文件。
@@ -172,8 +154,6 @@ sass/
   <p><code>components/</code>文件夹也会被称为<code>modules/</code>, 具体使用情况取决于个人喜好。</p>
 </div>
 
-
-
 ### Pages文件夹
 
 如果页面有特定的样式，最好将该样式文件放进`pages/`文件夹并用页面名字。例如，主页通常具有独特的样式，因此可以在`pages/`下包含一个`_home.scss`以实现需求。
@@ -185,8 +165,6 @@ sass/
   <p>取决于各自的开发流程，这些文件可以使用你自己的前缀命名，避免在最终样式表中与他人的样式表发生合并。一切完全取决于你。</p>
 </div>
 
-
-
 ### Themes文件夹
 
 在大型网站和应用程序中，往往有多种主题。虽有多种方式管理这些主题，但是我个人更喜欢把它们存放在`themes/`文件夹中。
@@ -197,8 +175,6 @@ sass/
 <div class="note">
   <p>这个文件夹与项目的具体实现有密切关系，并且在许多项目中是并不存在的。</p>
 </div>
-
-
 
 ### Utils文件夹
 
@@ -215,8 +191,6 @@ sass/
   <p><code>utils/</code>文件夹也会被称为<code>helpers/</code>,<code>sass-helpers/</code>或者<code>sass-utils/</code>，具体使用情况取决于个人喜好。</p>
 </div>
 
-
-
 ### Vendors文件夹
 
 最后但并非最终的是，大多数的项目都有一个`vendors/`文件夹，用来存放所有外部库和框架（Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered……）的CSS文件。将这些文件放在同一个文件中是一个很好的说明方式:"嘿，这些不是我的代码，无关我的责任。"
@@ -229,8 +203,6 @@ sass/
 如果你重写了任何库或框架的部分，建议设置第8个文件夹`vendors-extensions/`来存放，并使用相同的名字命名。
 
 例如，`vendors-extensions/_boostrap.scss`文件存放所有重写Bootstrap默认CSS之后的CSS规则。这是为了避免在原库或者框架文件中进行二次编辑——显然不是好方法。
-
-
 
 ### Main文件
 
@@ -415,9 +387,6 @@ sass/
   <p>话虽如此，却不推荐它，因为它按照字母顺序引入文件，这往往并不是想要的，特别是处理一个对源文件顺序有所依赖的编程语言的时候。</p>
 </div>
 
-
-
-
 ## Shame文件
 
 另一个有意思的方面，由业内已流行的[Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) 和 [Chris Coyier](http://css-tricks.com)引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个*shame file*。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
@@ -451,8 +420,6 @@ sass/
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### 扩展阅读
 

@@ -5,7 +5,6 @@ Vous savez probablement déjà que Sass fournit des structures conditionnelles v
 
 Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nbsp;:
 
-
 * Pas de parenthèses sauf si elles sont nécessaires&nbsp;;
 * Toujours un saut de ligne avant `@if`&nbsp;;
 * Toujours un renvoi à la ligne après l’accolade ouvrante (`{`)&nbsp;;

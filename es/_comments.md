@@ -14,11 +14,6 @@ Tan simple como pueda ser CSS, aún queda sitio para muchos comentarios. Estos p
 
 Y probablemente haya olvidado muchas otras diversas razones para realizar comentarios. Comentar lleva muy poco tiempo cuando se realiza al mismo tiempo que escribes el código, así que házlo en el momento correcto. Volver atrás y comentar un trozo de código antiguo, no solo es completamente irreal, sino que también es extremadamente molesto.
 
-
-
-
-
-
 ## Escribiendo Comentarios
 
 Idealmente, *cualquier* conjunto de reglas CSS debería ir precedida por un comentario estilo-C explicando el objetivo del bloque CSS. Estos comentarios también deben dar una explicación numerada respecto a partes específicas del conjunto de reglas. Por ejemplo:
@@ -76,16 +71,9 @@ $imported-modules: append($imported-modules, $module) !global;
   </div>
 </div>
 
-
-
 ### Más información
 
 * [CSS Guidelines Sección de comentarios -En inglés](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## Documentación
 
@@ -200,8 +188,6 @@ Este es un ejemplo de un *mixin* ampliamente documentado con SassDoc:
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Más información
 

@@ -14,10 +14,6 @@ Quelle que soit la simplicité de CSS, les commentaires sont toujours utiles. Vo
 
 Je pourrais certainement citer encore bien d’autres raisons. Les commentaires prennent très peu de temps lorsqu’on les écrit dans la continuité du code, par conséquent veillez à les écrire au bon moment. Revenir sur un bout de code pour le commenter est non seulement irréaliste mais également très ennuyeux.
 
-
-
-
-
 ## Écrire des commentaires
 
 Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est à dire `/* ... */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
@@ -77,16 +73,9 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-
-
 ### Lectures complémentaires
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
-
-
-
-
-
 
 ## Documentation
 
@@ -226,8 +215,6 @@ Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Lectures complémentaires
 

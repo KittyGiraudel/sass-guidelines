@@ -44,11 +44,6 @@ A grandes rasgos, lo que queremos (humildemente inspirados en [CSS Guidelines](h
 
 No abordaremos la cuestión de la organización de archivos en esta sección. Este tema lo veremos en otra [sección](#arquitectura).
 
-
-
-
-
-
 ## Cadenas
 
 Lo creas o no, las cadenas juegan un gran papel en los ecosistemas de CSS y Sass. La mayoría de los valores CSS suelen ser longitudes o cadenas (normalmente sin comillas), así que es bastante crucial que cumplas ciertas pautas cuando se trabaja con cadenas en Sass.
@@ -195,23 +190,14 @@ Las URLs deben ir entre comillas simples por las mismas razones que se explican 
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Todo lo que necesitas saber sobre la interpolación en Sass -En inglés](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings -En inglés](https://github.com/HugoGiraudel/SassyStrings)
 
-
-
-
-
-
 ## Números
 
 En Sass, el número es un tipo de datos que incluye de todo, desde números sin unidades a longitudes, pasando por duraciones, frecuencias y ángulos, entre otros. Esto permite que se puedan realizar cálculos en estas medidas.
-
-
 
 ### Ceros
 
@@ -247,8 +233,6 @@ Siempre se deben mostrar los ceros a la izquierda antes de un valor decimal meno
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Unidades
 
@@ -364,8 +348,6 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. En un valor, separar la parte numérica de su unidad también devuelve una cadena. Esto no es lo que quieres.
 
-
-
 ### Cálculos
 
 **Los cálculos numéricos de nivel superior deben ir siempre entre paréntesis** lo cual, no solo mejorará drásticamente la legibilidad, sino que también evitará algunos casos extremos, ya que fuerza a Sass a evaluar los contenidos entre paréntesis.
@@ -397,8 +379,6 @@ Al añadir a un número una unidad en forma de cadena, el resultado es una caden
   </div>
 </div>
 
-
-
 ### Números Mágicos
 
 Un "número mágico" es un término de programación de la [vieja escuela](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica.
@@ -429,8 +409,6 @@ No hace falta decir que **los números mágicos son una plaga y que se deben evi
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Usa longitudes, no cadenas -En inglés](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
@@ -438,16 +416,9 @@ No hace falta decir que **los números mágicos son una plaga y que se deben evi
 * [Números mágicos en CSS -En inglés](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math -En inglés](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## Colores
 
 Los colores ocupan un lugar importante en el lenguaje CSS. Naturalmente, Sass termina siendo un valioso aliado cuando se trata de la manipulación de colores, sobre todo, al proporcionar un puñado de [funciones potentes](http://sass-lang.com/documentation/Sass/Script/Functions.html).
-
-
 
 ### Formatos De Color
 
@@ -520,8 +491,6 @@ Al usar HSL o notación RGB, siempre se debe añadir un espacio simple después 
   </div>
 </div>
 
-
-
 ### Colores Y Variables
 
 Cuando se utiliza un color más de una vez, se debe almacenar en una variable con un nombre significativo que respresente al color.
@@ -555,8 +524,6 @@ $main-theme-color: $sass-pink
 </div>
 
 Al hacer esto, evitarás que algún cambio en el tema resulte algo como `$sass-pink: blue`
-
-
 
 ### Aclarando Y Oscureciendo Colores
 
@@ -625,8 +592,6 @@ Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes cre
   <p>La función <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (escala de color) está diseñada para escalar las propiedades de una forma más fluida, al tener en cuenta qué tan altas o bajas son en el momento inicial. Debe proporcionar resultados tan agradables como los de <code>mix</code> pero con una nomenclatura mucho más clara. Sin embargo, el factor de escalado no es exactamente el mismo.</p>
 </div>
 
-
-
 ### Más información
 
 * [Guía visual para las funciones de color en Sass y Compass -En inglés](http://jackiebalzer.com/color)
@@ -634,10 +599,6 @@ Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes cre
 * [Variables de color en Sass que no apestan -En inglés](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Usando Sass para construir paletas de color -En inglés](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Tabajar con esquemas de color en Sass -En inglés](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
 
 ## Listas
 
@@ -725,17 +686,10 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Entendiendo las listas Sass -En inglés](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists -En inglés](http://sassylists.com)
-
-
-
-
-
 
 ## Mapas
 
@@ -789,8 +743,6 @@ $breakpoints: (
 {% endhighlight %}
   </div>
 </div>
-
-
 
 ### Depurando Un Mapa Sass
 
@@ -870,8 +822,6 @@ Si tienes interés en conocer la profundidad del mapa, añade la siguiente funci
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Usando mapas Sass -En inglés](http://www.sitepoint.com/using-sass-maps/)
@@ -883,11 +833,6 @@ Si tienes interés en conocer la profundidad del mapa, añade la siguiente funci
 * [Sass Maps Plus -En inglés](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps -En inglés](https://github.com/at-import/sassy-maps)
 * [Introducción a los mapas en Sass. Uso y ejemplos -En inglés](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## Conjunto De Reglas CSS
 
@@ -995,16 +940,9 @@ Ejemplo:
   </div>
 </div>
 
-
-
 ### Más información
 
 * [Anatomía de un conjunto de reglas -En inglés](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## Clasificación De Declaraciones
 
@@ -1134,8 +1072,6 @@ Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo.
   <p>Un <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
 </div>
 
-
-
 ### Más información
 
 * [CSS Comb -En inglés](https://github.com/csscomb/csscomb.js)
@@ -1144,11 +1080,6 @@ Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo.
 * [Sobre la clasificación de declaraciones -En inglés](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reducir el tamaño de los archivos con clasificación CSS -En inglés](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Resultados de la encuesta: ¿Cómo ordenas tus propiedades CSS?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## Anidamiento De Selectores
 
@@ -1380,16 +1311,8 @@ Reescribiendo nuestro ejemplo anterior, se vería algo asi:
 
 Como con todo, los detalles son algo irrelevante, la coherencia es la clave. Si te sientes completamente confiado con la anidaciones de selectores, entonces utilizala. Sólo asegurate de que todo tu equipo está de acuerdo con ello.
 
-
-
-
-
-
 ### Más información
 
 * [Cuidado con la anidación de selectores -En inglés](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [La regla del inicio -En inglés](http://thesassway.com/beginner/the-inception-rule)
 * [Evitar la anidación de selectores para un CSS más modular -En inglés](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-
-
-

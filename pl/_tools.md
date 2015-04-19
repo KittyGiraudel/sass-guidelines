@@ -5,9 +5,6 @@ Jedną z niewątpliwych zalet preprecessora CSS tak popularnego jak Sass jest to
 
 Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego minimum. Zarządzanie zależnościami jest swoistym piekłem, w którym na pewno nie chciałbyś się znaleźć. Poza tym, potrzeba korzystania z zewnętrznych zależności, w odniesieniu do Sassa, jest mała, jeśli nie znikoma.
 
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany został przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić.
@@ -24,19 +21,11 @@ W każdym bądź razie, w żadnym wypadku nie zabraniam używania Compassu, choc
   <p>Ruby Sass jest obecnie gruntownie optymalizowany i prace te są ukierunkowane w szczególności na rozbudowane style, z wieloma funkcjami i mixinami. Wydajność i szybkość kompilacji powinna zostać znacznie poprawiona, dzięki czemu Compass i inne frameworki nie będą tak bardzo spowalniać Sassa.</p>
 </div>
 
-
-
-
 ### Dalsze informacje
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Systemy gridów
 
@@ -50,8 +39,6 @@ Jeśli nie jesteś przywiązany do określonego systemu, zapewne ucieszysz się 
 
 Możesz też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). W każdym bądź razie, wybór nie będzie miał olbrzymiego wpływu na styl Twojego kodu, więc swoboda decyzji należy tylko i wyłącznie do Ciebie.
 
-
-
 ### Dalsze informacje
 
 * [Singularity](http://singularity.gs/)
@@ -64,11 +51,6 @@ Możesz też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-gri
 * [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
-
-
-
-
 
 ## SCSS-lint
 
@@ -84,9 +66,6 @@ Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do
   <p>Jeśli chcesz dołączyć SCSS-lint do Twojego obecnego procesu budowania w Gruncie, śpieszę z dobrą wiadomością - dostępny jest plugin do Grunta o nazwie <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Poza tym, jeśli jesteś w trakcie poszukiwania jakiegoś fajnego rozwiązania, które współpracuje z SCSS-lint i jemu podobnymi, chłopaki z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) pracują obecnie nad <a href="https://houndci.com/">Hound</a>.</p>
 </div>
-
-
-
 
 ### Dalsze informacje
 
