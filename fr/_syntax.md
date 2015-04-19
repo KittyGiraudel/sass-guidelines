@@ -939,7 +939,7 @@ Illustration:
   </div>
 </div>
 
-### Lecture complémentaire
+### Lectures complémentaires
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 

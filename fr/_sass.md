@@ -47,7 +47,7 @@ La syntaxe de Sass repose sur l’indentation pour se débarrasser des accolades
 
 Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus accessible aux développeurs. C’est pourquoi SCSS est la syntaxe par défaut tout au long de ce document. Si vous préférez la syntaxe Sass indentée, vous pouvez choisir cette option dans le <span data-toggle="aside" class="link-like" role="button" aria-expanded>panneau des options</span>.
 
-### Lecture complémentaire
+### Lectures complémentaires
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 

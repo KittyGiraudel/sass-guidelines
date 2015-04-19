@@ -13,7 +13,7 @@ La idea no es convertir a CSS en un lenguaje de programación totalmente funcion
 
 Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta giuía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
 
-### Más infomación
+### Más información
 
 * [Sass - En inglés](http://sass-lang.com)
 * [Documentación de Sass - En inglés](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
