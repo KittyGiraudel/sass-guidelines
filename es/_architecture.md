@@ -74,7 +74,7 @@ sass/
 |   |– _typography.scss  # Reglas tipográficas
 |   ...                  # Etc…
 |
-|– componentes/
+|– components/
 |   |– _buttons.scss     # Botones
 |   |– _carousel.scss    # Carousel
 |   |– _cover.scss       # Cubierta
@@ -90,23 +90,23 @@ sass/
 |   |– _forms.scss       # Formularios
 |   ...                  # Etc…
 |
-|– paginas/
+|– pages/
 |   |– _home.scss        # Estilos específicos para la página de inicio
 |   |– _contact.scss     # Estilos específicos para la página de contacto
 |   ...                  # Etc…
 |
-|– temas/
+|– themes/
 |   |– _theme.scss       # Tema por defecto
 |   |– _admin.scss       # Tema del administrador
 |   ...                  # Etc…
 |
-|– utilidades/
+|– utils/
 |   |– _variables.scss   # Variables Sass
 |   |– _functions.scss   # Funciones Sass
 |   |– _mixins.scss      # Mixins Sass
 |   |– _helpers.scss     # Clases & placeholders
 |
-|– proveedores/
+|– vendors/
 |   |– _bootstrap.scss   # Bootstrap
 |   |– _jquery-ui.scss   # jQuery UI
 |   ...                  # Etc…
