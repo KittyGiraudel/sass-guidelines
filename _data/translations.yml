@@ -132,12 +132,12 @@ es:
 
 zh:
   donate:
-    content: "如果你喜欢Sass Guidelines,请支持它"
-    button: "支持Sass Guidelines"
+    content: "如果你喜欢 Sass Guidelines，请支持它"
+    button: "支持 Sass Guidelines"
   baseline:
-    content: "编写稳健、可维护和可扩展Sass的编程规范"
+    content: "编写稳健、可维护和可扩展的 Sass"
   footer:
-    content: "本文由[Hugo Giraudel](http://hugogiraudel.com)编写和维护，经 [Sean Sun](https://github.com/pinggod) 和 [大漠](http://www.w3cplus.com/) 整理翻译为中文。"
+    content: "本文由 [Hugo Giraudel](http://hugogiraudel.com) 编写和维护，经 [Sean Sun](https://github.com/pinggod) 和 [大漠](http://www.w3cplus.com/) 翻译整理为中文。"
   note: "Note"
 
 ko:
