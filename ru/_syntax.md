@@ -459,15 +459,7 @@ $main-theme-color: $sass-pink
 
 Преимуществом использования `mix` перед одной из двух указанных функций выше является то, что она будет постепенно меняться на чёрный (или белый), когда вы уменьшаете долю цвета, в то время как `darken` и `lighten` быстро меняют цвет на чёрный или белый.
 
-<figure role="group">
-  <img alt="Иллюстрация разницы между функциями darken/lighten и mix в Sass"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Иллюстрация разницы между функциями <code>lighten</code>/<code>darken</code> и <code>mix</code> в Sass от <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 Если вы не хотите писать функцию `mix` каждый раз, вы можете создать две простых в использовании функции `tint` и `shade` (которые также являются частью [Compass](HTTP://compass- style.org/reference/compass/helpers/colors/#shade)), чтобы сделать то же самое:
 
@@ -981,10 +973,7 @@ $breakpoints: (
 
 Я должен сказать, что не могу решить это сам. [Недавний опрос на CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) установил, что более 45% разработчиков упорядочивают свойства по их назначению, против 14% в алфавитном порядке. Кроме того, есть 39%, кто делает это случайно, я в том числе.
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="График, показывающий, как разработчики упорядочивают свой CSS" />
-  <figcaption>График, показывающий, как разработчики упорядочивают свой CSS</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 Поэтому я не буду навязывать вам выбор. Выберите тот, который вы предпочитаете, пока вы последовательны в ваших стилях.
 

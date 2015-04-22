@@ -460,15 +460,7 @@ $main-theme-color: $sass-pink
 
 앞서 언급한 두 펑션보다 `mix`를 사용하는 것의 이점은 색의 비율을 감소시킴에 따라 점진적으로 검은 색(혹은 흰 색)으로 나아간다는 점입니다. 반면 `darken`과 `lighten`은 색을 순식간에 완전한 검은 색이나 흰 색으로 보내버릴 것입니다.
 
-<figure role="group">
-  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Illustration of the difference between <code>lighten</code>/<code>darken</code> and <code>mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 만약 매번 `mix` 펑션을 쓰는 것을 원치 않으신다면, 두 가지 사용하기 쉬운 ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)에 포함되어 있기도 한) `tint`와 `shade` 평션을 만들어 같은 일을 할 수 있습니다:
 
@@ -982,10 +974,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 저 스스로도 결정할 수가 없다는 점을 말씀드려야겠습니다. [CSS Tricks에서의 최근 설문조사](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)에 따르면 45% 이상의 개발자들이 유형별로, 14%가 알파벳순으로 선언을 정렬하는 것으로 나타났습니다. 또한, 완전히 임의로 정렬하는 39%의 개발자들도 있습니다. 저를 포함해서요.
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Chart showing how developers order their CSS declarations</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 이 때문에, 이 스타일가이드에서는 선택을 강요하지 않겠습니다. 여러분이 스타일시트 내내 일관성을 유지하기만 한다면, 맘에 드는 걸로 고르시면 됩니다.
 

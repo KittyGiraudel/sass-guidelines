@@ -55,15 +55,7 @@ Et bien sûr&nbsp;:
 
 * `main.scss`
 
-<figure role="group">
-  <img alt="One file to rule them all, One file to find Them, One file to bring them all, And in the Sass way merge them."
-     sizes="100vw"
-     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
-             /assets/images/sass-wallpaper_medium.jpg 900w,
-             /assets/images/sass-wallpaper_large.jpg 1200w,
-             /assets/images/sass-wallpaper_huge.jpg  1590w" />
-  <figcaption>Fond d’écran par <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
-</figure>
+{% include images/wallpaper.html %}
 
 Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
 

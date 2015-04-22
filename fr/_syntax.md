@@ -164,15 +164,7 @@ Toutefois, il arrive souvent que ces fonctions ne produisent pas le résultat es
 
 L’avantage d’utiliser `mix` plutôt que les deux fonctions précédemment citées est qu’elle permet d’aller très progressivement vers le noir (ou vers le blanc) à mesure que l’on diminue la proportion de la couleur initiale, alors que `darken` et `lighten` font passer très rapidement la couleur au noir ou au blanc&nbsp;:
 
-<figure role="group">
-  <img alt="Illustration de la différence entre lighten/darken et la fonction mix de Sass"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Illustration de la différence entre <code>lighten</code>/<code>darken</code> et <code>mix</code> par <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez créer deux fonctions faciles à utiliser, `tint` et `shade` (qui sont incluses dans [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) pour obtenir la même chose&nbsp;:
 
@@ -307,10 +299,7 @@ Il existe encore un autre modèle d’ordonnancement des types, [Concentric CSS]
 
 Je dois dire que je n’arrive pas à me décider moi-même. Un [récent sondage de CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) a montré que plus de 45% des développeurs ordonnent leurs déclarations par type, contre 14% par ordre alphabétique. 39% le font au hasard, et j’en fais partie.
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="Tableau montrant comment les développeurs ordonnent leurs déclarations CSS" />
-  <figcaption>Tableau montrant comment les développeurs ordonnent leurs déclarations CSS</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 C’est la raison pour laquelle je ne recommande pas de choix particulier dans ce guide de style. Choisisssez celui que vous préférez, du moment qu’il reste cohérent tout au long de vos feuilles de style (en d'autres termes&nbsp;: pas l'option <em>au hasard</em>).
 

@@ -164,15 +164,7 @@ La cuestión es que esas funciones a menudo no proporcionan el resultado esperad
 
 La ventaja de usar `mix` en lugar de una de las funciones anteriormente mencionadas, es que con `mix` irá progresivamente a negro (o blanco) a medida que se disminuye la proporción de color, mientras que `darken` y `lighten` apagará rápidamente el color hasta llegar a negro o blanco.
 
-<figure role="group">
-  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Ilustración de la diferencia entre <code>lighten</code>/<code>darken</code> y <code>mix</code> por <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes crear dos funciones muy sencillas de utilizar, `tint` y `shade` (que también son parte de [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) para conseguir el mismo resultado:
 
@@ -307,10 +299,7 @@ También hay otra rama interesante en cuanto al orden de propiedades, llamado [C
 
 Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determinó que más de un 45% de los desarrolladores ordenan sus declaraciones por tipo, frente el 14% que lo hace alfabéticamente. También hay un 39% que lo hace completamente al azar, incluido yo mismo.
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Gráfico que muestra cómo los desarrolladores ordenan sus declaraciones CSS</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo. Elige la que más te guste, siempre y cuando sea coherente con el resto de tus hojas de estilo (es decir, no *al azar*).
 

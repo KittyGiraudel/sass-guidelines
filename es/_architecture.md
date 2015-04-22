@@ -54,15 +54,7 @@ Y por supuesto:
 
 * `main.scss`
 
-<figure role="group">
-  <img alt="Un archivo para gobernarlos a todos, un archivo para encontrarlos, un archivo para reunirlos, y Sass para fusionarlos."
-     sizes="100vw"
-     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
-             /assets/images/sass-wallpaper_medium.jpg 900w,
-             /assets/images/sass-wallpaper_large.jpg 1200w,
-             /assets/images/sass-wallpaper_huge.jpg  1590w" />
-  <figcaption>Fondo de pantalla realizado por <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
-</figure>
+{% include images/wallpaper.html %}
 
 Idealmente, podemos llegar a algo como esto:
 

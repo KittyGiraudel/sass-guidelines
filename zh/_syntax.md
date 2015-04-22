@@ -460,15 +460,7 @@ $main-theme-color: $sass-pink
 
 和上述两个函数相比，使用`mix`的好处是，当你降低颜色的比例时，它会渐进的接近黑色（或者白色），而 `darken` 和`lighten`立即变换颜色到黑色或白色。
 
-<figure role="group">
-  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Illustration of the difference between <code>lighten</code>/<code>darken</code> and <code>mix</code> by <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 如果你不想每次都写`mix`函数，你可以创建两个易用的 `tint` 和`shade` ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)的一部分)来处理相同的事：
 
@@ -981,10 +973,7 @@ $breakpoints: (
 
 我必须说我不能对此下任何判定。一份[CSS-Tricks做的统计报告](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)确认，超过45%的开发者使用类型顺序声明，而只有14%使用字母顺序。此外还有39%的开发者随意而为，这其中就包括我。
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Chart showing how developers order their CSS declarations</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 因此，我不会在此强加规范选择怎样的声明顺序。只要你长久的在自己的样式表中保持一致的风格，那么选择喜欢的声明顺序就可以了。
 

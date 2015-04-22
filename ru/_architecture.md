@@ -54,15 +54,7 @@
 
 * `main.scss`
 
-<figure role="group">
-  <img alt="Один файл, чтобы управлять ими всеми, один файл, чтобы найти их, один файл, чтобы привести их всех, и отдать их Sass, чтобы объединить."
-     sizes="100vw"
-     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
-             /assets/images/sass-wallpaper_medium.jpg 900w,
-             /assets/images/sass-wallpaper_large.jpg 1200w,
-             /assets/images/sass-wallpaper_huge.jpg  1590w" />
-  <figcaption>Обои от <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
-</figure>
+{% include images/wallpaper.html %}
 
 В идеале, мы можем закончить с чем-то похожим:
 
