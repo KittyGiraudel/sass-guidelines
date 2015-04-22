@@ -55,15 +55,7 @@ I oczywiście:
 
 * `main.scss`
 
-<figure role="group">
-  <img alt="One file to rule them all, One file to find Them, One file to bring them all, And in the Sass way merge them."
-     sizes="100vw"
-     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
-             /assets/images/sass-wallpaper_medium.jpg 900w,
-             /assets/images/sass-wallpaper_large.jpg 1200w,
-             /assets/images/sass-wallpaper_huge.jpg  1590w" />
-  <figcaption>Tapeta stworzona przez <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
-</figure>
+{% include images/wallpaper.html %}
 
 Co do zasady, możemy tu mówić o czymś takim:
 

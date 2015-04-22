@@ -52,6 +52,12 @@
       footer:
         content: "<TRANSLATION>"
       note: "<TRANSLATION>"
+      images:
+        color-functions: "<TRANSLATION>"
+        order-poll: "<TRANSLATION>"
+        sassdoc: "<TRANSLATION>"
+        wallpaper: "<TRANSLATION>"
+
     ```
 
     Note that `footer.content` is parsed as Markdown.

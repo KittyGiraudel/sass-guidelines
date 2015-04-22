@@ -463,15 +463,7 @@ Rzecz w tym, że te funkcje często nie prowadzą do takich rezultatów, jakich 
 
 Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnianych, jest niewątpliwie fakt, że zapewnia ona progresywne przejście do czerni (lub bieli) w trakcie zmniejszania proporcji głównego koloru, w czasie gdy funkcje `darken` i `lighten` w sposób o wiele bardziej nagły wytracają nasz kolor.
 
-<figure role="group">
-  <img alt="Illustration of the difference between lighten/darken and mix Sass functions"
-     sizes="100vw"
-     srcset="/assets/images/lighten-darken-mix_small.png  540w,
-             /assets/images/lighten-darken-mix_medium.png 900w,
-             /assets/images/lighten-darken-mix_large.png 1200w,
-             /assets/images/lighten-darken-mix_huge.png  1590w" />
-  <figcaption>Ilustracja pokazująca różnicę pomiędzy funkcjami <code>lighten</code>/<code>darken</code> i <code>mix</code>, stworzona przez <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stworzyć dwie, proste w użyciu, funkcje `tint` i `shade` (będące, co ciekawe, częścią [Compassa](http://compass-style.org/reference/compass/helpers/colors/#shade)), które dadzą ten sam efekt:
 
@@ -985,10 +977,7 @@ Istnieje również inny interesujący pogląd na porządkowanie reguł zwany [Co
 
 Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
 
-<figure role="group">
-  <img src="/assets/images/css-order-chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie.</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam Tobie, bądź tylko w swym wyborze konsekwentny.
 

@@ -103,15 +103,7 @@ SassDoc spełnia dwie zasadnicze funkcje:
 * wymusza ustandaryzowane komentarze z użyciem systemu opartego o przypisy, dla wszystkich elementów publicznego lub prywatnego API;
 * pozwala na generowanie w HTMLu dokumentacji danego API z użyciem jednego z wielu mechanizmów. (program CLI, Grunt, Gulp, Broccoli, Node...)
 
-<figure role="group">
-<img alt="Dokumentacja wygenerowana przez SassDoc"
-     sizes="100vw"
-     srcset="/assets/images/sassdoc-preview_small.png  540w,
-             /assets/images/sassdoc-preview_medium.png 900w,
-             /assets/images/sassdoc-preview_large.png 1200w,
-             /assets/images/sassdoc-preview_huge.png  1590w" />
-<figcaption>Dokumentacja wygenerowana przez SassDoc</figcaption>
-</figure>
+{% include images/sassdoc.html %}
 
 Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
