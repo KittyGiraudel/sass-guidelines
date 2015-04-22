@@ -282,7 +282,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-### Lecture complémentaire
+### Lectures complémentaires
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
