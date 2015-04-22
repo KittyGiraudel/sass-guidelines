@@ -66,54 +66,7 @@ And of course:
 
 Ideally, we can come up with something like this:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Typography rules
-|   ...                  # Etc…
-|
-|– components/
-|   |– _buttons.scss     # Buttons
-|   |– _carousel.scss    # Carousel
-|   |– _cover.scss       # Cover
-|   |– _dropdown.scss    # Dropdown
-|   ...                  # Etc…
-|
-|– layout/
-|   |– _navigation.scss  # Navigation
-|   |– _grid.scss        # Grid system
-|   |– _header.scss      # Header
-|   |– _footer.scss      # Footer
-|   |– _sidebar.scss     # Sidebar
-|   |– _forms.scss       # Forms
-|   ...                  # Etc…
-|
-|– pages/
-|   |– _home.scss        # Home specific styles
-|   |– _contact.scss     # Contact specific styles
-|   ...                  # Etc…
-|
-|– themes/
-|   |– _theme.scss       # Default theme
-|   |– _admin.scss       # Admin theme
-|   ...                  # Etc…
-|
-|– utils/
-|   |– _variables.scss   # Sass Variables
-|   |– _functions.scss   # Sass Functions
-|   |– _mixins.scss      # Sass Mixins
-|   |– _helpers.scss     # Class & placeholders helpers
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Etc…
-|
-|
-`– main.scss             # Main Sass file
-</code></pre></div>
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
@@ -226,72 +179,7 @@ In order to preserve readability, the main file should respect these guidelines:
 * a new line after the last import from a folder;
 * file extensions and leading underscores omitted.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'vendors/bootstrap';
-@import 'vendors/jquery-ui';
-
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/cover';
-@import 'components/dropdown';
-
-@import 'pages/home';
-@import 'pages/contact';
-
-@import 'themes/theme';
-@import 'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import vendors/bootstrap
-@import vendors/jquery-ui
-
-@import utils/variables
-@import utils/functions
-@import utils/mixins
-@import utils/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import components/buttons
-@import components/carousel
-@import components/cover
-@import components/dropdown
-
-@import pages/home
-@import pages/contact
-
-@import themes/theme
-@import themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02/index.html %}
 
 There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
 
@@ -301,86 +189,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 * a new line after the last import from a folder;
 * file extensions and leading underscores omitted.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  vendors/bootstrap,
-  vendors/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
@@ -391,35 +200,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Nav specificity fix.
- *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Nav specificity fix.
- *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/04/index.html %}
 
 ### Further reading
 

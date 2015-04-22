@@ -21,132 +21,23 @@ The docs talk about *global variable shadowing*. When declaring a variable that 
 
 The following code snippet explains the *variable shadowing* concept.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Initialize a global variable at root level.
-$variable: 'initial value';
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Create a local variable that shadows the global one.
-  $variable: 'local value';
-
-  // Include the mixin: it overrides the global variable.
-  @include global-variable-overriding;
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable;
-}
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Initialize a global variable at root level.
-$variable: 'initial value'
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Create a local variable that shadows the global one.
-  $variable: 'local value'
-
-  // Include the mixin: it overrides the global variable.
-  +global-variable-overriding
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/01/index.html %}
 
 ## `!default` flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
 Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Developer’s own variable
-$baseline: 2em;
-
-// Your library declaring `$baseline`
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Developer’s own variable
-$baseline: 2em
-
-// Your library declaring `$baseline`
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/03/index.html %}
 
 ## `!global` flag
 
 The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$baseline: 2em;
-
-// Nope
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$baseline: 2em
-
-// Nope
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/04/index.html %}
 
 ## Multiple variables or maps
 
@@ -154,47 +45,4 @@ There are advantages of using maps rather than multiple distinct variables. The 
 
 Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer's name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer’s name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer’s name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer's name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}

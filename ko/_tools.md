@@ -60,7 +60,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 다행히도, SCSS-lint 권고는 이 문서에서 설명한 것과 유사합니다. Sass Guidelines에 따라 SCSS-lint를 구성하기 위해, 다음의 설정을 추천합니다:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>SCSS lint를 Grunt 빌드 프로세스에 추가하고 싶으시다면, 기쁘게도 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>라고 하는 Grunt 플러그인이 있습니다.</p>

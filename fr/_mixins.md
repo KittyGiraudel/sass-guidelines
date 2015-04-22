@@ -11,62 +11,11 @@ Mais je dois vous mettre en garde contre l’abus de mixins. Là encore, le plus
 
 Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (c’est-à-dire pas par pure coïncidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d’être déclaré dans un mixin (sans argument).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Helper to clear inner floats
-/// @author Nicolas Gallagher
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Helper to clear inner floats
-/// @author Nicolas Gallagher
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix
-  &::after
-    content: ''
-    display: table
-    clear: both
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/01/index.html %}
 
 Un autre exemple valable serait un mixin permettant de dimensionner un élément, qui définirait à la fois sa largeur et sa hauteur, en même temps. Non seulement il simplifie la saisie du code mais il en facilite également la lecture.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Helper to size an element
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Helper to size an element
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/02/index.html %}
 
 ### Lectures complémentaires
 
@@ -78,77 +27,13 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 Lorsque vous avez affaire à un nombre inconnu d’arguments dans un mixin, utilisez toujours une `arglist` plutôt qu’une liste. On peut voir `arglist` comme le 8<sup>e</sup> type de données de Sass, caché et non documenté, qui est implicitement utilisé lorsqu’on passe un nombre arbitraire d’arguments dans un mixin ou une fonction dont la signature contient `...`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin shadows($shadows...) {
-  // type-of($shadows) == 'arglist'
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=shadows($shadows...)
-  // type-of($shadows) == 'arglist'
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/03/index.html %}
 
 Quand vous construisez un mixin qui accepte quelques arguments (disons 3 ou plus), pensez à deux fois avant de les merger sous forme de liste ou de map en croyant que ce sera plus facile que de les passer un par un.
 
 Sass gère très intelligemment les mixins et les déclarations de fonction, vous pouvez passer une liste ou une map comme une `arglist` dans une fonction ou un mixin de façon à ce qu'ils soient traités comme une série d’arguments.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin dummy($a, $b, $c) {
-  // ...
-}
-
-// Oui
-@include dummy(true, 42, 'kittens');
-
-// Oui mais Non
-$params: (true, 42, 'kittens');
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
-
-// Oui
-$params: (true, 42, 'kittens');
-@include dummy($params...);
-
-// Oui
-$params: (
-  'c': 'kittens',
-  'a': true,
-  'b': 42,
-);
-@include dummy($params...);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=dummy($a, $b, $c)
-  // ...
-
-// Oui
-+dummy(true, 42, 'kittens')
-
-// Oui mais Non
-$params: (true, 42, 'kittens')
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3))
-
-// Oui
-$params: (true, 42, 'kittens')
-+dummy($params...)
-
-// Oui
-$params: ( 'c': 'kittens', 'a': true, 'b': 42,)
-+dummy($params...)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/04/index.html %}
 
 ### Lectures complémentaires
 
@@ -162,82 +47,15 @@ Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si v
 
 Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe constructeur.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Non
-@mixin transform($value) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  transform: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Non
-=transform($value)
-  -webkit-transform: $value
-  -moz-transform: $value
-  transform: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/05/index.html %}
 
 Faites-le plus intelligemment.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin helper to output vendor prefixes
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin helper to output vendor prefixes
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-=prefix($property, $value, $prefixes: ())
-  @each $prefix in $prefixes
-    -#{$prefix}-#{$property}: $value
-
-  #{$property}: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/06/index.html %}
 
 L’utilisation de ce mixin devrait être assez simple&nbsp;:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  @include prefix(transform, rotate(90deg), ('webkit', 'ms');
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  +prefix(transform, rotate(90deg), ('webkit', 'ms')
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/07/index.html %}
 
 Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne peut pas traiter les polyfills complexes tels que ceux requis pour Flexbox. En ce sens, Autoprefixer est une bien meilleure solution.
 

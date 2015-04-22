@@ -60,7 +60,7 @@
 
 幸运的是，本文档的描述非常类似于SCSS-lint的使用建议。为了根据Sass样式指南配置SCSS-lint，建议如下配置：
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>如果你想将SCSS-lint插入到Grunt构建过程中，那么Grunt插件<a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>一定会对你有所帮助。</p>

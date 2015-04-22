@@ -9,45 +9,11 @@ Toutefois, la présence de boucles implique généralement une logique légèrem
 
 La boucle `@each` est certainement la plus utilisée des trois boucles de Sass. Elle fournit une API propre pour itérer sur une liste ou une map.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $theme in $themes {
-  .section-#{$theme} {
-    background-color: map-get($colors, $theme);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $theme in $themes
-  .section-#{$theme}
-    background-color: map-get($colors, $theme)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/01/index.html %}
 
 Lorsque vous effectuez une itération sur une map, utilisez toujours les noms de variables `$key` et `$value` pour renforcer la cohérence.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $key, $value in $map {
-  .section-#{$key} {
-    background-color: $value;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $key, $value in $map
-  .section-#{$key}
-    background-color: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/02/index.html %}
 
 De plus, assurez-vous de respecter ces recommandations qui aideront à préserver la lisibilité&nbsp;:
 
@@ -58,24 +24,7 @@ De plus, assurez-vous de respecter ces recommandations qui aideront à préserve
 
 La boucle `@for` peut être utile en lien avec les pseudo-classes CSS `:nth-*`. Mis à part ce scénario, préférez la boucle `@each` pour les itérations.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@for $i from 1 through 10 {
-  .foo:nth-of-type(#{$i}) {
-    border-color: hsl($i * 36, 50%, 50%);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@for $i from 1 through 10
-  .foo:nth-of-type(#{$i})
-    border-color: hsl($i * 36, 50%, 50%)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/03/index.html %}
 
 Utilisez toujours `$i` comme nom de variable pour respecter les conventions habituelles, à moins d’avoir une bonne raison de ne pas le faire. N’utilisez jamais le mot-clé `to`, mais toujours le mot-clé `through`. Nombreux sont les développeurs qui ne connaissent pas cette variante Sass.
 

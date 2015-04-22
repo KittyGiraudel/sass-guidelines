@@ -11,139 +11,16 @@ Si toutefois vous en avez un jour besoin, voici les recommandations à suivre&nb
 * `@else` sur la même ligne que l’accolade fermante qui précède (`}`)&nbsp;;
 * Toujours un saut de ligne après l’accolade fermante finale (`}`) sauf si la ligne suivante est aussi une accolade fermante (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Oui
-@if $support-legacy {
-  // ...
-} @else {
-  // ...
-}
-
-// Non
-@if ($support-legacy == true) {
-  // ...
-}
-@else {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Oui
-@if $support-legacy
-  // ...
-@else
-  // ...
-
-// Non
-@if ($support-legacy == true)
-  // ...
-@else
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/01/index.html %}
 
 Lorsqu’on teste si une valeur est fausse, on utilise toujours le mot-clé `not` plutôt que de tester sur `false` ou `null`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Oui
-@if not index($list, $item) {
-  // ...
-}
-
-// Non
-@if index($list, $item) == null {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Oui
-@if not index($list, $item)
-  // ...
-
-// Non
-@if index($list, $item) == null
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/02/index.html %}
 
 Veillez à toujours mettre la partie variable à gauche de la déclaration et le résultat (in)attendu à droite. Les structures conditionnelles inversées sont souvent plus difficiles à lire, surtout pour les développeurs inexpérimentés.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@if $value == 42 {
-  // ...
-}
-
-// Nope
-@if 42 == $value {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@if $value == 42
-  // ...
-
-// Nope
-@if 42 == $value
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/03/index.html %}
 
 Lorsqu’on utilise des structures conditionnelles à l’intérieur d’une fonction, toujours s’assurer que la fonction a une déclaration `@return` en dehors de tout bloc conditionnel.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Oui
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// Non
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Oui
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// Non
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04/index.html %}

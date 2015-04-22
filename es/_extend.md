@@ -24,33 +24,7 @@ Hay escenarios donde los selectores *extend* pueden ser de gran ayuda e incluso,
 
 Si vas a utilizar *extend*, déjame recordarte que no se lleva muy bien con los bloques `@media`. Como ya sabrás, Sass es incapaz de extender un selector exterior desde el interior de una *media query*. Al hacerlo el compilador se bloquea, diciéndote que no puedes hacer esto. No está bien. Especialmente porque las *media queries* son lo más usado últimamente.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  content: 'foo';
-}
-
-@media print {
-  .bar {
-    // Esto no funciona. Peor: se bloquea
-    @extend .foo;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  content: 'foo'
-
-@media print
-  .bar
-    // Esto no funciona. Peor: se bloquea
-    @extend .foo
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/extend/01/index.html %}
 
 > No puedes usar @extend en un selector externo dentro de un @media.<br>
 > Solo puedes usar @extend en un selector dentro de una misma directiva.
