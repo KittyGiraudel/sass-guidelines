@@ -17,7 +17,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 {% include snippets/mixins/02/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
@@ -35,7 +35,7 @@ Sass gère très intelligemment les mixins et les déclarations de fonction, vou
 
 {% include snippets/mixins/04/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
@@ -59,7 +59,7 @@ L’utilisation de ce mixin devrait être assez simple&nbsp;:
 
 Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne peut pas traiter les polyfills complexes tels que ceux requis pour Flexbox. En ce sens, Autoprefixer est une bien meilleure solution.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

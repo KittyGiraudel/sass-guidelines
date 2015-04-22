@@ -11,7 +11,7 @@ Dejemos `@debug` al lado, ya que claramente está pensado para depurar SassScrip
 
 Ahora, hay un montón de sitio en un proyecto Sass para las advertencias y los errores. Básicamente, cualquier mixin o función que espera un tipo o un argumento específico podría lanzar un error si algo saliese mal o mostrar una advertencia cuando se hace una suposición.
 
-### Más información
+###### Más información
 
 * [Introdución al manejo de errores -En inglés](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Construcciones de un Logger Mixin -En inglés](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)

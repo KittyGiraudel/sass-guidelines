@@ -11,7 +11,7 @@ Sass 개발자들에 의해 간과되는 기능이 하나 있다면, 그것은 �
 
 Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기본적으로 특정 유형의 매개변수를 기대하는 믹신이나 펑션은 뭔가가 잘못되었을 때 오류를 던지거나, 혹은 추정 시에는 경고를 표시합니다.
 
-### 참고
+###### 참고
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)

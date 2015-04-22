@@ -40,7 +40,7 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -71,7 +71,7 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -105,6 +105,6 @@ $su-configuration: ( ... )
   <p>자동 네임스페이스는 단연 사스 4.0에서 곧 있을 `@import` 개선의 설계 목표입니다. 그것이 결실을 맺기에 가까워지면서, 수동 네임스페이스는 점점 유용성이 떨어질 것입니다: 결국에는, 수동 네임스페이스를 이용한 라이브러리는 실제로 사용하기가 더 어려워질 수도 있습니다.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

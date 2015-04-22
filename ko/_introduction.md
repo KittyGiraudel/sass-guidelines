@@ -40,7 +40,7 @@ Sass로 쓰인 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise)
 
 또한, 한 번 더 [Harry Roberts](https://csswizardry.com)를 인용하자면, **실용주의가 완벽을 이깁니다**. 어느 순간, 아마도 여러분은 여기에 설명된 규칙을 거스르는 스스로를 발견하실 겁니다. 만약 그것이 타당하다면, 만약 그것이 옳게 느껴진다면, 그렇게 하세요. 코드는 목적이 아니라 수단에 불과합니다.
 
-### 참고
+###### 참고
 
 * [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
 * [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)

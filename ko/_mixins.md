@@ -68,7 +68,7 @@
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
@@ -150,7 +150,7 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
@@ -241,7 +241,7 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 이것은 조악한 해결책이라는 점을 명심하세요. 예를 들면, Flexbox에 필요한 것과 같은 복잡한 폴리필은 처리하지 못합니다. 그런 면에서, Autoprefixer를 사용하는 것이 훨씬 나은 선택입니다.
 
-### 참고
+###### 참고
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

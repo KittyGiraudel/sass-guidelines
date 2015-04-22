@@ -40,7 +40,7 @@ Czasami warto się trochę powtórzyć i dzięki temu sprawić, że nasz kod sta
 
 Poza tym, pozwólcie że zacytuję raz jeszcze [Harry’ego Robertsa](https://csswizardry.com) - **pragmatyzm wygrywa z perfekcjonizmem**. Na jakimś etapie zapewne stwierdzisz, że to co robisz nie jest do końca zgodne z zasadami opisanymi w tym przewodniku. Jeżeli ma to sens, jeżeli wydaje Ci się to prawidłowe - rób to po swojemu. Nie zapominajmy wszak, że kod jest jedynie środkiem, nie celem.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła))
 * [Zasada DRY](http://pl.wikipedia.org/wiki/DRY)

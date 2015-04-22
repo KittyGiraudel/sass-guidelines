@@ -19,7 +19,7 @@ Llegados a este punto, cualquier nomenclatura que deje claro que el diseño no e
   <p>Los ejemplos anteriores utilizan mapas anidados para definir los puntos de ruptura, sin embargo, esto realmente depende de qué tipo de gestor de *breakpoints* utilices. Puedes optar por cadenas en lugar de mapas para una mayor flexibilidad (por ejemplo <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-### Más información
+###### Más información
 
 * [Nomenclaturas para Media Queries -En inglés](http://css-tricks.com/naming-media-queries/)
 
@@ -33,7 +33,7 @@ Una vez que tus puntos de ruptura tengan la nomenclatura deseada, necesitas una 
   <p>Obviamente, este es un gestor de puntos de ruptura bastante simplista. Si necesitas un gestor de puntos de interrupción ligeramente más permisivo, te recomiendo que no reinventes la rueda y utilices algo que ya esté probado y comprobado, como por ejemplo<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-### Más información
+###### Más información
 
 * [Gestionando Responsive Breakpoints en Sass -En inglés](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Enfoques para media queries en Sass -En inglés](http://css-tricks.com/approaches-media-queries-sass/)
@@ -55,7 +55,7 @@ Es posible que escuches que este acuerdo dará como resultado en CSS, bloques du
 
 Ahora, si realmente te preocupa las *media queries* duplicadas, puedes usar una herramienta para fusionarlas como por ejemplo [esta joya](https://github.com/aaronjensen/sass-media_query_combiner) sin embargo, siento que debo advertirte de los posibles efectos secundarios ocasionados al mover el código de lugar. Sabes que el orden del código es importante.
 
-### Más información
+###### Más información
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Media Queries en línea o combinadas, Fight! -En inglés](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)

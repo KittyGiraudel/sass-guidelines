@@ -40,7 +40,7 @@ Parfois, il vaut mieux se répéter un peu pour conserver un code maintenable pl
 
 Encore une citation de [Harry Roberts](https://csswizardry.com)&nbsp;: **le pragmatisme doit prendre le pas sur la perfection**.  Il est possible qu’à certains moments vous soyez amené à aller contre les règles énoncées ici. Si ça fait sens, si ça vous paraît juste, faites-le. Le code est un moyen, pas une fin en soi.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Principe KISS](http://fr.wikipedia.org/wiki/Principe_KISS)
 * [Principe DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)

@@ -21,7 +21,7 @@ W każdym bądź razie, w żadnym wypadku nie zabraniam używania Compassu, choc
   <p>Ruby Sass jest obecnie gruntownie optymalizowany i prace te są ukierunkowane w szczególności na rozbudowane style, z wieloma funkcjami i mixinami. Wydajność i szybkość kompilacji powinna zostać znacznie poprawiona, dzięki czemu Compass i inne frameworki nie będą tak bardzo spowalniać Sassa.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,7 +39,7 @@ Jeśli nie jesteś przywiązany do określonego systemu, zapewne ucieszysz się 
 
 Możesz też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). W każdym bądź razie, wybór nie będzie miał olbrzymiego wpływu na styl Twojego kodu, więc swoboda decyzji należy tylko i wyłącznie do Ciebie.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -67,7 +67,7 @@ Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do
   <p>Poza tym, jeśli jesteś w trakcie poszukiwania jakiegoś fajnego rozwiązania, które współpracuje z SCSS-lint i jemu podobnymi, chłopaki z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) pracują obecnie nad <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

@@ -117,7 +117,7 @@ URL 역시 위와 동일한 이유로 따옴표로 감싸여야 합니다:
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -336,7 +336,7 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -519,7 +519,7 @@ $main-theme-color: $sass-pink
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 펑션은 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 펑션은 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -610,7 +610,7 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [SassyLists](http://sassylists.com)
 
@@ -744,7 +744,7 @@ $breakpoints: (
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -861,7 +861,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -993,7 +993,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1232,7 +1232,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 모든 것이 그렇듯이, 세부사항은 크게 상관이 없으며, 일관성이 핵심입니다. 선택자 내포에 충분한 확신이 있다면 선택자 내포를 사용하세요. 단지 여러분의 팀 전체가 그 선택에 동의하는지 확실히 하시면 됩니다.
 
-### 참고
+###### 참고
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

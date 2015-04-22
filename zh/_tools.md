@@ -21,7 +21,7 @@
   <p>Ruby Sass目前正着手进行一些很棒的优化，目标是通过运用诸多函数和混合宏实现具有深度逻辑的样式。它们应该显著改善性能，而这往往是Compass和其他框架拖慢Sass的原因。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,7 +39,7 @@
 
 或者你可以处理地更轻松些，就像使用 [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids)的感觉。总而言之，任何选择都不会对你的代码风格有过多影响，所以这一点上一切取决于你。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -67,7 +67,7 @@
   <p>此外，如果你在寻找一个运行SCSS-lint的简洁工具，那么<a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...)正在开发的<a href="https://houndci.com/">Hound</a>也会对你有所帮助。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

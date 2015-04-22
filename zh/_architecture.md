@@ -15,7 +15,7 @@
   <p>我认为，项目之间的结构是极其具体的。你完全可以随意摒弃或调整建议方案，拥有最适合自己需求的体系系统。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -421,7 +421,7 @@ sass/
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

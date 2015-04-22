@@ -40,7 +40,7 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -71,7 +71,7 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -105,6 +105,6 @@ $su-configuration: ( ... )
   <p>需要注意的是，自动命名空间功能绝对是即将到来的Sass4.0中重构的<code>@import</code>的一个设计目标。随着即将取得结果，将会越来越少的需要手动命名，最终，手动命名库名实际上会越来越难用。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

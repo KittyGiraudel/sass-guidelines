@@ -11,7 +11,7 @@ Mettons `@debug` de côté puisqu’il est clairement prévu pour déboguer Sass
 
 Il y a bien des possibilités d’avertissements et d’erreurs dans Sass, n’importe quel mixin ou fonction qui attend un argument ou un type spécifique pourrait envoyer une erreur si quelque chose n’allait pas ou afficher un avertissement lorsque vous faites une hypothèse.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)

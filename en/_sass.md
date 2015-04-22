@@ -13,7 +13,7 @@ The point is not to turn CSS into a fully-featured programming language; Sass on
 
 That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
 
-### Further reading
+###### Further reading
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Coming back to choosing your compiler. Actually, it all depends on your project.
 
 On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let’s say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
 
-### Further reading
+###### Further reading
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
@@ -47,7 +47,7 @@ Sass’s whitespace-sensitive syntax relies on indentation to get rid of braces,
 
 I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <span data-toggle="aside" class="link-like" role="button" aria-expanded>options panel</span>.
 
-### Further reading
+###### Further reading
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,7 +69,7 @@ The idea behind postprocessors is that once browsers support new features (e.g. 
 
 While providing tomorrow’s syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we’ll get back to this.
 
-### Further reading
+###### Further reading
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

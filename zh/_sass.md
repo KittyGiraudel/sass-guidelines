@@ -13,7 +13,7 @@ Sass存在的关键不是将CSS变成一种全功能编程语言，它只是想�
 
 话虽如此，使用这些功能的方式却是多种多样的。有一些是好的，有一些是坏的，还有一些令人费解。这份样式指南就是为了给你一个统一的和历经实践的方式来编写Sass代码。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -29,7 +29,7 @@ Sass存在的关键不是将CSS变成一种全功能编程语言，它只是想�
 
 另一方面，LibSass更关注于自身与项目之间的整合。如果你想在非Ruby项目中使用，比如NodeJS，[node-sass](https://github.com/sass/node-sass) 会是个不错的选择。使用LibSass最主要的优势还是因为它的速度，而且比Ruby Sass更快。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
@@ -47,7 +47,7 @@ Sass的空白敏感语法通过缩进以摆脱大括号、分号和其他符号�
 
 我自己更喜欢SCSS，因为它更接近CSS的原生面貌，对开发者来说具有友好性。因此，样式指南全文将使用SCSS而不是Sass语法格式来演示。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,7 +69,7 @@ Sass的空白敏感语法通过缩进以摆脱大括号、分号和其他符号�
 
 虽然在当下提供对未来语法功能的支持是一件很了不起的事情，但我还是喜欢在大多数的工作中使用Sass。当然，在一些情况下我认为后处理器比Sass更适合，比如CSS前缀。稍后我们会讲到这个问题。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

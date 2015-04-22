@@ -117,7 +117,7 @@ URL最好也用引号包裹起来，原因和上面所描述一样：
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -336,7 +336,7 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -519,7 +519,7 @@ $main-theme-color: $sass-pink
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method">函数的设计初衷是为了更流畅地调试属性——以实际的高低为调试基础。它如同<code>mix</code>一样好用，并且提供了更清晰地调用约定。比例因子并不完全相同。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -610,7 +610,7 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [SassyLists](http://sassylists.com)
 
@@ -744,7 +744,7 @@ $breakpoints: (
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -860,7 +860,7 @@ $breakpoints: (
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -992,7 +992,7 @@ $breakpoints: (
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对CSS进行排序，按类型顺序声明，Gzip压缩文件大小平均达到2.7%,而按字母顺序排序压缩的文件大小平均达到1.3%。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1231,7 +1231,7 @@ Sass中一个正在被众多开发者滥用的功能，就是**选择器嵌套**
 
 这所有的一切，有些是无关紧要的细节，关键是要保持一致性。如果你觉得完全有信心搞定选择器嵌套，然后你就使用了选择器嵌套。可你还要确保你的整个团队也能搞定选择器的嵌套。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

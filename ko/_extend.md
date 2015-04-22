@@ -62,7 +62,7 @@
 
 요약하자면, 어떤 특정한 상황 아래가 아니라면 `@extend` 지시어를 사용하지 말라고 조언하겠습니다. 그러나 그것을 완전히 금하라고까진 않겠습니다.
 
-### 참고
+###### 참고
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

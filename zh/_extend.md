@@ -61,7 +61,7 @@
 
 总而言之，除非在某些特殊情况下，否则我**建议不要使用`@extend`指令**，但我不会禁用它。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

@@ -15,7 +15,7 @@ Yo mismo, utilizo un método que resulta ser bastante similar a [SMACSS](https:/
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta para que encuentres un sistema que se adapte a tus necesidades.</p>
 </div>
 
-### Más información
+###### Más información
 
 * [Arquitectura para un proyecto Sass -En inglés](http://www.sitepoint.com/architecture-sass-project/)
 * [Una mirada a las diferentes arquitecturas Sass -En inglés](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -202,7 +202,7 @@ Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizard
 
 {% include snippets/architecture/04/index.html %}
 
-### Más información
+###### Más información
 
 * [shame.css -En inglés](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - Entrevista .net completa -En inglés](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

@@ -36,7 +36,7 @@ Si vous utilisez `@extend`, rappelez-vous également qu’il ne fonctionne pas b
 
 Pour résumer, je conseille de **ne pas utiliser la directive `@extend`**, sauf dans des circonstances particulières, mais je n’irai pas jusqu’à l’interdire.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

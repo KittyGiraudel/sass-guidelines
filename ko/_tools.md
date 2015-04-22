@@ -21,7 +21,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
   <p>Ruby Sass는 현재 많은 펑션과 믹신을 가진 복잡한 로직의 스타일을 구체적으로 겨냥한 중요한 최적화 작업 중에 있습니다. 이는 Compass와 다른 프레임워크가 더이상 Sass의 속도를 늦추지 않을 수 있을 정도로 성능을 극적으로 향상시킬 것입니다.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,7 +39,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 혹은 [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) 같이 좀 더 가벼운 걸로 갈 수도 있습니다. 대부분의 경우, 뭘 선택하든 여러분의 코딩 스타일에 큰 영향을 미치진 않을 것이므로, 선택은 여러분에게 달렸습니다.
 
-### 참고
+###### 참고
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -67,7 +67,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
   <p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="http://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat...)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

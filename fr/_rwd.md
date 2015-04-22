@@ -19,7 +19,7 @@ Ici, il est clair que toute convention de nommage clairement déconnectée de to
   <p>L’exemple qui précède utilise des maps imbriquées pour définir les points de rupture, mais tout dépend de la façon dont vous gérez vos points de rupture. On pourrait tout aussi bien choisir des chaînes de caractères plutôt que des maps internes, pour plus de flexibilité (p.ex. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -33,7 +33,7 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
   <p>Évidemment, c’est un gestionnaire de points de rupture assez simpliste, si vous avez besoin d’un gestionnaire plus permissif, et si vous ne voulez pas réinventer la roue, je vous recommande <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a> qui ont fait leurs preuves.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -55,7 +55,7 @@ On vous dira que cette convention a pour effet la duplication de media queries e
 
 Maintenant, si vous êtes vraiment soucieux d’éviter toute duplication, vous pouvez utiliser un outil pour merger les media queries, comme [cette gem](https://github.com/aaronjensen/sass-media_query_combiner), cependant je dois vous avertir de possibles effets collatéraux liés au déplacement de code —&nbsp;n’oubliez pas que l’ordre des sources est important en CSS.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)

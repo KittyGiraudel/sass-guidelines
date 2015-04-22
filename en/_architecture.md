@@ -15,7 +15,7 @@ I, myself, use an approach that happens to be quite similar to [SMACSS](https://
   <p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p>
 </div>
 
-### Further reading
+###### Further reading
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -202,7 +202,7 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 
 {% include snippets/architecture/04/index.html %}
 
-### Further reading
+###### Further reading
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

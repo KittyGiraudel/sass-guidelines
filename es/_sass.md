@@ -13,7 +13,7 @@ La idea no es convertir a CSS en un lenguaje de programación totalmente funcion
 
 Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta giuía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
 
-### Más información
+###### Más información
 
 * [Sass - En inglés](http://sass-lang.com)
 * [Documentación de Sass - En inglés](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Volviendo al tema, la tarea de elegir un compilador, en realidad, dependerá de 
 
 En los proyectos que no están en Ruby, pero que necesitan una integración en tu flujo de trabajo, LibSass es probablemente una mejor idea, ya que se dedica a poner dicho código en un contenedor específico para cada lenguaje. Así que si quieres utlizar, por ejemplo, NodeJS,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
 
-### Más información
+###### Más información
 
 * [LibSass - En inglés](https://github.com/sass/libsass)
 * [Conociendo LibSass -En inglés](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
@@ -47,7 +47,7 @@ La sintaxis sensible a los espacios en blanco de Sass se basa en las tabulacione
 
 Personalmente, prefiero SCSS a Sass ya que es mucho parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <span data-toggle="aside" class="link-like" role="button" aria-expanded>panel de opciones</span>.
 
-### Más información
+###### Más información
 
 * [¿Cuál es la diferencia entre Sass y SCSS? - En inglés](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,7 +69,7 @@ La idea detrás de los post-procesadores es que una vez los navegadores soportan
 
 Aunque proporcionar la sintaxis del mañana parezca una idea noble, tengo que decir, que aún así prefiero usar Sass para la mayoría de las tareas. Sin embargo, hay algunas ocasiones en las que creo que los post-procesadores son más adecuados que Sass y similares - por ejemplo, con los prefijos CSS - pero ya volveremos a ello más adelante.
 
-### Más información
+###### Más información
 
 * [LESS - En inglés](http://lesscss.org/)
 * [Stylus - En inglés](http://learnboost.github.io/stylus/)

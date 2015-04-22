@@ -40,7 +40,7 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -71,7 +71,7 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -105,6 +105,6 @@ $sj-configuration: ( ... )
   <p>Warto zaznaczyć, że automatyczne ograniczanie przestrzeni nazw jest jednym ze składników nadchodzących zmian w funkcji <code>@import</code> w wersji 4.0 Sassa. Jak już odpowiednie zmiany wejdą w życie, ręczne ograniczanie przestrzeni stanie się coraz to mniej użyteczne, a w końcu stanie się nawet problematyczne.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

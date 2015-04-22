@@ -63,7 +63,7 @@ Las URLs deben ir entre comillas simples por las mismas razones que se explican 
 
 {% include snippets/syntax/06/index.html %}
 
-### Más información
+###### Más información
 
 * [Todo lo que necesitas saber sobre la interpolación en Sass -En inglés](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings -En inglés](https://github.com/HugoGiraudel/SassyStrings)
@@ -116,7 +116,7 @@ No hace falta decir que **los números mágicos son una plaga y que se deben evi
 
 {% include snippets/syntax/13/index.html %}
 
-### Más información
+###### Más información
 
 * [Usa longitudes, no cadenas -En inglés](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Añadir correctamente una unidad a un número  -En inglés](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -182,7 +182,7 @@ Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes cre
   <p>La función <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (escala de color) está diseñada para escalar las propiedades de una forma más fluida, al tener en cuenta qué tan altas o bajas son en el momento inicial. Debe proporcionar resultados tan agradables como los de <code>mix</code> pero con una nomenclatura mucho más clara. Sin embargo, el factor de escalado no es exactamente el mismo.</p>
 </div>
 
-### Más información
+###### Más información
 
 * [Guía visual para las funciones de color en Sass y Compass -En inglés](http://jackiebalzer.com/color)
 * [Cómo ir de un color a otro programáticamente  -En inglés](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -208,7 +208,7 @@ Al añadir nuevos elementos a una lista, utiliza siempre la API proporcionada. N
 
 {% include snippets/syntax/20/index.html %}
 
-### Más información
+###### Más información
 
 * [Entendiendo las listas Sass -En inglés](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists -En inglés](http://sassylists.com)
@@ -242,7 +242,7 @@ Si tienes interés en conocer la profundidad del mapa, añade la siguiente funci
 
 {% include snippets/syntax/23/index.html %}
 
-### Más información
+###### Más información
 
 * [Usando mapas Sass -En inglés](http://www.sitepoint.com/using-sass-maps/)
 * [Depurando mapas Sass -En inglés](http://www.sitepoint.com/debugging-sass-maps/)
@@ -282,7 +282,7 @@ Ejemplo:
 
 {% include snippets/syntax/25/index.html %}
 
-### Más información
+###### Más información
 
 * [Anatomía de un conjunto de reglas -En inglés](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -318,7 +318,7 @@ Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo.
   <p>Un <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
 </div>
 
-### Más información
+###### Más información
 
 * [CSS Comb -En inglés](https://github.com/csscomb/csscomb.js)
 * [CSS concentrico -En inglés](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -387,7 +387,7 @@ Reescribiendo nuestro ejemplo anterior, se vería algo asi:
 
 Como con todo, los detalles son algo irrelevante, la coherencia es la clave. Si te sientes completamente confiado con la anidaciones de selectores, entonces utilizala. Sólo asegurate de que todo tu equipo está de acuerdo con ello.
 
-### Más información
+###### Más información
 
 * [Cuidado con la anidación de selectores -En inglés](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [La regla del inicio -En inglés](http://thesassway.com/beginner/the-inception-rule)
