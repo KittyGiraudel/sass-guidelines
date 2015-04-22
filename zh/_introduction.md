@@ -40,7 +40,7 @@
 
 此外，请允许我再一次引用[Harry Roberts](https://csswizardry.com)的观点，**实用胜过完美**。有些时候，你可能会发现自己违背了这里所描述的规则。如果感觉自己的方式有道理，感觉很正确，那就继续做吧。编写代码从来都不是一家之言。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
 * [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)

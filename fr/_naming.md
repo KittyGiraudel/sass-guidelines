@@ -15,7 +15,7 @@ En ce qui concerne les variables, les fonctions et les mixins, nous allons nous 
 
 {% include snippets/naming/01/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -27,7 +27,7 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
 
 {% include snippets/naming/02/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -43,6 +43,6 @@ Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné �
   <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d’&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

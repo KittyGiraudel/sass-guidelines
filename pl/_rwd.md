@@ -57,7 +57,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -107,7 +107,7 @@ W momencie gdy Twoje breakpointy są już nazwane, potrzebujesz sposobu by ich u
   <p>Jeśli potrzebujesz rozwiązania bardziej rozbudowanego, zalecam nie odkrywać Ameryki na nowo lecz sprawdzić to, co już istnieje, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -162,7 +162,7 @@ Możesz usłyszeć opinie, że taka konwencja prowadzi do duplikowania media que
 
 Jeśli jednak masz obawy co do duplikowania media queries, istnieją takie narzędzia do ich scalania, jak [ten gem](https://github.com/aaronjensen/sass-media_query_combiner). Muszę Cię jednak ostrzec przed możliwymi skutkami ubocznymi przenoszenia z miejsca na miejsce kodu CSS. Należy wszak pamiętać, że w tym wypadku kolejność źródłowa ma kluczowe znaczenie.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)

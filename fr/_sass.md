@@ -13,7 +13,7 @@ Il ne s’agit pas de transformer CSS en langage de programmation. L’intention
 
 Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommendations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Pour revenir au choix de votre compilateur, en fait tout dépend de votre projet
 
 Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous utilisez NodeJS par exemple, [node-sass](https://github.com/sass/node-sass) est tout indiqué.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
@@ -47,7 +47,7 @@ La syntaxe de Sass repose sur l’indentation pour se débarrasser des accolades
 
 Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus accessible aux développeurs. C’est pourquoi SCSS est la syntaxe par défaut tout au long de ce document. Si vous préférez la syntaxe Sass indentée, vous pouvez choisir cette option dans le <span data-toggle="aside" class="link-like" role="button" aria-expanded>panneau des options</span>.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,7 +69,7 @@ L’idée intéressante derrière les postprocesseurs est qu’une fois la compa
 
 Même s’il peut être intéressant de travailler dès aujourd’hui avec la syntaxe de demain, je préfère pour ma part utiliser Sass pour des tâches plus courantes. Cependant, il est des cas où je pense que les postprocesseurs sont plus adaptés que Sass et les autres —&nbsp;par exemple pour les préfixes CSS&nbsp;— mais nous reviendrons là-dessus tout à l’heure.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

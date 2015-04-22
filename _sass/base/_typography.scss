@@ -1,7 +1,7 @@
 /**
  * Vertical rhythm
  */
-h1, h2, h3, h4, p, ul, ol, pre, img {
+h1, h2, h3, h4, h6, p, ul, ol, pre, img {
   @include container;
   @include vertical-rhythm;
 }
@@ -36,7 +36,7 @@ blockquote {
 /**
  * Headings
  */
-h1, h2, h3 {
+h1, h2, h3, h6 {
   @include prefix(hyphens, auto, webkit moz);
   text-transform: capitalize;
   position: relative;
@@ -56,16 +56,17 @@ h2 {
   color: $secondary-color;
 }
 
-h3 {
+h3, h6 {
   margin-top: 1.5rem;
   color: #808c99;
   text-transform: uppercase;
+  font-size: 1em;
 }
 
 // Russian do not capitalize every word in a header
 // See https://github.com/HugoGiraudel/sass-guidelines/issues/163
 :lang(ru) {
-  h1, h2, h3 {
+  h1, h2, h3, h6 {
     text-transform: initial;
   }
 }

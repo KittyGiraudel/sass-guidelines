@@ -62,7 +62,7 @@ Jeśli zamierzasz korzystać z tej dyrektywy, musisz także wiedzieć, że nie w
 
 Podsumowując, **przestrzegam przed korzystaniem z dyrektywy `@extend`**, chyba że istnieją do tego specyficzne przesłanki. Nie twierdzę jednak, że `@extend` powinien być absolutnie zakazany.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

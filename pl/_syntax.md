@@ -117,7 +117,7 @@ Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -339,7 +339,7 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -522,7 +522,7 @@ Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stwor
   <p>Funkcja <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -613,7 +613,7 @@ $shadows: $shadows, $shadow
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [SassyLists](http://sassylists.com)
 
@@ -747,7 +747,7 @@ Jeśli jesteś zainteresowany głębokością danej mapy, dodaj również poniż
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -864,7 +864,7 @@ Przykład:
   </div>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -996,7 +996,7 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
 </div>
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1235,7 +1235,7 @@ Pozwoli nam to zmodyfikować poprzedni przykład, który teraz będzie wygląda�
 
 Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz się pewien zagnieżdżania selektorów, korzystaj z tego. Pamiętaj jednak by cały zespół, z którym pracujesz, się temu nie sprzeciwiał.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

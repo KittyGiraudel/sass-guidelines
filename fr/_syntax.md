@@ -63,7 +63,7 @@ Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-d
 
 {% include snippets/syntax/06/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -116,7 +116,7 @@ Est-il utile de préciser que **les nombres magiques sont une plaie et doivent �
 
 {% include snippets/syntax/13/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -182,7 +182,7 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
   <p>La fonction <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> échelonne les propriétés de manière plus fluide en prenant en compte leur degré de luminosité actuelle. Elle donne des résultats aussi beaux que <code>mix</code> mais avec des conventions d’utilisation plus claires. Le facteur d’échelonnage n’est cependant pas le même.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -208,7 +208,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 
 {% include snippets/syntax/20/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
@@ -242,7 +242,7 @@ Si vous voulez connaître la profondeur de la map, ajoutez également la fonctio
 
 {% include snippets/syntax/23/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -282,7 +282,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -318,7 +318,7 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
   <p>Une <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -387,7 +387,7 @@ Nous pouvons réécrire notre exemple précédent ainsi&nbsp;:
 
 Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l’imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l’équipe soit d’accord avec cette façon de faire.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

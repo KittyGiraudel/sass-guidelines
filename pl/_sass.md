@@ -13,7 +13,7 @@ Jego celem nie jest przekształcenie CSSa w pełnoprawny język programowania z 
 
 Tym samym, istnieje wiele sposobów na korzystanie z tych dodatkowych rozwiązań. Niektóre są poprawne, niektóre mniej, a niektóre też są nadzwyczajne. Ten przewodnik ma na celu przedstawienie spójnego i dobrze udokumentowanego podejścia do pisania kodu w Sassie.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Wracając do doboru kompilatora. Tak naprawdę, to wszystko zależy od Twojego p
 
 W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z określonym porządkiem pracy, LibSass będzie prawdopodobnie lepszym rozwiązaniem. Jest on bowiem stworzony pod kątem wykorzystania go przez różne wrappery. Jeśli chcesz go użyć, powiedzmy z NodeJS, [node-sass](https://github.com/sass/node-sass) będzie dla Ciebie idealny.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
@@ -46,7 +46,7 @@ Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast
 
 Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -68,7 +68,7 @@ Postprocesorom przyświeca idea dostarczania nowych, projektowanych dopiero funk
 
 Podczas gdy umożliwianie korzystania z przyszłej składni jest czymś, co zasługuje na pochwałę, nadal preferuję korzystać z Sassa. Są jednak rzeczy, do których postprocesor zdaje się być bardziej odpowiednim narzędziem niż Sass - prefixowanie CSSa dla przykładu - jednak do tego jeszcze tutaj wrócimy.
 
-### Dalsze informacje
+###### Dalsze informacje
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

@@ -11,7 +11,7 @@
 
 Теперь есть много пространства в вашем проекте на Sass для предупреждений и ошибок. Обычно любая примесь или функция, за исключением специальных типов или аргументов, может выкинуть ошибку, если произойдёт что-то неожиданное, или вывести предупреждение, когда делает предположение.
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)

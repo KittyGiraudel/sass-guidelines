@@ -40,7 +40,7 @@ $vertical-rhythm-baseline: 1.5rem
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -71,7 +71,7 @@ $css-positions: top, right, bottom, left, center
   </div>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -105,6 +105,6 @@ $su-configuration: ( ... )
   <p>Обратите внимание, что автоматическое создание пространств имён, безусловно, цель для предстоящего проекта <code>@import</code> из Sass 4.0. Так как это становится всё ближе и ближе, то использование библиотек с пространством имён, написанным вручную, может стать сложнее в использовании.</p>
 </div>
 
-### Дальнейшее чтение
+###### Дальнейшее чтение
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

@@ -15,7 +15,7 @@ En cuanto a las variables, las funciones y los *mixins*, utilizaremos algo muy *
 
 {% include snippets/naming/01/index.html %}
 
-### Más información
+###### Más información
 
 * [CSS Guidelines Convención de nomenclatura -En inglés](http://cssguidelin.es/#naming-conventions)
 
@@ -27,7 +27,7 @@ Como con muchos lenguajes, sugiero que se utilice la opción todo-mayúsculas cu
 
 {% include snippets/naming/02/index.html %}
 
-### Más información
+###### Más información
 
 * [Trabajando con constantes en Sass -En inglés](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -43,6 +43,6 @@ Por ejemplo, si trabajas en un proyecto llamado *Sassy Unicorn* que será utiliz
   <p>Ten en cuenta que los espacios de nombres automáticos son sin duda un objetivo de diseño para <code>@import</code> en la nueva versión de Sass 4.0. Cuanto más se aproxima la solución, se volverá cada vez menos útil hacerlo de manera manual; eventualmente, las librerías nombradas manualmente pueden ser más difíciles de utilizar.</p>
 </div>
 
-### Más información
+###### Más información
 
 * [Por favor, respeta los espacios de nombres globales de CSS -En inglés](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

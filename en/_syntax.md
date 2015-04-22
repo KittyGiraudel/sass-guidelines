@@ -63,7 +63,7 @@ URLs should be quoted as well, for the same reasons as above:
 
 {% include snippets/syntax/06/index.html %}
 
-### Further Reading
+###### Further reading
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -116,7 +116,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 
 {% include snippets/syntax/13/index.html %}
 
-### Further reading
+###### Further reading
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -182,7 +182,7 @@ If you don’t want to write the `mix` function every time, you can create two e
   <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
 </div>
 
-### Further reading
+###### Further reading
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -208,7 +208,7 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 
 {% include snippets/syntax/20/index.html %}
 
-### Further reading
+###### Further reading
 
 * [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
@@ -242,7 +242,7 @@ If you are interested in knowing the depth of the map, add the following functio
 
 {% include snippets/syntax/23/index.html %}
 
-### Further reading
+###### Further reading
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -282,7 +282,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-### Further reading
+###### Further reading
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -318,7 +318,7 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
   <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
 </div>
 
-### Further reading
+###### Further reading
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -387,7 +387,7 @@ Rewriting our previous example, it would look like this:
 
 As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
 
-### Further reading
+###### Further reading
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

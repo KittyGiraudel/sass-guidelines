@@ -21,7 +21,7 @@ Rien n’interdit d’utiliser Compass, je ne le recommande pas toutefois, d’a
   <p>Ruby Sass est actuellement en cours d’optimisation. Sont visés en particulier les styles faisant appel à des doses massives de logique, de fonctions et de mixins. Les performances de Compass et des autres frameworks devraient s’en trouver grandement améliorées et ne devraient plus ralentir Sass.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -40,7 +40,7 @@ Dans le cas contraire, vous serez content de savoir qu’il existe deux gestionn
 
 Vous pouvez également choisir quelque chose de plus simple comme [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Au bout du compte, votre choix n’aura pas beaucoup d’impact sur votre style de code, donc c’est vraiment selon vos goûts et besoins.
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -68,7 +68,7 @@ Par chance, les recommandations de SCSS-lint sont très similaires à celles de 
   <p>De plus, si vous cherchez une application soignée qui fonctionne avec SCSS-lint et autres, les ingénieurs de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) travaillent sur <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-### Lectures complémentaires
+###### Lectures complémentaires
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

@@ -36,7 +36,7 @@ Si vas a utilizar *extend*, déjame recordarte que no se lleva muy bien con los 
 
 Para resumir, te **aconsejo no usar la directiva `@extend`**, salvo en circunstancias muy específicas, pero no iría tan lejos como para prohibirlo.
 
-### Más información
+###### Más información
 
 * [Lo que nadie te dijo acerca de Sass Extend -En inglés](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [¿Por qué deberías evistar Extend?](http://www.sitepoint.com/avoid-sass-extend/)

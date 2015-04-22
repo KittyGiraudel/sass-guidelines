@@ -17,7 +17,7 @@ Otro ejemplo válido sería un *mixin* para para darle tamaño a un elemento, de
 
 {% include snippets/mixins/02/index.html %}
 
-### Más información
+###### Más información
 
 * [Mixins Sass para dar un impulso a tu proyecto -En inglés](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [Un mixin de Sass para triángulos CSS -En inglés](http://www.sitepoint.com/sass-mixin-css-triangles/)
@@ -35,7 +35,7 @@ Sass es de hecho muy inteligente con los *mixins* y las declaraciones de funcion
 
 {% include snippets/mixins/04/index.html %}
 
-### Más información
+###### Más información
 
 * [Múltiples argumentos en Sass, Listas o Arglis -En inglés](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
@@ -59,7 +59,7 @@ Entonces usar este *mixin* debería ser muy sencillo:
 
 Por favor, ten en cuenta que es una mala solución. No puede trabajar con *polyfills* complejos como por ejemplo, los necesarios para Flexbox. En ese sentido, utilizar Autoprefixer sería una solución mucho mejor.
 
-### Más información
+###### Más información
 
 * [Autoprefixer -En inglés](https://github.com/postcss/autoprefixer)
 * [Contruyendo un mixin para un degradado lineal -En inglés](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

@@ -13,7 +13,7 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 
 그렇다고는 하나, 이 기능들을 사용하는 데에는 많은 방법들이 있습니다. 좋은 것도 있고, 나쁜 것도, 예외적인 것도 있죠. 이 가이드라인은 여러분에게 Sass 코드 작성에 대한 일관되고, 기록된 접근법을 제공할 것입니다.
 
-### 참고
+###### 참고
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 
 작업 흐름의 통합이 필요한 비(非)Ruby 프로젝트의 경우, 주로 감싸는 용도로 만들어져 있으므로 LibSass가 아마도 더 나은 생각일 것입니다. 그러니까 만약 NodeJS를 사용하고 싶으시다면, 선택은 [node-sass](https://github.com/sass/node-sass)입니다.
 
-### 참고
+###### 참고
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
@@ -46,7 +46,7 @@ Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다�
 
 저 자신은 CSS에 더 가깝고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 때문에, 이 가이드라인에서는 Sass 대신 SCSS를 사용하도록 하겠습니다.
 
-### 참고
+###### 참고
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -68,7 +68,7 @@ Sass 외에도 여러 전처리기들이 있습니다. 가장 만만찮은 경�
 
 내일의 문법을 오늘 제공한다는 것은 훌륭한 생각이긴 하나, 전 그래도 대부분의 작업에 Sass를 사용하는 것을 선호합니다. 그러나, 후처리기가 Sass보다 더 적합하다고 믿는 일부의 경우가 있습니다. 예를 들면 CSS 프리픽스 같은 경우입니다. 그러나 이 부분은 나중에 다시 이야기하도록 하겠습니다.
 
-### 참고
+###### 참고
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

@@ -71,7 +71,7 @@ $imported-modules: append($imported-modules, $module) !global
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
@@ -189,7 +189,7 @@ SassDoc主要有两个作用：
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

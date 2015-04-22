@@ -57,7 +57,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -107,7 +107,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   <p>如果你希望能更好管理断点，我可以建议你使用类似<a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a>或<a href="https://github.com/eduardoboucas/include-media">，没有必要自己重新去造轮子。</p>
 </div>
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -162,7 +162,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 如果现在你仍担心媒体查询的副本问题，你可以使用工具来合并它们，比如[这个gem](https://github.com/aaronjensen/sass-media_query_combiner)，但是我有必要警告你移动相关CSS代码可能会有副作用。 是否了解资源顺序是非常重要的。
 
-### 扩展阅读
+###### 扩展阅读
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)

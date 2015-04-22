@@ -16,7 +16,7 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
   <p>저는 설계가 대부분의 경우 프로젝트에 한정되어 있다는 사실을 배웠습니다. 여러분의 필요에 맞는 시스템을 사용할 수 있도록 제시된 해법을 마음대로 폐기하거나 조정하세요.</p>
 </div>
 
-### 참고
+###### 참고
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -422,7 +422,7 @@ sass/
   </div>
 </div>
 
-### 참고
+###### 참고
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
