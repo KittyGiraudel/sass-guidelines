@@ -30,7 +30,7 @@
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>显然，这样管理断点相当简单，但当需要自定义或使用多个断点会爱到一定的制约。</p><p>如果你希望能更好管理断点，我可以建议你使用类似 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a> 或 <a href="https://github.com/eduardoboucas/include-media">，没有必要自己重新去造轮子。</p>
+  <p>显然，这样管理断点相当简单，但当需要自定义或使用多个断点会爱到一定的制约。</p><p>如果你希望能更好管理断点，我可以建议你使用类似 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a> 或 <a href="https://github.com/eduardoboucas/include-media">Include-Media</a>，没有必要自己重新去造轮子。</p>
 </div>
 
 ###### 扩展阅读
