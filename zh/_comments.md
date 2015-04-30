@@ -1,75 +1,30 @@
 
 # 注释
 
-CSS是一个棘手的语言，充满了骇客行为和古怪的事情。因此，应该大量注释，特别是如果有人打算六个月或一年后要继续阅读和更新这些代码。不要让任何人处于如此境地：**这不是我写的，上帝，为什么会这样**。
+CSS 是一个棘手的语言，充满了骇客行为和古怪的事情。因此，应该大量注释，特别是如果有人打算六个月或一年后要继续阅读和更新这些代码。不要让任何人处于如此境地：**这不是我写的，上帝，为什么会这样**。
 
-CSS的实现很简单，但我们需要为此付出巨大的注释量。解释如下：
+CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释如下：
 
 - 一个文件的结构或者作用；
 - 规则集的目标；
 - 使用幻数背后的目的；
-- CSS声明的原因；
-- CSS声明的顺序；
+- CSS 声明的原因；
+- CSS 声明的顺序；
 - 方法执行背后的逻辑思维。
 
 在这里，我可能还遗漏了其他各种各样的缘由。在代码完成之时立即注释，往往只需花费一点时间；而过一阵时间再来为一小段代码注释，则是完全不现实和令人恼怒的。
 
 ## 标示注释
 
-理想上，**任何**CSS规则集之前都应该使用C风格注释来解释CSS块的核心。这个注释也要记录对规则集特定部分编号的解释。比如：
+理想上，**任何** CSS 规则集之前都应该使用 C 风格注释来解释 CSS 块的核心。这个注释也要记录对规则集特定部分编号的解释。比如：
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis
-  white-space: nowrap /* 1 */
-  text-overflow: ellipsis /* 2 */
-  overflow: hidden
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/01/index.html %}
 
 基本上，任何不能明显看出意义的地方都应该注释，但不要随处注释。记住不要**注释太多**，掌握尺度让每一处注释都有意义。
 
-当注释Sass的一个特定部分时，应该使用Sass单行注释而不是C风格的注释块。这么做将不会输出注释，即使是在开发时的扩展模式。
+当注释 Sass 的一个特定部分时，应该使用 Sass 单行注释而不是 C 风格的注释块。这么做将不会输出注释，即使是在开发时的扩展模式。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/02/index.html %}
 
 ###### 扩展阅读
 
@@ -77,109 +32,24 @@ $imported-modules: append($imported-modules, $module) !global
 
 ## 文档
 
-每一个旨在代码库中复用的变量、函数、混合宏和占位符，都应该使用[SassDoc](http://sassdoc.com)记录下来作为全部API的一部分。
+每一个旨在代码库中复用的变量、函数、混合宏和占位符，都应该使用 [SassDoc](http://sassdoc.com) 记录下来作为全部 API 的一部分。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/03/index.html %}
 
 <div class="note">
   <p>需要三个反斜杠(<code>/</code>)</p>
 </div>
 
-SassDoc主要有两个作用：
+SassDoc 主要有两个作用：
 
-- 作为公有或私有API的一部分，在所有的地方使用一个注释系统强制标准化注释。
-- 通过使用任意的SassDoc终端(CLI tool, Grunt, Gulp, Broccoli, Node...)，能够生成API文档的HTML版本。
+- 作为公有或私有 API 的一部分，在所有的地方使用一个注释系统强制标准化注释。
+- 通过使用任意的 SassDoc 终端(CLI tool, Grunt, Gulp, Broccoli, Node...)，能够生成 API 文档的 HTML 版本。
 
 {% include images/sassdoc.html %}
 
-这里有一个深入整合SassDoc生成文档的例子：
+这里有一个深入整合 SassDoc 生成文档的例子：
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo {
-///     @include size(10em);
-///   }
-///
-///   .bar {
-///     @include size(100%, 10em);
-///   }
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo
-///     +size(10em)
-///
-///   .bar
-///     +size(100%, 10em)
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/04/index.html %}
 
 ###### 扩展阅读
 

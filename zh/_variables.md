@@ -15,186 +15,34 @@
 
 ## 作用域
 
-Sass中变量的作用域在过去几年已经发生了一些改变。直到最近，规则集和其他范围内声明变量的作用域才默认为本地。如果已经存在同名的全局变量，则局部变量覆盖全局变量。从3.4版本开始，Sass已经可以正确处理作用域的概念，并通过创建一个新的局部变量来代替。
+Sass 中变量的作用域在过去几年已经发生了一些改变。直到最近，规则集和其他范围内声明变量的作用域才默认为本地。如果已经存在同名的全局变量，则局部变量覆盖全局变量。从 Sass 3.4 版本开始，Sass 已经可以正确处理作用域的概念，并通过创建一个新的局部变量来代替。
 
 本部分讨论下**全局变量的影子**。当在局部范围内（选择器内、函数内、混合宏内……）声明一个已经存在于全局范围内的变量时，局部变量就成为了全局变量的*影子*。基本上，局部变量只会在局部范围内覆盖全局变量。
 
 以下代码片可以解析**变量影子**的概念。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Initialize a global variable at root level.
-$variable: 'initial value';
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Create a local variable that shadows the global one.
-  $variable: 'local value';
-
-  // Include the mixin: it overrides the global variable.
-  @include global-variable-overriding;
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable;
-}
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Initialize a global variable at root level.
-$variable: 'initial value'
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Create a local variable that shadows the global one.
-  $variable: 'local value'
-
-  // Include the mixin: it overrides the global variable.
-  +global-variable-overriding
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/01/index.html %}
 
 ## `!default`标识符
 
-如果创建一个库、框架、栅格系统甚至任何的Sass片段，是为了分发经验或者被其他开发者使用，那么与之配置的所有变量都应该使用`!default`标志来定义，方便其他开发者重写变量。
+如果创建一个库、框架、栅格系统甚至任何的 Sass 片段，是为了分发经验或者被其他开发者使用，那么与之配置的所有变量都应该使用 `!default` 标志来定义，方便其他开发者重写变量。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
-多亏如此，开发者才能在引入你的库之前定义自用的`$baseline`，引入后又不必担心自己的值被重定义了。
+多亏如此，开发者才能在引入你的库之前定义自用的 `$baseline`，引入后又不必担心自己的值被重定义了。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Developer’s own variable
-$baseline: 2em;
-
-// Your library declaring `$baseline`
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Developer’s own variable
-$baseline: 2em
-
-// Your library declaring `$baseline`
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/03/index.html %}
 
 ## `!global`标识符
 
-`!global`标志应该只在局部范围的全局变量被覆盖时使用。定义根级别的变量时，`!global`标志应该省略。
+`!global` 标志应该只在局部范围的全局变量被覆盖时使用。定义根级别的变量时，`!global` 标志应该省略。
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$baseline: 2em;
-
-// Nope
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$baseline: 2em
-
-// Nope
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/04/index.html %}
 
 ## 多变量或maps
 
-使用maps比使用多个不同的变量有明显优势。最重要的优势就是map的遍历功能，这在多个不同变量中是不可能实现的。
+使用 maps 比使用多个不同的变量有明显优势。最重要的优势就是 map 的遍历功能，这在多个不同变量中是不可能实现的。
 
-另一个支持使用map的原因，是它可以创建`map-get()`函数以提供友好API的功能。比如，思考一下下述Sass代码：
+另一个支持使用 map 的原因，是它可以创建 `map-get()` 函数以提供友好 API 的功能。比如，思考一下下述 Sass 代码：
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer’s name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer’s name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer’s name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer’s name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}
