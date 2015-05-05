@@ -176,7 +176,7 @@ Um die Lesbarkeit einzuhalten, solltest du außerdem diese Richtlinien beachten:
 Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenfalls als richtig sehe. Auf der anderen Seite macht es das Updaten zwar schwieriger, aber da kannst du selbst entscheiden, welche Struktur dir am besten gefällt. Hier sollten diese Richtlinien beachtet werden:
 
 * ein `@import` pro Ordner;
-* ein Zielenumbruch nach `@import`;
+* ein Zeilenumbruch nach `@import`;
 * jede Datei in einer Zeile;
 * eine neue Zeile nach dem letzten import aus einem Ordner;
 * Dateiendungen und Unterstriche am Anfang weglassen.
