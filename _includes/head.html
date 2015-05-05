@@ -17,11 +17,8 @@
   </script>
 
   <script>
-  var ua = window.navigator.userAgent,
-      ttf = ua.indexOf('Android 4.') > -1 && ua.indexOf('like Gecko') > -1 && ua.indexOf('Chrome') === -1;
-
   loadCSS('/css/full.css');
-  loadCSS('/css/fonts/data-' + (supportsWoff2 ? 'woff2' : (ttf ? 'ttf' : 'woff')) + '.css');
+  loadFont('sg', '/css/fonts/data-woff.css', '/css/fonts/data-woff2.css', '/css/fonts/data-ttf.css');
   </script>
 
   <noscript>
