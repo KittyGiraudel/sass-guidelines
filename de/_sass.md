@@ -3,7 +3,7 @@
 
 In Ihrer [Dokumentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) beschreibt sich [Sass](http://sass-lang.com) als:
 
-> [...] eine Erweiterung von CSS, welche Leistung und Eleganz zur wesentlichen Sprache hinzufügt.
+> [...] eine Erweiterung von CSS, welche Leistung und Eleganz zur ursprünglichen Sprache hinzufügt.
 
 Das ultimative Ziel von Sass ist es, die Fehler von CSS zu beheben. Denn wir wissen ja alle, dass CSS wirklich nicht die beste Sprache der Welt ist <sup>[Zitat benötigt]</sup>. Sie ist zwar sehr einfach zu lernen, kann aber, gerade in großen Projekten, sehr schnell unübersichtlich werden.
 
@@ -11,7 +11,7 @@ Hier kommt Sass als Meta-Sprache hinzu, um die Syntax von CSS zu verbessern und 
 
 Es geht nämlich nicht darum CSS in eine Programmiersprache voller Features umzuändern. Sass möchte lediglich da helfen wo CSS versagt. Deshalb ist Sass zu erlernen auch nicht schwieriger als CSS; es fügt einfach nur ein paar extra Features oben drauf.
 
-Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features einzusetzen. Manche sind gut, manche schlecht und andere wiederum unüblich. Die Absicht dieser Guidelines ist es einen konsistenten und dokumentierten Ansatz zu bieten, Sass zu schreiben.
+Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features einzusetzen. Manche sind gut, manche schlecht und andere wiederum unüblich. Die Absicht dieser Guidelines ist es einen konsistenten und dokumentierten Ansatz zu bieten um Sass zu schreiben.
 
 ###### Weitere Artikel
 
