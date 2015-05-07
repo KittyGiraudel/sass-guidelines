@@ -16,15 +16,23 @@
   }
 
   @include respond-to('medium') {
-    width: 250px;
-    @include prefix(transform, translateX(-250px), webkit ms);
+    width: 300px;
   }
 
   .button {
     display: block;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
     padding: 0.5rem;
   }
+}
+
+.aside__section {
+  padding: 0 1rem;
+}
+
+.no-js .custom-select,
+.no-js .aside__section--syntax {
+  display: none;
 }
 
 .aside__title {
@@ -41,7 +49,7 @@
   border-bottom: .1em solid;
   text-transform: capitalize;
   font-size: .9em;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
   color: $dark-grey;
   text-align: right;
   font-weight: 400;
@@ -84,6 +92,10 @@
   li {
     margin: 0;
     float: left;
-    width: 50%;
+    width: 48%;
+  }
+
+  li + li {
+    float: right;
   }
 }
