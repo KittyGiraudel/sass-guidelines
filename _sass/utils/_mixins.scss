@@ -74,12 +74,3 @@
 
   #{$property}: $value;
 }
-
-/// Beautify links
-/// @author Hugo Giraudel
-/// @param {Color} $background-color [white] - Background-color
-@mixin beautify-links($background-color: white) {
-  a, .link-like {
-    text-shadow: -1px -1px $background-color, -1px 1px $background-color, 1px -1px $background-color, 1px 1px $background-color
-  }
-}

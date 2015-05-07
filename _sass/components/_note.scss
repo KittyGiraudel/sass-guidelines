@@ -17,6 +17,4 @@
   > p:first-child::before {
     font-weight: 700;
   }
-
-  @include beautify-links($note-background);
 }

@@ -26,7 +26,7 @@ body {
  */
 a,
 .link-like {
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
   color: inherit;
   transition: 0.15s;
@@ -38,18 +38,6 @@ a,
     color: $main-color;
   }
 }
-
-/**
- * Custom underlines for links that are neither buttons nor anchor links
- */
-a:not([class*='button']):not(.anchor-link),
-.link-like {
-  background: -webkit-linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
-  background: linear-gradient(currentcolor, currentcolor) no-repeat bottom 2px center;
-  background-size: 100% 1px;
-}
-
-@include beautify-links(white);
 
 /**
  * Inline code

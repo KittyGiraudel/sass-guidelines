@@ -16,8 +16,6 @@ blockquote {
     @include container;
   }
 
-  @include beautify-links($quote-background);
-
   /**
    * On large screens, add a decorative quote
    */
