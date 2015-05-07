@@ -67,7 +67,7 @@
   };
 
   App.prototype.addHeadingAnchors = function () {
-    var headings = document.querySelectorAll('h1:not(.title), h2:not(.baseline), h3');
+    var headings = document.querySelectorAll('h1[id], h2[id], h3[id]');
     var len = headings.length;
     var link, heading, i;
 
