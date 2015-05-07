@@ -27,7 +27,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 回到选择编译器的问题上来。实际上，这只取决于你。如果是在一个 Ruby on Rails 的项目中，最好使用 Ruby Sass，它在这种情况下是最合适的。当然你也要知道，在未来 Ruby Sass 会一直引领 LibSass 的开发并作为其开发参考。
 
-另一方面，LibSass 更关注于自身与项目之间的整合。如果你想在非 Ruby 项目中使用，比如 NodeJS，[node-sass](https://github.com/sass/node-sass) 会是个不错的选择。使用 LibSass 最主要的优势还是因为它的速度，而且比 Ruby Sass 更快。
+另一方面，LibSass 更关注于自身与项目之间的整合。如果你想在非 Ruby 项目中使用，比如 Node.js，[node-sass](https://github.com/sass/node-sass) 会是个不错的选择。使用 LibSass 最主要的优势还是因为它的速度，而且比 Ruby Sass 更快。
 
 ###### 扩展阅读
 
@@ -54,7 +54,7 @@ Sass 的空白敏感语法通过缩进以摆脱大括号、分号和其他符号
 
 ## 其他预编译器
 
-忽略其他特性，Sass 对自己的定位首先是一个预处理器。其最主要的竞争对手包括 [LESS](http://lesscss.org/)，一个基于 NodeJS 的预处理器，因著名 CSS 框架 [Bootstrap](http://getbootstrap.com/) 的使用而声名鹊起。此外还有 [Stylus](http://learnboost.github.io/stylus/) ，一种对形式无所限制的 LESS 版本。它是一种无论你想怎么样使用，大都能顺利转换成 CSS 的程序语言。
+忽略其他特性，Sass 对自己的定位首先是一个预处理器。其最主要的竞争对手包括 [LESS](http://lesscss.org/)，一个基于 Node.js 的预处理器，因著名 CSS 框架 [Bootstrap](http://getbootstrap.com/) 的使用而声名鹊起。此外还有 [Stylus](http://learnboost.github.io/stylus/) ，一种对形式无所限制的 LESS 版本。它是一种无论你想怎么样使用，大都能顺利转换成 CSS 的程序语言。
 
 *为什么选择 Sass 胜过 LESS 以及其他预处理器？*，这始终是一个待解决的问题。就在刚刚，我们还建议在 Ruby 项目中使用 Sass，因为 Sass 初创于 Ruby 并且在 Ruby on Rails 中运行良好。现在随着 LibSass 与 Sass 的逐步接近，上述建议显然已经不再绝对和必须。
 

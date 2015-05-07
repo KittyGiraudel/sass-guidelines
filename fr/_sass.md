@@ -26,7 +26,7 @@ En 2014, [les équipes de Ruby Sass et de LibSass ont décidé d’attendre que 
 
 Pour revenir au choix de votre compilateur, en fait tout dépend de votre projet. Si vous travaillez sur un projet Ruby on Rails, il est préférable d’utiliser Ruby Sass qui convient parfaitement dans ce cas. Il faut également garder à l’esprit que Ruby Sass sera toujours l’implémentation de référence et sera toujours en avance par rapport à LibSass.
 
-Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous utilisez NodeJS par exemple, [node-sass](https://github.com/sass/node-sass) est tout indiqué.
+Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous utilisez Node.js par exemple, [node-sass](https://github.com/sass/node-sass) est tout indiqué.
 
 ###### Lectures complémentaires
 
@@ -53,7 +53,7 @@ Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus 
 
 ## Autres préprocesseurs
 
-Sass est un préprocesseur parmi d’autres. Son concurrent le plus sérieux est [LESS](http://lesscss.org/), un préprocesseur basé sur NodeJS qui est devenu assez populaire grâce à [Bootstrap](http://getbootstrap.com/) qui l’utilise. Il y a également [Stylus](http://learnboost.github.io/stylus/) —&nbsp;qui est une sorte de version nerdy de LESS&nbsp;— avec laquelle vous pouvez faire à peu près tout ce que vous voulez car il transforme CSS en un quasi langage de programmation.
+Sass est un préprocesseur parmi d’autres. Son concurrent le plus sérieux est [LESS](http://lesscss.org/), un préprocesseur basé sur Node.js qui est devenu assez populaire grâce à [Bootstrap](http://getbootstrap.com/) qui l’utilise. Il y a également [Stylus](http://learnboost.github.io/stylus/) —&nbsp;qui est une sorte de version nerdy de LESS&nbsp;— avec laquelle vous pouvez faire à peu près tout ce que vous voulez car il transforme CSS en un quasi langage de programmation.
 
 *Pourquoi choisir Sass plutôt que LESS ou un autre préprocesseur ?* Cette question peut toujours se poser aujourd’hui. Il n’y a pas si longtemps, l’argumentation aurait porté sur l’avantage de Sass dans les projets basés sur Ruby. Aujourd’hui que LibSass est synchronisé avec Ruby Sass, ce sont les performances de Sass qu’on pourrait mettre en avant.
 

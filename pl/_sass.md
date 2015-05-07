@@ -26,7 +26,7 @@ W 2014 roku, [zespoły pracujące nad Ruby Sass i LibSass postanowiły poczekać
 
 Wracając do doboru kompilatora. Tak naprawdę, to wszystko zależy od Twojego projektu. Jeśli oparty jest on o Ruby on Rails, oczywiście lepiej korzystać z Ruby Sass, który będzie idealnie z nim współgrał. Ponadto, Ruby Sass będzie zawsze tą pierwszorzędną implementacją i zawsze będzie o krok przed LibSassem, jeśli chodzi o dodatkową funkcjonalność.
 
-W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z określonym porządkiem pracy, LibSass będzie prawdopodobnie lepszym rozwiązaniem. Jest on bowiem stworzony pod kątem wykorzystania go przez różne wrappery. Jeśli chcesz go użyć, powiedzmy z NodeJS, [node-sass](https://github.com/sass/node-sass) będzie dla Ciebie idealny.
+W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z określonym porządkiem pracy, LibSass będzie prawdopodobnie lepszym rozwiązaniem. Jest on bowiem stworzony pod kątem wykorzystania go przez różne wrappery. Jeśli chcesz go użyć, powiedzmy z Node.js, [node-sass](https://github.com/sass/node-sass) będzie dla Ciebie idealny.
 
 ###### Dalsze informacje
 
@@ -52,7 +52,7 @@ Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z C
 
 ## Inne preprocesory
 
-Sass jest jednym z wielu dostępnych preprocesorów. Jego głównym konkurentem zdaje się być [LESS](http://lesscss.org/), który jest oparty o NodeJS i który to zyskał popularność dzięki znanemu frameworkowi CSS, [Bootstrapowi](http://getbootstrap.com/). Znany jest także [Stylus](http://learnboost.github.io/stylus/) - zdający się być niczym nieskrępowaną wersją LESSa - z użyciem którego możesz zrobić w zasadzie wszystko, bowiem przekształca on właściwie CSS w pełnoprawny język programowania.
+Sass jest jednym z wielu dostępnych preprocesorów. Jego głównym konkurentem zdaje się być [LESS](http://lesscss.org/), który jest oparty o Node.js i który to zyskał popularność dzięki znanemu frameworkowi CSS, [Bootstrapowi](http://getbootstrap.com/). Znany jest także [Stylus](http://learnboost.github.io/stylus/) - zdający się być niczym nieskrępowaną wersją LESSa - z użyciem którego możesz zrobić w zasadzie wszystko, bowiem przekształca on właściwie CSS w pełnoprawny język programowania.
 
 *Dlaczego wybrać Sass zamiast LESS czy innego preprocesora?* jest wciąż aktualnym dziś pytaniem. Nie tak dawno temu rekomendowaliśmy Sass dla projektów bazujących dla Ruby właśnie dlatego, że był on pierwszym preprocesorem stworzonym w Ruby i dobrze współgrał z Ruby on Rails. Teraz, gdy LibSass nadgonił (w zasadzie) z oryginalnym Sassem, ten argument nie jest do końca właściwym.
 

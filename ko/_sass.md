@@ -26,7 +26,7 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 
 여러분의 컴파일러를 선택하는 것으로 돌아가겠습니다. 사실, 이건 여러분의 프로젝트에 달려있습니다. Ruby on Rails 프로젝트라면, Ruby Sass를 사용하는 게 나을 겁니다.  Ruby Sass가 이 경우에 완벽하게 적합하죠. 또한, Ruby Sass가 언제나 참조 구현이 될 것이며 기능에 있어 LibSass를 선도할 것이라는 점을 알아두십시오.
 
-작업 흐름의 통합이 필요한 비(非)Ruby 프로젝트의 경우, 주로 감싸는 용도로 만들어져 있으므로 LibSass가 아마도 더 나은 생각일 것입니다. 그러니까 만약 NodeJS를 사용하고 싶으시다면, 선택은 [node-sass](https://github.com/sass/node-sass)입니다.
+작업 흐름의 통합이 필요한 비(非)Ruby 프로젝트의 경우, 주로 감싸는 용도로 만들어져 있으므로 LibSass가 아마도 더 나은 생각일 것입니다. 그러니까 만약 Node.js를 사용하고 싶으시다면, 선택은 [node-sass](https://github.com/sass/node-sass)입니다.
 
 ###### 참고
 
@@ -52,7 +52,7 @@ Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다�
 
 ## 기타 전처리기들
 
-Sass 외에도 여러 전처리기들이 있습니다. 가장 만만찮은 경쟁자는 [LESS](http://lesscss.org/)일 것입니다. 유명한 CSS 프레임워크인 [Bootstrap](http://getbootstrap.com/)이 사용한 덕분에 널리 알려진 NodeJS 기반의 전처리기죠. 너드스럽고, 제한 없는 버전의 LESS처럼 느껴지는 [Stylus](http://learnboost.github.io/stylus/)도 있습니다. 이것은 CSS를 거의 프로그래밍 언어로 바꿔놓기 때문에 원하는 것 대부분을 할 수 있습니다.
+Sass 외에도 여러 전처리기들이 있습니다. 가장 만만찮은 경쟁자는 [LESS](http://lesscss.org/)일 것입니다. 유명한 CSS 프레임워크인 [Bootstrap](http://getbootstrap.com/)이 사용한 덕분에 널리 알려진 Node.js 기반의 전처리기죠. 너드스럽고, 제한 없는 버전의 LESS처럼 느껴지는 [Stylus](http://learnboost.github.io/stylus/)도 있습니다. 이것은 CSS를 거의 프로그래밍 언어로 바꿔놓기 때문에 원하는 것 대부분을 할 수 있습니다.
 
 *LESS나 다른 전처리기를 두고 왜 Sass를 선택하는가?* 오늘날에도 여전히 합당한 질문입니다. 얼마 전까진, Sass가 애초에 Ruby로 만들어졌고 Ruby on Rails와 함께 잘 작동했기 때문에 Ruby 기반의 프로젝트에 Sass를 추천하곤 했습니다. 이제 LibSass가 오리지널 Sass를 (거의) 따라잡았기 때문에, 이건 더이상 적절한 조언이 아닙니다.
 
