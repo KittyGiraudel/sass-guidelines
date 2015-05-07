@@ -29,7 +29,10 @@ a,
   text-decoration: none;
   cursor: pointer;
   color: inherit;
-  transition: .15s;
+  transition: 0.15s;
+  border: 0;
+  padding: 0;
+  background: 0;
 
    @include on-event {
     color: $main-color;

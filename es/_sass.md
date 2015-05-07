@@ -45,7 +45,7 @@ Desde entonces, Sass (el preprocesador) ha estado proporcionando dos sintaxis di
 
 La sintaxis sensible a los espacios en blanco de Sass se basa en las tabulaciones para eliminar las llaves, los punto y coma y otros signos de puntuación, dando como resultado una sintaxis más corta y ligera. Mientras tanto, SCSS es más fácil de aprender, ya que en conjunto, se trata de añadir unos cuantos elementos adicionales a CSS.
 
-Personalmente, prefiero SCSS a Sass ya que es mucho parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <span data-toggle="aside" class="link-like" role="button" aria-expanded>panel de opciones</span>.
+Personalmente, prefiero SCSS a Sass ya que es mucho parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <button data-toggle="aside" class="link-like" role="button" type="button">panel de opciones</button>.
 
 ###### Más información
 
