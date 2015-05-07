@@ -26,7 +26,7 @@ Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features 
 
 Zurück zum Compiler. Eigentlich hängt es komplett von deinem Projekt ab. Wenn es ein Ruby on Rails Projekt ist, solltest du besser Ruby Sass benutzen da es genau darauf ausgerichtet ist. Ruby Sass wird außerdem immer die Referenzimplementation sein und LibSass in Sachen Features leiten.
 
-In Nicht-Ruby Projekten welche einen speziellen Workflow brauchen, ist LibSass die bessere Wahl. Wenn du also, sagen wir NodeJS, benutzen möchtest dann wäre [node-sass](https://github.com/sass/node-sass) deine Wahl.
+In Nicht-Ruby Projekten welche einen speziellen Workflow brauchen, ist LibSass die bessere Wahl. Wenn du also, sagen wir Node.js, benutzen möchtest dann wäre [node-sass](https://github.com/sass/node-sass) deine Wahl.
 
 ###### Weitere Artikel
 
@@ -53,7 +53,7 @@ Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freun
 
 ## Andere Präprozessoren
 
-Sass ist nur ein Präprozessor unter vielen. Sein größter Mitstreiter ist [LESS](http://lesscss.org/), ein auf NodeJS basierender Präprozessor welcher durch das CSS Framework [Bootstrap](http://getbootstrap.com/) bekannt wurde. Es gibt außerdem noch Stylus - die nerdige, uneingeschränkte Version von LESS - wo du eigentlich alles machen kannst was du möchtest, da es CSS in eine Programmiersprache verwandelt.
+Sass ist nur ein Präprozessor unter vielen. Sein größter Mitstreiter ist [LESS](http://lesscss.org/), ein auf Node.js basierender Präprozessor welcher durch das CSS Framework [Bootstrap](http://getbootstrap.com/) bekannt wurde. Es gibt außerdem noch Stylus - die nerdige, uneingeschränkte Version von LESS - wo du eigentlich alles machen kannst was du möchtest, da es CSS in eine Programmiersprache verwandelt.
 
 *Warum sollte ich Sass, LESS oder einen anderen Präprozessor vorziehen?* ist auch heute immernoch eine gute Frage. Es ist noch garnicht solange her, dass wir Sass für Ruby basierte Projekte empfohlen haben weil es in Ruby entwickelt wurde und sich gut mit Ruby on Rails gemacht hat. Jetzt wo LibSass nahezu aufgeholt hat, ist das kein relevanter Ratschlag mehr.
 
