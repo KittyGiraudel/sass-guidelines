@@ -13,7 +13,7 @@ Es geht nämlich nicht darum CSS in eine Programmiersprache voller Features umzu
 
 Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features einzusetzen. Manche sind gut, manche schlecht und andere wiederum unüblich. Die Absicht dieser Guidelines ist es einen konsistenten und dokumentierten Ansatz zu bieten um Sass zu schreiben.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -28,7 +28,7 @@ Zurück zum Compiler. Eigentlich hängt es komplett von deinem Projekt ab. Wenn 
 
 In Nicht-Ruby Projekten welche einen speziellen Workflow brauchen, ist LibSass die bessere Wahl. Wenn du also, sagen wir Node.js, benutzen möchtest dann wäre [node-sass](https://github.com/sass/node-sass) deine Wahl.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
@@ -47,7 +47,7 @@ Sass' Leerzeichenempfindliche Syntax beruht auf Einrückung um geschweifte Klamm
 
 Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freundlicher für die meisten Entwickler ist. Von daher wird SCSS auch der Standard in den gesamten Guidelines sein. Du kannst jedoch zur Sass Syntax in den <span data-toggle="aside" class="link-like" role="button" aria-expanded>Optionen</span> wechseln.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,7 +69,7 @@ Die Idee dahinter ist, dass sobald ein Browser diese neuen Features (z.B. CSS Va
 
 Die Syntax von morgen zu unterstützen ist zwar eine gute Idee, ich zieh dennoch Sass für die meisten Aufgaben vor. Wie auch immer, es gibt definitiv einige Fälle wo ein Postprozessor besser passt als Sass oder ähnliches. CSS Prefixe zum Beispiel - aber darauf kommen wir später zurück.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

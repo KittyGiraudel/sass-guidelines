@@ -63,7 +63,7 @@ URLs sollten aus denselben Gründen wie oben in Anführungszeichen gesetzt werde
 
 {% include snippets/syntax/06/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -116,7 +116,7 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 {% include snippets/syntax/13/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
@@ -175,7 +175,7 @@ Wenn du nicht jedesmal die `mix` Funktion schreiben möchtest, kannst du dir auc
   <p>Die <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> Funktion ist entworfen worden, um Werte flüssiger zu skalieren indem sie berücksichtigt wie hell oder dunkel sie bereits sind. Sie sollte Ergebnisse liefern, die genauso gut wie <code>mix</code> sind, aber mit einer eindeutigeren Aufrufkonvention. Der Skalierfaktor ist dennoch nicht derselbe.</p>
 </div>
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -202,7 +202,7 @@ Wenn neue Inhalte zu einer Liste hinzugefügt werden sollen, dann verwende immer
 
 {% include snippets/syntax/20/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
@@ -236,7 +236,7 @@ Falls du die Tiefe einer Map wissen möchtest, dann füg folgende Funktion hinzu
 
 {% include snippets/syntax/23/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -276,7 +276,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -309,7 +309,7 @@ Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was 
   <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -378,7 +378,7 @@ Wenn wir also unser voriges Beispiel umschreiben, würde es wie folgt aussehen:
 
 Wie mit allem, ist dieser spezifische Fall irgendwie irrelevant, denn wichtig ist Konsistents. Wenn du dich also absolut okay mit Verschachtelung von Selektoren fühlst, dann mach es so. Versicher dich nur das auch dein ganzes Team damit einverstanden ist.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

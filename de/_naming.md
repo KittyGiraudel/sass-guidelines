@@ -15,7 +15,7 @@ Bezüglich Variablen, Funktionen und Mixins werden wir uns an etwas sehr *CSS-m�
 
 {% include snippets/naming/01/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -27,7 +27,7 @@ Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben un
 
 {% include snippets/naming/02/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -43,6 +43,6 @@ Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches von En
   <p>Beachte das automatisches Namespacing ein Designziel für die zukünftige Umgestaltung von <code>@import</code> in Sass 4.0 ist. Je näher wir vor der Verwirklichung stehen, desto weniger von nutzen ist es manuell Namespaces zu vergeben; eventuell werden Libraries deren Namespace manuell gepflegt wurde, sogar schwieriger zu benutzen sein.</p>
 </div>
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

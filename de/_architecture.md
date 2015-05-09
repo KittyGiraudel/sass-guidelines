@@ -15,7 +15,7 @@ Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jo
   <p>Ich habe gelernt das Architektur meistens sehr Projektspezifisch ist. Deshalb tu dir keinen Zwang an mir komplett zu widersprechen oder nur die Lösungen zu übernehmen welche du brauchst.</p>
 </div>
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -194,7 +194,7 @@ Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [
 
 {% include snippets/architecture/04/index.html %}
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

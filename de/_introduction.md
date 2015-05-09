@@ -40,7 +40,7 @@ Manchmal ist es besser sich etwas im Code zu wiederholen um es wartbar zu halten
 
 Um noch einmal [Harry Roberts](https://csswizardry.com) zu zitieren, **Pragmatimus geht vor Perfektion**. Ab einem gewissen Punkt wirst du dich wahrscheinlich selbst dabei erwischen wie du diese Regeln ignorierst. Wenn es Sinn macht und sich richtig anfühlt, dann tu es. Code ist ein Mittel zum Zweck, kein Ende.
 
-###### Weitere Artikel
+###### Weitere Informationen
 
 * [KISS Prinzip](http://de.wikipedia.org/wiki/KISS-Prinzip)
 * [DRY Prinzio](http://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself)
