@@ -88,7 +88,7 @@ pt-br:
   images:
     color-functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
     order-poll: "Gráfico mostrando como desenvolvedores ordenam as suas declarações em CSS"
-    sassdoc: "Documentação gerada por SassDoc"
+    sassdoc: "Documentação gerada pelo SassDoc"
     wallpaper: "Papel de parede por [Julien He](https://twitter.com/julien_he)"
 
 pl:
