@@ -2,16 +2,16 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Mixin helping defining both `width` and `height` simultaneously.
+/// Mixin ajudando a definir ambos o `width` e o `height` simultaneamente.
 ///
 /// @author Hugo Giraudel
 ///
 /// @access public
 ///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
+/// @param {Length} $width - `width` do elemento
+/// @param {Length} $height ($width) - `height` do elemento
 ///
-/// @example scss - Usage
+/// @example scss - Uso
 ///   .foo {
 ///     @include size(10em);
 ///   }
@@ -20,7 +20,7 @@
 ///     @include size(100%, 10em);
 ///   }
 ///
-/// @example css - CSS output
+/// @example css - CSS gerado
 ///   .foo {
 ///     width: 10em;
 ///     height: 10em;
@@ -38,23 +38,23 @@
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Mixin helping defining both `width` and `height` simultaneously.
+/// Mixin ajudando a definir ambos o `width` e o `height` simultaneamente.
 ///
 /// @author Hugo Giraudel
 ///
 /// @access public
 ///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
+/// @param {Length} $width - `width` do elemento
+/// @param {Length} $height ($width) - `height` do elemento
 ///
-/// @example scss - Usage
+/// @example scss - Uso
 ///   .foo
 ///     +size(10em)
 ///
 ///   .bar
 ///     +size(100%, 10em)
 ///
-/// @example css - CSS output
+/// @example css - CSS gerado
 ///   .foo {
 ///     width: 10em;
 ///     height: 10em;

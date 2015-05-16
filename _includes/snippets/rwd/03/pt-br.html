@@ -2,7 +2,7 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Responsive manager.
+/// Gerenciador responsivo
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
@@ -16,15 +16,16 @@
       @content;
     }
   } @else {
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.';
+    @error 'Nenhum valor encontrado para `#{$breakpoint}`. '
+         + 'Por favor, certifique-se que o valor esteja no map de '
+         + '`$breakpoints`.';
   }
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Responsive manager.
+/// Gerenciador responsivo
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
@@ -38,8 +39,9 @@
       @content
 
   @else
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.'
+    @error 'Nenhum valor encontrado para `#{$breakpoint}`. '
+         + 'Por favor, certifique-se que o valor esteja no map de '
+         + '`$breakpoints`.'
 {% endhighlight %}
   </div>
 </div>
