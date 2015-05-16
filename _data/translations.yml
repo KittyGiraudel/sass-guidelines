@@ -121,3 +121,18 @@ zh:
     sassdoc: "本文档由 SassDoc 生成"
     wallpaper: "壁纸来源自 [Julien He](https://twitter.com/julien_he)"
 
+de:
+  donate:
+    content: "Wenn dir Sass Guidelines gefällt, unterstütze uns."
+    button: "Unterstütze Sass Guidelines"
+  baseline:
+    content: "Eine eigensinnige Richtlinie zum schreiben von vernünftigen, durchschaubaren und skalierbaren Sass."
+  footer:
+    content: "Made with love by [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Merke"
+  images:
+  color-functions: "Illustration vom Unterschied zwischen `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Diagramm zeigt wie Entwickler ihre CSS Deklarationen anordnen"
+    sassdoc: "Dokumentation wurde von SassDoc generiert"
+    wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"
+

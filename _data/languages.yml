@@ -128,3 +128,11 @@ es:
       link: https://github.com/soniar4i
     - name: David Khourshid
       link: https://github.com/davidkpiano
+de:
+  version: 1.0.0
+  label: Deutsch
+  prefix: /de/
+  available: false
+  translators:
+    - name: Marvin Mieth
+      link: https://github.com/qcon
