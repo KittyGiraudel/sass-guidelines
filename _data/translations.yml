@@ -129,7 +129,7 @@ de:
     content: "Eine eigensinnige Richtlinie zum schreiben von vernünftigen, durchschaubaren und skalierbaren Sass."
   footer:
     content: "Made with love by [Hugo Giraudel](http://hugogiraudel.com)"
-  note: "Note"
+  note: "Merke"
   images:
   color-functions: "Illustration vom Unterschied zwischen `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
     order-poll: "Diagramm zeigt wie Entwickler ihre CSS Deklarationen anordnen"
