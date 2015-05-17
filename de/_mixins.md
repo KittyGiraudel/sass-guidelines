@@ -59,7 +59,6 @@ Das Mixin zu verwenden sollte ziemlich unkompliziert sein:
 
 Bitte merk dir dass das eine wirklich schlechte Umsetzung ist. Zum Beispiel kann es nicht mit komplexen Polyfills, wie für Flexbox nötig, umgehen. In dem Fall ist Autoprefixer die bessere Wahl.
 
-
 ###### Weitere Informationen
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
