@@ -10,13 +10,13 @@ zh:
       link: https://github.com/pinggod
 
 cz:
-  version: 1.0.0
+  version: 1.1.0
   label: Czech
   prefix: /cz/
   available: false
   translators:
-    - name: Pavel Antolík
-      link: https://github.com/pavelantolik
+    - name: Honza Bittner
+      link: https://github.com/hobi
 
 nl:
   version: 1.0.0
