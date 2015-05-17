@@ -1,20 +1,20 @@
 
-# Contributing
+# Contribuindo
 
-Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously, knowing that you liked this styleguide is already much appreciated!
+O Sass Guidelines é um projeto gratuito que eu mantenho no meu tempo livre. Sem a necessidade de dizer, é bem grande a quantidade de trabalho para manter tudo atualizado, documentado e relevante. Obviamente, sabendo que você gostou desse guia de estilo, já é muito gratificante!
 
-Now if you feel like contributing, please know that tweeting about it, spreading the word, or fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
+Agora se você sente vontade de contribuir, saiba que apenas tweetando sobre, espalhando a palavra, ou arrumando um errinho de digitação abrindo um *pull request* ou uma *issue* no [repositório do GitHub](https://github.com/HugoGiraudel/sass-guidelines) seria ótimo!
 
-Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it!
+Por último, mas não menos importante, antes de começarmos: se você gostou desse documento, ou se ele é útil para você ou sua equipe, por favor, considere apoiá-lo!
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
     {% include icons/dollar.html %}
-    Support Sass Guidelines
+    Apoie o Sass Guidelines
   </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+  {% capture tweet %}{{ site.title }}, {{ site.description }} por @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    Spread the word
+    Espalhe a palavra
   </a>
 </div>
