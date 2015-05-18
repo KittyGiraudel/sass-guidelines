@@ -152,9 +152,9 @@ Například `vendors-extensions/_bootstrap.scss` je soubor obsahující všechny
 
 ### Hlavní soubor
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+Hlavní soubor (obvykle označován `main.scss`) by měl být jediný Sass soubor z celého codebase, který nezačíná na podtržítko. Tento soubor by neměl obsahovat nic více než `@import` a komentáře.
 
-Files should be imported according to the folder they live in, one after the other in the following order:
+Soubory by měly být importovány podle složky, ve které se nachází a jeden po druhém v následujícím pořadí:
 
 1. `vendors/`
 1. `utils/`
@@ -164,38 +164,38 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-In order to preserve readability, the main file should respect these guidelines:
+V zájmu zachování čitelnosti by měl hlavní soubor respektovat tyto pokyny:
 
-* one file per `@import`;
-* one `@import` per line;
-* no new line between two imports from the same folder;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* jeden soubor na `@import`;
+* jeden `@import` na řádek;
+* žádný nový řádek mezi dvěma importy ze stejné složky;
+* nový řádek po posledním importu ze složky;
+* vynechat přípony souborů a podtžení na začátku.
 
 {% include snippets/architecture/02/index.html %}
 
-There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+Je tu ještě další způsob importování partials, který také považuji za validní. Na jednu stranu to dělá soubor více čitelným, ale na stranu druhou dělá úpravy trochu více bolestné. Každopádně, nechám vás rozhodnout se, který způsob je nejlepší - moc na tom nezáleží. Pro tento způsob by měl hlavní soubor dodržovat tyto pokyny:
 
-* one `@import` per folder;
-* a linebreak after `@import`;
-* each file on its own line;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* jeden `@import` na složku;
+* konec řádku po `@import`;
+* každý soubor na svém vlastním řádku;
+* nový řádek po posledním importu ze složky;
+* vynechat přípony souborů a podtžení na začátku.
 
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
+  <p>Abyste nemuseli importovat každý soubor ručně, můžete využít Ruby Sass rozšíření zvané <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, díky kterému můžete používat globální vzory v Sass <code>@import</code> jako např. <code>@import "components/*"</code>.</p>
+  <p>Jak bylo řečeno, toto řešení bych nedoporučoval, jelikož importujete soubory podle abecedního pořadí, což obvykle není to co chcete, zvláště pokud se musíte vypořádat s pořadím souborů v závislosti na jazyku.</p>
 </div>
 
-## Shame file
+## Ostudný soubor 
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+Zajímavý koncept, který zpopularizoval [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) a [Chris Coyier](http://css-tricks.com), který se skládá z uvedení všech CSS deklarací, hacků a věcí, na které nejsme pyšní do *ostudného souboru*. Tento soubor, který je dramaticky pojmenován `_shame.scss`, by měl být importován po ostatních souborech na konci stylu.
 
 {% include snippets/architecture/04/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
