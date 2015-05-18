@@ -74,7 +74,7 @@ Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird ei
 
 ### Layout Ordner
 
-Im `layout/` Ordner ist alles was für die Seite oder Applikation als Design definiert wird. Hier können Stylesheets für die Hauptbereiche der Seite (header, footer, navigation, sidebar, ...), das Grid System oder Formulare drin sein. 
+Im `layout/` Ordner ist alles was für die Seite oder Applikation als Design definiert wird. Hier können Stylesheets für die Hauptbereiche der Seite (header, footer, navigation, sidebar, ...), das Gridsystem oder Formulare drin sein. 
 
 * `_grid.scss`
 * `_header.scss`

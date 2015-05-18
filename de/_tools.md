@@ -44,14 +44,14 @@ Oder du schaust dir eine lässigere Variante wie [csswizardry-grids](https://git
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
-* [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
+* [Singularity Gridsystem](http://www.mediacurrent.com/blog/singularity-grid-system)
 * [Susy](http://susy.oddbird.net/)
 * [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
 * [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
 * [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
-* [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
+* [Bootstrap’s Gridsystem vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
-* [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
+* [A Creative Gridsystem with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
 ## SCSS-lint
 
