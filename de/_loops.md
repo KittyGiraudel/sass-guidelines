@@ -3,11 +3,11 @@
 
 Da Sass komplexe Datenstrukturen wie [Listen](#lists) und [Maps](#maps) anbietet, ist es keine Überraschung das es Autoren ebenfalls die Möglichkeit gibt über diese zu iterieren.
 
-Allerdings mögen Loops sonst eher komplexe Logik andeuten welche wahrscheinlich nicht zu Sass gehört. Bevor du einen Loop benutzt, vergewisser dich dass es Sinn macht und auch ein Problem löst.
+Allerdings mögen Loops sonst eher komplexe Logik andeuten welche wahrscheinlich nicht zu Sass gehört. Bevor du einen Loop benutzt, vergewissere dich dass es Sinn macht und auch ein Problem löst.
 
 ## Each
 
-Der `@each`-Loop ist definitv der meist genutzte aller drei von Sass zur verfügung gestellten Loops. Es gibt eine saubere API um über eine Liste oder Map zu iterieren.
+Der `@each`-Loop ist definitiv der meist genutzte aller von Sass zur Verfügung gestellten Loops. Es bietet eine saubere API um über eine Liste oder Map zu iterieren.
 
 {% include snippets/loops/01/index.html %}
 
@@ -22,7 +22,7 @@ Halte dich außerdem für eine bessere Lesbarkeit an folgende Richtlinien:
 
 ## For
 
-Der `@for`-Loop ist in Kombination mit der CSS Pseudoklasse `:nth-*` hilfreich. Außer in diesen Fällen, solltest du eher einen `@each`-Loop verwenden wenn du über etwas iterieren *musst*.
+Der `@for`-Loop ist in Kombination mit der CSS Pseudoklasse `:nth-*` hilfreich. Außer in diesem Fall, solltest du eher einen `@each`-Loop verwenden wenn du über etwas iterieren *musst*.
 
 {% include snippets/loops/03/index.html %}
 
