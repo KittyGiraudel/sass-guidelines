@@ -40,7 +40,7 @@ Die meisten Interfaces können als Set aus kleinen Komponenten gesehen werden. I
 
 ## Das 7-1 Muster
 
-Zurück zur Architektur, oder? Ich arbeite normalerweise mit einem Muster was ich *7-1* nenne: 7 Ordner, 1 Datei. Grundsätzlich hast du all deine partials in 7 verschiedenen Ordnern verteilt, und eine Datei auf dem root level (normalerweise `main.scss`) importiert und kompiliert alles zu einem Stylesheet.
+Zurück zur Architektur, oder? Ich arbeite normalerweise mit einem Muster was ich *7-1* nenne: 7 Ordner, 1 Datei. Grundsätzlich hast du all deine partials in 7 verschiedenen Ordnern verteilt, und eine Datei auf dem Root-Level (normalerweise `main.scss`) importiert und kompiliert alles zu einem Stylesheet.
 
 * `base/`
 * `components/`
@@ -66,7 +66,7 @@ Idealerweise haben wir am Ende etwas wie:
 
 ### Base Ordner
 
-Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird eine reset Datei drin sein, ein paar Regeln für die Typografie und wahrscheinlich auch ein Stylesheet für allgemeinere HTML Elemente (welches ich `_base.scss` nenne):
+Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird eine Reset-Datei drin sein, ein paar Regeln für die Typografie und wahrscheinlich auch ein Stylesheet für allgemeinere HTML Elemente (welches ich `_base.scss` nenne):
 
 * `_base.scss`
 * `_reset.scss`
@@ -138,7 +138,7 @@ Die Grundregel hier ist, dass am Ende keine einzige Zeile CSS kompiliert werden 
 
 ### Vendors Ordner
 
-Und zu guter Letzt, der `vendors/` Ordner. Die meisten Projekte besitzen einen solchen oder ähnlichen Ordner indem alles CSS von externen Libraries und Frameworks wie z.B. Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered und so weiter, gelistet ist. All diese in einem Ordner zu sammeln ist ein guter Weg zu sagen "Hey, das ist nicht von mir, nicht mein Code, nicht meine Verantwortung".
+Und zu guter Letzt, der `vendors/` Ordner. Die meisten Projekte besitzen einen solchen oder ähnlichen Ordner indem alles CSS von externen Libraries und Frameworks wie z.B. Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered und so weiter, gelistet sind. All diese in einem Ordner zu sammeln ist ein guter Weg zu sagen "Hey, das ist nicht von mir, nicht mein Code, nicht meine Verantwortung".
 
 * `_normalize.scss`
 * `_bootstrap.scss`
@@ -147,7 +147,7 @@ Und zu guter Letzt, der `vendors/` Ordner. Die meisten Projekte besitzen einen s
 
 Falls du irgendwann mal einen Bereich daraus überschreiben musst, rate ich einen achten Ordner namens `vendors-extensions` anzulegen. Dort kannst du die Dateien exakt danach benennen was sie überschreiben.
 
-Zum Beispiel, `vendors-extensions/_bootstrap.scss` beinhaltet alle Regeln die einige von Bootstraps Default CSS überschreiben. Dadurch vermeide ich die Vendor Dateien selbst zu bearbeiten, was generell keine gute Idee ist.
+Zum Beispiel, `vendors-extensions/_bootstrap.scss` beinhaltet alle Regeln die einige von Bootstraps Default CSS überschreiben. Dadurch vermeide ich die Vendor-Dateien selbst zu bearbeiten, was generell keine gute Idee ist.
 
 ### Main Datei
 
@@ -173,7 +173,7 @@ Um die Lesbarkeit einzuhalten, solltest du außerdem diese Richtlinien beachten:
 
 {% include snippets/architecture/02/index.html %}
 
-Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenfalls als richtig sehe. Auf der anderen Seite macht es das Updaten zwar schwieriger, aber da kannst du selbst entscheiden, welche Struktur dir am besten gefällt. Hier sollten diese Richtlinien beachtet werden:
+Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenfalls als richtig sehe. Auf der anderen Seite macht es das aktualisieren zwar schwieriger, aber da kannst du selbst entscheiden, welche Struktur dir am besten gefällt. Hier sollten diese Richtlinien beachtet werden:
 
 * ein `@import` pro Ordner;
 * ein Zeilenumbruch nach `@import`;
@@ -184,13 +184,13 @@ Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenf
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>Damit nicht jede Datei einzeln und manuell importiert werden muss, gibt es die Ruby Sass Extension <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>. Dadurch ist es möglich, das sogenannte glob pattern in Sass' <code>@import</code> durch <code>@import "components/*"</code> zu verwenden.</p>
+  <p>Damit nicht jede Datei einzeln und manuell importiert werden muss, gibt es die Ruby Sass Extension <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>. Dadurch ist es möglich, das sogenannte Glob-Pattern in Sass' <code>@import</code> durch <code>@import "components/*"</code> zu verwenden.</p>
   <p>Allerdings kann ich es nicht wirklich empfehlen, da die Dateien alphabetisch importiert werden. Das kann insbesondere dann zu einem Problem werden, wenn du es mit einer Sprache zu tun hast in der die Reihenfolge wichtig ist.</p>
 </div>
 
 ## Shame Datei
 
-Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) und [Chris Coyier](http://css-tricks.com), wo alle Deklarationen, Hacks und Dinge auf die wir nicht stolz sind, in einer *shame Datei* zusammengefasst sind. Die dramatisch benannte `_shame.scss` sollte nach jeder anderen Datei und ganz am Ende deines Stylesheets  importiert werden.
+Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) und [Chris Coyier](http://css-tricks.com), wo alle Deklarationen, Hacks und Dinge auf die wir nicht stolz sind, in einer *Shame-Datei* zusammengefasst sind. Die dramatisch benannte `_shame.scss` sollte nach jeder anderen Datei und ganz am Ende deines Stylesheets  importiert werden.
 
 {% include snippets/architecture/04/index.html %}
 
