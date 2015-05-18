@@ -3,7 +3,7 @@
 
 Wenn du mich fragst, sollte dass erste sein was ein Styleguide definiert, die Art und Weise wie der Code aussehen soll.
 
-Wenn mehrere Entwickler in einem Projekt CSS schreiben, ist es nur eine Frage der Zeit bis einer anfängt etwas so zu machen wie er es für gut hält. Konsistente Code Guidelines verhindern nicht nur das, sondern helfen auch wenn es darum geht den Code zu lesen und updaten.
+Wenn mehrere Entwickler in einem Projekt CSS schreiben, ist es nur eine Frage der Zeit bis einer anfängt etwas so zu machen wie er es für gut hält. Konsistente Code Guidelines verhindern dies nicht nur, sondern helfen auch wenn es darum geht den Code zu lesen und zu aktualisieren.
 
 Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
@@ -35,7 +35,7 @@ Deshalb ist es in Sass *ebenfalls* nicht nötig. Noch besser (und *zum Glück*, 
 Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen zu setzen eine Minderheit, deshalb **sollten Strings in Sass immer in einfachen Anführungszeichen (`'`) gesetzt werden** (sie sind einfacher zu tippen als die normalen auf einer *QWERTY* Tastatur). Neben der Einheitlichkeit zu anderen Sprachen, einschließlich CSS' Cousin JavaScript, gibt es mehrere Gründe dafür:
 
 * Farbnamen werden wie Farben interpretiert wenn sie in Anführungszeichen gesetzt sind, was zu ernsthaften Problemen führen kann;
-* die meisten Syntax Highlighter bekommen Probleme mit Strings die nicht in Anführungszeichen stehen;
+* die meisten Syntax-Highlighter bekommen Probleme mit Strings die nicht in Anführungszeichen stehen;
 * es unterstützt die generelle Lesbarkeit;
 * es gibt keinen wirklichen Grund es nicht zu tun.
 
@@ -136,12 +136,12 @@ Um Farben so einfach wie sie sind zu lassen, ist mein Ratschlag folgende Reihenf
 1. [RGB-Farbraum](http://de.wikipedia.org/wiki/RGB-Farbraum);
 1. Hexadezimale Darstellung. Vorzugsweise in Kleinbuchstaben und gekürzt.
 
-Für Anfänger sprechen Keywords oft für sich. Der HSL-Farbraum ist nicht nur am einfachsten für das menschliche Gehirn zu verstehen<sup>[Zitat benötigt]</sup>, sondern er macht es außerdem ziemlich leicht für Stylesheet Autoren Farben durchs anpassend des Farbton, der Sättigung und Helligkeit zu optimieren.
+Für Anfänger sprechen Keywords oft für sich. Der HSL-Farbraum ist nicht nur am einfachsten für das menschliche Gehirn zu verstehen<sup>[Zitat benötigt]</sup>, sondern er macht es außerdem ziemlich leicht für Stylesheet-Autoren Farben durchs anpassen des Farbton, der Sättigung und Helligkeit zu optimieren.
 RGB hingegen hat immernoch den Vorteil direkt zu zeigen ob eine Farbe mehr in Richtung Blau, Grün oder Rot geht. Es ist jedoch nicht einfach eine Farbe aus den drei Komponenten zu erstellen. Zuletzt, Hexadezimale Darstellung ist schwer lesbar für das menschliche Gedächtnis.
 
 {% include snippets/syntax/14/index.html %}
 
-Wenn der HSL oder RGB-Farbaum verwendet wird, füg immer ein Leerzeichen nach dem Komma (`,`) hinzu, und keines zwischen Klammern und Inhalt (`(`, `)`).
+Wenn der HSL oder RGB-Farbaum verwendet wird, füge immer ein Leerzeichen nach dem Komma (`,`) hinzu, und keines zwischen Klammern und Inhalt (`(`, `)`).
 
 {% include snippets/syntax/15/index.html %}
 
@@ -185,13 +185,12 @@ Wenn du nicht jedesmal die `mix` Funktion schreiben möchtest, kannst du dir auc
 
 ## Listen
 
-Listen sind Sass' äquivalent zu Arrays. Eine Liste ist eine flache Datenstruktur (anders als [maps](#maps)), vorgesehen um Werte jeden Typs (einschließlich Listen, was zu verschachtelten Listen führt) zu speichern.
+Listen sind Sass' äquivalent zu Arrays. Eine Liste ist eine flache Datenstruktur (anders als [Maps](#maps)), vorgesehen um Werte jeden Typs (einschließlich Listen, was zu verschachtelten Listen führt) zu speichern.
 
 Listen sollten folgende Guidelines beachten:
 
 * entweder einzeilig oder mehrzeilig;
 * auf jedenfall mehrzeilig wenn sie mehr als 80 Zeichen beinhalten;
-* necessarily on multilines if too long to fit on an 80-character line;
 * es sei denn sie sind für CSS Zwecke verwendet, immer mit einem Komma getrennt;
 * immer in Klammern;
 * ein abschließendes Komma wenn mehrzeilig, keines wenn einzeilig.
@@ -232,7 +231,7 @@ Falls du dich jemals verloren fühlst, wundernd welch verrückte Magie gerade in
 
 {% include snippets/syntax/22/index.html %}
 
-Falls du die Tiefe einer Map wissen möchtest, dann füg folgende Funktion hinzu. Dieser mixin wird es automatisch anzeigen.
+Falls du die Tiefe einer Map wissen möchtest, dann füg folgende Funktion hinzu. Dieser Mixin wird es automatisch anzeigen.
 
 {% include snippets/syntax/23/index.html %}
 
@@ -250,7 +249,7 @@ Falls du die Tiefe einer Map wissen möchtest, dann füg folgende Funktion hinzu
 
 ## CSS Regelwerk
 
-An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS Regelwerks geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-Regelwerk)):
+An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS Regelwerke geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-Regelwerk)):
 
 * verwandte Selektoren auf dieselbe Zeile; zusammenhanglose auf eine neue;
 * die öffnende Klammer (`{`) mit einem Leerzeichen zum letzten Selektor;
@@ -269,7 +268,7 @@ Zusätzlich zu den CSS bezogenen Guidelines, richtet sich unsere Aufmerksamkeit 
 * lokale Variablen sollen vor allen anderen Deklarationen zugewiesen und durch eine neue Zeile getrennt werden;
 * Mixin Aufrufe die kein `@content` besitzen, kommen vor alle Deklarationen;
 * verschachtelte Selektoren immer in eine neue Zeile;
-* Mixin Aufrufe mit `@content` kommen nach jedem verschachtelten Selektor;
+* Mixin-Aufrufe mit `@content` kommen nach jedem verschachtelten Selektor;
 * keine neue Zeile nach der schließenden Klammer (`}`).
 
 Illustration:
@@ -287,7 +286,7 @@ Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander g
 * sich an eine alphabetische Reihenfolge halten;
 * Deklarationen nach Typ (position, display, colors, font, sonstiges...) sortieren.
 
-Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen for dem display Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
+Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen for dem Display-Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
 
 {% include snippets/syntax/26/index.html %}
 
@@ -303,10 +302,10 @@ Ich kann mich selber nicht entscheiden. Eine [kürzliche Umfrage auf CSS-Tricks]
 
 {% include images/order-poll.html %}
 
-Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was dir am besten gefällt, solange du konsistent durch alle Stylesheets bleibst (z.B. nicht die *random* Option).
+Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was dir am besten gefällt, solange du konsistent durch alle Stylesheets bleibst (z.B. nicht die *Random*-Option).
 
 <div class="note">
-  <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
+  <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
 
 ###### Weitere Informationen
@@ -376,7 +375,7 @@ Wenn wir also unser voriges Beispiel umschreiben, würde es wie folgt aussehen:
 
 {% include snippets/syntax/37/index.html %}
 
-Wie mit allem, ist dieser spezifische Fall irgendwie irrelevant, denn wichtig ist Konsistents. Wenn du dich also absolut okay mit Verschachtelung von Selektoren fühlst, dann mach es so. Versicher dich nur das auch dein ganzes Team damit einverstanden ist.
+Wie mit allem, ist dieser spezifische Fall irgendwie irrelevant, denn wichtig ist Konsistenz. Wenn du dich also absolut okay mit Verschachtelung von Selektoren fühlst, dann mach es so. Versicher dich nur das auch dein ganzes Team damit einverstanden ist.
 
 ###### Weitere Informationen
 
