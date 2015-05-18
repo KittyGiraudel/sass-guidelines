@@ -63,7 +63,7 @@ O que eu gosto do Sass é a abordagem conservativa com o CSS. O design do Sass �
   <p>Corner-case são casos específicos que tendem a ocorrer em situações específicas. O melhor exemplo disso é o uso de prefixos para suporte de propriedades específicas do CSS em browsers ou sistemas operacionais específicos.</p>
 </div>
 
-Em outras palavras, o Sass não é um pré-processador disposto a agradar programadores aspirantes a nerd como eu, adicionando recursos extraordinários com base numa linguagem que nem se destina a uso de casos de lógica. É um software direcionado a solução de problemas reais; ajudando a fornecer funcionalidades úteis ao CSS onde ele tende a falhar.
+Em outras palavras, o Sass não é um pré-processador disposto a agradar programadores aspirantes a nerd como eu, adicionando recursos extraordinários com base numa linguagem que nem se destina a uso de casos de lógica. É um software direcionado a solução de problemas reais; ajudando a fornecer funcionalidades úteis ao CSS onde ele tende a desapontar.
 
 Pré-processador de lado, deveríamos mencionar pós-processadores, que tem recebido uma exposição significativa nos últimos meses, graças ao [PostCSS](https://github.com/postcss/postcss) e o [cssnext](https://cssnext.github.io/), principalmente. Pós-processadores são muito equivalentes aos pré-processadores, exceto por eles não fornecerem nada além da sintaxe CSS que está por vir.
 
