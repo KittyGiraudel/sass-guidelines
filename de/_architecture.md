@@ -123,14 +123,14 @@ Es ist garnicht mal unüblich auf großen Seiten oder Applikationen verschiedene
 
 ### Utils Ordner
 
-Der `utils/` Ordner umfasst alle Sass Tools und Helper die über das Projekt verteilt zum Einsatz kommen. Sei es globale Variablen, Funktionen, Mixins oder Placeholder.
+Der `utils/` Ordner umfasst alle Sass Tools und Helper die über das Projekt verteilt zum Einsatz kommen. Sei es globale Variablen, Funktionen, Mixins oder Platzhalter.
 
 Die Grundregel hier ist, dass am Ende keine einzige Zeile CSS kompiliert werden soll, und die Dateien somit leer bleiben. Es sind reine Sass Helper.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (kürzlich `_helpers.scss` genannt)
+* `_Platzhalters.scss` (kürzlich `_helpers.scss` genannt)
 
 <div class="note">
   <p>Je nach dem was du bevorzugst, kann der <code>utils/</code> Ordner auch <code>helpers/</code>, <code>sass-helpers</code> oder <code>sass-utils</code> genannt werden.</p>

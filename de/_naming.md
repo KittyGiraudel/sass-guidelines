@@ -9,7 +9,7 @@ Es gibt ein paar Dinge die in Sass benannt werden können, und es ist wichtig di
 * Funktionen;
 * Mixins.
 
-Sass' Placeholder habe ich absichtlich ausgelassen, da sie als reguläre CSS Selektoren gesehen werden können und deshalb derselben Namenskonvention für Klassen folgen.
+Sass' Platzhalter habe ich absichtlich ausgelassen, da sie als reguläre CSS Selektoren gesehen werden können und deshalb derselben Namenskonvention für Klassen folgen.
 
 Bezüglich Variablen, Funktionen und Mixins werden wir uns an etwas sehr *CSS-mäßigen* richten: Kleinbuchstaben, getrennt durch Bindestrich und vor allem bedeutsam.
 
@@ -33,7 +33,7 @@ Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben un
 
 ## Namespace
 
-Falls du deinen Sass Code in Form einer Library, Framework, Grid System oder was auch immer verbreiten möchtest, solltest du überlegen all deine Variablen, Funktionen, Mixins und Placeholder mit einem Namespace zu versehen damit sie nicht jemand anderem Code in Konflikt geraten.
+Falls du deinen Sass Code in Form einer Library, Framework, Grid System oder was auch immer verbreiten möchtest, solltest du überlegen all deine Variablen, Funktionen, Mixins und Platzhalter mit einem Namespace zu versehen damit sie nicht jemand anderem Code in Konflikt geraten.
 
 Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches von Entwicklern auf der ganzen Welt (wieso auch nicht, oder?) verwendet wird, könntest du den Namespace `su-` benutzen. Er ist spezifisch genug um nicht mit anderen Namespaces in Konflikt zu geraten, und kurz genug um dir auf die Dauer beim schreiben nicht auf die Nerven zu gehen.
 

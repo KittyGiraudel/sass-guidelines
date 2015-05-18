@@ -32,7 +32,7 @@ Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommen
 
 ## Dokumentation
 
-Jede Variable, Funktion, Mixin und Placeholder welches nicht vorgesehen ist innerhalb der Codebasis wiederverwendet zu werden, sollte via [SassDoc](http://sassdoc.com) als Teil der globalen API dokumentiert werden.
+Jede Variable, Funktion, Mixin und Platzhalter welches nicht vorgesehen ist innerhalb der Codebasis wiederverwendet zu werden, sollte via [SassDoc](http://sassdoc.com) als Teil der globalen API dokumentiert werden.
 
 {% include snippets/comments/03/index.html %}
 
