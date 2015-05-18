@@ -63,8 +63,9 @@ h3, h6 {
   font-size: 1em;
 }
 
-// Russian do not capitalize every word in a header
+// Russian and German do not capitalize every word in a header
 // See https://github.com/HugoGiraudel/sass-guidelines/issues/163
+:lang(de),
 :lang(ru) {
   h1, h2, h3, h6 {
     text-transform: initial;
