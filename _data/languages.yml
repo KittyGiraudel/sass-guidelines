@@ -9,24 +9,6 @@ zh:
     - name: Sean Sun
       link: https://github.com/pinggod
 
-cz:
-  version: 1.0.0
-  label: Czech
-  prefix: /cz/
-  available: false
-  translators:
-    - name: Pavel Antolík
-      link: https://github.com/pavelantolik
-
-nl:
-  version: 1.0.0
-  label: Dutch
-  prefix: /nl/
-  available: false
-  translators:
-    - name: Tom de Wit
-      link: https://github.com/ttomdewit
-
 en:
   version: 1.1.0
   label: English
@@ -44,35 +26,13 @@ fr:
       link: http://la-cascade.ghost.io
 
 de:
-  version: 1.0.0
+  version: 1.1.0
   label: German
   prefix: /de/
-  available: false
+  available: true
   translators:
-    - name: Kai Brueckers
-      link: https://github.com/kaibrueckers
-    - name: Al
-      link: https://github.com/altembo
-
-gr:
-  version: 1.0.0
-  label: Greek
-  prefix: /gr/
-  available: false
-  translators:
-    - name: Adonis K.
-      link: https://github.com/varemenos
-    - name: Konstantinos Margaritis
-      link: https://github.com/kmargaritis
-
-it:
-  version: 1.0.0
-  label: Italian
-  prefix: /it/
-  available: false
-  translators:
-    - name: Simone Rescio
-      link: https://github.com/srescio
+    - name: Moritz Kröger
+      link: https://github.com/morkro
 
 ko:
   version: 1.0.0
