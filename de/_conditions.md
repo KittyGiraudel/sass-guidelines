@@ -1,13 +1,13 @@
 
 # Conditional Statements
 
-Möglicherweise hast du bereits davon gehört, dass Sass Conditional Statements via `@if` und `@else` bereitstellt. Conditional Statements sollten eigentlich keinen Gebrauch in deinen Stylesheets finden, außer du hast ein Grund für komplexe Logik in deinem Code. Eigentlich existieren sie hauptsächlich nur für Libraries und Frameworks.
+Möglicherweise hast du bereits davon gehört, dass Sass Conditional Statements via `@if` und `@else` bereitstellt. Conditional Statements sollten eigentlich keinen Gebrauch in deinen Stylesheets finden, außer du hast ein Grund für komplexe Logik in deinem Code. Sie existieren hauptsächlich nur für Libraries und Frameworks.
 
-Falls du Conditional Statemens doch einmal brauchen solltest, respektiere folgende Guidelines:
+Falls du Conditional Statemens doch einmal brauchst, beachte folgende Guidelines:
 
 * Keine Klammern solange sie nicht erforderlich sind;
 * Immer eine leere Zeile vor `@if`;
-* Immer einen Zeilenumbruch der öffnenden Klammer (`{`);
+* Immer einen Zeilenumbruch nach der öffnenden Klammer (`{`);
 * `@else` Statements auf dieselbe Zeile wie die vorherige, schließende Klammer (`}`);
 * Immer eine leere Zeile nach den schließenden Klammern (`}`), außer wenn die nächste Zeile ebenfalls eine schließende Klammer (`}`) ist.
 
