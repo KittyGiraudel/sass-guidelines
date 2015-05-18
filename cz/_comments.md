@@ -1,57 +1,58 @@
 
-# Commenting
+# Komentování
 
-CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don’t let you or anybody else be in the position of *I-didn’t-write-this-oh-my-god-why*.
+CSS je ošemetný jazyk plný hacků a podivností. Díky tomu by měl být hodně kometován, zvláště pokud vy nebo někdo jiný zamýšlíte číst a upravovat kód za 6 měsíců nebo rok. Nenechte se, nebo někoho jiného, dostat do pozice *Já-jsem-tohle-pane-bože-nenapsal*.
 
-As simple as CSS can get, there is still a lot of room for comments. These could be explaining:
+I přesto, že se CSS může zdát jednoduché, je mnoho situací, kdy může komentář hodně vysvětlit. Mohou vysvětlit takové věci jako:
 
-* the structure and/or role of a file;
-* the goal of a ruleset;
-* the idea behind a magic number;
-* the reason for a CSS declaration;
-* the order of CSS declarations;
-* the thought process behind a way of doing things.
+* struktura a/nebo smysl souboru;
+* cíl pravidla;
+* smysl za magickým číslem;
+* důvod pro CSS deklaraci;
+* pořádek CSS deklarací;
+* myšlenkový proces za způsobem dělání věcí.
 
-And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
+A pravděpodobně jsem ještě zapomněl mnoho dalších důvodů. Komentování zabere málo času, když se dělá plynule při psaní kódu, takže jej dělejte ve správný čas. Vracet se zpátky okomentovat kus kódu není nejen zcela nereálné, ale také příšerně otravné.
 
-## Writing comments
+## Psaní komentářů
 
-Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+Nejlepší je, když *každé* CSS pravidlo předchází předchází komentář ve stylu jazyka C, který vysvětluje smysl CSS bloku. Tento komentář může také obsahuje očíslované vysvětlení pro specifické části pravidel. Například:
 
 {% include snippets/comments/01/index.html %}
 
-Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+V podstatě všechno co není zřejmé na první pohled, by mělo být okomentováno. Není tu nic takového jako přiliš mnoho dokumentace. Pamatujte, že nemůžete *komentovat mnoho*, takže nažhavte klávesy a pište komentáře pro všechno, co za to stojí.
 
-When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
+Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře namísto blokových komentářů ve stylu jazyka C. To zapříčiní neviditelnost komentáře na výstupu, dokonce i v expanded módu během vývoje.
 
 {% include snippets/comments/02/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
-## Documentation
+## Dokumentace
 
-Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
+Každá proměnná, funkce, mixin a placeholder, kteřý je zamýšlen být znovupoužitelný v codebase by měl být dokumentován jako část globálního API využívající [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 
 <div class="note">
-  <p>Three slashes (<code>/</code>) required.</p>
+  <p>Jsou vyžadovány tři lomítka (<code>/</code>).</p>
 </div>
 
-SassDoc has two major roles:
+SassDoc má dvě hlavní role:
+
 
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* být schopný generovat HTML verze API dokumentace za použití některého ze SassDoc koncového bodu (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
 {% include images/sassdoc.html %}
 
-Here is an example of a mixin extensively documented with SassDoc:
+Zde je příklad mixinu rozsáhle dokumentovaného se SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
