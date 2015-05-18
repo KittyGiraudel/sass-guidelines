@@ -49,10 +49,8 @@ de:
   prefix: /de/
   available: false
   translators:
-    - name: Kai Brueckers
-      link: https://github.com/kaibrueckers
-    - name: Al
-      link: https://github.com/altembo
+    - name: Moritz Kröger
+      link: https://github.com/morkro
 
 gr:
   version: 1.0.0
