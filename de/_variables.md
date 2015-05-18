@@ -15,9 +15,9 @@ Grundsätzlich macht es keinen Sinn eine Variable zu erstellen die niemals aktua
 
 ## Scoping
 
-Der Scope von Variablen in Sass hat sich über die Jahre verändert. Bis vor kurzem gehörten Deklarationen innerhalb des Regelwerk und andere Scopes waren lokal. Wenn es jedoch eine globale Variable mit demselben Namen gab, hat die lokale Varible die globale überschrieben. Seit Version 3.4 allerdings, greift Sass das Konzept von Scopes korrekt und erzeugt stattdessen eine neue lokale Variable.
+Der Scope von Variablen in Sass hat sich über die Jahre verändert. Bis vor kurzem waren Deklarationen innerhalb des Regelwerk und andere Scopes standardmäßig lokal. Wenn es jedoch eine globale Variable mit demselben Namen gab, hat die lokale Variable die globale überschrieben. Seit Version 3.4 allerdings, greift Sass das Konzept von Scopes korrekt und erzeugt stattdessen eine neue lokale Variable.
 
-Sass' Dokumentation spricht von *Beschattung globaler Variablen*. Wenn eine Variable im inneren Scope (Selektor, Funktion, Mixin, ...) deklariert, aber schon im globalen Scope existiert, dann sagt man dass die globale Variable *beschatted* wird. Grundsätzlich überscheibt es nur den lokalen Scope.
+Sass' Dokumentation spricht von *Beschattung globaler Variablen*. Wenn eine Variable im inneren Scope (Selektor, Funktion, Mixin, ...) deklariert, aber schon im globalen Scope existiert, dann sagt man dass die globale Variable *beschattet* wird. Grundsätzlich überscheibt es nur den lokalen Scope.
 
 Folgendes Code-Snippet erklärt das Konzept der *Variablenbeschattung*:
 
@@ -41,7 +41,7 @@ Das `!global` Flag sollte nur benutzt werden wenn eine globale Variable vom loka
 
 ## Mehrere Variablen oder Maps
 
-Es gibt Vorteile Maps anstatt mehreren eindeutigen Variablen zu verwenden. Der größte ist, die Fähigkeit über eine Map zu loopen, was mit eindeutigen Variablen nicht möglich ist.
+Es gibt Vorteile Maps anstatt mehreren eindeutigen Variablen zu verwenden. Der größte ist, die Fähigkeit über eine Map zu iterieren, was mit eindeutigen Variablen nicht möglich ist.
 
 Ein weiterer Vorteil von Maps ist die Möglichkeit eine kleine Getter-Funktion zu schreiben, um eine freundlichere API bereitzustellen. Stell dir zum Beispiel folgenden Sass-Code vor:
 
