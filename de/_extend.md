@@ -1,28 +1,28 @@
 
 # Extend
 
-Die `@extend` Regel muss eine der Features sein welche Sass über die Jahre so berühmt gemacht hat. Nochmal zur Erinnerung, es macht es möglich Sass zu sagen das ein Element A exakt gleich wie Selektor B gestyled werden soll. Das kann natürlich ein wertvoller Verbündeter bei modularem CSS sein.
+Die `@extend` Regel muss eine der Features sein welche Sass über die Jahre so berühmt gemacht hat. Nochmal zur Erinnerung, es ermöglicht es Sass zu sagen dass Element A exakt gleich wie Selektor B gestyled werden soll. Deshalb kann es ein wertvoller Verbündeter bei modularem CSS sein.
 
-Dennoch habe ich das Gefühl ich muss dich vor dem Feature warnen. So clever es auch ist, `@extend` ist ein kompliziertes Konzept das wohlmöglich mehr Schaden als Nutzen bringt, gerade wenn es schlecht eingesetzt wird. Das Ding ist, wenn du du einen Selektor erweiterst, hast du ohne tiefen Einblick in die Codebasis zu haben wenig bis kaum die Möglichkeit folgende Fragen zu beantworten:
+Dennoch habe ich das Gefühl ich muss dich vor dem Feature warnen. So clever es auch ist, `@extend` ist ein kompliziertes Konzept das wohlmöglich mehr Schaden als Nutzen bringt, gerade wenn es schlecht eingesetzt wird. Das Ding ist, wenn du du einen Selektor erweiterst, hast du ohne einen tiefen Einblick in die Codebasis zu haben wenig bis kaum die Möglichkeit folgende Fragen zu beantworten:
 
 * wo wird mein aktueller Selektor hinzugefügt?
 * werde ich wohlmöglich ungewollte Nebeneffekte erzeugen?
 * wie groß wird das generierte CSS durch diese einzige Erweiterung sein?
 
-Soviel du auch weißt, das Ergebnis kann von keinerlei Auswirkung bis zu desaströsen Nebeneffekten variieren. Deshalb ist mein erster Ratschlag `@extend` komplett zu umgehen. Es mag hart klingen, aber am Ende des Tages kann es dir viel Kopfschmerzen und Schwierigkeiten ersparen.
+Soviel du auch weißt, das Ergebnis kann von keinerlei Auswirkung bis zu desaströsen Nebeneffekten variieren. Mein erster Ratschlag ist daher `@extend` komplett zu umgehen. Es mag hart klingen, aber am Ende des Tages kann es dir viel Kopfschmerzen und Schwierigkeiten ersparen.
 
 Abgesehen davon, kennst du die Sprichwörter:
 
 > Sag niemals nie.<br>
-> &mdash; offensichtlich, [nicht Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
+> &mdash; offensichtlich [nicht Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
 
 Es gibt Szenarien wo Selektoren zu erweitern hilfreich und wertvoll sein mag. Trotzdem behalte folgende Regeln in Erinnerung um dich selbst vor Ärger zu schützen:
 
 * Benutze `@extend` innerhalb eines Moduls, nicht über verschiedene hinweg.
 * Benutze `@extend` exklusiv in Platzhaltern, nicht in richtigen Selektor.
-* Vergewisser dich dass der Platzhalter so wenig wie möglich im Stylesheet vertreten ist.
+* Vergewissere dich dass der Platzhalter so wenig wie möglich im Stylesheet vertreten ist.
 
-Wenn du `@extend` verwendest, lass mich dich daran erinnern dass es nicht gut mit `@media` Blöcken zusammenspielt. Wie du vielleicht weißt, Sass kann einen Selektor nicht in einen Media Query erweitern. Wenn du es tust, schlägt der Kompiler einfach fehl und teilt dir mit dass es nicht geht. Nicht gut. Besonders seit Media Queries alles sind was wir wissen.
+Wenn du `@extend` verwendest, lass mich dich daran erinnern dass es nicht gut mit `@media` Blöcken zusammenspielt. Wie du vielleicht weißt, Sass kann einen Selektor nicht in einen Media Query erweitern. Wenn du es tust, schlägt der Compiler einfach fehl und teilt dir mit dass es nicht geht. Nicht gut. Besonders seit Media Queries alles ausmachen.
 
 {% include snippets/extend/01/index.html %}
 
@@ -34,7 +34,7 @@ Wenn du `@extend` verwendest, lass mich dich daran erinnern dass es nicht gut mi
   <p>Deshalb, wenn du Gzip (oder etwas vergleichbares) nicht benutzen kannst, ist es garnicht mal eine so schlechte Idee <code>@extend</code> zu verwenden, solange du weißt was du tust.</p>
 </div>
 
-Um abzuschließen, I rate dazu **`@extend` nicht zu verwenden**, außer unter spezifischen Umständen, aber würde nicht soweit gehen es zu verbieten.
+Um abzuschließen, rate Ich, außer unter bestimmten Umständen, **`@extend` nicht zu verwenden**, aber würde nicht soweit gehen es zu verbieten.
 
 ###### Weitere Informationen
 
