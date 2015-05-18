@@ -3,7 +3,7 @@
 
 Arquitetar um projeto CSS é provavelmente uma das coisas mais dificultosas que você terá de fazer na vida de um projeto. Manter a arquitetura consistente e significante é ainda mais difícil.
 
-Felizmente, um dos maiores benefícios de usar um pré-processador CSS é ter a capacidade de dividir a base de código por vários arquivos sem impactar a performance (como a diretiva `@import` faria). Graças a sobrecarga da diretiva `@import` do Sass, é perfeitamente seguro (e até mesmo recomendado) se usar quantos arquivos forem necessários em desenvolvimento, tudo compilado em uma única folha de estilo quando forem para produção.
+Felizmente, um dos maiores benefícios de usar um pré-processador CSS é ter a capacidade de dividir a base de código por vários arquivos sem impactar a performance (como a diretiva `@import` do CSS faria). Graças a sobrecarga da diretiva `@import` do Sass, é perfeitamente seguro (e até mesmo recomendado) se usar quantos arquivos forem necessários em desenvolvimento, tudo compilado em uma única folha de estilo quando forem para produção.
 
 Com base nisso, eu não poderia enfatizar o suficiente a necessidade de pastas, até mesmo em projetos de baixa escala. Em casa, você não larga todas as folhas de papel numa mesma caixa. Você usa pastas; uma para a casa/apartamento, uma para o banco, uma para as contas, e por aí vai. Não há motivos para se fazer o contrário quando estiver estruturando um projeto CSS. Divida a base de código em pastas significativas separadas, ficando fácil de achar as coisas mais na frente quando tiver que voltar ao código.
 
