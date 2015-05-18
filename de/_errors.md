@@ -1,7 +1,7 @@
 
 # Warnungen und Fehler
 
-Wenn es ein Feature gibt welches von Entwicklern oft übersehen wird, dann ist es die Fähigkeit dynamisch Warnungen und Fehler auszugeben. Tatsächlich kommt Sass mit drei eigenen Funktionen um Inhalt in dem standard Ausgabesystem (CLI, kompilierte App, ...) darzustellen.
+Wenn es ein Feature gibt welches von Entwicklern oft übersehen wird, dann ist es die Fähigkeit dynamisch Warnungen und Fehler auszugeben. Tatsächlich kommt Sass mit drei eigenen Funktionen um Inhalt in dem Standardausgabesystem (CLI, kompilierte App, ...) darzustellen.
 
 * `@debug`;
 * `@warn`;
@@ -19,16 +19,16 @@ Es gibt eine Menge Spielraum für Warnungen und Fehler in einem Sass Projekt. Gr
 
 ## Warnungen
 
-Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche versucht einen `px` Wert in `em` umzuwandeln als Beispiel:
+Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche versucht einen `px`-Wert in `em` umzuwandeln, als Beispiel:
 
 {% include snippets/errors/01/index.html %}
 
-Wenn der Wert ohne Einheit ist, geht die Funktion davon aus das es als Pixel behandelt werden soll. An dieser Stellen ist eine Vermutung eventuell riskant, deshalb sollte der Entwickler davor gewarnt werden dass die Software etwas unerwartes ausgeben könnte.
+Wenn der Wert ohne Einheit ist, geht die Funktion davon aus das es als Pixel behandelt werden soll. An dieser Stelle ist eine Vermutung eventuell zu riskant, deshalb sollte der Entwickler davor gewarnt werden dass die Software etwas unerwartes ausgeben könnte.
 
 ## Fehler
 
-Fehler, im Gegenteil zu Warnungen, hindern den Compiler dabei weiter zu machen. Grundsätzlich halten sie die Verarbeitung an und zeigen in der Ausgabe die Nachricht sowie den Stacktrace, welcher gut fürs debuggen ist, an. Deshalb sollten Fehler immer nur dann angezeigt werden, wenn es keinen Weg mehr für das Programm gibt weiterzumachen. Wenn möglich, versuch um das Problem herum zu arbeiten und stattdessen eine Warnung anzuzeigen.
+Fehler, im Gegenteil zu Warnungen, hindern den Compiler dabei weiter zu machen. Grundsätzlich halten sie die Verarbeitung an und zeigen in der Ausgabe die Nachricht sowie den Stacktrace an, welcher gut fürs debuggen ist. Deshalb sollten Fehler immer nur dann angezeigt werden, wenn es für das Programm keinen Weg mehr gibt weiterzumachen. Wenn möglich, versuch um das Problem herum zu arbeiten und stattdessen eine Warnung anzuzeigen.
 
-Lass uns als Beispiel annehmen, dass du eine Getter-Funktion hast um Werte aus einer bestimmten Map zu erreichen. Du könntest einen Fehler anzeigen wenn der angeforderte Key in der Map nicht existiert.
+Lass uns als Beispiel annehmen dass du eine Getter-Funktion hast um Werte aus einer bestimmten Map zu erreichen. Du könntest einen Fehler anzeigen wenn der angeforderte Key in der Map nicht existiert.
 
 {% include snippets/errors/02/index.html %}
