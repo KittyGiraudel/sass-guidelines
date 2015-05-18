@@ -1,9 +1,9 @@
 
-# Introduction
+# Einleitung
 
 ## Warum ein Styleguide
 
-Ein Styleguide ist nicht nur einfach ein schönes Dokument um darzustellen wie dein Code idealerweise aussehen sollte, sondern er ist essenziell für das Projekt, um zu beschreiben weshalb und wie Code geschrieben werden sollte. Zwar sieht es in kleinen Projekten etwas nach overkill aus, zahlt sich am Ende aber in Sachen Skalierbarkeit, Wartbarkeit und einer sauberen Codebasis aus.
+Ein Styleguide ist nicht nur einfach ein schönes Dokument um darzustellen wie dein Code idealerweise aussehen sollte, sondern er ist essenziell für das Projekt, um zu beschreiben weshalb und wie Code geschrieben werden sollte. Zwar sieht es in kleinen Projekten etwas nach Overkill aus, zahlt sich am Ende aber in Sachen Skalierbarkeit, Wartbarkeit und einer sauberen Codebasis aus.
 
 Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind Guidelines. Und je größer das Projekt, desto notwendiger ist ein Styleguide.
 
@@ -24,7 +24,7 @@ Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind
 
 Zu aller erst: **das ist kein CSS Styleguide**. Hier werden keine Namenskonventionen für CSS Klassen, Modulare Patterns oder die Frage der ID's im CSS diskutiert. Diese Guidelines fokussieren sich lediglich auf Sass spezifischen Inhalt.
 
-Dazu ist dieser Styleguide mein eigener und von daher **stark meinungsbasiert**. Es ist eher eine Auswahl von Methodologien und Ratschlägen die ich über die Jahre verfeinert und weitergegeben habe. Es gibt mir ebenfalls die Möglichkeit auf interessante und aufschlussreiche Quellen zu verlinken. Also nicht die *weiteren Artikel* verpassen.
+Dazu ist dieser Styleguide mein eigener und von daher **stark meinungsbasiert**. Es ist eher eine Auswahl von Methodologien und Ratschlägen die ich über die Jahre verfeinert und weitergegeben habe. Es gibt mir ebenfalls die Möglichkeit auf interessante und aufschlussreiche Quellen zu verlinken. Also nicht die *weiteren Informationen* verpassen.
 
 Natürlich ist das hier nicht der einzige Weg das Thema anzugehen und es mag auch garnicht auf dein Projekt passen. Deshalb fühl dich frei einfach die Inhalte die dir am besten passen zu übernehmen.
 
@@ -43,5 +43,5 @@ Um noch einmal [Harry Roberts](https://csswizardry.com) zu zitieren, **Pragmatim
 ###### Weitere Informationen
 
 * [KISS Prinzip](http://de.wikipedia.org/wiki/KISS-Prinzip)
-* [DRY Prinzio](http://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself)
+* [DRY Prinzip](http://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
