@@ -6,7 +6,7 @@ CSS ist eine knifflige Sprache, voller Hacks und Seltsamkeiten. Deshalb sollte e
 So einfach CSS sein kann, es ist immer Raum für Kommentare. Diese könnten unter anderem erklären:
 
 * die Struktur und/oder Rolle einer Datei;
-* das Ziel eines Ruleset;
+* das Ziel eines Regelwerk;
 * die Idee hinter einer magischen Zahl;
 * der Grund für eine CSS Deklaration;
 * die Reihenfolge von CSS Deklarationen;
@@ -16,7 +16,7 @@ Und wahrscheinlich habe ich noch eine Menge weiterer Gründe vergessen warum man
 
 ## Kommentare schreiben
 
-Idealerweise, ist *jedes* CSS Ruleset durch einen im C-Stil vorangestellten Kommentar, welcher erklärt was der jeweilige CSS Block soll, versehen. Der Kommentar beinhaltet ebenfalls eine nummerierte Liste an Erklärung zu bestimmten Teilen des Ruleset. Zum Beispiel:
+Idealerweise, ist *jedes* CSS Regelwerk durch einen im C-Stil vorangestellten Kommentar, welcher erklärt was der jeweilige CSS Block soll, versehen. Der Kommentar beinhaltet ebenfalls eine nummerierte Liste an Erklärung zu bestimmten Teilen des Regelwerk. Zum Beispiel:
 
 {% include snippets/comments/01/index.html %}
 

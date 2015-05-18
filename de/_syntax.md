@@ -248,9 +248,9 @@ Falls du die Tiefe einer Map wissen möchtest, dann füg folgende Funktion hinzu
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
-## CSS Ruleset
+## CSS Regelwerk
 
-An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS rulesets geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS Regelwerks geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-Regelwerk)):
 
 * verwandte Selektoren auf dieselbe Zeile; zusammenhanglose auf eine neue;
 * die öffnende Klammer (`{`) mit einem Leerzeichen zum letzten Selektor;
@@ -278,7 +278,7 @@ Illustration:
 
 ###### Weitere Informationen
 
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+* [Anatomy of a Regelwerk](http://cssguidelin.es/#anatomy-of-a-Regelwerk)
 
 ## Anordnung der Deklarationen
 
@@ -291,7 +291,7 @@ Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische
 
 {% include snippets/syntax/26/index.html %}
 
-Auf der anderen Seite macht die Sortierung nach Typ perfekt Sinn. Jede font bezogene Deklaration ist gesammelt, `top` und `bottom` sind beisammen und ein ruleset zu lesen fühlt sich einfach an wie eine Kurzgeschichte. Aber solange du dich an Konventionen wie [Idiomatic CSS](https://github.com/necolas/idiomatic-css) hälst, gibt es eine Menge Spielraum für Interpretationen wie man etwas machen soll. Wo gehört `white-space` hin: font oder display? Wozu gehört `overflow` nun wirklich? Was ist die Reihenfolge innerhalb einer Gruppe (es könnte alphabetisch sein, welch Ironie)?
+Auf der anderen Seite macht die Sortierung nach Typ perfekt Sinn. Jede font bezogene Deklaration ist gesammelt, `top` und `bottom` sind beisammen und ein Regelwerk zu lesen fühlt sich einfach an wie eine Kurzgeschichte. Aber solange du dich an Konventionen wie [Idiomatic CSS](https://github.com/necolas/idiomatic-css) hälst, gibt es eine Menge Spielraum für Interpretationen wie man etwas machen soll. Wo gehört `white-space` hin: font oder display? Wozu gehört `overflow` nun wirklich? Was ist die Reihenfolge innerhalb einer Gruppe (es könnte alphabetisch sein, welch Ironie)?
 
 {% include snippets/syntax/27/index.html %}
 
