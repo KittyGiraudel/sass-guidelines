@@ -23,14 +23,14 @@ An diesem Punkt wird jede Namenskonvention, die klar macht dass ein Design nicht
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
-## Breakpointmanager
+## Breakpoint-Manager
 
-Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg finden sie in deinen Media Queries anzuwenden. Es gibt eine Menge Wege, doch ich muss sagen das ich ein großer Fan von Breakpoint Maps mit einer Getter Funktion bin. Es ist einfach und effizient.
+Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg finden sie in deinen Media Queries anzuwenden. Es gibt eine Menge Wege, doch ich muss sagen das ich ein großer Fan von Breakpoint-Maps mit einer Getter-Funktion bin. Es ist einfach und effizient.
 
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Das ist natürlich ein ziemlich einfacher Breakpointmanager. Falls du einen etwas toleranteren brauchst, kann ich dir nur empfehlen das Rad nicht neu zu erfinden und dir <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> oder <a href="https://github.com/eduardoboucas/include-media">include-media</a> anzuschauen.</p>
+  <p>Das ist natürlich ein ziemlich einfacher Breakpoint-Manager. Falls du einen etwas toleranteren brauchst, kann ich dir nur empfehlen das Rad nicht neu zu erfinden und dir <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> oder <a href="https://github.com/eduardoboucas/include-media">include-media</a> anzuschauen.</p>
 </div>
 
 ###### Weitere Informationen
