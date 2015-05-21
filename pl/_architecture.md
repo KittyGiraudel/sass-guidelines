@@ -35,7 +35,7 @@ Komponenty mogą reprezentować wszystko, o tyle o ile:
 * są niezależne.
 
 
-Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w róznych miejscach, na różnych stronach i w róznych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
+Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w różnych miejscach, na różnych stronach i w różnych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
 
 Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomoże Ci on nie tylko zmniejszyć ilość CSSu potrzebnego dla Twojego całego projektu, ale także ułatwi Ci utrzymanie całości kodu w porządku.
 
