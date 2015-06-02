@@ -124,9 +124,9 @@ zh:
 cz:
   donate:
     button: "Podpořit Sass Guidelines"
-    content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jejich podporu."
+    content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jeho podporu."
   baseline:
-    content: "Umíněný průvodce pro praní rozumného, udržovatelného a škálovatelného Sass."
+    content: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
   footer:
     content: "Vytvořeno s láskou od [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Poznámka"
