@@ -1,26 +1,26 @@
 
-# Conditional statements
+# Podmíněné příkazy
 
-You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. Actually, they mainly exist for libraries and frameworks.
+Pravděpodobně již víte, že Sass poskytuje podmíněné příkazy pomocí `@if` a `@else` direktiv. V běžných stylech nejsou podmíněné příkazy potřeba, ledaže máte střední až velmi komplexní řešení. Ve skutečnosti existují hlavně pro knihovny a frameworky.
 
-Anyway, if you ever find yourself in need of them, please respect the following guidelines:
+Každopádně, pokud je se někdy ocitnete v situaci, kdy je budete využívat, respektujte, prosím, následující zásady:
 
-* No parentheses unless they are necessary;
-* Always an empty new line before `@if`;
-* Always a line break after the opening brace (`{`);
-* `@else` statements on the same line as previous closing brace (`}`).
-* Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
+* Žádné závorky, pokud nejsou nezbytné;
+* Vždy mějte prázdný řádek před `@if`;
+* Vždy ukončete řádek po otevírací závorce (`{`);
+* `@else` příkaz mějte na stejném řádku, jako předchozí uzavírací závorka (`}`).
+* Vždy mějte nový prázdný řádek za poslední uzavírací závorkou (`}`), pokud není na dalším řádku uzavírací závorka (`}`).
 
 {% include snippets/conditions/01/index.html %}
 
-When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
+Pokud testujete nepravdivé hodnoty, vždy použijte klíčové slovo `not` spíše než testování oproti `false` nebo `null`.
 
 {% include snippets/conditions/02/index.html %}
 
-Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
+Vždy dávejte část s proměnnou na levou stranu příkazu a (ne)očekávaný výsledek na stranu pravou. Obrácené podmíněné příkazy jsou často obtížně čitelné, zvláště pro nezkušené vývojáře.
 
 {% include snippets/conditions/03/index.html %}
 
-When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
+Při použití podmíněného příkazu v rámci funkce pro vrácení rozdílného výsledku na základě nějaké podmínky se vždy ujistěte, že funkce obsahuje `@return` také mimo jakýkoliv podmíněný blok.
 
 {% include snippets/conditions/04/index.html %}
