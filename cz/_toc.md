@@ -1,5 +1,5 @@
 
-# Table of Contents
+# Obsah
 
 * Toc
 {:toc}
