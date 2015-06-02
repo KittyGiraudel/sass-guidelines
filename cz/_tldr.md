@@ -1,26 +1,27 @@
 
-# Too Long; Didn't read
+# Moc dlouhé, nečetl jsem
 
-To sum up, we want:
+Abych to shrnul, chceme:
 
-* Two (2) spaces indents, no tabs;
-* 80-characters wide lines;
-* Properly written multi-line CSS;
-* Meaningful use of whitespaces;
-* Quoted strings (single quotes) & URLs;
+* Dvě (2) mezery pro odsazení, ne taby;
+* 80 znaků široké řádky;
+* Správně psané víceřádkové CSS;
+* Smysluplnné užití whitespaců;
+* Řetězce a URL v jednoduchý uvozovkách;
+* Žádné koncové mezery, povinná 0 před desetinnou čárkou;
 * No trailing 0, mandatory leading 0;
-* Calculations wrapped in parentheses;
-* No magic numbers;
-* Colors expressed in keywords > HSL > RGB > hexadecimal;
-* Lists separated with commas;
+* Výpočty zabalen v závorkách;
+* Žádné magické čísla;
+* Barvy vyjádřené v klíčových slovech > HSL > RGB > hexadecimálně;
+* Listy oddělené čárkami;
 * No trailing comma in lists (since they are inlined);
 * Trailing comma in maps;
 * No selector nesting except for pseudo-classes and pseudo-elements;
-* Hyphen-delimited naming;
-* Extensive comments;
-* SassDoc-powered API comments;
-* Limited usage of `@extend`;
-* Simple mixins;
-* As few loops as possible, no `@while`;
-* Reduced number of dependencies;
-* Meaningful use of warnings and errors.
+* Čárkou-oddelené pojmenování;
+* Rozsáhlé komentáře;
+* Komentáře poháněné SassDoc API;
+* Omezené použití `@extend`;
+* Jednoduché mixiny;
+* Tak málo cyklů jak je možno, žádné `@while`;
+* Snížený počet závislostí;
+* Smysluplnné použití varování a chyb.
