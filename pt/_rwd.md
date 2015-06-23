@@ -1,30 +1,28 @@
 
 # Responsive Web Design and breakpoints
 
-I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
+Eu não acho que ainda tenhamos de apresentar Design Web Responsivo agora que está em todo o lado. No entanto voçês podem-se perguntar *porque há uma secção de RWD num guia de estilos?* Na realidade existem algumas coisas que podem ser feitas para facilitar o trabalho com breakpoints, como tal achei que podia não ser má ideia lista-las aqui.
 
 
 
 
+## Definir breakpoints
 
+Acho que é seguro dizer que as media queries não devem estar agarradas a dispositivos específicos. Por exemplo, seria definitivamente uma má ideia ter especificamente iPhones ou Blackberrys como publico-alvo. As media queries devem afectar um conjunto de tamanhos de ecrã, pelo menos até o design partir e a próxima media query entra em acção.
 
-## Naming breakpoints
-
-I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
-
-For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on...
+Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets, e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além...
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $breakpoints: (
-  'medium': (min-width: 800px),
-  'large': (min-width: 1000px),
-  'huge': (min-width: 1200px),
+  'medio': (min-width: 800px),
+  'grande': (min-width: 1000px),
+  'enorme': (min-width: 1200px),
 );
 
-// Nope
+// Não
 $breakpoints: (
   'tablet': (min-width: 800px),
   'computer': (min-width: 1000px),
@@ -37,27 +35,27 @@ $breakpoints: (
 // Yep
 $breakpoints: ("medium": (min-width: 800px), "large": (min-width: 1000px), "huge": (min-width: 1200px))
 
-// Nope
+// Não
 $breakpoints: ("tablet": (min-width: 800px), "computer": (min-width: 1000px), "tv": (min-width: 1200px))
 {% endhighlight %}
   </div>
 </div>
 
-At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o design não está intimamente agarrado a um tipo de dispositivo especifíco e que dê uma ideia da escala de magnitudes.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $breakpoints: (
-  'seed': (min-width: 800px),
-  'sprout': (min-width: 1000px),
-  'plant': (min-width: 1200px),
+  'semente': (min-width: 800px),
+  'rebento': (min-width: 1000px),
+  'planta': (min-width: 1200px),
 );
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$breakpoints: ("seed": (min-width: 800px), "sprout": (min-width: 1000px), "plant": (min-width: 1200px))
+$breakpoints: ("semente": (min-width: 800px), "rebento": (min-width: 1000px), "planta": (min-width: 1200px))
 {% endhighlight %}
   </div>
 </div>
@@ -65,7 +63,7 @@ $breakpoints: ("seed": (min-width: 800px), "sprout": (min-width: 1000px), "plant
 
 
 
-### Further reading
+### Leitura Adicional
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -74,14 +72,14 @@ $breakpoints: ("seed": (min-width: 800px), "sprout": (min-width: 1000px), "plant
 
 
 
-## Breakpoint manager
+## Gestor de Breakpoints
 
-Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
+Assim que definam os breakpoints da maneira que quiserem, voçês precisam de arranjar uma maneira de os usar realmente em media queries. Há imensas maneiras de o fazer, mas confesso que sou grande fã do mapa de breakpoints acedido por uma função de leitura. Este sistema é simples e eficiente.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Responsive manager.
+/// Gestor Responsivo.
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
@@ -101,7 +99,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Responsive manager.
+/// Gestor Responsivo.
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
@@ -111,20 +109,20 @@ Once you have named your breakpoints the way you want, you need a way to use the
       @content
 
   @else
-    @error 'No value found for `#{$breakpoint}`. '
-         + 'Please make sure it is defined in `$breakpoints` map.'
+    @error 'Nenhum valor encontrado para `#{$breakpoint}`. '
+         + 'Por favor assegure que está definido no mapa `$breakpoints`.'
 {% endhighlight %}
   </div>
 </div>
 
 <div class="note">
-  <p>Obviously, this is a fairly simplistic breakpoint manager that will not do the trick when dealing with custom and/or multiple-checks breakpoints.</p>
-  <p>If you need a slightly more permissive breakpoint manager, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Obviamente, este é um gestor de breakpoints bastante simplista que não irá funcionar quando for preciso lidar com breakpoints customizados ou que necessitem de multiplas verificações. </p>
+  <p>Se precisa de um gestor de breakpoints um bocado mais permissivo, permita-me recomendar que não reinvente a roda e que use algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 
 
-### Further Reading
+### Leitura Adicional
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -136,7 +134,8 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 ## Media Queries Usage
 
-Not so long ago, there has been a quite hot debate about where should be written media queries: should they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+Não há muito tempo atrás, houve um debate acesso sobre onde é que as media queries deveriam ser escritas: deveriam ser escritas dentro dos selectores (tal como Sass o permite), ou deveriam ser separadas?
+Tenho a dizer que sou um defensor renhido do sistema *media-queries-dentro-de-selectores*, um vez que acho que encaixa bem com a ideia de *componentes*
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -161,7 +160,7 @@ Not so long ago, there has been a quite hot debate about where should be written
   </div>
 </div>
 
-Leading to the following CSS output:
+Que gera o seguinte resultado em CSS:
 
 {% highlight css %}
 .foo {
@@ -175,16 +174,16 @@ Leading to the following CSS output:
 }
 {% endhighlight %}
 
-You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn't matter once Gzip (or any equivalent) has done its thing:
+Podem ter ouvido que esta convenção resulta na duplicação das media queries no resultado de CSS. Isto é definitivamente verdade. No entanto, [foram feitos testes](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e o resultado final é que não interessa assim que Gzip (ou algo equivalente) fizer o seu trabalho:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
 
-Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
+Agora, se realmente tiverem preocupados com a duplicação das media queries, podem usar uma ferramenta para as juntar, tal como [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) no entanto, sinto que vos devo avisar na possibilidade de efeitos secundários de alteram a ordem do código. Um vez que já sabem que a ordem do código-fonte é importante.
 
 
 
-### Further Reading
+### Leitura Adicional
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
