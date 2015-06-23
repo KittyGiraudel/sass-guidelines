@@ -85,7 +85,7 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 
 
 
-## List da argumentos
+## Lista de argumentos
 
 Quando estão a lidar com um mixin que tem um número desconhecido de argumentos, o Sass suporta "argumentos variáveis". "Argumentos variáveis" são os argumentos que estão no fim de um mixin ou de uma declaração de função e são transformados numa lista, à qual vamos chamar `arglist`. Isto é impliciatemnete usado quando ao passar um número de argumentos para um mixin ou uma função cuja assinatura de uma função contem `...`.
 

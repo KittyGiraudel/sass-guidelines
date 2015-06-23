@@ -1,5 +1,5 @@
 
-# Convenções de Nomenclatura
+# Convenções de nomenclatura
 
 Nesta secção, não iremos lidar com as melhores convenções de nomenclatura para manutenção e escalabilidade; não só isso apenas vos diz respeito, como também está fora do âmbito de um guia de estilos de Sass. Eu sugiro os recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
