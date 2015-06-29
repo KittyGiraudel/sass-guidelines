@@ -1,7 +1,7 @@
 
 # Formatação e sintaxe
 
-Se me perguntarem, a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
+Se me perguntarem a mim, diria que a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
 
 Quando vários programadores estão responsáveis por escrever CSS simultaneamente nos mesmos projectos, é apenas uma questão de tempo até que um deles comece a escrever as coisas à sua maneira. Guias de estilo que promovam consistência não só previnem isto, mas ajudam também à leitura e manutenção do código.
 
@@ -42,7 +42,11 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
   </div>
 </div>
 
+<<<<<<< HEAD
 Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos este tópico na [secção de arquitetura](#arquitetura).
+=======
+Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos esse tópico na [secção de arquitetura](#arquitetura).
+>>>>>>> 7a0531e6a027c9229c146b51314d3e9f72795089
 
 
 
@@ -59,8 +63,8 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 
 * nomes de cores são tratados como cores quando não possuem aspas, o que pode levar a conflitos;
 * a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
-* ajuda em geral à leitura
-* não existe uma razão válida para não as usar
+* ajuda em geral à leitura;
+* não existe uma razão válida para não as usar;
 
 
 <div class="code-block">
@@ -137,7 +141,7 @@ URLs também devem seguir a mesma regra:
 
 ## Números
 
-Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
+Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, a frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
 
 
 
@@ -203,7 +207,7 @@ $length: 0em
   </div>
 </div>
 
-O erro mais comum que me consigo lembrar no que diz respeito a números em Sass, é pensar que as unidades representam strings que podem ser adicionadas livremente a um número. Enquanto isto pode parecer verdadeiro, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
+O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
@@ -332,7 +336,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 ### Números mágicos
 
-"Números mágicos" (Magic number) diz respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por trás dele.
+"Números mágicos" (Magic number) dizem respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
@@ -376,20 +380,20 @@ Escusado será dizer que **números mágicos são uma praga e devem ser evitados
 
 ## Cores
 
-Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções poderosas](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções úteis para tal](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 
 
 ### Formatos de cores
 
-De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatores de cores:
+De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatação de cores:
 
 1. [Chaves de cores CSS](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Anotação HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-Para começar, as chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
 
 <div class="code-block">
@@ -474,8 +478,6 @@ $sass-pink: #c69
 
 Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso estiver demasiado preso a um tema, eu não recomendaria utilizar a variável desta forma. Em vez disso, devemos guardá-la numa variável cujo nome explique como deve ser utilizada.
 
-Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
-
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
@@ -492,6 +494,7 @@ $main-theme-color: $sass-pink
 Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`.
 
 
+Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) como o escurecer [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) representam funções que permitem manipular a luz de uma cor no espaço HSL adicionando ou subtraindo ao valor do espaço HSL. Basicamente, representam atalhos para o parâmetro `$lightness` do método de ajuste de cor [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
 ### Clarear e Escurecer cores
 
@@ -499,7 +502,7 @@ Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Funct
 
 É importante referir que estas funções muitas vezes não geram os resultados que se esperaria. Por outro lado, a função de mistura [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) é uma boa forma de escurecer ou clarear uma cor misturando-a com branco ou preto.
 
-A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor aos extremos de branco ou preto.
+A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor para os extremos de branco ou preto.
 
 <figure role="group">
   <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
@@ -571,16 +574,16 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
 
 
 
-## Lists
+## Listas
 
-Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
+Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
 
-Lists should respect the following guidelines:
+As listas devem respeitar as seguintes orientações:
 
-* unless it is too long to fit on an 80-character line, always display it on a single line;
-* unless it is used as is for CSS purposes, always use comma as a delimiter;
-* unless it is empty or nested within another list, never write the parenthesis;
-* never add a trailing comma.
+* a não ser que seja demasiado longa para caber numa linha de 80 caracteres, usar apenas uma linha;
+* a não ser que seja usada literalmente em código CSS, usar sempre uma vírgula como delimitador;
+* a não ser que seja uma lista vazia ou aninhada em outra lista, nunca escrever os parêntesis;
+* nunca terminar com uma vírgula.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -609,7 +612,7 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
 // Yep
 $font-stack: 'Helvetica', 'Arial', sans-serif
 
-// Não (since it is not supported)
+// Não (dado que não é suportado)
 $font-stack:
   'Helvetica',
   'Arial',
@@ -627,14 +630,14 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,)
   </div>
 </div>
 
-When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
+Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $shadows: 0 42px 13.37px hotpink;
 
-// Yep
+// Sim
 $shadows: append($shadows, $shadow, comma);
 
 // Não
@@ -645,7 +648,7 @@ $shadows: $shadows, $shadow;
 {% highlight sass %}
 $shadows: 0 42px 13.37px hotpink
 
-// Yep
+// Sim
 $shadows: append($shadows, $shadow, comma)
 
 // Não
@@ -656,7 +659,7 @@ $shadows: $shadows, $shadow
 
 
 
-### Further reading
+### Leitura adicional
 
 * [SassyLists](http://sassylists.com)
 
@@ -665,27 +668,27 @@ $shadows: $shadows, $shadow
 
 
 
-## Maps
+## Mapas
 
-Since Sass 3.3, stylesheet authors can define maps &mdash; the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn't recommend it) to values of any type.
+Desde o Sass 3.3, autores de folhas de estilo podem definir mapas &mdash; o termo do Sass para arrays associativos, mapas de hash ou mesmo objectos em JavaScript. Um mapa é uma estrutura de dados que mapeia chaves (que podem ser de qualquer tipo de dados, incluindo mapas, embora eu não o recomende) em valores de qualquer tipo.
 
-Maps should be written as follows:
+Mapas devem ser escritos da seguinte forma:
 
-* space after the colon (`:`);
-* opening brace (`(`) on the same line as the colon (`:`);
-* **quoted keys** if they are strings (which represents 99% of the cases);
-* each key/value pair on its own new line;
-* comma (`,`) at the end of each key/value;
-* **trailing comma** (`,`) on last item to make it easier to add, remove or reorder items;
-* closing brace (`)`) on its own new line;
-* no space or new line between closing brace (`)`) and semi-colon (`;`).
+* espaços depois dos dois pontos (`:`);
+* parêntesis de abertura (`(`) na mesma linha dos dois pontos (`:`);
+* **chaves com aspas** se forem strings (o que representa 99% dos casos);
+* cada par chave/valor na sua própria linha;
+* vírgula (`,`) após cada par chave/valor;
+* **vírgula final** (`,`) no último item, para que seja mais fácil adicionar, remover ou reordenar items;
+* parêntesis de fecho (`)`) na sua própria linha;
+* não colocar um espaço um um caractér de nova linha entre o parêntesis de fecho (`)`) e o ponto e vírgula (`;`).
 
-Illustration:
+Ilustração:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
@@ -698,7 +701,7 @@ $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 $breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
 
 // Não
@@ -707,7 +710,7 @@ $breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
 // Não
 $breakpoints: (small: 767px, medium: 992px, large: 1200px,)
 
-// Não (since it is not supported)
+// Não (já que não é suportado)
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
@@ -719,9 +722,9 @@ $breakpoints: (
 
 
 
-### Debugging a Sass map
+### Debugging num mapa Sass
 
-If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
+Se alguma vez estiveres perdido e a pensar que diabo de magia negra está a acontecer num mapa Sass, não te preocupes porque existe caminho para a salvação.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -759,14 +762,14 @@ If you ever find yourself lost, wondering what kind of crazy magic is happening 
   </div>
 </div>
 
-If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
+Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin vai mostrá-la automaticamente.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Compute the maximum depth of a map
+/// Computa a profundidade máxima de um mapa
 /// @param {Map} $map
-/// @return {Number} max depth of `$map`
+/// @return {Number} profundidade máxima de `$map`
 @function map-depth($map) {
   $level: 1;
 
@@ -782,9 +785,9 @@ If you are interested in knowing the depth of the map, add the following functio
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Compute the maximum depth of a map
+/// Computa a profundidade máxima de um mapa
 /// @param {Map} $map
-/// @return {Number} max depth of `$map`
+/// @return {Number} profundidade máxima de `$map`
 @function map-depth($map)
   $level: 1
 
@@ -799,7 +802,7 @@ If you are interested in knowing the depth of the map, add the following functio
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -815,19 +818,20 @@ If you are interested in knowing the depth of the map, add the following functio
 
 
 
-## CSS Ruleset
+## Conjunto de regras para CSS
 
-At this point, this is mostly revising what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines, including [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas é assim que um conjunto de regras para CSS deve ser escrito (pelo menos, de acordo com a maioria dos guias de orientação, incluindo [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-* related selectors on the same line; unrelated selectors on new lines;
-* the opening brace (`{`) spaced from the last selector by a single space;
-* each declaration on its own new line;
-* a space after the colon (`:`);
-* a trailing semi-colon (`;`) at the end of all declarations;
-* the closing brace (`}`) on its own new line;
-* a new line after the closing brace `}`.
+* seletores relacionados na mesma linha; seletores sem relação numa nova linha;
+* chaveta de abertura (`{`) separada do último seletor por um espaço único;
+* cada declaração na sua própria linha;
+* um espaço a seguir aos dois pontos (`:`);
+* um ponto e vírgula terminal (`;`) no final de cada declaração;
+* chaveta de fecho (`}`) na sua própria linha;
+* uma linha em branco após a chaveta de fecho (`}`).
 
-Illustration:
+
+Ilustração
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -850,7 +854,7 @@ Illustration:
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 .foo, .foo-bar,
 .baz
   display: block
@@ -867,15 +871,15 @@ Illustration:
   </div>
 </div>
 
-Adding to those CSS-related guidelines, we want to pay attention to:
+Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
-* local variables being declared before any declarations, then spaced from declarations by a new line;
-* mixin calls with no `@content` coming before any declaration;
-* nested selectors always coming after a new line;
-* mixin calls with `@content` coming after any nested selector;
-* no new line before a closing brace (`}`).
+* variáveis locais declaradas antes de qualquer outra declaração, separadas de declarações seguintes por uma linha em branco;
+* chamadas de mixins sem `@content` feitas antes de qualquer declaração;
+* seletores aninhados sempre precedidos por uma linha em branco;
+* chamadas de mixins com `@content` feitas depois de qualquer seletor aninhado;
+* não adicionar uma linha em branco depois da chaveta de fecho (`}`).
 
-Illustration:
+Ilustração:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -923,7 +927,7 @@ Illustration:
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
@@ -932,14 +936,14 @@ Illustration:
 
 
 
-## Declaration Sorting
+## Ordenar as declarações
 
-I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
+Não me ocorrem muitos tópicos em que as opiniões sejam tão divididas como são em relação a ordenar declarações em CSS. Na verdade, existem duas facções:
 
-* sticking to the alphabetical order;
-* ordering declarations by type (position, display, colors, font, miscellaneous...).
+* manter a ordem alfabética;
+* ordenar declarações por tipo (position, display, cores, tipo de letra, outros).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why would animations should appear before the display type? There are a lot of oddities with alphabetical ordering.
+Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética é universal (pelo menos em todos os idiomas que usam o alfabeto latino), portanto não existe dúvida quanto a colocar uma propriedade antes de outra. No entanto, parece-me bastante estranho ver propriedades como `bottom` e `top` separadas uma da outra. Por que motivo apareceriam animações antes do tipo `display`? Há imensas peculiaridades na ordenação alfabética.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -975,7 +979,7 @@ There are pros and cons for both ways. On one hand, alphabetical order is univer
   </div>
 </div>
 
-On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does belong `overflow` exactly? What is the property order within a group (it could be alphabetically, oh the irony)?
+Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: tipo de letra ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1011,7 +1015,7 @@ On the other hand, ordering properties by type makes perfect sense. Every font-r
   </div>
 </div>
 
-There is also another interesting subtree of type ordering called [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), that seems to be quite popular as well. Basically, Concentric CSS relies on the box-model to define an order: starts outside, moves inward.
+Há ainda outro tipo de ordenação interessante chamado [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), que parece ser também bastante popular. Basicamente, o Concentric CSS baseia-se no box-model para definir uma ordem: começa no exterior, move-se para o interior.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1047,22 +1051,22 @@ There is also another interesting subtree of type ordering called [Concentric CS
   </div>
 </div>
 
-I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
+Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) apurou que mais de 45% dos programadores ordenam as suas declarações por tipo, contra 14% que o fazem alfabeticamente. Há ainda 39% que o fazem de uma forma totalmente aleatória, incluindo eu próprio.
 
 <figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Chart showing how developers order their CSS declarations" />
-  <figcaption>Chart showing how developers order their CSS declarations</figcaption>
+  <img src="/assets/images/css_order_chart.png" alt="Gráfico representativo de como os programadores ordenam as suas declarações em CSS" />
+  <figcaption>Gráfico representativo de como os programadores ordenam as suas declarações em CSS</figcaption>
 </figure>
 
-Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets.
+Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe aquele que preferires, desde que sejas consistente ao longo das tuas folhas de estilo.
 
 <div class="note">
-  <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
+  <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
 </div>
 
 
 
-### Further reading
+### Leitura adicional
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1076,13 +1080,13 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 
 
 
-## Selector Nesting
+## Seletores aninhados
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others.
+Uma das características do Sass que está a ser extremamente mal usada por muitos programadores são os *seletores aninhados*. Alinhar seletores oferece aos autores de folhas de estilo uma forma de computar seletores longos, aninhando seletores mais pequenos dentro de outros.
 
-### General rule
+### Regra geral
 
-For instance, the following Sass nesting:
+Por exemplo, o seguinte código aninhado em Sass:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1106,7 +1110,7 @@ For instance, the following Sass nesting:
   </div>
 </div>
 
-... will generate this CSS:
+... vai gerar este CSS:
 
 {% highlight css %}
 .foo .bar:hover {
@@ -1114,7 +1118,7 @@ For instance, the following Sass nesting:
 }
 {% endhighlight %}
 
-Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
+Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor actual (`&`) para gerar seletores avançados. Por exemplo:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1135,7 +1139,7 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
   </div>
 </div>
 
-... will generate this CSS:
+... vai gerar este CSS:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1153,21 +1157,21 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
   </div>
 </div>
 
-This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generate `.block__element` and `.block--modifier` selectors based on the original selector (i.e. `.block` in this case).
+Este método é geralmente usado em conjunto com [a nomenclatura BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para gerar os seletores `.block__element` e `.block--modifier` baseados no seletor original (neste caso, `.block`).
 
 <div class="note">
-  <p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&</code>) makes those selectors unsearchable in the codebase since they do not exist per se.</p>
+  <p>Embora pareça anedótico, gerar novos seletores a partir da referência ao seletor actual (<code>&</code>) torna os seletores impossíveis de procurar no código, já que não existem per se.</p>
 </div>
 
-The problem with selector nesting is that it ultimately makes code more difficult to read. One has to mentally compute the resulting selector out of the indentation levels; it is not always quite obvious what the CSS will end up being.
+O problema com aninhar seletores é que, em última instância, torna o código mais difícil de ler. O leitor tem de mentalmente computador o seletor resultante a partir dos níveis de indentação; nem sempre é óbvio o que é que o CSS resultante acabará por ser.
 
-This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what's going on anymore is so high that it is not worth it.
+Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor actual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
 
-To prevent such a situation, we **avoid selector nesting as much as possible**. However, there are obviously a few exceptions to this rule.
+Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível**. No entanto, há exceções óbvias a esta regra.
 
-### Exceptions
+### Exceções
 
-For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
+Para começar, é permitido e até aconselhado aninhar pseudo-classes e pseudo-elementos no seletor inicial.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1180,7 +1184,7 @@ For starters, it is allowed and even recommended to nest pseudo-classes and pseu
   }
 
   &::before {
-    content: 'pseudo-element';
+    content: 'pseudo-elemento';
   }
 }
 {% endhighlight %}
@@ -1194,14 +1198,14 @@ For starters, it is allowed and even recommended to nest pseudo-classes and pseu
     color: green
 
   &::before
-    content: 'pseudo-element'
+    content: 'pseudo-elemento'
 {% endhighlight %}
   </div>
 </div>
 
-Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
+Aninhar seletores em pseudo-classes e pseudo-elementos não só faz sentido (porque lida com seletores intimamente ligados), mas também ajuda a manter tudo relacionado com um determinado componente num único sítio.
 
-Also, when using component-agnostic state classes such as `.is-active`, it is perfectly fine to nest it under the component's selector to keep things tidy.
+Além disso, quando se usam classes de estado independentes de um componente, como `.is-active`, é perfeitamente aceitável aninhá-las sob o selctor do componente, de modo a manter tudo limpo.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1226,7 +1230,7 @@ Also, when using component-agnostic state classes such as `.is-active`, it is pe
   </div>
 </div>
 
-Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
+Por fim, quando se estiliza um elemento só porque ele está dentro de outro elemento específico, é também aceitável aninhá-lo, de modo a manter tudo sobre um determinado componente no mesmo sítio.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1251,12 +1255,12 @@ Last but not least, when styling an element because it happens to be contained w
   </div>
 </div>
 
-When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
+Quando se trabalha com programadores inexperientes, um selector como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// Helper mixin to provide simple API to selector nesting
+/// Mixin auxiliar que fornece uma API simples para aninhar selectores
 /// @param {String} $selector - Selector
 @mixin when-inside($selector) {
   #{$selector} & {
@@ -1267,7 +1271,7 @@ When working with unexperienced developers, a selector such as `.no-opacity &` m
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// Helper mixin to provide simple API to selector nesting
+/// Mixin auxiliar que fornece uma API simples para aninhar selectores
 /// @param {String} $selector - Selector
 =when-inside($selector) {
   #{$selector} &
@@ -1277,7 +1281,7 @@ When working with unexperienced developers, a selector such as `.no-opacity &` m
   </div>
 </div>
 
-Rewriting our previous example, it would look like this:
+Reescrevendo o nosso exemplo anterior, ficaria assim:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1302,14 +1306,14 @@ Rewriting our previous example, it would look like this:
   </div>
 </div>
 
-As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
+Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com selectores aninhados, então usa selectores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 
 
 
 
 
 
-### Further reading
+### Leitura adicional
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

@@ -1,30 +1,30 @@
 
-# Variables
+# Variáveis
 
-Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
+As variáveis são a essência de qualquer linguagem de programação. Elas permitem-nos reutilizar valores sem ter que os copiar constantemente. Mais importante ainda, elas permitem-nos actualizar um valor facilmente. Acabou-se a procura e substituição de valores manualmente.
 
-However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+No entanto o CSS não é mais do que um cesto com todos os vossos ovos. Ao contrário de muitas outras linguagens, não há verdadeiros contextos no CSS. Como tal, temos de prestar atenção aos riscos de adicionar variáveis pois podemos entrar em conflicto com variáveis existentes.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won't help. A new variable should be created only when all of the following criteria are met:
+O meu conselho passa por apenas criar variáveis quando estas fazem sentido. Não inicializer variáveis só porque sim, isso não ajudará. Uma nova variável deve ser criada quando acontece os seguintes critérios:
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+* o seu valor é repetido pelo menos duas vezes;
+* o seu valor provavelemnte irá ser actualizado, pelo menos uma vez;
+* todas as ocorrências do seu valor, estã directamente ligadas à variável (por exemplo, não ser uma coicidência).
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
-
-
+Basicamente, não vale a pena declarar uma variável que nunca irá ser actualizada ou que apenas irá ser usada uma vez.
 
 
 
 
-## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+## Contextos
 
-The following code snippet explains the *variable shadowing* concept.
+O contexto das variáveis no Sass mudou ao longo dos anos. Até muito recentemente, as declarações de variáveis dentro de rulesets e  outros contextos eram locais por omissão. No entanto quando já havia uma variável global com o mesmo nome, a declaração local iria alterar o valor da variável global. Desde a versão 3.4, o Sass lida correctamente com o conceito de contextos, e cria uma variável local em vez de substituir a global.
+
+A documentação fala na *ocultação de variáveis globais*. Quando se declara uma variável, que já existe no contexto global, dentro de um contexto local (selector, função, mixin...), diz-se que a variável local está a *ocultar* a variável global. Basicamente substitui o seu valor dentro do contexto local.
+
+O enxerto de código seguinte explica o conceito de *ocultação de variável*
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -93,7 +93,7 @@ $variable: 'initial value' !global
 
 ## `!default` flag
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+Quando se está a construir uma biblioteca, uma framework, um sistema de grelhas ou qualquer pedaço de código Sass com a intenção de ser distribuido e usado por programadores externos, todas as variáeis de configuração devem ser definidas com o marcador `!default` de forma a que possam ser substituidas.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -108,7 +108,7 @@ $baseline: 1em !default
   </div>
 </div>
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Graças a isto, um programador pode definir a sua própria varíavel `$baseline` *antes* de importar a vossa biblioteca, sem que esta substitua o valor da vossa variável.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -142,7 +142,7 @@ $baseline: 2em
 
 ## `!global` flag
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+O marcador `!global` deve ser usado apenas quando se vai substituir uma variável global a partir de um contexto local. Quando se define uma variável num contexto global, o uso deste marcador deve ser omitido.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -170,11 +170,11 @@ $baseline: 2em !global
 
 
 
-## Multiple variables or maps
+## Variáveis multiplas ou mapas
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+Existem vantagens em usar mapas em vez de multiplas variáveis. A principal é poder iterar um mapa, algo que não é possivel com variáveis distintas.
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+Outra vantagem de usar um mapa, é a habilidade de criar uma função de leitura para providenciar uma API mais amigável. Por exemplo, considerem o seguinte código Sass:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

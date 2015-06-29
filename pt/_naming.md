@@ -1,17 +1,17 @@
 
-# Naming conventions
+# Convenções de nomenclatura
 
-In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it's also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+Nesta secção, não iremos lidar com as melhores convenções de nomenclatura para manutenção e escalabilidade; não só isso apenas vos diz respeito, como também está fora do âmbito de um guia de estilos de Sass. Eu sugiro os recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
-There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
+Existem algumas coisas às quais podem dar nome em Sass, e é importante nomeá-las correctamente para que toda a base de código pareça consistente e fácil de ler:
 
-* variables;
-* functions;
-* mixins.
+* variáveis;
+* funções;
+* *mixins*.
 
-Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
+*Placeholders* de Sass são deliberadamente omitidos desta lista visto que podem ser considerados selectores normais de CSS, seguindo assim o mesmo padrão de nomenclatura como classes.
 
-Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
+Em relação às variáveis, funções e *mixins*, mantemos algo bastante semelhante a CSS: **minúsculas delimitadas por hífens**, e acima de tudo significativos.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -42,7 +42,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 
 
-### Further reading
+### Leitura adicional
 
 * [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
@@ -51,28 +51,28 @@ $vertical-rhythm-baseline: 1.5rem
 
 
 
-## Constants
+## Constantes
 
-If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
+Se por acaso são programadores de *frameworks* ou bibliotecas, poderão encontrar-se a lidar com variáveis que não é suposto serem alteradas em qualquer circunstância: constantes. Infelizmente (ou felizmente?), Sass não fornece nenhuma forma de definir tais entidades, por isso temos que ficar pelas rigorosas convenções de nomenclatura de forma a nos darmos a entender.
 
-As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
+Tal como para várias linguagens, eu sugiro variáveis em maiúsculas e delimitadas por subtraços (_) quando são constantes. Não só é uma convenção muito antiga, mas também contrasta bem com as habituais variáveis em minúsculas e separadas por hífens.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Sim
 $CSS_POSITIONS: top, right, bottom, left, center;
 
-// Nope
+// Não
 $css-positions: top, right, bottom, left, center;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Sim
 $CSS_POSITIONS: top, right, bottom, left, center
 
-// Nope
+// Não
 $css-positions: top, right, bottom, left, center
 {% endhighlight %}
   </div>
@@ -80,7 +80,7 @@ $css-positions: top, right, bottom, left, center
 
 
 
-### Further Reading
+### Leitura adicional
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
@@ -91,9 +91,9 @@ $css-positions: top, right, bottom, left, center
 
 ## Namespace
 
-If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else's code.
+Se tencionam distribuir o vosso código Sass, no caso de uma biblioteca, uma *framework*, um sistema de grelhas ou o que seja, talvez queiram considerar colocar todas as vossas variáveis, funções, *mixins* e *placeholders* no seu próprio *namespace*, para que não entrem em conflito com o código de ninguém.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn't, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+Por exemplo, se trabalharem num projecto chamado *Sassy Unicorn* que se destina a ser usado por programadores de todo o mundo (quem não o faria, não é?), poderiam considerar usar `su-` como *namespace*. É específico o suficiente para prevenir colisões de nomes e curto o suficiente para não ser maçador a escrever.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -116,9 +116,9 @@ $su-configuration: ( ... )
 </div>
 
 <div class="note">
-  <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
+  <p>De notar que *namespacing* automático é definitivamente um objectivo de design para a próxima reformulação do <code>@import</code> de Sass 4.0. À medida que tal se aproxima da sua concretização, será cada vez menos útil fazer *namespacing* manual; eventualmente, bibliotecas manualmente *namespaced* poderão realmente ser mais difíceis de usar.</p>
 </div>
 
-### Further reading
+### Leitura adicional
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
