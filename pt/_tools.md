@@ -5,11 +5,6 @@ O que um pré-processador de CSS tão popular como Sass tem de bom é que vem co
 
 No entanto, o meu conselho seria para reduzir o número de dependências ao estritamente necessário. Gerir dependências é uma espécie de inferno do qual não querem fazer parte. Além disso, há pouca ou nenhuma necessidade de dependências externas no que toca a Sass.
 
-
-
-
-
-
 ## Compass
 
 [Compass](http://compass-style.org/) é a _framework_ principal de Sass por aí. Desenvolvida por [Chris Eppstein](https://twitter.com/chriseppstein), um dos designers principais do Sass, não a vejo a perder popularidade drasticamente durante uns tempos, se querem a minha opinião.
@@ -26,18 +21,11 @@ De qualquer forma, eu não proíbo o uso de Compass embora também não o recome
   <p>Sass em Ruby está de momento a sofrer otimizações notáveis que são especificamente orientadas a estilos altamente baseados em lógica, com muitas funções e _mixins_. Estas mudanças deverão melhorar dramaticamente o seu desempenho, até ao ponto onde Compass e outras _frameworks_ já não abrandarão Sass.</p>
 </div>
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Sistemas de grelhas
 
@@ -51,9 +39,7 @@ Se não estiverem presos a um sistema de grelhas específico, gostarão de saber
 
 Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). No final de contas, a escolha não terá muito impacto no vosso guia de estilos, por isso fica ao vosso critério.
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -66,11 +52,6 @@ Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-
-
-
-
-
 ## SCSS-lint
 
 Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão important quanto documentá-lo.
@@ -79,185 +60,14 @@ Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28softwa
 
 Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descritas neste documento. De forma a configurar SCSS-lint de acordo com as Sass Guidelines, recomendo a seguinte configuração:
 
-{% highlight yaml %}
-# For SCSS-Lint v0.32.0
-
-linters:
-
-  BangFormat:
-    enabled: true
-    space_before_bang: true
-    space_after_bang: false
-
-  BorderZero:
-    enabled: true
-
-  ColorKeyword:
-    enabled: false
-
-  Comment:
-    enabled: false
-
-  DebugStatement:
-    enabled: true
-
-  DeclarationOrder:
-    enabled: true
-
-  DuplicateProperty:
-    enabled: false
-
-  ElsePlacement:
-    enabled: true
-    style: same_line
-
-  EmptyLineBetweenBlocks:
-    enabled: true
-    ignore_single_line_blocks: false
-
-  EmptyRule:
-    enabled: true
-
-  FinalNewline:
-    enabled: true
-    present: true
-
-  HexLength:
-    enabled: true
-    style: short
-
-  HexNotation:
-    enabled: true
-    style: lowercase
-
-  HexValidation:
-    enabled: true
-
-  IdSelector:
-    enabled: true
-
-  ImportPath:
-    enabled: true
-    leading_underscore: false
-    filename_extension: false
-
-  Indentation:
-    enabled: true
-    character: space
-    width: 2
-
-  LeadingZero:
-    enabled: true
-    style: include_zero
-
-  MergeableSelector:
-    enabled: false
-    force_nesting: false
-
-  NameFormat:
-    enabled: true
-    convention: hyphenated_lowercase
-    allow_leading_underscore: true
-
-  NestingDepth:
-    enabled: true
-    max_depth: 3
-
-  PlaceholderInExtend:
-    enabled: true
-
-  PropertySortOrder:
-    enabled: false
-    ignore_unspecified: false
-
-  PropertySpelling:
-    enabled: true
-    extra_properties: []
-
-  QualifyingElement:
-    enabled: true
-    allow_element_with_attribute: false
-    allow_element_with_class: false
-    allow_element_with_id: false
-
-  SelectorDepth:
-    enabled: true
-    max_depth: 3
-
-  SelectorFormat:
-    enabled: true
-    convention: hyphenated_lowercase
-    class_convention: '^(?:u|is|has)\-[a-z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:\-[a-z][a-zA-Z0-9]*)?(?:\-\-[a-z][a-zA-Z0-9]*)?$'
-
-  Shorthand:
-    enabled: true
-
-  SingleLinePerProperty:
-    enabled: true
-    allow_single_line_rule_sets: false
-
-  SingleLinePerSelector:
-    enabled: true
-
-  SpaceAfterComma:
-    enabled: true
-
-  SpaceAfterPropertyColon:
-    enabled: true
-    style: one_space
-
-  SpaceAfterPropertyName:
-    enabled: true
-
-  SpaceBeforeBrace:
-    enabled: true
-    style: space
-    allow_single_line_padding: true
-
-  SpaceBetweenParens:
-    enabled: true
-    spaces: 0
-
-  StringQuotes:
-    enabled: true
-    style: single_quotes
-
-  TrailingSemicolon:
-    enabled: true
-
-  TrailingZero:
-    enabled: true
-
-  UnnecessaryMantissa:
-    enabled: true
-
-  UnnecessaryParentReference:
-    enabled: true
-
-  UrlFormat:
-    enabled: false
-
-  UrlQuotes:
-    enabled: true
-
-  VendorPrefixes:
-    enabled: true
-    identifier_list: base
-    include: []
-    exclude: []
-
-  ZeroUnit:
-    enabled: true
-{% endhighlight %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>Se pretendem ligar o SCSS-lint no vosso _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

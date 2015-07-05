@@ -13,15 +13,10 @@ A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass 
 
 Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas são boas, outras más, outras pouco usuais. Este guia pretende providenciar uma forma documentada e consistente de escrever código em Sass.
 
-### Leitura adicional
+###### Leitura adicional
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
-
-
-
-
-
 
 ## Ruby Sass ou LibSass
 
@@ -33,17 +28,11 @@ Voltando à questão de escolher o compilador. Na verdade, tudo depende do vosso
 
 Em projetos que não sejam em Ruby que precisem de integração no método de trabalho, LibSass será provavelmente uma melhor opção, uma vez que esta é praticamente dedicada a adaptações externas. Por exemplo, se quiserem utilizar NodeJS, [node-sass](https://github.com/sass/node-sass), a escolha já está feita.
 
-
-### Leitura adicional
+###### Leitura adicional
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass ou SCSS
 
@@ -58,16 +47,9 @@ A sensibilidade aos espaços em Sass depende na indentação para se ver livre d
 
 Pessoalmente, prefiro SCSS a Sass apenas porque é mais aproximada de CSS e mais amigável para os programadores. Por causa disto, vou utilizar SCSS em vez de Sass ao longo deste guia de estilos.
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Outros pré-processadores
 
@@ -87,9 +69,7 @@ A ideia por detrás dos pós-processadores é oferecer este tipo de suporte sile
 
 Enquanto que oferecer a sintaxe futura é uma ideia bastante nobre, pessoalmente continuo a preferir Sass para a maioria das tarefas. No entanto, existem certas ocasiões onde acredito que os pós-processadores são mais aptos que Sass - adicionar prefixos a CSS, por exemplo - mas lá chegaremos em breve.
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)

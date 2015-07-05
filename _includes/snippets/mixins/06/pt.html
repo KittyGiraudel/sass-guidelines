@@ -1,0 +1,36 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Ajudante para expor prefixos de fabricantes
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $propriedade - Propriedade de CSS sem prefixo
+/// @param {*} $valor - valor de CSS crú
+/// @param {List} $prefixos - Lista de prefixos a serem expostos
+@mixin prefixo($propriedade, $valor, $prefixos: ()) {
+  @each $prefixo in $prefixos {
+    -#{$prefixo}-#{$propriedade}: $valor;
+  }
+
+  #{$propriedade}: $valor;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Ajudante para expor prefixos de fabricantes
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $propriedade - Propriedade de CSS sem prefixo
+/// @param {*} $valor - valor de CSS crú
+/// @param {List} $prefixos - Lista de prefixos a serem expostos
+=prefixo($propriedade, $valor, $prefixos: ()) {
+  @each $prefixo in $prefixos {
+    -#{$prefixo}-#{$propriedade}: $valor;
+  }
+
+  #{$propriedade}: $valor;
+{% endhighlight %}
+  </div>
+</div>

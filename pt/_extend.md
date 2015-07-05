@@ -24,48 +24,19 @@ Há cenários onde extender selectores pode valer a pena e ajudar. No entanto, e
 
 Se vão usar o extend, deixem-me também lemrbar que ele não funciona bem com blocos `@media`. Tal como devem saber, o Sass é incapaz de extender um selector exterior apartir de dentro de uma media query. Quando se experimenta, o compilador simplesmente rebenta, avisando-vos de que não consegue fazer tal coisa. Não é bom. Especialmente porque media queries são maioritariamente o que fazemos agora.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  content: 'foo';
-}
-
-@media print {
-  .bar {
-    // Isto não funciona. Pior: rebenta.
-    @extend .foo;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  content: 'foo'
-
-@media print
-  .bar
-    // Isto não funciona. Pior: rebenta.
-    @extend .foo
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/extend/01/index.html %}
 
 > Voçês não devem usar o @extend num selector exterior apartir de dentro de um bloco @media. <br>
 > Voçês só devem usar o @extend em selectors apartir de dentro da mesma directiva.
 
-
 <div class="note">
-  <p>É ocasionalmente dito que <code>@extend</code>  ajuda az reduzir o tamanho do ficheiro, uma vez que combina selectores em vez de duplicar propiedades. Isto é verdade, no entanto a diferença é negligenciável assim o <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> faça a sua compressão.</p>
+  <p>É ocasionalmente dito que <code>@extend</code> ajuda az reduzir o tamanho do ficheiro, uma vez que combina selectores em vez de duplicar propiedades. Isto é verdade, no entanto a diferença é negligenciável assim o <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> faça a sua compressão.</p>
   <p>Dito isso, se não puderem usar Gzip (ou algo equivalente) então mudar a abordagem para usar o <code>@extend</code> pode não ser assim tão mau, desde que saibam o que estão a fazer.</p>
- </div>
+</div>
 
 Para resumir, eu **desaconselho o uso da directiva `@extend`**, com excepção de algumas circustâncias especificas, mas não iria tão longe como proibir o seu uso.
 
-
-
-### Leitura Adicional
+###### Leitura Adicional
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

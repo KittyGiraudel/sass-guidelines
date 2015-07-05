@@ -12,46 +12,9 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
 * regras de CSS multi-linha devidamente escritas
 * uso significativo de espaço em branco
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  display: block;
-  overflow: hidden;
-  padding: 0 1em;
-}
+{% include snippets/syntax/01/index.html %}
 
-// Não
-.foo {
-    display: block; overflow: hidden;
-
-    padding: 0 1em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Uma vez que Sass força estes padrões de indentação,
-// não há como errar aqui.
-.foo
-  display: block
-  overflow: hidden
-  padding: 0 1em
-{% endhighlight %}
-  </div>
-</div>
-
-<<<<<<< HEAD
-Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos este tópico na [secção de arquitetura](#arquitetura).
-=======
 Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos esse tópico na [secção de arquitetura](#arquitetura).
->>>>>>> 7a0531e6a027c9229c146b51314d3e9f72795089
-
-
-
-
-
 
 ## Strings
 
@@ -65,7 +28,6 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
-
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -100,239 +62,52 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 
 URLs também devem seguir a mesma regra:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  background-image: url('/images/kittens.jpg');
-}
+{% include snippets/syntax/06/index.html %}
 
-// Não
-.foo {
-  background-image: url(/images/kittens.jpg);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo
-  background-image: url('/images/kittens.jpg')
-
-// Não
-.foo
-  background-image: url(/images/kittens.jpg)
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
-
-
-
-
-
 
 ## Números
 
 Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, a frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
 
-
-
 ### Zeros
 
 Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  padding: 2em;
-  opacity: 0.5;
-}
-
-// Não
-.foo {
-  padding: 2.0em;
-  opacity: .5;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo
-  padding: 2em
-  opacity: 0.5
-
-// Não
-.foo
-  padding: 2.0em
-  opacity: .5
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/syntax/07/index.html %}
 
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-$length: 0;
-
-// Não
-$length: 0em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-$length: 0
-
-// Não
-$length: 0em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/08/index.html %}
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$value: 42;
-
-// Sim
-$length: $value * 1px;
-
-// Não
-$length: $value + px;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$value: 42
-
-// Sim
-$length: $value * 1px
-
-// Não
-$length: $value + px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/09/index.html %}
 
 Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$value: 42 + 0px;
-// -> 42px
-
-$value: 1in + 0px;
-// -> 1in
-
-$value: 0px + 1in;
-// -> 96px
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$value: 42 + 0px
-// -> 42px
-
-$value: 1in + 0px
-// -> 1in
-
-$value: 0px + 1in
-// -> 96px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/10/index.html %}
 
 No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se apenas que adicionar o número-unidade como string não é uma boa prática.
 
 Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$length: 42px;
-
-// Sim
-$value: $length / 1px;
-
-// Não
-$value: str-slice($length + unquote(''), 1, 2);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$length: 42px
-
-// Sim
-$value: $length / 1px
-
-// Não
-$value: str-slice($length + unquote(''), 1, 2)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/11/index.html %}
 
 Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
-
-
 
 ### Cálculos
 
 **Cálculos numéricos de maior prioridade devem sempre estar presentes entre parênteses**. Isto não só melhora significativamente a sua leitura, como evita que aconteçam alguns casos extremos como forçar Sass a avaliar e computar o conteúdo entre parênteses.
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  width: (100% / 3);
-}
-
-// Não
-.foo {
-  width: 100% / 3;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo
-  width: (100% / 3)
-
-// Não
-.foo
-  width: 100% / 3
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/syntax/12/index.html %}
 
 ### Números mágicos
 
@@ -340,49 +115,18 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * 1. Número mágico. Este é o valor mais baixo que encontrei para alinhar o topo
- * de `.foo` com o elemento pai. Idealmente devíamos corrigir isto.
- */
-.foo {
-  top: 0.327em; /* 1 */
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * 1. Número mágico. Este é o valor mais baixo que encontrei para alinhar o topo
- * de `.foo` com o elemento pai. Idealmente devíamos corrigir isto.
- */
-.foo
-  top: 0.327em /* 1 */
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/13/index.html %}
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-
-
-
-
-
 ## Cores
 
 Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções úteis para tal](http://sass-lang.com/documentation/Sass/Script/Functions.html).
-
-
 
 ### Formatos de cores
 
@@ -395,106 +139,23 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 
 Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  color: red;
-}
-
-// Não
-.foo {
-  color: #FF0000;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo
-  color: red
-
-// Não
-.foo
-  color: #FF0000
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/14/index.html %}
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-.foo {
-  color: rgba(0, 0, 0, 0.1);
-  background: hsl(300, 100%, 100%);
-}
-
-// Não
-.foo {
-  color: rgba(0,0,0,0.1);
-  background: hsl( 300, 100%, 100% );
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo
-  color: rgba(0, 0, 0, 0.1)
-  background: hsl(300, 100%, 100%)
-
-// Não
-.foo
-  color: rgba(0,0,0,0.1)
-  background: hsl( 300, 100%, 100% )
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/syntax/15/index.html %}
 
 ### Cores e variáveis
 
 No caso de utilizarmos uma cor mais que uma vez, será provavelmente útil guardá-la numa variável cujo nome diga algo sobre essa cor.
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$sass-pink: #c69;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$sass-pink: #c69
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/16/index.html %}
 
 Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso estiver demasiado preso a um tema, eu não recomendaria utilizar a variável desta forma. Em vez disso, devemos guardá-la numa variável cujo nome explique como deve ser utilizada.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$main-theme-color: $sass-pink;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$main-theme-color: $sass-pink
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/17/index.html %}
 
 Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`.
-
-
-Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) como o escurecer [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) representam funções que permitem manipular a luz de uma cor no espaço HSL adicionando ou subtraindo ao valor do espaço HSL. Basicamente, representam atalhos para o parâmetro `$lightness` do método de ajuste de cor [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
 ### Clarear e Escurecer cores
 
@@ -504,75 +165,23 @@ Tanto o clarear [`lighten`](http://sass-lang.com/documentation/Sass/Script/Funct
 
 A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que esta fará com que a cor tenda progressivamente para preto (ou branco) à medida que subtraímos a proporção da cor, enquanto que `darken` e `lighten` irão rapidamente esgotar a cor para os extremos de branco ou preto.
 
-<figure role="group">
-  <img src="/assets/images/lighten-darken-mix.png" alt="Illustration of the difference between lighten/darken and mix Sass functions" />
-  <figcaption>Diferenças entre <code>lighten</code>/<code>darken</code> e <code>mix</code> por <a href="http://codepen.io/KatieK2/pen/tejhz/" target="_blank">KatieK</a></figcaption>
-</figure>
+{% include images/color-functions.html %}
 
 Se não quiserem escrever a função `mix` todas as vezes, podem criar duas funções fáceis-de-usar `tint` e `shade` (que já fazem parte de [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) que fazem essencialmente o mesmo:
 
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Clarear ligeiramente uma cor
-/// @access public
-/// @param {Color} $color - cor
-/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
-/// @return {Color}
-@function tint($color, $percentage) {
-  @return mix($color, white, $percentage);
-}
-
-/// Escurecer ligeiramente uma cor
-/// @access public
-/// @param {Color} $color - cor
-/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
-/// @return {Color}
-@function shade($color, $percentage) {
-  @return mix($color, black, $percentage);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Clarear ligeiramente uma cor
-/// @access public
-/// @param {Color} $color - cor
-/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
-/// @return {Color}
-@function tint($color, $percentage)
-  @return mix($color, white, $percentage)
-
-/// Escurecer ligeiramente uma cor
-/// @access public
-/// @param {Color} $color - cor
-/// @param {Number} $percentage - percentagem da `$color` na cor devolvida
-/// @return {Color}
-@function shade($color, $percentage)
-  @return mix($color, black, $percentage)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>A função<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> permite efetuar um escalamento das propriedades mais fluído tendo em conta o quão alto ou baixo o seu valor já é. Deverá oferecer resultados que são tão agradáveis como o `mix` mas com uma convenção mais clara. O fator de escala não é exactamente o mesmo, no entanto.</p>
+  <p>A função <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> permite efetuar um escalamento das propriedades mais fluído tendo em conta o quão alto ou baixo o seu valor já é. Deverá oferecer resultados que são tão agradáveis como o `mix` mas com uma convenção mais clara. O fator de escala não é exactamente o mesmo, no entanto.</p>
 </div>
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
 * [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
-
-
-
-
 
 ## Listas
 
@@ -585,88 +194,15 @@ As listas devem respeitar as seguintes orientações:
 * a não ser que seja uma lista vazia ou aninhada em outra lista, nunca escrever os parêntesis;
 * nunca terminar com uma vírgula.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-$font-stack: 'Helvetica', 'Arial', sans-serif;
-
-// Não
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif;
-
-// Não
-$font-stack: 'Helvetica' 'Arial' sans-serif;
-
-// Não
-$font-stack: ('Helvetica', 'Arial', sans-serif);
-
-// Não
-$font-stack: ('Helvetica', 'Arial', sans-serif,);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif
-
-// Não (dado que não é suportado)
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif
-
-// Não
-$font-stack: 'Helvetica' 'Arial' sans-serif
-
-// Não
-$font-stack: ('Helvetica', 'Arial', sans-serif)
-
-// Não
-$font-stack: ('Helvetica', 'Arial', sans-serif,)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/19/index.html %}
 
 Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
+{% include snippets/syntax/20/index.html %}
 
-// Sim
-$shadows: append($shadows, $shadow, comma);
-
-// Não
-$shadows: $shadows, $shadow;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
-
-// Sim
-$shadows: append($shadows, $shadow, comma)
-
-// Não
-$shadows: $shadows, $shadow
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [SassyLists](http://sassylists.com)
-
-
-
-
-
 
 ## Mapas
 
@@ -685,124 +221,19 @@ Mapas devem ser escritos da seguinte forma:
 
 Ilustração:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-$breakpoints: (
-  'small': 767px,
-  'medium': 992px,
-  'large': 1200px,
-);
-
-// Não
-$breakpoints: ( small: 767px, medium: 992px, large: 1200px );
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-$breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
-
-// Não
-$breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
-
-// Não
-$breakpoints: (small: 767px, medium: 992px, large: 1200px,)
-
-// Não (já que não é suportado)
-$breakpoints: (
-  'small': 767px,
-  'medium': 992px,
-  'large': 1200px,
-)
-{% endhighlight %}
-  </div>
-</div>
-
-
+{% include snippets/syntax/21/index.html %}
 
 ### Debugging num mapa Sass
 
 Se alguma vez estiveres perdido e a pensar que diabo de magia negra está a acontecer num mapa Sass, não te preocupes porque existe caminho para a salvação.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin debug-map($map) {
-  @at-root {
-    @debug-map {
-      __toString__: inspect($map);
-      __length__: length($map);
-      __depth__: if(function-exists('map-depth'), map-depth($map), null);
-      __keys__: map-keys($map);
-      __properties__ {
-        @each $key, $value in $map {
-          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
-        }
-      }
-    }
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=debug-map($map)
-  @at-root
-    @debug-map
-      __toString__: inspect($map)
-      __length__: length($map)
-      __depth__: if(function-exists('map-depth'), map-depth($map), null)
-      __keys__: map-keys($map)
-      __properties__
-        @each $key, $value in $map
-          #{'(' + type-of($value) + ') ' + $key}: inspect($value)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/22/index.html %}
 
 Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin vai mostrá-la automaticamente.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Computa a profundidade máxima de um mapa
-/// @param {Map} $map
-/// @return {Number} profundidade máxima de `$map`
-@function map-depth($map) {
-  $level: 1;
+{% include snippets/syntax/23/index.html %}
 
-  @each $key, $value in $map {
-    @if type-of($value) == 'map' {
-      $level: max(map-depth($value) + 1, $level);
-    }
-  }
-
-  @return $level;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Computa a profundidade máxima de um mapa
-/// @param {Map} $map
-/// @return {Number} profundidade máxima de `$map`
-@function map-depth($map)
-  $level: 1
-
-  @each $key, $value in $map
-    @if type-of($value) == 'map'
-      $level: max(map-depth($value) + 1, $level)
-
-  @return $level;
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
@@ -812,11 +243,6 @@ Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin 
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
-
-
-
-
-
 
 ## Conjunto de regras para CSS
 
@@ -830,46 +256,9 @@ A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas
 * chaveta de fecho (`}`) na sua própria linha;
 * uma linha em branco após a chaveta de fecho (`}`).
 
+Ilustração:
 
-Ilustração
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo, .foo-bar,
-.baz {
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-// Não
-.foo,
-.foo-bar, .baz {
-    display: block;
-    overflow: hidden;
-    margin: 0 auto }
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-.foo, .foo-bar,
-.baz
-  display: block
-  overflow: hidden
-  margin: 0 auto
-
-// Não
-.foo,
-.foo-bar, .baz
-    display: block
-    overflow: hidden
-    margin: 0 auto
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/24/index.html %}
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
@@ -881,60 +270,11 @@ Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
 Ilustração:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo, .foo-bar,
-.baz {
-  $length: 42em;
+{% include snippets/syntax/25/index.html %}
 
-  @include ellipsis;
-  @include size($length);
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-
-  &:hover {
-    color: red;
-  }
-
-  @include respond-to('small') {
-    overflow: visible;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo, .foo-bar,
-.baz
-  $length: 42em
-
-  +ellipsis
-  +size($length)
-  display: block
-  overflow: hidden
-  margin: 0 auto
-
-  &:hover
-    color: red
-
-  +respond-to('small')
-    overflow: visible
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
-
-
-
-
 
 ## Ordenar as declarações
 
@@ -945,118 +285,19 @@ Não me ocorrem muitos tópicos em que as opiniões sejam tão divididas como s�
 
 Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética é universal (pelo menos em todos os idiomas que usam o alfabeto latino), portanto não existe dúvida quanto a colocar uma propriedade antes de outra. No entanto, parece-me bastante estranho ver propriedades como `bottom` e `top` separadas uma da outra. Por que motivo apareceriam animações antes do tipo `display`? Há imensas peculiaridades na ordenação alfabética.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  background: black;
-  bottom: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-  height: 100px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  width: 100px;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  background: black
-  bottom: 0
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-  height: 100px
-  overflow: hidden
-  position: absolute
-  right: 0
-  width: 100px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/26/index.html %}
 
 Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: tipo de letra ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: black;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  height: 100px
-  width: 100px
-  overflow: hidden
-  position: absolute
-  bottom: 0
-  right: 0
-  background: black
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/27/index.html %}
 
 Há ainda outro tipo de ordenação interessante chamado [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), que parece ser também bastante popular. Basicamente, o Concentric CSS baseia-se no box-model para definir uma ordem: começa no exterior, move-se para o interior.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background: black;
-  overflow: hidden;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  width: 100px
-  height: 100px
-  position: absolute
-  right: 0
-  bottom: 0
-  background: black
-  overflow: hidden
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/28/index.html %}
 
 Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) apurou que mais de 45% dos programadores ordenam as suas declarações por tipo, contra 14% que o fazem alfabeticamente. Há ainda 39% que o fazem de uma forma totalmente aleatória, incluindo eu próprio.
 
-<figure role="group">
-  <img src="/assets/images/css_order_chart.png" alt="Gráfico representativo de como os programadores ordenam as suas declarações em CSS" />
-  <figcaption>Gráfico representativo de como os programadores ordenam as suas declarações em CSS</figcaption>
-</figure>
+{% include images/order-poll.html %}
 
 Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe aquele que preferires, desde que sejas consistente ao longo das tuas folhas de estilo.
 
@@ -1064,9 +305,7 @@ Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe
   <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
 </div>
 
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -1074,11 +313,6 @@ Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
-
-
-
-
-
 
 ## Seletores aninhados
 
@@ -1088,74 +322,19 @@ Uma das características do Sass que está a ser extremamente mal usada por muit
 
 Por exemplo, o seguinte código aninhado em Sass:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  .bar {
-    &:hover {
-      color: red;
-    }
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  .bar
-    &:hover
-      color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/29/index.html %}
 
 ... vai gerar este CSS:
 
-{% highlight css %}
-.foo .bar:hover {
-  color: red;
-}
-{% endhighlight %}
+{% include snippets/syntax/30/index.html %}
 
 Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor actual (`&`) para gerar seletores avançados. Por exemplo:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  &-bar {
-    color: red;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  &-bar
-    color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/31/index.html %}
 
 ... vai gerar este CSS:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo-bar {
-  color: red;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo-bar
-  color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/32/index.html %}
 
 Este método é geralmente usado em conjunto com [a nomenclatura BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para gerar os seletores `.block__element` e `.block--modifier` baseados no seletor original (neste caso, `.block`).
 
@@ -1173,147 +352,29 @@ Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível
 
 Para começar, é permitido e até aconselhado aninhar pseudo-classes e pseudo-elementos no seletor inicial.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  color: red;
-
-  &:hover {
-    color: green;
-  }
-
-  &::before {
-    content: 'pseudo-elemento';
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  color: red
-
-  &:hover
-    color: green
-
-  &::before
-    content: 'pseudo-elemento'
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/33/index.html %}
 
 Aninhar seletores em pseudo-classes e pseudo-elementos não só faz sentido (porque lida com seletores intimamente ligados), mas também ajuda a manter tudo relacionado com um determinado componente num único sítio.
 
 Além disso, quando se usam classes de estado independentes de um componente, como `.is-active`, é perfeitamente aceitável aninhá-las sob o selctor do componente, de modo a manter tudo limpo.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
-
-  &.is-active {
-    font-weight: bold;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  &.is-active
-    font-weight: bold
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/34/index.html %}
 
 Por fim, quando se estiliza um elemento só porque ele está dentro de outro elemento específico, é também aceitável aninhá-lo, de modo a manter tudo sobre um determinado componente no mesmo sítio.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
-
-  .no-opacity & {
-    display: none;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  .no-opacity &
-    display: none
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/35/index.html %}
 
 Quando se trabalha com programadores inexperientes, um selector como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin auxiliar que fornece uma API simples para aninhar selectores
-/// @param {String} $selector - Selector
-@mixin when-inside($selector) {
-  #{$selector} & {
-    @content;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin auxiliar que fornece uma API simples para aninhar selectores
-/// @param {String} $selector - Selector
-=when-inside($selector) {
-  #{$selector} &
-    @content
-}
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/36/index.html %}
 
 Reescrevendo o nosso exemplo anterior, ficaria assim:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
-
-  @include when-inside('.no-opacity') {
-    display: none;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  +when-inside('.no-opacity')
-    display: none
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/37/index.html %}
 
 Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com selectores aninhados, então usa selectores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 
-
-
-
-
-
-### Leitura adicional
+###### Leitura adicional
 
 * [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
