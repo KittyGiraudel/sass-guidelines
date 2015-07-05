@@ -42,7 +42,6 @@ La plupart des éléments constituant une interface peuvent être pensés comme 
 
 Revenons à l’architecture. J’utilise habituellement ce que j’appelle le *pattern 7-1*&nbsp;: 7&nbsp;dossiers, 1&nbsp;fichier. Tous vos partiels regroupés dans 7&nbsp;dossiers différents et un fichier simple à la racine (généralement appelé `main.scss`) qui les importe tous pour les compiler dans une feuille de style CSS.
 
-
 * `base/`
 * `components/`
 * `layout/`

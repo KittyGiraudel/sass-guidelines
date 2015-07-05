@@ -1,0 +1,60 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Initialize a global variable at root level.
+// In this case, the `!global` flag is optional.
+$variable: 'initial value' !global;
+
+// Create a mixin that overrides that global variable.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Create a local variable that shadows the global one.
+  $variable: 'local value';
+
+  // Include the mixin: it overrides the global variable.
+  @include global-variable-overriding;
+
+  // Print the variable's value.
+  // It is the **local** one, since it shadows the global one.
+  content: $variable;
+}
+
+// Print the variable in another selector that does no shadowing.
+// It is the **global** one, as expected.
+.other-local-scope::before {
+  content: $variable;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Initialize a global variable at root level.
+// In this case, the `!global` flag is optional.
+$variable: 'initial value' !global
+
+// Create a mixin that overrides that global variable.
+@mixin global-variable-overriding
+  $variable: 'mixin value' !global
+
+.local-scope::before
+  // Create a local variable that shadows the global one.
+  $variable: 'local value'
+
+  // Include the mixin: it overrides the global variable.
+  +global-variable-overriding
+
+  // Print the variable's value.
+  // It is the **local** one, since it shadows the global one.
+  content: $variable
+
+// Print the variable in another selector that does no shadowing.
+// It is the **global** one, as expected.
+.other-local-scope::before
+  content: $variable
+{% endhighlight %}
+  </div>
+</div>
