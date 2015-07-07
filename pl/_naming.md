@@ -13,32 +13,7 @@ Selektory zastępcze w Sassie zostały celowo tutaj ominięte bowiem traktować 
 
 W odniesieniu natomiast do zmiennych, funkcji i mixinów, utrzymujemy konwencję znaną z *CSSa*: **małe litery, myślniki jako separatory**, a przede wszystkim – nazwy muszą nieść ze sobą znaczenie.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$vertical-rhythm-baseline: 1.5rem;
-
-@mixin size($width, $height: $width) {
-  // ...
-}
-
-@function opposite-direction($direction) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$vertical-rhythm-baseline: 1.5rem
-
-=size($width, $height: $width)
-  // ...
-
-@function opposite-direction($direction)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/01/index.html %}
 
 ###### Dalsze informacje
 
@@ -50,26 +25,7 @@ Jeśli jesteś deweloperem pracującym z frameworkami czy też zajmujesz się ok
 
 Jak w przypadku wielu innych języków programowania, zalecam korzystanie z nazw opartych o wielkie litery, rozdzielane znakami podkreślenia, aby oznaczyć stałe. Nie tylko jest to już przyjętą konwencją, ale także wyraźnie kontrastuje ze zmiennymi pisanymi małymi literami, rozdzielanymi myślnikami.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dobrze
-$CSS_POSITIONS: top, right, bottom, left, center;
-
-// Źle
-$css-positions: top, right, bottom, left, center;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dobrze
-$CSS_POSITIONS: top, right, bottom, left, center
-
-// Źle
-$css-positions: top, right, bottom, left, center
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/02/index.html %}
 
 ###### Dalsze informacje
 
@@ -81,25 +37,7 @@ Jeśli zamierzasz rozpowszechniać swój kod pisany w Sassie, na przykład jako 
 
 Na przykład, jeżeli pracujesz nad projektem *Sassowski Jednorożec*, który z założenia ma być wykorzystywany przez deweloperów na całym świecie (kto by nie chciał z czegoś tak nazwanego korzystać?), zastanów się czy nie było by dobrze używać prefiksu `sj-` dla wszelkich nazw. Wydaje się, że będzie to na tyle specyficzne, że zapobiegnie wszelkim kolizjom nazwowym a jednocześnie też na tyle krótkie, że nie będzie sprawiało problemów przy pisaniu kodu.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$sj-configuration: ( ... );
-
-@function sj-rainbow($unicorn) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$sj-configuration: ( ... )
-
-@function sj-rainbow($unicorn)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/03/index.html %}
 
 <div class="note">
   <p>Warto zaznaczyć, że automatyczne ograniczanie przestrzeni nazw jest jednym ze składników nadchodzących zmian w funkcji <code>@import</code> w wersji 4.0 Sassa. Jak już odpowiednie zmiany wejdą w życie, ręczne ograniczanie przestrzeni stanie się coraz to mniej użyteczne, a w końcu stanie się nawet problematyczne.</p>
