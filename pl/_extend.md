@@ -24,33 +24,7 @@ Są bowiem sytuacje w których rozwijanie selektorów może być pomocne i warte
 
 Jeśli zamierzasz korzystać z tej dyrektywy, musisz także wiedzieć, że nie współpracuje on dobrze z blokami `@media`. Jak zapewne wiesz, Sass nie potrafi rozwijać zewnętrznych selektorów z wnętrza media query. Kompilator w takich przypadkach po prostu się wysypuje, mówiąc Ci jednocześnie, że tak się nie robi. Nie jest to zbyt przyjemne.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  content: 'foo';
-}
-
-@media print {
-  .bar {
-    // To nie działa. Co więcej - kompilator się wysypie.
-    @extend .foo;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  content: 'foo'
-
-@media print
-  .bar
-    // To nie działa. Co więcej - kompilator się wysypie.
-    @extend .foo
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/extend/01/index.html %}
 
 > Nie można używać @extend na zewnętrznym selektorze, z wnętrza @media.<br>
 > Można tylko to robić w ramach tej samej dyrektywy.

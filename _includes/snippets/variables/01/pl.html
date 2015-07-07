@@ -1,0 +1,58 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Zainicjuj globalną zmienną na poziomie głównym.
+$variable: 'initial value';
+
+// Utwórz mixin, który nadpisuje globalną zmienną.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Utwórz lokalną zmienną, która przysłania tą globalną.
+  $variable: 'local value';
+
+  // Użyj mixinu: zastąpi on globalną zmienną.
+  @include global-variable-overriding;
+
+  // Wydrukuj wartość zmiennej.
+  // Będzie to ta **lokalna**, jako że przysłoniła tą globalną.
+  content: $variable;
+}
+
+// Wydrukuj zmienną w innym selektorze, który jej nie przysłoni.
+// Będzie to ta **globalna**, jak oczekiwano.
+.other-local-scope::before {
+  content: $variable;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Zainicjuj globalną zmienną na poziomie głównym.
+$variable: 'initial value'
+
+// Utwórz mixin, który nadpisuje globalną zmienną.
+@mixin global-variable-overriding
+  $variable: 'mixin value' !global
+
+.local-scope::before
+  // Utwórz lokalną zmienną, która przysłania tą globalną.
+  $variable: 'local value'
+
+  // Użyj mixinu: zastąpi on globalną zmienną.
+  +global-variable-overriding
+
+  // Wydrukuj wartość zmiennej.
+  // Będzie to ta **lokalna**, jako że przysłoniła tą globalną.
+  content: $variable
+
+// Wydrukuj zmienną w innym selektorze, który jej nie przysłoni.
+// Będzie to ta **globalna**, jak oczekiwano.
+.other-local-scope::before
+  content: $variable
+{% endhighlight %}
+  </div>
+</div>

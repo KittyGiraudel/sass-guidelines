@@ -1,7 +1,7 @@
 
 # Architektura
 
-Układanie struktury projektu wykorzystującego CSS jest prawdopodobnie jednym z najtrudniejszych zadań, jakie napotkasz w czasie zajmowania się tym projektem. Utrzymanie architektury spójnej i mającej znaczenie jest nawet trudniejsze.
+Układanie struktury projektu wykorzystującego CSS jest prawdopodobnie jednym z najtrudniejszych zadań, jakie napotkasz w czasie zajmowania się tymże projektem. Utrzymanie architektury spójnej i mającej znaczenie jest nawet trudniejsze.
 
 Na szczęście, jedną z kluczowych zalet używania preprocesora CSS jest możliwość podziału bazy kodu na wiele plików bez spadku wydajności (czego skutkiem jest wykorzystywanie klasycznego `@import` w CSSie). Dzięki gruntownym zmianom w dyrektywie `@import`, jakie wniósł Sass, jej wykorzystywanie do dzielenia kodu na wiele plików w fazie programowania jest obecnie absolutnie bezpieczne (a nawet zalecane). Rezultatem jest bowiem pojedynczy plik CSS, który użyty zostanie w fazie produkcji.
 
@@ -34,7 +34,6 @@ Komponenty mogą reprezentować wszystko, o tyle o ile:
 * mogą być wielokrotne użyte, w wielu miejscach w projekcie,
 * są niezależne.
 
-
 Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w różnych miejscach, na różnych stronach i w różnych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
 
 Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomoże Ci on nie tylko zmniejszyć ilość CSSu potrzebnego dla Twojego całego projektu, ale także ułatwi Ci utrzymanie całości kodu w porządku.
@@ -59,54 +58,7 @@ I oczywiście:
 
 Co do zasady, możemy tu mówić o czymś takim:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Reguły dot. typografii
-|   ...                  # Itd…
-|
-|– components/
-|   |– _buttons.scss     # Przyciski
-|   |– _carousel.scss    # Karuzela
-|   |– _cover.scss       # Okładka
-|   |– _dropdown.scss    # Rozwijane menu
-|   ...                  # Itd…
-|
-|– layout/
-|   |– _navigation.scss  # Nawigacja
-|   |– _grid.scss        # Grid system
-|   |– _header.scss      # Nagłówek
-|   |– _footer.scss      # Stopka
-|   |– _sidebar.scss     # Pasek boczny
-|   |– _forms.scss       # Formularze
-|   ...                  # Itd…
-|
-|– pages/
-|   |– _home.scss        # Style dla strony głównej
-|   |– _contact.scss     # Style dla konkretnej podstrony
-|   ...                  # Itd…
-|
-|– themes/
-|   |– _theme.scss       # Główny motyw
-|   |– _admin.scss       # Motyw dla panelu administratora
-|   ...                  # Itd…
-|
-|– utils/
-|   |– _variables.scss   # Zmienne Sassa
-|   |– _functions.scss   # Funkcje Sassa
-|   |– _mixins.scss      # Mixiny Sassa
-|   |– _helpers.scss     # Pomocnicze klasy i selektory
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Itd…
-|
-|
-`– main.scss             # Główny plik Sassa
-</code></pre></div>
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>Pliki są nazywane według tej samej konwencji, o której była mowa wyżej: do rozdzielania używany jest myślnik.</p>
@@ -216,74 +168,10 @@ Celem zapewnienia lepszej przejrzystości, plik główny powinien respektować p
 * jeden plik dla każdej deklaracji `@import`,
 * jeden `@import` na linię,
 * bez nowej linii pomiędzy importami z tego samego folderu,
+* bez nowej linii po ostatnim imporcie z danego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'vendors/bootstrap';
-@import 'vendors/jquery-ui';
-
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/cover';
-@import 'components/dropdown';
-
-@import 'pages/home';
-@import 'pages/contact';
-
-@import 'themes/theme';
-@import 'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import vendors/bootstrap
-@import vendors/jquery-ui
-
-@import utils/variables
-@import utils/functions
-@import utils/mixins
-@import utils/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import components/buttons
-@import components/carousel
-@import components/cover
-@import components/dropdown
-
-@import pages/home
-@import pages/contact
-
-@import themes/theme
-@import themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02/index.html %}
 
 Istnieje także inne podejście do importowania plików cząstkowych (partiali), które wydaje mi się równie poprawne. W tym przypadku z jednej strony plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. W każdym jednak razie, decyzję pozostawiam Tobie. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
 
@@ -293,86 +181,7 @@ Istnieje także inne podejście do importowania plików cząstkowych (partiali),
 * pusta linia po ostatnim imporcie dla danego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  vendors/bootstrap,
-  vendors/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>Aby nie importować pojedynczo każdego z plików, powstało rozszerzenie do Ruby Sass zwane <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, które umożliwia wykorzystywanie tzw. glob patterns w <code>@import</code> Sassa, takich jak <code>@import "components/*"</code>.</p>
@@ -383,35 +192,7 @@ Istnieje także inne podejście do importowania plików cząstkowych (partiali),
 
 Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry’ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Fix dla szczegółowości nawigacji.
- *
- * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
- * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
- * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Fix dla szczegółowości nawigacji.
- *
- * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
- * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
- * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/04/index.html %}
 
 ###### Dalsze informacje
 

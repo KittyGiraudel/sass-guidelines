@@ -1,11 +1,11 @@
 
 # O Sassie
 
-Zdaniem twórców [Sassa](http://sass-lang.com), zawartym w jego [dokumentacji](http://sass-lang.com/documentation/file.SASS_REFERENCE.html), Sass jest:
+Zdaniem twórców [Sassa](http://sass-lang.com), zawartym w jego [dokumentacji](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
-> ... rozszerzeniem dla CSSa, które dodaje mu mocy i elegancji.
+> Sass jest rozszerzeniem dla CSSa, które dodaje mu mocy i elegancji.
 
-Głównym zadaniem Sassa jest wyeliminowanie wad CSSa. Jak wszyscy wiemy, CSS nie jest najlepszym językiem świata <sup>[potrzebne źródło]</sup>.
+Głównym zadaniem Sassa jest wyeliminowanie wad CSSa. Jak wszyscy wiemy, CSS nie jest najlepszym językiem świata <sup>[potrzebne źródło]</sup>. Z jednej strony jest on niewątpliwie łatwy do przyswojenia, z drugiej zaś niejednokrotnie zdarza się, że nasza baza kodu CSSa staje się niepotrzebnie skomplikowana i rozbudowana, zwłaszcza przy większych projektach.
 
 W tym miejscu pojawia się Sass, jako tzw. meta-język, by poprawić składnię CSSa. Zapewnia on ponadto szereg dodatkowych cech i użytecznych narzędzi. Jednocześnie, Sass pozostaje dość konserwatywnym uzupełnieniem klasycznego CSSa.
 
@@ -31,6 +31,7 @@ W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z 
 ###### Dalsze informacje
 
 * [LibSass](https://github.com/sass/libsass)
+* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
@@ -44,7 +45,7 @@ Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko
 
 Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu drobnych dodatków do samego CSSa.
 
-Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem.
+Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Możesz jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <button data-toggle="aside" class="link-like" role="button" type="button">panelu opcji</button>.
 
 ###### Dalsze informacje
 

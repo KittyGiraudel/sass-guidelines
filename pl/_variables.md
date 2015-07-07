@@ -21,132 +21,23 @@ Dokumentacja traktuje także o *przysłanianiu globalnych zmiennych (variable sh
 
 Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Zainicjuj globalną zmienną na poziomie głównym.
-$variable: 'initial value';
-
-// Utwórz mixin, który nadpisuje globalną zmienną.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Utwórz lokalną zmienną, która przysłania tą globalną.
-  $variable: 'local value';
-
-  // Użyj mixinu: zastąpi on globalną zmienną.
-  @include global-variable-overriding;
-
-  // Wydrukuj wartość zmiennej.
-  // Będzie to ta **lokalna**, jako że przysłoniła tą globalną.
-  content: $variable;
-}
-
-// Wydrukuj zmienną w innym selektorze, który jej nie przysłoni.
-// Będzie to ta **globalna**, jak oczekiwano.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Zainicjuj globalną zmienną na poziomie głównym.
-$variable: 'initial value'
-
-// Utwórz mixin, który nadpisuje globalną zmienną.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Utwórz lokalną zmienną, która przysłania tą globalną.
-  $variable: 'local value'
-
-  // Użyj mixinu: zastąpi on globalną zmienną.
-  +global-variable-overriding
-
-  // Wydrukuj wartość zmiennej.
-  // Będzie to ta **lokalna**, jako że przysłoniła tą globalną.
-  content: $variable
-
-// Wydrukuj zmienną w innym selektorze, który jej nie przysłoni.
-// Będzie to ta **globalna**, jak oczekiwano.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/01/index.html %}
 
 ## Flaga `!default`
 
 Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być zadeklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
 Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem Twojej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Zmienna dewelopera
-$baseline: 2em;
-
-// `$baseline` deklarowana przez Twoją bibliotekę
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Zmienna dewelopera
-$baseline: 2em
-
-// `$baseline` deklarowana przez Twoją bibliotekę
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/03/index.html %}
 
 ## Flaga `!global`
 
 Flaga `!global` powinna być użyta jedynie wtedy, gdy zmienna z lokalnego zasięgu ma nadpisać zmienną globalną. Deklarując zmienną na głównym poziomie, flaga `!global` powinna zostać pominięta.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dobrze
-$baseline: 2em;
-
-// Źle
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dobrze
-$baseline: 2em
-
-// Źle
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/04/index.html %}
 
 ## Wiele zmiennych lub map
 
@@ -154,47 +45,4 @@ Używanie map zamiast wielu odrębnych zmiennych ma swoje zalety. Pozwala to prz
 
 Kolejnym plusem tworzenia map jest możliwość konstruowania małych funkcji wydobywających, dających nam przyjazne w obsłudze API. Na przykład, rozważ następujący kod:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mapa z-indeksów, zbiera wszystkie warstwy Z aplikacji
-/// @access private
-/// @type Map
-/// @prop {String} key - Nazwa warstwy
-/// @prop {Number} value - Wartość Z przypisana do klucza
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Wydobądź wartość z-index z nazwy warstwy
-/// @access public
-/// @param {String} $layer - Nazwa warstwy
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mapa z-indeksów, zbiera wszystkie warstwy Z aplikacji
-/// @access private
-/// @type Map
-/// @prop {String} key - Nazwa warstwy
-/// @prop {Number} value - Wartość Z przypisana do klucza
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Wydobądź wartość z-index z nazwy warstwy
-/// @access public
-/// @param {String} $layer - Nazwa warstwy
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}

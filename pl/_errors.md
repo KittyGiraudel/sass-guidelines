@@ -21,34 +21,7 @@ Warto także zaznaczyć, że w typowym projekcie Sassa, ostrzeżenia i błędy m
 
 Weźmy za przykład tą funkcję z projektu [Sass-MQ](https://github.com/sass-mq/sass-mq), która konwertuje wartości z `px` do `em`:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
-  @if unitless($px) {
-    @warn 'Assuming #{$px} to be in pixels, attempting to convert it into pixels.';
-    @return mq-px2em($px + 0px);
-  } @else if unit($px) == em {
-    @return $px;
-  }
-
-  @return ($px / $base-font-size) * 1em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@function mq-px2em($px, $base-font-size: $mq-base-font-size)
-  @if unitless($px)
-    @warn 'Assuming #{$px} to be in pixels, attempting to convert it into pixels.'
-    @return mq-px2em($px + 0px)
-  @else if unit($px) == em
-    @return $px
-
-  @return ($px / $base-font-size) * 1em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/errors/01/index.html %}
 
 Jeśli podana wartość okaże się nie mieć jednostki, funkcja z góry zakłada, że chodzi tu o piksele. W tym miejscu, takie założenie może być ryzykowne i z tego też powodu użytkownik powinien być ostrzeżony, że oprogramowanie zrobiło coś, co może być uznane za nieoczekiwane.
 
@@ -58,56 +31,4 @@ Błędy, w odróżnieniu do ostrzeżeń, zatrzymują kompilator i zapobiegają j
 
 Dla przykładu, powiedzmy że budujesz funkcję wydobywającą wartość z danej mapy. Mógłbyś wysyłać błąd za każdym razem, gdy żądany klucz nie istnieje.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mapa z-indeksów, zbiera wszystkie warstwy Z aplikacji
-/// @access private
-/// @type Map
-/// @prop {String} key - Nazwa warstwy
-/// @prop {Number} value - Wartość Z przypisana do klucza
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Wydobądź wartość z-index z nazwy warstwy
-/// @access public
-/// @param {String} $layer - Nazwa warstwy
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @if not map-has-key($z-indexes, $layer) {
-    @error 'Brak warstwy `#{$layer}` w $z-indexes. '
-         + 'Warstwa powinna być jedną z #{map-keys($z-indexes)}.';
-  }
-
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mapa z-indeksów, zbiera wszystkie warstwy Z aplikacji
-/// @access private
-/// @type Map
-/// @prop {String} key - Nazwa warstwy
-/// @prop {Number} value - Wartość Z przypisana do klucza
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Wydobądź wartość z-index z nazwy warstwy
-/// @access public
-/// @param {String} $layer - Nazwa warstwy
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @if not map-has-key($z-indexes, $layer)
-    @error 'Brak warstwy `#{$layer}` w $z-indexes. '
-         + 'Warstwa powinna być jedną z #{map-keys($z-indexes)}.'
-
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/errors/02/index.html %}
