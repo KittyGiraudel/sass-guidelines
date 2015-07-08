@@ -1,26 +1,26 @@
 
 # Too Long; Didn't read
 
-To sum up, we want:
+For at opsummere, så ønsker vi:
 
-* Two (2) spaces indents, no tabs;
-* 80-characters wide lines;
-* Properly written multi-line CSS;
-* Meaningful use of whitespaces;
-* Quoted strings (single quotes) & URLs;
-* No trailing 0, mandatory leading 0;
-* Calculations wrapped in parentheses;
-* No magic numbers;
-* Colors expressed in keywords > HSL > RGB > hexadecimal;
-* Lists separated with commas;
-* No trailing comma in lists (since they are inlined);
-* Trailing comma in maps;
-* No selector nesting except for pseudo-classes and pseudo-elements;
-* Hyphen-delimited naming;
-* Extensive comments;
-* SassDoc-powered API comments;
-* Limited usage of `@extend`;
+* Indentering á to (2) mellemrum, ingen tabs;
+* 80-karakter brede linjer;
+* Ordentligt skrevet, multi-linje CSS;
+* Meningsfuld brug af whitespace;
+* Citerede strenge (enkelt-citationstegn) & URL'er;
+* Intet efterstillet 0, obligatorisk førende 0;
+* Udregninger indpakket i paranteser;
+* Ingen magiske tal;
+* Farver udtrykt i nøgleord > HSL > RGB > hexadecimal;
+* Lister separeret af kommaer;
+* Ingen efterstillede kommaer i lister (fordi de er inlinede)
+* Efterstillede kommaer i maps;
+* Ingen selektor-indlejring undtagen pseudo-klasser og pseudo-elementer;
+* Bindestreg-afgrænset navngivning;
+* Omfattende kommentarer;
+* SassDoc-drevne API kommentarer;
+* Begrænset brug af `@extend`;
 * Simple mixins;
-* As few loops as possible, no `@while`;
-* Reduced number of dependencies;
-* Meaningful use of warnings and errors.
+* Så få løkker som muligt, ingen `@while`;
+* Begrænset antal af dependencies;
+* Meningsfuld anvendelse af advarsler og fejl;
