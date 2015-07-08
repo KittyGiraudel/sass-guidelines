@@ -1,57 +1,57 @@
 
-# Commenting
+# Kommentering
 
-CSS is a tricky language, full of hacks and oddities. Because of this, it should be heavily commented, especially if you or someone else intend to read and update the code 6 months or 1 year from now. Don’t let you or anybody else be in the position of *I-didn’t-write-this-oh-my-god-why*.
+CSS er et udfordrende sprog, fyldt med hacks og mærkværdigheder. På grund af det, så bør det kraftigt blive kommenteret, især hvis du eller andre har til hensigt at læse eller opdatere koden 6 måneder eller 1 år fra nu. Lad ikke dig selv eller andre komme i en situation af *Jeg-har-ikke-skrevet-det-her-åh-gud-hvorfor*.
 
-As simple as CSS can get, there is still a lot of room for comments. These could be explaining:
+Selvom CSS kan blive meget simpelt, så er der stadig masser af plads til kommentarer. Disse kunne forklare:
 
-* the structure and/or role of a file;
-* the goal of a ruleset;
-* the idea behind a magic number;
-* the reason for a CSS declaration;
-* the order of CSS declarations;
-* the thought process behind a way of doing things.
+* strukturen af/eller rollen af en fil;
+* målet med et regelsæt;
+* idéen bag et magisk tal;
+* begrundelsen for en CSS deklaration;
+* rækkefølgen af CSS deklarationer;
+* tankeprocessen bag måde at gøre ting på;
 
-And I probably forgot a lot of other various reasons as well. Commenting takes very little time when done seamlessly along with the code so do it at the right time. Coming back at a piece of code to comment it is not only completely unrealistic but also extremely annoying.
+Og jeg glemte sikkert en masse andre grunde. Kommentering tager meget lidt tid når det gøres samtidig med koden, så gør det på det rigtige tidspunkt. At vende tilbage til et stykke kode for at kommentere det er ikke blot urealistisk, men også ekstremt irriterende.
 
-## Writing comments
+## At skrive kommentarer
 
-Ideally, *any* CSS ruleset should be preceded by a C-style comment explaining the point of the CSS block. This comment also hosts numbered explanations regarding specific parts of the ruleset. For instance:
+Ideelt set, så bør *alle* CSS regelsæt foranstilles med en C-stil kommentar, der forklarer grunden for CSS-blokken. Denne kommentar indeholder nummererede forklaringer, der vedrører specifikke dele af regelsættet. For eksempel:
 
 {% include snippets/comments/01/index.html %}
 
-Basically everything that is not obvious at first glance should be commented. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Alting, der basalt set ikke er åbenlyst ved første øjekast bør blive kommenteret. Der er ikke noget der hedder for meget dokumentation. Husk, at du kan ikke *kommentere for meget*, så kom i gang og skriv kommentarer til alt der gør sig fortjent til det.
 
-When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
+Når du kommenterer en Sass-specifik sektion, så anvend indlejrede Sass-kommentarer i stedet for en C-stil blok. Dette gør kommentaren usynlig for outputtet, selv ved expanded mode under udvikling.
 
 {% include snippets/comments/02/index.html %}
 
-###### Further reading
+###### Videre læsning
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
-## Documentation
+## Dokumentation
 
-Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
+Enhver variabel, funktion, mixin og placeholder, der har til hensigt at blive genbrugt igennem helle kodebasen bør dokumenteres som en del af den globale API ved at bruge [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 
 <div class="note">
-  <p>Three slashes (<code>/</code>) required.</p>
+  <p>Tre skråstreger (<code>/</code>) påkrævet.</p>
 </div>
 
-SassDoc has two major roles:
+SassDoc har to overordnede roller:
 
-* forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* at tvinge standardiserede kommentarer ved anvendelse af et annotations-baseret system til alt der er en del af en offentlig eller privat API;
+* at være i stand til at generere en HTML version af API-dokumentationen ved hjælp af SassDoc endpoints (CLI værktøjer, Grunt, Gulp, Broccoli, Node...)
 
 {% include images/sassdoc.html %}
 
-Here is an example of a mixin extensively documented with SassDoc:
+Her er et eksempel af en mixin, der er omfattende dokumenteret med SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Further reading
+###### Videre læsning
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
