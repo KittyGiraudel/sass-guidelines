@@ -1,26 +1,26 @@
 
-# Conditional statements
+# Betingede udsagn
 
-You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. Actually, they mainly exist for libraries and frameworks.
+Du kender sikkert allerede til, at Sass tilbyder betingede udsagn via `@if` og `@else` direktiverne. Medmindre du har rimelig kompleks logik i din kode, så er der ikke behov for betingede udsagn i dine hverdags-stylesheets. Faktisk, så eksisterer de hovedsageligt for biblioteker og frameworks.
 
-Anyway, if you ever find yourself in need of them, please respect the following guidelines:
+Under alle omstændigheder, hvis du nogensinde finder behovet for dem, så venligst respektér følgende guidelines:
 
-* No parentheses unless they are necessary;
-* Always an empty new line before `@if`;
-* Always a line break after the opening brace (`{`);
-* `@else` statements on the same line as previous closing brace (`}`).
-* Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
+* Ingen paranteser medmindre de er nødvendige;
+* Hav altid en ny, tom linje før `@if`;
+* Hav altid et linjeskift efter den åbnende klamme (`{`);
+* `@else` udsagn skal være på den samme linje som den forrige, lukkende klamme (`}`).
+* Hav altid en ny, tom linje efter den sidste, lukkende klamme (`}`), medmindre den næste linje er en lukkende klamme (`}`).
 
 {% include snippets/conditions/01/index.html %}
 
-When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
+Når du tester en falsk værdi, skal du altid bruge `not` keywordet i stedet for at teste det imod `false` eller `null`.
 
 {% include snippets/conditions/02/index.html %}
 
-Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
+Put altid variabel-delen på den venstre side af et udsagn, og det (u)forventede resultat på den højre side. Omvendte betingede udsagn er ofte sværere at læse, især for uerfarne udviklere.
 
 {% include snippets/conditions/03/index.html %}
 
-When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
+Når du anvender betingede udsagn inden for en funktion, for at returnere et forskelligt resultat baseret på nogle betingelser, så vær altid sikker på at funktionen stadig har et `@return` udsagn uden for enhver betinget blok.
 
 {% include snippets/conditions/04/index.html %}
