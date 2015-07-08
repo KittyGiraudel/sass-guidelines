@@ -1,21 +1,21 @@
 
-# Architecture
+# Arkitektur
 
-Architecting a CSS project is probably one of the most difficult things you will have to do in a project’s life. Keeping the architecture consistent and meaningful is even harder.
+At konstruere et CSS projekt er højest sandsynlig noget af det sværeste du kommer til at lave i et projekts levetid. At holde arkitekturen konsistent og meningsfuld er endnu sværere.
 
-Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass’s overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
+Heldigvis, så er en af hovedfordelene ved at have en CSS preprocessor evnen til at kunne splitte kodebasen i flere filer, uden at det påvirker performance (som `@import` CSS-direktivet ville gøre). Takket være Sass' overload af `@import` direktivet, så er det fuldstændig sikkert (og faktisk anbefalet) at bruge så mange filer som nødvendigt i udvikling, og så samle alle i ét enkelt stylesheet når man går i produktion. 
 
-On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.
+Oven på det, så kan jeg ikke udtrykke nødvendigheden for mapper nok, selv ved projekter af mindre skala. Du smider ikke alle dine papirark i den samme kasse derhjemme. Du bruger mapper; en til huset/lejligheden, en til banken, en til regningerne og så videre. Der er ingen grund til ikke at strukturere et CSS projekter på samme måde. Split kodebasen i meningsfulde mapper, så det er nemt at finde tingene senere, når du er nødt til at vende tilbage til koden.
 
-There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons.
+Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-lignende, [Foundation](http://foundation.zurb.com/)-lignende... De har alle deres meritter, fordele og ulemper.
 
-I, myself, use an approach that happens to be quite similar to [SMACSS](https://smacss.com/) from [Jonathan Snook](http://snook.ca/), which focuses on keeping things simple and obvious.
+Jeg selv bruger en tilgang der har vist sig at være ret lig [SMACSS](https://smacss.com/) fra [Jonathan Snook](http://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
 
 <div class="note">
-  <p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p>
+  <p>Jeg har lært, at arkitetur, for det meste, er meget specifik til projektet. Det står dig frit for, helt at afskrive eller omdanne løsningsforslaget, så du arbejder med et system der dækker dine behov.</p>
 </div>
 
-###### Further reading
+###### Videre læsning
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -24,23 +24,23 @@ I, myself, use an approach that happens to be quite similar to [SMACSS](https://
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
-## Components
+## Komponenter
 
-There is a major difference between making it *work*, and making it *good*. Again, CSS is quite a messy language <sup>[citation needed]</sup>. The less CSS we have, the merrier. We don’t want to deal with megabytes of CSS code. To keep stylesheets short and efficient&mdash;and this will not be any surprise to you&mdash;it is usually a good idea to think of an interface as a collection of components.
+Der er en kæmpe forskel mellem at få noget til at *virke*, og at få noget til at blive *godt*. Igen, så er CSS et ret rodet sprog <sup>[citation mangler]</sup>. Jo mindre CSS vi har, jo bedre. Vi ønsker ikke at håndtere megabytes af CSS-kode. For at holde dine stylesheets korte og effektive&mdash;og det her vil ikke komme som en overraskelse for dig&mdash;det er tit en god idé at tænke på et interface som en samling af komponenter.
 
-Components can be anything, as long as they:
+Komponenter kan være hvad som helst, så længe de:
 
-* do one thing and one thing only;
-* are re-usable and re-used across the project;
-* are independent.
+* gør én ting, og kun én ting;
+* er genbrugelige og genbrugt på tværs af projektet;
+* er uafhængige.
 
-For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).
+For eksempel bør en søgeformular behandles som et komponent. Det bør være genbrugeligt, ved forskellige positioner, på forskellige sider og i forskellige situationer. Det bør ikke være afhængig af dets position i DOM'en (footer, sidebar, hovedindhold...)
 
-Most of any interface can be thought of as little components and I highly recommend you stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.
+Størstedelen af ethvert interface kan tænkes som små komponenter, og jeg anbefaler kraftigt at du holder dig til dette paradigme. Det vil ikke kun forkorte mængden af CSS der skal bruges til et helt projekt, men gør det også meget nemmere at håndtere end et kaotisk rod hvor alting flyder rundt.
 
-## The 7-1 pattern
+## 7-1 Mønstret
 
-Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into 7 different folders, and a single file at the root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.
+Lad os vende tilbage til arkitektur. Jeg arbejder typisk med hvad jeg kalder *7-1 mønstret*: 7 mapper, 1 fil. Basalt set, så har du alle dine partials pakket ned i 7 forskellige mapper, og en enkelt fil på rod-niveauet (oftest kaldet `main.scss`) der importerer dem alle, for derefter at blive kompileret ned til ét CSS stylesheet.
 
 * `base/`
 * `components/`
@@ -50,31 +50,31 @@ Back to architecture, shall we? I usually go with what I call the *7-1 pattern*:
 * `utils/`
 * `vendors/`
 
-And of course:
+Og selvfølgelig:
 
 * `main.scss`
 
 {% include images/wallpaper.html %}
 
-Ideally, we can come up with something like this:
+Ideelt set, så kan vi ende med noget lig dette:
 
 {% include snippets/architecture/01/index.html %}
 
 <div class="note">
-  <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
+  <p>Filer følger de samme konventioner for navngivelse, som beskrevet tidligere: afgrænset med en bindestreg.</p>
 </div>
 
-### Base folder
+### Base mappen
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I’m used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.
+`base/` mappen holder på alt hvad vi kan kalde boilerplate-kode for projektet. Derinde finder du typisk reset-filen, nogle typografiske regler, og højest sandsynlig et stylesheet (som jeg er vant til at kalde `_base.scss`), der definerer nogle standard styles for de oftest anvendte HTML-elementer.
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
 
-### Layout folder
+### Layout mappen
 
-The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even CSS styles for all the forms.
+`layout/` mappen indeholder alt der omhandler layoutet af siden eller applikationen. Denne mappe kan have stylesheets for hoveddelene af siden (header, footer, navigation, sidebar...), gitter-systemet eller endda CSS styles for alle formularerne.
 
 * `_grid.scss`
 * `_header.scss`
@@ -84,76 +84,76 @@ The `layout/` folder contains everything that takes part in laying out the site 
 * `_navigation.scss`
 
 <div class="note">
-  <p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p>
+  <p><code>Layout/</code> mappen kan også kaldes <code>partials/</code>, afhængigt af hvad du foretrækker.</p>
 </div>
 
-### Components folder
+### Components mappen
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+Til mindre komponenter er der `components/` mappen. Mens `layout/` er *makro* (definerer den globale wireframe), så fokuserer `components/` mere på widgets. Den indeholder alle slags specifikke moduler såsom en slider, en loader, et widget og basalt set alt derimellem. Der er ofte en masse filer i `components/`, da hele siden/applikationen stort set bør bestå af små moduler.
 
 * `_media.scss`
 * `_carousel.scss`
 * `_thumbnails.scss`
 
 <div class="note">
-  <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
+  <p><code>Components/</code> mappen kan også kaldes <code>modules/</code>, afhængigt af hvad du foretrækker.</p>
 </div>
 
-### Pages folder
+### Pages mappen
 
-If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
+Hvis du har side-specifikke styles, så er det bedre at have dem i en `pages/` mappe, i en fil der er navngivet efter siden. For eksempel, så er det ikke unormalt at have meget specifikke styles for forsiden og derfor vil der være et behov for en `_home.scss` fil i `pages/`.
 
 * `_home.scss`
 * `_contact.scss`
 
 <div class="note">
-  <p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
+  <p>Afhængigt af din implementeringsproces, så kan disse filer også blive kaldt enkeltvis, for at undgå at de bliver merged med andre i det samlede stylesheet. Det er helt op til dig.</p>
 </div>
 
-### Themes folder
+### Themes mappen
 
-On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
+Ved store sider og applikationer, så er det ikke unormalt at have forskellige temaer. Der er absolut forskellige måder at håndtere temaer, men personligt foretrækker jeg at have dem alle samlet i en `themes/` mappe.
 
 * `_theme.scss`
 * `_admin.scss`
 
 <div class="note">
-  <p>This is very project-specific and is likely to be non-existent on many projects.</p>
+  <p>Denne er meget projekt-specifik, og er ofte ikke-eksisterende i mange projekter.</p>
 </div>
 
-### Utils folder
+### Utils mappen
 
-The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+`utils/` mappen samler alle Sass værktøjer og hjælpere, der anvendes på tværs af projektet. Hver global variabel, funktion, mixin og placeholder bør puttes herind.
 
-The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
+Tommelfingerreglen for denne mappe er, at den ikke bør outputte en enkelt linje af CSS når den kompileres for sig selv. De er intet andet end Saas-hjælpere.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss` (oftest navngivet `_helpers.scss`)
 
 <div class="note">
-  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, depending on what you prefer.</p>
+  <p><code>Utils/</code> mappen kan også kaldes <code>helpers/</code>, <code>sass-helpers/</code> eller <code>sass-utils/</code>, afhængigt af hvad du foretrækker.</p>
 </div>
 
-### Vendors folder
+### Vendors mappen
 
-And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to say “Hey, this is not from me, not my code, not my responsibility”.
+Sidst, men ikke mindst, så vil de fleste projekter have en `vendors/` mappe der indeholder alle CSS filerne fra eksterne biblioteker og frameworks - Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, og så videre. At putte dem til side i den samme mappe er en god måde at sige “Hey, det her er ikke noget jeg har lavet, ikke min kode, ikke mit ansvar”.
 
 * `_normalize.scss`
 * `_bootstrap.scss`
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-If you have to override a section of any vendor, I recommend you have an 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
+Hvis du er nød til at overskrive en sektion fra en udbyder, anbefaler jeg at du har en ottende mappe kaldet `vendors-extensions/`, hvori du kan have filer der er navngivet præcist efter de udbydere du overskriver.
 
-For instance, `vendors-extensions/_bootstrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap’s default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+For eksempel, `vendors-extensions/_bootstrap.scss` er en fil der indeholder alle de CSS regler, der har til hensigt at redeklarere nogle af Bootstraps originale CSS. Det er for at undgå at redigere i selve udbyderfilerne, hvilket generelt ikke er en god idé.
 
-### Main file
+### Main filen
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+Main filen (oftest navngivet `main.scss`) bør være den eneste Sass fil i hele kodebasen, der ikke starter med et underscore. Denne fil bør ikke indeholde andet end `@import` og kommentarer.
 
-Files should be imported according to the folder they live in, one after the other in the following order:
+Filer bør blive importeret i forhold til den mappe de lever i, en efter en, i følgende rækkefølge:
 
 1. `vendors/`
 1. `utils/`
@@ -163,38 +163,38 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-In order to preserve readability, the main file should respect these guidelines:
+For at bevare læsbarheden, bør main filen respektere følgende retningslinjer:
 
-* one file per `@import`;
-* one `@import` per line;
-* no new line between two imports from the same folder;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* en fil per `@import`;
+* en `@import` per linje;
+* ingen ny linje mellem to imports fra samme mappe;
+* en ny linje efter den sidste import fra en mappe;
+* filtyper og ledende underscores udeladt.
 
 {% include snippets/architecture/02/index.html %}
 
-There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+Der er en anden måde at importerer partials, som jeg også anser som værende i orden. På den lyse side, så gør det filen mere læsbar. På den anden side, så gør dét det mere smertefuldt at opdatere. Under alle omstændigheder, så vil jeg lade dig om at beslutte hvad der er bedst, da det ikke betyder særlig meget. For denne måde, bør main filen respektere følgende guidelines:
 
-* one `@import` per folder;
-* a linebreak after `@import`;
-* each file on its own line;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* en `@import` per mappe;
+* et linjeskift efter `@import`;
+* en fil på sin egen linje;
+* en ny linje efter den sidste import fra en mappe;
+* filtyper og ledende underscores udeladt.
 
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
+  <p>For ikke at skulle importere hver fil manuelt, så findes der en udvidelse til Ruby Sass kaldet <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, der gør det muligt at anvende glob-mønstre i Sass <code>@import</code> som eksempelvis <code>@import "components/*"</code>.</p>
+  <p>Med det sagt, så vil jeg ikke anbefale det fordi den importerer filerne i alfabetisk rækkefølge, hvilket typisk ikke er hvad du ønsker, især når du arbejder med et sprog der er afhængig af en særlig kilde-rækkefølge.</p>
 </div>
 
-## Shame file
+## Shame filen
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+Der findes et interessant koncept, der allerede er blevet gjort populært af [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) og [Chris Coyier](http://css-tricks.com), hvilket involverer at alle CSS-deklarationer, hacks og ting vi ikke er stolte af, bliver smidt i en *shame fil*. Denne fil, med den dramatiske titel `_shame.scss`, bliver så importeret efter alle andre filer, til sidst i stylesheetet.
 
 {% include snippets/architecture/04/index.html %}
 
-###### Further reading
+###### Videre læsning
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
