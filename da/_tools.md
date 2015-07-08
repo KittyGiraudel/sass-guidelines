@@ -1,19 +1,19 @@
 
-# Tools
+# Værktøjer
 
-What’s nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Det der er rart ved en så populær CSS preprocessor som Sass er, at den kommer med et helt økosystem af frameworks, plugins, biblioteker og værktøjer. Efter 8 års eksistens er vi ved at komme tættere og tættere på et punkt hvor [alt der kan skrives i Sass er blevet skrevet i Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don’t want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
+Mit råd er dog, at sænke antallet af dependencies til det absolut nødvendige. At håndtere dependencies er en form for helvede, du ikke ønsker at være en del af. Plus, der er begrænset til intet behov for eksterne dependencies når det kommer til Sass.
 
 ## Compass
 
-[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don’t see it dramatically losing in popularity for a while, if you want my opinion.
+[Compass](http://compass-style.org/) er det primære Sass framework derude. Udviklet af [Chris Eppstein](https://twitter.com/chriseppstein), en af hoved-designerne af Sass, og jeg ser det ikke tabe popularitet dramatisk det næste stykke tid, hvis du spørger mig.
 
-Still, I do not use Compass anymore, the main reason is that it slows Sass down a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it doesn’t really help.
+Når det er sagt, så bruger jeg ikke Compass mere. Hovedårsagen er, at det gør Sass meget langsomere. Ruby Sass er ret langsomt i sig selv, så ved at tilføje mere Ruby og mere Sass ovenpå hjælper ikke rigtigt.
 
-The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the tip of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
+Sagen er, at vi bruger meget lidt fra hele frameworket. Compass er enormt. Kryds-browser kompatibilitet mixins er bare toppen af isbjerget. Matematik-funktioner, billede-hjælpere, spriting... Der er så meget der kan klares med dette fantastiske stykke software.
 
-Unfortunately, this is all sugar and there is no killer feature in there. An exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+Desværre er det hele sukker, og der er ikke nogen overvældende funktioner inde i pakken. En undtagelse kan gøres med sprite-byggeren, som er *virkelig god*, men [Grunticon](https://github.com/filamentgroup/grunticon) og [Grumpicon](http://grumpicon.com/) klarer også jobbet, og har fordelen af at kunne tages ind og ud af build-processen.
 
 Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough, but I don’t think you’ll get much from it at the end of the day.
 
@@ -21,7 +21,7 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
   <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
 </div>
 
-###### Further reading
+###### Videre læsning
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -40,7 +40,7 @@ If you are not tied to a specific grid system, you will be pleased to know there
 
 Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
 
-###### Further reading
+###### Videre læsning
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -68,7 +68,7 @@ Fortunately, SCSS-lint recommendations are very similar to those described in th
   <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-###### Further reading
+###### Videre læsning
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
