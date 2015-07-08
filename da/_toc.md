@@ -1,5 +1,5 @@
 
-# Table of Contents
+# Indholdsfortegnelse
 
 * Toc
 {:toc}
