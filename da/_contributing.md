@@ -1,20 +1,20 @@
 
-# Contributing
+# Kontribuering
 
-Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Obviously, knowing that you liked this styleguide is already much appreciated!
+Sass Guidelines er et gratis projekt, som jeg vedligeholder i min fritid. Jeg behøver ikke sige, at det er et ret stort arbejde at holde alt opdateret, dokumenteret og relevant. Det er dog åbenlyst, at bare det at vide at du kunne lide denne styleguide er meget værdsat allerede!
 
-Now if you feel like contributing, please know that tweeting about it, spreading the word, or fixing a tiny typo by opening an issue or a pull-request on the [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) would be great!
+Hvis du føler for at kontribuere, så skal du vide at bare det at tweete om det, sprede ordet eller fikse en mindre tastefejl ved at åbne et issue eller en pull request på [GitHub repository'et](https://github.com/HugoGiraudel/sass-guidelines) vil være fedt!
 
-Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it!
+Sidst, men ikke mindst før vi starter: hvis du har nydt dokumentet, eller hvis det er brugbart for dig eller dit team, så overvej venligst at støtte det!
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
     {% include icons/dollar.html %}
-    Support Sass Guidelines
+    Støt Sass Guidelines
   </a>
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    Spread the word
+    Spred ordet
   </a>
 </div>
