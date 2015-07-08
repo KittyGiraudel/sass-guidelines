@@ -1,48 +1,48 @@
 
-# Variables
+# Variabler
 
-Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
+Variabler er essencen af ethvert programmeringssprog. De tillader os at genbruge værdier uden at være nødsaget til at kopierer dem igen og igen. Vigtigst er dog, at de gør opdatering af en værdi meget nemt. Slut med at søg og erstat, eller manuel gennemgang.
 
-However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+Dog er CSS intet andet end en kæmpe kurv, der indeholder alle vores æg. Modsat mange sprog, så er der ikke nogen egentlige scopes i CSS. På grund af det, så er vi nødt til at holde særligt øje når vi tilføjer variabler med risiko for at opleve konflikter.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
+Mit råd vil være kun at oprette variabler når det giver mening. Lad være med at initialiserer nye variabler bare fordi du kan, det vil ikke hjælpe. En ny variabel bør kun blive skabt når alle følgende kriterier er mødt:
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+* værdien bliver gentaget mindst to gange;
+* værdien vil sandsynligvis blive opdateret mere end én gang;
+* alle tilfælde af værdien er forbundet til variablen (f. eks. ikke ved et tilfælde);
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
+Basalt set, er der ikke nogen grund til at deklarere en variabel der aldrig vil blive opdateret eller kun anvendes et enkelt sted.
 
 ## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
+Variabel-scoping i Sass har ændret sig med årene. Indtil for nylig har variabel-deklarationer inden for regelsæt og andre scopes været lokale, som udgangspunkt. Dog, når der allerede var en global variabel med det samme navn, så ændrede den lokale anvisning den globale variabel. Siden version 3.4, har Sass tacklet konceptet af scopes korrekt, og skaber en ny lokal variabel i stedet.
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+Dokumentationen taler om *overskygning af globale variabler*. Når en variabel, der allerede eksisterer i det globale scope, deklareres i et indre scope (selektor, funktion, mixin...), så siger man at den lokale variable *overskygger* den globale. Basalt set, så overskriver den kun for det lokale scope.
 
-The following code snippet explains the *variable shadowing* concept.
+Følgende kodestykke forklarer konceptet bag *overskygning af variabler*.
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flag
+## `!default` flaget
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+Når du bygger et bibliotek, et framework, et gittersystem eller ethvert andet stykke Sass der er tiltænkt at blive distribueret og anvendt af eksterne udviklere, bør alle konfigurations-variabler være defineret med `!default` flaget, så de kan blive overskrevet.
 
 {% include snippets/variables/02/index.html %}
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Takket være dette, så kan en udvikler definerer hans egne `$baseline` variabel *før* han importerer dit bibliotek uden at se hans værdi blive redefineret.
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+## `!global` flaget
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+`!global` flaget bør kun anvendes når en global variabel fra et lokalt scope overskrives. Når en variabel på root-niveauet defineret, bør `!global` flaget udelades.
 
 {% include snippets/variables/04/index.html %}
 
-## Multiple variables or maps
+## Flere variabler eller maps
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+Der er fordele ved at bruge maps frem for flere, særskilte variabler. Den primære er evnen til at iterere over et map, hvilket ikke er muligt med særskilte variabler.
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+En anden fordel ved at bruge et map er evnen til at skabe en lille getter-funktion der giver en lettere tilgængelig API. For eksempel, overvej den følgende Sass kode:
 
 {% include snippets/variables/05/index.html %}
