@@ -1,34 +1,34 @@
 
-# Warnings and Errors
+# Advarsler og Fejl
 
-If there is a feature that is often overlooked by Sass developers, it is the ability to dynamically output warnings and errors. Indeed, Sass comes with three custom directives to print content in the standard output system (CLI, compiling app...):
+Hvis der er en funktionalitet, der ofte bliver overset af Sass udviklere, så er det evnen til dynamisk at outputte advarsler og fejl. Rent faktisk, så har Sass tre særlige direktiver til udprintning af indhold i gængse output-systemer (CLI, kompileringsapps...):
 
 * `@debug`;
 * `@warn`;
 * `@error`.
 
-Let’s put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one stops the compiler while the other does not. I’ll let you guess which does what.
+Lad os se bort fra `@debug`, da den åbenlyst er tænkt til debugging af SassScript, hvilket ikke er vores pointe her. Tilbage står vi med `@warn` og `@error`, der er bemærkelsesværdigt identiske bortset fra at den ene stopper compileren, mens den anden ikke gør. Jeg lader dig gætte hvilken der gør hvad.
 
-Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong, or display a warning when doing an assumption.
+Der er masser af plads i et Sass projekt til advarsler og fejl. Basalt set forventer enhver mixin eller funktion, at en specifik type eller argument kunne give en fejl hvis noget går galt, eller vise en advarsel når man udfører en antagelse.
 
-###### Further reading
+###### Videre læsning
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
 * [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
-## Warnings
+## Advarsler
 
-Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting to convert a `px` value to `em`, for instance:
+Tag, for eksempel, denne funktion fra [Sass-MQ](https://github.com/sass-mq/sass-mq), der forsøger at konvertere en `px` til `em`:
 
 {% include snippets/errors/01/index.html %}
 
-If the value happens to be unitless, the function assumes the value is meant to be expressed in pixels. At this point, an assumption may be risky so the user should be warned that the software did something that could be considered unexpected.
+Hvis værdien viser sig at være enhedsløs, så vil funktionen antage at værdien er ment som at skulle være udtrykt i pixels. Herved kan en antagelse være risikabel for brugeren og bør blive advaret om, at softwaren gjorde noget der kunne opfattes som uventet.
 
-## Errors
+## Fejl
 
-Errors, unlike warnings, prevent the compiler from going any further. Basically, they stop the compilation and display a message in the output stream as well as the stack trace, which is handy for debugging. Because of this, errors should be thrown when there is no way for the program to keep running. When possible, try to work around the issue and display a warning instead.
+Fejl, modsat advarsler, forhindrer compileren i at fortsætte. De stopper basalt set kompilering og viser en besked i både output-strømmen og i stack-tracen, hvilket er brugbart til debugging. På grund af dette, bør fejl gives når der ikke er nogen anden måde for programmet at fortsætte. Hvis muligt bør du prøve at arbejde rundt om problemet og vise en advarsel i stedet.
 
-As an example, let’s say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
+For eksempel, lad os sige at du er ved at bygge en getter funktion, der tilgår værdier fra et specifikt map. Du kunne give en fejl, hvis den anmodede nøgle ikke eksisterer i map'et.
 
 {% include snippets/errors/02/index.html %}
