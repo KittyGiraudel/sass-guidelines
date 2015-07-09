@@ -15,10 +15,10 @@ Sagen er, at vi bruger meget lidt fra hele frameworket. Compass er enormt. Kryds
 
 Desværre er det hele sukker, og der er ikke nogen overvældende funktioner inde i pakken. En undtagelse kan gøres med sprite-byggeren, som er *virkelig god*, men [Grunticon](https://github.com/filamentgroup/grunticon) og [Grumpicon](http://grumpicon.com/) klarer også jobbet, og har fordelen af at kunne tages ind og ud af build-processen.
 
-Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough, but I don’t think you’ll get much from it at the end of the day.
+Under alle omstændigheder, så afviser jeg ikke brugen af Compass selvom jeg heller ikke vil anbefale det, især siden det ikke er kompatibel med LibSass (selv hvis der skulle blive gjort indsats i den retning). Hvis du føler dig mere tilpas ved at bruge det, fair nok, men jeg tror ikke du får meget ud af det når alt kommer til alt.
 
 <div class="note">
-  <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
+  <p>Ruby Sass er p.t. ved at gennemgå nogle ekstraordinære optimering, som er specifikt målrettet mod logik-tunge styles med mange funktioner og mixins. De skulle forbedre effektiviteten dramatisk til et punkt hvor Compass og andre frameworks muligvis ikke længere vil sløve Sass.</p>
 </div>
 
 ###### Videre læsning
@@ -28,17 +28,17 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 * [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
-## Grid systems
+## Gitter-systemer
 
-Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+At undlade at anvende et gitter-system er ikke længere en mulighed, nu hvor Responsivt Web Design er overalt. For at få designs til at se konsistente og solide ud på tværs af alle størrelser, anvender vi en eller anden form for gitter til at layoute elementer. For at undgå at skulle kode dette gitter igen og igen, så har nogle geniale folk gjort deres genbrugelige.
 
-Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers’ speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That’s right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+Lad mig gøre det helt klart: Jeg er ikke den store fan af gitter-systemer. Selvfølgelig ser jeg et potentiale, men mest ser jeg dem som fuldstændelig overkill og anvendes for det meste til at tegne røde kolonner på en hvid baggrund i nørdede designeres præsentationer. Hvornår tænkte du sidst *gudskelov-at-jeg-har-det-her-værktøj-til-at-bygge-2-5-3-1-π-gitre*? Aldrig, det er rigtigt. Fordi i de fleste tilfælde, så ønsker du bare det almindelige 12-kolonne gitter-system og ikke noget fancy.
 
-If you are using a CSS framework for your project like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
+Hvis du anvender et CSS framework til dit projekt, såsom [Bootstrap](http://getbootstrap.com/) eller [Foundation](http://foundation.zurb.com/), så er der stor sandsynlighed for at det allerede inkluderer et gitter-system, som jeg i det tilfælde vil anbefale at du bruger så du undgår at skulle håndtere endnu en dependency.
 
-If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases&mdash;even the most nifty ones&mdash;will be covered. If you ask me, Susy has a slightly better community, but that’s my opinion.
+Hvis du ikke er tilknyttet til et specifikt gitter-system, så vil det nok glæde dig at vide at der findes to top-kvalitets gitter-motorer baseret på Sass derude: [Susy](http://susy.oddbird.net/) og [Singularity](http://singularity.gs/). Begge gør meget mere end du nogensinde vil få brug for, så du kan vælge den af dem du foretrækker og være sikker på at alle dine edge cases &mdash;selv de mest specielle af slagsen&mdash; vil være dækket. Hvis du spørger mig, så har Susy en anelse bedre community, men det er min holdning.
 
-Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
+Alternativt kan du gå over til noget mere casual, såsom [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Når alt kommer til alt vil dit valg ikke have den store indvirken på din kodestil, så det er faktisk mest op til dig.
 
 ###### Videre læsning
 
@@ -55,17 +55,17 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 
 ## SCSS-lint
 
-Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody’s perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+Kode-linting er meget vigtigt. Ved at følge guidelines fra en styleguide, vil mængden af kodekvalitetsfejl normalt blive reduceret, men ingen er perfekt, og der er altid ting der kan forbedres. Derfor kan man sige at linte kode er lige så vigtigt som at kommentere den.
 
-[SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
+[SCSS-lint](https://github.com/causes/scss-lint) er et værktøj, der hjælper dig med at holde dine SCSS filer rene og læsbare. Det er fuldt tilpasseligt og nemt at integrere med dine egne værktøjer.
 
-Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+Heldigvis er anbefalinger for SCSS-lint meget lig de der beskrives i dette dokument. For at konfigurere SCSS-lint i forhold til Sass Guidelines, så anbefaler jeg følgende setup:
 
 {% include snippets/tools/01/index.html %}
 
 <div class="note">
-  <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Hvis du vil koble SCSS lint ind i din Grunt build proces, så bliver du nok glad for at vide at der er et Grunt plugin til det kaldet <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>Dertil, så hvis du er på jagt efter et smart program der virker både med SCSS-lint og lignende, så arbejder folkene hos <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) på <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Videre læsning
