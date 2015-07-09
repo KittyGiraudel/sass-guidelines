@@ -1,46 +1,44 @@
 
-# Introduction
+# Introdução
 
-## Why a styleguide
+## Porquê de um guia de estilo
 
-A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+Um guia de estilo não é apenas um documento prazeroso de se ler, retratando um estado ideal para seu código. É um documento chave na vida de um projeto, descrevendo como e porquê o código deve ser escrito. Pode parecer exagero para projetos pequenos, mas ajuda muito a manter a base de código limpa, escalável e de fácil manutenção.
 
-Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+Desnecessário dizer que quanto mais desenvolvedores envolvidos em um projeto, mais orientações de código serão necessárias. Seguindo a mesma linha, quanto maior o projeto, mais guias de estilo é um dever.
 
-[Harry Roberts](http://csswizardry.com) states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](http://csswizardry.com) afirma muito bem em [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
-  <p>A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:</p>
+  <p>Um guia de estilo de código (nota, não um guia de estilo visual) é uma ferramenta valiosa para times que:</p>
   <ul>
-    <li>build and maintain products for a reasonable length of time;</li>
-    <li>have developers of differing abilities and specialties;</li>
-    <li>have a number of different developers working on a product at any given time;</li>
-    <li>on-board new staff regularly;</li>
-    <li>have a number of codebases that developers dip in and out of.</li>
+    <li>criam e mantêm produtos por uma quantia considerável de tempo;</li>
+    <li>tem desenvolvedores de diferentes habilidades e especialidades;</li>
+    <li>tem um número de desenvolvedores diferentes trabalhando em um produto a qualquer momento;</li>
+    <li>pessoas novas na equipe com frequência;</li>
+    <li>tem um número de bases de código que desenvolvedores entram e saem.</li>
   </ul>
 </blockquote>
 
-## Disclaimer
+## Retratação
 
-First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
+Primeiro de tudo: **esse não é um guia de estilo de CSS**. Esse documento não irá discutir convenções de nomenclatura para classes de CSS, padrões modulares e a questão de IDs no mundo do CSS. Esses guias de estilo se direcionam apenas a como lidar com conteúdo específico de Sass.
 
-Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
+Além disso, esse guia de estilo é meu e portanto é **muito dogmático**. Pense como se essa fosse uma coleção de metodologias e conselhos que eu tenho polido e dado com o passar dos anos. Isso também me dá a oportunidade de linkar para um bocado de recursos aprofundados, então faça questão de checar as *Outras leituras*.
 
-Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
+## Princípios chave
 
-## Key principles
+Ao final do dia, se tem algo que eu gostaria que você conseguisse de todo esse guia de estilo, é que **Sass deve ser mantido o mais simples possível**.
 
-At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
+Graças aos meus experimentos bobos como [operadores bit a bit](https://github.com/HugoGiraudel/SassyBitwise), [geradores e iteradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um JSON parser](https://github.com/HugoGiraudel/SassyJSON) em Sass, todos estamos bem cientes do que alguém pode fazer com esse pré-processador.
 
-Thanks to my silly experiments like [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
+Entretanto, CSS é uma linguagem simples. Sass, na intenção de escrever CSS, não deve ser muito mais complexo que um CSS comum. O [princípio KISS](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid, traduzindo, Mantenha estupidamente simples) é a chave e pode até ter precedência sobre o [princípio DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself, traduzindo, Não se repita) em algumas circunstâncias.
 
-Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) in some circumstances.
+As vezes é melhor se repetir um pouco para manter o código manutenível, do que construir um sistema super pesado, difícil de se manter o controle, desnecessariamente complicado que é completamente não manutenível devido a sua excessiva complexidade.
 
-Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+Aproveitando, e citando [Harry Roberts](https://csswizardry.com) novamente, **pragmatismo triunfa sobre a perfeição**. Em algum momento, você se verá indo contra regras descritas aqui. Se fizer sentido, se sentir que é correto, faça. O código é apenas um meio, não um fim.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
-
-###### Further reading
+###### Outras leituras
 
 * [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
 * [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
