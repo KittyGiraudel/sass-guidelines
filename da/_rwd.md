@@ -1,22 +1,22 @@
 
-# Responsive Web Design and breakpoints
+# Responsivt Web Design og breakpoints
 
-I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
+Jeg tror ikke at vi stadig behøver at introducere Responsivt Web Design, nu hvor det er overalt. Dog spørger du muligvis dig selv *hvorfor er der en sektion omkring RWD i en Sass styleguide?* Rent faktisk er der en del ting som kan gøres for at gøre arbejdet med breakpoints nemmere, så jeg tænkte at det ikke ville være en dårlig idé at liste dem her.
 
-## Naming breakpoints
+## Navngivelse af breakpoints
 
-I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
+Jeg tænker at det er sikkert at sige, at media queries ikke bør være forbundet til specifikke enheder. For eksempel, så er det klart en dårlig idé at forsøge at ramme iPads og Blackberry telefoner alene. Media queries bør tage sig af en række af skærmstørrelser indtil designen bryder sammen, hvorefter den næste media query tager over.
 
-For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on...
+Af de samme grunde, så bør breakpoints ikke blive navngivet efter enheder men efter noge tmere generelt. Især fordi at nogle telefoner nu er større end tablets, nogle tablets større en nogle små skærmcomputere, og så videre...
 
 {% include snippets/rwd/01/index.html %}
 
-At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+Hertil, vil enhver navngivningskonvention der gør det krystalklart at et design ikke er tæt forbundet til en specifik enhedstype gør arbejdet godt, så længe det giver en slags fornemmelse for størrelsesorden.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
-  <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
+  <p>De forrige eksempler anvender indlejrede maps til at definere breakpoints, men dette afhænger faktisk af hvilken slags breakpoint-manager du anvender. Du kunne gå efter strenge fremfor indre maps for mere fleksibilitet (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
 ###### Videre læsning
@@ -25,12 +25,12 @@ At this point, any naming convention that makes crystal clear that a design is n
 
 ## Breakpoint manager
 
-Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
+Når du har navngivet dine breakpoints som du ønsker, så har du brug for en måde til rent faktisk at bruge dem i egentlige media queries. Der findes rigeligt med måder, at gøre dette på, men jeg må sige at jeg er en stor fan af et breakpoint map læst af en getter-funktion. Dette system er både enkelt og effektivt.
 
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Det er åbenlyst, at dette er en rimelig simpel breakpoint manager. Hvis du har behov for en mere eftergivende en, så anebfaler jeg at du ikke genopfinder hjulet og bruger noget som er bevist effektivt såsom <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> eller <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 ###### Videre læsning
@@ -38,22 +38,22 @@ Once you have named your breakpoints the way you want, you need a way to use the
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
-## Media Queries Usage
+## Brug af Media Queries
 
-Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+For ikke så længe siden var der en ret ophedet debat omkring hvor media queries bør blive skrevet: hører de til indeni selektorer (som Sass tillader det), eller skal de være helt afkoblet fra dem? Jeg bliver nødt til at sige at jeg er en stærk forsvarer af *media-queries-indeni-selektorer*-systemet, da jeg tænker det spiller godt sammen med idéen om komponenter.
 
 {% include snippets/rwd/04/index.html %}
 
-Leading to the following CSS output:
+Hvilket leder til det følgende CSS output:
 
 {% include snippets/rwd/05/index.html %}
 
-You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
+Du har muligvis hørt at denne konvention resulterer i duplikerede media queries i CSS-outputtet. Det er helt klart sandt. Dog, så er [der blevet foretaget tests](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) og det sidste ord i denne snak er, at det ikke betyder noget så snart Gzip (eller lignende) har gjort sit arbejde:
 
-> … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
+> … we undersøgte hvorvidt der var performance-påvirkninger ved kombinering vs spredning af Media Queries og kom til den konklusion, at forskellen, selvom den er grim, er minimal når den er værst, og grundlæggende ikke-eksisterende når den er bedst.<br>
+> &mdash; [Sam Richards](https://twitter.com/snugug), vedrørende [Breakpoint](http://breakpoint-sass.com/)
 
-Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
+Så, hvis du virkelig er bekymret om duplikerede media queries, så kan du stadig bruge et værktøj til at forene dem, såsom [denne gem](https://github.com/aaronjensen/sass-media_query_combiner), dog føler jeg at jeg bliver nødt til at advare dig om de mulige bivirkninger af at flytte CSS kode rundt. Du bør vide, at kildekodens rækkefølge er vigtig.
 
 ###### Videre læsning
 
