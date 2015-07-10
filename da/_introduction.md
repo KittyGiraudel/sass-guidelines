@@ -1,44 +1,47 @@
 
-# Introduction
+# Indledning
 
-## Why a styleguide
+## Hvorfor en styleguide
 
-A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+En styleguide er ikke bare en hyggelæsning, der maler et ideelt billede af din kode. Det er et vigtigt dokument i et projekts liv, der beskriver hvordan og hvorfor kode bør blive skrevet. Det kan se overdrevet ud til små projekter, men det hjælper meget med at holde kodebasen ren, skalérbar og let at vedligeholde.
 
-Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+Det er unnødvendigt at sige, at jo flere udviklere der er involveret i et projekt desto flere kode-guidelines er nødvendige. I samme dur, så jo større et projekt desto mere et krav er en styleguide.
 
-[Harry Roberts](http://csswizardry.com) states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](http://csswizardry.com) forklarer dette meget godt i [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
-  <p>A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:</p>
+  <p>En programmeringsstyleguide (bemærk, ikke en visuel styleguide) er et værdifuldt værktøj for teams som:</p>
+
   <ul>
-    <li>build and maintain products for a reasonable length of time;</li>
-    <li>have developers of differing abilities and specialties;</li>
-    <li>have a number of different developers working on a product at any given time;</li>
-    <li>on-board new staff regularly;</li>
-    <li>have a number of codebases that developers dip in and out of.</li>
+    <li>bygger og vedligeholder produkter over en rimelig mængde tid;</li>
+    <li>har udviklere med forskellige evner og specialiseringer;</li>
+    <li>har et antal af forskellige udviklere, der arbejder på et produkt på ethvert givent tidspunkt;</li>
+    <li>oplærer nye ansatte regelmæssigt;</li>
+    <li>har et antal af kodebaser, som udviklere skal dykke ned i og op ad.</li>
   </ul>
 </blockquote>
 
 ## Disclaimer
 
-First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
+Først og fremmest: **dette er ikke en CSS styleguide**. Dette dokument vil ikke diskutere konventioner for navngivning af CSS-klasser, modulære mønstre og spørgsmålet om ID'er i CSS-verdenen. Disse guidelines fokuserer kun på hvordan man arbejder med Sass-specifikt indhold.
 
-Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *Videre læsnings*.
+Dertil, så er denne styleguide min egen og derfor **meget farvet**. Tænk på denne som en samling af metodologier og råd, som jeg har poleret og givet over årene. Det har også givet mig muligheden for at linke til en håndful indsigtsfulde resourcer, så vær sikker på at tjekke *Videre læsninger* ud.
 
-Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
+Det er åbenlyst, at dette selvfølgelig ikke er den eneste måde at gøre tingene på, og det vil eller vil ikke passe dit projekt. Vær velkommen til at udvælge hvad du kan bruge, og tilpasse det til dine behov. ** 
 
-## Key principles
+Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. *Your mileage may vary*, som vi siger.
 
-At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **Sass should be kept as simple as it can be**.
+## Nøgleprincipper
 
-Thanks to my silly experiments like [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
+Når alt kommer til alt, så hvis der er noget jeg gerne vil have at du tager med dig fra hele denne styleguide er, at **Sass bør holdes så enkelt som det kan blive**.
 
-Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) in some circumstances.
+Takket være mine fjollede eksperimenter, såsom [bitwise operatører](https://github.com/HugoGiraudel/SassyBitwise), [iteratorer og generatorer](https://github.com/HugoGiraudel/SassyIteratorsGenerators) og [en JSON parser](https://github.com/HugoGiraudel/SassyJSON) i Sass, så er vi alle meget klar over hvad man kan gøre med denne preprocessor.
 
-Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+I mellemtiden, så er CSS et simpelt sprog. Sass, tiltænkt til at skrive CSS, bør ikke blive meget mere kompleks end almindeligt CSS. [KISS princippet](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) er nøglen her, og kan endda være vigtigere end [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) i nogle tilfælde.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
+Sommetider er det bedre at gentage sig selv en smule for at holde koden vedligeholdelsesvenlig fremfor at bygge et meget tungt, uhåndterbart og unnødvendigt kompliceret system, der er fuldstændig umulig at vedligeholde fordi det er alt for komplekst.
+
+Dertil, så lad mig citere [Harry Roberts](https://csswizardry.com) endnu engang, **pragmatisme trumfer perfektion**. På et tidspunkt, så vil du højest sandsynlig finde dig selv i en situation hvor du går imod reglerne, som de står beskrevet her. Hvis det giver mening, så hvis det føles rigtigt, så gør det. Kode er kun måden, ikke målet.
 
 ###### Videre læsning
 
