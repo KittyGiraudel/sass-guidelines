@@ -17,7 +17,7 @@ Another valid example would be a mixin to size an element, defining both `width`
 
 {% include snippets/mixins/02/index.html %}
 
-###### Further reading
+###### Videre læsning
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
@@ -35,7 +35,7 @@ Sass is actually pretty clever with mixins and function declarations, so much so
 
 {% include snippets/mixins/04/index.html %}
 
-###### Further reading
+###### Videre læsning
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
@@ -59,7 +59,7 @@ Then using this mixin should be very straightforward:
 
 Please keep in mind this is a poor solution. For instance, it cannot deal with complex polyfills such as those required for Flexbox. In that sense, using Autoprefixer would be a far better option.
 
-###### Further reading
+###### Videre læsning
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

@@ -19,7 +19,7 @@ At this point, any naming convention that makes crystal clear that a design is n
   <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-###### Further reading
+###### Videre læsning
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
@@ -33,7 +33,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
   <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-###### Further reading
+###### Videre læsning
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
@@ -55,7 +55,7 @@ You might hear that this convention results in duplicated media queries in the C
 
 Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
 
-###### Further reading
+###### Videre læsning
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
