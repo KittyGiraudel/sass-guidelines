@@ -1,17 +1,17 @@
 
-# Naming conventions
+# Konventioner for navngivelse
 
-In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it’s also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+I denne sektion vil vi ikke behandle de bedste CSS navgivningskonventioner for vedligeholdelse og skalering; det er ikke kun op til dig, det er også uden for scopet af en Sass styleguide. Jeg foreslår disse, anbefalet af [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
-There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
+Der er et par få gode ting du kan navngive i Sass, og det er vigtigt at navngive dem så hele kodebasen både ser konsistent ud og er let at læse:
 
-* variables;
-* functions;
+* variabler;
+* funktioner;
 * mixins.
 
-Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
+Sass-placeholdere er bevidst fjernet fra denne liste, siden de kan betragtes som almindelige CSS selektorer, hvilket følge de samme mønstre for navngivning som klasser.
 
-Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
+Når det kommer til variabler, funktioner og mixins, så holder vi os til noget meget *CSS-agtigt*: **små bogstaver og afgrænset med bindestreg**, og først og fremmest meningsfuldt.
 
 {% include snippets/naming/01/index.html %}
 
@@ -19,11 +19,11 @@ Regarding variables, functions and mixins, we stick to something very *CSS-y*: *
 
 * [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
 
-## Constants
+## Konstanter
 
-If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
+Hvis du tilfældigvis er en framework-udvikler eller biblioteksforfatter, så kunne du finde dig selv arbejdende med variabler der ikke er tiltænkt at blive opdateret under nogen omstændigheder: konstanter. Desværre (eller heldigvis?), så giver Sass ikke nogen måde at definere denne slags enheder, så vi er nødt til at holde os til strikse navngivningskonventioner for at slå vores pointe fast.
 
-As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
+Som ved mange sprog, så anbefaler jeg varibel navne i store bogstaver, med underscore som mellemrum når de er konstanter. Det er ikke blot en meget gammel konvention, men det giver også en god kontrast til de sædvanlige "små bogstaver med bindestreger som mellemrum"-variabler.
 
 {% include snippets/naming/02/index.html %}
 
@@ -33,14 +33,14 @@ As for many languages, I suggest all-caps snakerized variables when they are con
 
 ## Namespace
 
-If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
+Hvis du har til hensigt at distribuere din Sass kode, i tilfældet af et bibliotek, et framework, et gittersystem eller hvadend det kunne være, så bør du muligvis overveje at namespace alle dine variabler, funktioner, mixins og placeholdere så de ikke konflikter med nogen andens kode.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+For eksempel, hvis du arbejder på et *Sassy Unicorn* projekt der er tænkt som at blive brugt af udviklere over hele verden (hvem ville ikke det, ikk?), så kunne du overveje at bruge `su-` som et namespace. Det er specifikt nok til at forebygge enhver navnekollision og er kort nok til at ikke at være træls at skrive.
 
 {% include snippets/naming/03/index.html %}
 
 <div class="note">
-  <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
+  <p>Bemærk, at automatisk namespacing er et klart designmål for den kommende <code>@import</code> opdatering fra Sass 4.0. Efterhånden som det kommer tættere på virkeliggørelse, så vil det blive mindre og mindre brugbart at foretage manuel namespacing; efterhånden vil manuelt namespacede biblioteker muligvis blive sværere at bruge.</p>
 </div>
 
 ###### Videre læsning
