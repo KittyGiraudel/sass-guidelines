@@ -1,38 +1,38 @@
 
-# Loops
+# Løkker
 
-Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
+Fordi Sass giver os komplekse datastrukturer såsom [lister](#lists) og [maps](#maps), så er det ikke nogen overraskelse at det også giver en måde for forfattere at iterere over disse enheder.
 
-However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and that it actually solves an issue.
+Dog, så indebærer tilstedeværelsen af løkker ofte en moderat, kompleks logik der sandsynligvis ikke hører til Sass. Før en løkke anvendes bør man sikre sig at den giver mening, og faktisk løser et problem.
 
 ## Each
 
-The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+`@each` løkken er klart et af de mest-anvendte af de tre løkker, som Sass tilbyder. Den tilbyder en ren API til at iterere over en liste eller et map.
 
 {% include snippets/loops/01/index.html %}
 
-When iterating on a map, always use `$key` and `$value` as variable names to enforce consistency.
+Når der itereres over et map, så anvend altid `$key` og `$value` som variabelnavne for at fastholde konsistens.
 
 {% include snippets/loops/02/index.html %}
 
-Also be sure to respect those guidelines to preserve readability:
+Sikr dig også, at respektere disse guidelines for at bevare læsbarhed:
 
-* Always an empty new line before `@each`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
+* Hav altid en tom, ny linje før `@each`;
+* Hav altid en tom, ny linje efter den afsluttende klamme (`}`), medmindre den næste linje er en afsluttende klamme (`}`).
 
 ## For
 
-The `@for` loop might be useful when combined with CSS’ `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *have to* iterate over something.
+`@for` løkken er brugbar når den kombineres med CSS' `:nth-*` pseudo-klasser. Bortset fra disse scenarier, så foretræk en `@each` løkke hvis du *er nødt til* at iterere over noget.
 
 {% include snippets/loops/03/index.html %}
 
-Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+Anvend altid `$i` som en variabelnavn for at holde dig til den almene konvention, og medmindre du har en virkelig god grund til det, så brug aldrig `to` nøgleordet: brug altid `through`. Mange udviklere ved slet ikke at Sass tilbyder denne variation; at anvende den kan lede til forvirring.
 
-Also be sure to respect those guidelines to preserve readability:
+Vær også sikker på, at respektere disse guidelines for at bevare læsbarhed:
 
-* Always an empty new line before `@for`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
+* Hav altid en tom, ny linje før `@for`;
+* Hav altid en tom, ny linje efter den afsluttende klamme (`}`), medmindre den næste linje er en afsluttende klamme (`}`). 
 
 ## While
 
-The `@while` loop has absolutely no use case in a real Sass project, especially since there is no way to break a loop from the inside. **Do not use it**.
+`@while` løkken har absolut ingen brugssituation i et virkeligt Sass-projekt, især siden der ikke er nogen måde at bryde løkken indefra. **Brug det ikke**.
