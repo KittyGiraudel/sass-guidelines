@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Nav specificitets-fiks.
+ *
+ * Nogen har brugt et ID i header-koden (`#header a {}`), der trumfer 
+ * nav selektorerne (`.site-nav a {}`). Brug !important for at
+ * overskrive den indtil jeg har tid til at 
+ * refaktorere header tingene.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Nav specificitets-fiks.
+ *
+ * Nogen har brugt et ID i header-koden (`#header a {}`), der trumfer 
+ * nav selektorerne (`.site-nav a {}`). Brug !important for at
+ * overskrive den indtil jeg har tid til at 
+ * refaktorere header tingene.
+ */
+.site-nav a
+    color: #BADA55 !important
+{% endhighlight %}
+  </div>
+</div>
