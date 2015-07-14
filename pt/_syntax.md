@@ -137,7 +137,7 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
 {% include snippets/syntax/14/index.html %}
 

@@ -29,9 +29,9 @@ De qualquer forma, eu não proíbo o uso de Compass embora também não o recome
 
 ## Sistemas de grelhas
 
-Não usar um sistema de grelhas bão é opção, agora que _Responsive Web Design_ é ominpresente. Para mantar designs consistentes e sólidos em todos os tamanhos, usamos um tipo de grelha para dispor os elementos. Para evitar ter que programar estas grelhas uma e outra vez, algumas mentes brilhantes tornaram as suas reutilizáveis.
+Não usar um sistema de grelhas não é opção, agora que _Responsive Web Design_ é omnipresente. Para manter designs consistentes e sólidos em todos os tamanhos, usamos um tipo de grelha para dispor os elementos. Para evitar ter que programar estas grelhas uma e outra vez, algumas mentes brilhantes tornaram estas reutilizáveis.
 
-Deixem-me ser direto: não sou grande fão de sistemas de grelhas. Claro que vejo o potencial, mas penso que a maior parte deles são completamente exagerados e são maioritariamente usados para desenhar colunas vermelhas num fundo branco em apresentações totós de designers. Quando foi a última vez que que pensaram *graças-a-Deus-que-tenho-esta-ferramenta-para-construir-esta-grelha-de-2-5-3.1-π*? Exatamente, nunca. Porque na maior parte dos casos, apenas querem a grelha comum de 12 colunas, nada de especial.
+Deixem-me ser direto: não sou grande fã de sistemas de grelhas. Claro que vejo o potencial, mas penso que a maior parte deles são completamente exagerados e são maioritariamente usados para desenhar colunas vermelhas num fundo branco em apresentações totós de designers. Quando foi a última vez que que pensaram *graças-a-Deus-que-tenho-esta-ferramenta-para-construir-esta-grelha-de-2-5-3.1-π*? Exatamente, nunca. Porque na maior parte dos casos, apenas querem a grelha comum de 12 colunas, nada de especial.
 
 Se estão a usar uma _framework_ de CSS para o vosso projecto como [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), é provável que já incluam um sistema de grelhas que eu recomendo que usem de forma a evitar ter que lidar com mais uma dependência.
 
