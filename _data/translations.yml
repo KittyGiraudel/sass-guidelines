@@ -158,7 +158,7 @@ da:
   baseline:
     content: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
   footer:
-    content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com)"
+    content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"
   note: "Note"
   images:
     color-functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
