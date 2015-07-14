@@ -1,9 +1,9 @@
 
 # Betingede udsagn
 
-Du kender sikkert allerede til, at Sass tilbyder betingede udsagn via `@if` og `@else` direktiverne. Medmindre du har rimelig kompleks logik i din kode, så er der ikke behov for betingede udsagn i dine hverdags-stylesheets. Faktisk, så eksisterer de hovedsageligt for biblioteker og frameworks.
+Du kender sikkert allerede til at Sass tilbyder betingede udsagn via `@if` og `@else` direktiverne. Medmindre du har rimelig kompleks logik i din kode, så er der ikke behov for betingede udsagn i dine hverdags-stylesheets. Faktisk, så eksisterer de hovedsageligt for biblioteker og frameworks.
 
-Under alle omstændigheder, hvis du nogensinde finder behovet for dem, så venligst respektér følgende guidelines:
+Under alle omstændigheder, hvis du nogensinde finder behovet for dem, så respektér venligst følgende guidelines:
 
 * Ingen paranteser medmindre de er nødvendige;
 * Hav altid en ny, tom linje før `@if`;
@@ -17,7 +17,7 @@ Når du tester en falsk værdi, skal du altid bruge `not` keywordet i stedet for
 
 {% include snippets/conditions/02/index.html %}
 
-Put altid variabel-delen på den venstre side af et udsagn, og det (u)forventede resultat på den højre side. Omvendte betingede udsagn er ofte sværere at læse, især for uerfarne udviklere.
+Læg altid variabel-delen på den venstre side af et udsagn, og det (u)forventede resultat på den højre side. Omvendte betingede udsagn er ofte sværere at læse, især for uerfarne udviklere.
 
 {% include snippets/conditions/03/index.html %}
 
