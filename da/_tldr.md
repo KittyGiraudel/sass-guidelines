@@ -5,7 +5,7 @@ For at opsummere, så ønsker vi:
 
 * Indentering á to (2) mellemrum, ingen tabs;
 * 80-karakter brede linjer;
-* Ordentligt skrevet, multi-linje CSS;
+* Ordentligt skrevet CSS, i flere linjer;
 * Meningsfuld brug af whitespace;
 * Citerede strenge (enkelt-citationstegn) & URL'er;
 * Intet efterstillet 0, obligatorisk førende 0;
