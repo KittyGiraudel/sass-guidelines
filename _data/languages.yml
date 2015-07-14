@@ -88,3 +88,12 @@ es:
       link: https://github.com/soniar4i
     - name: David Khourshid
       link: https://github.com/davidkpiano
+
+da:
+  version: 1.1.0
+  label: Danish
+  prefix: /da/
+  available: true
+  translators:
+    - name: Anders Schmidt Hansen
+      link: http://codepen.io/andersschmidt/
