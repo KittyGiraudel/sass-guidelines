@@ -1,9 +1,9 @@
 
 # Syntaks & formatering
 
-Hvis du spørger mig, så er noget af det allerførste en styleguide bør gøre at beskrive måden hvordan vi vil have vores kode til at se ud.
+Hvis du spørger mig, så er noget af det allerførste en styleguide bør gøre, er at beskrive måden hvordan vi vil have vores kode til at se ud.
 
-Når flere udviklere er involveret i at skrive CSS på de(t) samme projekt(er), så er det kun et spørgsmål om tid før en af dem begynder at gøre tingene på deres egen måde. Kode-guidelines, der fremmer konsistens, er ikke blot med til at undgå dette, men hjælper også når det kommer til at læse og opdatere koden.
+Når flere udviklere er involveret i at skrive CSS på de(t) samme projekt(er), så er det kun et spørgsmål om tid før en af dem begynder at gøre tingene på deres egen måde. Retningslinjer for kode, der fremmer konsistens, er ikke blot med til at undgå dette, men hjælper også når det kommer til at læse og opdatere koden.
 
 Groft sagt, så ønsker vi (skamløst inspireret af [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
@@ -18,48 +18,48 @@ Vi vil ikke tackle spørgsmålet omkring filorganisering i denne sektion. Det er
 
 ## Strenge
 
-Tro det eller ej, så spiller strenge en ret stor rolle i økosystemerne for både CSS og Sass. De fleste CSS-værdier er enten længder eller strenge (ofte uciterede), så det er faktisk ret vigtigt at holde sig til nogle guidelines når man arbejder med strenge i Sass.
+Tro det eller ej, så spiller strenge en ret stor rolle i økosystemerne for både CSS og Sass. De fleste CSS-værdier er enten længder eller strenge (ofte uciterede), så det er faktisk ret vigtigt at holde sig til nogle retningslinjer når man arbejder med strenge i Sass.
 
 ### Encoding
 
-For at undgå potentielle problemer med karakter-encoding, så er det kraftigt anbefalet at tvinge [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-file) ved at anvende `@charset` direktivet. Vær sikker på, at det er det allerførste element i stylesheetet og at der ikke er nogen form for karakterer før det.
+For at undgå potentielle problemer med karakter-encoding, så anbefales det kraftigt at tvinge [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-file) ved at anvende `@charset` direktivet. Vær sikker på at det er det allerførste element i stylesheetet, og at der ikke er nogen form for karakterer før det.
 
 {% include snippets/syntax/02/index.html %}
 
-### Citater
+### Citationstegn
 
-CSS kræver ikke at strenge bliver citerede, ikke engang dem der indeholder mellemrum. Tag font-family navne som eksempel: for CSS parseeren, gør det ingen forskel hvorvidt du pakker dem ind i citationstegn.
+CSS kræver ikke at strenge bliver citerede, ikke engang dem der indeholder mellemrum. Tag font-family navne som eksempel: for CSS parseren gør det ingen forskel hvorvidt du pakker dem ind i citationstegn.
 
-På grund af det, så kræver Sass *heller ikke* at strenge citeres. Endnu bedre er (og *heldigvis*, vil du nok indrømme), at en citeret streng er fuldstændigt det samme som dets uciterede tvilling (f. eks. er `'abc'` fuldstændig det samme som `abc`).
+På grund af det, så kræver Sass *heller ikke* at strenge citeres. Endnu bedre er (og *heldigvis*, vil du nok indrømme), at en citeret streng er fuldstændig den samme som dens uciterede tvilling (f. eks. er `'abc'` fuldstændig det samme som `abc`).
 
-Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en minoritet, og derfor **bør strenge altid indpakkes i enkelte citationstegn** (`'`) i Sass (enkelte citationstegn er nemmere at taste end dobbelte på *qwerty* tastaturer). Foruden konsistens med andre sprog, inklusiv CSS' kusine JavaScript, er der flere grunde til dette valg:
+Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en minoritet, og derfor **bør strenge altid indpakkes i enkelte citationstegn** (`'`) i Sass (enkelte citationstegn er nemmere at taste end dobbelte på *qwerty* tastaturer). Foruden konsistens med andre sprog, inklusiv CSS' kusine JavaScript, er der flere grunde bag dette valg:
 
 * farvenavne behandles på samme måde som uciterede farver, hvilket kan lede til alvorlige problemer;
 * de fleste syntax highlighters får sure opstød af uciterede strenge;
-* det hjælper generel læsbarhed;
-* der er ingen nogen god grund til ikke at citere strenge.
+* det hjælper med generel læsbarhed;
+* der er ingen god grund til ikke at citere strenge.
 
 {% include snippets/syntax/03/index.html %}
 
 ### Strenge som CSS værdier
 
-Specifikke CSS værdier, såsom `initial` eller `sans-serif` kræver ikke at blive citeret. Det er klart, at `font-family: 'sans-serif'` vil fejle i stilhed fordi CSS forventer en identifier, ikke en citeret streng. På grund af det, så citerer vi ikke disse værdier.
+Specifikke CSS værdier, såsom `initial` eller `sans-serif` kræver ikke at blive citeret. Det er klart, at `font-family: 'sans-serif'` vil fejle i stilhed fordi CSS forventer en identifier og ikke en citeret streng. På grund af dette, så citerer vi ikke disse værdier.
 
 {% include snippets/syntax/04/index.html %}
 
-Dermed kan vi lave en distinktion mellem strenge, der har til hensigt at blive brugt som CSS værdier (CSS identifiers) som i det forrige eksempel, og strenge der holder sig til Sass' datatype, som for eksempel map nøgler.
+Dermed kan vi lave en distinktion mellem strenge der har til hensigt at blive brugt som CSS værdier (CSS identifiers), som i det forrige eksempel, og strenge der holder sig til Sass' datatype, som for eksempel map-nøgler.
 
 Vi citerer ikke den førstnævnte, men vi indpakker den sidstnævnte i enkelte citationstegn.
 
 ### Strenge der indeholder citationstegn
 
-Hvis en streng indeholder en eller flere citationstegn, så kan man overveje at indpakke strengen i dobbelte citationstegn (`"`) i stedet, for at undgå at escape for mange karakterer inde i strengen.
+Hvis en streng indeholder en eller flere citationstegn, så kan man overveje at indpakke strengen i dobbelte citationstegn (`"`) i stedet, for at undgå at escape for mange karakterer inden i strengen.
 
 {% include snippets/syntax/05/index.html %}
 
 ### URL'er
 
-URL'er bør også blive citeret, af de samme grunde som ovenfor:
+URL'er bør også blive citeret af de samme grunde som ovenfor:
 
 {% include snippets/syntax/06/index.html %}
 
@@ -70,7 +70,7 @@ URL'er bør også blive citeret, af de samme grunde som ovenfor:
 
 ## Tal
 
-I Sass er tal en datatype der inkluderer alt lige fra enhedsløse numre til længder, varigheder, frekvenser, vinkler og så videre. Dette tillader udførelse af kalkulationer på sådanne målinger.
+I Sass er tal en datatype der inkluderer alt lige fra enhedsløse numre til længder, varigheder, frekvenser, vinkler og så videre. Dette tillader udførelse af udregninger på sådanne målinger.
 
 ### Nuller
 
@@ -84,13 +84,13 @@ Når du arbejder med længder, så bør en værdi af `0` aldrig have en enhed.
 
 {% include snippets/syntax/08/index.html %}
 
-Den mest typiske fejl jeg kan komme i tanke om i relation til tal i Sass, er at tænke på enheder som kun værende strenge der trygt kan tilføjes til et tal. Selvom det lyder sandt, så er det absolut ikke sådan enheder virker. Tænk på enheder som algebraiske symboler. For eksempel, som i den virkelig verden, hvis du ganger 5 tommer med 5 tommer så får du 25 kvadrattommer. Den samme logik gælder ved Sass.
+Den mest typiske fejl jeg kan komme i tanke om, i relation til tal i Sass, er at tænke på enheder som kun værende strenge der trygt kan tilføjes til et tal. Selvom det lyder sandt, så er det absolut ikke sådan enheder virker. Tænk på enheder som algebraiske symboler. For eksempel, som i den virkelig verden, hvis du ganger 5 tommer med 5 tommer så får du 25 kvadrattommer. Den samme logik gælder ved Sass.
 
 For at tilføje en enhed til et tal, så er du nødt til at gange dette tal med *1 enhed*.
 
 {% include snippets/syntax/09/index.html %}
 
-Bemærk at tilføjelse af *0 medlem af samme enhed* også virker, men jeg vil hellere anbefale den førnævnte metode siden *0 enhed* kan være en anelse forvirrende. Det er klart, at når man forsøger at konvertere et tal til en anden kompatibel enhed, så vil tilføjelse af 0 ikke være nok.
+Bemærk at tilføjelse af *0 medlem af samme enhed* også virker, men jeg vil hellere anbefale den førnævnte metode, siden *0 enhed* kan være en anelse forvirrende. Det er klart, at når man forsøger at konvertere et tal til en anden kompatibel enhed, så vil tilføjelse af 0 ikke være nok.
 
 {% include snippets/syntax/10/index.html %}
 
@@ -104,7 +104,7 @@ Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket
 
 ### Kalkulationer
 
-**Numeriske kalkulationer på top-niveau bør altid indpakkes i paranteser**. Ikke alene forbedrer dette krav læsbarhed dramatisk, det forhindrer også særtilfælde ved at tvinge Sass til at evaluere indhold af paranteserne.
+**Numeriske kalkulationer på top-niveau bør altid indpakkes i paranteser**. Ikke alene forbedrer dette krav læsbarheden dramatisk, det forhindrer også særtilfælde ved at tvinge Sass til at evaluere indholdet af paranteserne.
 
 {% include snippets/syntax/12/index.html %}
 
@@ -112,7 +112,7 @@ Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket
 
 "Magiske tal" er et [old school programmeringsterm](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) for *unavngivne numeriske konstanter*. Basalt set, så er det et tilfældigt tal der *bare virker*™, dog uden at være forbundet til nogen logisk forklaring.
 
-Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når du ikke kan finde en fornuftig forklaring for hvorfor et tal virker, så tilføj en uddybende kommentar der forklarer hvordan du nået derhen, og hvorfor du tror det virker. At indrømme at du ikke ved hvorfor noget virker, er stadig mere hjælpsomt for den næste udvikler end at få dem til regne ud hvad det er der sker fra bunden af.
+Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når du ikke kan finde en fornuftig forklaring for hvorfor et tal virker, så tilføj en uddybende kommentar der forklarer hvordan du er nået hertil, og hvorfor du tror det virker. At indrømme at du ikke ved hvorfor noget virker er stadig mere hjælpsomt for den næste udvikler, end at få dem til regne ud hvad det er der sker fra bunden af.
 
 {% include snippets/syntax/13/index.html %}
 
@@ -125,32 +125,32 @@ Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når 
 
 ## Farver
 
-Farver har en vigtig plads i CSS-sproget. Af natur er Sass endt op med at være en værdifuld allieret når det kommer til at manipulation af farver, mest ved at forsyne os med en håndfuld [kraftfulde funktioner](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Farver har en vigtig plads i CSS-sproget. Sass bliver derfor naturligt en værdifuld allieret når det kommer til manipulation af farver, mest fordi det giver os en håndfuld [kraftfulde funktioner](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 ### Farveformater
 
-For at holde farver så simple som muligt, så vil mit råd være at respektere den følgende, foretrukne rækkefølge af farveformater:
+For at holde farver så simple som muligt, så vil mit råd være at respektere den følgende rækkefølge for farveformater:
 
 1. [CSS farve-nøgleord](http://www.w3.org/TR/css3-color/#svg-color);
 1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Hexadecimal notation. Små bogstaver og forkortet, hvis muligt, er at foretrække.
 
-Som udgangspunkt, så er taler nøgleord ofte for sig selv. HSL-repræsentationen er ikke kun den nemmeste for den menneskelige hjerne at forstå <sup>[citation mangler]</sup>, den er også nemmere for forfattere af stylesheets når det kommer til at fintune farven ved at justere nuance, mætning og lyshed hver for sig. RGB har stadig en fordel ved, med det samme, at vise om farven er mere en blå, en grøn eller en rød, men den gør det ikke nemmere at bygge en farve ud af de tre dele. Til sidst, så er hexidecimaler tættest på at være uforståeligt for det menneskelige sind.
+Som udgangspunkt, så taler nøgleord ofte for sig selv. HSL-repræsentationen er ikke kun den nemmeste for den menneskelige hjerne at forstå <sup>[citation mangler]</sup>, den er også nemmere for forfattere af stylesheets når det kommer til at fintune farven ved at justere nuance, mætning og lyshed hver for sig. RGB har stadig en fordel ved med det samme at vise om farven er mere en blå, en grøn eller en rød, men den gør det ikke nemmere at bygge en farve ud af de tre dele. Til sidst, så er hexidecimaler tættest på at være uforståeligt for det menneskelige sind.
 
 {% include snippets/syntax/14/index.html %}
 
-Når man anvender HSL eller RGB notation, så tilføj altid et enkelt mellemrum efter et komma (`,`) og ingen mellemrum mellem paranteser (`(`, `)`) og indhold.
+Når man anvender HSL eller RGB, så tilføj altid et enkelt mellemrum efter et komma (`,`) og ingen mellemrum mellem paranteser (`(`, `)`) og indhold.
 
 {% include snippets/syntax/15/index.html %}
 
 ### Farver og variabler
 
-Når en farve anvendes mere end én gang, gem det i en variabel med et meningsfuldt navn, der repræsenterer farven.
+Når en farve anvendes mere end én gang, så gem den i en variabel med et meningsfuldt navn, der repræsenterer farven.
 
 {% include snippets/syntax/16/index.html %}
 
-Du er nu fri til at anvende denne variabel hvorend du vil. Dog, hvis din brug er tæt koblet til et tema, så vil jeg fraråde at anvende variablen som den er. Gem den i stedet i en anden variabel med et navn der forklarer hvordan den bør bruges.
+Du står dig nu frit for at anvende denne variabel hvorend du vil. Dog, hvis din brug er tæt koblet til et tema, så vil jeg fraråde at anvende variablen som den er. Gem den i stedet i en anden variabel med et navn der forklarer hvordan den bør bruges.
 
 {% include snippets/syntax/17/index.html %}
 
@@ -158,20 +158,20 @@ Ved at gøre det på denne måde, forhindrer du at tema-ændringer fører til ti
 
 ### Lysning og mørkning af farver
 
-Både [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) og [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) er funktioner til manipulation af lysheden af en farve i HSL-rum ved at tilføje eller fratrække lysheden i HSL-rummet. Basalt set, så er de intet andet end aliaser for `$lightness` parametret af [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) funktionen.
+Både [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) og [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) er funktioner til manipulation af lysstyrken af en farve i HSL-rum ved at tilføje eller fratrække lysstyrken i HSL-rummet. Basalt set er de intet andet end aliaser for `$lightness` parametret af [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) funktionen.
 
-Sagen er den, at disse funktioner ofte ikke giver det forventede resultat. På den anden side, så er [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) funktionen en god måde at lysne eller mørkne en farve ved at mikse den med enten `white` eller `black`.
+Sagen er den, at disse funktioner ofte ikke giver det forventede resultat. På den anden side, så er [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) funktionen en god måde at lysne eller mørkne en farve på, ved at mikse den med enten `white` eller `black`.
 
-Fordelen ved at anvende `mix` i stedet for at en af de to førnævnte funktioner er, at det den vil progressivt gå mod sort (eller hvid) efterhånden som du reducerer farvens proportion, hvoraf `darken` og `lighten` hurtigt vil sprænge en farve hele vejen mod sort eller hvid.
+Fordelen ved at anvende `mix` i stedet for at en af de to førnævnte funktioner er, at det den vil progressivt gå mod sort (eller hvid) efterhånden som du reducerer farvens proportion, hvoraf `darken` og `lighten` hurtigt vil kaste en farve helt mod sort eller hvid.
 
 {% include images/color-functions.html %}
 
-Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to letanvendelige funktioner kaldet `tint` og `shade` (der også er en del af [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)), for at udføre den samme ting:
+Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to letanvendelige funktioner kaldet `tint` og `shade` (der også er en del af [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)), til at udføre den samme ting:
 
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> funktionen er designet til at skalere egenskaber mere flydende ved at tage hvor høje og lave de allerede er med i betragtning. Den bør give resultater, der er ligeså gode som <code>mix'</code> men med en klarer konvention for kald. Skaleringsfaktoren er dog ikke helt den samme.</p>
+  <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> funktionen er designet til at skalere egenskaber mere flydende ved at tage hvor høje og lave de allerede er med i betragtning. Den bør give resultater der er ligeså gode som <code>mix'</code> men med en klarere konvention for kald. Skaleringsfaktoren er dog ikke helt den samme.</p>
 </div>
 
 ###### Videre læsning
@@ -184,9 +184,9 @@ Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to l
 
 ## Lister
 
-Lister er Sass' svar på matricer eller arrays. En liste er en flad datastruktur (modsat [maps](#maps)), der har til hensigt at gemme værdier af enhver type (inklusiv lister, hvilket leder til indlejrede lister).
+Lister er Sass' svar på matricer. En liste er en flad datastruktur (modsat [maps](#maps)), der har til hensigt at gemme værdier af enhver type (inklusiv lister, hvilket leder til indlejrede lister).
 
-Lister bør respektere de følgende guidelines:
+Lister bør respektere de følgende retningslinjer:
 
 * enten indlejrede eller i flere linjer;
 * nødvendigvis i flere linjer, hvis for lang til at passe ind i linje på 80-karakterer;
@@ -196,7 +196,7 @@ Lister bør respektere de følgende guidelines:
 
 {% include snippets/syntax/19/index.html %}
 
-Når der tilføjes nye artikler til en liste, så brug altid den medfølgende API. Forsøg ikke at tilføje nye artikler manuelt.
+Når du tilføjer nye artikler til en liste, så brug altid den medfølgende API. Forsøg ikke at tilføje nye artikler manuelt.
 
 {% include snippets/syntax/20/index.html %}
 
@@ -207,7 +207,7 @@ Når der tilføjes nye artikler til en liste, så brug altid den medfølgende AP
 
 ## Maps
 
-Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for en associativ matrice, hashes eller endda JavaScript objekter. Et map er en datastruktur til kortlægning af nøgler (der kan være af enhver datatype, inklusiv maps, selvom jeg ikke anbefaler det) til værdier af enhver type.
+Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for en associativ matrice, hashes eller endda JavaScript objekter. Et map er en datastruktur til forbinde nøgler (der kan være af enhver datatype, inklusiv maps, selvom jeg ikke anbefaler det) til værdier af enhver type.
 
 Maps bør altid blive skrevet som følgende:
 
@@ -225,7 +225,7 @@ Illustration:
 
 ### Debugging af et Sass map
 
-Hvis du nogensinde har følt dig fortabt, og tænkt hvilken skør magi der foregår i et Sass map, så fortvivl ikke da der stadig er en måde at blive reddet på.
+Hvis du nogensinde har følt dig fortabt, og tænkt hvilken skør magi der foregår i et Sass map, så fortvivl ikke, der stadig er en måde at blive reddet på.
 
 {% include snippets/syntax/22/index.html %}
 
@@ -247,7 +247,7 @@ Hvis du er interesseret i at vide dybden af map'et, så tilføj følgende funkti
 
 ## CSS Regelsæt
 
-På dette tidspunkt, hvilket mest er en opsummering af hvad alle ved, men her er måden hvordan et CSS regelsæt bør blive skrevet (i det mindste ifølge de fleste guidelines, inklusiv [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+På dette tidspunkt, hvilket mest er en opsummering af hvad alle ved, men her er måden hvordan et CSS regelsæt bør blive skrevet (i det mindste ifølge de fleste retningslinjer, inklusiv [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * relaterede selektorer på samme linje; urelaterede selektorer på nye linjer;
 * den åbnende klamme (`{`) har afstand fra den sidste selektor med et enkelt mellemrum;
@@ -262,7 +262,7 @@ Illustration:
 {% include snippets/syntax/24/index.html %}
 
 
-Ifølge disse CSS-relaterede guidelines, så ønsker vi at være opmærksomme på:
+Ifølge disse CSS-relaterede retningslinjer, så ønsker vi at være opmærksomme på:
 
 * at lokale variabler bliver deklareret før alle andre deklarationer, for derefter at have afstand til deklarationer via en ny linje;
 * at mixin-kald uden nogen `@content` kommer efter enhver deklaration;
@@ -280,16 +280,16 @@ Illustration:
 
 ## Sortering af Deklarationer
 
-Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er når det kommer til sortering af deklarationer i CSS. Helt konkret, så er der to fraktioner på spil her:
+Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er når det kommer til sortering af deklarationer i CSS. Helt konkret, så er to fraktioner på spil her:
 
 * at holde sig til den alfabetiske rækkefølge;
 * at arrangere deklarationerne efter type (position, display, farver, skrifttype, diverse...).
 
-Der er fordele og ulemper ved begge tilgange. På den ene side, så er alfabetisk sortering universelt (i det mindste for sprog, der anvender det latinske alfabet), så der er ikke noget argument om at sortere en egenskab efter en anden. Dog finder jeg det ekstremt mærkeligt, ikke at se værdier såsom `bottom` og `top` lige ved siden af hinanden. Hvorfor skulle animationer komme før display-typen? Der er mange særheder ved alfabetisk arrangering.
+Der er fordele og ulemper ved begge tilgange. På den ene side, så er alfabetisk sortering universelt (i det mindste for sprog, der anvender det latinske alfabet), så der er ikke noget argument om at sortere en egenskab efter en anden. Dog finder jeg det ekstremt mærkeligt ikke at se værdier som `bottom` og `top` lige ved siden af hinanden. Hvorfor skulle animationer komme før display-typen? Der er mange særheder ved en alfabetisk arrangering.
 
 {% include snippets/syntax/26/index.html %}
 
-På den anden side, at arrangere egenskaber efter type giver perfekt mening. Enhver skrifttype-relateret deklaration bliver samlet, `top` og `bottom` er genforenet, og at læse et regelsæt føles lidt ligesom at læse en kort historie. Men medmindre du holder til konventioner såsom [Idiomatic CSS](https://github.com/necolas/idiomatic-css), så opstår der en masse rum for fortolkning ved denne måde at gøre tingene på. Hvor bør `white-space` være: font eller display? Hvor hører `overflow` til helt præcist? Hvad er rækkefølgen for egenskaber i en gruppe (det kunne være alfabetisk, ironisk nok)?
+På den anden side, giver arrangering af egenskaber efter type perfekt mening. Enhver skrifttype-relateret deklaration bliver samlet, `top` og `bottom` er genforenet, og at læse et regelsæt føles lidt ligesom at læse en kort historie. Men medmindre du holder til konventioner såsom [Idiomatic CSS](https://github.com/necolas/idiomatic-css), så opstår der en masse plads til fortolkning ved denne måde. Hvor bør `white-space` være: font eller display? Hvor hører `overflow` til helt præcist? Hvad er rækkefølgen for egenskaber i en gruppe (det kunne være alfabetisk, ironisk nok)?
 
 {% include snippets/syntax/27/index.html %}
 
@@ -301,7 +301,7 @@ For at tale for mig selv, så kan jeg ikke beslutte mig. En nylig afstemning på
 
 {% include images/order-poll.html %}
 
-På grund af det, så vil jeg ikke pålægge et valg i denne styleguide. Vælg den som du foretrækker, så længe du er konsistent med den gennem dine stylesheets (for eksempel, ikke den *tilfældige* tilgang).
+På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Vælg den tilgang du foretrækker, så længe du er konsistent gennem dine stylesheets (ikke den *tilfældige* tilgang, for eksempel).
 
 <div class="note">
   <p>Et <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
@@ -330,7 +330,7 @@ For eksempel, så vil den følgende Sass indlejring:
 
 {% include snippets/syntax/30/index.html %}
 
-På samme måde, så siden Sass 3.3 er det muligt at anvende den nuværende selektor-reference (`&`) til at generere avancerede selektorer. For eksempel:
+På samme måde er det siden Sass 3.3 muligt at anvende den nuværende selektor-reference (`&`) til at generere avancerede selektorer. For eksempel:
 
 {% include snippets/syntax/31/index.html %}
 
@@ -341,10 +341,10 @@ På samme måde, så siden Sass 3.3 er det muligt at anvende den nuværende sele
 Denne metode anvendes ofte sammen med [navnekonventionerne for BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) ti at generere `.block__element` og `.block--modifier` selektorer, baseret på den oprindelige selektor (f. eks. `.block` i dette tilfælde).
 
 <div class="note">
-  <p>Selvom det måske er anekdotisk, så det at generere nye selektorer fra den nuværende selektor-reference (<code>&</code>), gør disse selektorer usøgbare i kodebasen, da de ikke egentlig ikke eksisterer.</p>
+  <p>Selvom det måske er anekdotisk, så når nye selektorer genereres fra den nuværende selektor-reference (<code>&</code>), så gør dét disse selektorer usøgbare i kodebasen, da egentlig ikke længere eksisterer.</p>
 </div>
 
-Problemet med indlejring af selektorer er, at det i sidste ende gør koden sværere at læse. Man skal mentalt beregne den endelige selektor ud fra indenteringsniveauer; det er derfor ikke altid særlig åbenlyst hvad CSS'en vil ende ud som.
+Problemet med indlejring af selektorer er at det i sidste ende gør koden sværere at læse. Man skal mentalt beregne den endelige selektor ud fra indenteringsniveauer; det er derfor ikke altid særlig åbenlyst hvad CSS'en vil ende ud som.
 
 Dette udsagn bliver mere sandt efterhånden som selektorer og referencer til den nuværende selektor (`&`) bliver hyppigere. På dette tidspunkt bliver risikoen for at miste overblikket, og at være ude af stand til at forstå hvad der sker, så høj at det ikke er dét værd.
 
@@ -374,7 +374,7 @@ Ved at genskrive vores tidligere eksempel, så vil det se ud som dette:
 
 {% include snippets/syntax/37/index.html %}
 
-Som med alting, så er det specifikke rimelig irrelevant, da det er konsistens der er nøglen. Hvis du føler dig fuldstændig sikker på selektor-indlejring, så brug selektor-indlejring. Bare sikr dig, at hele dit team er med på det.
+Som med alting, så er det specifikke rimelig irrelevant, da det er konsistens der er det vigtige. Hvis du føler dig fuldstændig sikker på selektor-indlejring, så brug selektor-indlejring. Bare sikr dig, at hele dit team er med på det.
 
 ###### Videre læsning
 
