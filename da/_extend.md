@@ -1,26 +1,26 @@
 
 # Extend
 
-`@extend` direktivet er et af de funktionaliteter, der har gjort Sass så populært for et par år siden. Som en påmidelse, så er det muligt at fortælle Sass at det skal style et element A præcis som hvis det også matchede selektor B. Det er derfor unnødvendigt at sige, at det kan ende med at blive en ret værdifuld allieret når der skal skrives modulært CSS.
+`@extend` direktivet er en af de funktionaliteter der har gjort Sass så populært for et par år siden. Som en påmindelse, så er det muligt at fortælle Sass at det skal style element A præcis som hvis det også matchede selektor B. Det er derfor unnødvendigt at sige, at det kan ende med at blive en ret værdifuld allieret når der skal skrives modulært CSS.
 
-Når der er sagt, så føler jeg at jeg bør advare dig imod denne funktionalitet. Selvom den er smart, så er `@extend` stadig et ret udfordrende koncept, der kan gøre mere skade end gavn, især hvis anvendt forkert. Sagen er den, at når en selektor udvides, så har du lidt til ingen måde at at svare på disse spørgsmål uden at have dyb kendskab til hele kodebasen:
+Når der er sagt, så føler jeg, at jeg bør advare dig imod denne funktionalitet. Selvom den er smart, så er `@extend` stadig et ret udfordrende koncept, der kan gøre mere skade end gavn, især hvis anvendt forkert. Sagen er den, at når en selektor udvides, så har du lidt til ingen måde at at svare på disse spørgsmål uden at have dyb kendskab til hele kodebasen:
 
 * hvor vil min nuværende selektor blive tilføjet?
 * er der sandsynlighed for at jeg skaber uønskede bivirkninger?
 * hvor stor er den genererede CSS, der skabes af denne enkelte extend?
 
-Ud fra hvad du ved, så kunne resultatet varierer fra at gøre ingenting til at forårsage katastrofale bivirkninger. Derfor er mit første råd, helt at undgå `@extend`-direktivet. Det lyder måske brutalt, men når alt kommer til alt, så kan det redde dig fra et par hovedpiner og problemer.
+Ud fra hvad du ved, så kunne resultatet variere fra at gøre ingenting til at forårsage katastrofale bivirkninger. Derfor er mit første råd helt at undgå `@extend`-direktivet. Det lyder måske brutalt, men når alt kommer til alt, så kan det redde dig fra et par hovedpiner og problemer.
 
 Med det sagt, så kender du ordsproget:
 
 > Aldrig sig aldrig.<br>
 > &mdash; Tilsyneladende, [ikke Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
 
-Der er scenarier, hvor at udvide selektorer kan være hjælpsomt og tiden værd. Dog, hav altid disse regler for øje, så du ikke kommer i problemer:
+Der er scenarier, hvor at udvide selektorer kan være hjælpsomt og tiden værd. Hav dog altid disse regler for øje, så du ikke kommer i problemer:
 
 * Brug extend inden i et modul, ikke på tværs af forskellige moduler.
-* Brug extend på udelukkende på placeholdere, ikke på egentlige selektorer.
-* Vær sikker på at placeholderen du udvider er så lidt til stede som muligt i stylesheetet.
+* Brug extend udelukkende på placeholdere, ikke på egentlige selektorer.
+* Vær sikker på at placeholderen, du udvider, er så lidt til stede som muligt i stylesheetet.
 
 Hvis du skal til at anvende extend, så lad mig minde dig om at den ikke fungerer godt sammen med `@media` blokke. Som du muligvis ved, så er Sass ikke i stand til at udvide en ydre selektor inden i en media query. Når du gør det, så bryder compileren simpelthen ned, og fortæller dig at du ikke kan gøre sådan. Ikke så fedt. Især da media queries nu næsten er alt hvad vi laver.
 
@@ -31,7 +31,7 @@ Hvis du skal til at anvende extend, så lad mig minde dig om at den ikke fungere
 
 <div class="note">
   <p>Ofte siges det, at <code>@extend</code> hjælper med filstørrelsen, siden den kombinerer selektorer fremfor at duplikere egenskaber. Det er sandt, dog er forskellen minimal når først <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> er færdig med sin kompression.</p>
-  <p>Når det så er sagt, så hvis du ikke kan bruge Gzip (eller noget lignende), så kan det at skifte til en <code>@extend</code> tilgang muligvis ikke være så slem når du ved hvad du laver.</p>
+  <p>Når det er sagt, så hvis du ikke kan bruge Gzip (eller noget lignende), så kan det at skifte til en <code>@extend</code> tilgang muligvis ikke være så slem når du ved hvad du laver.</p>
 </div>
 
 For at opsummere, så vil jeg **anbefale imod brugen af `@extend` direktivet**, medmindre under særlige omstændigheder, men jeg vil ikke gå så langt som at forbyde det.
