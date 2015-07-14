@@ -43,9 +43,9 @@ O Sass é bastante inteligente relativamente aos mixins e a declaração de fun�
 
 ## Mixins e prefixos de fabricantes
 
-Pode ser tentador definir mixins personalizados para prefixos de fabricantes que são propriedades de CSS não suportadas ou fracamente suportadas. Mas nós não queremos fazer isso. Primeiro, se puderem usar o [Autoprefixer](https://github.com/postcss/autoprefixer), usam-no. O Autoprefixer vai remover código Sass do teu projecto, vai estar sempre actualizado e vai muito provavelmente fazer um melhor trabalho do que a colocar prefixos.
+Pode ser tentador definir mixins personalizados para prefixos de fabricantes que são propriedades de CSS não suportadas ou fracamente suportadas. Mas nós não queremos fazer isso. Primeiro, se puderem usar o [Autoprefixer](https://github.com/postcss/autoprefixer), usem-no. O Autoprefixer vai remover código Sass do projeto, vai estar sempre atualizado e vai muito provavelmente fazer um melhor trabalho do que nós a colocar prefixos.
 
-Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma collecção de mixins que tratam dos prefixos de fabricantes por ti. Usa esses.
+Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma coleção de mixins que tratam dos prefixos de fabricantes por nós. Utiliza esses.
 
 Se não podem usar Autoprefixer nem Bourbon ou Compass, então, apenas nesta situação, podem criar o vosso próprio mixin para colocar prefixos em propriedades de CSS. Mas, por favor, não criem um mixin por propriedade.
 
@@ -59,7 +59,7 @@ Usar este mixin deve ser bastante simples:
 
 {% include snippets/mixins/07/index.html %}
 
-Por favor não se esquecam que isto não é uma solução feliz. Por exemplo, esta solução não consegue lidar com polyfills complexos como os que são necessários para o Flexbox. Neste sentido, usar o Autoprefixer é uma solução muito melhor.
+Por favor não se esqueçam que isto não é uma solução feliz. Por exemplo, esta solução não consegue lidar com polyfills complexos como os que são necessários para o Flexbox. Neste sentido, usar o Autoprefixer é uma solução muito melhor.
 
 ###### Leitura Adicional
 

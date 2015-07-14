@@ -1,13 +1,13 @@
 
-# Responsive Web Design and breakpoints
+# Web Design Responsivo (RWD) e breakpoints
 
-Eu não acho que ainda tenhamos de apresentar Design Web Responsivo agora que está em todo o lado. No entanto voçês podem-se perguntar *porque há uma secção de RWD num guia de estilos?* Na realidade existem algumas coisas que podem ser feitas para facilitar o trabalho com breakpoints, como tal achei que podia não ser má ideia lista-las aqui.
+Não creio que tenhamos ainda de apresentar o que é Web Design Responsivo, agora que está em todo o lado. No entanto podem-se perguntar *porque há uma secção de RWD num guia de estilos?* Na realidade existem algumas coisas que podem ser feitas para facilitar o trabalho com breakpoints, como tal achei que podia não ser má ideia listá-las aqui.
 
 ## Definir breakpoints
 
-Acho que é seguro dizer que as media queries não devem estar agarradas a dispositivos específicos. Por exemplo, seria definitivamente uma má ideia ter especificamente iPhones ou Blackberrys como publico-alvo. As media queries devem afectar um conjunto de tamanhos de ecrã, pelo menos até o design partir e a próxima media query entra em acção.
+Acho que é seguro dizer que as media queries não devem estar agarradas a dispositivos específicos. Por exemplo, seria definitivamente uma má ideia ter especificamente iPhones ou Blackberries como publico-alvo. As media queries devem afetar um conjunto de tamanhos de ecrã, pelo menos até o design partir e a próxima media query entrar em acção.
 
-Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets, e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além...
+Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além...
 
 {% include snippets/rwd/01/index.html %}
 
@@ -21,13 +21,13 @@ Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o 
 
 ## Gestor de Breakpoints
 
-Assim que definam os breakpoints da maneira que quiserem, voçês precisam de arranjar uma maneira de os usar realmente em media queries. Há imensas maneiras de o fazer, mas confesso que sou grande fã do mapa de breakpoints acedido por uma função de leitura. Este sistema é simples e eficiente.
+Assim que definam os breakpoints da maneira que quiserem, é necessário arranjar uma maneira de os usar realmente em media queries. Há imensas maneiras de o fazer, mas confesso que sou grande fã do mapa de breakpoints acedido por uma função de leitura. Este sistema é simples e eficiente.
 
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviamente, este é um gestor de breakpoints bastante simplista que não irá funcionar quando for preciso lidar com breakpoints customizados ou que necessitem de multiplas verificações. </p>
-  <p>Se precisa de um gestor de breakpoints um bocado mais permissivo, permita-me recomendar que não reinvente a roda e que use algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Obviamente, este é um gestor de breakpoints bastante simplista que não irá funcionar quando for preciso lidar com breakpoints personalizados ou que necessitem de multiplas verificações. </p>
+  <p>Se precisarmos de um gestor de breakpoints um bocado mais permissivo, recomendo que não seja reinventada a roda e que seja usado algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 ###### Leitura Adicional
@@ -35,10 +35,10 @@ Assim que definam os breakpoints da maneira que quiserem, voçês precisam de ar
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
-## Media Queries Usage
+## Media Queries
 
-Não há muito tempo atrás, houve um debate acesso sobre onde é que as media queries deveriam ser escritas: deveriam ser escritas dentro dos selectores (tal como Sass o permite), ou deveriam ser separadas?
-Tenho a dizer que sou um defensor renhido do sistema *media-queries-dentro-de-selectores*, um vez que acho que encaixa bem com a ideia de *componentes*
+Não há muito tempo atrás, houve um debate aceso sobre onde é que as media queries deveriam ser escritas: deveriam ser escritas dentro dos selectores (tal como Sass o permite), ou deveriam ser separadas?
+Tenho a dizer que sou um defensor renhido do sistema *media-queries-dentro-de-selectores*, um vez que acho que encaixa bem com a ideia de *componentes*.
 
 {% include snippets/rwd/04/index.html %}
 
@@ -51,7 +51,7 @@ Podem ter ouvido que esta convenção resulta na duplicação das media queries 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
 
-Agora, se realmente tiverem preocupados com a duplicação das media queries, podem usar uma ferramenta para as juntar, tal como [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) no entanto, sinto que vos devo avisar na possibilidade de efeitos secundários de alteram a ordem do código. Um vez que já sabem que a ordem do código-fonte é importante.
+Agora, se realmente tiverem preocupados com a duplicação das media queries, podem usar uma ferramenta para as juntar, tal como [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) no entanto, sinto que vos devo avisar na possibilidade de efeitos secundários de alteram a ordem do código, uma vez que já sabem que a ordem do código-fonte é importante.
 
 ###### Leitura Adicional
 

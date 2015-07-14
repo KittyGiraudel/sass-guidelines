@@ -3,7 +3,7 @@
 
 A directiva `@extend` tem de ser uma das características que fez o Sass tão popular há uns anos atrás. Como lembrete, ela permite dizer ao Sass para estilizar um elemento A, tal como se ele fosse abrangido pelo selector B. Escusado será dizer que isto pode ser um valioso aliados quando se escreve CSS modular.
 
-No entanto sinto-me na necessidade de vos avisar que esta característica, por muito inteligente que seja, é um conceito traiçoeiro, especialmente quando usado indevidamente. O problema é que quando se extende um selector, voçês pouco ou nenhuma forma de responder as seguintes perguntas sem terem um conhecimento profundo de toda a base de código.
+No entanto sinto-me na necessidade de vos avisar que esta característica, por muito inteligente que seja, é um conceito traiçoeiro, especialmente quando usado indevidamente. O problema é que quando se extende um selector, há pouca ou nenhuma forma de responder as seguintes perguntas sem terem um conhecimento profundo de toda a base de código.
 
 * onde é que o selector vai ser colocado?
 * é provavel que eu cause efeitos secundários?
@@ -11,7 +11,7 @@ No entanto sinto-me na necessidade de vos avisar que esta característica, por m
 
 Por tudo o que sei, o resultado pode variar entre fazer nada e causar efeitos secundários desastrosos. Por causa disso, o meu primeiro conselho é de evitar a directiva `@extend` por completo. Pode soar bruto, mas no fim do dia pode salvar-vos algums problemas e dores de cabeça.
 
-Posto desta forma, voçês conheçem o ditado:
+Posto desta forma, conhecem o ditado:
 
 > Nunca digas nunca.<br>
 > &mdash; Aparentemente, [não foi a Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
@@ -26,15 +26,15 @@ Se vão usar o extend, deixem-me também lemrbar que ele não funciona bem com b
 
 {% include snippets/extend/01/index.html %}
 
-> Voçês não devem usar o @extend num selector exterior apartir de dentro de um bloco @media. <br>
-> Voçês só devem usar o @extend em selectors apartir de dentro da mesma directiva.
+> Não devem usar o @extend num selector exterior apartir de dentro de um bloco @media. <br>
+> Só devem usar o @extend em selectors a partir de dentro da mesma directiva.
 
 <div class="note">
-  <p>É ocasionalmente dito que <code>@extend</code> ajuda az reduzir o tamanho do ficheiro, uma vez que combina selectores em vez de duplicar propiedades. Isto é verdade, no entanto a diferença é negligenciável assim o <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> faça a sua compressão.</p>
+  <p>É ocasionalmente dito que <code>@extend</code> ajuda a reduzir o tamanho do ficheiro, uma vez que combina seletores em vez de duplicar propiedades. Isto é verdade, no entanto a diferença é negligenciável assim que o <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> faça a sua compressão.</p>
   <p>Dito isso, se não puderem usar Gzip (ou algo equivalente) então mudar a abordagem para usar o <code>@extend</code> pode não ser assim tão mau, desde que saibam o que estão a fazer.</p>
 </div>
 
-Para resumir, eu **desaconselho o uso da directiva `@extend`**, com excepção de algumas circustâncias especificas, mas não iria tão longe como proibir o seu uso.
+Para resumir, eu **desaconselho o uso da directiva `@extend`**, com exceção de algumas circustâncias especificas, mas não iria tão longe como proibir o seu uso.
 
 ###### Leitura Adicional
 

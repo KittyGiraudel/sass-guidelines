@@ -29,9 +29,9 @@ De qualquer forma, eu não proíbo o uso de Compass embora também não o recome
 
 ## Sistemas de grelhas
 
-Não usar um sistema de grelhas bão é opção, agora que _Responsive Web Design_ é ominpresente. Para mantar designs consistentes e sólidos em todos os tamanhos, usamos um tipo de grelha para dispor os elementos. Para evitar ter que programar estas grelhas uma e outra vez, algumas mentes brilhantes tornaram as suas reutilizáveis.
+Não usar um sistema de grelhas não é opção, agora que _Responsive Web Design_ é omnipresente. Para manter designs consistentes e sólidos em todos os tamanhos, usamos um tipo de grelha para dispor os elementos. Para evitar ter que programar estas grelhas uma e outra vez, algumas mentes brilhantes tornaram estas reutilizáveis.
 
-Deixem-me ser direto: não sou grande fão de sistemas de grelhas. Claro que vejo o potencial, mas penso que a maior parte deles são completamente exagerados e são maioritariamente usados para desenhar colunas vermelhas num fundo branco em apresentações totós de designers. Quando foi a última vez que que pensaram *graças-a-Deus-que-tenho-esta-ferramenta-para-construir-esta-grelha-de-2-5-3.1-π*? Exatamente, nunca. Porque na maior parte dos casos, apenas querem a grelha comum de 12 colunas, nada de especial.
+Deixem-me ser direto: não sou grande fã de sistemas de grelhas. Claro que vejo o potencial, mas penso que a maior parte deles são completamente exagerados e são maioritariamente usados para desenhar colunas vermelhas num fundo branco em apresentações totós de designers. Quando foi a última vez que que pensaram *graças-a-Deus-que-tenho-esta-ferramenta-para-construir-esta-grelha-de-2-5-3.1-π*? Exatamente, nunca. Porque na maior parte dos casos, apenas querem a grelha comum de 12 colunas, nada de especial.
 
 Se estão a usar uma _framework_ de CSS para o vosso projecto como [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), é provável que já incluam um sistema de grelhas que eu recomendo que usem de forma a evitar ter que lidar com mais uma dependência.
 
@@ -54,7 +54,7 @@ Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/
 
 ## SCSS-lint
 
-Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão important quanto documentá-lo.
+Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão importante quanto documentá-lo.
 
 [SCSS-lint](https://github.com/causes/scss-lint) é uma ferramenta importante para vos ajudar a manter os vossos ficheiros SCSS limpos e legíveis. É completamente personalizável e fácil de integrar com as vossas ferramentas.
 
@@ -63,7 +63,7 @@ Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descr
 {% include snippets/tools/01/index.html %}
 
 <div class="note">
-  <p>Se pretendem ligar o SCSS-lint no vosso _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>Se pretendem ligar o SCSS-lint no _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
