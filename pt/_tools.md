@@ -54,7 +54,7 @@ Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/
 
 ## SCSS-lint
 
-Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão important quanto documentá-lo.
+Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão importante quanto documentá-lo.
 
 [SCSS-lint](https://github.com/causes/scss-lint) é uma ferramenta importante para vos ajudar a manter os vossos ficheiros SCSS limpos e legíveis. É completamente personalizável e fácil de integrar com as vossas ferramentas.
 
@@ -63,7 +63,7 @@ Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descr
 {% include snippets/tools/01/index.html %}
 
 <div class="note">
-  <p>Se pretendem ligar o SCSS-lint no vosso _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>Se pretendem ligar o SCSS-lint no _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
