@@ -28,12 +28,12 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 
 ## Lista de argumentos
 
-Quando estão a lidar com um mixin que tem um número desconhecido de argumentos, o Sass suporta "argumentos variáveis". "Argumentos variáveis" são os argumentos que estão no fim de um mixin ou de uma declaração de função e são transformados numa lista, à qual vamos chamar `arglist`. Isto é impliciatemnete usado quando ao passar um número de argumentos para um mixin ou uma função cuja assinatura de uma função contem `...`.
+Quando estão a lidar com um mixin que tem um número desconhecido de argumentos, o Sass suporta "argumentos variáveis". "Argumentos variáveis" são os argumentos que estão no fim de um mixin ou de uma declaração de função e são transformados numa lista, à qual vamos chamar `arglist`. Isto é implicitamente usado quando passamos um número de argumentos para um mixin ou uma função cuja assinatura de uma função contém `...`.
 
 {% include snippets/mixins/03/index.html %}
 
-Quando estiverem a contruir um mixin que aceita três ou mais argumentos, deves pensar duas vezes antes de os passar como uma lista ou uma mapa só porque é mais fácil do que os passar uma a um.
-O Sass é bastante inteligente relativamente aos mixins e a declaração de funções. Tanto que podes passar uma lista ou um mapa de argumentos como uma arglist para um mixin ou uma função e estes vão ser lidos como uma série de argumentos.
+Quando estiverem a construir um mixin que aceita três ou mais argumentos, deves pensar duas vezes antes de os passar como uma lista ou uma mapa só porque é mais fácil do que os passar uma a um.
+O Sass é bastante inteligente relativamente aos mixins e a declaração de funções. Tanto que podemos passar uma lista ou um mapa de argumentos como uma arglist para um mixin ou uma função e estes vão ser lidos como uma série de argumentos.
 
 {% include snippets/mixins/04/index.html %}
 
@@ -45,7 +45,7 @@ O Sass é bastante inteligente relativamente aos mixins e a declaração de fun�
 
 Pode ser tentador definir mixins personalizados para prefixos de fabricantes que são propriedades de CSS não suportadas ou fracamente suportadas. Mas nós não queremos fazer isso. Primeiro, se puderem usar o [Autoprefixer](https://github.com/postcss/autoprefixer), usem-no. O Autoprefixer vai remover código Sass do projeto, vai estar sempre atualizado e vai muito provavelmente fazer um melhor trabalho do que nós a colocar prefixos.
 
-Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma coleção de mixins que tratam dos prefixos de fabricantes por nós. Utiliza esses.
+Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma coleção de mixins que tratam dos prefixos de fabricantes por nós.
 
 Se não podem usar Autoprefixer nem Bourbon ou Compass, então, apenas nesta situação, podem criar o vosso próprio mixin para colocar prefixos em propriedades de CSS. Mas, por favor, não criem um mixin por propriedade.
 
