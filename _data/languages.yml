@@ -58,7 +58,7 @@ pt:
   version: 1.0.0
   label: Portuguese
   prefix: /pt/
-  available: true
+  available: false
   translators:
     - name: Ricardo Magalhães
       link: https://github.com/magalhini
