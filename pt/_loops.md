@@ -1,7 +1,7 @@
 
 # Ciclos
 
-Visto Sass providenciar estruturas de dados complexas, tal como _[lists](#lists)_ e _[maps](#maps)_, não é surpresa fornecer também formas de iterar sobre essas entidades.
+Visto que Sass providencia estruturas de dados complexas, tal como _[lists](#lists)_ e _[maps](#maps)_, não é surpresa fornecer também formas de iterar sobre essas entidades.
 
 No entanto, a presença de ciclos normalmente implica lógica moderadamente complexa que provavelmente não pertence a Sass. Antes de usar um ciclo, certifiquem-se que tal faz sentido e que realmente resolve um problema.
 
@@ -15,7 +15,7 @@ Ao iterar um _map_, usem sempre `$key` e `$value` como nomes de variáveis para 
 
 {% include snippets/loops/02/index.html %}
 
-Também façam questão de respeitar as seguintes diretrizes para preservar a legibilidade:
+Façam também questão de respeitar as seguintes diretrizes para preservar a legibilidade:
 
 * Colocar sempre uma linha em branco antes do `@each`;
 * Colocar sempre uma linha em branco antes da chaveta de fecho (`}`) a menos que a próxima linha seja uma chaveta de fecho (`}`).

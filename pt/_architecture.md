@@ -1,7 +1,7 @@
 
 # Arquitetura
 
-Criar a arquitetura de um projeto de CSS é uma das coisas mais difíceis que terás que fazer durante a vida de um projeto. Manter essa arquitetura constante e significativa é ainda mais difícil.
+Criar a arquitetura de um projeto de CSS é uma das coisas mais difíceis que se pode fazer durante a vida de um projeto. Manter essa arquitetura constante e significativa é ainda mais difícil.
 
 Felizmente, um dos benefícios principais de usar um pré-processador de CSS é ter a habilidade de dividir a nossa base de código em vários ficheiros sem ter impacto na performance (como a diretiva de CSS `@import` fazia). Graças à sobrecarga da diretiva `@import` no Sass, é perfeitamente seguro (e até recomendado) usar os ficheiros necessários na fase de desenvolvimento, todos estes compilados numa única stylesheet quando o projeto for para produção.
 
@@ -108,7 +108,7 @@ Se tiveres estilos específicos a páginas, o melhor será colocá-las na pasta 
 * `_contact.scss`
 
 <div class="note">
-  <p>Dependendo do processo de desenvolvimento estes ficheiros podem ser chamados individualmente para evitar que eles se juntem com outros quando todas as stylesheets se juntam. Na realidade depende è uma questão de preferência.</p>
+  <p>Dependendo do processo de desenvolvimento estes ficheiros podem ser chamados individualmente para evitar que eles se juntem com outros quando todas as stylesheets se juntam. Na realidade é uma questão de preferência.</p>
 </div>
 
 ### Pasta Temas
@@ -119,10 +119,10 @@ Em grandes sites ou aplicações, é comum existirem vários temas. Há certamen
 * `_admin.scss`
 
 <div class="note">
-  <p>Isto é algo muito especifico a cada projeto e em muitos deles podem nem existir a necessidade.</p>
+  <p>Isto é algo muito específico a cada projeto e em muitos deles podem nem existir a necessidade.</p>
 </div>
 
-### Pasta utils
+### Pasta Utils
 
 A pasta de `/utils` guarda todas as ferramentas e auxiliares de SASS usados por todo o projeto. Todas as funções globais, mixins e placeholders devem ser colocados nesta pasta.
 
@@ -169,7 +169,7 @@ De maneira a preservar a legibilidade, o ficheiro principal deverá seguir as se
 * um ficheiro por `@import`;
 * um `@import`por linha;
 * não colocar linha de espaço entre importações da mesma pasta;
-* uma linha de espaço depois da ultima importação de uma pasta;
+* uma linha de espaço depois da última importação de uma pasta;
 * extensões e underscores antes do nome devem ser omitidos.
 
 {% include snippets/architecture/02/index.html %}

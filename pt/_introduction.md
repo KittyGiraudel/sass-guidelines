@@ -3,7 +3,7 @@
 
 ## Porquê um guia de estilos?
 
-Um guia de estilos não é apenas um documento agradável à leitura que pretende descrever um estado perfeito para o nosso código. Um guia de estilos é um documento importante no ciclo de vida de um projeto, descrevendo como e porquê o código deve ser escrito. Para pequenos projetos pode parecer excessivo, mas ajuda imenso à manutenção e escalabilidade do código-fonte.
+Um guia de estilos não é só um documento agradável à leitura que pretende descrever um estado perfeito para o nosso código. Um guia de estilos é um documento importante no ciclo de vida de um projeto, descrevendo como e porquê o código deve ser escrito. Para pequenos projetos pode parecer excessivo, mas ajuda imenso à manutenção e escalabilidade do código-fonte.
 
 Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, mais regras serão necessárias. Da mesma forma, quanto maior o projeto, mais necessário se torna um guia de estilos.
 
@@ -16,7 +16,7 @@ Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, ma
     <li>possuam programadores com habilidades e especialidades variadas;</li>
     <li>possuam vários programadores a trabalhar num produto num dado momento;</li>
     <li>recebam novos membros regularmente;</li>
-    <li>possuam várias _codebases_ que os programadores alternem;</li>
+    <li>possuam várias codebases que os programadores alternem;</li>
   </ul>
 </blockquote>
 
@@ -24,9 +24,9 @@ Invariavelmente, quantos mais programadores estiverem envolvidos num projeto, ma
 
 Em primeiro lugar: **isto não é um guia de estilos de CSS**. Este documento não pretende discutir convenções de nomes para classes em CSS, padrões de módulos ou a questão de utilizar IDs no mundo de CSS. Estas guias dizem apenas respeito a conteúdo específico de Sass.
 
-Para além disso, este guia de estilos é da minha autoria e consequentemente **muito tendencioso**. Podem pensar nele como uma coleção de metodologias e conselhos que eu tenho vindo a polir ao longo dos anos. Isto dá-me também a oportunidade de referenciar um punhado de recursos valiosos, por isso certifiquem-se que espreitam a secção de *leitura adicional*.
+Para além disso, este guia de estilos é da minha autoria e consequentemente **muito parcial**. Podem pensar nele como uma coleção de metodologias e conselhos que eu tenho vindo a polir ao longo dos anos. Isto dá-me também a oportunidade de referenciar um punhado de recursos valiosos, por isso certifiquem-se que espreitam a secção de *leitura adicional*.
 
-Obviamente, esta não será certamente a única maneira de fazer as coisas, e poderá ou não adequar-se ao vosso projecto. Sintam-se livres de o adaptar às vossas necessidades.
+Obviamente, esta não será a única maneira de fazer as coisas e poderá ou não adequar-se ao vosso projeto. Sintam-se livres de o adaptar às vossas necessidades.
 
 ## Princípios-chave
 

@@ -27,7 +27,7 @@ Se o valor fornecido não possuir unidade, a função assume que o valor está e
 
 ## Erros
 
-Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicamente, param o compilador e mostram uma mensagem no _output stream_ tal como o _stack trace_, o que é útil para _debugging_. Por causa disto, erros deverão ser lançados quando não há mais forma do programa continuar a correr. Sempre que possível, tentem antes contornar o problema e mostrar um aviso em seu lugar.
+Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicamente, interrompem o compilador e mostram uma mensagem no _output stream_ tal como o _stack trace_, o que é útil para _debugging_. Por causa disto, erros deverão ser lançados quando não há mais forma do programa continuar a correr. Sempre que possível, tentem antes contornar o problema e mostrar um aviso em seu lugar.
 
 Como exemplo, digamos que querem construir uma função _getter_ para aceder a valores de um _map_ específico. Poderiam lançar um erro se a chave pedida não existir no _map_.
 
