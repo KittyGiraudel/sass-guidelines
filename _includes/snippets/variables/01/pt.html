@@ -2,29 +2,29 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Initialize a global variable at root level.
-// In this case, the `!global` flag is optional.
+// Inicia uma variável global ao nível de raiz.
+// Neste caso, a flag `!global` é opcional.
 $variable: 'initial value' !global;
 
-// Create a mixin that overrides that global variable.
+// Cria um mixin que substitui a variável global anterior.
 @mixin global-variable-overriding {
   $variable: 'mixin value' !global;
 }
 
 .local-scope::before {
-  // Create a local variable that shadows the global one.
+  // Cria uma variável local que se sobrepõe à global anterior.
   $variable: 'local value';
 
-  // Include the mixin: it overrides the global variable.
+  // Inclui o mixin: substitui a variável global.
   @include global-variable-overriding;
 
-  // Print the variable's value.
-  // It is the **local** one, since it shadows the global one.
+  // Imprime o valor da variável.
+  // É o valor **local**, visto que se sobrepõe à global.
   content: $variable;
 }
 
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
+// Imprime a variável noutro seletor que nada sobrepõe.
+// É a variável **global**, como esperado.
 .other-local-scope::before {
   content: $variable;
 }
@@ -32,27 +32,27 @@ $variable: 'initial value' !global;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Initialize a global variable at root level.
-// In this case, the `!global` flag is optional.
+// Inicia uma variável global ao nível de raiz.
+// Neste caso, a flag `!global` é opcional.
 $variable: 'initial value' !global
 
-// Create a mixin that overrides that global variable.
+// Cria um mixin que substitui a variável global anterior.
 @mixin global-variable-overriding
   $variable: 'mixin value' !global
 
 .local-scope::before
-  // Create a local variable that shadows the global one.
+  // Cria uma variável local que se sobrepõe à global anterior.
   $variable: 'local value'
 
-  // Include the mixin: it overrides the global variable.
+  // Inclui o mixin: substitui a variável global.
   +global-variable-overriding
 
-  // Print the variable's value.
-  // It is the **local** one, since it shadows the global one.
+  // Imprime o valor da variável.
+  // É o valor **local**, visto que se sobrepõe à global.
   content: $variable
 
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
+// Imprime a variável noutro seletor que nada sobrepõe.
+// É a variável **global**, como esperado.
 .other-local-scope::before
   content: $variable
 {% endhighlight %}
