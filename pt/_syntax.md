@@ -190,7 +190,6 @@ As listas devem respeitar as seguintes orientações:
 
 * sejam uma linha ou várias;
 * necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
-* unless used as is for CSS purposes, always comma separated;
 * a não ser para fins de CSS, sempre separadas por vírgula;
 * sempre envolvivas em parêntesis;
 * finalizadas com um ponto final em multi-linha.
@@ -331,7 +330,7 @@ Por exemplo, o seguinte código aninhado em Sass:
 
 {% include snippets/syntax/30/index.html %}
 
-Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor actual (`&`) para gerar seletores avançados. Por exemplo:
+Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor atual (`&`) para gerar seletores avançados. Por exemplo:
 
 {% include snippets/syntax/31/index.html %}
 
@@ -342,12 +341,12 @@ Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor
 Este método é geralmente usado em conjunto com [a nomenclatura BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para gerar os seletores `.block__element` e `.block--modifier` baseados no seletor original (neste caso, `.block`).
 
 <div class="note">
-  <p>Embora pareça anedótico, gerar novos seletores a partir da referência ao seletor actual (<code>&</code>) torna os seletores impossíveis de procurar no código, já que não existem per se.</p>
+  <p>Embora pareça anedótico, gerar novos seletores a partir da referência ao seletor atual (<code>&</code>) torna os seletores impossíveis de procurar no código, já que não existem per se.</p>
 </div>
 
 O problema com aninhar seletores é que, em última instância, torna o código mais difícil de ler. O leitor tem de mentalmente computador o seletor resultante a partir dos níveis de indentação; nem sempre é óbvio o que é que o CSS resultante acabará por ser.
 
-Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor actual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
+Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor atual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
 
 Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível**. No entanto, há exceções óbvias a esta regra.
 
@@ -367,15 +366,15 @@ Por fim, quando se estiliza um elemento só porque ele está dentro de outro ele
 
 {% include snippets/syntax/35/index.html %}
 
-Quando se trabalha com programadores inexperientes, um selector como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
+Quando se trabalha com programadores inexperientes, um seletor como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
 
 {% include snippets/syntax/36/index.html %}
 
-Reescrevendo o nosso exemplo anterior, ficaria assim:
+Reescrevendo o nosso exemplo anterior, ficaria então assim:
 
 {% include snippets/syntax/37/index.html %}
 
-Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com selectores aninhados, então usa selectores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
+Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com seletores aninhados, então usa seletores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 
 ###### Leitura adicional
 
