@@ -31,6 +31,7 @@ Em projetos que não sejam em Ruby que precisem de integração no método de tr
 ###### Leitura adicional
 
 * [LibSass](https://github.com/sass/libsass)
+* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
@@ -45,7 +46,7 @@ Desde então, Sass (enquanto pré-processador) oferece duas sintaxes diferentes:
 
 A sensibilidade aos espaços em Sass depende na indentação para se ver livre de chavetas, pontos e vírgula e outros símbolos de pontuação, o que leva a uma sintaxe mais curta e mais limpa. Por outro lado, SCSS é mais fácil de aprender já que consiste maioritariamente em pedaços extra que sao escritos adicionalmente ao CSS habitual.
 
-Pessoalmente, prefiro SCSS a Sass apenas porque é mais aproximada de CSS e mais amigável para os programadores. Por causa disto, vou utilizar SCSS em vez de Sass ao longo deste guia de estilos.
+Pessoalmente, prefiro SCSS a Sass apenas porque é mais aproximada de CSS e mais amigável para os programadores. Por isso, vou utilizar SCSS em vez de Sass ao longo deste guia de estilos. Podem sempre alterar para a sintaxe indentada de Sass no painel de <span data-toggle="aside" class="link-like" role="button" aria-expanded>opções</span>.
 
 ###### Leitura adicional
 

@@ -18,6 +18,16 @@ Não vamos entrar na discussão de organização de ficheiros nesta secção, ma
 
 ## Strings
 
+Acreditem ou não, strings desempenham um papel muito importante tanto em ecosistemas CSS e Sass. A maior parte dos valores de CSS são medidas ou strings (geralmente sem aspas), por isso é bastante crucial seguir algumas regras.
+
+### Codificação
+
+Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](http://en.wikipedia.org/wiki/UTF-8) na principal [folha de estilos](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folha de estilos e que não existe mais nenhum carater antes deste.
+
+{% include snippets/syntax/02/index.html %}
+
+### Aspas
+
 CSS não necessita que strings apareçam entre aspas, nem mesmo as que contêm espaços. Peguemos no exemplo de font-family: não importa se utilizamos aspas no início e no fim.
 
 Graças a isto, Sass *também* não necessita que as strings sejam entre aspas. Melhor ainda (e *felizmente*), uma string entre aspas é estritamente equivalente à sua irmã gémea sem aspas (por ex., `'abc'` é estritamente igual a `abc`).
@@ -29,38 +39,27 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+{% include snippets/syntax/03/index.html %}
 
-// Não
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
+### Strings como valores CSS
 
-// Não
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
-// Não
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
+{% include snippets/syntax/04/index.html %}
 
-// Não
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
-{% endhighlight %}
-  </div>
-</div>
+Desta forma, podemos fazer uma distinção entre strings que pretendemos utilizar como valores de CSS (identificadores) como no exemplo anterior, e strings quando nos referimos aos tipos de dados em Sass, como por exemplo índices de mapas.
 
-<div class="note">
-  <p>No exemplo anterior, <code>sans-serif</code> não está sob aspas porque representa um valor concreto de CSS.</p>
-</div>
+Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simples.
 
-URLs também devem seguir a mesma regra:
+### Strings com aspas
+
+Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
+
+{% include snippets/syntax/05/index.html %}
+
+### URLs
+
+URLs devem ser envolvidos em aspas:
 
 {% include snippets/syntax/06/index.html %}
 
@@ -189,10 +188,12 @@ Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" 
 
 As listas devem respeitar as seguintes orientações:
 
-* a não ser que seja demasiado longa para caber numa linha de 80 caracteres, usar apenas uma linha;
-* a não ser que seja usada literalmente em código CSS, usar sempre uma vírgula como delimitador;
-* a não ser que seja uma lista vazia ou aninhada em outra lista, nunca escrever os parêntesis;
-* nunca terminar com uma vírgula.
+* sejam uma linha ou várias;
+* necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
+* unless used as is for CSS purposes, always comma separated;
+* a não ser para fins de CSS, sempre separadas por vírgula;
+* sempre envolvivas em parêntesis;
+* finalizadas com um ponto final em multi-linha.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -202,6 +203,7 @@ Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar 
 
 ###### Leitura adicional
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 ## Mapas
@@ -237,6 +239,7 @@ Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin 
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
@@ -299,7 +302,7 @@ Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CS
 
 {% include images/order-poll.html %}
 
-Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe aquele que preferires, desde que sejas consistente ao longo das tuas folhas de estilo.
+Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção *aleatória*).
 
 <div class="note">
   <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>

@@ -15,6 +15,10 @@ Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o 
 
 {% include snippets/rwd/02/index.html %}
 
+<div class="note">
+  <p>Os exemplos anteriores utilizam mapas aninhados para definir breakpoints; no entanto isto depende bastante no tipo de gestor de breakpoints que seja utilizado. Podem optar por strings em vez de usar mapas, para maior flexibilidade (e.g. <code>'(min-width: 800px)'</code>).</p>
+</div>
+
 ###### Leitura Adicional
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
@@ -26,8 +30,7 @@ Assim que definam os breakpoints da maneira que quiserem, é necessário arranja
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviamente, este é um gestor de breakpoints bastante simplista que não irá funcionar quando for preciso lidar com breakpoints personalizados ou que necessitem de multiplas verificações. </p>
-  <p>Se precisarmos de um gestor de breakpoints um bocado mais permissivo, recomendo que não seja reinventada a roda e que seja usado algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
 </div>
 
 ###### Leitura Adicional

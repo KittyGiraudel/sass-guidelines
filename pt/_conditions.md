@@ -20,3 +20,7 @@ Quando se testa um valor falso, usem sempre a palavra-chave `not` ao invés de t
 Quando se usa instruções condicionais dentro de uma função para devolver um resultado diferente baseado nalguma condição, certifiquem-se que a função ainda possui uma instrução `@return` fora de qualquer bloco condicional.
 
 {% include snippets/conditions/03/index.html %}
+
+Quando se utilizam expresões condicionais dentro de uma função para retornar um resultado diferente baseado numa condição, certifiquem-se que a função devolve sempre uma expressão `@return` fora de qualquer bloco condicional.
+
+{% include snippets/conditions/04/index.html %}
