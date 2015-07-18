@@ -25,6 +25,7 @@ De qualquer forma, eu não proíbo o uso de Compass embora também não o recome
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
+* [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
 ## Sistemas de grelhas
@@ -54,7 +55,7 @@ Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/
 
 ## SCSS-lint
 
-Analisar código (usango [_linters](https://en.wikipedia.org/wiki/Lint_%28software%29)) é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão importante quanto documentá-lo.
+Analisar código é muito importante. Normalmente, seguir as diretrizes de um guia de estilos ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão importante quanto documentá-lo.
 
 [SCSS-lint](https://github.com/causes/scss-lint) é uma ferramenta importante para vos ajudar a manter os vossos ficheiros SCSS limpos e legíveis. É completamente personalizável e fácil de integrar com as vossas ferramentas.
 
