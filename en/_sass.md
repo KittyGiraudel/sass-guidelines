@@ -17,6 +17,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass or LibSass
 
