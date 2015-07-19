@@ -40,6 +40,16 @@ Sometimes, it’s better to repeat a little to keep the code maintainable, rathe
 
 Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
 
+## Extending the guidelines
+
+A large part of this styleguide is strongly opinionated. I have been reading and writing Sass for several years now, to the point where I now have a lot of principles when it comes to writing clean stylesheets. I understand that it might not please nor suit everybody, and this is perfectly normal.
+
+Although, I believe that guidelines are made to be extended. Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from thise styleguide except for a few things; in which case, specific rules would be explained below.
+
+An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md): 
+
+> [This](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) is an extension to [Node Styleguide](https://github.com/felixge/node-style-guide) by Felix Geisendörfer. Anything from this document overrides what could be said in the Node Styleguide.
+
 ###### Further reading
 
 * [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
