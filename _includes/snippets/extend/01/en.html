@@ -2,27 +2,58 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-.foo {
-  content: 'foo';
+%button {
+  display: inline-block;
+  // ... button styles
+
+  // Relationship: a %button that is a child of a %modal
+  %modal > & {
+    display: block;
+  }
 }
 
-@media print {
-  .bar {
-    // This doesn't work. Worse: it crashes.
-    @extend .foo;
+.button {
+  @extend %button;
+}
+
+// Yep
+.modal {
+  @extend %modal;
+}
+
+// Nope
+.modal {
+  @extend %modal;
+
+  > .button {
+    @extend %button;
   }
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-.foo
-  content: 'foo'
+%button
+  display: inline-block
+  // ... button styles
 
-@media print
-  .bar
-    // This doesn't work. Worse: it crashes.
-    @extend .foo
+  // Relationship: a %button that is a child of a %modal
+  %modal > &
+    display: block
+
+.button
+  @extend %button
+
+// Yep
+.modal
+  @extend %modal
+
+// Nope
+.modal
+  @extend %modal
+
+  > .button
+    @extend %button
 {% endhighlight %}
   </div>
 </div>
