@@ -10,11 +10,6 @@
   box-shadow: 0.3em 0 .25em rgba(black, 0.1);
   transition: .15s cubic-bezier(.32, 1, .53, .8);
 
-  @include when-inside('.open') {
-    @include prefix(transform, translateX(0), webkit ms);
-    overflow: auto;
-  }
-
   @include respond-to('medium') {
     width: 300px;
   }
@@ -30,7 +25,6 @@
   padding: 0 1rem;
 }
 
-.no-js .aside__toggle,
 .no-js .custom-select,
 .no-js .aside__section--syntax {
   display: none;
@@ -66,10 +60,6 @@
   bottom: 0;
   right: -4.5em;
 
-  @include when-inside('.open') {
-    right: 0;
-  }
-
   @include respond-to('medium') {
     background: transparent;
   }
@@ -99,4 +89,13 @@
   li + li {
     float: right;
   }
+}
+
+#aside-toggle:checked ~ .aside {
+  @include prefix(transform, translateX(0), webkit ms);
+  overflow: auto;
+}
+
+#aside-toggle:checked ~ .aside .aside__toggle {
+  right: 0;
 }

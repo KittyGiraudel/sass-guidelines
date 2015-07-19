@@ -47,17 +47,11 @@
 
     Array.prototype.slice.call(input).forEach(function (element) {
       element.addEventListener('click', function (event) {
-        if (this.value === 'sass') {
+        if (element.value === 'sass') {
           addClass(document.body, 'sass');
         } else {
           removeClass(document.body, 'sass');
         }
-      });
-    });
-
-    Array.prototype.slice.call(document.querySelectorAll('[data-toggle="aside"]')).forEach(function (element) {
-      element.addEventListener('click', function (event) {
-        toggleClass(document.body, 'open');
       });
     });
 
