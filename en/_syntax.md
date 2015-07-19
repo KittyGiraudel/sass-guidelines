@@ -78,6 +78,10 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>In Sublime Text and other editors providing a regular-expression powered search and replace, it is very easy to add a leading zero to (most if not all) float numbers. Simply replace <code>\s+\.(\d+)</code> with <code> 0.$1</code>. Do not forget the space before the <code>0</code> though.</p>
+</div>
+
 ### Units
 
 When dealing with lengths, a `0` value should never ever have a unit.
