@@ -286,7 +286,7 @@ Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander g
 * sich an eine alphabetische Reihenfolge halten;
 * Deklarationen nach Typ (position, display, colors, font, sonstiges...) sortieren.
 
-Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen for dem Display-Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
+Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen vor dem Display-Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
 
 {% include snippets/syntax/26/index.html %}
 
