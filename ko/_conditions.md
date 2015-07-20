@@ -76,6 +76,35 @@ Sass가 `@if`과 `@else` 지시어를 통해 조건문을 제공한다는 것을
   </div>
 </div>
 
+언제나 변수 부분을 조건문의 왼쪽에, 기대되는 (혹은 기대되지 않는) 결과를 오른쪽에 놓으세요. 거꾸로 된 조건문은, 특히 경험이 적은 개발자들이 읽기에 더 어렵습니다.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+@if $value == 42 {
+  // ...
+}
+
+// Nope
+@if 42 == $value {
+  // ...
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+@if $value == 42
+  // ...
+
+// Nope
+@if 42 == $value
+  // ...
+{% endhighlight %}
+  </div>
+</div>
+
 어떤 조건에 따라 다른 결과를 반환하는 펑션 안에서 조건문을 사용할 때는, 반드시 펑션이 조건문 블록 밖에서도 `@return`문을 갖도록 만드세요.
 
 <div class="code-block">
