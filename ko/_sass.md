@@ -31,6 +31,7 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 ###### 참고
 
 * [LibSass](https://github.com/sass/libsass)
+* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
