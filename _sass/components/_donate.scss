@@ -5,6 +5,7 @@
   @include vertical-rhythm;
   background: $donate-background;
   text-align: center;
+  border: 1px solid rgba(black, 0.1);
   padding: 1rem 0;
 
   .button {

@@ -43,6 +43,8 @@ a,
  * Inline code
  */
 :not(pre) > code {
-  color: #6b717f;
+  color: $dark-pink;
   font-family: $code-font-stack;
+  font-size: 0.8em;
+  vertical-align: middle;
 }
