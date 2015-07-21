@@ -61,32 +61,57 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+$direction: 'left';
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+$direction: left;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+$direction: 'left'
 
 // Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
+$direction: left
 {% endhighlight %}
   </div>
 </div>
 
-<div class="note">
-  <p>앞의 예시에서, <code>sans-serif</code>는 따옴표가 없어야 하는 하는 특정  CSS 값이기 때문에 따옴표로 싸이지 않았습니다.</p>
+### Strings as CSS values
+
+Specific CSS values such as `initial`이나 `sans-serif` 같은 특정 CSS 값은 따옴표로 싸여서는 안됩니다. `font-family: 'sans-serif'` 같은 선언의 경우 CSS는 인용부호가 붙은 문자열이 아니라 식별자를 기대하고 있기 때문에 아무 경고도 없이 작동하지 않을 것입니다. 이 때문에, 그런 값들은 따옴표로 감싸지 않습니다.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+$font-type: sans-serif;
+
+// Nope
+$font-type: 'sans-serif';
+
+// Okay I guess
+$font-type: unquote('sans-serif');
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+$font-type: sans-serif
+
+// Nope
+$font-type: 'sans-serif'
+
+// Okay I guess
+$font-type: unquote('sans-serif')
+{% endhighlight %}
+  </div>
 </div>
+
+따라서, 우리는 앞의 예처럼 CSS 값(CSS 식별자)으로 사용될 문자열과 맵 키와 같은 Sass 자료 유형에 쓰일 문자열을 구별할 수 있습니다.
+
+전자에는 따옴표를 붙이지 않지만, 후자는 작은 따옴표로 감쌉니다.
 
 ### 따옴표를 포함한 문자열
 
