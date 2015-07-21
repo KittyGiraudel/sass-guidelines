@@ -1,7 +1,7 @@
 
 # Web Design Responsivo (RWD) e breakpoints
 
-Não creio que tenhamos ainda de apresentar o que é Web Design Responsivo, agora que está em todo o lado. No entanto podem-se perguntar *porque há uma secção de RWD num guia de estilos?* Na realidade existem algumas coisas que podem ser feitas para facilitar o trabalho com breakpoints, como tal achei que podia não ser má ideia listá-las aqui.
+Não creio que tenhamos ainda de apresentar o que é Web Design Responsivo, agora que está em todo o lado. No entanto podem-se perguntar *porque há uma secção de RWD num guia de estilo?* Na realidade existem algumas coisas que podem ser feitas para facilitar o trabalho com breakpoints, como tal achei que podia não ser má ideia listá-las aqui.
 
 ## Definir breakpoints
 

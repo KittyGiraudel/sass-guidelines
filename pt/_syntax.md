@@ -1,7 +1,7 @@
 
 # Formatação e sintaxe
 
-Se me perguntarem a mim, diria que a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
+Se me perguntarem a mim, diria que a primeira coisa que um guia de estilo deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
 
 Quando vários programadores estão responsáveis por escrever CSS simultaneamente nos mesmos projectos, é apenas uma questão de tempo até que um deles comece a escrever as coisas à sua maneira. Guias de estilo que promovam consistência não só previnem isto, mas ajudam também à leitura e manutenção do código.
 

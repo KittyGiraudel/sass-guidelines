@@ -36,7 +36,7 @@ pt:
     content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
     button: "Apoie o Guia de Sass"
   baseline:
-    content: "Um guia de estilos opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
+    content: "Um guia de estilo opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
   footer:
     content: "Escrito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Nota"
