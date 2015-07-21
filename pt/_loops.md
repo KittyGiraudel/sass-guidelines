@@ -1,17 +1,17 @@
 
 # Ciclos
 
-Visto que Sass providencia estruturas de dados complexas, tal como _[lists](#lists)_ e _[maps](#maps)_, não é surpresa fornecer também formas de iterar sobre essas entidades.
+Visto que Sass providencia estruturas de dados complexas, tal como [listas](#lists) e [mapas](#maps), não é surpresa fornecer também formas de iterar sobre essas entidades.
 
 No entanto, a presença de ciclos normalmente implica lógica moderadamente complexa que provavelmente não pertence a Sass. Antes de usar um ciclo, certifiquem-se que tal faz sentido e que realmente resolve um problema.
 
 ## Each
 
-O ciclo `@each` é definitivamente o mais usado dos três ciclos que Sass oferece. Apresenta uma API simples para iterar uma _list_ ou _map_.
+O ciclo `@each` é definitivamente o mais usado dos três ciclos que Sass oferece. Apresenta uma API simples para iterar uma lista ou mapa.
 
 {% include snippets/loops/01/index.html %}
 
-Ao iterar um _map_, usem sempre `$key` e `$value` como nomes de variáveis para manter a consistência.
+Ao iterar um mapa, usem sempre `$key` e `$value` como nomes de variáveis para manter a consistência.
 
 {% include snippets/loops/02/index.html %}
 

@@ -1,21 +1,21 @@
 
 # Avisos e erros
 
-Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no _standard output system_ (CLI, compilador...):
+Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no *standard output system* (CLI, compilador...):
 
 * `@debug`;
 * `@warn`;
 * `@error`.
 
-Vamos colocar o `@debug` de lado, uma vez que se destina claramente a fazer _debug_ a SassScript, o que não é o nosso ponto aqui. Ficamos então com `@warn` and `@error` que são visivelmente idênticos, exceto que um para o compilador, enquanto que o outro não. Vocês podem idivinhar qual faz o quê.
+Vamos colocar o `@debug` de lado, uma vez que se destina claramente a fazer *debug* a SassScript, o que não é o nosso ponto aqui. Ficamos então com `@warn` and `@error` que são visivelmente idênticos, exceto que um para o compilador, enquanto que o outro não. Vocês podem adivinhar qual faz o quê.
 
-Agora, há muito espaço num projecto de Sass para avisos e erros. Basicamente, qualquer _mixin_ ou função à espera de um tipo ou argumento específico poderia lançar um error se algo desse errado, ou mostrar um aviso ao fazer uma suposição.
+Agora, há muito espaço num projecto de Sass para avisos e erros. Basicamente, qualquer *mixin* ou função à espera de um tipo ou argumento específico poderia lançar um error se algo desse errado, ou mostrar um aviso ao fazer uma suposição.
 
 ###### Leitura adicional
 
-* [_An Introduction To Error Handling_ (‘Uma Introdução À Manipulação De Erros’)](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [_Building a Logger Mixin_ (‘Construção de um _Logger Mixin_’)](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [_SassyLogger_](https://github.com/HugoGiraudel/SassyLogger)
+* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
+* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
+* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
 
 ## Avisos
 
@@ -27,8 +27,8 @@ Se o valor fornecido não possuir unidade, a função assume que o valor está e
 
 ## Erros
 
-Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicamente, interrompem o compilador e mostram uma mensagem no _output stream_ tal como o _stack trace_, o que é útil para _debugging_. Por causa disto, erros deverão ser lançados quando não há mais forma do programa continuar a correr. Sempre que possível, tentem antes contornar o problema e mostrar um aviso em seu lugar.
+Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicamente, interrompem o compilador e mostram uma mensagem no *output stream* tal como o *stack trace*, o que é útil para *debugging*. Por causa disto, erros deverão ser lançados quando não há mais forma do programa continuar a correr. Sempre que possível, tentem antes contornar o problema e mostrar um aviso em seu lugar.
 
-Como exemplo, digamos que querem construir uma função _getter_ para aceder a valores de um _map_ específico. Poderiam lançar um erro se a chave pedida não existir no _map_.
+Como exemplo, digamos que querem construir uma função *getter* para aceder a valores de um mapa específico. Poderiam lançar um erro se a chave pedida não existir no mapa.
 
 {% include snippets/errors/02/index.html %}

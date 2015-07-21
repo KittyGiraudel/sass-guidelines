@@ -26,6 +26,8 @@ _quotes_ | aspas
 _single quotes_ | aspas curvas simples (ou) plicas
 _to crash_ | rebentar
 _loop_ | ciclo
+_TL;DR_ | Longo Demais; Não Li
+_tab_ | tabulação
 
 ## A não traduzir
 - _commit_
@@ -43,3 +45,5 @@ _loop_ | ciclo
 - _breakpoint_
 - _media query_
 - _flag_
+- _sprite_
+- _lint_
