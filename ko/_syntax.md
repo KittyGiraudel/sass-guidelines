@@ -46,6 +46,27 @@
 
 ## 문자열
 
+믿거나 말거나, 문자열은 CSS와 Sass 생태계에서 꽤 중요한 역할을 합니다. 대부분의 CSS 값들은 길이 혹은 (주로 따옴표가 없는) 문자열이기 때문에, Sass에서 문자열을 다룰 때는 어느 정도 가이드라인을 따르는 것이 사실 제법 중요합니다.
+
+### 인코딩
+
+문자 인코딩과 관련한 잠재적인 문제를 피하기 위해서는, [메인 스타일시트](#main-file)에서 `@charset` 지시어를 사용해 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 인코딩을 강제하는 것이 강력하게 권장됩니다. 이 지시어가 스타일시트의 가장 첫 번째 요소이고 어떤 종류의 문자도 앞에 오지 않도록 하세요.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+@charset 'utf-8';
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+@charset 'utf-8'
+{% endhighlight %}
+  </div>
+</div>
+
+### 따옴표
+
 CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지어 공백을 포함한 경우에도요. 예를 들면 font-family가 있습니다: 따옴표로 감쌌는지 여부는 CSS 파서에게 문제가 되지 않습니다.
 
 이 때문에, Sass *역시* 문자열이 따옴표로 둘러싸일 것을 요구하지 않습니다. 더 나아가 (그리고 여러분도 인정하듯이, 운이 좋게도) 따옴표로 둘러싸인 문자열은 그렇지 않은 쌍둥이와 정확히 동일합니다(예를 들면 `'abc'`는 `abc`와 정확히 동일합니다).
