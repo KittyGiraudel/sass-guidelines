@@ -59,54 +59,7 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 
 이상적으로, 우리는 이런 구조를 만들어 낼 수 있습니다:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Typography rules
-|   ...                  # Etc…
-|
-|– components/
-|   |– _buttons.scss     # Buttons
-|   |– _carousel.scss    # Carousel
-|   |– _cover.scss       # Cover
-|   |– _dropdown.scss    # Dropdown
-|   ...                  # Etc…
-|
-|– layout/
-|   |– _navigation.scss  # Navigation
-|   |– _grid.scss        # Grid system
-|   |– _header.scss      # Header
-|   |– _footer.scss      # Footer
-|   |– _sidebar.scss     # Sidebar
-|   |– _forms.scss       # Forms
-|   ...                  # Etc…
-|
-|– pages/
-|   |– _home.scss        # Home specific styles
-|   |– _contact.scss     # Contact specific styles
-|   ...                  # Etc…
-|
-|– themes/
-|   |– _theme.scss       # Default theme
-|   |– _admin.scss       # Admin theme
-|   ...                  # Etc…
-|
-|– utils/
-|   |– _variables.scss   # Sass Variables
-|   |– _functions.scss   # Sass Functions
-|   |– _mixins.scss      # Sass Mixins
-|   |– _helpers.scss     # Class & placeholders helpers
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Etc…
-|
-|
-`– main.scss             # primary Sass file
-</code></pre></div>
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>파일은 위에서 설명한 작명 관례를 따라 하이픈으로 구분됩니다.</p>
@@ -219,72 +172,7 @@ sass/
 * 한 폴더로부터의 마지막 import 다음에는 새 줄 하나로 간격을 둔다.
 * 파일 확장자와 앞에 붙는 언더스코어는 생략한다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'vendors/bootstrap';
-@import 'vendors/jquery-ui';
-
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/cover';
-@import 'components/dropdown';
-
-@import 'pages/home';
-@import 'pages/contact';
-
-@import 'themes/theme';
-@import 'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import vendors/bootstrap
-@import vendors/jquery-ui
-
-@import utils/variables
-@import utils/functions
-@import utils/mixins
-@import utils/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import components/buttons
-@import components/carousel
-@import components/cover
-@import components/dropdown
-
-@import pages/home
-@import pages/contact
-
-@import themes/theme
-@import themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02/index.html %}
 
 부분 파일을 불러오는 다른 합당한 방법도 있습니다. 밝은 면을 보자면, 이 방법은 파일을 보다 읽기 좋게 만듭니다. 반면, 수정하는 일은 약간 괴로워집니다. 어쨌든, 어느 것이 최고인지는 여러분이 결정하게 하겠습니다. 이건 별 문제가 안 되니까요. 이 방법으로 하면, 메인 파일은 이 가이드라인을 준수해야 합니다:
 
@@ -294,86 +182,7 @@ sass/
 * 한 폴더로부터의 마지막 import 다음에는 새 줄 하나로 간격을 둔다;
 * 파일 확장자와 앞에 붙는 언더스코어는 생략한다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  vendors/bootstrap,
-  vendors/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>각 파일을 수동으로 불러오지 않기 위해서는, <code>@import "components/*"</code>와 같이 Sass <code>@import</code>에서 glob 패턴을 사용할 수 있게 해주는 <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>이라는 Ruby Sass의 확장이 있습니다.</p>
@@ -384,35 +193,7 @@ sass/
 
 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com), [Chris Coyier](http://css-tricks.com)에 의해 알려진 흥미로운 개념이 있습니다. 이는 모든 CSS 선언과 핵, 그리고 우리가 자랑스럽게 여기지 않는 것들을 *수치 파일*에 넣는 것으로 이루어집니다. 이 파일은, 극적이게도 `_shame.scss`라고 불리며, 스타일시트의 맨 끝에서, 다른 모든 파일들 다음으로 불러들여질 것입니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Nav specificity fix.
- *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Nav specificity fix.
- *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/04/index.html %}
 
 ###### 참고
 

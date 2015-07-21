@@ -13,32 +13,7 @@ Sass 플레이스홀더는 이 목록에서 일부러 제외했습니다. 플레
 
 변수, 함수, 믹스인에 관해서, 우리는 매우 *CSS스러운* 것을 고수할 것입니다: **하이픈으로 구분된 소문자**, 그리고 무엇보다도 의미있는 이름이어야 합니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$vertical-rhythm-baseline: 1.5rem;
-
-@mixin size($width, $height: $width) {
-  // ...
-}
-
-@function opposite-direction($direction) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$vertical-rhythm-baseline: 1.5rem
-
-=size($width, $height: $width)
-  // ...
-
-@function opposite-direction($direction)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/01/index.html %}
 
 ###### 참고
 
@@ -50,26 +25,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 많은 언어들의 경우처럼, 상수에 대해 저는 모두 대문자로 된 스네이크 케이스 변수를 권합니다. 이것이 매우 오래된 관례일 뿐만 아니라, 보통의 하이픈으로 연결된 소문자 변수와 잘 대비되기 때문입니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$CSS_POSITIONS: (top, right, bottom, left, center);
-
-// Nope
-$css-positions: (top, right, bottom, left, center);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$CSS_POSITIONS: (top, right, bottom, left, center)
-
-// Nope
-$css-positions: (top, right, bottom, left, center)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/02/index.html %}
 
 ###### 참고
 
@@ -81,25 +37,7 @@ $css-positions: (top, right, bottom, left, center)
 
 예를 들면, 세계 전역의 개발자들에 의해 사용될 *Sassy Unicorn* 프로젝트를 작업하고 있다면 (누가 아니겠어요, 그렇죠?), `su-`를 네임스페이스로 붙이는 걸 고려할 수 있을 겁니다. 이 정도면 어떤 명명 충돌도 방지할 수 있을 정도로 충분히 구체적이고 쓰기 괴롭지 않을 정도로 충분히 짧습니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$su-configuration: ( ... );
-
-@function su-rainbow($unicorn) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$su-configuration: ( ... )
-
-@function su-rainbow($unicorn)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/03/index.html %}
 
 <div class="note">
   <p>자동 네임스페이스는 단연 사스 4.0에서 곧 있을 `@import` 개선의 설계 목표입니다. 그것이 결실을 맺기에 가까워지면서, 수동 네임스페이스는 점점 유용성이 떨어질 것입니다: 결국에는, 수동 네임스페이스를 이용한 라이브러리는 실제로 사용하기가 더 어려워질 수도 있습니다.</p>

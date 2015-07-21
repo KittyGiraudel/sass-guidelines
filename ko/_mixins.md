@@ -11,62 +11,11 @@
 
 믹스인은 아주 유용하며 아마 여러분도 사용하고 있을 겁니다. 대략적으로 이야기하자면, (우연이 아닌) 어떤 이유로 항상 같이 모습을 보이는 CSS 속성들의 그룹을 발견하게 되면, 그것들을 믹스인에 넣을 수 있습니다. 예를 들면 [Nicolas Gallagher의 마이크로 클리어픽스 핵](http://nicolasgallagher.com/micro-clearfix-hack/)은 (매개변수 없는) 믹스인 안에 들어갈 만합니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Helper to clear inner floats
-/// @author Nicolas Gallagher
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Helper to clear inner floats
-/// @author Nicolas Gallagher
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix
-  &::after
-    content: ''
-    display: table
-    clear: both
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/01/index.html %}
 
 다른 타당한 예로는 요소의 크기를 조절하는 믹스인이 있으며, `width`와 `height`를 동시에 정의합니다. 이는 코드 입력을 간단하게 만들 뿐만 아니라 쉽게 읽을 수 있도록 해 줍니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Helper to size an element
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Helper to size an element
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/02/index.html %}
 
 ###### 참고
 
@@ -78,77 +27,13 @@
 
 믹스인에 들어가는 매개변수의 개수를 알 수 없을 때는, 리스트 대신 항상 `arglist`를 사용하세요. `arglist`는 임의의 수의 매개변수를 믹스인이나 함수에 전달할 때 암묵적으로 사용되는 Sass의 여덟 번째 데이터 유형이라고 생각할 수 있으며, `...`이 그 특징입니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin shadows($shadows...) {
-  // type-of($shadows) == 'arglist'
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=shadows($shadows...)
-  // type-of($shadows) == 'arglist'
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/03/index.html %}
 
 몇 개의 매개변수(3개 혹은 그 이상)를 취하는 믹스인을 만들 때, 하나하나 넘겨주는 것보다 쉬울 거라는 생각으로 매개변수들을 리스트나 맵으로 병합하기 전에 다시 생각해 보세요.
 
 Sass는 사실 믹스인과 함수 선언에 재주가 있어서, 리스트나 맵을 함수/믹스인에 매개변수 리스트로 전달해 일련의 매개변수들로 읽히도록 할 수 있습니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin dummy($a, $b, $c) {
-  // ...
-}
-
-// Yep
-@include dummy(true, 42, 'kittens');
-
-// Yep but nope
-$params: (true, 42, 'kittens');
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
-
-// Yep
-$params: (true, 42, 'kittens');
-@include dummy($params...);
-
-// Yep
-$params: (
-  'c': 'kittens',
-  'a': true,
-  'b': 42,
-);
-@include dummy($params...);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=dummy($a, $b, $c)
-  // ...
-
-// Yep
-+dummy(true, 42, 'kittens')
-
-// Yep but nope
-$params: (true, 42, 'kittens')
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3))
-
-// Yep
-$params: (true, 42, 'kittens')
-+dummy($params...)
-
-// Yep
-$params: ('c': 'kittens', 'a': true, 'b': 42,)
-+dummy($params...)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/04/index.html %}
 
 ###### 참고
 
@@ -162,82 +47,15 @@ $params: ('c': 'kittens', 'a': true, 'b': 42,)
 
 만약 Autoprefixer를 사용할 수 없고 Bourbon이나 Compass도 사용할 수 없다면, 오직 그런 경우에만, 여러분 스스로 CSS 속성에 프리픽스를 붙이는 믹스인을 만들어 사용할 수 있습니다. 하지만. 바라건대 속성마다 하나씩 믹스인을 만들어 각 벤더를 수동으로 출력하진 마세요.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Nope
-@mixin transform($value) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  transform: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Nope
-=transform($value)
-  -webkit-transform: $value
-  -moz-transform: $value
-  transform: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/05/index.html %}
 
 영리한 방식으로 하세요.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin helper to output vendor prefixes
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin helper to output vendor prefixes
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-=prefix($property, $value, $prefixes: ())
-  @each $prefix in $prefixes
-    -#{$prefix}-#{$property}: $value
-
-  #{$property}: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/06/index.html %}
 
 이 믹스인을 사용하는 것은 아주 간단합니다:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  @include prefix(transform, rotate(90deg), ('webkit', 'ms'));
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  +prefix(transform, rotate(90deg), ('webkit', 'ms'))
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/07/index.html %}
 
 이것은 조악한 해결책이라는 점을 명심하세요. 예를 들면, Flexbox에 필요한 것과 같은 복잡한 폴리필은 처리하지 못합니다. 그런 면에서, Autoprefixer를 사용하는 것이 훨씬 나은 선택입니다.
 

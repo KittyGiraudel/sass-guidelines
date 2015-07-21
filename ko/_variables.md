@@ -21,133 +21,24 @@ Sass의 변수 스코프는 수년 동안 변화해왔습니다. 아주 최근�
 
 다음의 코드 스니펫은 *변수 가림* 개념을 설명하고 있습니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Initialize a global variable at root level.
-$variable: 'initial value';
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Create a local variable that shadows the global one.
-  $variable: 'local value';
-
-  // Include the mixin: it overrides the global variable.
-  @include global-variable-overriding;
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable;
-}
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Initialize a global variable at root level.
-$variable: 'initial value'
-
-// Create a mixin that overrides that global variable.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Create a local variable that shadows the global one.
-  $variable: 'local value'
-
-  // Include the mixin: it overrides the global variable.
-  +global-variable-overriding
-
-  // Print the variable’s value.
-  // It is the **local** one, since it shadows the global one.
-  content: $variable
-
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/01/index.html %}
 
 ## `!default` 플래그
 
 라이브러리나 프레임워크, 그리드 시스템, 혹은 배포되어 외부의 개발자들에 의해 사용될 Sass 소품을 개발할 때는, 덮어쓰일 수 있도록 모든 환경설정 변수들을 `!default` 플래그를 붙여 정의하여야 합니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
 이 덕분에, 개발자는 여러분의 라이브러리를 import하기 *전에* 재정의될 걱정 없이 자신의 `$baseline` 변수를 정의할 수 있습니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Developer’s own variable
-$baseline: 2em;
-
-// Your library declaring `$baseline`
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Developer's own variable
-$baseline: 2em
-
-// Your library declaring `$baseline`
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/03/index.html %}
 
 ## `!global` 플래그
 
 `!global` 플래그는 지역 스코프로부터 전역 변수를 정의할 때에만 사용되어야 한다.
 루트 레벨에서 변수를 정의할 때, `!global` 플래그는 생략되어야 한다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$baseline: 2em;
-
-// Nope
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$baseline: 2em
-
-// Nope
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/04/index.html %}
 
 ## 여러 개의 변수 혹은 맵
 
@@ -155,47 +46,4 @@ $baseline: 2em !global
 
 맵 사용의 또다른 장점은 사용이 편리한 API를 제공하는 작은 getter 함수를 만드는 기능입니다. 다음의 Sass 코드를 예로 들 수 있습니다:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer’s name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer’s name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer’s name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer’s name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}
