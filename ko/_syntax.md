@@ -418,7 +418,7 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 ## 색
 
-색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 펑션](http://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
+색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 함수](http://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
 
 ### 색 서식
 
@@ -527,15 +527,15 @@ $main-theme-color: $sass-pink
 
 ### 색 명암 조절
 
-[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 펑션은 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 펑션의 `$lightness` 매개 변수의 가명일 뿐입니다.
+[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개 변수의 가명일 뿐입니다.
 
-문제는, 이들 펑션이 가끔 기대되는 결과를 제공하지 않는다는 것입니다. 반면에, [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 펑션은 색을 `white`나 `black`과 혼합함으로써 명암을 조절하는 좋은 방법입니다.
+문제는, 이들 함수가 가끔 기대되는 결과를 제공하지 않는다는 것입니다. 반면에, [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 함수는 색을 `white`나 `black`과 혼합함으로써 명암을 조절하는 좋은 방법입니다.
 
-앞서 언급한 두 펑션보다 `mix`를 사용하는 것의 이점은 색의 비율을 감소시킴에 따라 점진적으로 검은 색(혹은 흰 색)으로 나아간다는 점입니다. 반면 `darken`과 `lighten`은 색을 순식간에 완전한 검은 색이나 흰 색으로 보내버릴 것입니다.
+앞서 언급한 두 함수보다 `mix`를 사용하는 것의 이점은 색의 비율을 감소시킴에 따라 점진적으로 검은 색(혹은 흰 색)으로 나아간다는 점입니다. 반면 `darken`과 `lighten`은 색을 순식간에 완전한 검은 색이나 흰 색으로 보내버릴 것입니다.
 
 {% include images/color-functions.html %}
 
-만약 매번 `mix` 펑션을 쓰는 것을 원치 않으신다면, 두 가지 사용하기 쉬운 ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)에 포함되어 있기도 한) `tint`와 `shade` 평션을 만들어 같은 일을 할 수 있습니다:
+만약 매번 `mix` 함수를 쓰는 것을 원치 않으신다면, 두 가지 사용하기 쉬운 ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)에 포함되어 있기도 한) `tint`와 `shade` 평션을 만들어 같은 일을 할 수 있습니다:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -581,7 +581,7 @@ $main-theme-color: $sass-pink
 </div>
 
 <div class="note">
-  <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 펑션은 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 펑션은 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
+  <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 함수는 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 함수는 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
 </div>
 
 ###### 참고
@@ -775,7 +775,7 @@ $breakpoints: (
   </div>
 </div>
 
-맵의 깊이를 알고 싶으시면 아래 펑션을 추가하세요. 위의 믹신이 자동으로 값을 표시할 것입니다.
+맵의 깊이를 알고 싶으시면 아래 함수를 추가하세요. 위의 믹스인이 자동으로 값을 표시할 것입니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -880,9 +880,9 @@ $breakpoints: (
 CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심을 기울여야 합니다:
 
 * 지역 변수는 어떤 선언보다 먼저 선언되어야 하며, 새 줄 하나로 다른 선언들과 간격을 둔다;
-* `@content`가 없는 믹신 호출은 다른 선언보다 앞에 위치한다;
+* `@content`가 없는 믹스인 호출은 다른 선언보다 앞에 위치한다;
 * 내포된 선택자는 언제나 새 줄 뒤에 온다;
-* `@content`를 가진 믹신 호출은 내포된 선택자보다 뒤에 위치한다;
+* `@content`를 가진 믹스인 호출은 내포된 선택자보다 뒤에 위치한다;
 * 닫는 중괄호(`}`) 앞에는 새 줄이 없어야 한다.
 
 보기:
@@ -1109,7 +1109,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 {% endhighlight %}
 </div>
 
-같은 방식으로, Sass 3.3부터는 현재 선택자 인용(`&`)을 이용해 고급 선택자를 생성하는 것이 가능합니다. 예를 들면:
+같은 방식으로, Sass 3.3부터는 현재 선택자 참조(`&`)를 이용해 고급 선택자를 생성하는 것이 가능합니다. 예를 들면:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -1151,7 +1151,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 이 방법은 종종 [BEM 작명 관례](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)와 함께 `.block__element`와 `.block__modifier` 선택자를 원래 선택자(이 경우엔 `.block`)에 기반하여 생성하는 데 사용됩니다.
 
 <div class="note">
-  <p>반드시 그런 건 아닐 수도 있지만, 현재 선택자 인용(<code>&</code>)으로 새로운 선택자를 생성하면 그 선택자 자체가 코드베이스에 존재하지 않기 때문에 검색을 할 수 없게 됩니다.</p>
+  <p>반드시 그런 건 아닐 수도 있지만, 현재 선택자 참조(<code>&</code>)로 새로운 선택자를 생성하면 그 선택자 자체가 코드베이스에 존재하지 않기 때문에 검색을 할 수 없게 됩니다.</p>
 </div>
 
 선택자 내포의 문제는 결과적으로 코드를 읽기 어렵게 만든다는 것입니다. 읽기 위해서는 들여쓰기의 단계를 바탕으로 산출되는 선택자를 마음속으로 계산해야 합니다; CSS가 어떤 모습이 될지 항상 명확한 것은 아닙니다.
@@ -1246,7 +1246,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
   </div>
 </div>
 
-경험이 적은 개발자와 함께 일한다면, `.no-opacity &` 같은 선택자는 조금 이상해보일 수 있습니다. 혼란을 방지하기 위해, 이 이상한 구문을 명확한 API로 바꿔놓는 아주 짧은 믹신을 만들 수 있습니다.
+경험이 적은 개발자와 함께 일한다면, `.no-opacity &` 같은 선택자는 조금 이상해보일 수 있습니다. 혼란을 방지하기 위해, 이 이상한 구문을 명확한 API로 바꿔놓는 아주 짧은 믹스인을 만들 수 있습니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

@@ -105,7 +105,7 @@ Sass가 `@if`과 `@else` 지시어를 통해 조건문을 제공한다는 것을
   </div>
 </div>
 
-어떤 조건에 따라 다른 결과를 반환하는 펑션 안에서 조건문을 사용할 때는, 반드시 펑션이 조건문 블록 밖에서도 `@return`문을 갖도록 만드세요.
+어떤 조건에 따라 다른 결과를 반환하는 함수 안에서 조건문을 사용할 때는, 반드시 함수가 조건문 블록 밖에서도 `@return`문을 갖도록 만드세요.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

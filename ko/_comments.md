@@ -77,7 +77,7 @@ $imported-modules: append($imported-modules, $module) !global
 
 ## 문서화
 
-코드베이스 전역에서 사용되도록 만들어진 모든 변수, 펑션, 믹신, 플레이스홀더는 [SassDoc](http://sassdoc.com)을 이용하여 글로벌 API의 일부로서 문서화되어야 합니다.
+코드베이스 전역에서 사용되도록 만들어진 모든 변수, 함수, 믹스인, 플레이스홀더는 [SassDoc](http://sassdoc.com)을 이용하여 전역 API의 일부로서 문서화되어야 합니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -107,7 +107,7 @@ SassDoc은 두 가지 중요한 역할을 합니다:
 
 {% include images/sassdoc.html %}
 
-SassDoc으로 문서화된 믹신의 예시입니다:
+SassDoc으로 문서화된 믹스인의 예시입니다:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
