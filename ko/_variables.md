@@ -19,7 +19,7 @@ Sass의 변수 스코프는 수년 동안 변화해왔습니다. 아주 최근�
 
 문서를 보면 *전역 변수 가림shadowing*에 대한 부분이 있습니다. 전역 스코프에 이미 존재하는 변수를 내부 스코프(선택자, 펑션, 믹신...)에서 선언할 때, 지역 변수가 전역 변수를 *가린다*고 말합니다. 기본적으로, 지역 변수가 지역 스코프 내에서는 우선시됩니다.
 
-다음의 코드 스니펫은 *변수 가림* 개념을 설명하고 있다.
+다음의 코드 스니펫은 *변수 가림* 개념을 설명하고 있습니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -96,7 +96,7 @@ $baseline: 1em !default
   </div>
 </div>
 
-이 덕분에, 개발자는 여러분의 라이브러리를 import하기 *전에* 재정의될 걱정 없이 자신의 `$baseline` 변수를 정의할 수 있다.
+이 덕분에, 개발자는 여러분의 라이브러리를 import하기 *전에* 재정의될 걱정 없이 자신의 `$baseline` 변수를 정의할 수 있습니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">

@@ -156,7 +156,7 @@ $params: ('c': 'kittens', 'a': true, 'b': 42,)
 
 ## 믹신과 벤더 프리픽스
 
-지원이 미비하거나 부분적으로 지원되는 CSS 속성을 위한 벤더 프리픽스 처리용 믹신을 정의하는 것은 솔깃한 일일 수 있습니다. 그러나 그건 좋은 생각이 아닙니다.  우선, [Autoprefixer](https://github.com/postcss/autoprefixer)를 사용할 수 있다면 Autoprefixer를 사용하세요. 여러분의 프로젝트에서 Sass 코드를 없애 주고, 항상 최신 정보를 반영하며, 프리픽스를 처리하는 데에는 여러분보다 훨씬 나을 것입니다.
+지원이 미비하거나 부분적으로 지원되는 CSS 속성을 위한 벤더 프리픽스 처리용 믹신을 정의하는 것은 솔깃한 일일 수 있습니다. 그러나 그건 좋은 생각이 아닙니다. 우선, [Autoprefixer](https://github.com/postcss/autoprefixer)를 사용할 수 있다면 Autoprefixer를 사용하세요. 여러분의 프로젝트에서 Sass 코드를 없애 주고, 항상 최신 정보를 반영하며, 프리픽스를 처리하는 데에는 여러분보다 훨씬 나을 것입니다.
 
 불행하게도, Autoprefixer를 선택할 수 없는 상황도 있을 수 있죠. [Bourbon](http://bourbon.io/)이나 [Compass](http://compass-style.org/)를 사용하신다면, 둘 모두 벤더 프리픽스를 처리하는 믹신들을 제공한다는 것을 알고 계실 겁니다. 그것들을 사용하세요.
 
