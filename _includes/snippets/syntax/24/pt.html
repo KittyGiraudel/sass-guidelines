@@ -1,0 +1,38 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Sim
+.foo, .foo-bar,
+.baz {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+// Não
+.foo,
+.foo-bar, .baz {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto }
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Sim
+.foo, .foo-bar,
+.baz
+  display: block
+  overflow: hidden
+  margin: 0 auto
+
+// Não
+.foo,
+.foo-bar, .baz
+    display: block
+    overflow: hidden
+    margin: 0 auto
+{% endhighlight %}
+  </div>
+</div>

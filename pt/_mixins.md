@@ -1,7 +1,7 @@
 
 # Mixins
 
-Os Mixins são uma das funcionalidades mais usadas em todo o Sass. São a chave para reutilização de código e componentes DRY (DRY significa, em Inglês, Don't Repeat Yourself. Em português podemos traduzir para "Não te repitas"). Os Mixins têm esta caraterística por uma boa razão: eles permitem que o programador defina estilos que podem ser reutilizados em todas os ficheiros de estilos, sem precisarem de utilizar classes não semânticas como `.float-left`.
+Os Mixins são uma das funcionalidades mais usadas em todo o Sass. São a chave para reutilização de código e componentes DRY (DRY significa, em Inglês, *Don't Repeat Yourself*. Em português podemos traduzir para "Não te repitas"). Os Mixins têm esta caraterística por uma boa razão: eles permitem que o programador defina estilos que podem ser reutilizados em todas os ficheiros de estilos, sem precisarem de utilizar classes não semânticas como `.float-left`.
 
 Os Mixins podem conter regras de CSS e praticamente tudo o que é permitido num documento Sass.
 Podem por exemplo, ter argumentos da mesma forma que uma função. As funcionalidades que um Mixin permite são imensas.
@@ -35,7 +35,7 @@ Quando estão a lidar com um mixin que tem um número desconhecido de argumentos
 Quando estiverem a construir um mixin que aceita três ou mais argumentos, deves pensar duas vezes antes de os passar como uma lista ou uma mapa só porque é mais fácil do que os passar uma a um.
 O Sass é bastante inteligente relativamente aos mixins e a declaração de funções. Tanto que podemos passar uma lista ou um mapa de argumentos como uma arglist para um mixin ou uma função e estes vão ser lidos como uma série de argumentos.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippets/mixins/04/pt.html %}
 
 ###### Leitura adicional
 
@@ -49,7 +49,7 @@ Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](h
 
 Se não podem usar Autoprefixer nem Bourbon ou Compass, então, apenas nesta situação, podem criar o vosso próprio mixin para colocar prefixos em propriedades de CSS. Mas, por favor, não criem um mixin por propriedade.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippets/mixins/05/pt.html %}
 
 Façam isso de uma forma inteligente.
 

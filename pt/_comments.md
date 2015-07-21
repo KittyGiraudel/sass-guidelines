@@ -1,5 +1,5 @@
 
-# Comentar
+# Comentários
 
 CSS é uma linguagem traiçoeira, repleta de _hacks_ e esquisitices. Por causa disto, deverá ser altamente comentada, especialmente se vocês ou outras pessoas pretenderem ler e actualizar o código daqui a 6 meses ou 1 ano. Não deixem vocês ou qualquer outra pessoa estar na posição de *eu-não-escrevi-isto-ó-meu-deus-porquê*.
 

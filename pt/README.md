@@ -9,6 +9,7 @@ uma certa expressão ou que expressões não deverão ser traduzidas, por exempl
 
 ## Diretrizes
 - Incluir em _itálicos_ todos os termos que não se traduzem (por exemplo, _issue_).
+- Escrever na terceira pessoa do plural.
 
 ## Traduções frequentes
 Inglês | Português
@@ -23,6 +24,8 @@ _codebase_ | base de código
 _bitwise operator_ | operador binário
 _quotes_ | aspas
 _single quotes_ | aspas curvas simples (ou) plicas
+_to crash_ | rebentar
+_loop_ | ciclo
 
 ## A não traduzir
 - _commit_
@@ -32,4 +35,11 @@ _single quotes_ | aspas curvas simples (ou) plicas
 - _polyfill_
 - _string_
 - _array_
-
+- _debug_
+- _mixin_
+- _namespace_
+- _placeholder_
+- _endpoint_
+- _breakpoint_
+- _media query_
+- _flag_

@@ -12,7 +12,7 @@ Há muitas arquiteturas populares para projectos de CSS: [OOCSS](http://oocss.or
 Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), e que se foca em manter as coisas simples e óbvias.
 
 <div class="note">
-  <p>Eu aprendi que a arquitetura é muito especifica para o projeto. Sente te à vontade para ignorares ou adaptares a solução proposta para lidares com um sistema que se adapta melhor às tuas necessidade</p>
+  <p>Eu aprendi que a arquitetura é muito especifica para o projeto. Estejam à vontade para ignorarem ou adaptarem a solução proposta para lidarem com um sistema que se adapta melhor às vossas necessidades.</p>
 </div>
 
 ###### Leitura Adicional
@@ -26,7 +26,7 @@ Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacs
 
 ## Componentes
 
-Há uma grande diferença entre fazer algo *funcionar* e fazer algo *bom*. Mais uma vez, CSS é uma linguagem muito desorganizada <sup>[Citação Necessária]</sup>. Quanto menos CSS tiverem melhor. Nós não queremos lidar com megabytes de CSS. Para manter as nossas folhas de estilo pequenas e efecientes&mdash;e isto não será nenhuma surpresa para ti&mdash; é normalmente uma boa ideia pensar numa interface como uma coleção de componentes.
+Há uma grande diferença entre fazer algo *funcionar* e fazer algo *bom*. Mais uma vez, CSS é uma linguagem muito desorganizada <sup>[carece de fontes]</sup>. Quanto menos CSS tiverem, melhor. Nós não queremos lidar com megabytes de CSS. Para manter as nossas folhas de estilo pequenas e efecientes&mdash;e isto não será nenhuma surpresa para ti&mdash; é normalmente uma boa ideia pensar numa interface como uma coleção de componentes.
 
 Componentes podem ser qualquer coisa desde que:
 
@@ -111,7 +111,7 @@ Se tiveres estilos específicos a páginas, o melhor será colocá-las na pasta 
   <p>Dependendo do processo de desenvolvimento estes ficheiros podem ser chamados individualmente para evitar que eles se juntem com outros quando todas as folhas de estilo se juntam. Na realidade é uma questão de preferência.</p>
 </div>
 
-### Pasta Temas
+### Pasta Themes
 
 Em grandes sites ou aplicações, é comum existirem vários temas. Há certamente diversas maneira de lidar com temas mas eu pessoalmente gosto de colocar tudo numa pasta com o nome `themes/`.
 
@@ -176,7 +176,7 @@ De maneira a preservar a legibilidade, o ficheiro principal deverá seguir as se
 
 Existe outra maneira de importar parciais que também considero válida. O lado positivo dela é que torna o ficheiro mais legível. Por outro lado, faz qualquer mudança a esse ficheiro mais difícil. De qualquer maneira eu vou deixar isto ao vosso critério pois a diferença não é muita. Ao importar desta maneira o ficheiro principal deve seguir as seguintes diretrizes:
 
-* um `@import`por pasta;
+* um `@import` por pasta;
 * linha de espaço entre cada `@import`;
 * cada ficheiro fica na sua linha;
 * uma linha de espaço depois da ultima importação numa pasta;

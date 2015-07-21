@@ -25,7 +25,7 @@ Se por acaso são programadores de *frameworks* ou bibliotecas, poderão encontr
 
 Tal como para várias linguagens, eu sugiro variáveis em maiúsculas e delimitadas por subtraços (_) quando são constantes. Não só é uma convenção muito antiga, mas também contrasta bem com as habituais variáveis em minúsculas e separadas por hífens.
 
-{% include snippets/naming/02/index.html %}
+{% include snippets/naming/02/pt.html %}
 
 ###### Leitura adicional
 

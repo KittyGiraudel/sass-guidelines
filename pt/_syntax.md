@@ -184,7 +184,7 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
 
 ## Listas
 
-Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" (ao contrário de [_mapas_](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
+Listas são o equivalente de arrays. Uma lista é uma estrutura de dados *"flat"* (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
 
 As listas devem respeitar as seguintes orientações:
 
@@ -194,11 +194,11 @@ As listas devem respeitar as seguintes orientações:
 * sempre envolvivas em parêntesis;
 * finalizadas com um ponto final em multi-linha.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippets/syntax/19/pt.html %}
 
 Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippets/syntax/20/pt.html %}
 
 ###### Leitura adicional
 
@@ -222,7 +222,7 @@ Mapas devem ser escritos da seguinte forma:
 
 Ilustração:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippets/syntax/21/pt.html %}
 
 ### Debugging num mapa Sass
 
@@ -260,7 +260,7 @@ A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas
 
 Ilustração:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippets/syntax/24/pt.html %}
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
@@ -289,7 +289,7 @@ Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética
 
 {% include snippets/syntax/26/index.html %}
 
-Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: tipo de letra ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
+Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: `font` ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
 
 {% include snippets/syntax/27/index.html %}
 
