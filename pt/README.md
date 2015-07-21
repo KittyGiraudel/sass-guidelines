@@ -1,4 +1,4 @@
-# Translation notes
+# Translation Notes
 
 The purpose of this file is to define some common guidelines for translations
 performed by several people. As you might know, translating anything from one
