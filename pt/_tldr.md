@@ -13,7 +13,7 @@ Resumindo, queremos:
 * Nada de números mágicos;
 * Cores expressas em palavras > HSL > RGB > hexadecimal;
 * Listas separadas com vírgulas;
-* Não usar vírgulas no fim de listas (visto que são linha única)
+* Não usar vírgulas no fim de listas (visto que são linha única);
 * Vírgula no fim de mapas;
 * Não encadear seletores exceto para pseudo-classes e pseudo-elementos;
 * Nomenclatura delineada por hífens;
