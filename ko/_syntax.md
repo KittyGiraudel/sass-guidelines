@@ -101,7 +101,7 @@ $direction: left
 
 ### CSS 값인 문자열
 
-Specific CSS values such as `initial`이나 `sans-serif` 같은 특정 CSS 값은 따옴표로 싸여서는 안됩니다. `font-family: 'sans-serif'` 같은 선언의 경우 CSS는 인용부호가 붙은 문자열이 아니라 식별자를 기대하고 있기 때문에 아무 경고도 없이 작동하지 않을 것입니다. 이 때문에, 그런 값들은 따옴표로 감싸지 않습니다.
+`initial`이나 `sans-serif` 같은 특정 CSS 값은 따옴표로 싸여서는 안됩니다. `font-family: 'sans-serif'` 같은 선언의 경우 CSS는 인용부호가 붙은 문자열이 아니라 식별자를 기대하고 있기 때문에 아무 경고도 없이 작동하지 않을 것입니다. 이 때문에, 그런 값들은 따옴표로 감싸지 않습니다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
