@@ -22,7 +22,7 @@ Acreditem ou não, strings desempenham um papel muito importante tanto em ecosis
 
 ### Codificação
 
-Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](http://en.wikipedia.org/wiki/UTF-8) na principal [folha de estilos](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folha de estilos e que não existe mais nenhum carater antes deste.
+Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) na principal [folha de estilos](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folha de estilos e que não existe mais nenhum carater antes deste.
 
 {% include snippets/syntax/02/index.html %}
 
