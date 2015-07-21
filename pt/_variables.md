@@ -25,7 +25,7 @@ O enxerto de código seguinte explica o conceito de *ocultação de variável*
 
 ## `!default` flag
 
-Quando se está a construir uma biblioteca, uma framework, um sistema de grelhas ou qualquer pedaço de código Sass com a intenção de ser distribuido e usado por programadores externos, todas as variáeis de configuração devem ser definidas com o marcador `!default` de forma a que possam ser substituidas.
+Quando se está a construir uma biblioteca, uma *framework*, um sistema de grelhas ou qualquer pedaço de código Sass com a intenção de ser distribuido e usado por programadores externos, todas as variáeis de configuração devem ser definidas com o marcador `!default` de forma a que possam ser substituidas.
 
 {% include snippets/variables/02/index.html %}
 

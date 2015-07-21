@@ -59,7 +59,7 @@ Usar este mixin deve ser bastante simples:
 
 {% include snippets/mixins/07/index.html %}
 
-Por favor não se esqueçam que isto não é uma solução feliz. Por exemplo, esta solução não consegue lidar com polyfills complexos como os que são necessários para o Flexbox. Neste sentido, usar o Autoprefixer é uma solução muito melhor.
+Por favor não se esqueçam que isto não é uma solução feliz. Por exemplo, esta solução não consegue lidar com *polyfills* complexos como os que são necessários para o Flexbox. Neste sentido, usar o Autoprefixer é uma solução muito melhor.
 
 ###### Leitura Adicional
 

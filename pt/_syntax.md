@@ -22,7 +22,7 @@ Acreditem ou não, strings desempenham um papel muito importante tanto em ecosis
 
 ### Codificação
 
-Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) na principal [folha de estilos](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folha de estilos e que não existe mais nenhum carater antes deste.
+Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) na principal [folhas de estilo](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folhas de estilo e que não existe mais nenhum caráter antes deste.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -39,13 +39,13 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
 
-{% include snippets/syntax/03/index.html %}
+{% include snippets/syntax/03/pt.html %}
 
 ### Strings como valores CSS
 
 Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippets/syntax/04/pt.html %}
 
 Desta forma, podemos fazer uma distinção entre strings que pretendemos utilizar como valores de CSS (identificadores) como no exemplo anterior, e strings quando nos referimos aos tipos de dados em Sass, como por exemplo índices de mapas.
 
@@ -55,13 +55,13 @@ Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simpl
 
 Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippets/syntax/05/pt.html %}
 
 ### URLs
 
 URLs devem ser envolvidos em aspas:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippets/syntax/06/pt.html %}
 
 ###### Leitura adicional
 
@@ -76,19 +76,19 @@ Em Sass, um número representa um tipo de dados que inclui tudo desde números s
 
 Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippets/syntax/07/pt.html %}
 
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippets/syntax/08/pt.html %}
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippets/syntax/09/pt.html %}
 
 Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
 
@@ -98,7 +98,7 @@ No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se ap
 
 Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippets/syntax/11/pt.html %}
 
 Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
 
@@ -110,7 +110,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 ### Números mágicos
 
-"Números mágicos" (Magic number) dizem respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
+"Números mágicos" (*magic numbers*) dizem respeito a um [termo antigo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
@@ -136,13 +136,13 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>carece de fontes</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippets/syntax/14/pt.html %}
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippets/syntax/15/pt.html %}
 
 ### Cores e variáveis
 
@@ -184,7 +184,7 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
 
 ## Listas
 
-Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
+Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" (ao contrário de [_mapas_](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
 
 As listas devem respeitar as seguintes orientações:
 

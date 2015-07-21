@@ -20,7 +20,7 @@ Há cenários onde extender seletores pode valer a pena e até ajudar. No entant
 
 * Usem o extend apenas dentro do módulo, não através de módulos diferentes.
 * Usem o extend em placeholders exclusivamente e não em seletores reais.
-* Tenham a certeza que o placeholder que estão a extender se encontra presente o mínimo possivel pela folha de estilos.
+* Tenham a certeza que o placeholder que estão a extender se encontra presente o mínimo possivel pela folhas de estilo.
 
 Se vão usar o extend, deixem-me também lembrar que ele não funciona bem com blocos `@media`. Tal como devem saber, o Sass é incapaz de extender um seletor exterior a partir de dentro de uma media query. Quando se experimenta, o compilador simplesmente rebenta, avisando-vos de que não consegue fazer tal coisa. Não é bom. Especialmente porque media queries são maioritariamente o que fazemos agora.
 
