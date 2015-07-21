@@ -57,6 +57,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
   </div>
 </div>
 
+<div class="note">
+  <p>앞의 예시들은 브레이크포인트를 정의하기 위해 맵을 중첩해서 사용하고 있지만, 이건 여러분이 어떤 브레이크포인트 매니저를 사용하는가에 전적으로 달렸습니다. 유연성을 위해 맵을 포개어넣는 대신 문자열을 선택할 수도 있을 겁니다. (예를 들면 <code>'(min-width: 800px)'</code>).</p>
+</div>
+
 ###### 참고
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
@@ -73,8 +77,12 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
       @content;
     }
   } @else {
@@ -91,8 +99,12 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
 =respond-to($breakpoint)
-  @if map-has-key($breakpoints, $breakpoint)
-    @media #{inspect(map-get($breakpoints, $breakpoint))}
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
       @content
 
   @else
@@ -103,8 +115,7 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 </div>
 
 <div class="note">
-  <p>확실히 이것은 임의의 수치나 여러 개의 브레이크포인트를 체크할 때는 도움이 안 되는 지나치게 단순한 브레이크포인트 매니저입니다.</p>
-  <p>만약 좀 더 많은 것을 허용하는 브레이크포인트 매니저가 필요하다면, 새로 만들 것 없이 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a>, <a href="https://github.com/eduardoboucas/include-media">include-media</a>와 같은 효과가 증명된 도구들을 사용하시길 권합니다.</p>
+  <p>확실히, 이건 아주 단순한 브레이크포인트 매니저입니다. 좀 더 많은 기능을 제공하는 브레이크포인트 매니저가 필요하다면, 바퀴를 새로 발명할 것 없이 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a>, <a href="https://github.com/eduardoboucas/include-media">include-media</a>와 같은 효과가 검증된 것을 사용하기를 권합니다.</p>
 </div>
 
 ###### 참고
