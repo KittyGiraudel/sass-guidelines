@@ -50,7 +50,7 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 
 이 때문에, Sass *역시* 문자열이 따옴표로 둘러싸일 것을 요구하지 않습니다. 더 나아가 (그리고 여러분도 인정하듯이, 운이 좋게도) 따옴표로 둘러싸인 문자열은 그렇지 않은 쌍둥이와 정확히 동일합니다(예를 들면 `'abc'`는 `abc`와 정확히 동일합니다).
 
-그렇기는 하나, 문자열이 따옴표에 둘러싸일 것을 요구하지 않는 언어들은 분명히 소수이고 따라서, Sass에서 **문자열은 언제나 작은 따옴표로 감싸져야 합니다**(*qwerty* 자판에서 작은 따옴표가 큰 따옴표보다 입력하기 쉬우므로). CSS의 사촌 JavaScript를 포함한 다른 언어와의 일관성 외에도, 이 선택에 대한 몇 가지 이유가 있습니다:
+그렇기는 하나, 문자열이 따옴표에 둘러싸일 것을 요구하지 않는 언어들은 분명히 소수이고 따라서, Sass에서 **문자열은 언제나 작은 따옴표(`'`)로 감싸져야 합니다**(*qwerty* 자판에서 작은 따옴표가 큰 따옴표보다 입력하기 쉬우므로). CSS의 사촌 JavaScript를 포함한 다른 언어와의 일관성 외에도, 이 선택에 대한 몇 가지 이유가 있습니다:
 
 * 색 이름은 따옴표가 없으면 색으로 취급되는데, 이는 심각한 문제로 이어질 수 있다;
 * 대부분의 구문 강조기는 따옴표 없는 문자열을 지원하지 못할 것이다;
@@ -87,6 +87,33 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="note">
   <p>앞의 예시에서, <code>sans-serif</code>는 따옴표가 없어야 하는 하는 특정  CSS 값이기 때문에 따옴표로 싸이지 않았습니다.</p>
 </div>
+
+### 따옴표를 포함한 문자열
+
+만약 문자열이 하나 혹은 여러 개의 작은 따옴표를 포함하고 있다면, 문자열 안에서 과도한 문자 이스케이프를 피하기 위해 대신 큰 따옴표(`"`)로 문자열을 감싸는 것을 고려해 볼 수 있습니다.
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Okay
+@warn 'You can\'t do that.';
+
+// Okay
+@warn "You can't do that.";
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Okay
+@warn 'You can\'t do that.'
+
+// Okay
+@warn "You can't do that."
+{% endhighlight %}
+  </div>
+</div>
+
+### URL
 
 URL 역시 위와 동일한 이유로 따옴표로 감싸여야 합니다:
 
