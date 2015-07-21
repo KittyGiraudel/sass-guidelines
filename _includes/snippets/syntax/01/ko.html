@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+.foo {
+  display: block;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+// Nope
+.foo {
+    display: block; overflow: hidden;
+
+    padding: 0 1em;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Sass 들여쓰기 구문은 위의 코딩 기준을 강제하기 때문에 잘못된 방식으로 처리할
+// 수 없습니다
+.foo
+  display: block
+  overflow: hidden
+  padding: 0 1em
+{% endhighlight %}
+  </div>
+</div>
