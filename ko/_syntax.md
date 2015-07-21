@@ -577,28 +577,30 @@ $main-theme-color: $sass-pink
 
 리스트는 다음의 가이드라인을 준수해야 합니다:
 
-* 글자 80개 길이를 초과할 정도로 길지 않다면, 언제나 한 줄로 표시한다;
-* CSS 용도 그대로 사용하는 게 아니라면, 언제나 쉼표를 구분 문자로 사용한다;
-* 비어 있거나 다른 리스트 안에 포개져있지 않다면, 절대 괄호를 사용하지 않는다;
-* 뒤따르는 쉼표는 절대 붙이지 않는다.
+* 한 줄 혹은 여러 줄;
+* 80자 줄에 안 들어갈 정도로 길면 반드시 여러 줄에 표기한다;
+* CSS 상에서 그대로 사용되지 않는 한, 언제나 쉼표로 분리한다;
+* 언제나 괄호로 감싼다;
+* 여러 줄인 경우 뒤따르는 쉼표를 붙이고, 한 줄인 경우 제외한다.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 // Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif;
+$font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// Nope
-$font-stack:
+// Yep
+$font-stack: (
   'Helvetica',
   'Arial',
-  sans-serif;
+  sans-serif,
+);
 
 // Nope
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
 // Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif);
+$font-stack: 'Helvetica', 'Arial', sans-serif;
 
 // Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
@@ -607,22 +609,23 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 // Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif
-
-// Nope (since it is not supported)
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif
-
-// Nope
-$font-stack: 'Helvetica' 'Arial' sans-serif
-
-// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif)
 
+// Nope (not supported)
+$font-stack: (
+  'Helvetica',
+  'Arial',
+  sans-serif,
+)
+
 // Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif,)
+$font-stack: 'Helvetica' 'Arial' sans-serif;
+
+// Nope
+$font-stack: 'Helvetica', 'Arial', sans-serif;
+
+// Nope
+$font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
   </div>
 </div>
@@ -632,7 +635,7 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,)
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
+$shadows: (0 42px 13.37px hotpink);
 
 // Yep
 $shadows: append($shadows, $shadow, comma);
@@ -643,7 +646,7 @@ $shadows: $shadows, $shadow;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
+$shadows: (0 42px 13.37px hotpink);
 
 // Yep
 $shadows: append($shadows, $shadow, comma)
