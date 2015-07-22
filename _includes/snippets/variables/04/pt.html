@@ -2,24 +2,20 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Variável definida pelo programador
+// Yep
 $baseline: 2em;
 
-// A declaração de `$baseline` da vossa biblioteca
-@import 'your-library';
-
-// $baseline == 2em;
+// Nope
+$baseline: 2em !global;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Variável definida pelo programador
+// Yep
 $baseline: 2em
 
-// A declaração de `$baseline` da vossa biblioteca
-@import your-library
-
-// $baseline == 2em
+// Nope
+$baseline: 2em !global
 {% endhighlight %}
   </div>
 </div>

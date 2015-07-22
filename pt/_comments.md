@@ -1,12 +1,12 @@
 
-# Comentar
+# Comentários
 
 CSS é uma linguagem traiçoeira, repleta de _hacks_ e esquisitices. Por causa disto, deverá ser altamente comentada, especialmente se vocês ou outras pessoas pretenderem ler e actualizar o código daqui a 6 meses ou 1 ano. Não deixem vocês ou qualquer outra pessoa estar na posição de *eu-não-escrevi-isto-ó-meu-deus-porquê*.
 
-Por mais simples que o CSS poderá ser, há sempre lugar para comentários. Estes poderão ser a explicar:
+Por mais simples que CSS seja, há sempre lugar para comentários. Estes poderão ser a explicar:
 
 * a estrutura e/ou função de um ficheiro;
-* o objectivo de um conjunto de regras;
+* o objetivo de um conjunto de regras;
 * a ideia por trás de um “número mágico”;
 * a razão para uma determinada declaração de CSS;
 * a ordem das declarações de CSS;
