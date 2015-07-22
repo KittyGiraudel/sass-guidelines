@@ -39,13 +39,13 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
 
-{% include snippets/syntax/03/pt.html %}
+{% include snippets/syntax/03/index.html %}
 
 ### Strings como valores CSS
 
 Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
-{% include snippets/syntax/04/pt.html %}
+{% include snippets/syntax/04/index.html %}
 
 Desta forma, podemos fazer uma distinção entre strings que pretendemos utilizar como valores de CSS (identificadores) como no exemplo anterior, e strings quando nos referimos aos tipos de dados em Sass, como por exemplo índices de mapas.
 
@@ -55,13 +55,13 @@ Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simpl
 
 Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
 
-{% include snippets/syntax/05/pt.html %}
+{% include snippets/syntax/05/index.html %}
 
 ### URLs
 
 URLs devem ser envolvidos em aspas:
 
-{% include snippets/syntax/06/pt.html %}
+{% include snippets/syntax/06/index.html %}
 
 ###### Leitura adicional
 
@@ -76,19 +76,19 @@ Em Sass, um número representa um tipo de dados que inclui tudo desde números s
 
 Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
-{% include snippets/syntax/07/pt.html %}
+{% include snippets/syntax/07/index.html %}
 
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
-{% include snippets/syntax/08/pt.html %}
+{% include snippets/syntax/08/index.html %}
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
-{% include snippets/syntax/09/pt.html %}
+{% include snippets/syntax/09/index.html %}
 
 Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
 
@@ -98,7 +98,7 @@ No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se ap
 
 Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
-{% include snippets/syntax/11/pt.html %}
+{% include snippets/syntax/11/index.html %}
 
 Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
 
@@ -138,11 +138,11 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 
 Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>carece de fontes</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
-{% include snippets/syntax/14/pt.html %}
+{% include snippets/syntax/14/index.html %}
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
 
-{% include snippets/syntax/15/pt.html %}
+{% include snippets/syntax/15/index.html %}
 
 ### Cores e variáveis
 
@@ -194,11 +194,11 @@ As listas devem respeitar as seguintes orientações:
 * sempre envolvivas em parêntesis;
 * finalizadas com um ponto final em multi-linha.
 
-{% include snippets/syntax/19/pt.html %}
+{% include snippets/syntax/19/index.html %}
 
 Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
-{% include snippets/syntax/20/pt.html %}
+{% include snippets/syntax/20/index.html %}
 
 ###### Leitura adicional
 
@@ -222,7 +222,7 @@ Mapas devem ser escritos da seguinte forma:
 
 Ilustração:
 
-{% include snippets/syntax/21/pt.html %}
+{% include snippets/syntax/21/index.html %}
 
 ### Debugging num mapa Sass
 
@@ -260,7 +260,7 @@ A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas
 
 Ilustração:
 
-{% include snippets/syntax/24/pt.html %}
+{% include snippets/syntax/24/index.html %}
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 

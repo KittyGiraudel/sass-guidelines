@@ -55,7 +55,7 @@ pl:
       link: http://github.com/matchabros
 
 pt:
-  version: 1.0.0
+  version: 1.1.0
   label: Portuguese
   prefix: /pt/
   available: true

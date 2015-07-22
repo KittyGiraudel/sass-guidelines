@@ -37,7 +37,7 @@ Graças a isto, um programador pode definir a sua própria variável `$baseline`
 
 O marcador `!global` deve ser usado apenas quando se vai substituir uma variável global a partir de um contexto local. Quando se define uma variável num contexto global, o uso deste marcador deve ser omitido.
 
-{% include snippets/variables/04/pt.html %}
+{% include snippets/variables/04/index.html %}
 
 ## Variáveis multiplas ou mapas
 

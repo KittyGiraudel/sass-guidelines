@@ -35,7 +35,7 @@ Quando estão a lidar com um mixin que tem um número desconhecido de argumentos
 Quando estiverem a construir um mixin que aceita três ou mais argumentos, deves pensar duas vezes antes de os passar como uma lista ou uma mapa só porque é mais fácil do que os passar uma a um.
 O Sass é bastante inteligente relativamente aos mixins e a declaração de funções. Tanto que podemos passar uma lista ou um mapa de argumentos como uma arglist para um mixin ou uma função e estes vão ser lidos como uma série de argumentos.
 
-{% include snippets/mixins/04/pt.html %}
+{% include snippets/mixins/04/index.html %}
 
 ###### Leitura adicional
 
@@ -49,7 +49,7 @@ Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](h
 
 Se não podem usar Autoprefixer nem Bourbon ou Compass, então, apenas nesta situação, podem criar o vosso próprio mixin para colocar prefixos em propriedades de CSS. Mas, por favor, não criem um mixin por propriedade.
 
-{% include snippets/mixins/05/pt.html %}
+{% include snippets/mixins/05/index.html %}
 
 Façam isso de uma forma inteligente.
 
