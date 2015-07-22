@@ -4,7 +4,7 @@ Celem tego pliku jest zdefiniowanie pewnych wytycznych dla ludzi, którzy chcą 
 
 ## Zalecenia
 
-Obecnie brak
+* Zaleca się używanie słownictwa neutralnego, nienacechowanego osobowo. Należy tym samym unikać powszechnie spotykanych rodzajów męskich i męskoosobowych czasowników, odnoszących się do czytelnika z odgórnym założeniem co do płci, np. `Gdzie *umieściłeś* swoje pliki` – `Gdzie *zamieszczone zostały* pliki`, `Gdzie mogą znaleźć je *koledzy* z zespołu` – `Gdzie mogą je znaleźć *inni* z zespołu`.
 
 ## Powszechnie uznane tłumaczenia
 
@@ -19,6 +19,8 @@ Obecnie brak
 | nesting                      | zagnieżdżanie           |
 | namespace                    | przestrzeń nazw (?)     |
 | whitespaces                  | znaki niedrukowalne (?) |
+
+W przypadku jakichkolwiek wątpliwości, zaleca się użycie słowa bądź wyrażenia w jego oryginalnym brzmieniu. Należy bowiem założyć, iż grupa potencjalnych odbiorców tego poradnika ma z reguły na codzień do czynienia ze słownictwem technicznym w języku angielskim, dlatego też usilne przekładanie wszystkiego na język polski zdaje się być nierozsądne.
 
 ## Wyrażenia i słowa, których tłumaczenia powinno się unikać
 
