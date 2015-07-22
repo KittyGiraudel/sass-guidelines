@@ -115,3 +115,11 @@ A lot of code snippets contain only `// Yep` and `// Nope` as comments. These te
 ### Empty lines
 
 Try to preserve the usage of empty lines in your translation. Not only does it make all translations consistent in the usage of blank lines, it also makes life easier for me when comparing the same files in two different languages.
+
+### “Sass Guidelines” title
+
+The project title, “Sass Guidelines”, is not translated.
+
+### Wikipedia links
+
+There are a few links to Wikipedia articles in the document. When possible, try to link to the version of your language rather than the English one. Most Wikipedia articles are translated in several languages, so chances are high that you can link to your own.
