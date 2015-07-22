@@ -1,9 +1,9 @@
 
 # Convenções de nomenclatura
 
-Nesta secção, não iremos lidar com as melhores convenções de nomenclatura para manutenção e escalabilidade; não só isso apenas vos diz respeito, como também está fora do âmbito de um guia de estilos de Sass. Eu sugiro os recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+Nesta secção, não iremos lidar com as melhores convenções de nomenclatura para manutenção e escalabilidade; não só isso apenas vos diz respeito, como também está fora do âmbito de um guia de estilo de Sass. Eu sugiro os recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
-Existem algumas coisas às quais podem dar nome em Sass, e é importante nomeá-las correctamente para que toda a base de código pareça consistente e fácil de ler:
+Existem algumas coisas às quais podem dar nome em Sass, e é importante nomeá-las corretamente para que toda a base de código pareça consistente e fácil de ler:
 
 * variáveis;
 * funções;
@@ -25,7 +25,7 @@ Se por acaso são programadores de *frameworks* ou bibliotecas, poderão encontr
 
 Tal como para várias linguagens, eu sugiro variáveis em maiúsculas e delimitadas por subtraços (_) quando são constantes. Não só é uma convenção muito antiga, mas também contrasta bem com as habituais variáveis em minúsculas e separadas por hífens.
 
-{% include snippets/naming/02/index.html %}
+{% include snippets/naming/02/pt.html %}
 
 ###### Leitura adicional
 
@@ -33,7 +33,7 @@ Tal como para várias linguagens, eu sugiro variáveis em maiúsculas e delimita
 
 ## Namespace
 
-Se tencionam distribuir o vosso código Sass, no caso de uma biblioteca, uma *framework*, um sistema de grelhas ou o que seja, talvez queiram considerar colocar todas as vossas variáveis, funções, *mixins* e *placeholders* no seu próprio *namespace*, para que não entrem em conflito com o código de ninguém.
+Se tencionam distribuir o vosso código Sass, no caso de uma biblioteca, uma *framework*, um sistema de grelhas ou o que seja, talvez queiram considerar colocar todas as vossas variáveis, funções, *mixins* e *placeholders* no seu próprio *namespace*, para que não entrem em conflito com o código de alguém.
 
 Por exemplo, se trabalharem num projecto chamado *Sassy Unicorn* que se destina a ser usado por programadores de todo o mundo (quem não o faria, não é?), poderiam considerar usar `su-` como *namespace*. É específico o suficiente para prevenir colisões de nomes e curto o suficiente para não ser maçador a escrever.
 

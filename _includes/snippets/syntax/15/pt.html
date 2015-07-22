@@ -4,27 +4,28 @@
 {% highlight scss %}
 // Sim
 .foo {
-  display: block;
-  overflow: hidden;
-  padding: 0 1em;
+  color: rgba(0, 0, 0, 0.1);
+  background: hsl(300, 100%, 100%);
 }
 
 // Não
 .foo {
-    display: block; overflow: hidden;
-
-    padding: 0 1em;
+  color: rgba(0,0,0,0.1);
+  background: hsl( 300, 100%, 100% );
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Uma vez que Sass força estes padrões de indentação,
-// não há como errar aqui.
+// Sim
 .foo
-  display: block
-  overflow: hidden
-  padding: 0 1em
+  color: rgba(0, 0, 0, 0.1)
+  background: hsl(300, 100%, 100%)
+
+// Não
+.foo
+  color: rgba(0,0,0,0.1)
+  background: hsl( 300, 100%, 100% )
 {% endhighlight %}
   </div>
 </div>

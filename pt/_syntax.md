@@ -1,7 +1,7 @@
 
 # Formatação e sintaxe
 
-Se me perguntarem a mim, diria que a primeira coisa que um guia de estilos deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
+Se me perguntarem a mim, diria que a primeira coisa que um guia de estilo deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
 
 Quando vários programadores estão responsáveis por escrever CSS simultaneamente nos mesmos projectos, é apenas uma questão de tempo até que um deles comece a escrever as coisas à sua maneira. Guias de estilo que promovam consistência não só previnem isto, mas ajudam também à leitura e manutenção do código.
 
@@ -18,6 +18,16 @@ Não vamos entrar na discussão de organização de ficheiros nesta secção, ma
 
 ## Strings
 
+Acreditem ou não, strings desempenham um papel muito importante tanto em ecosistemas CSS e Sass. A maior parte dos valores de CSS são medidas ou strings (geralmente sem aspas), por isso é bastante crucial seguir algumas regras.
+
+### Codificação
+
+Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) na principal [folhas de estilo](#main-file), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folhas de estilo e que não existe mais nenhum caráter antes deste.
+
+{% include snippets/syntax/02/index.html %}
+
+### Aspas
+
 CSS não necessita que strings apareçam entre aspas, nem mesmo as que contêm espaços. Peguemos no exemplo de font-family: não importa se utilizamos aspas no início e no fim.
 
 Graças a isto, Sass *também* não necessita que as strings sejam entre aspas. Melhor ainda (e *felizmente*), uma string entre aspas é estritamente equivalente à sua irmã gémea sem aspas (por ex., `'abc'` é estritamente igual a `abc`).
@@ -29,40 +39,29 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Sim
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+{% include snippets/syntax/03/pt.html %}
 
-// Não
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
+### Strings como valores CSS
 
-// Não
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Sim
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
+Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
-// Não
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
+{% include snippets/syntax/04/pt.html %}
 
-// Não
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
-{% endhighlight %}
-  </div>
-</div>
+Desta forma, podemos fazer uma distinção entre strings que pretendemos utilizar como valores de CSS (identificadores) como no exemplo anterior, e strings quando nos referimos aos tipos de dados em Sass, como por exemplo índices de mapas.
 
-<div class="note">
-  <p>No exemplo anterior, <code>sans-serif</code> não está sob aspas porque representa um valor concreto de CSS.</p>
-</div>
+Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simples.
 
-URLs também devem seguir a mesma regra:
+### Strings com aspas
 
-{% include snippets/syntax/06/index.html %}
+Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
+
+{% include snippets/syntax/05/pt.html %}
+
+### URLs
+
+URLs devem ser envolvidos em aspas:
+
+{% include snippets/syntax/06/pt.html %}
 
 ###### Leitura adicional
 
@@ -77,19 +76,19 @@ Em Sass, um número representa um tipo de dados que inclui tudo desde números s
 
 Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippets/syntax/07/pt.html %}
 
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippets/syntax/08/pt.html %}
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippets/syntax/09/pt.html %}
 
 Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
 
@@ -99,7 +98,7 @@ No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se ap
 
 Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippets/syntax/11/pt.html %}
 
 Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
 
@@ -111,7 +110,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 ### Números mágicos
 
-"Números mágicos" (Magic number) dizem respeito a um [antigo termo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
+"Números mágicos" (*magic numbers*) dizem respeito a um [termo antigo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
@@ -137,13 +136,13 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Anotação hexadecimal, preferencialmente em minúsculas.
 
-Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>sem citação<sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>carece de fontes</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippets/syntax/14/pt.html %}
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippets/syntax/15/pt.html %}
 
 ### Cores e variáveis
 
@@ -185,23 +184,25 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
 
 ## Listas
 
-Listas são o equivalente de arrays. Uma lista é uma estrutura de dados "flat" (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
+Listas são o equivalente de arrays. Uma lista é uma estrutura de dados *"flat"* (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
 
 As listas devem respeitar as seguintes orientações:
 
-* a não ser que seja demasiado longa para caber numa linha de 80 caracteres, usar apenas uma linha;
-* a não ser que seja usada literalmente em código CSS, usar sempre uma vírgula como delimitador;
-* a não ser que seja uma lista vazia ou aninhada em outra lista, nunca escrever os parêntesis;
-* nunca terminar com uma vírgula.
+* sejam uma linha ou várias;
+* necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
+* a não ser para fins de CSS, sempre separadas por vírgula;
+* sempre envolvivas em parêntesis;
+* finalizadas com um ponto final em multi-linha.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippets/syntax/19/pt.html %}
 
 Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippets/syntax/20/pt.html %}
 
 ###### Leitura adicional
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 ## Mapas
@@ -221,7 +222,7 @@ Mapas devem ser escritos da seguinte forma:
 
 Ilustração:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippets/syntax/21/pt.html %}
 
 ### Debugging num mapa Sass
 
@@ -237,6 +238,7 @@ Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin 
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
@@ -258,7 +260,7 @@ A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas
 
 Ilustração:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippets/syntax/24/pt.html %}
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
@@ -287,7 +289,7 @@ Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética
 
 {% include snippets/syntax/26/index.html %}
 
-Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: tipo de letra ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
+Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: `font` ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
 
 {% include snippets/syntax/27/index.html %}
 
@@ -299,7 +301,7 @@ Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CS
 
 {% include images/order-poll.html %}
 
-Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolhe aquele que preferires, desde que sejas consistente ao longo das tuas folhas de estilo.
+Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção *aleatória*).
 
 <div class="note">
   <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
@@ -328,7 +330,7 @@ Por exemplo, o seguinte código aninhado em Sass:
 
 {% include snippets/syntax/30/index.html %}
 
-Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor actual (`&`) para gerar seletores avançados. Por exemplo:
+Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor atual (`&`) para gerar seletores avançados. Por exemplo:
 
 {% include snippets/syntax/31/index.html %}
 
@@ -339,12 +341,12 @@ Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor
 Este método é geralmente usado em conjunto com [a nomenclatura BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para gerar os seletores `.block__element` e `.block--modifier` baseados no seletor original (neste caso, `.block`).
 
 <div class="note">
-  <p>Embora pareça anedótico, gerar novos seletores a partir da referência ao seletor actual (<code>&</code>) torna os seletores impossíveis de procurar no código, já que não existem per se.</p>
+  <p>Embora pareça anedótico, gerar novos seletores a partir da referência ao seletor atual (<code>&</code>) torna os seletores impossíveis de procurar no código, já que não existem per se.</p>
 </div>
 
 O problema com aninhar seletores é que, em última instância, torna o código mais difícil de ler. O leitor tem de mentalmente computador o seletor resultante a partir dos níveis de indentação; nem sempre é óbvio o que é que o CSS resultante acabará por ser.
 
-Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor actual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
+Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor atual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
 
 Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível**. No entanto, há exceções óbvias a esta regra.
 
@@ -364,15 +366,15 @@ Por fim, quando se estiliza um elemento só porque ele está dentro de outro ele
 
 {% include snippets/syntax/35/index.html %}
 
-Quando se trabalha com programadores inexperientes, um selector como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
+Quando se trabalha com programadores inexperientes, um seletor como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
 
 {% include snippets/syntax/36/index.html %}
 
-Reescrevendo o nosso exemplo anterior, ficaria assim:
+Reescrevendo o nosso exemplo anterior, ficaria então assim:
 
 {% include snippets/syntax/37/index.html %}
 
-Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com selectores aninhados, então usa selectores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
+Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com seletores aninhados, então usa seletores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 
 ###### Leitura adicional
 

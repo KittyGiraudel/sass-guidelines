@@ -58,10 +58,12 @@ pt:
   version: 1.0.0
   label: Portuguese
   prefix: /pt/
-  available: false
+  available: true
   translators:
     - name: Ricardo Magalhães
       link: https://github.com/magalhini
+    - name: Gonçalo Morais
+      link: https://github.com/gnclmorais
     - name: Sara Vieira
       link: https://github.com/saravieira
     - name: Eduardo Bouças
