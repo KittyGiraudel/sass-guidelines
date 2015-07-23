@@ -45,7 +45,7 @@ Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko
 
 Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu drobnych dodatków do samego CSSa.
 
-Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Można jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <button data-toggle="aside" class="link-like" role="button" type="button">panelu opcji</button>.
+<p>Ja osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Można jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <label for="aside-toggle" class="link-like">panelu opcji</label>.</p>
 
 ###### Dalsze informacje
 

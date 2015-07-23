@@ -45,7 +45,7 @@ Siden da har Sass (preprocessoren) tilbudt to forskellige syntakser: Sass (uden 
 
 Sass' whitespace-sensitive syntaks afhænger af indentering for at fjerne klammer, semi-kolonner og andre tegnsætningssymboler, hvilket leder til en slankere og kortere syntaks. Samtidig, så er SCSS nemmere at lære da det egentlig bare er CSS med lidt ekstra ovenpå.
 
-Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarere for de fleste udviklere. På grund af det, så er SCSS standard-syntaksen for disse retningslinjer. Du kan skifte til indenteret Sass syntaks via <button data-toggle="aside" class="link-like" role="button" type="button">indstillingspanelet</button>.
+<p>Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarere for de fleste udviklere. På grund af det, så er SCSS standard-syntaksen for disse retningslinjer. Du kan skifte til indenteret Sass syntaks via <label for="aside-toggle" class="link-like">indstillingspanelet</label>.</p>
 
 ###### Videre læsning
 

@@ -45,7 +45,7 @@ Since then, Sass (the preprocessor) has been providing two different syntaxes: S
 
 Sass’s whitespace-sensitive syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to learn since it’s mostly some tiny extra bits on top of CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <button data-toggle="aside" class="link-like" role="button" type="button">options panel</button>.
+<p>I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <label for="aside-toggle" class="link-like">options panel</label>.</p>
 
 ###### Further reading
 
