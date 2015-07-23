@@ -4,7 +4,7 @@ Diese Datei dient dazu einige grundsätzliche Guidelines zu defineren, wenn mehr
 
 ## Generelle Übersetzungen
 
-| English                      | Your language           |
+| English                      | Deutsch           |
 |------------------------------|-------------------------|
 | _preprocessor_ | Präprozessor | 
 
