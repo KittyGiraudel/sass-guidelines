@@ -4,7 +4,7 @@ Celem tego pliku jest zdefiniowanie pewnych wytycznych dla ludzi, którzy chcą 
 
 ## Zalecenia
 
-* Zaleca się używanie słownictwa neutralnego, nienacechowanego osobowo. Należy tym samym unikać powszechnie spotykanych rodzajów męskich i męskoosobowych czasowników, odnoszących się do czytelnika z odgórnym założeniem co do płci, np. `Gdzie *umieściłeś* swoje pliki` – `Gdzie *zamieszczone zostały* pliki`, `Gdzie mogą znaleźć je *koledzy* z zespołu` – `Gdzie mogą je znaleźć *inni* z zespołu`.
+* Zaleca się używanie słownictwa neutralnego, nienacechowanego osobowo. Należy tym samym unikać powszechnie spotykanych rodzajów męskich i męskoosobowych czasowników, a także innych zwrotów odnoszących się do czytelnika z odgórnym założeniem co do płci, np. `Gdzie *umieściłeś* swoje pliki` – `Gdzie *zamieszczone zostały* pliki`, `Gdzie mogą znaleźć je *koledzy* z zespołu` – `Gdzie mogą je znaleźć *inni* z zespołu`.
 
 ## Powszechnie uznane tłumaczenia
 
@@ -12,13 +12,13 @@ Celem tego pliku jest zdefiniowanie pewnych wytycznych dla ludzi, którzy chcą 
 |------------------------------|-------------------------|
 | string                       | ciąg znaków / łańcuch   |
 | directive                    | dyrektywa               |
-| magic number                 | liczba magiczna (?)     |
+| magic number                 | liczba magiczna         |
 | array                        | tablica                 |
-| list (typ danych)            | lista (?)               |
-| map (typ danych)             | mapa (?)                |
+| list (typ danych)            | lista                   |
+| map (typ danych)             | mapa                    |
 | nesting                      | zagnieżdżanie           |
-| namespace                    | przestrzeń nazw (?)     |
-| whitespaces                  | znaki niedrukowalne (?) |
+| namespace                    | przestrzeń nazw         |
+| whitespaces                  | znaki niedrukowalne     |
 
 W przypadku jakichkolwiek wątpliwości, zaleca się użycie słowa bądź wyrażenia w jego oryginalnym brzmieniu. Należy bowiem założyć, iż grupa potencjalnych odbiorców tego poradnika ma z reguły na codzień do czynienia ze słownictwem technicznym w języku angielskim, dlatego też usilne przekładanie wszystkiego na język polski zdaje się być nierozsądne.
 
@@ -26,6 +26,7 @@ W przypadku jakichkolwiek wątpliwości, zaleca się użycie słowa bądź wyra�
 
 * commit
 * issue
+* pull request
 * framework
 * plugin
 * grid
@@ -36,6 +37,10 @@ W przypadku jakichkolwiek wątpliwości, zaleca się użycie słowa bądź wyra�
 * media query
 * sprite
 * extend
+* placeholder
+* stack trace
+* vendor prefix
+* design
 * Responsive Web Design
 
 Nie wyklucza to jednak ich odmiany – np. mixinów, frameworku, breakpointy.

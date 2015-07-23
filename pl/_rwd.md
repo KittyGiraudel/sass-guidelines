@@ -1,7 +1,7 @@
 
 # Responsive Web Design i breakpointy
 
-Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia. Zwłaszcza teraz, gdy jest ono obecne dosłownie wszędzie. Mógłbyś jednak zapytać *dlaczego przewodnik dla stylu Sassa zawiera sekcję poświęconą RWD?* Tak naprawdę to jest kilka rzeczy, które można zrobić aby pracowało się z breakpointami przyjemniej, dlatego też postanowiłem poruszyć ten temat tutaj.
+Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia. Zwłaszcza teraz, gdy jest ono obecne dosłownie wszędzie. Można jednak pokusić się o pytanie – *dlaczego przewodnik dla stylu Sassa zawiera sekcję poświęconą RWD?* Tak naprawdę to jest kilka rzeczy, które można zrobić aby pracowało się z breakpointami przyjemniej, dlatego też postanowiłem poruszyć ten temat tutaj.
 
 ## Nazywanie breakpointów
 
@@ -16,7 +16,7 @@ Każda konwencja nazwowa, jaką w tym miejscu przyjmiemy, będzie dobra o ile ty
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
-  <p>Poprzednie przykłady korzystają z zagnieżdżonych map do definiowania breakpointów, niemniej jednak w dużej mierze zależy to od konkretnego menadżera breakpointów, z jakiego korzystasz. Możesz również zdecydować się na korzystanie z ciągów znaków (strings) zamiast map dla lepszej elastyczności (np. <code>'(min-width: 800px)'</code>).</p>
+  <p>Poprzednie przykłady korzystają z zagnieżdżonych map do definiowania breakpointów, niemniej jednak w dużej mierze zależy to od konkretnego menadżera breakpointów, jaki jest w danej sytuacji wykorzystywany. Możesz również zdecydować się na korzystanie z ciągów znaków (strings) zamiast map dla lepszej elastyczności (np. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
 ###### Dalsze informacje
@@ -25,12 +25,12 @@ Każda konwencja nazwowa, jaką w tym miejscu przyjmiemy, będzie dobra o ile ty
 
 ## Menadżer breakpointów
 
-W momencie gdy Twoje breakpointy są już nazwane, potrzebujesz sposobu by ich użyć w faktycznych media queries. Jest wiele możliwości by to zrobić, jednak muszę przyznać że jestem wielkim fanem funkcji wydobywających breakpointy z map.
+W momencie gdy breakpointy są już nazwane, potrzeba sposobu by ich faktycznie użyć w media queries. Jest wiele możliwości by to zrobić, jednak muszę przyznać że jestem wielkim fanem funkcji wydobywających breakpointy z map.
 
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Oczywiście, jest to dosyć uproszczone podejście do zarządzania breakpointami. Jeśli potrzebujesz rozwiązania bardziej rozbudowanego, zalecam nie odkrywać Ameryki na nowo lecz sprawdzić to, co już istnieje, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Oczywiście, jest to dosyć uproszczone podejście do zarządzania breakpointami. Jeśli potrzebne jest rozwiązanie bardziej rozbudowane, zalecam nie odkrywać Ameryki na nowo lecz sprawdzić to, co już istnieje, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
 ###### Dalsze informacje
@@ -53,7 +53,7 @@ Możesz usłyszeć opinie, że taka konwencja prowadzi do duplikowania media que
 > … rozstrzygając zagadnienie łączenia bądź rozbijania Media Queries w wielu miejscach i konsekwencji, jakie oba rozwiązania niosą dla kwestii wydajności, doszliśmy do wniosku, że różnica jest conajmniej minimalna, a w zasadzie nieistniejąca.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), odnośnie [Breakpoint](http://breakpoint-sass.com/)
 
-Jeśli jednak masz obawy co do duplikowania media queries, istnieją takie narzędzia do ich scalania, jak [ten gem](https://github.com/aaronjensen/sass-media_query_combiner). Muszę Cię jednak ostrzec przed możliwymi skutkami ubocznymi przenoszenia z miejsca na miejsce kodu CSS. Należy wszak pamiętać, że w tym wypadku kolejność źródłowa ma kluczowe znaczenie.
+Jeśli są jednak obawy co do duplikowania media queries, istnieją takie narzędzia do ich scalania, jak [ten gem](https://github.com/aaronjensen/sass-media_query_combiner). Muszę w tym momencie jednak ostrzec przed możliwymi skutkami ubocznymi przenoszenia z miejsca na miejsce kodu CSS. Należy wszak pamiętać, że w tym wypadku kolejność źródłowa ma kluczowe znaczenie.
 
 ###### Dalsze informacje
 
