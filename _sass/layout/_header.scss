@@ -35,6 +35,7 @@
  * Baseline
  */
 .baseline {
+  @include container;
   font-size: 2em;
   text-transform: initial;
   color: $main-color;
@@ -42,5 +43,9 @@
 
   @include respond-to('medium') {
     font-size: 2.5em;
+  }
+
+  @include respond-to('large') {
+    max-width: 975px;
   }
 }

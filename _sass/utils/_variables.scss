@@ -72,5 +72,6 @@ $figure-background: $light-grey;
 /// Breakpoints
 /// @type Map
 $breakpoints: (
-  'medium': 801px
+  'medium': 801px,
+  'large': 975px
 );

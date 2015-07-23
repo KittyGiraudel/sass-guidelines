@@ -1,4 +1,22 @@
 (function (global) {
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    }
+  }
 
   function hasClass(elem, className) {
     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -40,6 +58,50 @@
     this.addHeadingAnchors();
     this.fixSkipLinks();
     this.bindUI();
+    this.toc();
+  };
+
+  App.prototype.toc = function () {
+    var toc     = document.getElementById('markdown-toc');
+    var content = document.getElementById('content');
+    var top     = getOffset(toc, 'Top');
+    var left    = getLeft();
+
+    function getOffset(elem, direction) {
+      var offset = 0;
+      do {
+        if (!isNaN(elem['offset' + direction])) {
+          offset += elem['offset' + direction];
+        }
+      } while(elem = elem.offsetParent);
+
+      return offset;
+    }
+
+    function getLeft() {
+      var width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+      return width - getOffset(content, 'Left') + 14.4;
+    }
+
+    function sticky() {
+      var current = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (current > top) {
+        addClass(toc, 'sticky');
+        toc.style.right = left + 'px';
+      } else {
+        removeClass(toc, 'sticky');
+      }
+    }
+
+    document.addEventListener('scroll', debounce(sticky, 100));
+
+    window.addEventListener('resize', debounce(function (event) {
+      left = getLeft();
+      sticky();
+    }, 100));
+
+    sticky();
   };
 
   App.prototype.bindUI = function () {

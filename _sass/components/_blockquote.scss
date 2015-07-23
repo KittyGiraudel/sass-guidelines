@@ -2,38 +2,17 @@
  * Quotes
  */
 blockquote {
-  margin: 0;
   @include vertical-rhythm;
+  @include expand;
+  margin-top: 0;
+  margin-bottom: 0;
   background: $quote-background;
   padding: 1rem;
   overflow: hidden;
   font-style: italic;
   border: 1px solid rgba(black, 0.1);
 
-  /**
-   * Make all children containers
-   */
   > * {
-    @include container;
-  }
-
-  /**
-   * On large screens, add a decorative quote
-   */
-  @include respond-to("medium") {
-    > :first-child {
-      position: relative;
-
-      &::before {
-        font-style: normal;
-        content: "“";
-        font-family: "Georgia", serif;
-        position: absolute;
-        font-size: 20em;
-        right: 100%;
-        top: -.3875em;
-        color: rgba(black, .05);
-      }
-    }
+    margin: 0;
   }
 }

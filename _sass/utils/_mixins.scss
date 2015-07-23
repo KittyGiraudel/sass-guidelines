@@ -1,15 +1,18 @@
 /// Define the element as a container
 /// @author Hugo Giraudel
 @mixin container {
-  max-width: 730px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
 
-  @include respond-to("medium") {
-    padding-left: 0;
-    padding-right: 0;
+/// Make an element slightly overflow its container on the sides on large screens
+@mixin expand {
+  @include respond-to('medium') {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 }
 

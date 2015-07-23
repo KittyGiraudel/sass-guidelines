@@ -1,11 +1,19 @@
 .translation-warning {
-  margin: 0;
   @include vertical-rhythm;
+  margin: 0;
   background: $quote-background;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 1.2em;
+
+  @include respond-to('medium') {
+    padding: 1rem;
+  }
 }
 
-.translation-warning > p {
+.translation-warning__inner {
   @include container;
+
+  @include respond-to('large') {
+    max-width: 975px;
+  }
 }

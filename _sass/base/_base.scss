@@ -48,3 +48,17 @@ a,
   font-size: 0.8em;
   vertical-align: middle;
 }
+
+.main {
+  max-width: 975px;
+  margin: 0 auto;
+  position: relative;
+
+  @include respond-to('large') {
+    padding-left: 300px;
+  }
+}
+
+.container {
+  @include container;
+}

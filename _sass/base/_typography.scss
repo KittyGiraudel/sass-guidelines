@@ -1,9 +1,10 @@
 /**
  * Vertical rhythm
  */
-h1, h2, h3, h4, h6, p, ul, ol, pre, img {
-  @include container;
-  @include vertical-rhythm;
+.container > {
+  h1, h2, h3, h4, h6, p, ul, ol, pre, img {
+    @include vertical-rhythm;
+  }
 }
 
 /**
