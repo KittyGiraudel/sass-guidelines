@@ -232,16 +232,6 @@ Illustration:
 
 {% include snippets/syntax/21/index.html %}
 
-### Debugging a Sass map
-
-If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
-
-{% include snippets/syntax/22/index.html %}
-
-If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Further reading
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
