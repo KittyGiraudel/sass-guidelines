@@ -50,12 +50,12 @@ a,
 }
 
 .main {
-  max-width: 975px;
+  max-width: $main-width;
   margin: 0 auto;
   position: relative;
 
   @include respond-to('large') {
-    padding-left: 300px;
+    padding-left: $sidebar-width;
   }
 }
 

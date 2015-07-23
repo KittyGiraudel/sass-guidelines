@@ -46,6 +46,6 @@
   }
 
   @include respond-to('large') {
-    max-width: 975px;
+    max-width: $main-width;
   }
 }

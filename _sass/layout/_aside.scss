@@ -10,7 +10,7 @@
   transition: .15s cubic-bezier(.32, 1, .53, .8);
 
   @include respond-to('medium') {
-    width: 300px;
+    width: $sidebar-width;
   }
 
   .button {

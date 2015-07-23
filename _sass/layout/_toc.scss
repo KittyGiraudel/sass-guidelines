@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 300px;
+    width: $sidebar-width;
     margin: 0;
     padding: 20px 10px;
     overflow-x: hidden;
@@ -21,7 +21,7 @@
   #markdown-toc.sticky {
     position: fixed;
     left: auto;
-    margin-left: 150px;
+    margin-left: ($sidebar-width / 2);
     opacity: 0.4;
     transition: opacity 5s ease-in-out;
   }
