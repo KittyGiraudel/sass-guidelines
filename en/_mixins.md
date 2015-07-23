@@ -21,7 +21,6 @@ Another valid example would be a mixin to size an element, defining both `width`
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 ## Argument-less mixins
 
@@ -69,5 +68,4 @@ Please keep in mind this is a poor solution. For instance, it cannot deal with c
 
 ###### Further reading
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

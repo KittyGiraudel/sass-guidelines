@@ -15,8 +15,6 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 ###### Further reading
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 * [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass or LibSass
@@ -31,9 +29,7 @@ On non-Ruby projects that need a workflow integration, LibSass is probably a bet
 
 ###### Further reading
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass or SCSS
@@ -69,10 +65,3 @@ You can think of postprocessors as a polyfill for unsupported CSS features. For 
 The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
 
 While providing tomorrow’s syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we’ll get back to this.
-
-###### Further reading
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)

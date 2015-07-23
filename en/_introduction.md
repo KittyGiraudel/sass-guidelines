@@ -52,6 +52,4 @@ An example of styleguide extension can be found on the [SassDoc repository](http
 
 ###### Further reading
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
