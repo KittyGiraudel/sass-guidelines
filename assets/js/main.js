@@ -70,7 +70,7 @@
 
       link = document.createElement('a');
       link.setAttribute('href', '#' + heading.id);
-      link.innerHTML = '§';
+      link.innerHTML = '🔗';
       link.setAttribute('class', 'anchor-link')
       heading.appendChild(link);
     }
