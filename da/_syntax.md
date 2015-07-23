@@ -184,7 +184,7 @@ Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to l
 
 ## Lister
 
-Lister er Sass' svar på matricer. En liste er en flad datastruktur (modsat [maps](#maps)), der har til hensigt at gemme værdier af enhver type (inklusiv lister, hvilket leder til indlejrede lister).
+Lister er Sass' svar på arrays. En liste er en flad datastruktur (modsat [maps](#maps)), der har til hensigt at gemme værdier af enhver type (inklusiv lister, hvilket leder til indlejrede lister).
 
 Lister bør respektere de følgende retningslinjer:
 
@@ -207,7 +207,7 @@ Når du tilføjer nye artikler til en liste, så brug altid den medfølgende API
 
 ## Maps
 
-Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for en associativ matrice, hashes eller endda JavaScript objekter. Et map er en datastruktur til forbinde nøgler (der kan være af enhver datatype, inklusiv maps, selvom jeg ikke anbefaler det) til værdier af enhver type.
+Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for et associativ array, hashes eller endda JavaScript objekter. Et map er en datastruktur til forbinde nøgler (der kan være af enhver datatype, inklusiv maps, selvom jeg ikke anbefaler det) til værdier af enhver type.
 
 Maps bør altid blive skrevet som følgende:
 
