@@ -28,6 +28,13 @@
     transition: opacity 0.3s ease-out;
   }
 
+  /**
+   * Hide link to ToC
+   */
+  .toc > ul > li:nth-of-type(3) {
+    display: none;
+  }
+
   .toc > ul {
     margin: 0;
     padding: 15px 10px;
