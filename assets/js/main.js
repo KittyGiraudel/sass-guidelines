@@ -62,25 +62,17 @@
   };
 
   App.prototype.toc = function () {
-    var toc     = document.getElementById('markdown-toc');
-    var content = document.getElementById('content');
-    var top     = getOffset(toc, 'Top');
-    var left    = getLeft();
+    var toc = document.querySelector('.toc');
+    var top = getOffset(toc);
 
-    function getOffset(elem, direction) {
+    function getOffset(elem) {
       var offset = 0;
+      
       do {
-        if (!isNaN(elem['offset' + direction])) {
-          offset += elem['offset' + direction];
-        }
+        if (!isNaN(elem.offsetTop)) offset += elem.offsetTop;
       } while(elem = elem.offsetParent);
 
       return offset;
-    }
-
-    function getLeft() {
-      var width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
-      return width - getOffset(content, 'Left') + 14.4;
     }
 
     function sticky() {
@@ -88,19 +80,15 @@
 
       if (current > top) {
         addClass(toc, 'sticky');
-        toc.style.right = left + 'px';
       } else {
         removeClass(toc, 'sticky');
       }
     }
 
+    // Recompute on scroll
     document.addEventListener('scroll', debounce(sticky, 100));
 
-    window.addEventListener('resize', debounce(function (event) {
-      left = getLeft();
-      sticky();
-    }, 100));
-
+    // Initial call
     sticky();
   };
 

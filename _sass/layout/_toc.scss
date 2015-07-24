@@ -1,58 +1,64 @@
 @include respond-to('large') {
-  #markdown-toc {
+  .toc {
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: $sidebar-width;
-    margin: 0;
     padding: 15px 10px;
     overflow-x: hidden;
     overflow-y: auto;
-    position: absolute;
     font-size: 0.8em;
     background-color: white;
-  }
-
-  #markdown-toc.sticky:hover {
-    opacity: 0.999999;
-    transition: opacity 0.3s ease-out;
-  }
-
-  #markdown-toc.sticky {
-    position: fixed;
-    left: auto;
-    margin-left: ($sidebar-width / 2);
+    display: flex;
     opacity: 0.4;
     transition: opacity 5s ease-in-out;
   }
 
-  #markdown-toc,
-  #markdown-toc ul {
+  .toc.sticky > ul {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .toc.sticky:hover {
+    opacity: 0.999999;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .toc > ul {
+    margin: 0;
+    padding: 15px 10px;
+  }
+
+  .toc ul {
     list-style: none;
   }
 
-  #markdown-toc ul {
+  .toc ul ul {
     padding-left: 15px;
     color: #999;
     margin-top: 10px;
     margin-bottom: 0;
   }
 
-  #markdown-toc > li {
+  .toc > ul > li {
     border-bottom: 1px double #EFEFEF;
     margin-bottom: 10px;
     padding-bottom: 10px;
   }
 
-  #markdown-toc > li:last-of-type{
+  .toc > ul > li:last-of-type {
     border-bottom: 0;
   }
 
-  #markdown-toc a {
+  .toc a {
     text-decoration: none;
   }
 
-  #table-of-contents {
+  .toc h1 {
     display: none;
   }
 }
