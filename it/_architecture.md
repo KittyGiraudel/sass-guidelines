@@ -72,9 +72,9 @@ La cartella `base/` folder contiene ciò che potremmo chiamare il codice boilerp
 * `_reset.scss`
 * `_typography.scss`
 
-### Layout folder
+### La cartella Layout
 
-The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even CSS styles for all the forms.
+La cartella `layout/` contiene tutto ciò che si occupa di creare i layout del sito o dell'applicazione. Questa cartella può raccogliere i fogli di stile per le parti principali del sito (header, footer, navigazione, sidebar...), la griglia (grid), o anche le regole CSS per tutte le form.
 
 * `_grid.scss`
 * `_header.scss`
@@ -84,76 +84,77 @@ The `layout/` folder contains everything that takes part in laying out the site 
 * `_navigation.scss`
 
 <div class="note">
-  <p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p>
+  La cartella <code>layout/</code> può anche esser chiamata <code>partials/</code>; dipende da ciò che preferite.
 </div>
 
-### Components folder
+### La cartella Components
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+Per i piccoli componenti, c'è la cartella `components/`. Mentre `layout/` è *macro* (definisce il *wireframe* globale), `components/` è più focalizzato sui widget. Contiene tutti i moduli specifici come uno slider, un loader, un widget, e via dicendo. Di solito ci sono molti file in `components/`, dato che l'intera applicazione andrebbe composta come l'insieme di tanti piccoli moduli
 
 * `_media.scss`
 * `_carousel.scss`
 * `_thumbnails.scss`
 
 <div class="note">
-  <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
+  <p>La cartella <code>components/</code> può essere anche chiamata <code>modules/</code>; dipende da ciò che preferite.</p>
 </div>
 
-### Pages folder
+### La cartella Pages
 
-If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
+Se si hanno stili specifici per una pagina, è meglio raccoglierli in un file con lo stesso nome in una cartella `pages/`. Non è così strano avere stili particolari per la home page, che avranno bisogno di un `_home.scss` nella cartella `pages/`.
 
 * `_home.scss`
 * `_contact.scss`
 
 <div class="note">
-  <p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
+  <p>A seconda del processo di deploy, questi file possono essere richiamati indipendentemente nella pagina, piuttosto che essere raccolti col resto del foglio di stile in un unico file. Vedete voi.</p>
 </div>
 
-### Themes folder
+### Cartella Themes
 
-On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
+In grossi siti o applicazioni, non è strano avere bisogno di differenti temi. Ci sono molti diversi modi per lavorare bene coi temi. Personalmente mi piace averli tutti in una cartella `themes/`.
 
 * `_theme.scss`
 * `_admin.scss`
 
 <div class="note">
-  <p>This is very project-specific and is likely to be non-existent on many projects.</p>
+  <p>Il bisogno di questa cartella dipende dal progetto. In molti progetti potrebbe non essercene la necessità.</p>
 </div>
 
-### Utils folder
+### La cartella Utils
 
-The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+La cartella `utils/` raccoglie tutti gli strumenti e gli helper usati nel progetto. Tutte le variabili globali, le funzioni, i mixin e i placeholder dovrebbero essere messi qui dentro.
 
-The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
+La regola vuole che questa cartella non produca una singola linea di CSS quando compilata. Qui ci sono solo Sass helper.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss` (spesso chiamata `_helpers.scss`)
 
 <div class="note">
-  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, depending on what you prefer.</p>
+  <p>La cartella <code>utils/</code> può anche essere chiamanta <code>helpers</code>, <code>sass-helpers</code> or <code>sass-utils</code>, depending on what you prefer</p>
+  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, dipende da ciò che si preferisce.</p>
 </div>
 
-### Vendors folder
+### La cartella Vendors
 
-And last but not least, most projects will have a `vendors/` folder containing all the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a good way to say “Hey, this is not from me, not my code, not my responsibility”.
+Ultima ma non ultima, la cartella `vendors/` presente in molti progetti contiene tutti i file CSS che provengono da librerie e framework esterni – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, e così via. Mettere tutto nella stessa cartella è un buon modo per dire "Ehi, questa non è roba mia, non è il mio codice, non è mia responsabilità".
 
 * `_normalize.scss`
 * `_bootstrap.scss`
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-If you have to override a section of any vendor, I recommend you have an 8th folder called `vendors-extensions/` in which you may have files named exactly after the vendors they overwrite.
+Se c'è da sovrascrivere una parte di qualche file Vendor, consiglio di avere un'ottava cartella, chiamata `vendors-extensions/` nella quale avere i file chiamati esattamente nella stessa maniera dei file Vendor che andranno a sovrascrivere.
 
-For instance, `vendors-extensions/_bootstrap.scss` is a file containing all CSS rules intended to re-declare some of Bootstrap’s default CSS. This is to avoid editing the vendor files themselves, which is generally not a good idea.
+Ad esempio, `vendors-extensions/_bootstrap.scss` è un file che contiene tutto il CSS che ri-dichiara alcune dei default di Bootstrap. Evitate di modificare direttamente i file Vendor: non è una buona idea.
 
-### Main file
+### Il file Main
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+Il file principale (Main, spesso chiamato `main.scss`) dovrebbe essere l'unico file Sass nell'intera codebase a non iniziare per trattino basso (underscore). Questo file non contiene nient'altro che `@import` e commenti.
 
-Files should be imported according to the folder they live in, one after the other in the following order:
+I file dovrebbero essere importati secondo la cartella dove risiedono, una dopo l'altra in quest'ordine:
 
 1. `vendors/`
 1. `utils/`
@@ -163,38 +164,38 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-In order to preserve readability, the main file should respect these guidelines:
+Per preservare la leggibilità, il file Main deve rispettare queste linee guida:
 
-* one file per `@import`;
-* one `@import` per line;
-* no new line between two imports from the same folder;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* ogni `@import` è riferito ad un singolo file;
+* Un `@import` per riga;
+* nessuna riga vuota tra due import dallo stessa cartella;
+* una riga vuoto dopo l'ultimo import di una cartella;
+* omettere estensione dei file e l'underscore iniziale.
 
 {% include snippets/architecture/02/index.html %}
 
-There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I’ll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+C'è un altro modo per importare i file parziali che ritengo valido. Da un lato, rede il file più leggibile. Dall'altro, rende l'aggiornamento leggermente più complicato. Ad ogni modo, vi lascerei decidere qual è il meglio; non ha molta importanza. Secondo questo metodo, il file Main dovrebbe rispettare queste linee guida:
 
-* one `@import` per folder;
-* a linebreak after `@import`;
-* each file on its own line;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* un `@import` per ciascuna cartella;
+* un a capo dopo ogni `@import`;
+* ogni file in una riga;
+* una riga vuota dopo l'ultimo import di una cartella;
+* omettere estensione dei file e l'underscore iniziale.
 
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
+  <p>Per non dover importare manualmente ogni file, c'è un estensione di Ruby Sass chiamanta <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, che rende possibile utilizzare il pattern "glob" con gli <code>@import</code> di Sass; ad esempio <code>@import "components/*"</code></p>.
+  <p>Detto ciò, non lo raccomanderei. Questa estensione importa i file in ordine alfabetico, che di solito non è l'ideale, specialmente quando abbiamo a che fare con un linguaggio basato sull'ordine delle fonti.</p>
 </div>
 
-## Shame file
+## Il file Shame
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+C'è un'idea interessante, diffusa da [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) che consiste nel mettere tutto il CSS, gli hack e tutte le cose di cui non andremmo fieri in un *file vergogna (Shame)*. Questo file, platealmente chiamato `_shame.scss`, verrebbe importato dopo tutti i file, alla fine del foglio di stile.
 
 {% include snippets/architecture/04/index.html %}
 
-###### Further reading
+###### Per saperne di più
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
