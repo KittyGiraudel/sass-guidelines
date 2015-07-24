@@ -4,6 +4,7 @@
   {% include head.html %}
 
   <body id="top">
+    <input type="checkbox" id="aside-toggle" name="aside-toggle" class="checkbox-hack" />
 
     {% include icons.svg %}
     {% include header.html %}
@@ -12,7 +13,11 @@
 
     {% include translation-warning.html %}
 
-    {{ content }}
+    <div class="main">
+      <div class="container" id="content">
+        {{ content }}
+      </div>
+    </div>
 
     {% include aside.html %}
 
@@ -22,7 +27,6 @@
 
     {% include footer.html %}
     {% include scripts.html %}
-
   </body>
 
 </html>

@@ -18,58 +18,13 @@ CSS는 간단해질 수도 있지만, 그래도 주석의 여지가 많이 있�
 
 이상적으로, *어느 것이든* CSS 규칙은 CSS 블록의 요점을 설명하는 C 스타일 주석을 앞세워야 합니다. 이 주석은 규칙의 특정 부분에 대해 번호를 붙인 설명도 제공합니다. 예를 들면:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Helper class to truncate and add ellipsis to a string too long for it to fit
- * on a single line.
- * 1. Prevent content from wrapping, forcing it on a single line.
- * 2. Add ellipsis at the end of the line.
- */
-.ellipsis
-  white-space: nowrap /* 1 */
-  text-overflow: ellipsis /* 2 */
-  overflow: hidden
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/01/index.html %}
 
 기본적으로 첫눈에 명확하지 않은 것에는 전부 주석이 달려야 합니다. 너무 과한 문서화 같은 것은 없습니다. *주석을 너무 많이* 다는 것은 불가능하다는 것을 기억하세요. 그러니 불길로 뛰어들어 가치가 있는 것에는 모두 주석을 붙이세요.
 
 Sass에만 한정된 부분에 주석을 달 때는, C 스타일 블록 대신 Sass 인라인 주석을 사용하세요. 이것은 주석이 산출물에서는 물론이고, 개발하는 동안의 확장 모드에서도 보이지 않게 해 줍니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Add current module to the list of imported modules.
-// `!global` flag is required so it actually updates the global variable.
-$imported-modules: append($imported-modules, $module) !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/02/index.html %}
 
 ###### 참고
 
@@ -77,24 +32,9 @@ $imported-modules: append($imported-modules, $module) !global
 
 ## 문서화
 
-코드베이스 전역에서 사용되도록 만들어진 모든 변수, 펑션, 믹신, 플레이스홀더는 [SassDoc](http://sassdoc.com)을 이용하여 글로벌 API의 일부로서 문서화되어야 합니다.
+코드베이스 전역에서 사용되도록 만들어진 모든 변수, 함수, 믹스인, 플레이스홀더는 [SassDoc](http://sassdoc.com)을 이용하여 전역 API의 일부로서 문서화되어야 합니다.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Vertical rhythm baseline used all over the code base.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/03/index.html %}
 
 <div class="note">
   <p>슬래시(<code>/</code>) 세 개가 필수입니다.</p>
@@ -107,79 +47,9 @@ SassDoc은 두 가지 중요한 역할을 합니다:
 
 {% include images/sassdoc.html %}
 
-SassDoc으로 문서화된 믹신의 예시입니다:
+SassDoc으로 문서화된 믹스인의 예시입니다:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo {
-///     @include size(10em);
-///   }
-///
-///   .bar {
-///     @include size(100%, 10em);
-///   }
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin helping defining both `width` and `height` simultaneously.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - Element’s `width`
-/// @param {Length} $height ($width) - Element’s `height`
-///
-/// @example scss - Usage
-///   .foo
-///     +size(10em)
-///
-///   .bar
-///     +size(100%, 10em)
-///
-/// @example css - CSS output
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/04/index.html %}
 
 ###### 참고
 

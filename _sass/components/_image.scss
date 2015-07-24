@@ -2,9 +2,12 @@
  * Images
  */
 figure {
+  @include expand;
   background: $figure-background;
-  margin: 0;
-  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem;
+  border: 1px solid rgba(black, 0.1);
 }
 
 figure img {
@@ -12,6 +15,7 @@ figure img {
   height: auto;
   max-width: 100%;
   max-height: 80vh;
+  margin-bottom: 1rem;
 }
 
 figcaption {

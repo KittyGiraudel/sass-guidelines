@@ -3,9 +3,11 @@
  */
 .donate {
   @include vertical-rhythm;
+  @include expand;
   background: $donate-background;
   text-align: center;
-  padding: 1rem 0;
+  border: 1px solid rgba(black, 0.1);
+  padding: 1rem;
 
   .button {
     background: white;

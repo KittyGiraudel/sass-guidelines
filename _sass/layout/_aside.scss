@@ -2,21 +2,15 @@
   z-index: 2;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
-  @include prefix(transform, translateX(-100%), webkit ms);
+  @include prefix(transform, translateX(100%), webkit ms);
   background: white;
-  box-shadow: 0.3em 0 .25em rgba(black, 0.1);
   transition: .15s cubic-bezier(.32, 1, .53, .8);
 
-  @include when-inside('.open') {
-    @include prefix(transform, translateX(0), webkit ms);
-    overflow: auto;
-  }
-
   @include respond-to('medium') {
-    width: 300px;
+    width: $sidebar-width;
   }
 
   .button {
@@ -37,7 +31,7 @@
 
 .aside__title {
   background: $light-pink;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   color: white;
   font-size: 1.25em;
   margin: 0;
@@ -63,11 +57,7 @@
   position: absolute;
   background: white;
   bottom: 0;
-  right: -4.5em;
-
-  @include when-inside('.open') {
-    right: 0;
-  }
+  left: -70px;
 
   @include respond-to('medium') {
     background: transparent;
@@ -98,4 +88,14 @@
   li + li {
     float: right;
   }
+}
+
+#aside-toggle:checked ~ .aside {
+  @include prefix(transform, translateX(0), webkit ms);
+  box-shadow: -0.3em 0 .25em rgba(black, 0.1);
+  overflow: auto;
+}
+
+#aside-toggle:checked ~ .aside .aside__toggle {
+  left: 0;
 }

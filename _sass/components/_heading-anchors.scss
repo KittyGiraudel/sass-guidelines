@@ -4,7 +4,9 @@
 .anchor-link {
   position: absolute;
   left: -1.5rem;
-  font-size: .8em;
-  top: .2em;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   color:  $light-grey;
+  text-decoration: none;
 }

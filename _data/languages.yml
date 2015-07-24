@@ -9,6 +9,7 @@ zh:
     - name: Sean Sun
       link: https://github.com/pinggod
 
+<<<<<<< HEAD
 cz:
   version: 1.1.0
   label: Czech
@@ -27,6 +28,8 @@ nl:
     - name: Tom de Wit
       link: https://github.com/ttomdewit
 
+=======
+>>>>>>> 0f11f6e9e620766ab95b781b67406512c0022b30
 en:
   version: 1.1.0
   label: English
@@ -44,38 +47,16 @@ fr:
       link: http://la-cascade.ghost.io
 
 de:
-  version: 1.0.0
+  version: 1.1.0
   label: German
   prefix: /de/
-  available: false
+  available: true
   translators:
-    - name: Kai Brueckers
-      link: https://github.com/kaibrueckers
-    - name: Al
-      link: https://github.com/altembo
-
-gr:
-  version: 1.0.0
-  label: Greek
-  prefix: /gr/
-  available: false
-  translators:
-    - name: Adonis K.
-      link: https://github.com/varemenos
-    - name: Konstantinos Margaritis
-      link: https://github.com/kmargaritis
-
-it:
-  version: 1.0.0
-  label: Italian
-  prefix: /it/
-  available: false
-  translators:
-    - name: Simone Rescio
-      link: https://github.com/srescio
+    - name: Moritz Kröger
+      link: https://github.com/morkro
 
 ko:
-  version: 1.0.0
+  version: 1.1.0
   label: Korean
   prefix: /ko/
   available: true
@@ -84,7 +65,7 @@ ko:
       link: https://github.com/kimdhoe
 
 pl:
-  version: 1.0.0
+  version: 1.1.0
   label: Polish
   prefix: /pl/
   available: true
@@ -95,13 +76,15 @@ pl:
       link: http://github.com/matchabros
 
 pt:
-  version: 1.0.0
+  version: 1.1.0
   label: Portuguese
   prefix: /pt/
-  available: false
+  available: true
   translators:
     - name: Ricardo Magalhães
       link: https://github.com/magalhini
+    - name: Gonçalo Morais
+      link: https://github.com/gnclmorais
     - name: Sara Vieira
       link: https://github.com/saravieira
     - name: Eduardo Bouças
@@ -128,3 +111,12 @@ es:
       link: https://github.com/soniar4i
     - name: David Khourshid
       link: https://github.com/davidkpiano
+
+da:
+  version: 1.1.0
+  label: Danish
+  prefix: /da/
+  available: true
+  translators:
+    - name: Anders Schmidt Hansen
+      link: http://codepen.io/andersschmidt/

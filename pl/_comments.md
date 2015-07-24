@@ -1,7 +1,7 @@
 
 # Komentarze
 
-CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli Ty, lub ktoś inny, ma zamiar czytać i aktualizować ten kod po upływie jakiegoś dłuższego okresu czasu. Warto zapobiec sytuacji, w której Ty albo ktoś inny znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko*.
+CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli zachodzi przypuszczenie, że ktoś będzie czytał i aktualizował ten kod w przyszłości. Warto zapobiec sytuacji, w której czytelnik znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko-dlaczego*.
 
 Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto używać komentarzy. Mogą one objaśniać takie rzeczy, jak:
 
@@ -18,56 +18,13 @@ Prawdopodobnie pominąłem tu wiele innych ważnych sytuacji. Pisanie komentarzy
 
 Najlepiej jest, gdy *każdy* zestaw reguł jest poprzedzony komentarzem, napisanym w stylu komentarzy z języka C, który objaśnia znaczenie danego bloku kodu. Komentarz ten także może dotyczyć konkretnych reguł. Dla przykładu:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Klasa pomocnicza, która obetnie zbyt długą linię i doda na koniec wielokropek.
- * 1. Zapobiega przed zawijaniem tekstu, ograniczając go do pojedynczej linii.
- * 2. Dodaje wielokropek na końcu linii.
- */
-.ellipsis {
-  white-space: nowrap; /* 1 */
-  text-overflow: ellipsis; /* 2 */
-  overflow: hidden;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Klasa pomocnicza, która obetnie zbyt długą linię i doda na koniec wielokropek.
- * 1. Zapobiega przed zawijaniem tekstu, ograniczając go do pojedynczej linii.
- * 2. Dodaje wielokropek na końcu linii.
- */
-.ellipsis
-  white-space: nowrap /* 1 */
-  text-overflow: ellipsis /* 2 */
-  overflow: hidden
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/01/index.html %}
 
-W zasadzie wszystko, co na pierwszy rzut oka może nie być do końca jasne, powinno być komentowane. Nie istnieje coś takiego, jak zbyt duża dokumentacja. Pamiętaj więc o tym, śmiało pisz komentarze!
+W zasadzie wszystko, co na pierwszy rzut oka może nie być do końca jasne, powinno być komentowane. Nie istnieje coś takiego, jak zbyt duża dokumentacja. Pamiętajmy o tym i śmiało piszmy komentarze!
 
-Komentując rzeczy ściśle związane z Sassem używaj jednoliniowych komentarzy, zamiast bloków w stylu języka C. Dzięki temu takie komentarze nie zostaną dodane do wyjściowego, skompilowanego pliku CSS, nawet w trybie "expanded".
+Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych komentarzy, zamiast bloków w stylu języka C. Dzięki temu takie komentarze nie zostaną dodane do wyjściowego, skompilowanego pliku CSS, nawet w trybie "expanded".
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dodaj moduł do listy modułów importowanych.
-// Flaga `!global` jest niezbędna dla aktualizowania globalnej zmiennej.
-$imported-modules: append($imported-modules, $module) !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dodaj moduł do listy modułów importowanych.
-// Flaga `!global` jest niezbędna dla aktualizowania globalnej zmiennej.
-$imported-modules: append($imported-modules, $module) !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/02/index.html %}
 
 ###### Dalsze informacje
 
@@ -75,24 +32,9 @@ $imported-modules: append($imported-modules, $module) !global
 
 ## Dokumentowanie
 
-Każda zmienna, funkcja, mixin czy selektor zastępczy, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
+Każda zmienna, funkcja, mixin czy placeholder, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Użyte w całej bazie kodu rozłożenie linii pisma w płaszczyźnie wertykalnej.
-/// @type Length
-$vertical-rhythm-baseline: 1.5rem
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/03/index.html %}
 
 <div class="note">
   <p>Trzy ukośniki (<code>/</code>) są wymagane.</p>
@@ -107,77 +49,7 @@ SassDoc spełnia dwie zasadnicze funkcje:
 
 Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Mixin pomagający zdefiniować jednocześnie `width` i `height`.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - `width` elementu
-/// @param {Length} $height ($width) - `height` elementu
-///
-/// @example scss - Przykład użycia
-///   .foo {
-///     @include size(10em);
-///   }
-///
-///   .bar {
-///     @include size(100%, 10em);
-///   }
-///
-/// @example css - Rezultat w CSSie
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Mixin pomagający zdefiniować jednocześnie `width` i `height`.
-///
-/// @author Hugo Giraudel
-///
-/// @access public
-///
-/// @param {Length} $width - `width` elementu
-/// @param {Length} $height ($width) - `height` elementu
-///
-/// @example scss - Przykład użycia
-///   .foo
-///     +size(10em)
-///
-///   .bar
-///     +size(100%, 10em)
-///
-/// @example css - Rezultat w CSSie
-///   .foo {
-///     width: 10em;
-///     height: 10em;
-///   }
-///
-///   .bar {
-///     width: 100%;
-///     height: 10em;
-///   }
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/comments/04/index.html %}
 
 ###### Dalsze informacje
 

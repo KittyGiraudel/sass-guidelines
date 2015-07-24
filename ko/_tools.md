@@ -11,20 +11,21 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 그렇지만, 전 더이상 Compass를 추천하지 않습니다. 가장 큰 이유로는 Sass를 매우 느리게 만들기 때문입니다. Ruby Sass는 그 자체로도 꽤 느리기 때문에 그 위에 Ruby와 Sass를 더해서 좋을 게 없습니다.
 
-문제는 우리가 전체 프레임워크에서 아주 적은 일부만을 사용한다는 점입니다. Compass는 거대합니다. 크로스 브라우저 호환 믹신은 빙산의 일각에 불과하죠. 수학 펑션, 이미지 헬퍼, 스프라이트... 이 훌륭한 소프트웨어를 가지고 할 수 있는 일이 너무나도 많습니다.
+문제는 우리가 전체 프레임워크에서 아주 적은 일부만을 사용한다는 점입니다. Compass는 거대합니다. 크로스 브라우저 호환 믹스인은 빙산의 일각에 불과하죠. 수학 함수, 이미지 헬퍼, 스프라이트... 이 훌륭한 소프트웨어를 가지고 할 수 있는 일이 너무나도 많습니다.
 
 불행하게도, 이들은 모두 구문상 편의성syntactic sugar이며 킬러 기능이 존재하지 않습니다. *정말로 훌륭한* 스프라이트 빌더는 예외가 될 수 있겠지만, [Grunticon](https://github.com/filamentgroup/grunticon)과 [Grumpicon](http://grumpicon.com/)도 같은 일을 잘 수행하며 빌드 프로세스에 삽입할 수 있다는 장점도 갖고 있습니다.
 
 어쨌든, Compass의 사용을 금하진 않겠지만 추천하지도 않겠습니다. 특히 (그에 대한 노력이 있긴 하지만) LibSass와 호환이 되지 않기 때문입니다. 만약 사용하는 게 낫다 생각되면 사용하셔도 괜찮습니다. 하지만 결국에 거기서 많은 걸 얻지는 못할 것이라 생각합니다.
 
 <div class="note">
-  <p>Ruby Sass는 현재 많은 펑션과 믹신을 가진 복잡한 로직의 스타일을 구체적으로 겨냥한 중요한 최적화 작업 중에 있습니다. 이는 Compass와 다른 프레임워크가 더이상 Sass의 속도를 늦추지 않을 수 있을 정도로 성능을 극적으로 향상시킬 것입니다.</p>
+  <p>Ruby Sass는 현재 많은 함수와 믹스인을 가진 복잡한 로직의 스타일을 구체적으로 겨냥한 중요한 최적화 작업 중에 있습니다. 이는 Compass와 다른 프레임워크가 더이상 Sass의 속도를 늦추지 않을 수 있을 정도로 성능을 극적으로 향상시킬 것입니다.</p>
 </div>
 
 ###### 참고
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
+* [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
 ## 그리드 시스템

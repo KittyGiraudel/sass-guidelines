@@ -1,0 +1,79 @@
+@include respond-to('large') {
+  .toc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: $sidebar-width;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 0.8em;
+    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0.4;
+    transition: opacity 5s ease-in-out;
+  }
+
+  .toc.sticky > ul {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .toc.sticky:hover {
+    opacity: 0.999999;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .toc.sticky-bottom > ul {
+    margin-bottom: 140px;
+    bottom: 25px;
+  }
+
+  /**
+   * Hide link to ToC
+   */
+  .toc > ul > li:nth-of-type(3) {
+    display: none;
+  }
+
+  .toc > ul {
+    margin: 0;
+    padding: 15px 10px;
+  }
+
+  .toc ul {
+    list-style: none;
+  }
+
+  .toc ul ul {
+    padding-left: 15px;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .toc > ul > li {
+    border-bottom: 1px double #EFEFEF;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .toc > ul > li:last-of-type {
+    border-bottom: 0;
+  }
+
+  .toc a {
+    text-decoration: none;
+  }
+
+  .toc h1 {
+    display: none;
+  }
+}

@@ -1,9 +1,9 @@
 
 # Instrukcje warunkowe (conditionals)
 
-Jak już prawdopodobnie wiesz, Sass zapewnie wsparcie dla instrukcji warunkowych poprzez dyrektywy `@if` i `@else`. O ile nie masz średnio lub bardzo skomplikowanych rozwiązań w swoim kodzie, nie ma potrzeby dla instrukcji warunkowych w Twoich arkuszach. W zasadzie to one głównie istnieją dla potrzeb bibliotek i frameworków.
+Sass zapewnia wsparcie dla instrukcji warunkowych poprzez dyrektywy `@if` i `@else`. Jeśli w bazie kodu brak jest średnio lub bardzo skomplikowanych rozwiązań, nie ma większej potrzeby dla stosowania tychże instrukcji. W zasadzie to one głównie istnieją dla potrzeb bibliotek i frameworków.
 
-W każdym razie, jeśli kiedykolwiek będziesz potrzebował z nich skorzystać, zrób to w zgodności z poniższymi zasadami:
+W każdym razie, gdy zajdzie jednak potrzeba skorzystania z instrukcji warunkowych, należy to robić w zgodności z poniższymi zasadami:
 
 * Bez nawiasów, chyba że są potrzebne,
 * Jedna pusta linia przed `@if`,
@@ -11,110 +11,16 @@ W każdym razie, jeśli kiedykolwiek będziesz potrzebował z nich skorzystać, 
 * `@else` na tej samej linii, co nawias zamykający (`}`),
 * Nowa pusta linia po ostatnim nawiasie zamykającym (`}`), chyba że następna linia zaczyna się od takiego nawiasu (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dobrze
-@if $support-legacy {
-  // ...
-} @else {
-  // ...
-}
+{% include snippets/conditions/01/index.html %}
 
-// Źle
-@if ($support-legacy == true) {
-  // ...
-}
-@else {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dobrze
-@if $support-legacy
-  // ...
-@else
-  // ...
+Testując czy podana wartość jest fałszywa, należy używać słowa `not` zamiast testowania wobec `false` czy `null`.
 
-// Źle
-@if ($support-legacy == true)
-  // ...
-@else
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/02/index.html %}
 
-Testując czy podana wartość jest fałszywa, zawsze używaj słowa `not` zamiast testowania wobec `false` czy `null`.
+Należy zawsze umieszczać nazwę zmiennej po lewej stronie wyrażenia, a (nie)oczekiwany rezultat po prawej. Odwrócone instrukcje warunkowe są mniej zrozumiałe, szczególnie dla niedoświadczonych programistów.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dobrze
-@if not index($list, $item) {
-  // ...
-}
+{% include snippets/conditions/03/index.html %}
 
-// Źle
-@if index($list, $item) == null {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dobrze
-@if not index($list, $item)
-  // ...
+Używając instrukcji warunkowych w ramach funkcji by zwracały one różne rezultaty, w zależności od jakiegoś warunku, należy się upewnić aby funkcja miała instrukcję `@return` poza jakimkolwiek blokiem warunkowym.
 
-// Źle
-@if index($list, $item) == null
-  // ...
-{% endhighlight %}
-  </div>
-</div>
-
-Używając instrukcji warunkowych w ramach funkcji by zwracały one różne rezultaty, w zależności od jakiegoś warunku, zawsze upewnij się by funkcja miała instrukcję `@return` poza jakimkolwiek warunkowym blokiem.
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Dobrze
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// Źle
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Dobrze
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// Źle
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04/index.html %}
