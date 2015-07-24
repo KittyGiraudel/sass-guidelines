@@ -3,11 +3,10 @@
  */
 .note {
   @include vertical-rhythm;
+  @include expand;
   background: $note-background;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid rgba(black, 0.1);
-  border-left: 0;
-  border-right: 0;
 
   > :first-child {
     margin-top: 0;

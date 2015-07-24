@@ -23,6 +23,7 @@
  */
 .highlight {
   @include vertical-rhythm;
+  @include expand;
   background: $code-background;
   color: white;
   border: 1px solid rgba(black, 0.1);
@@ -30,12 +31,7 @@
   > pre {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 2rem 1rem;
-
-    @include respond-to('medium') {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    padding: 1rem;
   }
 }
 

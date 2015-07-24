@@ -69,8 +69,21 @@ $donate-background: $light-yellow;
 /// @require $light-yellow
 $figure-background: $light-grey;
 
+/// ToC width
+/// @type Length
+$sidebar-width: 300px;
+
+/// Main container width
+/// @type Length
+$main-width: 975px;
+
+/// Container width
+/// @type Length
+$content-width: 650px;
+
 /// Breakpoints
 /// @type Map
 $breakpoints: (
-  'medium': 801px
+  'medium': 801px,
+  'large': $main-width
 );
