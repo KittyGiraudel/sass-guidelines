@@ -8,21 +8,21 @@
 
 ## Časté překlady
 
-| angličtina                   | čeština                 |
-|------------------------------|-------------------------|
-| _array_ | pole | 
-| _bitwise operator_ | bitový operátor | 
-| _citation needed_ | citace nutná | 
-| _codebase_ | appropriate translation | 
-| _developer_ | vývojář | 
-| _further reading_ | co si přečíst dále | 
-| _library_ | knihovna | 
-| _loop_ | smyčka | 
-| _quotes_ | uvozovky | 
-| _single quotes_ | jednoduché uvozovky | 
-| _styleguide_ | xxxxxx | 
-| _stylesheet_ | appropriate translation | 
-| _tab_ | tabulátor | 
+| angličtina               | čeština                  |
+|--------------------------|--------------------------|
+| _array_                  | pole                     |
+| _bitwise operator_       | bitový operátor          | 
+| _citation needed_        | citace nutná             | 
+| _codebase_               | appropriate translation  | 
+| _developer_              | vývojář                  | 
+| _further reading_        | co si přečíst dále       | 
+| _library_                | knihovna                 |  
+| _loop_                   | smyčka                   | 
+| _quotes_                 | uvozovky                 | 
+| _single quotes_          | jednoduché uvozovky      | 
+| _styleguide_             | xxxxxx                   | 
+| _stylesheet_             | appropriate translation  | 
+| _tab_                    | tabulátor                | 
 
 ## Slova a výrazy, které se nepřekládají
 
@@ -32,6 +32,7 @@ Slova, pokud to jde, skloňujte. Tedy např. do _commitu_, dva _frameworky_, ty 
 * commit
 * debug
 * framework
+* grid
 * issue (v kontextu s gitem)
 * lint
 * media query
