@@ -95,7 +95,7 @@
     }
 
     // Recompute on scroll
-    document.addEventListener('scroll', debounce(sticky, 100));
+    document.addEventListener('scroll', debounce(sticky, 50));
 
     // Initial call
     sticky();
