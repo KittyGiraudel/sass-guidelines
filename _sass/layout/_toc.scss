@@ -6,7 +6,7 @@
     bottom: 0;
     z-index: 10;
     width: $sidebar-width;
-    padding: 15px 10px;
+    padding: 15px 10px 0;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 0.8em;
@@ -30,6 +30,10 @@
   .toc.sticky:hover {
     opacity: 0.999999;
     transition: opacity 0.3s ease-out;
+  }
+
+  .toc.sticky-bottom > ul {
+    margin-bottom: 140px;
   }
 
   /**

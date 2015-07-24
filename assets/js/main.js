@@ -64,6 +64,8 @@
   App.prototype.toc = function () {
     var toc = document.querySelector('.toc');
     var top = getOffset(toc);
+    var bottom = getOffset(document.querySelector('.footer'));
+    var height = window.innerHeight|| document.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
 
     function getOffset(elem) {
       var offset = 0;
@@ -77,11 +79,18 @@
 
     function sticky() {
       var current = document.documentElement.scrollTop || document.body.scrollTop;
+      var currentBottom = current + height;
 
       if (current > top) {
         addClass(toc, 'sticky');
       } else {
         removeClass(toc, 'sticky');
+      }
+
+      if (currentBottom > bottom) {
+        addClass(toc, 'sticky-bottom');
+      } else {
+        removeClass(toc, 'sticky-bottom');
       }
     }
 
