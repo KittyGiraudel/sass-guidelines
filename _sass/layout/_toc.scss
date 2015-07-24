@@ -11,6 +11,9 @@
     overflow-y: auto;
     font-size: 0.8em;
     background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     opacity: 0.4;
     transition: opacity 5s ease-in-out;
