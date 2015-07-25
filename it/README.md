@@ -21,3 +21,5 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 * placeholder
 * API
 * endpoint
+* map
+* getter
