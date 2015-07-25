@@ -30,28 +30,29 @@ Quando commenti parti specifiche in Sass, usa commenti inline piuttosto che il b
 
 * [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
 
-## Documentation
+## Documentazione
 
-Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
+Ogni variabile, funzione, mixin e placeholder che viene riusato all'interno della codebase è da documentare come parte dell'API globale, usando [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 
 <div class="note">
-  <p>Three slashes (<code>/</code>) required.</p>
+  <p>È necessario usare tre _slash_ (<code>/</code>).</p>
 </div>
 
-SassDoc has two major roles:
+SassDoc ha due regole principali:
 
-* forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* ottenere commenti standard usando un sistema basato sulle annotazioni per tutto ciò che è parte di un'API pubblica o privata;
+* avere la possibilità di generare una versione HTML della documentazione dell'API usando uno qualsiasi degli endpoint di SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
 
 {% include images/sassdoc.html %}
 
-Here is an example of a mixin extensively documented with SassDoc:
+Questo è un esempio di un mixin commentato 
+Here is an example of a mixin ampiamente documentato con SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Further reading
+###### Per saperne di più
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
