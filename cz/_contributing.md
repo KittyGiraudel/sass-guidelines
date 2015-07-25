@@ -1,11 +1,11 @@
 
 # Přispivání
 
-Sass Guidelines je bezplatný projekt, který udržuji ve svém volném čase. Netřeba ani dodávat, že je to docela dost práce udržovat vše aktuální, dokumentované a relevantní. Jenom vědění, že se vám příručka líbila, je k nezaplacení.
+Sass Guidelines je můj volnočasový projekt. Snad ani není potřeba dodávat, že udržovat všechno aktuální, zdokumentované a relevantní, dá docela dost práce. udržovat vše aktuální, zdokumentované a relevantní. Samozřejmě už jen to, že je pro vás tento manuál přínosem, si velice cením!
 
-Pokud chcete přispět, tweetnutí, šíření nebo úprava menších nedostatků otevřením issue nebo pull requestu na [GitHub repositáři](https://github.com/HugoGiraudel/sass-guidelines) by bylo skvělé!
+Pokud byste rádi chtěli přispět, budu rád za jakýkoliv tweet, či jinou metodu šíření, ale i třeba za upozornění na chybu otevřením issue nebo pull-requestu na [GitHub repositáři](https://github.com/HugoGiraudel/sass-guidelines).
 
-V neposlední řadě, ještě než začneme: pokud jste si tento dokument užili nebo pokud byl pro vás nebo váš tým užitečný, zvašte jej prosím podpořit!
+V neposlední řadě, než začneme: pokud se vám tento dokument líbil, nebo pro vás byl užitečný, zvažte, prosím, jeho podpoření!
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
@@ -15,6 +15,6 @@ V neposlední řadě, ještě než začneme: pokud jste si tento dokument užili
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    Šířit informace
+    Sdílet
   </a>
 </div>
