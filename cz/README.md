@@ -5,6 +5,8 @@
 ## Pokyny
 
 * Piště ve druhé osobě množného čísla.
+* Nepřekládejte názvy odkazů v další četbě, pokud neodkazují na českou verzi.
+* Pište o Sass v mužškém rodě. Tedy např. _ten Sass_ atd.
 
 ## Časté překlady
 
@@ -13,21 +15,25 @@
 | _array_                  | pole                     |
 | _bitwise operator_       | bitový operátor          | 
 | _citation needed_        | citace nutná             | 
-| _codebase_               | appropriate translation  | 
+| _codebase_               | xxx                      | 
 | _developer_              | vývojář                  | 
 | _further reading_        | co si přečíst dále       | 
 | _library_                | knihovna                 |  
 | _loop_                   | smyčka                   | 
+| _preprocessor_           | preprocesor              | 
 | _quotes_                 | uvozovky                 | 
 | _single quotes_          | jednoduché uvozovky      | 
-| _styleguide_             | xxxxxx                   | 
-| _stylesheet_             | appropriate translation  | 
+| _styleguide_             | xxx                      | 
+| _stylesheet_             | styly                    | 
 | _tab_                    | tabulátor                | 
+| _workflow_               | pracovní postup          | 
 
 ## Slova a výrazy, které se nepřekládají
 
-Slova, pokud to jde, skloňujte. Tedy např. do _commitu_, dva _frameworky_, ty _mixiny_ atd.
+Nepřekládaná slova a výrazy skloňujte, pokud to jde. Tedy např. do _commitu_, dva _frameworky_, ty _mixiny_ atd.
 
+* *-friendly
+* *-based
 * breakpoint
 * commit
 * debug
