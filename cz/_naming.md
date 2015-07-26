@@ -1,48 +1,48 @@
 
-# Naming conventions
+# Jmenné konvence
 
-In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it’s also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+V této sekci se nebudeme zabývat nejlepšími jmennými CSS konvencemi pro udržovatelnost a rozsah. Nejen že je to na vás, ale je to také mimo obslas Sass manuálu. Navrhuji však ty, které jsou doporučeny v [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
-There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:
+Je tu však pár věcí, které můžete v Sassu pojmenovat a je důležité je pojmenovat dobře, takže celý codebase bude vypadat konzistentní a bude snadno čitelná:
 
-* variables;
-* functions;
-* mixins.
+* proměnné;
+* funkce;
+* mixiny.
 
-Sass placeholders are deliberately omitted from this list since they can be considered as regular CSS selectors, thus following the same naming pattern as classes.
+Sass placeholdery jsou z tohoto seznamu úmyslně vynechány, jelikož mohou být považovány za běžné CSS selektory a proto na ně platí stejné vzory pro název jako pro třídy.
 
-Regarding variables, functions and mixins, we stick to something very *CSS-y*: **lowercase hyphen-delimited**, and above all meaningful.
+Pokud jde o proměnné, funce a mixiny, držme se něčeho velmi *CSS-kového*: **malé písmo oddělené pomlčkami** a především smysluplného.
 
 {% include snippets/naming/01/index.html %}
 
-###### Further reading
+###### Další četba
 
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
+* [Jmenné konvence z CSS Guidelines](http://cssguidelin.es/#naming-conventions)
 
-## Constants
+## Konstanty
 
-If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
+Pokud jste náhodou vývojáři frameworku, nebo píšete knihovnu, pravděpodobně se potýkáte s proměnnými, které nejsou zamýšleny tak, aby se daly upravovat: konstanty. Bohužel (nebo naštěstí?) Sass neumožňuje žádnou cestu pro takovouto věc, takže si musíme vystačit s jmennými konvencemi.
 
-As for many languages, I suggest all-caps snakerized variables when they are constants. Not only is this a very old convention, but it also contrasts well with usual lowercased hyphenated variables.
+Tak jako pro mnoho jazyků, doporučuji proměnné, pokud jsou konstantami, psát velkým písmem. Nejen že je to velmi stará konvence, ale také snadno poznáte, že je daná proměnná právě konsnantou, v konstantu s proměnnými psanými malým písmem a oddělenými pomlčkami.
 
 {% include snippets/naming/02/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
 
 ## Namespace
 
-If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
+Pokud máte v úmyslu svůj Sass kód rozšířit, v případě knihovny, frameworku, grid systému nebo čehokoli, pravděpodobně zvažujete použít namespace na všechny vaše proměnné, funkce, mixiny a placeholdery, takže nebude moci dojít ke konfilku s kódem někoho jiného.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+Například, pokud pracujete na projektu *Sassy Unicorn*, se kterým budou moci pracovat vývojáři z celého světa (kdo by ne, že ano?), můžete zvážit použít `su-` jako namespace. Je to dost specifické aby se zabránilo jakémukoli kolidování názvu a krátké dost na to, aby to nebolelo psát.
 
 {% include snippets/naming/03/index.html %}
 
 <div class="note">
-  <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
+  <p>Poznámka: automatické namespacy budou definitevně designový cíl pro připravovaný <code>@import</code> od Sassu 4.0. Čím je blíže k uskutečnění, tím je méně a méně užitečné dělat namespace ručně. Přpadně ručně namespacované knihovny mohou být složitější na použení.</p>
 </div>
 
-###### Further reading
+###### Další četba
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
