@@ -1,61 +1,61 @@
 
-# Responsive Web Design and breakpoints
+# Responzivní Web Design a breakpointy
 
-I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
+Nemyslím si, že je Responzivní Web Design stále nutné představovat, když je to nyní všude. Každopádně se můžete ptát *proč je tu sekce o RWD v Sass manuálu?* Ve skutečnosti existuje pár věcí, které mohou být udělány tak, aby se s breakpointy pracovalo jednodušeji, takže myslím, že by nebyl špatný nápad je tady uvést.
 
 ## Naming breakpoints
 
-I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
+Myslím si, že mohu bezproblému říc, že mediq queries by neměla být vázána na specifické zařízení. Například pokoušit se mířit přímo na iPady nebo Blackberry telefony je určitě špatný nápad. Mediq queries by se měla starat o různé velikosti obrazovky, dokud se design nerozboří a nenastoupí další media query.
 
-For the same reasons, breakpoints should not be named after devices but something more general. Especially since some phones are now bigger than tablets, some tablets bigger than some tiny screen computers, and so on...
+Ze stejného důvodu by breakpointy neměly být pojmenovány podle zařízení ale podle něčeho obecnějšího. Hlavně proto, že některé telefony jsou nyní větší než tablety, některé tablety větší než malé počítače atd.
 
 {% include snippets/rwd/01/index.html %}
 
-At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+V tomto bodě naprosto stačí, pokud použijeme jakoukoli jmennou konvenci, která dává smysl a není spjata s konkrétními zařízeními.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
-  <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
+  <p>Předešlý příklad používá vnořené mapy pro definování breakpointů, každopádně opravdu záleží jen na vás, jaký druh správy použijete. Můžete se rozhodnout pro stringy spíše pro vnitřní mapy pro větší pružnost (tedy <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-###### Further reading
+###### Další četba
 
 * [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Breakpoint manager
 
-Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
+Jakmile pojmenujete své breakpointy tak jak chcete, budete potřebovat způsob, jak je používat v media queries. Je mnoho způsobů jak tak učinit, ale musím říci, že nejvíce fandím breakpointové mapě, kterou čtu pomocí getter funkce. Tento způsob je zároveň jednoduchý a efektivní.
 
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>Je zřejmé, že je poměrně zjednodušující řešení pro správu breakpointů. Pokud potřebujete něco tolerantnějšího, doporučuji vám, abyste znovu nevynalézali kolo a použili něco co bylo ověřeno jako efektivní, právě jako <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> nebo <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
-###### Further reading
+###### Další četba
 
 * [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
 * [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
-## Media Queries Usage
+## Použití Media Queries
 
-Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
+Ne tak dávno probíhala poměrně vžrušující debata o tom, kde by se měla media queries psát: patří do selektorů (jak to umožňuje Sass) nebo by se měly psát striktně mimo ně? Musím uznat, že jsem vášnivým zastáncem systému *media-queries-v-selektorech* a myslím si, že to funguje skvěle s ideou *komponent*.
 
 {% include snippets/rwd/04/index.html %}
 
-Leading to the following CSS output:
+Což vede k následujícímu CSS výstupu:
 
 {% include snippets/rwd/05/index.html %}
 
-You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
+Mohli jste slyšet, že tato konvence vede k duplikování media queries v CSS výstupu. A je to rozhodně pravda. Ikdyž [byl udělán test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) a finální verdikt je, že na tom nezáleží jakmile Gzip (nebo něco podobného) dokončí svou věc:
 
-> … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
+> … probírali jsme, zda existují problémy s výkonem v porovnání kombinování vs rozházení Media Queries a dospěli jsme k závěru, že v nejhorším případě sice ano, ale v nejlepším případě v podsatatě vůbec ne. <br> 
+> &mdash; [Sam Richards](https://twitter.com/snugug), ohledně [Breakpoint](http://breakpoint-sass.com/)
 
-Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
+Pokud máte obavu ohledně duplicitních media queries, pořád můžete použít nástroj, který je spojí k sobě, jako například [tento gem](https://github.com/aaronjensen/sass-media_query_combiner), kažopádně vás musím varovat, že pokud přesunece CSS někam jinam, může to mít negativní účinky. Nikdy nevíte, jestli je pořadí důležité.
 
-###### Further reading
+###### Další četba
 
 * [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
