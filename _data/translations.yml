@@ -165,3 +165,18 @@ da:
     order-poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
     sassdoc: "Dokumentation genereret af SassDoc"
     wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"
+
+cz:
+  donate:
+    button: "Podpořit Sass Guidelines"
+    content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jeho podporu."
+  baseline:
+    content: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
+  footer:
+    content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Poznámka"
+  images:
+    color-functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
+    sassdoc: "Dokumentace generována ze SassDoc"
+    wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"
