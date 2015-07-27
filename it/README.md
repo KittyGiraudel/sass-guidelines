@@ -18,8 +18,10 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 * codebase
 * hack
 * mixin
+* extend
 * placeholder
 * API
 * endpoint
 * map
 * getter
+* media query
