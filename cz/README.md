@@ -6,8 +6,8 @@
 
 * Piště ve druhé osobě množného čísla (_vy všichni_).
 * Nepřekládejte názvy odkazů v další četbě, pokud neodkazují na českou verzi.
-* Pište o Sass v mužškém rodě. (_ten Sass_ atp.)
-* Nepoužívejte 'úmělé skloňování'. (_8sm_, _CSSka_ atp.)
+* Pište o Sass v mužském rodě. (_ten Sass_ atp.)
+* Nepoužívejte 'umělé skloňování'. (_8sm_, _CSSka_ atp.)
 * Seznamy, co musí daná věc splňovat, pište obecně a tím pádem nesměřujte úkol na osobu. (_vždy musí být zabalený v závorkách_ atp.)
 
 ## Časté překlady
@@ -16,7 +16,7 @@
 |--------------------------|--------------------------|
 | _array_                  | pole                     |
 | _bitwise operator_       | bitový operátor          | 
-| _citation needed_        | citace nutná             | 
+| _citation needed_        | nutná citace             | 
 | _developer_              | vývojář                  | 
 | _directive_              | direktiva                | 
 | _feature_                | funkce                   | 
@@ -24,7 +24,7 @@
 | _guideline_              | manuál (případně pokyn)  | 
 | _library_                | knihovna                 |  
 | _list_                   | seznam                   |  
-| _loop_                   | smyčka                   | 
+| _loop_                   | cyklus                   | 
 | _preprocessor_           | preprocesor              | 
 | _quotes_                 | uvozovky                 | 
 | _ruleset_                | pravidla                 | 
@@ -46,6 +46,7 @@ Nepřekládaná slova a výrazy skloňujte, pokud to jde. Tedy např. do _commit
 * debug
 * framework
 * grid
+* helper
 * issue (v kontextu s gitem)
 * lint
 * media query
@@ -55,6 +56,7 @@ Nepřekládaná slova a výrazy skloňujte, pokud to jde. Tedy např. do _commit
 * placeholder
 * polyfill
 * pull-request
+* scope
 * software
 * sprite
 * syntax
