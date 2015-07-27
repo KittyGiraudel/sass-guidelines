@@ -99,3 +99,12 @@ da:
   translators:
     - name: Anders Schmidt Hansen
       link: http://codepen.io/andersschmidt/
+
+cz:
+  version: 1.1.0
+  label: Czech
+  prefix: /cz/
+  available: true
+  translators:
+    - name: Honza Bittner
+      link: https://github.com/HoBi
