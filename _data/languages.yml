@@ -9,6 +9,24 @@ zh:
     - name: Sean Sun
       link: https://github.com/pinggod
 
+cz:
+  version: 1.1.0
+  label: Czech
+  prefix: /cz/
+  available: true
+  translators:
+    - name: Honza Bittner
+      link: https://github.com/HoBi
+
+nl:
+  version: 1.0.0
+  label: Dutch
+  prefix: /nl/
+  available: false
+  translators:
+    - name: Tom de Wit
+      link: https://github.com/ttomdewit
+
 en:
   version: 1.1.0
   label: English

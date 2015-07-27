@@ -136,6 +136,21 @@ zh:
     sassdoc: "本文档由 SassDoc 生成"
     wallpaper: "壁纸来源自 [Julien He](https://twitter.com/julien_he)"
 
+cz:
+  donate:
+    button: "Podpořit Sass Guidelines"
+    content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jeho podporu."
+  baseline:
+    content: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
+  footer:
+    content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Poznámka"
+  images:
+    color-functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
+    sassdoc: "Dokumentace generována ze SassDoc"
+    wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"
+
 de:
   donate:
     content: "Wenn dir Sass Guidelines gefallen, denke doch bitte über eine Unterstützung nach."
