@@ -1,65 +1,65 @@
 
-# Mixins
+# Mixiny
 
-Mixins are one of the most used features from the whole Sass language. They are the key to reusability and DRY components. And for good reason: mixins allow authors to define styles that can be reused throughout the stylesheet without needing to resort to non-semantic classes such as `.float-left`.
+Mixiny jsou jednou z nejvíce používaných funkcí celého Sassu. Jsou klíčem pro znovupoužitelnost a DRY komponenty. A to pro dobré důvody: mixiny dovolují autorům definovat styly, které mohou být použity napříč styly bez potřeby využívat nesémantické třídy jako `.float-left`.
 
-They can contain full CSS rules and pretty much everything that is allowed anywhere in a Sass document. They can even take arguments, just like functions. Needless to say, the possibilities are endless.
+Mohou obsahovat všechny CSS pravidla a v podstatě cokoliv co je dovoleno kdekoli v používat v Sassu. Dokonce bohou přijímat argumenty, přesně jako funkce. Netřeba říkat, že možností je nekonečno.
 
-But I feel I must warn you against abusing the power of mixins. Again, the keyword here is *simplicity*. It might be tempting to build extremely powerful mixins with massive amounts of logic. It’s called over-engineering and most developers suffer from it. Don’t over think your code, and above all keep it simple. If a mixin ends up being longer than 20 lines or so, then it should be either split into smaller chunks or completely revised.
+Ale mám pocit, že vás musím varovat před zneužitím moci mixinů. Opět platí, že klíčové slovo je *jednoduchost*. Mohli byste se zlákat vytvořit extrémně mocné mixiny s velkým množstvím logiky. Tomu se říká přeinženýrování a většina vývojářů tím trpí. Nepřeceňujte svůj kód, a držte jej především jednoduchý. Pokud skončíte s mixinem, který má více než 20 řádků nebo tak nějak, pak by měl být rozdělen na menší části nebo zcela přepracován.
 
-## Basics
+## Základy
 
-That being said, mixins are extremely useful and you should be using some. The rule of thumb is that if you happen to spot a group of CSS properties that always appear together for a reason (i.e. not a coincidence), you can put them in a mixin instead. The [micro-clearfix hack from Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) deserves to be put in a (argumentless) mixin for instance.
+Jak již bylo řečeno, mixiny jsou extrémně užitečné a měli byste nějaké používat. Pokud je nějaká skupina vlastností, které se z nějakého důvodu zobrazují spolu (a není to tedy náhoda), můžete si je dát do mixinu. Například [micro-clearfix hack od Nicolase Gallaghera](http://nicolasgallagher.com/micro-clearfix-hack/) si zaslouží být vložen do mixinu.
 
 {% include snippets/mixins/01/index.html %}
 
-Another valid example would be a mixin to size an element, defining both `width` and `height` at the same time. Not only would it make the code lighter to type, but also easier to read.
+Dalším příklad může být mixin pro nastavení velikosti elementu, který bude definovat `with` a `height` ve stejném okamžiku. Nejenom, že by bylo psát kód jednodušší, ale také by se lépe četl.
 
 {% include snippets/mixins/02/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
-## Arguments list
+## Seznam argumentů
 
-When dealing with an unknown number of arguments in a mixin, always use an `arglist` rather than a list. Think of `arglist` as the 8th hidden undocumented data type from Sass that is implicitly used when passing an arbitrary number of arguments to a mixin or a function whose signature contains `...`.
+Pokud se máte v mixinu utkat s neznámým počtem argumentů, vždy použijte spíše `arglist` než-li seznam. O `arglist` můžete přemýšlet jako o 8. skrytém nezdokumentovaném data typu z Sassu, který se implicitně používá při průchodu libovolného počtu argumentů mixinu nebo funkce, kde se využívá `...`.
 
 {% include snippets/mixins/03/index.html %}
 
-Now, when building a mixin that accepts a handful of arguments (understand 3 or more), think twice before merging them out as a list or a map thinking it will be easier than passing them all one by one.
+Nyní, při vytváření mixinu, který akceptuje několik argumentů (tím myslím 3 a více), přemýšlejte dvakrát před spojením je do seznamu nebo mapy, jelikož si myslíte, že je bude jednodušší zpracovat, než s jedním po druhým.
 
-Sass is actually pretty clever with mixins and function declarations, so much so that you can actually pass a list or a map as an arglist to a function/mixin so that it gets parsed as a series of arguments.
+Sass je vlastně pěkně chytrý co se deklarace mixinů a funkcí týče. Tak moc, že vlastně můžete předat seznam nebo mapu jako arglist funckci/mixinu, a ten si to naparsuje jako sérii argumentů.
 
 {% include snippets/mixins/04/index.html %}
 
-###### Further reading
+###### Další četba
 
 * [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
-## Mixins and vendor prefixes
+## Mixiny a vendor prefixy
 
-It might be tempting to define custom mixins to handle vendor prefixes for unsupported or partially supported CSS properties. But we do not want to do this. First, if you can use [Autoprefixer](https://github.com/postcss/autoprefixer), use Autoprefixer. It will remove Sass code from your project, will always be up-to-date and will necessarily do a much better job than you at prefixing stuff.
+Mohlo by být lákavé, udělat si vlastní mixin, který vám bude přidávat vendor prefixy pro nepodporovatelné, nebo částečně podporované, CSS vlastnosti. Ale to není to, co chceme. Za prvé, pokud můžete použít [Autoprefixer](https://github.com/postcss/autoprefixer), použijte Autoprefixer. Díky němu nebudete muset psát přebyteční kód v Sassu, bude vždy aktuální a vždy udělá lepší práci, než-li vaše prefixující věci.
 
-Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](http://bourbon.io/) or [Compass](http://compass-style.org/), you may already know that they both provide a collection of mixins that handle vendor prefixes for you. Use those.
+Bohužel vždy není možné Autoprefixer použít. Pokud používáte [Bourbon](http://bourbon.io/) nebo [Compass](http://compass-style.org/), asi již pravděpodobně víte, že oba mají kolekci mixinů, které se o vendor prefixy starají. Použijte je.
 
-If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and only then, you can have your own mixin for prefixing CSS properties. But. Please do not build a mixin per property, manually printing each vendor.
+Pokud nemůžete použít Autoprefixer ani Bourbon nebo Compass, pak a jen tehdy můžete použít svůj vlastní mixin, který se s prefixováním CSS vlastností popere. Ale, prosím vás, nedělejte pro každou vlastnost svůj vlastní mixin, který ručně vypíše každý vendor.
 
 {% include snippets/mixins/05/index.html %}
 
-Do it the clever way.
+Udělejte to chytře.
 
 {% include snippets/mixins/06/index.html %}
 
-Then using this mixin should be very straightforward:
+Použití takového mixinu pak bude velmi jednoduché:
 
 {% include snippets/mixins/07/index.html %}
 
-Please keep in mind this is a poor solution. For instance, it cannot deal with complex polyfills such as those required for Flexbox. In that sense, using Autoprefixer would be a far better option.
+Prosím vemte na vědomí, že je to velmi špatné řešení. Například se to nemůže vypořádat se složitými polyfily, jako ty, co jsou potřeba pro Flexbox. V tomto případně by bylo použití Autoprefixeru daleko lepší řešení.
 
-###### Further reading
+###### Další četba
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
