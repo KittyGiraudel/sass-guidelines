@@ -5,7 +5,7 @@ Navrhnout architekturu CSS projektu je pravděpodobně jedna z nejvíce těžký
 
 Naštěstí, jedna z hlavních výhod používání CSS preprocesoru je schopnost rozdělit codebase do několika souborů bez dopadu na výkon (jako dělá CSS direktiva `@import`). Díky přetížení Sass `@import` direktiv je naprosto bezpečné (a vlastně i doporučované) používat tak mnoho souborů, kolik je ve vývoji nezbytné a všechno pro produkci kompilovat do jednoho stylu.
 
-Nad vším tímhle snad ani nemohu dostatečně zdůraznit potřebu složek, a to dokonce i u malých projektů. Doma také nedáváte každý list papíru do jedné a té samé krabice. Používáte složky. Jednu pro dům/byt, jednu pro banku, jednu pro účty, a tak dále. Není tedy žádný důvod dělat to jinak při strukturování CSS projektu. Rozdělte codebase do smyspluplně rozdělených složek tak, ať je později jednoduché najít věci, když se do kódu vrátíte později.
+Nad vším tímhle snad ani nemohu dostatečně zdůraznit potřebu složek, a to dokonce i u malých projektů. Doma také nedáváte každý list papíru do jedné a té samé krabice. Používáte složky. Jednu pro dům/byt, jednu pro banku, jednu pro účty, a tak dále. Není tedy žádný důvod dělat to jinak při strukturování CSS projektu. Rozdělte codebase do smysluplně rozdělených složek tak, ať je později jednoduché najít věci, když se do kódu vrátíte později.
 
 Je tu hodně populárních architektur pro CSS projekty: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... Všechny mají své přednosti, klady a zápory.
 
@@ -66,7 +66,7 @@ Ideálně můžeme přijít s něčím jako je toto:
 
 ### Složka base
 
-Složka `base/` obsahuje to, co bychom mohli nazvat 'často používaný kód' projektu. Můžete tam najít resetovací soubor, nějaké pravidla pro typografii a pravděpodobně styl (který nazývám `_base.scss`), který definuje nějaké standardní styly pro obyčejně používané HTML elementy.
+Složka `base/` obsahuje to, co bychom mohli nazvat 'často používaný kód' projektu. Můžete tam najít soubor pro resetování, nějaké pravidla pro typografii a pravděpodobně styl (který nazývám `_base.scss`), který definuje nějaké standardní styly pro obyčejně používané HTML elementy.
 
 * `_base.scss`
 * `_reset.scss`
@@ -169,7 +169,7 @@ V zájmu zachování čitelnosti by měl hlavní soubor respektovat tyto pokyny:
 * jeden `@import` na řádek;
 * žádný nový řádek mezi dvěma importy ze stejné složky;
 * nový řádek po posledním importu ze složky;
-* vynechat přípony souborů a podtžítko na začátku.
+* vynechat přípony souborů a podtržítko na začátku.
 
 {% include snippets/architecture/02/index.html %}
 

@@ -1,7 +1,7 @@
 
 # Varování a chyby
 
-Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, compilování applikace...), což může být pro někoho překvapením.
+Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, kompilování applikace...), což může být pro někoho překvapením.
 
 * `@debug`;
 * `@warn`;
@@ -19,7 +19,7 @@ V Sass projektu je nespočet využití pro varování a chyby. V podstatě každ
 
 ## Varování
 
-Vezměte si tuto funkci z [Sass-MQ](https://github.com/sass-mq/sass-mq), která se pokouší prévést `px` hodnotu na `em` hodnotu, například:
+Vezměte si tuto funkci z [Sass-MQ](https://github.com/sass-mq/sass-mq), která se pokouší převést `px` hodnotu na `em` hodnotu, například:
 
 {% include snippets/errors/01/index.html %}
 

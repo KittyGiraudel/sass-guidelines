@@ -1,7 +1,7 @@
 
 # Komentování
 
-CSS je ošemetný jazyk plný hacků a podivností. Díky tomu by měl být hodně kometován, zvláště pokud vy nebo někdo jiný zamýšlíte číst a upravovat kód za 6 měsíců nebo rok. Nenechte se, nebo někoho jiného, dostat do pozice *Já-jsem-tohle-pane-bože-nenapsal*.
+CSS je ošemetný jazyk plný hacků a podivností. Díky tomu by měl být hodně komentován, zvláště pokud vy nebo někdo jiný zamýšlíte číst a upravovat kód za 6 měsíců nebo rok. Nenechte se, nebo někoho jiného, dostat do pozice *Já-jsem-tohle-pane-bože-nenapsal*.
 
 I přesto, že se CSS může zdát jednoduché, je mnoho situací, kdy může komentář hodně vysvětlit. Mohou vysvětlit takové věci jako:
 
@@ -32,7 +32,7 @@ Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře 
 
 ## Dokumentace
 
-Každá proměnná, funkce, mixin a placeholder, který je zamýšlen být znovupoužitelný v codebase by měl být dokumentován jako část globálního API využívající [SassDoc](http://sassdoc.com).
+Každá proměnná, funkce, mixin a placeholder, která je zamýšlena býti znovupoužitelná v codebase by měla být dokumentována jako část globálního API využívající [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 

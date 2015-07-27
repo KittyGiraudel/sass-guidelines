@@ -1,12 +1,12 @@
 
 # Extend
 
-Direktiva `@extend` je přávě jedna z funkcí Sassu, co jej udělalo tak populárním již několik let zpátky. Jen připomenu, že to umožňuje říci Sassu, aby nastyloval element A tak, aby to odpovídalo selektoru B. Netřeba asi dodávat, že tato funkce může ztratit svou hodnotu, pokud píšete modulární CSS.
+Direktiva `@extend` je právě jedna z funkcí Sassu, co jej udělalo tak populárním již několik let zpátky. Jen připomenu, že to umožňuje říci Sassu, aby nastyloval element A tak, aby to odpovídalo selektoru B. Netřeba asi dodávat, že tato funkce může ztratit svou hodnotu, pokud píšete modulární CSS.
 
-Každopádně mám pocit, že vás musím před toutu funkcí varovat. Stejně tak, jak je to chytré, tak je `@extend` stále ošemetný koncept, který by mohl udělat více škody, než-li užitku, zvláště když se špatně použije. Věc se má tak, že když extendujete selektor, nemůžete zodpovědět následující otázky bez toho, aniž byste měli nějakou hlubokou znalost celé codebase:
+Každopádně mám pocit, že vás musím před touto funkcí varovat. Stejně tak, jak je to chytré, tak je `@extend` stále ošemetný koncept, který by mohl udělat více škody, než-li užitku, zvláště když se špatně použije. Věc se má tak, že když extendujete selektor, nemůžete zodpovědět následující otázky bez toho, aniž byste měli nějakou hlubokou znalost celé codebase:
 
 * kde se můj aktuální selektor připojí?
-* mohu způsobovat nežádnoucí efekty?
+* mohu způsobovat nežádoucí efekty?
 * jak velké CSS vyjde z tohoto jednoho extendu?
 
 Všichni víte, že výsledek se může pohybovat od 'nic to nedělá' až po katastrofální vedlejší účinky. A právě proto je moje první rada vyhnout se nadobro `@extend` direktivě. Může to znít brutálně, ale na konci dne to může ušetřit nějaké ty bolesti hlavy a potíže. 
@@ -22,7 +22,7 @@ Samozřejmě existují případy, kde by extendování selektorů mohlo být k u
 * Použijte extend na samostatné placeholdery, nikoli na skutečné selektory.
 * Ujistěte se, že placeholder, který extendujete, je ve stylech přítomný co možná nejméně.
 
-Pokud se rozhodnete použít extend, dovolte mi přopomenout, že si to moc dobře nerozumí s `@media` bloky. Jak asi víte, Sass není schopen extendnout vnější selektor z media query. Pokud tak učiníte, kompilátor se jednoduše zhroutí a řekne vám, že takovéto věci nemůžete dělat. Nic moc, zejména proto, že media queries téměř všichni známe.
+Pokud se rozhodnete použít extend, dovolte mi připomenout, že si to moc dobře nerozumí s `@media` bloky. Jak asi víte, Sass není schopen extendnout vnější selektor z media query. Pokud tak učiníte, kompilátor se jednoduše zhroutí a řekne vám, že takovéto věci nemůžete dělat. Nic moc, zejména proto, že media queries téměř všichni známe.
 
 {% include snippets/extend/01/index.html %}
 

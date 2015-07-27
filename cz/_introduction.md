@@ -7,12 +7,12 @@ Příručka není jenom bezvýznamný dokument na bezduché přečtení, nebo p�
 
 Netřeba ani říkat, že čím více vývojářů je zapojeno v projektu, tím více je manuál pro psaní kódu dost potřebný. Stejně tak čím větší je projekt, tím více je manuál potřeba.
 
-Důležitost dobře uvádní [Harry Roberts](http://csswizardry.com) v jeho [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+Důležitost dobře uvádí [Harry Roberts](http://csswizardry.com) v jeho [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Příručka pro psaní kódu (poznámka, nikoli ve vizuálním stylu) je hodnotným nástrojem pro týmy, které:</p>
   <ul>
-    <li>budou budovat a udržovat produkty přimeřenou dobu;</li>
+    <li>budou budovat a udržovat produkty přiměřenou dobu;</li>
     <li>mít vývojáře různých schopností a specializací;</li>
     <li>mít několik vývojářů pracujících na produktu v jakýkoli daný čas;</li>
     <li>přijímat pravidelně nové zaměstnance;</li>
