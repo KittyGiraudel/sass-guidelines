@@ -1,11 +1,11 @@
 
 # Mixiny
 
-Mixiny jsou jednou z nejvíce používaných funkcí celého Sassu. Jsou klíčem pro znovupoužitelnost a DRY komponenty. A to pro dobré důvody: mixiny dovolují autorům definovat styly, které mohou být použity napříč styly bez potřeby využívat nesémantické třídy jako `.float-left`.
+Mixiny jsou jednou z nejvíce používaných funkcí celého Sassu. Jsou klíčem pro znovupoužitelnost a DRY komponenty. A to z dobrých důvodů: mixiny dovolují autorům definovat styly, které mohou být použity napříč styly bez potřeby využívat nesémantické třídy jako `.float-left`.
 
-Mohou obsahovat všechny CSS pravidla a v podstatě cokoliv co je dovoleno kdekoli v používat v Sassu. Dokonce bohou přijímat argumenty, přesně jako funkce. Netřeba říkat, že možností je nekonečno.
+Mohou obsahovat všechny CSS pravidla a v podstatě cokoliv, co je dovoleno používat kdekoli jinde v Sassu. Dokonce mohou přijímat argumenty, přesně jako funkce. Netřeba říkat, že možností je nekonečno.
 
-Ale mám pocit, že vás musím varovat před zneužitím moci mixinů. Opět platí, že klíčové slovo je *jednoduchost*. Mohli byste se zlákat vytvořit extrémně mocné mixiny s velkým množstvím logiky. Tomu se říká přeinženýrování a většina vývojářů tím trpí. Nepřeceňujte svůj kód, a držte jej především jednoduchý. Pokud skončíte s mixinem, který má více než 20 řádků nebo tak nějak, pak by měl být rozdělen na menší části nebo zcela přepracován.
+Ale mám pocit, že vás musím varovat před zneužitím moci mixinů. Opět platí, že klíčové slovo je *jednoduchost*. Mohli byste se zlákat vytvořit extrémně mocné mixiny s velkým množstvím logiky. Tomu se říká přeinženýrování a trpí tím většina vývojářů. Nepřeceňujte svůj kód a držte jej především jednoduchý. Pokud skončíte s mixinem, který má více než 20 řádků, nebo tak nějak, pak by měl být rozdělen na menší části nebo zcela přepracován.
 
 ## Základy
 
@@ -13,7 +13,7 @@ Jak již bylo řečeno, mixiny jsou extrémně užitečné a měli byste nějak�
 
 {% include snippets/mixins/01/index.html %}
 
-Dalším příklad může být mixin pro nastavení velikosti elementu, který bude definovat `with` a `height` ve stejném okamžiku. Nejenom, že by bylo psát kód jednodušší, ale také by se lépe četl.
+Dalším příkladem může být mixin pro nastavení velikosti elementu, který bude definovat `with` a `height` ve stejném okamžiku. Nejenom, že by bylo psát kód jednodušší, ale také by se lépe četl.
 
 {% include snippets/mixins/02/index.html %}
 
@@ -25,13 +25,13 @@ Dalším příklad může být mixin pro nastavení velikosti elementu, který b
 
 ## Seznam argumentů
 
-Pokud se máte v mixinu utkat s neznámým počtem argumentů, vždy použijte spíše `arglist` než-li seznam. O `arglist` můžete přemýšlet jako o 8. skrytém nezdokumentovaném data typu z Sassu, který se implicitně používá při průchodu libovolného počtu argumentů mixinu nebo funkce, kde se využívá `...`.
+Pokud se máte v mixinu utkat s neznámým počtem argumentů, vždy použijte spíše `arglist` než-li seznam. O `arglist` můžete přemýšlet jako o 8. skrytém nezdokumentovaném data typu ze Sassu, který se implicitně používá při průchodu libovolného počtu argumentů mixinu nebo funkce, kde se využívá `...`.
 
 {% include snippets/mixins/03/index.html %}
 
-Nyní, při vytváření mixinu, který akceptuje několik argumentů (tím myslím 3 a více), přemýšlejte dvakrát před spojením je do seznamu nebo mapy, jelikož si myslíte, že je bude jednodušší zpracovat, než s jedním po druhým.
+Nyní, při vytváření mixinu, který akceptuje několik argumentů (tím myslím 3 a více), přemýšlejte dvakrát před jejich spojením do seznamu nebo mapy, jelikož si myslíte, že je bude jednodušší zpracovat, než s jeden po druhém.
 
-Sass je vlastně pěkně chytrý co se deklarace mixinů a funkcí týče. Tak moc, že vlastně můžete předat seznam nebo mapu jako arglist funckci/mixinu, a ten si to naparsuje jako sérii argumentů.
+Sass je vlastně pěkně chytrý, co se deklarace mixinů a funkcí týče. Tak moc, že vlastně můžete předat seznam nebo mapu jako arglist funckci/mixinu, a ten si to naparsuje jako sérii argumentů.
 
 {% include snippets/mixins/04/index.html %}
 
@@ -41,7 +41,7 @@ Sass je vlastně pěkně chytrý co se deklarace mixinů a funkcí týče. Tak m
 
 ## Mixiny a vendor prefixy
 
-Mohlo by být lákavé, udělat si vlastní mixin, který vám bude přidávat vendor prefixy pro nepodporovatelné, nebo částečně podporované, CSS vlastnosti. Ale to není to, co chceme. Za prvé, pokud můžete použít [Autoprefixer](https://github.com/postcss/autoprefixer), použijte Autoprefixer. Díky němu nebudete muset psát přebyteční kód v Sassu, bude vždy aktuální a vždy udělá lepší práci, než-li vaše prefixující věci.
+Mohlo by být lákavé, udělat si vlastní mixin, který vám bude přidávat vendor prefixy pro nepodporovatelné, nebo částečně podporované, CSS vlastnosti. Ale to není to, co chceme. Za prvé, pokud můžete použít [Autoprefixer](https://github.com/postcss/autoprefixer), použijte Autoprefixer. Díky němu nebudete muset v Sassu psát přebyteční kód a ten bude vždy aktuální a vždy udělá lepší práci, než-li vaše prefixující věci.
 
 Bohužel vždy není možné Autoprefixer použít. Pokud používáte [Bourbon](http://bourbon.io/) nebo [Compass](http://compass-style.org/), asi již pravděpodobně víte, že oba mají kolekci mixinů, které se o vendor prefixy starají. Použijte je.
 
@@ -57,7 +57,7 @@ Použití takového mixinu pak bude velmi jednoduché:
 
 {% include snippets/mixins/07/index.html %}
 
-Prosím vemte na vědomí, že je to velmi špatné řešení. Například se to nemůže vypořádat se složitými polyfily, jako ty, co jsou potřeba pro Flexbox. V tomto případně by bylo použití Autoprefixeru daleko lepší řešení.
+Prosím, vemte na vědomí, že je to velmi špatné řešení. Například se to nemůže vypořádat se složitými polyfily, jako ty, co jsou potřeba pro Flexbox. V tomto případně by bylo použití Autoprefixeru daleko lepší řešení.
 
 ###### Další četba
 

@@ -3,7 +3,7 @@
 
 Pravděpodobně již víte, že Sass poskytuje podmíněné příkazy pomocí `@if` a `@else` direktiv. V běžných stylech nejsou podmíněné příkazy potřeba, ledaže máte střední až velmi komplexní řešení. Ve skutečnosti existují hlavně pro knihovny a frameworky.
 
-Každopádně, pokud je se někdy ocitnete v situaci, kdy je budete využívat, respektujte, prosím, následující zásady:
+Každopádně, pokud se někdy ocitnete v situaci, kdy je budete využívat, respektujte, prosím, následující zásady:
 
 * Žádné závorky, pokud nejsou nezbytné;
 * Vždy mějte prázdný řádek před `@if`;

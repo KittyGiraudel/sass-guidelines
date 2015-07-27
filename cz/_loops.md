@@ -1,17 +1,17 @@
 
 # Cykly
 
-Protože Sass umožňuje komplexní datové struktury jako [seznamy](#lists) a [mapy](#maps), není až takové překvapení, že také umožňuje možnost jak tyto struktury procházet.
+Protože Sass umožňuje komplexní datové struktury jako [seznamy](#lists) a [mapy](#maps), není až takové překvapení, že také umožňuje tyto struktury procházet.
 
 Každopádně, přítomnost cyklů obvykle implikuje středně složitou logiku, která do Sassu pravděpodobně nepatří. A tedy proto se před tím, než-li cyklus použijete, ujistěte, že dává smysl a opravdu řeší problém.
 
 ## Each
 
-Cyklus `@each` je definitivně nejpoužívanější z Sass cyklus. Poskytuje čisté API pro procházení seznamu nebo mapy.
+Cyklus `@each` je definitivně nejpoužívanější z Sass cyklů. Poskytuje čisté API pro procházení seznamu nebo mapy.
 
 {% include snippets/loops/01/index.html %}
 
-Pokud procházíte mapu, vždy používejte `$key` a `$value` jako jména proměnných, abyste zachovali konzistnost.
+Pokud procházíte mapu, vždy používejte `$key` a `$value` jako jména proměnných, abyste zachovali konzistentnost.
 
 {% include snippets/loops/02/index.html %}
 
@@ -26,7 +26,7 @@ Cyklus `@for` může být užitečný, pokud kombinujete CSS pseudo třídu `:nt
 
 {% include snippets/loops/03/index.html %}
 
-Vždy používejte `$i` jako jméno proměnné, abyste se drželi obecné konvenci, tedy pokud nemáte jiný dobrý důvod proč tak neučinit. Nikdy nepoužívejte klíčové slovo `to`, vždy používejte `through`. Mnoho vývojářů ani neví, že Sass má tuto možnost a používání může vést k záměně.
+Vždy používejte `$i` jako jméno proměnné, abyste se drželi obecné konvence, tedy pokud nemáte jiný dobrý důvod proč tak neučinit. Nikdy nepoužívejte klíčové slovo `to`, vždy používejte `through`. Mnoho vývojářů ani neví, že Sass má tuto možnost a používání může vést k záměně.
 
 Také respektujte tyto pokyny pro zachování čitelnosti:
 
@@ -35,4 +35,4 @@ Také respektujte tyto pokyny pro zachování čitelnosti:
 
 ## While
 
-Cyklus `@while` nemá v Sassu absolutně žádné reálné použití, zvlášťě když tu není žádná možnost jak breaknout cyklus zevnitř. **Nepoužívejte ho**.
+Cyklus `@while` nemá v Sassu absolutně žádné reálné použití, zvláště když tu není žádná možnost, jak breaknout cyklus zevnitř. **Nepoužívejte ho**.

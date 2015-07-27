@@ -5,7 +5,7 @@ Proměnné jsou esencí každého programovacího jazyka. Díky nim můžeme zno
 
 Každopádně CSS není nic jiného než velký koš obsahující všechny naše vejce. Oproti většině jazyků, v CSS nenajdete žádné pravé scopy.
 
-Moje rada proto je taková, abyste proměnné vytvářeli jen když to dává smysl. Nerte to na lehkou váhu, protože to vám v ničem nepomůže. Nová proměnná by se měla vytvářet pouze pokud se splňují následující kritéria:
+Moje rada proto je taková, abyste proměnné vytvářeli jen když to dává smysl. Neberte to na lehkou váhu, protože to vám v ničem nepomůže. Nová proměnná by se měla vytvářet pouze pokud se splňují následující kritéria:
 
 * hodnota se opakuje minimálně dvakrát;
 * hodnota by se mohla alespoň jednou aktualizovat;

@@ -1,13 +1,13 @@
 
 # Varování a chyby
 
-Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Co může být pro někoho překvapením, Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, compilování applikace...).
+Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, compilování applikace...), což může být pro někoho překvapením.
 
 * `@debug`;
 * `@warn`;
 * `@error`.
 
-Pojďme dát `@debug` stranou, protože je jasně určená pro ladění SassScript, což nás teď nezajímá. Zbyly nám tedy `@warn` a `@error`, které jsou shodné až na to, že jedna zastavuje kompilátor, zatímco druhá ne. Nechám vás hádat, která je která.
+Pojďme dát `@debug` stranou, protože je jasně určená pro ladění SassScriptu, což nás teď nezajímá. Zbyly nám tedy `@warn` a `@error`, které jsou shodné až na to, že jedna zastavuje kompilátor, zatímco druhá ne. Schválně hádejte, která je která.
 
 V Sass projektu je nespočet využití pro varování a chyby. V podstatě každý mixin nebo funkce očekávající specifický typ argumentu může vyhazovat chyby, pokud se něco pokazí, nebo zobrazit varování, pokud je pro chybu předpoklad.
 
@@ -19,7 +19,7 @@ V Sass projektu je nespočet využití pro varování a chyby. V podstatě každ
 
 ## Varování
 
-Vezmě te s tuto funkci z [Sass-MQ](https://github.com/sass-mq/sass-mq), která se pokouší prévést `px` hodnotu na `em` hodnotu, například:
+Vezměte si tuto funkci z [Sass-MQ](https://github.com/sass-mq/sass-mq), která se pokouší prévést `px` hodnotu na `em` hodnotu, například:
 
 {% include snippets/errors/01/index.html %}
 
@@ -27,7 +27,7 @@ Pokud je hodnota bezjednotková, funkce předpokládá, že je hodnota vyjádře
 
 ## Chyby
 
-Chyby, oproti varováním, zabraňují kompilátoru běžet dál. V podstatě zastaví kompilaci a zobrazí zprávu ve výstupním proudu, stejně jako trasování zásobníku, což je užitečné pro debugování. Kvůli tomu by chyby měli vyhodit výjimku, pokud není žádná možnost jak program udržet v chodu. Pokud je to možné, snažte se s problémem pracovat a namísto toho zobrazit varování.
+Chyby, oproti varováním, zabraňují kompilátoru běžet dále. V podstatě zastaví kompilaci a zobrazí zprávu ve výstupním proudu, stejně jako trasování zásobníku, což je užitečné pro debugování. Kvůli tomu by chyby měly vyhodit výjimku, pokud není žádná možnost jak program udržet v chodu. Pokud je to možné, snažte se s problémem pracovat a namísto toho zobrazit varování.
 
 Například pojďme říci, že vytváříte getter funkci pro přístup k hodnotám ze specifické mapy. Můžete vyhodit error, pokud v mapě není požadovaný klíč.
 
