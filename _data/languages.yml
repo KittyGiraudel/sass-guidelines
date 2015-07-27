@@ -1,29 +1,20 @@
-zh:
+cz:
   version: 1.1.0
-  label: Chinese
-  prefix: /zh/
+  label: Czech
+  prefix: /cz/
   available: true
   translators:
-    - name: 大漠
-      link: http://www.w3cplus.com
-    - name: Sean Sun
-      link: https://github.com/pinggod
+    - name: Honza Bittner
+      link: https://github.com/HoBi
 
-en:
+da:
   version: 1.1.0
-  label: English
-  prefix: /
-  available: true
-  translators: []
-
-fr:
-  version: 1.1.0
-  label: French
-  prefix: /fr/
+  label: Danish
+  prefix: /da/
   available: true
   translators:
-    - name: Pierre Choffé
-      link: http://la-cascade.ghost.io
+    - name: Anders Schmidt Hansen
+      link: http://codepen.io/andersschmidt/
 
 de:
   version: 1.1.0
@@ -33,6 +24,33 @@ de:
   translators:
     - name: Moritz Kröger
       link: https://github.com/morkro
+
+en:
+  version: 1.1.0
+  label: English
+  prefix: /
+  available: true
+  translators: []
+
+es:
+  version: 1.1.0
+  label: Spanish
+  prefix: /es/
+  available: true
+  translators:
+    - name: Sonia Conde
+      link: https://github.com/soniar4i
+    - name: David Khourshid
+      link: https://github.com/davidkpiano
+
+fr:
+  version: 1.1.0
+  label: French
+  prefix: /fr/
+  available: true
+  translators:
+    - name: Pierre Choffé
+      link: http://la-cascade.ghost.io
 
 ko:
   version: 1.1.0
@@ -80,31 +98,13 @@ ru:
     - name: Pavel Demyanenko
       link: https://github.com/PavelDemyanenko
 
-es:
+zh:
   version: 1.1.0
-  label: Spanish
-  prefix: /es/
+  label: Chinese
+  prefix: /zh/
   available: true
   translators:
-    - name: Sonia Conde
-      link: https://github.com/soniar4i
-    - name: David Khourshid
-      link: https://github.com/davidkpiano
-
-da:
-  version: 1.1.0
-  label: Danish
-  prefix: /da/
-  available: true
-  translators:
-    - name: Anders Schmidt Hansen
-      link: http://codepen.io/andersschmidt/
-
-cz:
-  version: 1.1.0
-  label: Czech
-  prefix: /cz/
-  available: true
-  translators:
-    - name: Honza Bittner
-      link: https://github.com/HoBi
+    - name: 大漠
+      link: http://www.w3cplus.com
+    - name: Sean Sun
+      link: https://github.com/pinggod
