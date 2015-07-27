@@ -1,48 +1,48 @@
 
-# Variables
+# Proměnné
 
-Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
+Proměnné jsou esencí každého programovacího jazyka. Díky nim můžeme znovu použít hodnoty místo jejich kopírování znovu a znovu. Ale hlavně se díky nim dá jednoduše aktualizovat hodnota. Už žádné další find and replace nebo ruční procházení. 
 
-However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+Každopádně CSS není nic jiného než velký koš obsahující všechny naše vejce. Oproti většině jazyků, v CSS nenajdete žádné pravé scopy.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
+Moje rada proto je taková, abyste proměnné vytvářeli jen když to dává smysl. Nerte to na lehkou váhu, protože to vám v ničem nepomůže. Nová proměnná by se měla vytvářet pouze pokud se splňují následující kritéria:
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+* hodnota se opakuje minimálně dvakrát;
+* hodnota by se mohla alespoň jednou aktualizovat;
+* všechny shody výskytu hodnoty jsou vázané s proměnnou (tedy nejsou to náhody).
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
+V podstatě deklarovat proměnnou, která se nikdy nebude aktualizovat nebo je použita pouze na jednom místě, nemá žádný význam.
 
-## Scoping
+## Scopování
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
+Scopování proměnné v Sassu se během let změnilo. Donedávna byla deklarace proměnné spolu se styly a dalšími skopy lokální již v základu. Každopádně když tu byla již ta samá globální proměnná se stejným názvem, lokální přirovnání mohlo změnit globální proměnnou. Od verze 3.4 Sass řeší koncept scopů správně a vytváří namísto toho novou lokální proměnnou.
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+V dokumentaci se hovoří o *stínování globální proměnné*. Pokud deklarujete proměnnou, která již existuje, v globálním scopu v vnitřním prostoru (selektor, funkce, mixin...), lokální proměnná *stíňuje* tu globální. V podstatě ji přepíše jen pro daný scope.
 
-The following code snippet explains the *variable shadowing* concept.
+Následující útržka kódu vysvětluje koncept *stíňování proměnné*.
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flag
+## značka `!default`
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+Pokud vytváříte knihovnu, framework, grid systém nebo jakoukoli jinou část Sassu, která se bude zveřenovat a používat externími vývojáři, všechny konfigurační proměnné by měly být označeny značkou `!default`, takže budou moci být přepsány.
 
 {% include snippets/variables/02/index.html %}
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Díky tomu může vývojář definovat vlastní `$baseline` proměnnou *před* importováním vaší knihovny a neuvidí svou proměnnou přepsanou.
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+## značka `!global`
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+Značka `!global` by se měla používat pro přepisování globálních proměnných z lokálního scopu. Pokud definujete proměnnou v kořenové úrovni, značka `!global` by se však měla vynechat. 
 
 {% include snippets/variables/04/index.html %}
 
-## Multiple variables or maps
+## Více proměnných nebo mapy
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+Používání map spíše než více proměnných má několik výhod. Největší výhoda je možnost provést smyčku nad mapou, což s rozdílnými proměnnými nelze.
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+Další plus pro používání map je možnost vytvořit malou getter funkci pro přátelštější API. Zvažte například následující Sass kód:
 
 {% include snippets/variables/05/index.html %}
