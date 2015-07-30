@@ -39,7 +39,7 @@ If you are going to use extend, let me also remind you that it does not play wel
 
 Per riassumenre, io **consiglio di non usare la direttiva `@extend`**, a meno che non ci siano specifiche circostanze, ma non mi spingo fino a vietarlo.
 
-###### FPer saperne di più
+###### FApprofondimenti
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)

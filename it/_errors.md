@@ -11,7 +11,7 @@ Mettiamo da parte `@debug`, dato che è qui chiaramente per fare debug di SassSc
 
 Ora, c'è parecchio bisogno in un progetto Sass per avvisi ed errori. In pratica, qualsiasi mixin o funzione che si aspetta uno specifico tipo o argomento può generare un errore se qualcosa è andato storto, o mostrare un avviso quando non ha le idee chiare e sta provando ad indovinare.
 
-###### Per saperne di più:
+###### Approfondimenti:
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)

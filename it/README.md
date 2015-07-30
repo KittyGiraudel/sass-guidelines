@@ -10,7 +10,7 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 | Inglese                  | Italiano                                          |
 |--------------------------|---------------------------------------------------|
 | _developer_              | sviluppatore                                      |
-| _further reading_        | per saperne di più                                |
+| _further reading_        | approfondimenti                                   |
 | _stylesheet_             | foglio di stile                                   |
 
 ## Parole non traducibili, da mantenere in inglese
