@@ -11,7 +11,7 @@ To sum up, we want:
 * No trailing 0, mandatory leading 0;
 * Calculations wrapped in parentheses;
 * No magic numbers;
-* Colors expressed in keywords > HSL > RGB > hexadecimal;
+* Colors expressed HSL > RGB > hexadecimal (lowercase and shortened), no keyword;
 * Lists separated with commas;
 * No trailing comma in lists (since they are inlined);
 * Trailing comma in maps;
