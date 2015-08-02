@@ -38,6 +38,7 @@
    * @param {Object} config
    */
   var App = function (config) {
+    this.addOffsetView = config.addOffsetView ? config.addOffsetView : 0;
     this.headings = config.headings;
     this.headingsOffset = [];
     this.tableOfContents = config.tableOfContents;
@@ -126,9 +127,10 @@
     for (var i = 0, headings = this.headings.length; i < headings; i++) {
       // Store offsetTop. The check is only required because 
       // <h1 id="table-of-contents"> is display: none; and hence returns 0.
+      // We don't want <h3>, because it's omitted in the ToC.
       headingsTop = this.getOffset(this.headings[i]);
-      if (headingsTop) { 
-        this.headingsOffset.push(headingsTop); 
+      if (headingsTop && this.headings[i].nodeName !== 'H3') { 
+        this.headingsOffset.push([ this.headings[i], headingsTop ]); 
       }
       // Create anchor element
       this.createHeadingsAnchor( this.headings[i] );
@@ -141,16 +143,25 @@
    * @param {Object} [event]
    */
   App.prototype.evalHeadingsPosition = function (event) {
-    var scrollTop = this.getDocumentScrollTop();
+    var scrollTop = this.getDocumentScrollTop() + this.addOffsetView;
 
     if (this.isLargerThanMobile) {
       // Loop over all headings offsets & compare scrollTop if already passed a value.
       for (var i = 0, offsets = this.headingsOffset.length; i < offsets; i++) {
         if (
-          scrollTop >= this.headingsOffset[i] && 
-          !(scrollTop >= this.headingsOffset[i+1])
+          scrollTop >= this.headingsOffset[i][1] && 
+          this.headingsOffset[i+1] && 
+          !(scrollTop >= this.headingsOffset[i+1][1])
         ) {
           this.highlightTableOfContents(this.headingsOffset[i]);
+        }
+
+        // Last element reached.
+        else if (
+          this.headingsOffset[i] === this.headingsOffset[offsets-1] &&
+          scrollTop >= this.headingsOffset[i][1]
+        ) {
+          this.highlightTableOfContents(this.headingsOffset[offsets-1]);
         }
       }
     }
@@ -180,11 +191,10 @@
 
   /**
    * Takes an offset, searches toc headline based on that and toggles '.in-viewport'.
+   * @param {Array} heading
    */
-  App.prototype.highlightTableOfContents = function (offset) { 
-    var positionInArray = this.headingsOffset.indexOf(offset);
-    var headingsElem = this.headings[positionInArray];
-    var tocElem = this.tableOfContents.querySelector('#markdown-toc-'+ headingsElem.id);
+  App.prototype.highlightTableOfContents = function (heading) { 
+    var tocElem = this.tableOfContents.querySelector('#markdown-toc-'+ heading[0].id);
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
     
     if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
@@ -255,6 +265,7 @@
 
 document.addEventListener('DOMContentLoaded', function (event) {
   var useElements = {
+    addOffsetView: 50,
     headings: document.querySelectorAll('#content > h1[id], #content > h2[id], #content > h3[id]'),
     tableOfContents: document.querySelector('.toc'),
     languagePicker: document.getElementById('language-picker'),
