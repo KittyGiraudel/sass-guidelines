@@ -58,6 +58,8 @@
     this.bindUI();
     this.adjustTableOfContents();
     this.addEvents();
+
+    console.log(this);
   };
 
   /**
@@ -125,7 +127,9 @@
       // Store offsetTop. The check is only required because 
       // <h1 id="table-of-contents"> is display: none; and hence returns 0.
       headingsTop = this.getOffset(this.headings[i]);
-      if (headingsTop) { this.headingsOffset.push(headingsTop); }
+      if (headingsTop) { 
+        this.headingsOffset.push(headingsTop); 
+      }
       // Create anchor element
       this.createHeadingsAnchor( this.headings[i] );
     }
@@ -179,11 +183,11 @@
    */
   App.prototype.highlightTableOfContents = function (offset) { 
     var positionInArray = this.headingsOffset.indexOf(offset);
-    var headingsID = this.headings[positionInArray].id;
-    var tocElem = this.tableOfContents.querySelector('#markdown-toc-'+ headingsID);
+    var headingsElem = this.headings[positionInArray];
+    var tocElem = this.tableOfContents.querySelector('#markdown-toc-'+ headingsElem.id);
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
     
-    if (!hasClass(tocElem, 'in-viewport')) {
+    if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
       if (inViewportElem) { 
         removeClass(inViewportElem, 'in-viewport'); 
       }
