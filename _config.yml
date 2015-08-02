@@ -10,6 +10,7 @@ github_username:  HugoGiraudel
 safe: true
 
 # Build settings
+exclude: [node_modules]
 markdown: kramdown
 
 kramdown:

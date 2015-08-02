@@ -73,6 +73,10 @@
     text-decoration: none;
   }
 
+  .toc .in-viewport {
+    color: $light-pink;
+  }
+
   .toc h1 {
     display: none;
   }
