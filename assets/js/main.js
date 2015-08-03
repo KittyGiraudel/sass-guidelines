@@ -193,7 +193,7 @@
    * @param {Array} heading
    */
   App.prototype.highlightTableOfContents = function (heading) { 
-    var tocElem = this.tableOfContents.querySelector('#markdown-toc-' + heading[0].id);
+    var tocElem = this.tableOfContents.querySelector('a[href="#' + heading[0].id + '"]');
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
     
     if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
