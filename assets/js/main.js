@@ -2,16 +2,28 @@
   'use strict';
 
   function hasClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.contains(className);
+    }
+
     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
   }
 
   function addClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.add(className);
+    }
+
     if (!hasClass(elem, className)) {
         elem.className += ' ' + className;
     }
   }
 
   function removeClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.remove(className);
+    }
+
     var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
     if (hasClass(elem, className)) {
       while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
@@ -21,29 +33,17 @@
     }
   }
 
-  function toggleClass(elem, className) {
-    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-  }
-
   /**
    * The application class.
    * @param {Object} config
    */
   var App = function (config) {
-    this.addOffsetView = config.addOffsetView ? config.addOffsetView : 0;
-    this.headings = config.headings;
-    this.headingsOffset = [];
-    this.tableOfContents = config.tableOfContents;
-    this.languagePicker = config.languagePicker;
-    this.footer = config.footer;
+    this.headingsOffset     = [];
+    this.addOffsetView      = config.addOffsetView || 0;
+    this.headings           = config.headings;
+    this.tableOfContents    = config.tableOfContents;
+    this.languagePicker     = config.languagePicker;
+    this.footer             = config.footer;
     this.isLargerThanMobile = false;
   };
 
@@ -53,14 +53,14 @@
   App.prototype.initialize = function () {
     this.evalClientResolution();
     this.validateHeadings();
+
     if (this.isLargerThanMobile) { 
       this.evalHeadingsPosition(); 
     }
+
     this.bindUI();
     this.adjustTableOfContents();
     this.addEvents();
-
-    console.log(this);
   };
 
   /**
@@ -80,11 +80,8 @@
    * Evaluates if client has mobile resolution or not.
    */
   App.prototype.evalClientResolution = function () {
-    if (window.matchMedia('(min-width: 975px)').matches) {
-      this.isLargerThanMobile = true;
-    } else {
-      this.isLargerThanMobile = false;
-    }
+    var match = window.matchMedia('(min-width: 975px)').matches;
+    this.isLargerThanMobile = match;
   };
 
   /**
@@ -129,11 +126,13 @@
       // <h1 id="table-of-contents"> is display: none; and hence returns 0.
       // We don't want <h3>, because it's omitted in the ToC.
       headingsTop = this.getOffset(this.headings[i]);
+
       if (headingsTop && this.headings[i].nodeName !== 'H3') { 
         this.headingsOffset.push([ this.headings[i], headingsTop ]); 
       }
+
       // Create anchor element
-      this.createHeadingsAnchor( this.headings[i] );
+      this.createHeadingsAnchor(this.headings[i]);
     }
   };
 
@@ -151,7 +150,7 @@
         if (
           scrollTop >= this.headingsOffset[i][1] && 
           this.headingsOffset[i+1] && 
-          !(scrollTop >= this.headingsOffset[i+1][1])
+          !(scrollTop >= this.headingsOffset[i + 1][1])
         ) {
           this.highlightTableOfContents(this.headingsOffset[i]);
         }
@@ -194,13 +193,14 @@
    * @param {Array} heading
    */
   App.prototype.highlightTableOfContents = function (heading) { 
-    var tocElem = this.tableOfContents.querySelector('#markdown-toc-'+ heading[0].id);
+    var tocElem = this.tableOfContents.querySelector('#markdown-toc-' + heading[0].id);
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
     
     if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
       if (inViewportElem) { 
         removeClass(inViewportElem, 'in-viewport'); 
       }
+
       addClass(tocElem, 'in-viewport');
     }
   };
@@ -264,13 +264,13 @@
 }(window));
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  var useElements = {
+  var sassGuidelines = new App({
     addOffsetView: 50,
     headings: document.querySelectorAll('#content > h1[id], #content > h2[id], #content > h3[id]'),
     tableOfContents: document.querySelector('.toc'),
     languagePicker: document.getElementById('language-picker'),
     footer: document.querySelector('.footer')
-  };
-  var sassGuidelines = new App(useElements);
+  });
+
   sassGuidelines.initialize();
 });
