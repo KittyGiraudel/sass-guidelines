@@ -1,34 +1,29 @@
 (function (global) {
-  // Returns a function, that, as long as it continues to be invoked, will not
-  // be triggered. The function will be called after it stops being called for
-  // N milliseconds. If `immediate` is passed, trigger the function on the
-  // leading edge, instead of the trailing.
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    }
-  }
+  'use strict';
 
   function hasClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.contains(className);
+    }
+
     return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
   }
 
   function addClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.add(className);
+    }
+
     if (!hasClass(elem, className)) {
         elem.className += ' ' + className;
     }
   }
 
   function removeClass(elem, className) {
+    if (typeof elem.classList !== 'undefined') {
+      return elem.classList.remove(className);
+    }
+
     var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
     if (hasClass(elem, className)) {
       while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
@@ -38,69 +33,181 @@
     }
   }
 
-  function toggleClass(elem, className) {
-    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-  }
-
-  var App = function () {
-    this.initialize();
+  /**
+   * The application class.
+   * @param {Object} config
+   */
+  var App = function (config) {
+    this.headingsOffset     = [];
+    this.addOffsetView      = config.addOffsetView || 0;
+    this.headings           = config.headings;
+    this.tableOfContents    = config.tableOfContents;
+    this.languagePicker     = config.languagePicker;
+    this.footer             = config.footer;
+    this.isLargerThanMobile = false;
   };
 
+  /**
+   * Initializes application by calling all necessary functions.
+   */
   App.prototype.initialize = function () {
-    this.addHeadingAnchors();
-    this.fixSkipLinks();
+    this.evalClientResolution();
+    this.validateHeadings();
+
+    if (this.isLargerThanMobile) { 
+      this.evalHeadingsPosition(); 
+    }
+
     this.bindUI();
-    this.toc();
+    this.adjustTableOfContents();
+    this.addEvents();
   };
 
-  App.prototype.toc = function () {
-    var toc = document.querySelector('.toc');
-    var top = getOffset(toc);
-    var bottom = getOffset(document.querySelector('.footer'));
-    var height = window.innerHeight|| document.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+  /**
+   * Adds all required eventListener.
+   */
+  App.prototype.addEvents = function () {
+    document.addEventListener('scroll', this.adjustTableOfContents.bind(this), false);
 
-    function getOffset(elem) {
-      var offset = 0;
-      
-      do {
-        if (!isNaN(elem.offsetTop)) offset += elem.offsetTop;
-      } while(elem = elem.offsetParent);
+    window.addEventListener('hashchange', this.fixSkipLinks.bind(this), false);
+    window.addEventListener('resize', this.evalClientResolution.bind(this), false);
+    window.addEventListener('scroll', this.evalHeadingsPosition.bind(this), false);
 
-      return offset;
-    }
-
-    function sticky() {
-      var current = document.documentElement.scrollTop || document.body.scrollTop;
-      var currentBottom = current + height;
-
-      if (current > top) {
-        addClass(toc, 'sticky');
-      } else {
-        removeClass(toc, 'sticky');
-      }
-
-      if (currentBottom > bottom) {
-        addClass(toc, 'sticky-bottom');
-      } else {
-        removeClass(toc, 'sticky-bottom');
-      }
-    }
-
-    // Recompute on scroll
-    document.addEventListener('scroll', debounce(sticky, 50));
-
-    // Initial call
-    sticky();
+    this.languagePicker.addEventListener('change', this.redirectUrl, false);
   };
 
+  /**
+   * Evaluates if client has mobile resolution or not.
+   */
+  App.prototype.evalClientResolution = function () {
+    var match = window.matchMedia('(min-width: 975px)').matches;
+    this.isLargerThanMobile = match;
+  };
+
+  /**
+   * Returns the document's height.
+   * @returns {Number}
+   */
+  App.prototype.getDocumentHeight = function () {
+    return window.innerHeight || document.clientHeight || document.body.clientHeight;
+  };
+
+  /**
+   * Returns the current documentElement|body scrollTop.
+   * @returns {Number}
+   */
+  App.prototype.getDocumentScrollTop = function () {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+  };
+
+  /**
+   * Returns the offset of an element.
+   * @param {HTMLElement} elem
+   * @returns {Number}
+   */
+  App.prototype.getOffset = function (elem) {
+    var offset = 0;
+
+    do {
+      if (!isNaN(elem.offsetTop)) offset += elem.offsetTop;
+    } while(elem = elem.offsetParent);
+
+    return offset;
+  };
+
+  /**
+   * Iterates over all headings elements, stores required values and adds anchor element.
+   */
+  App.prototype.validateHeadings = function () {
+    var headingsTop = null;
+
+    for (var i = 0, headings = this.headings.length; i < headings; i++) {
+      // Store offsetTop. The check is only required because 
+      // <h1 id="table-of-contents"> is display: none; and hence returns 0.
+      // We don't want <h3>, because it's omitted in the ToC.
+      headingsTop = this.getOffset(this.headings[i]);
+
+      if (headingsTop && this.headings[i].nodeName !== 'H3') { 
+        this.headingsOffset.push([ this.headings[i], headingsTop ]); 
+      }
+
+      // Create anchor element
+      this.createHeadingsAnchor(this.headings[i]);
+    }
+  };
+
+  /**
+   * Evaluates current documentElement|body.scrollTop, compares it to headings offset 
+   * and calls highlightTableOfContents() to highlight current visible section.
+   * @param {Object} [event]
+   */
+  App.prototype.evalHeadingsPosition = function (event) {
+    var scrollTop = this.getDocumentScrollTop() + this.addOffsetView;
+
+    if (this.isLargerThanMobile) {
+      // Loop over all headings offsets & compare scrollTop if already passed a value.
+      for (var i = 0, offsets = this.headingsOffset.length; i < offsets; i++) {
+        if (
+          scrollTop >= this.headingsOffset[i][1] && 
+          this.headingsOffset[i+1] && 
+          !(scrollTop >= this.headingsOffset[i + 1][1])
+        ) {
+          this.highlightTableOfContents(this.headingsOffset[i]);
+        }
+
+        // Last element reached.
+        else if (
+          this.headingsOffset[i] === this.headingsOffset[offsets-1] &&
+          scrollTop >= this.headingsOffset[i][1]
+        ) {
+          this.highlightTableOfContents(this.headingsOffset[offsets-1]);
+        }
+      }
+    }
+  };
+
+  /**
+   * Makes this.tableOfContents sticky.
+   */
+  App.prototype.adjustTableOfContents = function () {
+    var top = this.getOffset(this.tableOfContents);
+    var bottom = this.getOffset(this.footer);
+    var current = this.getDocumentScrollTop();
+    var currentBottom = current + this.getDocumentHeight();
+
+    if (current > top) {
+      addClass(this.tableOfContents, 'sticky');
+    } else {
+      removeClass(this.tableOfContents, 'sticky');
+    }
+
+    if (currentBottom > bottom) {
+      addClass(this.tableOfContents, 'sticky-bottom');
+    } else {
+      removeClass(this.tableOfContents, 'sticky-bottom');
+    }
+  };
+
+  /**
+   * Takes an offset, searches toc headline based on that and toggles '.in-viewport'.
+   * @param {Array} heading
+   */
+  App.prototype.highlightTableOfContents = function (heading) { 
+    var tocElem = this.tableOfContents.querySelector('#markdown-toc-' + heading[0].id);
+    var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
+    
+    if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
+      if (inViewportElem) { 
+        removeClass(inViewportElem, 'in-viewport'); 
+      }
+
+      addClass(tocElem, 'in-viewport');
+    }
+  };
+
+  /**
+   * Bind's all changes to the UI.
+   */
   App.prototype.bindUI = function () {
     var input = document.querySelectorAll('input[name="syntax"]');
 
@@ -113,45 +220,57 @@
         }
       });
     });
-
-    document.getElementById('language-picker').addEventListener('change', function (event) {
-      window.location.href = this.value;
-    });
   };
 
-  App.prototype.addHeadingAnchors = function () {
-    var headings = document.querySelectorAll('h1[id], h2[id], h3[id]');
-    var len = headings.length;
-    var link, heading, i;
+  /**
+   * Creates anchor and adds it to passed element.
+   * @param {HTMLElement} elem
+   */
+  App.prototype.createHeadingsAnchor = function (elem) {
+    var link = document.createElement('a');
+    link.setAttribute('href', '#' + elem.id);
+    link.innerHTML = '🔗';
+    link.setAttribute('class', 'anchor-link')
 
-    for (i = 0; i < len; i++) {
-      heading = headings[i];
+    elem.appendChild(link);
+  };
 
-      link = document.createElement('a');
-      link.setAttribute('href', '#' + heading.id);
-      link.innerHTML = '🔗';
-      link.setAttribute('class', 'anchor-link')
-      heading.appendChild(link);
+  /**
+   * Sets focus on (headline) element when hash in URL changes.
+   * Except: <a>, <select>, <button>, <input>, <textarea>
+   * @param {Object} [event]
+   */
+  App.prototype.fixSkipLinks = function (event) {
+    var element = document.getElementById(location.hash.substring(1));
+
+    if (element) {
+      if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+        element.tabIndex = -1;
+      }
+      element.focus();
     }
   };
 
-  App.prototype.fixSkipLinks = function () {
-    window.addEventListener("hashchange", function(event) {
-      var element = document.getElementById(location.hash.substring(1));
-
-      if (element) {
-        if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
-          element.tabIndex = -1;
-        }
-        element.focus();
-      }
-    }, false);
+  /**
+   * Redirects user to new URL, which is defined in elements value.
+   * @param {Object} [event]
+   */
+  App.prototype.redirectUrl = function (event) {
+    window.location.href = this.value;
   };
 
   global.App = App;
 
 }(window));
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  var app = new App();
+document.addEventListener('DOMContentLoaded', function (event) {
+  var sassGuidelines = new App({
+    addOffsetView: 50,
+    headings: document.querySelectorAll('#content > h1[id], #content > h2[id], #content > h3[id]'),
+    tableOfContents: document.querySelector('.toc'),
+    languagePicker: document.getElementById('language-picker'),
+    footer: document.querySelector('.footer')
+  });
+
+  sassGuidelines.initialize();
 });
