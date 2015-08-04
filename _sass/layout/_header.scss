@@ -8,7 +8,7 @@
   overflow: hidden;
   padding: 1.5rem 0;
   margin-bottom: 4.5rem;
-  border-bottom: .5em solid darken($secondary-color, 5%);
+  border-bottom: 0.5em solid darken($secondary-color, 5%);
 }
 
 /**
@@ -32,14 +32,14 @@
 }
 
 /**
- * Baseline
+ * Site Baseline
  */
 .baseline {
   @include container;
+  margin-bottom: 5rem;
   font-size: 2em;
   text-transform: initial;
   color: $main-color;
-  margin-bottom: 5rem;
 
   @include respond-to('medium') {
     font-size: 2.5em;

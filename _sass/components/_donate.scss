@@ -4,22 +4,28 @@
 .donate {
   @include vertical-rhythm;
   @include expand;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: $donate-background;
   text-align: center;
-  border: 1px solid rgba(black, 0.1);
-  padding: 1rem;
-
-  .button {
-    background: white;
-    margin-left: 0;
-    margin-right: 0;
-  }
 
   @include respond-to('medium') {
     padding: 1rem;
   }
 }
 
+/**
+ * Donate module inner wrapper
+ */
 .donate__content {
   @include container;
+}
+
+/**
+ * Button from donate module
+ */
+.donate .button {
+  background: white;
+  margin-left: 0;
+  margin-right: 0;
 }

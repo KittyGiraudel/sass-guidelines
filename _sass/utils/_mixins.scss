@@ -57,23 +57,10 @@
 /// @param {String} $breakpoint - Breakpoint name
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) == false {
-    @error "Invalid breakpoint #{$breakpoint}.";
+    @error 'Invalid breakpoint #{$breakpoint}.';
   }
 
   @media all and (min-width: #{map-get($breakpoints, $breakpoint)}) {
     @content;
   }
-}
-
-/// Mixin helper to output vendor prefixes
-/// @author Hugo Giraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
 }

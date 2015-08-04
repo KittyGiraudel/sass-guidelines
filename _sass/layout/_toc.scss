@@ -1,36 +1,54 @@
+/**
+ * The Table of Contents is absolutely position/fixed only on large screens
+ */
 @include respond-to('large') {
+  /**
+   * ToC container
+   * 1. Absolutely positioned on the top left corner of main container
+   */
   .toc {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 10;
-    width: $sidebar-width;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-size: 0.8em;
-    background-color: white;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    position: absolute; /* 1 */
+    top: 0; /* 1 */
+    left: 0; /* 1 */
+    bottom: 0; /* 1 */
+    width: $sidebar-width;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 0.8em;
     opacity: 0.4;
+    background-color: white;
     transition: opacity 5s ease-in-out;
   }
 
+  /**
+   * Direct list when ToC is sticky
+   * 1. Fixed to stay in the screen even when page is scrolled
+   */
   .toc.sticky > ul {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    position: fixed; /* 1 */
+    top: 0; /* 1 */
+    bottom: 0; /* 1 */
     overflow-x: hidden;
     overflow-y: auto;
   }
 
+  /**
+   * 1. Hardware acceleration hack
+   */
   .toc.sticky:hover {
-    opacity: 0.999999;
+    opacity: 0.999999; /* 1 */
     transition: opacity 0.3s ease-out;
   }
 
+  /**
+   * Prevent the list from disappearing beneath the footer when at the bottom
+   * of the page
+   */
   .toc.sticky-bottom > ul {
     margin-bottom: 140px;
     bottom: 25px;
@@ -54,9 +72,9 @@
 
   .toc ul ul {
     padding-left: 15px;
-    color: #666;
     margin-top: 10px;
     margin-bottom: 0;
+    color: #666;
   }
 
   .toc > ul > li {
@@ -65,18 +83,30 @@
     padding-bottom: 10px;
   }
 
+  /**
+   * Remove bottom border from last item from ToC
+   */
   .toc > ul > li:last-of-type {
     border-bottom: 0;
   }
 
+  /**
+   * Remove underline from links in ToC
+   */
   .toc a {
     text-decoration: none;
   }
 
+  /**
+   * Highlight current section in ToC
+   */
   .toc .in-viewport {
     color: $light-pink;
   }
 
+  /**
+   * Hide ToC title on large screens, only displayed on small screens
+   */
   .toc h1 {
     display: none;
   }

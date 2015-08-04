@@ -1,9 +1,13 @@
+/**
+ * Translation warning block
+ * 1. Make it proheminent
+ */
 .translation-warning {
   @include vertical-rhythm;
   margin: 0;
-  background: $quote-background;
   padding: 1rem 0;
-  font-size: 1.2em;
+  background: $quote-background;
+  font-size: 1.2em; /* 1 */
 
   @include respond-to('medium') {
     padding: 1rem;

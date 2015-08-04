@@ -1,23 +1,27 @@
 /**
  * Buttons
+ * 1. Full width buttons on small screens
  */
 .button {
   @include vertical-rhythm;
+  display: block; /* 1 */
   padding: 1rem;
-  border: .25em solid;
-  color: $secondary-color;
-  display: block;
-  border-radius: .3em;
-  text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
+  border: 0.25em solid;
+  border-radius: 0.3em;
+  color: $secondary-color;
+  text-align: center;
   text-decoration: none;
 
   @include on-event {
     color: $main-color;
   }
 
-  @include respond-to("medium") {
+  /**
+   * Inlined buttons on large screens
+   */
+  @include respond-to('medium') {
     display: inline-block;
   }
 
@@ -28,30 +32,37 @@
    */
   svg {
     fill: currentcolor; /* 1 */
-    @include prefix(transform, translateY(1px), webkit ms); /* 2 */
+    -webkit-transform: translateY(1px); /* 2 */
+    -ms-transform: translateY(1px); /* 2 */
+    transform: translateY(1px); /* 2 */
   }
 }
 
+/**
+ * Button wrapper to horizontally center a button
+ */
 .button-wrapper {
-  text-align: center;
   padding: 1rem 0;
+  text-align: center;
 }
 
 .button-ui {
   display: block;
-  cursor: pointer;
   margin: 1rem;
-  padding: .5rem;
-  font-size: .8em;
-  border-radius: .35em;
-  color: #999;
-  border: .25em solid;
+  padding: 0.5rem;
+  border: 0.25em solid;
+  border-radius: 0.35em;
   background: transparent;
-  text-align: center;
+  color: #999;
+  font-size: 0.8em;
   font-weight: 400;
+  text-align: center;
+  cursor: pointer;
 
+  /**
+   * Icon inside UI button
+   */
   svg {
-    fill: currentcolor;
     display: block;
     margin: 0 auto;
   }
@@ -63,13 +74,13 @@
 
 /**
  * Button to get back to top of the page
+ * 1. Fix it on large screens
  */
 .button-ui--back {
-  right: 0;
-  left: auto;
-  bottom: 50px;
-
   @include respond-to('medium') {
-    position: fixed;
+    position: fixed; /* 1 */
+    right: 0;
+    bottom: 50px;
+    left: auto;
   }
 }

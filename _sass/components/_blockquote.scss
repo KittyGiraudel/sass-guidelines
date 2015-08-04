@@ -6,12 +6,15 @@ blockquote {
   @include expand;
   margin-top: 0;
   margin-bottom: 0;
-  background: $quote-background;
   padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  background: $quote-background;
   font-style: italic;
-  border: 1px solid rgba(black, 0.1);
 
+  /**
+   * Prevent any odd gap from nested elements' margin
+   */
   > * {
     margin: 0;
   }

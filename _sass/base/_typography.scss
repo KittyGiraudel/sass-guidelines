@@ -1,5 +1,5 @@
 /**
- * Vertical rhythm
+ * Poor man's vertical rhythm
  */
 .container > {
   h1, h2, h3, h4, h6, p, ul, ol, pre, img {
@@ -18,8 +18,8 @@ ul ul,
 ul ol,
 ol ul,
 ol ol {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding-left: 3rem;
 }
 
@@ -28,35 +28,43 @@ li {
 }
 
 /**
- * Quotes
- */
-blockquote {
-  @include vertical-rhythm;
-}
-
-/**
  * Headings
+ * 1. Position context for absolutely positioned anchor
  */
 h1, h2, h3, h6 {
-  @include prefix(hyphens, auto, webkit moz);
+  position: relative; /* 1 */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
   text-transform: capitalize;
-  position: relative;
 
+  /**
+   * Prevent code inside headings from being capitalized
+   */
   code {
     text-transform: initial;
   }
 }
 
+/**
+ * Chapter titles
+ */
 h1 {
   margin-top: 6rem;
   font-weight: 700;
 }
 
+/**
+ * Section headings
+ */
 h2 {
   margin-top: 3rem;
   color: $secondary-color;
 }
 
+/**
+ * Sub-headings and “Further readings” headings
+ */
 h3, h6 {
   margin-top: 1.5rem;
   color: #6b7885;
@@ -64,8 +72,10 @@ h3, h6 {
   font-size: 1em;
 }
 
-// Russian and German do not capitalize every word in a header
-// See https://github.com/HugoGiraudel/sass-guidelines/issues/163
+/**
+ * Russian and German do not capitalize every word in a header
+ * See https://github.com/HugoGiraudel/sass-guidelines/issues/163
+ */
 :lang(de),
 :lang(ru) {
   h1, h2, h3, h6 {
