@@ -285,7 +285,7 @@ I cannot think of many topics where opinions are as divided as they are regardin
 * sticking to the alphabetical order;
 * ordering declarations by type (position, display, colors, font, miscellaneous...).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why would animations should appear before the display type? There are a lot of oddities with alphabetical ordering.
+There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why should animations appear before the display type? There are a lot of oddities with alphabetical ordering.
 
 {% include snippets/syntax/26/index.html %}
 
