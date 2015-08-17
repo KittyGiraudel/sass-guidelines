@@ -6,11 +6,12 @@
 
 2. Copy the `en/` folder and rename it after your language shortcode (e.g. `fr/` for French).
 
-3. Add an `index.html` file in your folder containing strictly (replace `<language_shortcode>` with your language shortcode of course):
+3. Add an `index.html` file in your folder containing strictly (replace `<language_shortcode>` with your language shortcode of course; if your language is right-to-left, replace `ltr` with `rtl`):
   ```
   ---
   layout: default
   language: <language_shortcode>
+  direction: ltr
   ---
 
   {% include chapters.html %}
