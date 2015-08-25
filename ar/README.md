@@ -1,19 +1,17 @@
-# Translation notes
+# ملاحظات الترجمة
 
-> **About this file:** when dealing with a translation, please copy this file in your language folder, translate it and fill it appropriately (remove this block though). This file is an important document to maintain as it ensures consistency across all present and future translators.
+الهدف من هذا الملف هو تعريف بعض القواعد الشائعة للترجمات التي يعمل عليها عدة أشخاص. كما تعلم، ترجمة أي شيء من لغة لأخرى هو أمر ليس بسهل. لذلك يجب كتابة كل الترجمات الشائعة لكل لغة، مثل الطريقة الأفضل لترجمة تعبير معين أو التعبير الذي لا يمكن ترجمته على الإطلاق، هذا مثال فقط.
 
-The purpose of this file is to define some common guidelines for translations performed by several people. As you might know, translating anything from one language to another is usually tricky and subjectivity is commonly present. It becomes important then to explicitly state common translation agreements for a particular language, like the best way to translate a certain expression or which expressions should not be translated at all, for example.
+## القواعد
 
-## Guidelines
+* مجموعة من القواعد، لو كان بالامكان تطبيقها على اللغة
 
-* List of guidelines, if applicable for the language
+## الترجمات الشائعة
 
-## Common translations
-
-| English                      | Your language           |
+| English                      | عربي           |
 |------------------------------|-------------------------|
 | _english word or expression_ | appropriate translation | 
 
-## Non-translatable words and expressions
+## الكلمات التي لا يمكن ترجمتها
 
-* List of words or expressions that should not be translated in the language
+* قائمة بالكلمات أو التعبيرات التي يجب أن لا تتم ترجمتها للعربية
