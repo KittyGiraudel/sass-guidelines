@@ -12,6 +12,7 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 | _developer_              | sviluppatore                                      |
 | _further reading_        | approfondimenti                                   |
 | _stylesheet_             | foglio di stile                                   |
+| _loop_                   | iteratore                                         |
 
 ## Parole non traducibili, da mantenere in inglese
 
@@ -25,3 +26,4 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 * map
 * getter
 * media query
+* each
