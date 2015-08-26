@@ -7,9 +7,9 @@
 
 ~~My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:~~
 
-~~the value is repeated at least twice;~~
-~~the value is likely to be updated at least once;~~
-~~all occurrences of the value are tied to the variable (i.e. not by coincidence).~~
+ * the value is repeated at least twice;
+ * the value is likely to be updated at least once;
+ * all occurrences of the value are tied to the variable (i.e. not by coincidence).
 
 ~~Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.~~
 
