@@ -13,6 +13,7 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 | _further reading_        | approfondimenti                                   |
 | _stylesheet_             | foglio di stile                                   |
 | _loop_                   | iteratore                                         |
+| _constants_              | costanti                                          |
 
 ## Parole non traducibili, da mantenere in inglese
 
@@ -27,3 +28,5 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 * getter
 * media query
 * each
+* DRY
+* namespace
