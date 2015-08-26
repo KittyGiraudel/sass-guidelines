@@ -1,17 +1,29 @@
 
 # Variables
 
-Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
+~~Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.~~
 
-However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+~~However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.~~
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
+~~My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:~~
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+~~the value is repeated at least twice;~~
+~~the value is likely to be updated at least once;~~
+~~all occurrences of the value are tied to the variable (i.e. not by coincidence).~~
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
+~~Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.~~
+
+# المتغيرات
+المتغيرات هي أحد اللبنات الاساسية في اللغات البرمجية، فهي تمنحنا القدرة على استخدام قيمة معينة بدون إعادة كتابتها مراراً وتكراراً. والأهم من ذلك، أنها تعطينا المقدرة على تغيير قيمة المتغيير الأساسية فتتغير قيمته أينما وجد في انحاء البرنامج ككل.
+
+ومع ذلك، في لغة CSS الأساسية، لا يوجد هنالك متغيرات، ولا يوجد مجال Scope مُحدد للمتغيرات كما في اللغات البرمجية الأخرى، لذلك من الممكن أن يحدث تعارض بين متغيير وآخر اذا كان كلا المتغيرين يحملان نفس الإسم.
+
+النصيحة الوحيدة عند إنشاء المتغيرات، هي ألا تنشئ المتغيير إلا إذا لزم الأمر أو إذا كانت هنالك حاجة حقيقية للمتغيير. فالمتغيير الجديد يجب أن يُنشئ تحت الظروف الآتية:
+* إما أن قيمة المتغيير متكررة في أكثر من مكان.
+* من الممكن أن تتغير قيمة المتغيير لمرة واحدة على الأقل.
+
+بشكل أساسي، لا جدوى من إنشاء متغيير ستستخدمه مرة واحدة في مشروعك، أو متغيير لن تتغير قيمته إطلاقاً.
+
 
 ## Scoping
 
