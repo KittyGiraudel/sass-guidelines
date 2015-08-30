@@ -41,6 +41,10 @@ That being said, languages that do not require strings to be quoted are definite
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>As per the CSS specifications, the <code>@charset</code> directive should be declared in double quotes <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">to be considered valid</a>. However, Sass takes care of this when compiling to CSS so the authoring has no impact on the final result. You can safely stick to single quotes, even for <code>@charset</code>.</p>
+</div>
+
 ### Strings as CSS values
 
 Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
