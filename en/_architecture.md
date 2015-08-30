@@ -159,8 +159,8 @@ The main file (usually labelled `main.scss`) should be the only Sass file from t
 
 Files should be imported according to the folder they live in, one after the other in the following order:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
