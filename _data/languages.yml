@@ -108,3 +108,14 @@ zh:
       link: http://www.w3cplus.com
     - name: Sean Sun
       link: https://github.com/pinggod
+
+gr:
+  version: 1.0.0
+  label: Greek
+  prefix: /gr/
+  available: true
+  translators:
+    - name: Kostantinos Margaritis
+      link: https://github.com/margaritis
+    - name: Adonis K.
+      link: https://github.com/varemenos
