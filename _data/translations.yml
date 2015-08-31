@@ -106,6 +106,16 @@ fr:
     sassdoc: "Documentation générée par SassDoc"
     wallpaper: "Fond d’écran par [Julien He](https://twitter.com/julien_he)"
 
+gr:
+  donate:
+    content: "Αν απόλαυσες τα Sass Guidelines, στήριξε την προσπάθεια."
+    button: "Στήριξτε τα Sass Guidelines"
+  baseline:
+    content: "An opinionated styleguide for writing sane, maintainable and scalable Sass."
+  footer:
+    content: "Φτιαγμένο με αγάπη από τον [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Σημείωση"
+
 ko:
   donate:
     content: "Sass Guidelines가 맘에 드신다면 후원을 고려해주시기 바랍니다."
