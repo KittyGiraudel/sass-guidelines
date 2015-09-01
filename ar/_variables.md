@@ -27,13 +27,25 @@
 
 ## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
+~~Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.~~
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+~~The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.~~
 
-The following code snippet explains the *variable shadowing* concept.
+~~The following code snippet explains the *variable shadowing* concept.~~
 
 {% include snippets/variables/01/index.html %}
+
+## مجال المتغيرات
+
+المتغييرات لها مجالات محددة، أو ما يسمى بالـ* Scoping*، وتعني أن داخل *مجال* معين يمكنك استخدام هذا المتغير، أما خارج هذا المجال فلا يمكنك ذلك.
+
+تنقسم المجالات بالعادة إلى قسمين:
+الأول: Global - عالمي - وهذا يعني أن المتغير يمكن استخدامه في جميع أنحاء البرنامج.
+الثاني: Local - محلي - وهذا يعني أن مجال المتغير يقتصر على منطقة محددة (داخل حدود function معين)
+
+
+حسب وثائق Sass، ذكر مصطلح يسمى Global variable shadowing، ويعني أنه عند انشاء متغير عالمي باسم معين، وعند انشاء متغيير آخر محلي بنفس الإسم، سوف يقوم المتغير المحلي بعمل shadowing للمتغير العالمي، أي بعبارة أخرى يقوم تتغير قيمة المتغير العالمي لتأخذ قيمة المتغير المحلي، وذلك فقط في حدود المتغير المحلي.
+
 
 ## `!default` flag
 
