@@ -41,6 +41,20 @@ a,
 }
 
 /**
+ * Prevent back-links in TL;DR lists from being underlined
+ */
+:not(.toc) > h1:last-of-type ~ ul [href^='#'] {
+  text-decoration: none;
+  opacity: 0.5;
+  color: $dark-pink;
+  transition: opacity 0.15s ease-out;
+
+  @include on-event {
+    opacity: 1;
+  }
+}
+
+/**
  * Inline code
  * 1. Make the text slightly smaller as the font looks bigger
  */
