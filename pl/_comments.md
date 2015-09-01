@@ -53,5 +53,4 @@ Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
 ###### Dalsze informacje
 
-* [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

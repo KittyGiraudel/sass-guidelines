@@ -41,6 +41,10 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
+</div>
+
 ### Ciągi jako wartości w CSSie
 
 Niektóre z wartości CSS, takie jak `initial` czy `sans-serif` wymagają, by nie znajdowały się pomiędzy cudzysłowami. Deklaracja `font-family: 'sans-serif'` zostanie pominięta, bowiem CSS oczekuje identyfikatora, a nie ciągu w cudzysłowach. Z tego też powodu unikamy umieszczania tych wartości w cudzysłowach.
@@ -78,11 +82,19 @@ Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość 
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code> 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
+</div>
+
 ### Jednostki
 
 Zajmując się długościami, wartość `0` nigdy nie powinna mieć jednostki.
 
 {% include snippets/syntax/08/index.html %}
+
+<div class="note">
+  <p>Uwaga, praktyka ta powinna być ograniczona jedynie do długości. Pominięcie jednostki w przypadku takiej własności jak <code>transition-delay</code> jest niedozwolone. W teorii, pozbawione jednostki zero przypisane jako wartość czasu trwania animacji czy przejścia jest nieprawidłowe i będzie zignorowane. Nie wszystkie przeglądarki są jednak tak surowe. Pamiętajmy jednak, by omijać jednostki tylko i wyłącznie dla wartości reprezentujących długości.</p>
+</div>
 
 Najczęściej powtarzającym się błędem jaki przychodzi mi do głowy na myśl o liczbach w Sassie jest przekonanie, że jednostki są po prostu ciągami znaków, które można swobodnie i bezpiecznie dodawać do liczby. O ile może się wydawać, że tak jest, w rzeczywistości jednostki wcale tak nie funkcjonują. Należy myśleć o jednostkach jako matematycznych symbolach. Dla przykładu, mnożąc 5 cali przez 5 cali uzyskamy wynik 25 cali kwadratowych. Ta sama logika tyczy się Sassa.
 
@@ -131,12 +143,17 @@ Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się ju
 
 Aby uczynić zagadnienie dotyczące barw najprostszym jak się tylko da, zalecałbym uszanować następujący porządek preferencji, jeśli chodzi o formaty barw:
 
-1. [Słowa kluczowe odpowiadające barwom w CSSie](http://www.w3.org/TR/css3-color/#svg-color);
-2. [HSL i HSV](http://pl.wikipedia.org/wiki/HSL);
-3. [RGB](http://pl.wikipedia.org/wiki/RGB);
-4. Określenia szestnastkowe. Najlepiej małymi literami i skrócone, gdy jest to możliwe.
+1. [HSL](http://pl.wikipedia.org/wiki/HSL);
+2. [RGB](http://pl.wikipedia.org/wiki/RGB);
+3. Określenia szesnastkowe (małymi literami i skrócone).
 
-Zaczynając od początku, słowa kluczowe najczęściej mówią same za siebie. Format HSL jest nie tylko najłatwiejszym do pojęcia dla ludziego mózgu<sup>[potrzebne źródło]</sup>, ale także czyni prostym dla osób tworzących arkusze stylów modyfikowanie barw poprzez regulowanie osobno odcienia, nasycenia i jasności. RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób możemy określić, czy dany kolor ma barwę bardziej zbliżoną do niebieskiego, zielonego czy czerwonego, jednak nie czyni on prostym faktyczne budowanie barwy z tych trzech części. Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania.
+Słowa kluczowe reprezentujące barwy nie powinny być używane, za wyjątkiem szybkiego prototypowania projektu. Są one słowami z języka angielskiego i często, zwłaszcza dla osób dla których język angielski nie jest językiem ojczystym, nie najlepiej opisują kolor, jaki reprezentują. Ponadto, słowa kluczowe nie są w pełni semantyczne, np. `grey` jest faktycznie ciemniejszy od `darkgrey`, a mylenie `grey` i `gray` może prowadzić do niekonsekwentnego używania tego koloru.
+
+Format HSL jest nie tylko najłatwiejszym do pojęcia dla ludziego mózgu<sup>[potrzebne źródło]</sup>, ale także czyni prostym dla osób tworzących arkusze stylów modyfikowanie barw poprzez regulowanie osobno odcienia, nasycenia i jasności.
+
+RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób możemy określić, czy dany kolor ma barwę bardziej zbliżoną do niebieskiego, zielonego czy czerwonego, jednak nie czyni on prostym faktyczne budowanie barwy z tych trzech części.
+
+Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania. Używaj ich jedynie w ostateczności.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -224,16 +241,6 @@ Przykład:
 
 {% include snippets/syntax/21/index.html %}
 
-### Debugowanie map Sassa
-
-Nie należy się martwić, jeśli napisana  mapa okaże się działać w sposób nie do końca zrozumiały. Jest zawsze bowiem możliwość ich debugowania.
-
-{% include snippets/syntax/22/index.html %}
-
-Aby otrzymać informację na temat głębokości danej mapy, warto dodać również poniższą funkcję. Wyżej opisany mixin automatycznie z niej skorzysta.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Dalsze informacje
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -309,12 +316,8 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
 
 ###### Dalsze informacje
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Zagnieżdżanie selektorów
 
