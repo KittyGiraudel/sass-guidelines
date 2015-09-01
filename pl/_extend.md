@@ -26,7 +26,7 @@ Istnieje wiele sytuacji, w których rozwijanie selektorów może być pomocne i 
   <p>Jeśli jednak w danej sytuacji niemożliwe jest użycie kompresji Gzip (lub jej ekwiwalentu), korzystanie z dyrektywy <code>@extend</code> może być dobrym rozwiązaniem, zwłaszcza gdy rozmiar arkusza stylów jest problemem dla wydajności naszego projektu.</p>
 </div>
 
-### Extend and media queries
+### Extendy a media queries
 
 Selektory należy rozwijać jedynie w ramach tego samego scope'u media (dyrektywy `@media`). Traktujmy tym samym media query jako kolejne ograniczenie dla extendów.
 
