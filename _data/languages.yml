@@ -26,7 +26,7 @@ de:
       link: https://github.com/morkro
 
 en:
-  version: 1.1.0
+  version: 1.2.0
   label: English
   prefix: /
   available: true

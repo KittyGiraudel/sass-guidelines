@@ -23,7 +23,6 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 ###### Further reading
 
-* [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
@@ -42,10 +41,8 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 
 ###### Further reading
 
-* [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
-* [Susy](http://susy.oddbird.net/)
 * [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
 * [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
 * [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
@@ -70,7 +67,6 @@ Fortunately, SCSS-lint recommendations are very similar to those described in th
 
 ###### Further reading
 
-* [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
 * [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)
 * [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)

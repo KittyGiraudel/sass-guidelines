@@ -41,6 +41,10 @@ That being said, languages that do not require strings to be quoted are definite
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>As per the CSS specifications, the <code>@charset</code> directive should be declared in double quotes <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">to be considered valid</a>. However, Sass takes care of this when compiling to CSS so the authoring has no impact on the final result. You can safely stick to single quotes, even for <code>@charset</code>.</p>
+</div>
+
 ### Strings as CSS values
 
 Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
@@ -78,11 +82,19 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>In Sublime Text and other editors providing a regular-expression powered search and replace, it is very easy to add a leading zero to (most if not all) float numbers. Simply replace <code>\s+\.(\d+)</code> with <code> 0.$1</code>. Do not forget the space before the <code>0</code> though.</p>
+</div>
+
 ### Units
 
 When dealing with lengths, a `0` value should never ever have a unit.
 
 {% include snippets/syntax/08/index.html %}
+
+<div class="note">
+  <p>Beware, this practice should be limited to lengths only. Having a unitless zero for a time property such as <code>transition-delay</code> is not allowed. Theoretically, if a unitless zero is specified for a duration, the declaration is deemed invalid and should be discarded. Not all browsers are that strict, but some are. Long story short: only omit the unit for lenghts.</p>
+</div>
 
 The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, it is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
 
@@ -131,12 +143,17 @@ Colors occupy an important place in the CSS language. Naturally, Sass ends up be
 
 In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
 
-1. [CSS color keywords](http://www.w3.org/TR/css3-color/#svg-color);
 1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
-1. Hexadecimal notation. Preferably lowercase and shortened when possible.
+1. Hexadecimal notation (lowercase and shortened).
 
-For starters, keywords often speak for themselves. The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. RGB still has the benefit of showing right away if the color is more of a blue, a green or a red but it does not make it easy to build a color from the three parts. Lastly, hexadecimal is close to indecipherable for the human mind.
+CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.
+
+The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. 
+
+RGB still has the benefit of showing right away if the color is more of a blue, a green or a red. Therefore it might be better than HSL in some situations, especially when describing a pure red, green or blue. Although it does not make it easy to build a color from the three parts.
+
+Lastly, hexadecimal is close to indecipherable for the human mind. Use it only as a last resort if you have to.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -224,16 +241,6 @@ Illustration:
 
 {% include snippets/syntax/21/index.html %}
 
-### Debugging a Sass map
-
-If you ever find yourself lost, wondering what kind of crazy magic is happening in a Sass map, worry not because there is still a way to be saved.
-
-{% include snippets/syntax/22/index.html %}
-
-If you are interested in knowing the depth of the map, add the following function. The mixin will display it automatically.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Further reading
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -309,12 +316,8 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 
 ###### Further reading
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Selector Nesting
 
