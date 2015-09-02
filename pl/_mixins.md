@@ -21,7 +21,14 @@ Innym słusznym przykładem może być mixin do określenia rozmiarów elementu,
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+## Mixiny bezargumentowe
+
+Czasami mixiny używane są jedynie w celu uniknięcia powtarzania tych samych grup deklaracji, bez potrzeby korzystania z parametrów, bądź też mają na tyle rozsądne wartości podstawowe, że nie ma potrzeby podawania im własnych argumentów.
+
+W tych wypadkach, wywołując mixin możemy spokojnie pomijać nawiasy. Słowo kluczowe `@include` (albo `+` dla wciętej składni) w wystarczającym stopniu sygnalizuje, iż mamy do czynienia z wywołaniem mixinu; nie ma więc tu potrzeby dla dodatkowych nawiasów.
+
+{% include snippets/mixins/08/index.html %}
 
 ## Listy argumentów
 

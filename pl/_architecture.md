@@ -17,12 +17,8 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
 
 ###### Dalsze informacje
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Komponenty
 
@@ -54,6 +50,10 @@ I oczywiście:
 
 * `main.scss`
 
+<div class="note">
+  <p>Chcąc wykorzystać wzór 7-1 w praktyce, dostępny jest gotowy <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> na GitHubie. Powinien on zawierać wszystko, co będzie potrzebne do rozpoczęcia nowego projektu.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Co do zasady, możemy tu mówić o czymś takim:
@@ -66,11 +66,15 @@ Co do zasady, możemy tu mówić o czymś takim:
 
 ### Folder base
 
-W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla naszego projektu. Możemy tam umieścić plik odpowiadający za reset podstawowych reguł CSSa, reguły dotyczące typografii i plik (który ja zazwyczaj nazywam `_base.scss`) definiujący podstawowe style dla powszechnie używanych elementów HTMLa.
+W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla naszego projektu. Możemy tam umieścić plik odpowiadający za reset podstawowych reguł CSSa, reguły dotyczące typografii i plik definiujący podstawowe style dla powszechnie używanych elementów HTMLa (który ja zazwyczaj nazywam `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>Jeśli Twój projekt wykorzystuje <em>dużo</em> animacji w CSSie, rozważ dodanie tu pliku <code>_animations.scss</code> zawierającego definicje <code>@keyframes</code> dla wszystkich Twoich animacji. Jeśli natomiast tych animacji nie ma zbyt wiele, pozostaw te definicje przy selektorach, które z nich korzystają.</p>
+</div>
 
 ### Folder layout
 
@@ -130,10 +134,12 @@ Podstawową zasadą dla tego folderu jest to, by żaden ze znajdujących się w 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (często nazywane `_helpers.scss`)
+* `_placeholders.scss`
+
+Pracując nad dużym projektem wykorzystującym wiele narzędzi, ciekawym rozwiązaniem zdaje się być grupowanie ich według przeznaczenia, a nie typu, na przykład typografia (`_typography.scss`), style (`_theming.scss`), itp. Każdy z tych plików powinien wówczas zawierać wszystkie powiązane narzędzia pomocnicze: zmienne, funkcje, mixiny i placeholdery. Ułatwi to bowiem czytanie i zarządzanie później tym kodem, zwłaszcza gdy pliki stają się co raz większe.
 
 <div class="note">
-  <p>Folder <code>utils/</code> może być także nazwany folderem <code>helpers/</code>, <code>sass-helpers/</code> lub <code>sass-utils/</code>, w zależności od upodobania.</p>
+  <p>Folder <code>utils/</code> może być także nazwany folderem <code>utilities/</code> lub <code>helpers/</code>, w zależności od upodobania.</p>
 </div>
 
 ### Folder vendors
@@ -155,8 +161,8 @@ Główny plik (zazwyczaj nazywany jako `main.scss`) powinien być jedynym plikie
 
 Pliki powinne być importowane z uwzględnieniem folderów, w których się znajdują, jeden po drugim w następującej kolejności:
 
-1. `vendors/`
-2. `utils/`
+1. `utils/`
+2. `vendors/`
 3. `base/`
 4. `layout/`
 5. `components/`
@@ -196,5 +202,4 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
 
 ###### Dalsze informacje
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

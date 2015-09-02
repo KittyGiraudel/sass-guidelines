@@ -42,5 +42,6 @@ W przypadku jakichkolwiek wątpliwości, zaleca się użycie słowa bądź wyra�
 * vendor prefix
 * design
 * Responsive Web Design
+* scope
 
 Nie wyklucza to jednak ich odmiany – np. mixinów, frameworku, breakpointy.

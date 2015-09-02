@@ -40,8 +40,16 @@ Czasami warto się trochę powtórzyć i dzięki temu sprawić, że nasz kod sta
 
 Poza tym, zacytuję raz jeszcze [Harry’ego Robertsa](https://csswizardry.com) - **pragmatyzm wygrywa z perfekcjonizmem**. Na jakimś etapie zapewne stwierdzisz, że to co robisz nie jest do końca zgodne z zasadami opisanymi w tym przewodniku. Jeżeli ma to sens, jeżeli wydaje się to prawidłowe - rób to po swojemu. Nie zapominajmy wszak, że kod jest jedynie środkiem, nie celem.
 
+## Rozwijanie przewodnika
+
+Przeważająca część tego przewodnika jest wysoce subiektywna. Czytam i piszę o Sassie już od wielu lat i z tego też powodu mam swoje określone zasady, jeśli chodzi o pisanie przejrzystych arkuszy stylów. Rozumiem jednak, że mogą one nie spodobać się, bądź nie pasować każdemu i jest to zupełnie normalne.
+
+Jestem przekonany, że tego typu przewodniki powinny być tworzone z myślą o ich rozwijaniu. Rozwijanie Sass Guidelines jest tak łatwe, jak umieszczenie w odpowiednim miejscu w projekcie informacji, że zawarty w nim kod pisany jest w zgodzie zasadami przedstawionymi w tym przewodniku, za wyjątkiem kilku reguł - a reguły te powinny być przedstawione poniżej.
+
+Przykład takiego rozwinięcia przewodnika jest dostępny na [repozytorium SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
+
+> [To](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) jest rozwinięciem [Node Styleguide](https://github.com/felixge/node-style-guide), autorstwa Felixa Geisendörfera. Wszystko z tego dokumentu "nadpisuje" to, co znajduje się w Node Styleguide.
+
 ###### Dalsze informacje
 
-* [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła))
-* [Zasada DRY](http://pl.wikipedia.org/wiki/DRY)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
