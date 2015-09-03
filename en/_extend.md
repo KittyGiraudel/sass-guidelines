@@ -13,7 +13,7 @@ Given that, it's straightforward to see how extending selectors with lenient con
 
 Always try to define relationships via [selector placeholders](http://www.sitepoint.com/sass-reference/placeholders/), not actual selectors. This will give you the freedom to use (and change) any naming convention you have for your selectors, and since relationships are only defined once inside the placeholders, you are far less likely to produce unintended selectors.
 
-For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector **is a kind of** the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
+For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector _is a kind of_ the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
 
 {% include snippets/extend/01/index.html %}
 
