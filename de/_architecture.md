@@ -130,10 +130,13 @@ Die Grundregel hier ist, dass am Ende keine einzige Zeile CSS kompiliert werden 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_Platzhalters.scss` (kürzlich `_helpers.scss` genannt)
+* `_placeholders.scss`
+
+Wenn man in einem großen Projekt mit vielen Utilities arbeitet, könnte es ein interessanter Ansatz sein, diese eher nach Bereichen oder Themen anstelle des Typs zu gruppieren. Zum Beispiel Typografie (`_typography.scss`), Themes (`_theming.scss`), etc. Jede Datei beinhaltet alle relevaten Helper: Variablen, Funktionen, Mixins und Platzhalter.
+Dies so zu betreiben kann die Pflege und den Code selber leserlicher und einfacher machen, gerade dann, wenn Dateien sehr groß werden.
 
 <div class="note">
-  <p>Je nach dem was du bevorzugst, kann der <code>utils/</code> Ordner auch <code>helpers/</code>, <code>sass-helpers</code> oder <code>sass-utils</code> genannt werden.</p>
+  <p>Je nach dem was du bevorzugst, kann der <code>utils/</code> Ordner auch <code>utilities/</code> oder <code>helpers</code> genannt werden.</p>
 </div>
 
 ### Vendors Ordner
