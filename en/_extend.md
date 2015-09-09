@@ -11,13 +11,16 @@ However, the true purpose of `@extend` is to maintain the relationships (constra
 
 Given that, it's straightforward to see how extending selectors with lenient constraints can lead to selector explosion. If `.baz .qux` extends `.foo .bar`, the resulting selector can be `.foo .baz .qux` or `.baz .foo .qux`, as both `.foo` and `.baz` are general ancestors. They can be parents, grandparents, etc.
 
-Always try to define relationships via [selector placeholders](http://www.sitepoint.com/sass-reference/placeholders/), not classes. This will give you the freedom to use (and change) any naming convention you have for your selectors, and since relationships are only defined once inside the placeholders, you are far less likely to produce unintended selectors.
+Always try to define relationships via [selector placeholders](http://www.sitepoint.com/sass-reference/placeholders/), not actual selectors. This will give you the freedom to use (and change) any naming convention you have for your selectors, and since relationships are only defined once inside the placeholders, you are far less likely to produce unintended selectors.
+
+For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector _is a kind of_ the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
 
 {% include snippets/extend/01/index.html %}
 
 There are many scenarios where extending selectors are helpful and worthwhile. Always keep in mind these rules so you can `@extend` with care:
 
-* Use extend on `%placeholders` exclusively, not on actual selectors.
+* Use extend on `%placeholders` primarily, not on actual selectors.
+* When extending classes, only extend a class with another class, _never_ a [complex selector](http://www.w3.org/TR/selectors4/#syntax).
 * Directly extend a `%placeholder` as few times as possible.
 * Avoid extending general ancestor selectors (e.g. `.foo .bar`) or general sibling selectors (e.g. `.foo ~ .bar`). This is what causes selector explosion.
 
@@ -44,3 +47,4 @@ To sum up, I would advise to use `@extend` only for maintaining relationships wi
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
