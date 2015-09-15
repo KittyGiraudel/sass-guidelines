@@ -17,12 +17,8 @@ Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jo
 
 ###### Weitere Informationen
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Komponenten
 
@@ -54,6 +50,10 @@ Und natürlich:
 
 * `main.scss`
 
+<div class="note">
+	<p>Wenn du das 7-1 Muster verwenden möchtest, gibt es bereits ein <a href="https://github.com/HugoGiraudel/sass-boilerplate">Boilerplate</a> auf GitHub. Es sollte alles nötige beinhalten um mit der Architektur zu starten.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Idealerweise haben wir am Ende etwas wie:
@@ -71,6 +71,10 @@ Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird ei
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+	<p>Falls dein Projekt <em>eine Menge</em> CSS Animationen verwendet, kannst du dir überlegen eine <code>_animations.scss</code> mit allen <code>@keyframes</code> Definitionen von deiner Animationen hinzuzufügen. Falls du sie aber nur sporadisch benutzt, würde ich sie bei den jeweiligen Selektoren behalten.</p>
+</div>
 
 ### Layout Ordner
 
@@ -130,10 +134,12 @@ Die Grundregel hier ist, dass am Ende keine einzige Zeile CSS kompiliert werden 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_Platzhalters.scss` (kürzlich `_helpers.scss` genannt)
+* `_placeholders.scss`
+
+Bei einem sehr großen Projekt mit vielen Utilities mag es interessant sein diese eher nach Typ oder Thema, wie zum Beispiel Typographie (`_typography.scss`), Theming (`_theming.scss`) etc., zu gruppieren. Jede Datei enthält alle zugehörigen Helper: Variablen, Funktionen, Mixins und Platzhalter. Das macht deinen Code einfacher zum durchsuchen und warten, besonders wenn die Dateien sehr groß werden.
 
 <div class="note">
-  <p>Je nach dem was du bevorzugst, kann der <code>utils/</code> Ordner auch <code>helpers/</code>, <code>sass-helpers</code> oder <code>sass-utils</code> genannt werden.</p>
+  <p>Je nach dem was du bevorzugst, kann der <code>utils/</code> Ordner auch <code>utilities/</code> oder <code>helpers</code> genannt werden.</p>
 </div>
 
 ### Vendors Ordner
@@ -155,8 +161,8 @@ Die Main Datei (üblicherweise `main.scss` genannt) sollte die einzige Sass-Date
 
 Die Dateien sollten danach importiert werden, in welchem Ordner sie sich befinden. Eins nach dem anderen, nach folgender Reihenfolge:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -196,5 +202,4 @@ Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [
 
 ###### Weitere Informationen
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

@@ -17,7 +17,7 @@ da:
       link: http://codepen.io/andersschmidt/
 
 de:
-  version: 1.1.0
+  version: 1.2.0
   label: German
   prefix: /de/
   available: true
