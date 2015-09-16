@@ -41,6 +41,10 @@ CSS 中不要求字符串必须用引号包裹，甚至是字符串中包含空�
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>CSS 规范建议, 将 <code>@charset</code> 指令用双引号包裹起来 <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">才是有效的</a>. 不过，Sass 在编译的时候已经自动修正了相关信息，所以无论何种方式都可以生成正确的代码，即使是只有 <code>@charset</code>。</p>
+</div>
+
 ### 作为 CSS 的值
 
 CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事实上，`font-family: 'sans-serif'` 该声明是错误的，因为 CSS 希望获得的是一个标识符，而不是一个字符串。因此，我们无须引用这些值。
@@ -83,6 +87,10 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 当定义长度时，`0` 后面不需要加单位。
 
 {% include snippets/syntax/08/index.html %}
+
+<div class="note">
+  <p>注意，该建议只是针对于长度而言，对于类似 <code>transition-delay</code> 的时间属性就是不适合的。理论上，如果持续时间的属性值为无单位的 0，那么该属性值就会被认为是无效的。虽然并不是所有的浏览器都这么严格检查属性值，但确实有一些浏览器会这么做。简而言之：只有长度可以使用无单位的 0 作为属性值。</p>
+</div>
 
 在 Sass 中最常见的错误，是简单地认为单位只是字符串，认为它会被安全的添加到数字后面。这虽然听起来不错，但却不是单位正确的解析方式。可以把单位认为是代数符号，例如，在现实世界中，`5` 英寸乘以 `5` 英寸得到 `25` 英寸。Sass 也适用这样的逻辑。
 
@@ -131,12 +139,17 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 为了尽可能简单地使用颜色，我建议颜色格式要按照以下顺序排列：
 
-1. [CSS 颜色关键字](http://www.w3.org/TR/css3-color/#svg-color);
 1. [HSL 值](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [RGB 值](http://en.wikipedia.org/wiki/RGB_color_model);
-1. 十六进制。小写并尽可能简写。
+1. 十六进制（使用小写并尽可能简写）
 
-对于初学者来说，颜色关键字往往比较通俗易懂。HSL 表 示方式不仅仅是人类大脑最易于接受的，它也可以让样式表作者轻松地调整色调、饱和度和亮度来修改颜色。如果一个颜色偏蓝、偏绿或者偏红，那么使用`RGB` 更容易表示出来，但是却不容易表示三者的混合色。最后，十六进制是人类大脑理解的极限了。
+除非是为了快速开发出原型，否则不建议使用 CSS 颜色关键字。这是因为颜色关键字都是英文单词，对于非英语母语者会造成理解困难。此外，颜色关键字的语义化并不准确，比如 `grey` 比 `darkgrey` 的颜色更深一些；`grey` 和 `gray` 之间的差别也会造成一致性的问题。
+
+HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于开发者通过调整色调、饱和度和亮度来惊喜地调整颜色。
+
+相比于 HSL 表示法，RGB 表示法的优势在于表示近似红绿蓝的颜色时更加简洁明了，但是表示红绿蓝的混合色时就不如 HSL 表示法更易于理解了。
+
+最后，十六进制对于人类的思维来说是比较难以理解的，除非必要，否则请优先考虑前几种方式。
 
 {% include snippets/syntax/14/index.html %}
 
@@ -224,16 +237,6 @@ map 的使用应该遵循下述规范：
 
 {% include snippets/syntax/21/index.html %}
 
-### 调试 Sass map
-
-如果你感到困惑并想了解 Sass 的 map 到底有怎样的魔力，请不要担心，Sass 中始终存在一个自动保存运行过程的机制。
-
-{% include snippets/syntax/22/index.html %}
-
-如果你想深入了解 map 的实现机制，可以添加下述函数。该混合宏可以自动显示 map 的运行机制。
-
-{% include snippets/syntax/23/index.html %}
-
 ###### 扩展阅读
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -309,12 +312,8 @@ map 的使用应该遵循下述规范：
 
 ###### 扩展阅读
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## 选择器嵌套
 

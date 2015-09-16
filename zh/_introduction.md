@@ -40,8 +40,16 @@
 
 此外，请允许我再一次引用 [Harry Roberts](https://csswizardry.com) 的观点，**实用胜过完美**。有些时候，你可能会发现自己违背了这里所描述的规则。如果感觉自己的方式有道理，感觉很正确，那就继续做吧。编写代码从来都不是一家之言。
 
+## 扩展本文
+
+本文中的大部分内容都极具实际参考意义。我学习和使用 Sass 已经有好几年了，其中积累了大量的开发经验，所以对于其他人来说某些观点可能会有一些不适应。
+
+尽管如此，我认为有必要做一些事方便大家自由扩展本文。扩展本文非常简单，有专门的文档来制定代码的编写方式，对于其中的特殊规则，会在下面做出解释。
+
+点击这里可以查看位于 [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) 上的一个 Styleguide 扩展：
+
+> [这](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) 是一个由 Felix Geisendörfer 开发的 [Node Styleguide](https://github.com/felixge/node-style-guide) 扩展。这份文档全面覆盖了 Node Styleguide 的内容。
+
 ###### 扩展阅读
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

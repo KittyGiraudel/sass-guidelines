@@ -15,8 +15,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 ###### 扩展阅读
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 * [Sass 中文教程](http://www.w3cplus.com/blog/tags/302.html)
 
 ## Ruby Sass or LibSass
@@ -31,9 +30,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 ###### 扩展阅读
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass Or SCSS
@@ -62,17 +59,10 @@ Sass 的空白敏感语法通过缩进以摆脱大括号、分号和其他符号
 
 换言之，Sass 并不想成为一个通过在编程语言顶层添加特殊功能实现有关用户逻辑处理的预处理器，以取悦于像我一样喜欢傻瓜式编程的程序员。它更准确的定位是一款软件，旨在解决实际问题。通过提供实用功能改善 CSS 的短板。
 
-预处理器之外，我们还需要提及一下后处理器。得益于 [postCSS](https://github.com/postcss/postcss) 和 [CSSNext](https://github.com/cssnext/cssnext) 项目，后处理器最近几个月得到了显著曝光。后处理器几乎等同于预处理器，稍有不同的是它专注于实现那些即将出现在 CSS 语法中的特性。
+预处理器之外，我们还需要提及一下后处理器工具。得益于 [postCSS](https://github.com/postcss/postcss) 和 [CSSNext](https://github.com/cssnext/cssnext) 项目，后处理器最近几个月得到了显著曝光。它们常常被引喻为后处理器，是因为它们具有一些即将出现在 CSS 中的语法。除此之外，它们几乎等同于预处理器，稍有不同的是它专注于实现那些即将出现在 CSS 语法中的特性。
 
 你可以认为后处理器是一种腻子脚本，用来支持尚未被浏览器实现的 CSS 功能。举例来说，你可能会像 [CSS 规范](http://dev.w3.org/csswg/css-variables/)中描述的一样使用变量，然后用后处理器编译样式表，在这个过程中后处理器只会找出变量出现的地方并替换成真实值——Sass 也是这么做的。
 
 后处理器背后的思维是，一旦浏览器支持了新的特性（比如 CSS 变量），后处理器就不再做这方面处理，而是让浏览器执行相关处理。
 
 虽然在当下提供对未来语法功能的支持是一件很了不起的事情，但我还是喜欢在大多数的工作中使用 Sass。当然，在一些情况下我认为后处理器比 Sass 更适合，比如 CSS 前缀。稍后我们会讲到这个问题。
-
-###### 扩展阅读
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)
