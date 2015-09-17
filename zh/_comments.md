@@ -53,5 +53,4 @@ SassDoc 主要有两个作用：
 
 ###### 扩展阅读
 
-* [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
