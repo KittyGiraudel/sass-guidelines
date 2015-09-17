@@ -21,7 +21,14 @@ Ein weiteres Beispiel ist ein Mixin welches die Maße `width` und `height` für 
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+## Parameterlose Mixins
+
+Manchmal werden Mixins nur dazu benutzt, um zu verhindern dass man eine Gruppe von Deklarationen immer und immer wieder wiederholt. Dennoch brauchen sie keine Parameter oder haben sensible Standardwerte welche nicht notwendigerweise einen Parameter benötigen.
+
+In solchen Fällen können wir beim Aufruf ohne Probleme die Klammern weglassen. Das `@include` Keyword (oder `+` Zeichen in der Intended-Syntax) verhält sich bereits als ein Indikator dafür dass die Zeile ein Mixinaufruf ist; es werden keine extra Klammern benötigt.
+
+{% include snippets/mixins/08/index.html %}
 
 ## Parameterliste
 
@@ -61,5 +68,4 @@ Bitte merk dir dass das eine wirklich schlechte Umsetzung ist. Zum Beispiel kann
 
 ###### Weitere Informationen
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

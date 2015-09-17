@@ -40,8 +40,16 @@ Manchmal ist es besser sich etwas im Code zu wiederholen um es wartbar zu halten
 
 Um noch einmal [Harry Roberts](https://csswizardry.com) zu zitieren, **Pragmatimus geht vor Perfektion**. Ab einem gewissen Punkt wirst du dich wahrscheinlich selbst dabei erwischen wie du diese Regeln ignorierst. Wenn es Sinn macht und sich richtig anfühlt, dann tu es. Code ist ein Mittel zum Zweck, kein Ende.
 
+## Erweiterung dieser Guidelines
+
+Ein großer Teil dieses Styleguide ist stark meinungsbasiert. Ich lese und schreibe Sass nun seit einigen Jahren, bis zu dem Punkt wo ich eine Menge Prinzipien übers Schreiben von sauberen Stylesheets habe. Ich verstehe natürlich, dass es wohlmöglich einigen nicht zufrieden stellt weder passen wird. Und das ist absolut normal.
+
+Dennoch glaube Ich dass dieser Styleguide dazu gemacht ist erweitert zu werden. Sass-Guidelines zu erweitern kann so einfach sein wie ein Dokument zu haben, indem erklärt wird das der folgende Code diesen Guidelines bis auf wenige Ausnahmen (in diesem Fall würden diese dann einfach unterhalb aufgeführt werden) folgt.
+
+Ein Beispiel einer Erweiterung der Styleguide kann in dem [SassDoc Repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) gefunden werden:
+
+> [Dies](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) ist einer Erweiterung zu den [Node Styleguides](https://github.com/felixge/node-style-guide) von Felix Geisendörfer. Alles aus diesem Dokument überschreibt was in den Node Styleguides definiert sein könnte.
+
 ###### Weitere Informationen
 
-* [KISS Prinzip](http://de.wikipedia.org/wiki/KISS-Prinzip)
-* [DRY Prinzip](http://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

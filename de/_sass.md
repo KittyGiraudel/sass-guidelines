@@ -15,8 +15,7 @@ Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features 
 
 ###### Weitere Informationen
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass oder LibSass
 
@@ -30,9 +29,7 @@ In Nicht-Ruby Projekten welche einen speziellen Workflow brauchen, ist LibSass d
 
 ###### Weitere Informationen
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass oder SCSS
@@ -61,17 +58,10 @@ Was ich an Sass mag ist sein konservativer Ansatz zu CSS. Das Design von Sass is
 
 In anderen Worten, Sass als Präprozessor ist nicht darauf aus außergewöhnliche Features die keine logischen Anwendungsfälle unterstützen einzubauen, nur um nerdige Möchtegerns wie mich zufrieden zu stellen. Es ist Software die wirkliche Probleme lösen, und helfen möchte nützliche Funktionalität anzubieten da wo CSS versagt.
 
-Präprozessoren mal zur Seite gestellt, sollten wir auch über Postprozessoren sprechen. Sie haben in den letzten Monaten erhebliche Aufmerksamkeit, hauptsächlich durch [PostCSS](https://github.com/postcss/postcss) und [cssnext](https://cssnext.github.io/), erhalten. Postprozessoren sind ziemlich identisch zu Präprozessoren, außer das sie nichts anderes außer bevorstehender CSS Syntax anbieten.
+Präprozessoren mal zur Seite gestellt, sollten wir auch über Postprozessortools sprechen. Sie haben in den letzten Monaten erhebliche Aufmerksamkeit, hauptsächlich durch [PostCSS](https://github.com/postcss/postcss) und [cssnext](https://cssnext.github.io/), erhalten. Sie werden oft als "Postprozessoren" bezeichnet da sie bald verfügbare Standardsyntax in heutiges CSS transpilieren. Sie sind ziemlich identisch zu Präprozessoren, außer das sie nichts anderes außer bevorstehender CSS Syntax anbieten.
 
 Du kannst dir Postprozessoren als eine Art Polyfill für noch nicht unterstützte CSS Features vorstellen. Zum Beispiel würdest du Variablen wie in der offiziellen [CSS Spezifikation](http://dev.w3.org/csswg/css-variables/) schreiben, und sie dann mit einem Postprozessor genau wie in Sass kompilieren, wo alle Variablen mit ihrem angegeben Wert ausgetauscht sind.
 
 Die Idee dahinter ist, dass sobald ein Browser diese neuen Features (z.B. CSS Variablen) unterstützt, der Postprozessor diese auch nicht mehr kompilieren muss und der Browser somit die Aufgabe übernehmen kann.
 
 Die Syntax von morgen zu unterstützen ist zwar eine gute Idee, ich zieh dennoch Sass für die meisten Aufgaben vor. Wie auch immer, es gibt definitiv einige Fälle wo ein Postprozessor besser passt als Sass oder ähnliches. CSS Prefixe zum Beispiel - aber darauf kommen wir später zurück.
-
-###### Weitere Informationen
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)
