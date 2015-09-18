@@ -13,11 +13,14 @@
 
 始终使用[选择器占位符](http://www.sitepoint.com/sass-reference/placeholders/)定义选择器之间的关系，而不是类名，这能让你更加轻松地更换命名约定。此外，因为选择器之间的关系只被定义在了占位符中，所以很少会产生意料之外的选择器。
 
+当继承 `.class` 或 `%placeholder` 时，如果父类和子类是同一类型，那么建议只使用 `@extend` 来实现，比如 `.error` 是 `.warning` 的一种，那么 `.error` 就可以通过 `@extend .warning` 来实现。
+
 +{% include snippets/extend/01/index.html %}
 
 扩展选择器在许多情境下是有用和值得的。始终牢记下面这些规则，谨慎使用 `@extend` 指令：
 
-- 只继承自 `%placeholders`，而不是具体的选择器；
+- 优先继承 `%placeholders`，而不是具体的选择器；
+- 当继承 `.class` 时，只继承单一的 `.class`，不要使用[复杂选择器][complex selector](http://www.w3.org/TR/selectors4/#syntax)；
 - 尽可能少的继承自 `%placeholders`；
 - 避免继承常见的父类选择器（比如： `.foo .bar`）或者是常见的相邻选择器（比如：`.foo ~ .bar`），否则会让选择器的数量急速增加。
 
