@@ -15,7 +15,7 @@
 
 当继承 `.class` 或 `%placeholder` 时，如果父类和子类是同一类型，那么建议只使用 `@extend` 来实现，比如 `.error` 是 `.warning` 的一种，那么 `.error` 就可以通过 `@extend .warning` 来实现。
 
-+{% include snippets/extend/01/index.html %}
+{% include snippets/extend/01/index.html %}
 
 扩展选择器在许多情境下是有用和值得的。始终牢记下面这些规则，谨慎使用 `@extend` 指令：
 
@@ -25,9 +25,9 @@
 - 避免继承常见的父类选择器（比如： `.foo .bar`）或者是常见的相邻选择器（比如：`.foo ~ .bar`），否则会让选择器的数量急速增加。
 
 <div class="note">
-    <p>通常来说，<code>@extend</code> 有助于减少文件体积大小，因为它的操作本质上是合并选择器而不是赋值样式。话虽如此，当你使用 <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> 压缩文件时，<code>@extend</code> 对于文件压缩的好处几乎是可以忽略的。</p>
-    <p>这也就是说，如果你不能使用类似 Gzip 的工具，那么就可以考虑使用 <code>@extend</code> 来减少不必要的重复，特别是当样式文件的大小成为性能瓶颈的时候，这种方式尤为有效。</p>
-+</div>
+  <p>通常来说，<code>@extend</code> 有助于减少文件体积大小，因为它的操作本质上是合并选择器而不是赋值样式。话虽如此，当你使用 <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> 压缩文件时，<code>@extend</code> 对于文件压缩的好处几乎是可以忽略的。</p>
+  <p>这也就是说，如果你不能使用类似 Gzip 的工具，那么就可以考虑使用 <code>@extend</code> 来减少不必要的重复，特别是当样式文件的大小成为性能瓶颈的时候，这种方式尤为有效。</p>
+</div>
 
 ### 继承和媒体查询
 
@@ -38,7 +38,7 @@
 简而言之，建议将 `@extend` 只用于维持选择器之间的关系。如果两个选择器的内容具有典型的相似性和结构性，那么这就是使用 `@extend` 的最佳场景了。如果它们之间没有关联，只是某些样式相似，那么使用 `@mixin` 更合适。
 
 <div class="note">
-    <p>非常感谢 <a href="https://twitter.com/davidkpiano">David Khourshid</a> 为本节提供的帮助和经验。</p>
+  <p>非常感谢 <a href="https://twitter.com/davidkpiano">David Khourshid</a> 为本节提供的帮助和经验。</p>
 </div>
 
 ###### 扩展阅读
