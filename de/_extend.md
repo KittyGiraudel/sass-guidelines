@@ -11,13 +11,16 @@ Dennoch, der wahre Grund von `@extend` ist es die Beziehung (Beschränkungen) in
 
 Dem vorausgesetzt ist es ziemlich einfach zu sehen, wie erweiternde Selektoren mit nachsichtigen Beschränkungen zu Selektorexplosion führen können. Wenn `.baz .qux` `.foo .bar` erweitert, kann der erzeugte Selektor `.foo .baz .qux` oder `.baz .foo .qux` sein, da `.foo` und `.baz` allgemeine Vorfahren dessen sind.
 
-Versuch immer solche Beziehungen durch [Selektorenplatzhalter](http://www.sitepoint.com/sass-reference/placeholders/) zu definieren, und nicht durch Klassen. Dadurch bekommst du die Freiheit jede Namenskonvention die du für deine Selektoren hast zu verwenden (und ändern). Da Beziehungen auch nur einmal innerhalb des Platzhalters definiert werden, ist die Möglichkeit ungewollte Selektoren zu erzeugen außerdem sehr gering.
+Versuch immer solche Beziehungen durch [Selektorenplatzhalter](http://www.sitepoint.com/sass-reference/placeholders/) zu definieren, und nicht durch richtige Selektoren. Dadurch bekommst du die Freiheit jede Namenskonvention die du für deine Selektoren hast zu verwenden (und ändern). Da Beziehungen auch nur einmal innerhalb des Platzhalters definiert werden, ist die Möglichkeit ungewollte Selektoren zu erzeugen außerdem sehr gering.
+
+Um Styles zu vererben, benutze `@exend` nur wenn der erweiternde `.class` oder `%placeholder` Selektor _ähnlich_ zu dem zu erweiterndem Selektor ist. Zum Beispiel `.error` ist ähnlich zu `.warning`, also kann `.error` `@extend .warning`.
 
 {% include snippets/extend/01/index.html %}
 
 Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. Trotzdem behalte immer folgende Regeln im Kopf, damit du behutsam `@extend` benutzen kannst:
 
-* Benutze `@extend` lediglich innerhalb `%placeholders`, nicht bei wirklichen Selektoren.
+* Benutze `@extend` hauptsächlich innerhalb `%placeholders`, nicht bei wirklichen Selektoren.
+* Wenn du eine Klasse erweiterst, dann erweitere nur eine Klasse mit einer anderen, niemals [komplexe Selektoren](http://www.w3.org/TR/selectors4/#syntax).
 * Erweiter einen `%placeholder` so wenig wie möglich.
 * Vermeide es allgemeine Vorfahren eines Selektors (z.B. `.foo .bar`) oder allgemeine Geschwister eines Selektor (z.B. `.foo ~ .bar`) zu erweitern. Genau das erzeugt eine Explosion von Selektoren.
 
@@ -44,3 +47,4 @@ Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhal
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
