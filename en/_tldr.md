@@ -73,4 +73,4 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 ## Extend
 
 * Stick to extending placeholders, not existing CSS selectors. [↩](#extend)
-* Extend a placeholder as few times as possible in order to avoid side effets. [↩](#extend)
+* Extend a placeholder as few times as possible in order to avoid side effects. [↩](#extend)
