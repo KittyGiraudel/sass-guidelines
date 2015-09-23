@@ -1,9 +1,11 @@
 
 # 关于作者
 
-我是 [Hugo Giraudel](http://hugogiraudel.com)，一名居住在德国柏林的法国前端工程师。到目前为止，我使用 Sass 已经两年多了，并开发了一些与之相关的项目，比如:[SassDoc](http://sassdoc.com) 和 [Sass-Compatibility](http://sass-compatibility.github.io)。我在法国的时候，也编写了一本关于 CSS 的书籍：[《CSS3 Pratique du Design Web》](http://www.amazon.fr/dp/2212140231)
+[Hugo Giraudel](http://hugogiraudel.com)，23 岁，来自法国的前端工程师，现居柏林，目前在 [Edenspiekermann](http://edenspiekermann.com) 工作。
 
-我也写了几个关于Sass的库,主要是想把玩、探究它：[SassyJSON](https://github.com/HugoGiraudel/SassyJSON)、[SassyLists](http://sassylists.com)、[SassySort](https://github.com/HugoGiraudel/SassySort)、 [SassyCast](https://github.com/HugoGiraudel/SassyCast)、[SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix)、 [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise)、[SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators)、[SassyLogger](https://github.com/HugoGiraudel/SassyLogger)、[SassyStrings](https://github.com/HugoGiraudel/SassyStrings) 和 [SassyGradients](https://github.com/HugoGiraudel/SassyGradients)。
+拥有多年的 Sass 开发经验，开发的项目包括：[SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) 和 [Sass-Compatibility](http://sass-compatibility.github.io)。更多信息，请查阅这里的[项目列表](http://github.com/HugoGiraudel/awesome-sass)。
+
+已出版图书 [《CSS3 Pratique du Design Web》](http://css3-pratique.fr/)（法语版）和[《Jump Start Sass》](https://learnable.com/books/jump-start-sass)（英语版）。
 
 <div class="button-wrapper">
   <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">

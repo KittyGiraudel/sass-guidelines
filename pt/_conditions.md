@@ -1,7 +1,7 @@
 
 # Instruções condicionais
 
-Provavelmente já sabem que Sass fornece instruções condicionais através das diretivas `@if` e `@else`. A menos que possuam alguma lógica média ou altamente complexa no vosso código, não há necessidade para instruções condicionais nas vossas folhas de estilo do dia a dia. De verdade, estas instruções existem maioritariamente para bibliotecas e _frameworks_.
+Provavelmente já sabem que Sass fornece instruções condicionais através das diretivas `@if` e `@else`. A menos que possuam alguma lógica média ou altamente complexa no vosso código, não há necessidade para instruções condicionais nas vossas folhas de estilo do dia a dia. Na verdade, estas instruções existem maioritariamente para bibliotecas e _frameworks_.
 
 De qualquer forma, se alguma vez necessitarem delas, por favor respeitem as seguintes diretrizes:
 
@@ -20,3 +20,7 @@ Quando se testa um valor falso, usem sempre a palavra-chave `not` ao invés de t
 Quando se usa instruções condicionais dentro de uma função para devolver um resultado diferente baseado nalguma condição, certifiquem-se que a função ainda possui uma instrução `@return` fora de qualquer bloco condicional.
 
 {% include snippets/conditions/03/index.html %}
+
+Quando se utilizam expresões condicionais dentro de uma função para retornar um resultado diferente baseado numa condição, certifiquem-se que a função devolve sempre uma expressão `@return` fora de qualquer bloco condicional.
+
+{% include snippets/conditions/04/index.html %}

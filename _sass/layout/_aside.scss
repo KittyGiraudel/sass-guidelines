@@ -1,101 +1,154 @@
+/**
+ * Aside options panel
+ * 1. Fixed offscreen
+ * 2. Full width on small screens
+ * 3. Off-canvas from right of screen
+ */
 .aside {
+  position: fixed; /* 1 */
+  top: 0; /* 1 */
+  right: 0; /* 1 */
+  bottom: 0; /* 1 */
   z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  @include prefix(transform, translateX(-100%), webkit ms);
+  width: 100%; /* 2 */
+  -webkit-transform: translateX(100%); /* 3 */
+  -ms-transform: translateX(100%); /* 3 */
+  transform: translateX(100%); /* 3 */
   background: white;
-  box-shadow: 0.3em 0 .25em rgba(black, 0.1);
-  transition: .15s cubic-bezier(.32, 1, .53, .8);
+  transition: 0.15s cubic-bezier(0.32, 1, 0.53, 0.8);
 
+  /**
+   * Fixed width on large screens
+   */
   @include respond-to('medium') {
-    width: 300px;
-  }
-
-  .button {
-    display: block;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
+    width: $sidebar-width;
   }
 }
 
+/**
+ * Buttons from options panel
+ */
+.aside .button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+/**
+ * Sub-sections from options panel
+ */
 .aside__section {
   padding: 0 1rem;
 }
 
+/**
+ * Hide JavaScript-powered elements when there is no JS in the page
+ */
 .no-js .custom-select,
 .no-js .aside__section--syntax {
   display: none;
 }
 
+/**
+ * Main title from options panel
+ */
 .aside__title {
+  margin: 0;
+  padding: 0.5rem 1rem;
   background: $light-pink;
-  padding: 0.5rem;
   color: white;
   font-size: 1.25em;
-  margin: 0;
   text-transform: uppercase;
 }
 
+/**
+ * Headings from options panel
+ */
 .aside__heading {
   margin: 1rem 0;
-  border-bottom: .1em solid;
-  text-transform: capitalize;
-  font-size: .9em;
   padding: 0.5rem 0;
+  border-bottom: 0.1em solid;
+  text-transform: capitalize;
+  font-size: 0.9em;
   color: $dark-grey;
-  text-align: right;
+  text-align: end;
   font-weight: 400;
-
-  .aside__title + & {
-    margin-top: 0;
-  }
 }
 
+/**
+ * Remove top margin from first heading
+ */
+.aside__title + .aside__heading {
+  margin-top: 0;
+}
+
+/**
+ * Toggle button from options panel
+ */
 .aside__toggle {
   position: absolute;
-  background: white;
   bottom: 0;
-  right: -4.5em;
+  left: -70px;
+  background: white;
 
   @include respond-to('medium') {
     background: transparent;
   }
 }
 
+/**
+ * Sass/SCSS radio list
+ * 1. Reset default list styles
+ * 2. Cancel padding from list items
+ * 3. Clear inner floats
+ */
 .aside__radio-list {
-  list-style: none;
-  overflow: hidden;
-  margin: -0.5rem 0;
-  padding: 0;
+  list-style: none; /* 1 */
+  padding: 0; /* 1 */
+  margin: -0.5rem; /* 2 */
+  overflow: hidden; /* 3 */
 
   label {
     display: inline-block;
     cursor: pointer;
   }
 
+  /**
+   * Visual fix for input placement
+   */
   input {
-    @include prefix(transform, translate(-1px, -1px), webkit moz);
+    -webkit-transform: translate(-1px, -1px);
+    -ms-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
   }
 
+  /**
+   * Items are positioned on the same line, half width each
+   */
   li {
     margin: 0;
     float: left;
-    width: 48%;
-  }
-
-  li + li {
-    float: right;
+    width: 50%;
+    padding: 0 0.5rem;
   }
 }
 
+/**
+ * Aside options panel when opened
+ * 1. Not off-canvas anymore
+ * 2. Make it scrollable if needed
+ */
 #aside-toggle:checked ~ .aside {
-  @include prefix(transform, translateX(0), webkit ms);
-  overflow: auto;
+  -webkit-transform: translateX(0); /* 1 */
+  -ms-transform: translateX(0); /* 1 */
+  transform: translateX(0); /* 1 */
+  overflow: auto; /* 2 */
+  box-shadow: -0.3em 0 .25em rgba(0, 0, 0, 0.1);
 }
 
+/**
+ * Move the toggle button in the options panel
+ */
 #aside-toggle:checked ~ .aside .aside__toggle {
-  right: 0;
+  left: 0;
 }

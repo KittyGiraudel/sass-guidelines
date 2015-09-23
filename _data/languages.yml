@@ -1,20 +1,47 @@
-zh:
+cz:
   version: 1.1.0
-  label: Chinese
-  prefix: /zh/
+  label: Czech
+  prefix: /cz/
   available: true
   translators:
-    - name: 大漠
-      link: http://www.w3cplus.com
-    - name: Sean Sun
-      link: https://github.com/pinggod
+    - name: Honza Bittner
+      link: https://github.com/HoBi
+
+da:
+  version: 1.1.0
+  label: Danish
+  prefix: /da/
+  available: true
+  translators:
+    - name: Anders Schmidt Hansen
+      link: http://codepen.io/andersschmidt/
+
+de:
+  version: 1.2.0
+  label: German
+  prefix: /de/
+  available: true
+  translators:
+    - name: Moritz Kröger
+      link: https://github.com/morkro
 
 en:
-  version: 1.1.0
+  version: 1.2.0
   label: English
   prefix: /
   available: true
   translators: []
+
+es:
+  version: 1.1.0
+  label: Spanish
+  prefix: /es/
+  available: true
+  translators:
+    - name: Sonia Conde
+      link: https://github.com/soniar4i
+    - name: David Khourshid
+      link: https://github.com/davidkpiano
 
 fr:
   version: 1.1.0
@@ -24,15 +51,6 @@ fr:
   translators:
     - name: Pierre Choffé
       link: http://la-cascade.ghost.io
-
-de:
-  version: 1.1.0
-  label: German
-  prefix: /de/
-  available: true
-  translators:
-    - name: Moritz Kröger
-      link: https://github.com/morkro
 
 ko:
   version: 1.1.0
@@ -44,7 +62,7 @@ ko:
       link: https://github.com/kimdhoe
 
 pl:
-  version: 1.1.0
+  version: 1.2.0
   label: Polish
   prefix: /pl/
   available: true
@@ -55,13 +73,15 @@ pl:
       link: http://github.com/matchabros
 
 pt:
-  version: 1.0.0
+  version: 1.1.0
   label: Portuguese
   prefix: /pt/
-  available: false
+  available: true
   translators:
     - name: Ricardo Magalhães
       link: https://github.com/magalhini
+    - name: Gonçalo Morais
+      link: https://github.com/gnclmorais
     - name: Sara Vieira
       link: https://github.com/saravieira
     - name: Eduardo Bouças
@@ -78,22 +98,13 @@ ru:
     - name: Pavel Demyanenko
       link: https://github.com/PavelDemyanenko
 
-es:
-  version: 1.1.0
-  label: Spanish
-  prefix: /es/
+zh:
+  version: 1.2.0
+  label: Chinese
+  prefix: /zh/
   available: true
   translators:
-    - name: Sonia Conde
-      link: https://github.com/soniar4i
-    - name: David Khourshid
-      link: https://github.com/davidkpiano
-
-da:
-  version: 1.1.0
-  label: Danish
-  prefix: /da/
-  available: true
-  translators:
-    - name: Anders Schmidt Hansen
-      link: http://codepen.io/andersschmidt/
+    - name: 大漠
+      link: http://www.w3cplus.com
+    - name: Sean Sun
+      link: https://github.com/pinggod

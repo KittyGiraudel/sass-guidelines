@@ -3,12 +3,14 @@
  */
 .note {
   @include vertical-rhythm;
+  @include expand;
   background: $note-background;
-  padding: 2rem;
-  border: 1px solid rgba(black, 0.1);
-  border-left: 0;
-  border-right: 0;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
+  /**
+   * Prevent any odd gap from nested elements' margin
+   */
   > :first-child {
     margin-top: 0;
   }
@@ -17,6 +19,9 @@
     margin-bottom: 0;
   }
 
+  /**
+   * Bold the “Note” (or translated equivalent) word
+   */
   > p:first-child::before {
     font-weight: 700;
   }

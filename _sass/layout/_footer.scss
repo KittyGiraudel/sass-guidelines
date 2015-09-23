@@ -2,10 +2,10 @@
  * Footer
  */
 .footer {
-  background: $note-background;
-  text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  background: $note-background;
+  text-align: center;
 }
 
 .footer__metadata {
@@ -13,5 +13,5 @@
 }
 
 .footer__authors {
-  font-size: .9em;
+  font-size: 0.9em;
 }

@@ -2,49 +2,84 @@
  * Make all elements inherit from `html` box-sizing
  */
 * {
-  @include prefix(box-sizing, inherit, webkit moz);
+  box-sizing: inherit;
 }
 
 /**
  * Redefine box-sizing on the root element
  */
 html {
-  @include prefix(box-sizing, border-box, webkit moz);
+  box-sizing: border-box;
 }
 
 /**
  * Basic typography styles
  */
 body {
-  font: 1.125em/1.4 $text-font-stack;
+  font: 1.125em / 1.4 $text-font-stack;
   color: #333;
 }
 
 
 /**
  * Links
+ * 1. Reset styles from <button>
  */
 a,
 .link-like {
+  border: 0; /* 1 */
+  padding: 0; /* 1 */
+  background: 0; /* 1 */
   text-decoration: underline;
   cursor: pointer;
   color: inherit;
   transition: 0.15s;
-  border: 0;
-  padding: 0;
-  background: 0;
 
-   @include on-event {
+  @include on-event {
     color: $main-color;
   }
 }
 
 /**
+ * Prevent back-links in TL;DR lists from being underlined
+ */
+:not(.toc) > h1:last-of-type ~ ul [href^='#'] {
+  text-decoration: none;
+  opacity: 0.5;
+  color: $dark-pink;
+  transition: opacity 0.15s ease-out;
+
+  @include on-event {
+    opacity: 1;
+  }
+}
+
+/**
  * Inline code
+ * 1. Make the text slightly smaller as the font looks bigger
  */
 :not(pre) > code {
+  vertical-align: middle;
   color: $dark-pink;
   font-family: $code-font-stack;
-  font-size: 0.8em;
-  vertical-align: middle;
+  font-size: 0.8em; /* 1 */
+}
+
+/**
+ * Main container
+ * 1. Position context for absolutely positioned children
+ * 2. Leave some room for table of contents on large screens
+ */
+.main {
+  position: relative; /* 1 */
+  max-width: $main-width;
+  margin: 0 auto;
+
+  @include respond-to('large') {
+    padding-left: $sidebar-width; /* 2 */
+  }
+}
+
+.container {
+  @include container;
 }

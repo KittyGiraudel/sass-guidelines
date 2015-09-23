@@ -1,7 +1,7 @@
 
 # Komentarze
 
-CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli Ty, lub ktoś inny, ma zamiar czytać i aktualizować ten kod po upływie jakiegoś dłuższego okresu czasu. Warto zapobiec sytuacji, w której Ty albo ktoś inny znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko-dlaczego*.
+CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli zachodzi przypuszczenie, że ktoś będzie czytał i aktualizował ten kod w przyszłości. Warto zapobiec sytuacji, w której czytelnik znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko-dlaczego*.
 
 Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto używać komentarzy. Mogą one objaśniać takie rzeczy, jak:
 
@@ -20,9 +20,9 @@ Najlepiej jest, gdy *każdy* zestaw reguł jest poprzedzony komentarzem, napisan
 
 {% include snippets/comments/01/index.html %}
 
-W zasadzie wszystko, co na pierwszy rzut oka może nie być do końca jasne, powinno być komentowane. Nie istnieje coś takiego, jak zbyt duża dokumentacja. Pamiętaj więc o tym, śmiało pisz komentarze!
+W zasadzie wszystko, co na pierwszy rzut oka może nie być do końca jasne, powinno być komentowane. Nie istnieje coś takiego, jak zbyt duża dokumentacja. Pamiętajmy o tym i śmiało piszmy komentarze!
 
-Komentując rzeczy ściśle związane z Sassem używaj jednoliniowych komentarzy, zamiast bloków w stylu języka C. Dzięki temu takie komentarze nie zostaną dodane do wyjściowego, skompilowanego pliku CSS, nawet w trybie "expanded".
+Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych komentarzy, zamiast bloków w stylu języka C. Dzięki temu takie komentarze nie zostaną dodane do wyjściowego, skompilowanego pliku CSS, nawet w trybie "expanded".
 
 {% include snippets/comments/02/index.html %}
 
@@ -32,7 +32,7 @@ Komentując rzeczy ściśle związane z Sassem używaj jednoliniowych komentarzy
 
 ## Dokumentowanie
 
-Każda zmienna, funkcja, mixin czy selektor zastępczy, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
+Każda zmienna, funkcja, mixin czy placeholder, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 
@@ -53,5 +53,4 @@ Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
 ###### Dalsze informacje
 
-* [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

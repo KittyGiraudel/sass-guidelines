@@ -3,14 +3,14 @@
 
 Pierwszą rzeczą, jaką powinien się zająć przewodnik po stylu jest niewątpliwie to, w jaki sposób nasz kod ma wyglądać.
 
-Kiedy CSSem w tym samym projekcie zajmuje się kilku deweloperów, zazwyczaj jest to tylko kwestią czasu kiedy któryś z nich zacznie pisać rzeczy po swojemu. Przewodniki po stylu kodu, które promują spójność nie tylko temu zapobiegają, lecz także pomagają w czytaniu i aktualizowaniu kodu.
+Kiedy CSSem w tym samym projekcie zajmuje się kilku deweloperów, zazwyczaj jest to tylko kwestią czasu kiedy ktoś zacznie pisać rzeczy po swojemu. Przewodniki po stylu kodu, które promują spójność nie tylko temu zapobiegają, lecz także pomagają w czytaniu i aktualizowaniu kodu.
 
 W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-* indentacje składające się z (2) spacji, bez tabulatorów,
+* indentacji składających się z (2) spacji, bez tabulatorów,
 * najlepiej 80 znaków w linii,
 * prawidłowo napisanych wieloliniowych reguł CSSa,
-* sensownego użycia tzw. znaków niedrukowalnych (whitespace).
+* sensownego użycia tzw. znaków niedrukowalnych (whitespaces).
 
 {% include snippets/syntax/01/index.html %}
 
@@ -22,7 +22,7 @@ Choć może się to wydawać nie do końca oczywistym, łańcuchy (ciągi znakó
 
 ### Encoding
 
-Aby uniknąć potencjalnych problemów z kodowaniem znaków (character encoding), zalecanym jest by stosować system [UTF-8](https://pl.wikipedia.org/wiki/UTF-8) w [głównym arkuszu](#gwny-plik) z użyciem dyrektywy `@charset`. Upewnij się także, by był to pierwszy element w arkuszu i żeby nic się wcześniej przed nim nie znajdowało.
+Aby uniknąć potencjalnych problemów z kodowaniem znaków (character encoding), zalecanym jest by stosować system [UTF-8](https://pl.wikipedia.org/wiki/UTF-8) w [głównym arkuszu](#gwny-plik) z użyciem dyrektywy `@charset`. Należy się również upewnić, by był to pierwszy element w arkuszu i żeby nic wcześniej się przed nim nie znajdowało.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -40,6 +40,10 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
 * nie ma absolutnie żadnego słusznego powodu, by nie umieszczać ciągów pomiędzy cudzysłowami.
 
 {% include snippets/syntax/03/index.html %}
+
+<div class="note">
+  <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
+</div>
 
 ### Ciągi jako wartości w CSSie
 
@@ -74,9 +78,13 @@ W Sassie, liczby są typem danych w którego skład wchodzą zarówno liczby nie
 
 ### Zera
 
-Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość wynosi mniej niż jeden. Nigdy nie dodawaj zer końcowych.
+Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość wynosi mniej niż jeden. Nigdy nie dodawajmy zer końcowych.
 
 {% include snippets/syntax/07/index.html %}
+
+<div class="note">
+  <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code> 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
+</div>
 
 ### Jednostki
 
@@ -84,9 +92,13 @@ Zajmując się długościami, wartość `0` nigdy nie powinna mieć jednostki.
 
 {% include snippets/syntax/08/index.html %}
 
-Najczęściej powtarzającym się błędem jaki przychodzi mi do głowy na myśl o liczbach w Sassie jest przekonanie, że jednostki są po prostu ciągami znaków, które można swobodnie i bezpiecznie dodawać do liczby. O ile może się wydawać, że tak jest, w rzeczywistości jednostki wcale tak nie funkcjonują. Pomyśl o jednostkach jako matematycznych symbolach. Dla przykładu, mnożąc 5 cali przez 5 cali uzyskasz wynik 25 cali kwadratowych. Ta sama logika tyczy się Sassa.
+<div class="note">
+  <p>Uwaga, praktyka ta powinna być ograniczona jedynie do długości. Pominięcie jednostki w przypadku takiej własności jak <code>transition-delay</code> jest niedozwolone. W teorii, pozbawione jednostki zero przypisane jako wartość czasu trwania animacji czy przejścia jest nieprawidłowe i będzie zignorowane. Nie wszystkie przeglądarki są jednak tak surowe. Pamiętajmy jednak, by omijać jednostki tylko i wyłącznie dla wartości reprezentujących długości.</p>
+</div>
 
-By dodać jednostkę do liczby, musisz pomnożyć tą liczbę przez *1 jednostkę*.
+Najczęściej powtarzającym się błędem jaki przychodzi mi do głowy na myśl o liczbach w Sassie jest przekonanie, że jednostki są po prostu ciągami znaków, które można swobodnie i bezpiecznie dodawać do liczby. O ile może się wydawać, że tak jest, w rzeczywistości jednostki wcale tak nie funkcjonują. Należy myśleć o jednostkach jako matematycznych symbolach. Dla przykładu, mnożąc 5 cali przez 5 cali uzyskamy wynik 25 cali kwadratowych. Ta sama logika tyczy się Sassa.
+
+By dodać jednostkę do liczby, należy pomnożyć tą liczbę przez *1 jednostkę*.
 
 {% include snippets/syntax/09/index.html %}
 
@@ -94,13 +106,13 @@ Pamiętaj, że dodając *0 tej jednostki* też zadziała, lecz ja bym rekomendow
 
 {% include snippets/syntax/10/index.html %}
 
-Ostatecznie zależy to w dużej mierze od tego, co starasz się osiągnąć. Miej na uwadze to, że dodawanie jednostki jako ciągu znaków nie jest dobrym rozwiązaniem.
+Ostatecznie zależy to w dużej mierze od tego, co staramy się osiągnąć. Należy mieć jednak na uwadze to, że dodawanie jednostki jako ciągu znaków nie jest dobrym rozwiązaniem.
 
-By usunąć jednostkę z określonej wartości, podziel ją przez *jedną jednostkę jej typu*.
+By usunąć jednostkę z określonej wartości, dzielmy ją przez *jedną jednostkę jej typu*.
 
 {% include snippets/syntax/11/index.html %}
 
-Dodając jednostkę jako ciąg do liczby uzyskasz ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież tego nie chcesz.
+Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież nie o to nam chodzi.
 
 ### Obliczenia
 
@@ -112,7 +124,7 @@ Dodając jednostkę jako ciąg do liczby uzyskasz ciąg, wykluczając jakiekolwi
 
 Liczby magiczne są elementem [programowania starego typu](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
 
-Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cenę**. Jeśli nie możesz sobie poradzić ze znalezieniem rozsądnego wytłumaczenia dlaczego dana liczba jest po prostu odpowiednia, postaraj się o dodanie wyczerpującego komentarza wyjaśniającego dlaczego na taką liczbę się zdecydowałeś i dlaczego, Twoim zdaniem, się ona tutaj sprawdza. Przyznanie się do tego, że czegoś do końca nie wiemy jest zawsze lepsze dla innego dewelopera, niż pozostawianie im takiej łamigłówki do rozwiązania.
+Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cenę**. Jeśli nie można sobie poradzić ze znalezieniem rozsądnego wytłumaczenia dlaczego dana liczba jest po prostu odpowiednia, pamiętajmy się o dodaniu wyczerpującego komentarza wyjaśniającego dlaczego na taką liczbę się zdecydowaliśmy i dlaczego się ona tutaj sprawdza. Przyznanie się do tego, że czegoś do końca nie wiemy jest zawsze lepsze dla innego dewelopera, niż pozostawianie im takiej łamigłówki do rozwiązania.
 
 {% include snippets/syntax/13/index.html %}
 
@@ -131,12 +143,17 @@ Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się ju
 
 Aby uczynić zagadnienie dotyczące barw najprostszym jak się tylko da, zalecałbym uszanować następujący porządek preferencji, jeśli chodzi o formaty barw:
 
-1. [Słowa kluczowe odpowiadające barwom w CSSie](http://www.w3.org/TR/css3-color/#svg-color);
-2. [HSL i HSV](http://pl.wikipedia.org/wiki/HSL);
-3. [RGB](http://pl.wikipedia.org/wiki/RGB);
-4. Określenia szestnastkowe. Najlepiej małymi literami i skrócone, gdy jest to możliwe.
+1. [HSL](http://pl.wikipedia.org/wiki/HSL);
+2. [RGB](http://pl.wikipedia.org/wiki/RGB);
+3. Określenia szesnastkowe (małymi literami i skrócone).
 
-Zaczynając od początku, słowa kluczowe najczęściej mówią same za siebie. Format HSL jest nie tylko najłatwiejszym do pojęcia dla ludziego mózgu<sup>[potrzebne źródło]</sup>, ale także czyni prostym dla osób tworzących arkusze stylów modyfikowanie barw poprzez regulowanie osobno odcienia, nasycenia i jasności. RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób możemy określić, czy dany kolor ma barwę bardziej zbliżoną do niebieskiego, zielonego czy czerwonego, jednak nie czyni on prostym faktyczne budowanie barwy z tych trzech części. Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania.
+Słowa kluczowe reprezentujące barwy nie powinny być używane, za wyjątkiem szybkiego prototypowania projektu. Są one słowami z języka angielskiego i często, zwłaszcza dla osób dla których język angielski nie jest językiem ojczystym, nie najlepiej opisują kolor, jaki reprezentują. Ponadto, słowa kluczowe nie są w pełni semantyczne, np. `grey` jest faktycznie ciemniejszy od `darkgrey`, a mylenie `grey` i `gray` może prowadzić do niekonsekwentnego używania tego koloru.
+
+Format HSL jest nie tylko najłatwiejszym do pojęcia dla ludziego mózgu<sup>[potrzebne źródło]</sup>, ale także czyni prostym dla osób tworzących arkusze stylów modyfikowanie barw poprzez regulowanie osobno odcienia, nasycenia i jasności.
+
+RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób możemy określić, czy dany kolor ma barwę bardziej zbliżoną do niebieskiego, zielonego czy czerwonego, jednak nie czyni on prostym faktyczne budowanie barwy z tych trzech części.
+
+Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania. Używaj ich jedynie w ostateczności.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -146,15 +163,15 @@ Używając systemu HSL czy RGB, zawsze dodawaj pojedynczą spację po przecinku 
 
 ### Barwy i zmienne
 
-Jeżeli używasz danej barwy więcej niż jeden raz, umieść ją w zmiennej o nazwie, która w sposób konkretny reprezentuje dany kolor.
+Używając danej barwy więcej niż jeden raz, warto ją umieścić w zmiennej o nazwie, która w sposób konkretny reprezentuje dany kolor.
 
 {% include snippets/syntax/16/index.html %}
 
-W tym momencie możesz używać tej zmiennej kiedykolwiek chcesz. Pamiętaj jednak, że jeśli jej użycie jest silnie powiązane z określonym motywem, zalecałbym nie używać tej zmiennej "tak po prostu". Zamiast tego, przypisz ją do jakiejś innej zmiennej o nazwie objaśniającej jak powinna być właściwie użyta.
+W tym momencie można używać tej zmiennej kiedykolwiek zachodzi taka potrzeba. Pamiętajmy jednak, że jeśli jej użycie jest silnie powiązane z określonym motywem, zalecałbym nie używać tej zmiennej "tak po prostu". Zamiast tego, warto by ją przypisać do jakiejś innej zmiennej o nazwie objaśniającej jak powinna być właściwie użyta.
 
 {% include snippets/syntax/17/index.html %}
 
-Robiąc to w ten sposób zapobiegasz sytuacji, w której zmiana motywu doprowadzi do czegoś jak `$sass-pink: blue`.
+Robiąc to w ten sposób zapobiega się sytuacji, w której zmiana motywu doprowadzi do czegoś jak `$sass-pink: blue`.
 
 ### Rozjaśnianie i przyciemnianie barw
 
@@ -166,7 +183,7 @@ Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnia
 
 {% include images/color-functions.html %}
 
-Jeśli nie chcesz używać pełnej funkcji `mix` za każdym razem, możesz stworzyć dwie, proste w użyciu, funkcje `tint` i `shade` (będące, co ciekawe, częścią [Compassa](http://compass-style.org/reference/compass/helpers/colors/#shade)), które dadzą ten sam efekt:
+Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, proste w użyciu, funkcje `tint` i `shade` (będące, co ciekawe, częścią [Compassa](http://compass-style.org/reference/compass/helpers/colors/#shade)), które dadzą ten sam efekt:
 
 {% include snippets/syntax/18/index.html %}
 
@@ -196,7 +213,7 @@ Listy powinny być tworzone według następujących zasad:
 
 {% include snippets/syntax/19/index.html %}
 
-Dodając nowy składnik do listy, zawsze korzystaj z dostępnego już API. Nie próbuj dodawać niczego ręcznie.
+Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już API. Nie próbujmy dodawać niczego ręcznie.
 
 {% include snippets/syntax/20/index.html %}
 
@@ -223,16 +240,6 @@ Mapy powinny być tworzone w następujący sposób:
 Przykład:
 
 {% include snippets/syntax/21/index.html %}
-
-### Debugowanie map Sassa
-
-Nie martw się, jeśli napisana przez Ciebie mapa okaże się działać w sposób nie do końca dla Ciebie zrozumiały. Jest bowiem możliwość ich debugowania.
-
-{% include snippets/syntax/22/index.html %}
-
-Jeśli jesteś zainteresowany głębokością danej mapy, dodaj również poniższą funkcję. Wyżej opisany mixin automatycznie z niej skorzysta.
-
-{% include snippets/syntax/23/index.html %}
 
 ###### Dalsze informacje
 
@@ -289,7 +296,7 @@ Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne 
 
 {% include snippets/syntax/26/index.html %}
 
-Z drugiej zaś strony, porządkowanie własności według typu zdaje się mieć sens. Każda deklaracja związana z czcionkami jest obok siebie, `top` i `bottom` są znowu razem, a czytanie takiego zestawu reguł zdaje się być przyjemnością. Jednak o ile nie trzymasz się reguł określonych konwencji, takich jak [Idiomatic CSS](https://github.com/necolas/idiomatic-css), niektóre kwestie pozostają problematyczne. Gdzie, na przykład, umieścić własność `white-space`? W grupie czcionek, czy obok `display`? Co zrobić z `overflow`? Wreszcie, jaka jest kolejność wewnątrz danej grupy tematycznej (czyżby alfabetyczna, o ironio)?
+Z drugiej zaś strony, porządkowanie własności według typu zdaje się mieć sens. Każda deklaracja związana z czcionkami jest obok siebie, `top` i `bottom` są znowu razem, a czytanie takiego zestawu reguł zdaje się być przyjemnością. Jednak o ile nie wymagane jest trzymanie się reguł określonych konwencji, takich jak [Idiomatic CSS](https://github.com/necolas/idiomatic-css), niektóre kwestie pozostają problematyczne. Gdzie, na przykład, umieścić własność `white-space`? W grupie fontów, czy obok `display`? Co zrobić z `overflow`? Wreszcie, jaka jest kolejność wewnątrz danej grupy tematycznej (czyżby alfabetyczna, o ironio)?
 
 {% include snippets/syntax/27/index.html %}
 
@@ -301,7 +308,7 @@ Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opub
 
 {% include images/order-poll.html %}
 
-Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam Tobie, bądź tylko w swym wyborze konsekwentny.
+Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam czytelnikowi, tylko by być w swym wyborze konsekwentnym.
 
 <div class="note">
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
@@ -309,12 +316,8 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
 
 ###### Dalsze informacje
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Zagnieżdżanie selektorów
 

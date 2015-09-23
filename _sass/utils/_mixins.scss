@@ -1,15 +1,18 @@
 /// Define the element as a container
 /// @author Hugo Giraudel
 @mixin container {
-  max-width: 730px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
 
-  @include respond-to("medium") {
-    padding-left: 0;
-    padding-right: 0;
+/// Make an element slightly overflow its container on the sides on large screens
+@mixin expand {
+  @include respond-to('medium') {
+    margin-left: -1rem;
+    margin-right: -1rem;
   }
 }
 
@@ -54,23 +57,10 @@
 /// @param {String} $breakpoint - Breakpoint name
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) == false {
-    @error "Invalid breakpoint #{$breakpoint}.";
+    @error 'Invalid breakpoint #{$breakpoint}.';
   }
 
   @media all and (min-width: #{map-get($breakpoints, $breakpoint)}) {
     @content;
   }
-}
-
-/// Mixin helper to output vendor prefixes
-/// @author Hugo Giraudel
-/// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
-/// @param {List} $prefixes - List of prefixes to output
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
 }

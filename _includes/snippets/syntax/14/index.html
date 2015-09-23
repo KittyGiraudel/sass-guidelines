@@ -4,24 +4,50 @@
 {% highlight scss %}
 // Yep
 .foo {
-  color: red;
+  color: hsl(0, 100%, 50%);
+}
+
+// Also yep
+.foo {
+  color: rgb(255, 0, 0);
+}
+
+// Nope
+.foo {
+  color: #f00;
 }
 
 // Nope
 .foo {
   color: #FF0000;
 }
+
+// Nope
+.foo {
+  color: red;
+}
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
 .foo
-  color: red
+  color: hsl(0, 100%, 50%)
+
+// Also yep
+.foo
+  color: rgb(255, 0, 0)
+
+// Nope
+.foo
+  color: #f00
 
 // Nope
 .foo
   color: #FF0000
+
+// Nope
+.foo
+  color: red
 {% endhighlight %}
   </div>
 </div>

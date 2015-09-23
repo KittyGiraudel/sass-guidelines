@@ -15,8 +15,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 ###### Further reading
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass or LibSass
 
@@ -30,9 +29,7 @@ On non-Ruby projects that need a workflow integration, LibSass is probably a bet
 
 ###### Further reading
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass or SCSS
@@ -45,7 +42,7 @@ Since then, Sass (the preprocessor) has been providing two different syntaxes: S
 
 Sass’s whitespace-sensitive syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to learn since it’s mostly some tiny extra bits on top of CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <button data-toggle="aside" class="link-like" role="button" type="button">options panel</button>.
+<p>I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <label for="aside-toggle" class="link-like">options panel</label>.</p>
 
 ###### Further reading
 
@@ -61,17 +58,10 @@ What I do like with Sass is its conservative approach to CSS. Sass’s design is
 
 In other words, Sass is not a preprocessor aimed at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aimed at solving actual issues; helping to provide useful functionality to CSS where CSS falls short.
 
-Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
+Preprocessors aside, we should also mention post-processing tools, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). They are often referred to as “postprocessors” as they transpile yet-to-come standard syntax into today’s CSS. Otherwise, they are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
 
 You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you would write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), then compile your stylesheets with a postprocessor only to find every variable occurrence gets replaced with its value, as Sass would do.
 
 The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
 
 While providing tomorrow’s syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we’ll get back to this.
-
-###### Further reading
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)

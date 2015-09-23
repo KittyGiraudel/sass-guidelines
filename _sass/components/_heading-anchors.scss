@@ -1,11 +1,17 @@
 /**
  * Anchor links
+ * 1. Vertical centering
+ * 2. Slightly offsetted in the margin
+ * 3. Fixed font size, independant from heading level
  */
 .anchor-link {
-  position: absolute;
-  left: -1.5rem;
-  font-size: .8em;
-  top: .2em;
+  position: absolute; /* 1 */
+  top: 50%; /* 1 */
+  -webkit-transform: translateY(-50%); /* 1 */
+  -ms-transform: translateY(-50%); /* 1 */
+  transform: translateY(-50%); /* 1 */
+  left: -1.5rem; /* 2 */
+  font-size: 15px; /* 3 */
   color:  $light-grey;
   text-decoration: none;
 }

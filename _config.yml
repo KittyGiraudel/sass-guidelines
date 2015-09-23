@@ -10,11 +10,12 @@ github_username:  HugoGiraudel
 safe: true
 
 # Build settings
+exclude: [node_modules]
 markdown: kramdown
 
 kramdown:
   auto_ids: true
-  toc_levels: 1..3
+  toc_levels: 1..2
 
 sass:
     style: :compressed

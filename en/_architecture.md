@@ -17,12 +17,8 @@ I, myself, use an approach that happens to be quite similar to [SMACSS](https://
 
 ###### Further reading
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Components
 
@@ -54,6 +50,10 @@ And of course:
 
 * `main.scss`
 
+<div class="note">
+  <p>If you are looking to use the 7-1 pattern, there is a <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> ready on GitHub. It should contain everything you need to get started with this architecture.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Ideally, we can come up with something like this:
@@ -66,11 +66,15 @@ Ideally, we can come up with something like this:
 
 ### Base folder
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I’m used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.
+The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet defining some standard styles for commonly used HTML elements (that I like to call `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
+</div>
 
 ### Layout folder
 
@@ -130,10 +134,12 @@ The rule of thumb for this folder is that it should not output a single line of 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss`
+
+When working on a very large project with a lot of utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long. 
 
 <div class="note">
-  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, depending on what you prefer.</p>
+  <p>The <code>utils/</code> folder might also be called <code>utilities</code> or <code>helpers/</code>, depending on what you prefer.</p>
 </div>
 
 ### Vendors folder
@@ -155,8 +161,8 @@ The main file (usually labelled `main.scss`) should be the only Sass file from t
 
 Files should be imported according to the folder they live in, one after the other in the following order:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -196,5 +202,4 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 
 ###### Further reading
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

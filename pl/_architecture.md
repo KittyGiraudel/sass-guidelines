@@ -1,7 +1,7 @@
 
 # Architektura
 
-Układanie struktury projektu wykorzystującego CSS jest prawdopodobnie jednym z najtrudniejszych zadań, jakie napotkasz w czasie zajmowania się tymże projektem. Utrzymanie architektury spójnej i mającej znaczenie jest nawet trudniejsze.
+Układanie struktury projektu wykorzystującego CSS jest prawdopodobnie jednym z najtrudniejszych zadań, jakie można napotkać w czasie zajmowania się takim projektem. Utrzymanie architektury spójnej i mającej znaczenie jest nawet trudniejsze.
 
 Na szczęście, jedną z kluczowych zalet używania preprocesora CSS jest możliwość podziału bazy kodu na wiele plików bez spadku wydajności (czego skutkiem jest wykorzystywanie klasycznego `@import` w CSSie). Dzięki gruntownym zmianom w dyrektywie `@import`, jakie wniósł Sass, jej wykorzystywanie do dzielenia kodu na wiele plików w fazie programowania jest obecnie absolutnie bezpieczne (a nawet zalecane). Rezultatem jest bowiem pojedynczy plik CSS, który użyty zostanie w fazie produkcji.
 
@@ -17,12 +17,8 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
 
 ###### Dalsze informacje
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Komponenty
 
@@ -36,7 +32,7 @@ Komponenty mogą reprezentować wszystko, o tyle o ile:
 
 Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w różnych miejscach, na różnych stronach i w różnych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
 
-Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomoże Ci on nie tylko zmniejszyć ilość CSSu potrzebnego dla Twojego całego projektu, ale także ułatwi Ci utrzymanie całości kodu w porządku.
+Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomaga on nie tylko zmniejszyć ilość CSSu potrzebnego dla całego projektu, ale także ułatwia utrzymanie całości kodu w porządku.
 
 ## Wzór 7-1
 
@@ -54,6 +50,10 @@ I oczywiście:
 
 * `main.scss`
 
+<div class="note">
+  <p>Chcąc wykorzystać wzór 7-1 w praktyce, dostępny jest gotowy <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> na GitHubie. Powinien on zawierać wszystko, co będzie potrzebne do rozpoczęcia nowego projektu.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Co do zasady, możemy tu mówić o czymś takim:
@@ -66,11 +66,15 @@ Co do zasady, możemy tu mówić o czymś takim:
 
 ### Folder base
 
-W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla naszego projektu. Możemy tam umieścić plik odpowiadający za reset podstawowych reguł CSSa, reguły dotyczące typografii i plik (który ja zazwyczaj nazywam `_base.scss`) definiujący podstawowe style dla powszechnie używanych elementów HTMLa.
+W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla naszego projektu. Możemy tam umieścić plik odpowiadający za reset podstawowych reguł CSSa, reguły dotyczące typografii i plik definiujący podstawowe style dla powszechnie używanych elementów HTMLa (który ja zazwyczaj nazywam `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>Jeśli Twój projekt wykorzystuje <em>dużo</em> animacji w CSSie, rozważ dodanie tu pliku <code>_animations.scss</code> zawierającego definicje <code>@keyframes</code> dla wszystkich Twoich animacji. Jeśli natomiast tych animacji nie ma zbyt wiele, pozostaw te definicje przy selektorach, które z nich korzystają.</p>
+</div>
 
 ### Folder layout
 
@@ -84,7 +88,7 @@ Folder `layout/` zawiera wszystko, co odpowiada za rozmieszczenie elementów na 
 * `_navigation.scss`
 
 <div class="note">
-  <p>Folder <code>layout/</code> może być także nazwany folderem <code>partials/</code>, w zależności od Twojego upodobania.</p>
+  <p>Folder <code>layout/</code> może być także nazwany folderem <code>partials/</code>, w zależności od upodobania.</p>
 </div>
 
 ### Folder components
@@ -96,18 +100,18 @@ Dla mniejszych komponentów stworzony został folder `components/`. Podczas gdy 
 * `_thumbnails.scss`
 
 <div class="note">
-  <p>Folder <code>components/</code> może być także nazwany folderem <code>modules/</code>, w zależności od Twojego upodobania.</p>
+  <p>Folder <code>components/</code> może być także nazwany folderem <code>modules/</code>, w zależności od upodobania.</p>
 </div>
 
 ### Folder pages
 
-Jeśli masz jakieś style związane z konkretnymi podstronami, lepiej jest umieszczać je w folderze `pages/`, w pliku o nazwie określającej konkretną podstronę. Dla przykładu, popularnym jest rozwiązanie skupiania szczegółowych reguł, mających zastosowanie jedynie dla strony głównej w pliku `_home.scss` w folderze `pages/`.
+Style związane z konkretnymi podstronami lepiej umieszczać w folderze `pages/`, w pliku o nazwie określającej konkretną podstronę. Dla przykładu, popularnym jest rozwiązanie skupiania szczegółowych reguł, mających zastosowanie jedynie dla strony głównej w pliku `_home.scss` w folderze `pages/`.
 
 * `_home.scss`
 * `_contact.scss`
 
 <div class="note">
-  <p>W zależności od Twojego procesu pracy nad projektem, pliki te mogą odseparowane celem uniknięcia scalania ich z innymi do jednego arkusza stylów. Zależy to tylko i wyłącznie od Ciebie.</p>
+  <p>W zależności od procesu pracy nad projektem, pliki te mogą być odseparowane celem uniknięcia scalania ich z innymi do jednego arkusza stylów.</p>
 </div>
 
 ### Folder themes
@@ -123,29 +127,31 @@ W przypadku większych stron i aplikacji, często spotyka się osobne motywy. Je
 
 ### Folder utils
 
-Folder `utils/` zbiera wszystkie narzędzia i funkcje pomocnicze Sassa, używane w ramach projektu. Każda globalna zmienna, funkcja, mixin czy selektor zastępczy powinny się w nim znajdować.
+Folder `utils/` zbiera wszystkie narzędzia i funkcje pomocnicze Sassa, używane w ramach projektu. Każda globalna zmienna, funkcja, mixin czy placeholder powinny się w nim znajdować.
 
 Podstawową zasadą dla tego folderu jest to, by żaden ze znajdujących się w nim pliku nie powodował ani jednej dodatkowej linii do wynikowego, skompilowanego arkusza CSS. Jest to bowiem nic innego, niż zbiór tzw. pomocników.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (często nazywane `_helpers.scss`)
+* `_placeholders.scss`
+
+Pracując nad dużym projektem wykorzystującym wiele narzędzi, ciekawym rozwiązaniem zdaje się być grupowanie ich według przeznaczenia, a nie typu, na przykład typografia (`_typography.scss`), style (`_theming.scss`), itp. Każdy z tych plików powinien wówczas zawierać wszystkie powiązane narzędzia pomocnicze: zmienne, funkcje, mixiny i placeholdery. Ułatwi to bowiem czytanie i zarządzanie później tym kodem, zwłaszcza gdy pliki stają się co raz większe.
 
 <div class="note">
-  <p>Folder <code>utils/</code> może być także nazwany folderem <code>helpers/</code>, <code>sass-helpers/</code> lub <code>sass-utils/</code>, w zależności od Twojego upodobania.</p>
+  <p>Folder <code>utils/</code> może być także nazwany folderem <code>utilities/</code> lub <code>helpers/</code>, w zależności od upodobania.</p>
 </div>
 
 ### Folder vendors
 
-Wreszcie, wiele projektów skorzysta także z obecności folderu `vendors/`, który to zawierać może wszystkie pliki CSS z różnych zewnętrznych bibliotek i frameworków, takich jak Normalize, Bootstrap, jQueryUI,FancyCarouselSliderjQueryPowered i innych. Umieszczanie ich wszystkich w ramach tego samego folderu jest sposobem na zasygnalizowanie, że "nie ja to napisałem, pochodzi to z zewnątrz i nie należy to do mojej odpowiedzialności".
+Wreszcie, wiele projektów skorzysta także z obecności folderu `vendors/`, który to zawierać może wszystkie pliki CSS z różnych zewnętrznych bibliotek i frameworków, takich jak Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered i innych. Umieszczanie ich wszystkich w ramach tego samego folderu jest sposobem na zasygnalizowanie, że "nie ja to napisałem, pochodzi to z zewnątrz i nie należy to do mojej odpowiedzialności".
 
 * `_normalize.scss`
 * `_bootstrap.scss`
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-Jeśli zmuszony jesteś do nadpisania jakiejkolwiek z sekcji danego pliku zewnętrznego, zalecam utworzenie ósmego folderu nazwanego `vendors-extensions/`, w którym pliki zawierające reguły nadpisujące powinny nazywać się tak jak te pliki, które są nimi nadpisywane.
+W przypadku gdy wymagane jest nadpisanie jakiejkolwiek z sekcji danego pliku zewnętrznego, zalecam utworzenie ósmego folderu nazwanego `vendors-extensions/`, w którym pliki zawierające reguły nadpisujące powinny nazywać się tak jak te pliki, które są nimi nadpisywane.
 
 Na przykład, `vendors-extensions/_bootstrap.scss` będzie plikiem zawierającym wszystkie reguły CSS, których przeznaczeniem jest zmodyfikowanie niektórych ze standardowych dla Bootstrapa reguł. Służy to uniknięciu edytowania oryginalnych plików zewnętrznych, co samo w sobie nie należy do najlepszych pomysłów.
 
@@ -155,8 +161,8 @@ Główny plik (zazwyczaj nazywany jako `main.scss`) powinien być jedynym plikie
 
 Pliki powinne być importowane z uwzględnieniem folderów, w których się znajdują, jeden po drugim w następującej kolejności:
 
-1. `vendors/`
-2. `utils/`
+1. `utils/`
+2. `vendors/`
 3. `base/`
 4. `layout/`
 5. `components/`
@@ -173,7 +179,7 @@ Celem zapewnienia lepszej przejrzystości, plik główny powinien respektować p
 
 {% include snippets/architecture/02/index.html %}
 
-Istnieje także inne podejście do importowania plików cząstkowych (partiali), które wydaje mi się równie poprawne. W tym przypadku z jednej strony plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. W każdym jednak razie, decyzję pozostawiam Tobie. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
+Istnieje także inne podejście do importowania plików cząstkowych (partials), które wydaje mi się równie poprawne. W tym przypadku z jednej strony plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
 
 * jeden `@import` na folder,
 * importowane pliki pod `@import`,
@@ -185,7 +191,7 @@ Istnieje także inne podejście do importowania plików cząstkowych (partiali),
 
 <div class="note">
   <p>Aby nie importować pojedynczo każdego z plików, powstało rozszerzenie do Ruby Sass zwane <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, które umożliwia wykorzystywanie tzw. glob patterns w <code>@import</code> Sassa, takich jak <code>@import "components/*"</code>.</p>
-  <p>Niemniej jednak nie zalecam korzystania z tego rozwiązania, bowiem importuje ono pliki według porządku alfabetycznego, co jest prawdopodobnie nie tym, czego oczekujesz. Zwłaszcza w przypadkach, gdy mamy do czynienia z językiem wrażliwym na kolejność plików, jakim niewątpliwie jest CSS.</p>
+  <p>Niemniej jednak nie zalecam korzystania z tego rozwiązania, bowiem importuje ono pliki według porządku alfabetycznego, co nie zawsze jest oczekiwanym rezultatem. Zwłaszcza w przypadkach, gdy mamy do czynienia z językiem wrażliwym na kolejność plików, jakim niewątpliwie jest CSS.</p>
 </div>
 
 ## Plik wstydu
@@ -196,5 +202,4 @@ Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [
 
 ###### Dalsze informacje
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

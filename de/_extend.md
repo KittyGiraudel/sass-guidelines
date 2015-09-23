@@ -1,40 +1,45 @@
 
 # Extend
 
-Die `@extend` Regel muss eine der Features sein welche Sass über die Jahre so berühmt gemacht hat. Nochmal zur Erinnerung, es ermöglicht es Sass zu sagen dass Element A exakt gleich wie Selektor B gestyled werden soll. Deshalb kann es ein wertvoller Verbündeter bei modularem CSS sein.
+Die `@extend` Regel ist ein mächtiges Feature welches häufig missverstanden wird. Generell ermöglicht es Sass zu sagen, dass ein Element A exakt gleich wie Selektor B gestyled werden soll. Deshalb kann es ein wertvoller Verbündeter bei modularem CSS sein.
 
-Dennoch habe ich das Gefühl ich muss dich vor dem Feature warnen. So clever es auch ist, `@extend` ist ein kompliziertes Konzept das wohlmöglich mehr Schaden als Nutzen bringt, gerade wenn es schlecht eingesetzt wird. Das Ding ist, wenn du du einen Selektor erweiterst, hast du ohne einen tiefen Einblick in die Codebasis zu haben wenig bis kaum die Möglichkeit folgende Fragen zu beantworten:
+Dennoch, der wahre Grund von `@extend` ist es die Beziehung (Beschränkungen) innerhalb erweiterter Selektoren zwischen Regelwerken zu pflegen. Was genau bedeutet das?
 
-* wo wird mein aktueller Selektor hinzugefügt?
-* werde ich wohlmöglich ungewollte Nebeneffekte erzeugen?
-* wie groß wird das generierte CSS durch diese einzige Erweiterung sein?
+* Selektoren haben *Beschränkungen* (z.B. `.bar ` in `.foo > .bar` muss ein Elternteil `.foo` haben);
+* Diese Beschränkungen werden zum erweiterten Selektor *übertragen* (z.B. `.bar { @extend .bar; }` wird `.foo > .bar, .foo > .baz` erzeugen);
+* Die Deklarationen des erweiterten Selektors werden mit dem erweiternden Selektor geteilt.
 
-Soviel du auch weißt, das Ergebnis kann von keinerlei Auswirkung bis zu desaströsen Nebeneffekten variieren. Mein erster Ratschlag ist daher `@extend` komplett zu umgehen. Es mag hart klingen, aber am Ende des Tages kann es dir viel Kopfschmerzen und Schwierigkeiten ersparen.
+Dem vorausgesetzt ist es ziemlich einfach zu sehen, wie erweiternde Selektoren mit nachsichtigen Beschränkungen zu Selektorexplosion führen können. Wenn `.baz .qux` `.foo .bar` erweitert, kann der erzeugte Selektor `.foo .baz .qux` oder `.baz .foo .qux` sein, da `.foo` und `.baz` allgemeine Vorfahren dessen sind.
 
-Abgesehen davon, kennst du die Sprichwörter:
+Versuch immer solche Beziehungen durch [Selektorenplatzhalter](http://www.sitepoint.com/sass-reference/placeholders/) zu definieren, und nicht durch richtige Selektoren. Dadurch bekommst du die Freiheit jede Namenskonvention die du für deine Selektoren hast zu verwenden (und ändern). Da Beziehungen auch nur einmal innerhalb des Platzhalters definiert werden, ist die Möglichkeit ungewollte Selektoren zu erzeugen außerdem sehr gering.
 
-> Sag niemals nie.<br>
-> &mdash; offensichtlich [nicht Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
-
-Es gibt Szenarien wo Selektoren zu erweitern hilfreich und wertvoll sein mag. Trotzdem behalte folgende Regeln in Erinnerung um dich selbst vor Ärger zu schützen:
-
-* Benutze `@extend` innerhalb eines Moduls, nicht über verschiedene hinweg.
-* Benutze `@extend` exklusiv in Platzhaltern, nicht in richtigen Selektor.
-* Vergewissere dich dass der Platzhalter so wenig wie möglich im Stylesheet vertreten ist.
-
-Wenn du `@extend` verwendest, lass mich dich daran erinnern dass es nicht gut mit `@media` Blöcken zusammenspielt. Wie du vielleicht weißt, Sass kann einen Selektor nicht in einen Media Query erweitern. Wenn du es tust, schlägt der Compiler einfach fehl und teilt dir mit dass es nicht geht. Nicht gut. Besonders seit Media Queries alles ausmachen.
+Um Styles zu vererben, benutze `@exend` nur wenn der erweiternde `.class` oder `%placeholder` Selektor _ähnlich_ zu dem zu erweiterndem Selektor ist. Zum Beispiel `.error` ist ähnlich zu `.warning`, also kann `.error` `@extend .warning`.
 
 {% include snippets/extend/01/index.html %}
 
-> Du solltest @extend nicht auf einen Selektor außerhalb des @media anwenden.<br>
-> Du solltest @extend immer nur innerhalb derselben Anordnung verwenden.
+Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. Trotzdem behalte immer folgende Regeln im Kopf, damit du behutsam `@extend` benutzen kannst:
+
+* Benutze `@extend` hauptsächlich innerhalb `%placeholders`, nicht bei wirklichen Selektoren.
+* Wenn du eine Klasse erweiterst, dann erweitere nur eine Klasse mit einer anderen, niemals [komplexe Selektoren](http://www.w3.org/TR/selectors4/#syntax).
+* Erweiter einen `%placeholder` so wenig wie möglich.
+* Vermeide es allgemeine Vorfahren eines Selektors (z.B. `.foo .bar`) oder allgemeine Geschwister eines Selektor (z.B. `.foo ~ .bar`) zu erweitern. Genau das erzeugt eine Explosion von Selektoren.
 
 <div class="note">
-  <p>Es wird oft gesagt <code>@extend</code> würde bei der Dateigröße helfen, da es Selektoren kombiniert anstatt dupliziert. Das ist zwar richtig, der Unterschied ist jedoch geringfügig sobald durch <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> komprimiert wurde.</p>
-  <p>Deshalb, wenn du Gzip (oder etwas vergleichbares) nicht benutzen kannst, ist es garnicht mal eine so schlechte Idee <code>@extend</code> zu verwenden, solange du weißt was du tust.</p>
+	<p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
+	<p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
 </div>
 
-Um abzuschließen, rate Ich, außer unter bestimmten Umständen, **`@extend` nicht zu verwenden**, aber würde nicht soweit gehen es zu verbieten.
+### Extend und Media Queries
+
+Du solltest Selektoren nur innerhalb desselben Media Scopes (`@media` Regel) erweitern. Stell dir ein Media Query als weitere Beschränkung vor.
+
+{% include snippets/extend/02/index.html %}
+
+Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhalb von Selektoren zu pflegen. Wenn zwei Selektoren charakteristisch gleich sind, ist es der perfekte Anwendungsfall für `@extend`. Wenn sie jedoch ohne Beziehung zueinander stehen, aber gleiche Regeln teilen dann passt ein `@mixin` besser.
+
+<div class="note">
+	<p>Danke an <a href="https://twitter.com/davidkpiano">David Khourshid</a> für die Hilfe und Expertise in diesem Bereich.</p>
+</div>
 
 ###### Weitere Informationen
 
@@ -42,3 +47,4 @@ Um abzuschließen, rate Ich, außer unter bestimmten Umständen, **`@extend` nic
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)

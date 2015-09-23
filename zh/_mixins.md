@@ -21,7 +21,12 @@
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+## Argument-less mixins
+
+有时候我们使用混合宏只是为了避免重复声明相同的样式，这种情况下，往往不需要传递参数。所以，为了简洁起见，我们可以删除圆括号，使用 `@include` 关键字来表示当前行调用了混合宏。
+
+{% include snippets/mixins/08/index.html %}
 
 ## 参数列表
 
@@ -61,5 +66,4 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 
 ###### 扩展阅读
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

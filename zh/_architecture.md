@@ -17,12 +17,8 @@
 
 ###### 扩展阅读
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## 组件
 
@@ -66,11 +62,15 @@
 
 ### Base文件夹
 
-`base/`文件夹存放项目中的模板文件。在这里，可以找到重置文件、排版规范文件或者一个样式表（我通常命名为`_base.scss`）——定义一些 HTML 元素公认的标准样式。
+`base/`文件夹存放项目中的模板文件。在这里，可以找到重置文件、排版规范文件或者一个样式表——定义一些 HTML 元素公认的标准样式（我喜欢命名为`_base.scss`）。
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>如果你的项目中使用了<em>大量的</em> CSS 动画, 那么你有必要考虑添加一个 <code>_animations.scss</code> 文件来统一管理这些动画。如果只是偶尔使用一些动画，也可以将这些动画融入到调用它们的文件中。</p>
+</div>
 
 ### Layout文件夹
 
@@ -130,10 +130,12 @@
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss`
+
+当项目体量庞大工具复杂时，通过主题而不是类型分类整理可能更有帮助，比如排版（`_typography.scss`）、主题（`_theming.scss`）等。每一个文件都包含所有的相关信息：变量、函数、混合宏和占位符。这样做可以让维护更加单，特别针对于文件较长的情况。
 
 <div class="note">
-  <p><code>utils/</code> 文件夹也会被称为 <code>helpers/</code>,<code>sass-helpers/</code> 或者 <code>sass-utils/</code>，具体使用情况取决于个人喜好。</p>
+  <p><code>utils/</code> 文件夹也会被称为 <code>helpers/</code> 或 <code>utilities</code>，具体使用情况取决于个人喜好。</p>
 </div>
 
 ### Vendors文件夹
@@ -155,8 +157,8 @@
 
 文件应该按照存在的位置顺序依次被引用进来：
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -196,5 +198,4 @@
 
 ###### 扩展阅读
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

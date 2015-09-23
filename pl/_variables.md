@@ -17,7 +17,7 @@ Zasadniczo nie ma powodu aby deklarować zmienną która nigdy nie będzie aktua
 
 Zasięg widoczności (scope) zmiennych w Sassie zmienił się w trakcie jego historii. Do niedawna, zmienne deklarowane w ramach zestawów reguł, czy też innych zakresów, standardowo traktowane były jako zmienne lokalne. Co ciekawe jednak, w przypadku gdy istniała już globalna zmienna o tej samej nazwie, mogła ona zostać nadpisana przez tą przypisaną lokalnie. Od czasu wersji 3.4, Sass już właściwie radzi sobie z koncepcją zasięgów i zamiast tego tworzy teraz nową, lokalną zmienną.
 
-Dokumentacja traktuje także o *przysłanianiu globalnych zmiennych (variable shadowing)*. Deklarując zmienną o lokalnym zasięgu, która z kolei już istnieje w zasięgu globalnym, ta lokalna *przysłania* tą globalną. Mówiąc wprost, nadpisuje ją na potrzeby lokalnego zasięgu (scope’u).
+Dokumentacja traktuje także o *przysłanianiu zmiennych (variable shadowing)*. Deklarując zmienną o lokalnym zasięgu, która z kolei już istnieje w zasięgu globalnym, ta lokalna *przysłania* tą globalną. Mówiąc wprost, nadpisuje ją na potrzeby lokalnego zasięgu (scope’u).
 
 Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
@@ -25,11 +25,11 @@ Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
 ## Flaga `!default`
 
-Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być zadeklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
+Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być deklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
 
 {% include snippets/variables/02/index.html %}
 
-Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem Twojej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
+Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem danej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
 
 {% include snippets/variables/03/index.html %}
 
@@ -43,6 +43,6 @@ Flaga `!global` powinna być użyta jedynie wtedy, gdy zmienna z lokalnego zasi�
 
 Używanie map zamiast wielu odrębnych zmiennych ma swoje zalety. Pozwala to przede wszystkim na korzystanie z pętli, co nie jest możliwe w przypadku zmiennych.
 
-Kolejnym plusem tworzenia map jest możliwość konstruowania małych funkcji wydobywających, dających nam przyjazne w obsłudze API. Na przykład, rozważ następujący kod:
+Kolejnym plusem tworzenia map jest możliwość konstruowania małych funkcji wydobywających, dających nam przyjazne w obsłudze API. Na przykład, rozważmy następujący kod:
 
 {% include snippets/variables/05/index.html %}

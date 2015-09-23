@@ -2,17 +2,23 @@
  * Dual code blocks
  * SCSS is default, Sass is hidden
  */
-[data-syntax="sass"] {
+[data-syntax='sass'] {
   display: none;
 
+  /**
+   * When inside `.sass` class applied to <body>, display Sass code blocks
+   */
   @include when-inside('.sass') {
     display: block;
   }
 }
 
-[data-syntax="scss"] {
+[data-syntax='scss'] {
   display: block;
 
+  /**
+   * When inside `.sass` class applied to <body>, hide SCSS code blocks
+   */
   @include when-inside('.sass') {
     display: none;
   }
@@ -23,19 +29,18 @@
  */
 .highlight {
   @include vertical-rhythm;
+  @include expand;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: $code-background;
   color: white;
-  border: 1px solid rgba(black, 0.1);
 
+  /**
+   * <pre> element direct child of `.highlight` modules
+   */
   > pre {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 2rem 1rem;
-
-    @include respond-to('medium') {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    padding: 1rem;
   }
 }
 

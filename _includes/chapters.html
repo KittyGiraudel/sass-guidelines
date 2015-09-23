@@ -1,6 +1,11 @@
 {% include_relative {{ include.path }}_author.md %}
 {% include_relative {{ include.path }}_contributing.md %}
+
+{::options parse_block_html="true" /}
+<div class="toc">
 {% include_relative {{ include.path }}_toc.md %}
+</div>
+{::options parse_block_html="false" /}
 
 {% include_relative {{ include.path }}_sass.md %}
 {% include_relative {{ include.path }}_introduction.md %}
