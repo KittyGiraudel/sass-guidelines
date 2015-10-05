@@ -351,7 +351,7 @@ Problem zagnieżdżania selektorów leży głównie w tym, iż zmniejszają one 
 
 To stwierdzenie staje się tym bardziej prawdziwe, im dłuże stają się selektory i częstsze odwołania (`&`) do obecnego selektora. Na pewnym etapie ryzyko pogubienia się w kodzie staje się przez to zbyt duże.
 
-Aby zapobiec temu typu sytuacjom, **unikamy zagnieżdżania selektorów jeśli to jest możliwe**. Niemniej jednak są pewne wyjątki dla tej zasady.
+Aby zapobiec tego typu sytuacjom, **unikamy zagnieżdżania selektorów jeśli to jest możliwe**. Niemniej jednak są pewne wyjątki od tej zasady.
 
 ### Wyjątki
 
