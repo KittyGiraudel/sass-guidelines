@@ -82,7 +82,7 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 
 أو يمكنك استخدام شيء اكثر مثل [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). على كل حال، اختيار اي منهم لن يؤثر كثيراً على الطريقة التي تكتب فيها الكود لذلك هذا أمر يرجع لك انت.
 
-###### إضافات للإستزادة
+###### Further reading
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -95,7 +95,7 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-###### Further reading
+###### إضافات للإستزادة
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -129,10 +129,23 @@ Fortunately, SCSS-lint recommendations are very similar to those described in th
   <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-###### Further reading
+<div class="note">
+  <p>لو أردت أن تضيف SCSS lint إلى عملية Grunt الخاصة بك، ستكون سعيداً بمعرفة أن هناك اضافة Grunt لهذا وتسمى <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>أيضاً، لو كنت تريد تطبيق يعمل مع SCSS-lint، الشباب في <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) يعملون على <a href="https://houndci.com/">Hound</a>.</p>
+</div>
+
+###### Further Reading
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
 * [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)
+* [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
+* [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/)
+
+###### إضافات للإستزادة
+
+* [SCSS-lint](https://github.com/causes/scss-lint)
+* [تنظيف كود SASS بإستخدام SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
+* [تحسين كود SASS على موقع The Guardian](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)
 * [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
 * [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/)
