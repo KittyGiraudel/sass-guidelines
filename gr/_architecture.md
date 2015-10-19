@@ -1,22 +1,22 @@
 # Αρχιτεκτονική
 
-Η δόμηση ενός CSS πρότζεκτ είναι ίσως ένα απο τα δυσκολότερα πράγματα που θα κάνετε σε αυτό το πρότζεκτ. Συντηρώντας την δόμηση αυτή συνεπή και ουσιώδης είναι ακόμα δυσκολότερο.
+Η δόμηση ενός CSS project είναι ίσως ένα απο τα δυσκολότερα πράγματα που θα κάνετε κατα την διαρκεια ζωής του project. Το να συντηρήσετε την δόμηση αυτή συνεπή και ουσιώδης είναι ακόμα δυσκολότερο.
 
 Ευτυχώς, ένα απο τα βασικά πλεονεκτήματα της χρήσης ενός CSS preprocessor είναι η παροχή της δυνατότητας τμηματοποίησης του κώδικα σε πολλά αρχεία χωρίς να επηρεάζεται η απόδοση του (όπως με το `@import` CSS directive). Λόγο της υπερφόρτωσης που κάνει η Sass στο `@import` directive, είναι απολύτως ασφαλή (και συνιστάται ανεπιφύλακτα) η χρήση όσο αρχείων χρειάζεται κατα την διάρκεια της ανάπτυξης, αφού όλα τα αρχεία θα συγκεντρωθούν σε ένα αρχείο CSS σε production περιβάλλον.
 
-Πέρα από αυτό, Δεν μπορώ να τονίσω αρκετά την ανάγκη για χρήση φακέλων, ακόμα και σε μικρά projects. Στο σπίτι, δεν πετάς όλα χαρτιά στο ίδιο κουτί. Χρησιμοποιείς φακέλους, ενα για το σπίτι/διαμέρισμα, ένα για την τράπεζα, ένα για τους λογαριασμούς και τα λοιπά. Δεν υπάρχει λόγος να γίνει διαφορετικά και για την δόμηση του CSS πρότζεκτ σας. Διαχωρίστε τον κώδικα σε διαφορετικούς φακέλους, ονομασμένους λογικά, ετσι ώστε αργότερα να σας είναι εύκολο να βρίσκετε αυτό που ψάχνετε εύκολα και γρήγορα.
+Πέρα από αυτό, Δεν μπορώ να τονίσω αρκετά την ανάγκη για χρήση φακέλων, ακόμα και σε μικρά projects. Στο σπίτι, δεν πετάς όλα χαρτιά στο ίδιο κουτί. Χρησιμοποιείς φακέλους, ενα για το σπίτι/διαμέρισμα, ένα για την τράπεζα, ένα για τους λογαριασμούς και τα λοιπά. Δεν υπάρχει λόγος να γίνει διαφορετικά και για την δόμηση του CSS project σας. Διαχωρίστε τον κώδικα σε διαφορετικούς φακέλους, ονομασμένους λογικά, ετσι ώστε αργότερα να σας είναι εύκολο να βρίσκετε αυτό που ψάχνετε εύκολα και γρήγορα.
 
-Υπάρχουν πολλές αρχιτεκτονικές/τρόποι δόμησης CSS πρότζεκτ όπως: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), πρότζεκτς βασισμένα σε [Bootstrap](http://getbootstrap.com/) ή σε [Foundation](http://foundation.zurb.com/)... Τα οποία έχουν πλεονεκτήματα και μειωνεκτήματα.
+Υπάρχουν πολλές αρχιτεκτονικές/τρόποι δόμησης CSS project όπως: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](http://getbootstrap.com/) ή σε [Foundation](http://foundation.zurb.com/)... Τα οποία έχουν πλεονεκτήματα και μειωνεκτήματα.
 
 Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](https://smacss.com/) του [Jonathan Snook](http://snook.ca/),το οποίο επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
 
 <div class="note">
-  <p>Έχω μάθει πως η δόμηση του κώδικα τις περισσότερες φορές αλλάζει ανάλογα με το πρότζεκτ. Μη διστάσετε να απορρίψετε εντελώς ή να προσαρμόσετε την προτεινόμενη λύση έτσι ώστε να φτάσετε σε ένα αποτέλεσμα που θα ταιριάζει στις ανάγκες σας.</p>
+  <p>Έχω μάθει πως η δόμηση του κώδικα τις περισσότερες φορές αλλάζει ανάλογα με το project. Μη διστάσετε να απορρίψετε εντελώς ή να προσαρμόσετε την προτεινόμενη λύση έτσι ώστε να φτάσετε σε ένα αποτέλεσμα που θα ταιριάζει στις ανάγκες σας.</p>
 </div>
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -75,7 +75,7 @@
   <figcaption>Wallpaper by <a href="https://twitter.com/julien_he">Julien He</a></figcaption>
 </figure>
 
-Ideally, we can come up with something like this:
+Ιδανικά, μπορούμε να καταλήξουμε σε κάτι σαν αυτό:
 
 <div class="highlight"><pre><code>
 sass/
@@ -127,14 +127,14 @@ sass/
 </code></pre></div>
 
 <div class="note">
-  <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
+  <p>Τα αρχεία ακολουθούν την ίδια ονοματική σύμβαση που περιγράψαμε παραπάνω: είναι οριοθετημένα με κάτω παύλα.</p>
 </div>
 
 
 
-### Base folder
+### Φάκελος Base
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I'm used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.
+O φάκελος `base/` περιέχει αυτό που αποκαλούμε κώδικα boilerplate για το project. Εκεί μπορεί να βρεθεί το reset αρχείο, κάποια τυπογραφικά rules, και πιθανότητα ένα stylesheet (το οποίο συνηθίζω να αποκαλώ `_base.scss`), στο οποίο ορίζω διάφορα standard στύλ για HTML elements που χρησιμοποιούνται συνήθως.
 
 * `_base.scss`
 * `_reset.scss`
@@ -142,9 +142,9 @@ The `base/` folder holds what we might call the boilerplate code for the project
 
 
 
-### Layout folder
+### Φάκελος Layout
 
-The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar...), the grid system or even CSS styles for all the forms.
+Ο φάκελος `layout/` περιέχει όλα όσα έχουν να κάνουν με την δομή του site ή την εφαρμογής. Αυτός ο φάκελος μπορεί να περιέχει stylesheets για τα βασικά κομμάτια του site (header, footer, navigation, sidebar...), το grid system ή ακόμα και CSS styles για όλα τα forms.
 
 * `_grid.scss`
 * `_header.scss`
@@ -154,64 +154,64 @@ The `layout/` folder contains everything that takes part in laying out the site 
 * `_navigation.scss`
 
 <div class="note">
-  <p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p>
+  <p>Ο <code>layout/</code> φάκελος θα μπορούσε επίσης να ονομαστεί <code>partials/</code>, αναλόγος τι προτιμάται.</p>
 </div>
 
 
 
-### Components folder
+### Φάκελος Components
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+Για μικρότερα components, υπάρχει ο φάκελος `components/`. Ενώ ο φάκελος `layout/` είναι *macro* (καθορίζει το γενικό μοντέλο της σελίδας), ο φάκελος `components/` είναι επικεντρωμένος στα widgets. Περιέχει modules ολών των ειδών όπως slider, loader, widget, και οτιδήποτε άλλο προς αυτή την κατεύθυνση. Συνήθως υπάρχουν πολλά αρχεία μέσα στον φάκελο `components/` αφού όλο το site ή η εφαρμογή απαρτίζεται απο μικρά modules.
 
 * `_media.scss`
 * `_carousel.scss`
 * `_thumbnails.scss`
 
 <div class="note">
-  <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
+  <p>Ο φάκελος <code>components/</code> θα μπορούσε επίσης να ονομαστεί <code>modules/</code>, αναλόγος τι προτιμάται.</p>
 </div>
 
 
 
-### Pages folder
+### Φάκελος Pages
 
-If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
+Αν έχετε στυλιστικό κώδικα μονο συγκεκριμένα σελίδες, είναι προτιμότερο να μπούν στον φάκελο `pages/`, σε ένα αρχείο που παίρνει το ονομά του απο την σελίδα. Για παράδειγμα, δεν είναι ασυνήθιστο το να έχεις στυλιστικό κώδικα για την αρχική σελίδα εξου και η ανάγκη για ένα `_home.scss` αρχείο μέσα στον φάκελο `pages/`.
 
 * `_home.scss`
 * `_contact.scss`
 
 <div class="note">
-  <p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
+  <p>Ανάλογα με τη διαδικασία deployment σας, αυτά τα αρχεία θα μπορούσαν να χρησιμοποιηθούν απο μόνα τους για να να αποφευχθεί η συγχώνευσή τους στο τελικό stylesheet. Είναι πραγματικά στο χέρι σας.</p>
 </div>
 
 
 
-### Themes folder
+### Φάκελος Themes
 
-On large sites and applications, it is not unusual to have different themes. There are certainly different ways of dealing with themes but I personally like having them all in a `themes/` folder.
+Σε μεγάλα sites και εφαρμογές, δεν είναι ασυνήθιστο το να έχεις διαφορετικά θέματα. Υπάρχουν πάρα πολλοί τρόποι για να αντιμετώπισης το θεμα αυτό αλλά προσωπικά προτιμό να τα έχω όλα μέσα στον φάκελο `themes/`.
 
 * `_theme.scss`
 * `_admin.scss`
 
 <div class="note">
-  <p>This is very project-specific and is likely to be non-existent on many projects.</p>
+  <p>Αυτό είναι πολύ συγκεκριμένο στο project και είναι πολύ σπάνιο να υπάρχει σε άλλα projects αφού τα περισσότερα μεγάλα sites και εφαρμογές έχουν διαφορετικές απαιτήσεις και αρχιτεκτονική.</p>
 </div>
 
 
 
-### Utils folder
+### Φάκελος Utils
 
-The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+Ο Φάκελος `utils/` συγκεντρώνει όλα τα Sass tools και helpers που χρησιμοποιούνται σε όλο το project. Κάθε global μεταβλητή, συνάρτηση, mixin και placeholder πρέπει να μπούν εκεί.
 
-The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
+O γενικός κανόνας του φακέλου αυτού είναι να μην εξάγη ούυε μια γραμμή CSS όταν γίνει compile από μόνο του γιατί απλά είναι Sass helpers.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (frequently named `_helpers.scss`)
+* `_placeholders.scss` (συχνά ονομάζεται `_helpers.scss`)
 
 <div class="note">
-  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, depending on what you prefer.</p>
+  <p>Ο φάκελος <code>utils/</code> θα μπορούσε επίσης να ονομαστεί <code>helpers/</code>, <code>sass-helpers/</code> ή <code>sass-utils/</code>, αναλόγος τι προτιμάται.</p>
 </div>
 
 
@@ -455,7 +455,7 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
