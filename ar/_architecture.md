@@ -1,21 +1,36 @@
 
-# Architecture
+~~# Architecture~~
 
-Architecting a CSS project is probably one of the most difficult things you will have to do in a project’s life. Keeping the architecture consistent and meaningful is even harder.
+~~Architecting a CSS project is probably one of the most difficult things you will have to do in a project’s life. Keeping the architecture consistent and meaningful is even harder.~~
 
-Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass’s overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.
+~~Fortunately, one of the main benefits of using a CSS preprocessor is having the ability to split the codebase over several files without impacting performance (like the `@import` CSS directive would do). Thanks to Sass’s overload of the `@import` directive, it is perfectly safe (and actually recommended) to use as many files as necessary in development, all compiled into a single stylesheet when going to production.~~
 
-On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.
+~~On top of that, I cannot stress enough the need for folders, even on small scale projects. At home, you don’t drop every sheet of paper into the same box. You use folders; one for the house/flat, one for the bank, one for bills, and so on. There is no reason to do otherwise when structuring a CSS project. Split the codebase into meaningful separated folders so it is easy to find stuff later when you have to come back to the code.~~
 
-There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons.
+~~There are a lot of popular architectures for CSS projects: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... They all have their merits, pros and cons.~~
 
-I, myself, use an approach that happens to be quite similar to [SMACSS](https://smacss.com/) from [Jonathan Snook](http://snook.ca/), which focuses on keeping things simple and obvious.
+~~I, myself, use an approach that happens to be quite similar to [SMACSS](https://smacss.com/) from [Jonathan Snook](http://snook.ca/), which focuses on keeping things simple and obvious.~~
+
+# الهيكلة
+
+الهيكلة التي يقوم عليها مشروع CSS غالباً تكون من أصعب الأمور التي يواجهها المطور، والأصعب من ذلك أن الحفاظ على هيكلة ثابثة مهما توسع المشروع، بالإضافة إلى أن تكون هيكلة بسيطة وسهلة للفهم.
+
+لحسن الحظ، من أهم ميزات استخدام معاجلات CSS هي القدرة على فصل الشيفرة البرمجية لملف CSS إلى عدة ملفات بدون التأثير على أداء الموافع (كتأثير @import في CSS العادية مثلاً) 
+عندنا في Sass، لا مشكلة إطلاقاً من أن تستخدم @import لملفات Sass أخرى، بل على العكس، من الأفضل أن تفصل ملفات Sass وتقوم باستخدام Import في ملف واحد. حيث يقوم معالج Sass بمعالجة جميع ملفات Sass ويقوم بتحويلها إلى ملف CSS واحد فقط.
+
+بالإضافة إلى ذلك، لا مشكلة إطلاقاً من استخدام المجلدات Folders لتنظيم ملفات Sass، حيث تمنحك المجلدات قدرة أكبر على تنظيم المشروع ككل، مما يساعدك أنت، وغيرك من المطورين، على سهولة فهم المشروع وسهولة الوصول لملف معين لاحقاً.
+
+هناك العديد من الهياكل المتبعة في تنظيم مشروع CSS:  OOCSS, Atomic Design, Bootstrap-like, Foundation-like وغيرها .. ولكل واحدة منها سلبيات وإيجابيات
+
+أنا، شخصياً، أستخدام هيكلة شبيهة بهيكلة SMACSS التي قام بعملها Jonathan Snook، حيث تحافظ على بقاء المشروع بسيط وسهل.
+
+ستتعلم مع الخبرة اختيار الهيكلة المناسبة حسب المشروع الذي تعمل عليه، لا تقلق اذا انتقلت من هيكلة إلى أخرى بين الحين والآخر، فالمسألة هي مجرد خيار لا أكثر.
 
 <div class="note">
   <p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p>
 </div>
 
-###### Further reading
+###### للمزيد
 
 * [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
@@ -26,21 +41,41 @@ I, myself, use an approach that happens to be quite similar to [SMACSS](https://
 
 ## Components
 
-There is a major difference between making it *work*, and making it *good*. Again, CSS is quite a messy language <sup>[citation needed]</sup>. The less CSS we have, the merrier. We don’t want to deal with megabytes of CSS code. To keep stylesheets short and efficient&mdash;and this will not be any surprise to you&mdash;it is usually a good idea to think of an interface as a collection of components.
+~~There is a major difference between making it *work*, and making it *good*. Again, CSS is quite a messy language <sup>[citation needed]</sup>. The less CSS we have, the merrier. We don’t want to deal with megabytes of CSS code. To keep stylesheets short and efficient&mdash;and this will not be any surprise to you&mdash;it is usually a good idea to think of an interface as a collection of components.~~
 
-Components can be anything, as long as they:
+~~Components can be anything, as long as they:~~
 
-* do one thing and one thing only;
-* are re-usable and re-used across the project;
-* are independent.
+~~* do one thing and one thing only;~~
+~~* are re-usable and re-used across the project;~~
+~~* are independent.~~
 
-For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).
+~~For instance, a search form should be treated as a component. It should be reusable, at different positions, on different pages, in various situations. It should not depend on its position in the DOM (footer, sidebar, main content...).~~
 
-Most of any interface can be thought of as little components and I highly recommend you stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.
+~~Most of any interface can be thought of as little components and I highly recommend you stick to this paradigm. This will not only shorten the amount of CSS needed for the whole project, but also happens to be much easier to maintain than a chaotic mess where everything is flustered.~~
+
+## Components - المكونات
+
+هناك فرق شاسع بين أن تعمل على مشروع CSS فقط لتراه يعمل، وأن تعمل على مشروع ليكون فعلياً مشروعاً جيّداً.
+
+مرة أخرى، لغة CSS لغة فوضوية بطبيعتها، وليس لها قوانين محددة أو طريقة واحدة لأداء مهمة واحدة، لذلك يسهل جداً أن تتوسع بسرعة ليصعب التحكم بها.
+
+لذلك، كان من الأفضل أن نعيد التفكير بكيفية هيكلة ملفات الـ Sass، بحيث تكون عبارة عن مجموعة من المكونات - Components .. 
+المكون الواحد يجب أن يكون: 
+*٠ له وظيفة واحدة، وفقط واحدة
+*٠ يمكن إعادة استخدامة في مختلف أنحاء المشروع
+*٠ مستقل بذاته، ولا يعتمد على مكونات أخرى
+
+مثلاً، عند عمل نموذج بحث Search Form يجب أن يعامل كـ مكون واحد.
+يمكن استعماله في أكثر من مكان، بصفحات مختلفة، بمواضع مختلفة، وبأحجام مختلفة.
+
+أغلب عناصر وجاهة الإستخدام يمكن معاملتها كمكون واحد. بهذه الطريقة يمكن بكل سهولة الرجوع إلى مكون معين لتعديله أو تحسينه، لؤثر ذلك على جميع أنحاء المشروع أينما وجد
+
+
+
 
 ## The 7-1 pattern
 
-Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into 7 different folders, and a single file at the root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.
+~~Back to architecture, shall we? I usually go with what I call the *7-1 pattern*: 7 folders, 1 file. Basically, you have all your partials stuffed into 7 different folders, and a single file at the root level (usually named `main.scss`) which imports them all to be compiled into a CSS stylesheet.~~
 
 * `base/`
 * `components/`
@@ -50,13 +85,13 @@ Back to architecture, shall we? I usually go with what I call the *7-1 pattern*:
 * `utils/`
 * `vendors/`
 
-And of course:
+~~And of course:~~
 
 * `main.scss`
 
 {% include images/wallpaper.html %}
 
-Ideally, we can come up with something like this:
+~~Ideally, we can come up with something like this:~~
 
 {% include snippets/architecture/01/index.html %}
 
@@ -64,13 +99,39 @@ Ideally, we can come up with something like this:
   <p>Files follow the same naming conventions described above: they are hyphen-delimited.</p>
 </div>
 
+
+### طريقة سبعة إلى واحد
+
+سبعة مجلدات، وملف واحد!
+بشكل أساسي، قم بوضع جميع أجزاء المشروع في ٧ مجلدات مختلفة، وقم بعمل ملف واحد أساسي يقوم باستيراد أجزاء المشروع في داخله، وهذا الملف هو الذي يتم معاجلته من قبل معالج Sass
+المجلدات السبعة
+* base/
+* components/
+* layout/
+* pages/
+* themes/
+* utils/
+* vendors/
+والملف الرئيسي
+* main.scss
+{% include images/wallpaper.html %}
+
+
 ### Base folder
 
-The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I’m used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.
+~~The `base/` folder holds what we might call the boilerplate code for the project. In there, you might find the reset file, some typographic rules, and probably a stylesheet (that I’m used to calling `_base.scss`), defining some standard styles for commonly used HTML elements.~~
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+
+###المجلد الأساسي Base folder
+المجلد base يحوي الكود الأساسي للمشروع، مثل الخطوط، وملف الـ Reset أو الـ Style المشترك بين عناصر HTML الرئيسية
+* `_base.scss`
+* `_reset.scss`
+* `_typography.scss`
+* 
 
 ### Layout folder
 
@@ -87,9 +148,21 @@ The `layout/` folder contains everything that takes part in laying out the site 
   <p>The <code>layout/</code> folder might also be called <code>partials/</code>, depending on what you prefer.</p>
 </div>
 
-### Components folder
+###Layout folder مجلد التنسيق
 
-For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.
+مجلد التنسيق يحتوي أي عناصر لها علاقة بتوزيع العناصر الأساسية بالموقع، مثل الـ Header أو الـ Footer، أو حتى نظام الـ Grid الخاص بالموقع
+
+* `_grid.scss`
+* `_header.scss`
+* `_footer.scss`
+* `_sidebar.scss`
+* `_forms.scss`
+* `_navigation.scss`
+
+
+~~### Components folder~~
+
+~~For smaller components, there is the `components/` folder. While `layout/` is *macro* (defining the global wireframe), `components/` is more focused on widgets. It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines. There are usually a lot of files in `components/` since the whole site/application should be mostly composed of tiny modules.~~
 
 * `_media.scss`
 * `_carousel.scss`
@@ -99,9 +172,24 @@ For smaller components, there is the `components/` folder. While `layout/` is *m
   <p>The <code>components/</code> folder might also be called <code>modules/</code>, depending on what you prefer.</p>
 </div>
 
+
+###Components folder مجلد المكونات
+بينما مجلد التنسيق يحوي العناصر الرئيسية في المواقع وكيفية توزيها، يأتي مجلد المكونات ليتحكم بالعناصر الأصغر حجماً من التنسيق. مثل الكبسة Button 
+مجلد المكونات بالعادة يحتوي الكثير من الملفات لأن الموقع هو عبارة عن مكونات صغيرة وكثيرة 
+
+* `_media.scss`
+* `_carousel.scss`
+* `_thumbnails.scss`
+
+<div class="note">
+  <p>يمكن تسمية مجلد المكونات بدل Components بـ Modules</p>
+</div>
+
+
+
 ### Pages folder
 
-If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.
+~~If you have page-specific styles, it is better to put them in a `pages/` folder, in a file named after the page. For instance, it’s not uncommon to have very specific styles for the home page hence the need for a `_home.scss` file in `pages/`.~~
 
 * `_home.scss`
 * `_contact.scss`
@@ -109,6 +197,15 @@ If you have page-specific styles, it is better to put them in a `pages/` folder,
 <div class="note">
   <p>Depending on your deployment process, these files could be called on their own to avoid merging them with the others in the resulting stylesheet. It is really up to you.</p>
 </div>
+
+###Pages folder مجلد الصفحات
+اذا كنت تستهدف صفحة معينة بـ Style معين من الأفضل أن تضعهم في مجلد الصفحات، 
+
+* _home.scss
+* _contact.scss
+
+
+
 
 ### Themes folder
 
@@ -187,6 +284,18 @@ There is another way of importing partials that I deem valid as well. On the bri
   <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
   <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
 </div>
+
+
+
+### Main file الملف الرئيسي
+الملف الرئيسي يقوم باستيراد جميع الملفات -باستخدام @import الخاصة بـ Sass الأخرى في المجلدات السبعة التي أنشأناها.
+
+ترتيب الملفات عند الاستيراد سيكون حسب 
+
+حتى تتمكن من استيراد جميع الملفات بشكل تلقائي، هناك اضافة لـ Sass تقوم باستيراد جميع الملفات كما تريد تدعى  sass-globbing
+
+لكن لا ينصح بها لأنها تقوم باستيراد الملفات حسب الأبجدية وليس كما تريدها أنت
+
 
 ## Shame file
 
