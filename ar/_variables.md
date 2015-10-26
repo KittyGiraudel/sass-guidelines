@@ -47,9 +47,15 @@
 حسب وثائق Sass، ذكر مصطلح يسمى Global variable shadowing، ويعني أنه عند انشاء متغير عالمي باسم معين، وعند انشاء متغيير آخر محلي بنفس الإسم، سوف يقوم المتغير المحلي بعمل shadowing للمتغير العالمي، أي بعبارة أخرى يقوم تتغير قيمة المتغير العالمي لتأخذ قيمة المتغير المحلي، وذلك فقط في حدود المتغير المحلي.
 
 
-## `!default` flag
+~~  ## `!default` flag~~
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+~~When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.~~
+
+
+##ترميز !default
+عند انشاء مكتبة او اطار عمل أو نظام Grid .. أو اي نظام مبني على Sass يمكن ان يُستخدم من قبل مطورين آخرين، يمكنك استخدام ترميز !default لوضع قيم افتراضة لمتغيرات رئيسية في النظام، بحيث يمكن لغيرك أن يستبدلها بقيم أخرى؟
+
+هنا مثلا، يمكن للمطور أن يعرّف متغير باسم baseline$ قبل أن يقوم باستيراد المكتبة التي قمت بصنعها بدون مشاهدة قيمة المتغير تم اعادة تعريفها
 
 {% include snippets/variables/02/index.html %}
 
@@ -57,16 +63,25 @@ Thanks to this, a developer can define his own `$baseline` variable *before* imp
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+~~## `!global` flag~~
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+~~The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.~~
+
+##ترميز !global
+ترميز !global يستدخم فقط عندما نضع	 قيمة جديدة لمتغير موجود في النطاق العالمي ( Global ( من خلال متغير موجود في نطاق داخلي Local 
 
 {% include snippets/variables/04/index.html %}
 
-## Multiple variables or maps
+~~## Multiple variables or maps~~
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+~~There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.~~
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+~~Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:~~
+
+##استخدام عدة متغيرات أو استخدام الخرائط ( Maps (
+ملاحظة: مصطلح خريطة ترجمة حرفية، وما يقصد بها هو استخدام عدة متغيرات داخل مكوّن واحد يسمى خريطة، 
+
+استخدام الخرائط افضل من استخدام متغيرات متعددة لأن الخرائط تمنحك القدرة على عمل Loop على عناصر الخريطة ..
+
 
 {% include snippets/variables/05/index.html %}
