@@ -231,11 +231,11 @@ O γενικός κανόνας του φακέλου αυτού είναι να
 
 
 
-### Main file
+### Το αρχείο Main
 
-The main file (usually labelled `main.scss`) should be the only Sass file from the whole code base not to begin with an underscore. This file should not contain anything but `@import` and comments.
+Το αρχείο main (το οποίο συνήθως ονομάζεται `main.scss`) πρέπει να είναι το μόνο Sass αρχείο απο το ολόκληρο το code base του οποίου το όνομα δεν ξεκινάει απο τον χαρακτήρα της κάτω παύλας. Το αρχείο αυτό δεν πρέπει να περιέχει τίποτα εκτός απο γραμμές `@import` και σχολίων.
 
-Files should be imported according to the folder they live in, one after the other in the following order:
+Τα αρχεία πρέπει να γίνονται import με βάση τον φάκελο στον οποίο βρίσκονται, το ένα μετά το άλλο με την ακόλουθη σειρά:
 
 1. `vendors/`
 1. `utils/`
@@ -245,13 +245,13 @@ Files should be imported according to the folder they live in, one after the oth
 1. `pages/`
 1. `themes/`
 
-In order to preserve readability, the main file should respect these guidelines:
+Προκειμένου να διατηρηθεί η αναγνωσιμότητα, το αρχείο main θα πρέπει να ακολουθεί τις παρακάτω κατευθυντήριες γραμμές:
 
-* one file per `@import`;
-* one `@import` per line;
-* no new line between two imports from the same folder;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* ένα αρχείο ανα `@import`;
+* ενα `@import` ανα γραμμή;
+* καμία κενή γραμμή μεταξύ δύο import απο τον ίδιο φάκελο;
+* μια κενή γραμμή μετά απο το τελευταίο import ενός φακέλου;
+* οι επεκτάσεις των αρχείων και οι χαρακτήρες κάτω παύλας που προηγούνται πρέπει να παραλειφθούν.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -320,13 +320,13 @@ In order to preserve readability, the main file should respect these guidelines:
   </div>
 </div>
 
-There is another way of importing partials that I deem valid as well. On the bright side, it makes the file more readable. On the other hand, it makes updating it slightly more painful. Anyway, I'll let you decide which is best, it does not matter much. For this way of doing, the main file should respect these guidelines:
+Υπάρχει ακόμα ένας τρόπος για να κάνεις import partial αρχεία τον οποίο θεωρώ έγκυρο. Στη θετική πλευρά, κάνει τα αρχεία ευανάγνωστα. Απο την άλλη, τα κάνει δυσκολότερα στην ενημέρωση. Εν πάση περιπτώσει, θα αφήσω εσάς να αποφασίσετε ποια είναι η καλύτερη, δεν έχει πολύ σημασία. Για αυτό το τρόπος, το αρχείο main θα πρέπει να τηρεί τις ακόλουθες κατευθυντήριες γραμμές:
 
-* one `@import` per folder;
-* a linebreak after `@import`;
-* each file on its own line;
-* a new line after the last import from a folder;
-* file extensions and leading underscores omitted.
+* ένα `@import` ανά φάκελο;
+* ένα linebreak ανά `@import`;
+* κάθε αρχεία σε δικιά του γραμμή;
+* μια κενή γραμμή μετά το τελευταίο import ενός φακέλου;
+* οι επεκτάσεις των αρχείων και οι χαρακτήρες κάτω παύλας που προηγούνται πρέπει να παραλειφθούν.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -410,8 +410,8 @@ There is another way of importing partials that I deem valid as well. On the bri
 </div>
 
 <div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
+  <p>Προκειμένου να μην χρειάζεται να κάνεις import κάθε αρχείο χειροκίνητα, υπάρχει ένα extension για την Ruby Sass το οποίο ονομάζεται <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, καθιστώντας δυνατή την χρήση glob patterns στην Sass <code>@import</code> όπως <code>@import "components/*"</code>.</p>
+  <p>Κατόπιν αυτού, δεν θα το συνιστούσα επειδή κάνει imports αρχεία ακολουθώντας αλφαβητική σειρά το οποίο συνήθως δεν είναι αυτό που θέλετε, ειδικά όταν έχεις να κάνεις με γλώσσες που βασίζονται στην σειρά του κώδικα.</p>
 </div>
 
 
@@ -419,9 +419,9 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 
 
-## Shame file
+## Το αρχείο Shame
 
-There is an interesting concept that has been made popular by [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) and [Chris Coyier](http://css-tricks.com) that consists of putting all the CSS declarations, hacks and things we are not proud of in a *shame file*. This file, dramatically titled `_shame.scss`, would be imported after any other file, at the very end of the stylesheet.
+Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλή απο τους [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) και [Chris Coyier](http://css-tricks.com) that το οποίο συνηστά να βάζεις όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο αρχείο *shame*. Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -429,9 +429,9 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 /**
  * Nav specificity fix.
  *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
+ * Κάποιος χρησιμοποίησε ID στον κώδικα του header (`#header a {}`) το οποίο υπερέχει τα
+ * nav selectors (`.site-nav a {}`). Χρησιμοποιήστε !important για να το παρακάμψετε μέχρι να βρώ
+ * χρόνο να το διορθώσω.
  */
 .site-nav a {
     color: #BADA55 !important;
@@ -443,9 +443,9 @@ There is an interesting concept that has been made popular by [Harry Roberts](ht
 /**
  * Nav specificity fix.
  *
- * Someone used an ID in the header code (`#header a {}`) which trumps the
- * nav selectors (`.site-nav a {}`). Use !important to override it until I
- * have time to refactor the header stuff.
+ * Κάποιος χρησιμοποίησε ID στον κώδικα του header (`#header a {}`) το οποίο υπερέχει τα
+ * nav selectors (`.site-nav a {}`). Χρησιμοποιήστε !important για να το παρακάμψετε μέχρι να βρώ
+ * χρόνο να το διορθώσω.
  */
 .site-nav a
     color: #BADA55 !important
