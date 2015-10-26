@@ -50,7 +50,7 @@
   </div>
 </div>
 
-Πρακτικά οτιδήποτε δεν είναι προφανές με την πρώτη ματιά πρέπει να έχει σχόλια. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
+Πρακτικά οτιδήποτε δεν είναι προφανές με την πρώτη ματιά πρέπει να έχει σχόλια. Υπάρχει πάντα χώρος για παραπάνω documentation. Να θυμάστε πως ποτέ δεν θα έχετε *σχολιάσει αρκετά*, γι αυτό γράψτε όσα περισσότερα σχόλια μπορείτε για οτιδήποτε θεωρείται σημαντικό.
 
 Όταν σχολιάζετε ένα τμήμα σχετικό με την Sass, χρησιμοποιείστε inline Sass σχόλια αντί για σχόλια C-style block ετσι ώστε αυτά να μην εμφανιστούν στο τελικό αποτέλεσμα, ακόμα και σε λειτουργία expanded κατα την διάρκεια ανάπτυξης του κώδικα.
 
@@ -73,9 +73,9 @@ $imported-modules: append($imported-modules, $module) !global
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
-* [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
+* [Τμήμα σχολίων του CSS Guidelines](http://cssguidelin.es/#commenting)
 
 
 
@@ -84,7 +84,7 @@ $imported-modules: append($imported-modules, $module) !global
 
 ## Documentation
 
-Every variable, function, mixin and placeholder that is intended to be reused all over the codebase should be documented as part of the global API using [SassDoc](http://sassdoc.com).
+Κάθε μεταβλητή, συνάρτηση, mixin και placeholder τα οποία έχουν ως σκοπό να ξαναχρησιμοποιηθούν παντού στο code base σας πρέπει να έχουν documention στο πλαίσιο του global API χρησιμοποιώντας το [SassDoc](http://sassdoc.com).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -104,10 +104,10 @@ $vertical-rhythm-baseline: 1.5rem
 </div>
 
 <div class="note">
-  <p>Three slashes (<code>/</code>) required.</p>
+  <p>Απαιτούνται τρία slashes (<code>/</code>).</p>
 </div>
 
-SassDoc has two major roles:
+Το SassDoc έχει δύο σημαντικούς ρόλους:
 
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
 * being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
@@ -198,7 +198,7 @@ Here is an example of a mixin extensively documented with SassDoc:
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [SassDoc](http://sassdoc.com)
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [SassDoc: ένα Documentation Tool για την Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
