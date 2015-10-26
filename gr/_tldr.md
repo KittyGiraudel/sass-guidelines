@@ -16,7 +16,7 @@
 * Δεν χρειάζεται να τελειώνει η λίστα με κόμμα (αφού γράφεται σε μια γραμμή),
 * Trailing comma in maps, #TODO:
 * Καμία εμφώλευση των selectors εκτός απο pseudo-classes και pseudo-elements,
-* Hyphen-delimited naming,
+* Hyphen-delimited ονομασίες,
 * Εκτενή σχόλια,
 * Σχόλια βασισμένα στο SassDoc API,
 * Περιορισμένη χρήση του `@extend`,

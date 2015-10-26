@@ -52,7 +52,7 @@
 
 Πρακτικά οτιδήποτε δεν είναι προφανές με την πρώτη ματιά πρέπει να έχει σχόλια. There is no such thing as too much documentation. Remember that you cannot *comment too much*, so get on fire and write comments for everything that is worth it.
 
-When commenting a Sass-specific section, use Sass inline comments instead of a C-style block. This makes the comment invisible in the output, even in expanded mode during development.
+Όταν σχολιάζετε ένα τμήμα σχετικό με την Sass, χρησιμοποιείστε inline Sass σχόλια αντί για σχόλια C-style block ετσι ώστε αυτά να μην εμφανιστούν στο τελικό αποτέλεσμα, ακόμα και σε λειτουργία expanded κατα την διάρκεια ανάπτυξης του κώδικα.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
