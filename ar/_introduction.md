@@ -1,11 +1,11 @@
 
 # Introduction
 
-## Why a styleguide
+~~## Why a styleguide~~
 
-A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+~~A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.~~
 
-Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+~~Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.~~
 
 [Harry Roberts](http://csswizardry.com) states it very well in [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
@@ -20,13 +20,37 @@ Needless to say, the more developers involved on a project, the more code guidel
   </ul>
 </blockquote>
 
+#مقدمة
+
+###وما هو، ولماذا نستعمل Styleguide؟ 
+الـ Styleguide هو مجموعة من المعايير المتفق عليها بين مجتمع المطورين لتساعدهم في تنسيق وترتيب أجزاء المشروع. بالإضافة إلى سهولة العمل على المشروع ضمن معايير محددة ونظام واحد.
+
+معايير الـ Styleguide ربما يكون من الترف أن تُطبقها على مشروع صغير جداً، ولكن في حالة المشاريع الحقيقية ستلاحظ الفرق الكبير في أهميتها. حيث تساعدك على بناء مشروع كبير، ومتين، وقابل للتوسع بكل سهولة.
+
+طبعاً، كلما زاد عدد فريق العمل الذي يعمل على المشروع كلما كانت الحاجة ملحة لاستخدام الـ Styleguide، وكلما كان حجم المشروع أكبر، أيضاً، ستحتاج إلى Styleguide
+
+
 ## Disclaimer
 
-First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
+~~First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.~~
 
-Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
+~~Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.~~
 
-Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
+~~Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.~~
+
+
+## Disclaimer - للتوضيح
+
+هذا الـ Styleguide ليس له علاقة مباشرة بلغة CSS، وكيفية كتابة الـ Class والـ ID .. وإنما هو Styleguide لكتابة Sass تحديداً
+
+وأيضاً، هذا الـ Styleguide كتب بناءاً على رأيي الشخصي وتجربتي وارتأيت أن اكتبها حتى يستفيد منها الآخرون
+
+بكل صراحة نقول: ليس هناك طريقة واحدة لأداء مهمة معينة، هناك العديد، وأنت تختار المناسب الذي يتناسب مع مشروعك.
+
+Key principles المبادئ الرئيسية
+
+في النهاية ما أسعى إليه من كتابة Styleguide هو كتابة Sass بأبسط طريقة ممكنة
+
 
 ## Key principles
 
