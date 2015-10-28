@@ -26,7 +26,7 @@
 
 {% include snippets/comments/02/index.html %}
 
-### Περαιτέρω ανάγνωση
+###### Περαιτέρω ανάγνωση
 
 * [Τμήμα σχολίων του CSS Guidelines](http://cssguidelin.es/#commenting)
 
@@ -51,6 +51,6 @@
 
 {% include snippets/comments/04/index.html %}
 
-### Περαιτέρω ανάγνωση
+###### Περαιτέρω ανάγνωση
 
 * [SassDoc: ένα Documentation Tool για την Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
