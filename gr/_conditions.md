@@ -1,15 +1,15 @@
 
 # Conditional statements
 
-You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. Actually, they mainly exist for libraries and frameworks.
+Πιθανώς ήδη γνωρίζετε ότι η Sass παρέχει conditional statements μέσω των `@if` και `@else` directives. Εκτός αν έχετε κάποια περίπλωκη λογική στον κώδικα σας, δεν συντρέχει λόγος χρήσης των conditional statements στα stylesheets σας. Στην πραγματικότητα, υπάρχουν κυρίως για την χρήση τους σε libraries και frameworks.
 
-Anyway, if you ever find yourself in need of them, please respect the following guidelines:
+Εν πάση περιπτώσει, αν ποτέ βρεθείτε στην ανάγκη τους, παρακαλώ να σεβαστείτε τα ακόλουθα guidelines:
 
-* No parentheses unless they are necessary;
-* Always an empty new line before `@if`;
-* Always a line break after the opening brace (`{`);
-* `@else` statements on the same line as previous closing brace (`}`).
-* Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
+* αποφεύγεται τις παρενθέσεις εκτός και αν είναι αναγκαίο;
+* Πάντα αφήνετε καινούργια γραμμή πριν απο ένα `@if`;
+* Πάντα αφήνετε καινούργια γραμμή μετά το χαρακτήρα (`{`);
+* `@else` πρέπει να είναι στην ίδια γραμμή με τον χαρακτήρα (`}`) του προηγούμενου `@if`.
+* Πάντα αφήνετε καινούργια γραμμή μετά το τελευταίο χαρακτήρα (`}`).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -47,7 +47,7 @@ Anyway, if you ever find yourself in need of them, please respect the following 
   </div>
 </div>
 
-When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
+Όταν ελεγχεται για κάποια μη-αληθή τιμή, να χρησιμοποιείται πάντα την λέξη κλειδή `not` αντί να ελεγχεται για `false` ή `null`.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -76,7 +76,7 @@ When testing for a falsy value, always use the `not` keyword rather than testing
   </div>
 </div>
 
-When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
+Όταν χρησημοποιείται conditional statements μέσα σε κάποιο function το οποίο θα επιστρέφει διαφορετική τιμή ανάλογα με τις προυποθέσεις του conditional statement, βεβαιωθείτε πάντα ότι το function εξακολουθεί να έχει `@return` έξω απο το μπλοκ του conditional statement.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
