@@ -1,27 +1,27 @@
 
 # Conditional statements
 
-Πιθανώς ήδη γνωρίζετε ότι η Sass παρέχει conditional statements μέσω των `@if` και `@else` directives. Εκτός αν έχετε κάποια περίπλωκη λογική στον κώδικα σας, δεν συντρέχει λόγος χρήσης των conditional statements στα stylesheets σας. Στην πραγματικότητα, υπάρχουν κυρίως για την χρήση τους σε libraries και frameworks.
+Πιθανώς ήδη γνωρίζετε ότι η Sass παρέχει conditional statements μέσω των `@if` και `@else` directives. Εκτός αν έχετε κάποια περίπλoκη λογική στον κώδικα σας, δεν συντρέχει λόγος χρήσης των conditional statements στα stylesheets σας. Στην πραγματικότητα, υπάρχουν κυρίως για την χρήση τους σε libraries και frameworks.
 
 Εν πάση περιπτώσει, αν ποτέ βρεθείτε στην ανάγκη τους, παρακαλώ να σεβαστείτε τα ακόλουθα guidelines:
 
-* αποφεύγεται τις παρενθέσεις εκτός και αν είναι αναγκαίο;
-* Πάντα αφήνετε καινούργια γραμμή πριν απο ένα `@if`;
-* Πάντα αφήνετε καινούργια γραμμή μετά το χαρακτήρα (`{`);
-* `@else` πρέπει να είναι στην ίδια γραμμή με τον χαρακτήρα (`}`) του προηγούμενου `@if`.
+* αποφεύγετε τις παρενθέσεις εκτός και αν είναι αναγκαίο·
+* Πάντα αφήνετε καινούργια γραμμή πριν απο ένα `@if`·
+* Πάντα αφήνετε καινούργια γραμμή μετά το χαρακτήρα (`{`)·
+* `@else` πρέπει να είναι στην ίδια γραμμή με τον χαρακτήρα (`}`) του προηγούμενου `@if`·
 * Πάντα αφήνετε καινούργια γραμμή μετά το τελευταίο χαρακτήρα (`}`).
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 @if $support-legacy {
   // ...
 } @else {
   // ...
 }
 
-// Nope
+// Όχι
 @if ($support-legacy == true) {
   // ...
 }
@@ -32,13 +32,13 @@
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 @if $support-legacy
   // ...
 @else
   // ...
 
-// Nope
+// Όχι
 @if ($support-legacy == true)
   // ...
 @else
@@ -47,17 +47,17 @@
   </div>
 </div>
 
-Όταν ελεγχεται για κάποια μη-αληθή τιμή, να χρησιμοποιείται πάντα την λέξη κλειδή `not` αντί να ελεγχεται για `false` ή `null`.
+Όταν ελέγχετε για κάποια μη-αληθή τιμή, να χρησιμοποιείτε πάντα την λέξη κλειδή `not` αντί να ελέγχετε για `false` ή `null`.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 @if not index($list, $item) {
   // ...
 }
 
-// Nope
+// Όχι
 @if index($list, $item) == null {
   // ...
 }
@@ -65,23 +65,23 @@
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 @if not index($list, $item)
   // ...
 
-// Nope
+// Όχι
 @if index($list, $item) == null
   // ...
 {% endhighlight %}
   </div>
 </div>
 
-Όταν χρησημοποιείται conditional statements μέσα σε κάποιο function το οποίο θα επιστρέφει διαφορετική τιμή ανάλογα με τις προυποθέσεις του conditional statement, βεβαιωθείτε πάντα ότι το function εξακολουθεί να έχει `@return` έξω απο το μπλοκ του conditional statement.
+Όταν χρησημοποιείτε conditional statements μέσα σε κάποιο function το οποίο θα επιστρέφει διαφορετική τιμή ανάλογα με τις προϋποθέσεις του conditional statement, βεβαιωθείτε πάντα ότι το function εξακολουθεί να έχει `@return` έξω από το πλαίσιο του conditional statement.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 @function dummy($condition) {
   @if $condition {
     @return true;
@@ -90,7 +90,7 @@
   @return false;
 }
 
-// Nope
+// Όχι
 @function dummy($condition) {
   @if $condition {
     @return true;
@@ -102,14 +102,14 @@
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 @function dummy($condition)
   @if $condition
     @return true
 
   @return false;
 
-// Nope
+// Όχι
 @function dummy($condition)
   @if $condition
     @return true
