@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Βοηθητική κλάση για να περικόψει και να προσθέσει αποσιωπητικά σε ένα string το οποίο είναι πάρα πολύ μακρύ για να χωρέσει
+ * σε μία μόνο γραμμή.
+ * 1. Αποτρέπει το περιεχόμενο απο το να αναδίπλωνει, αναγκάζοντας την να εμφανιστεί σε μία μόνο γραμμή.
+ * 2. Προσθέτει αποσιωπητικά στο τέλος της γραμμής.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+* Βοηθητική κλάση για να περικόψει και να προσθέσει αποσιωπητικά σε ένα string το οποίο είναι πάρα πολύ μακρύ για να χωρέσει
+* σε μία μόνο γραμμή.
+* 1. Αποτρέπει το περιεχόμενο απο το να αναδίπλωνει, αναγκάζοντας την να εμφανιστεί σε μία μόνο γραμμή.
+* 2. Προσθέτει αποσιωπητικά στο τέλος της γραμμής.
+ */
+.ellipsis
+  white-space: nowrap /* 1 */
+  text-overflow: ellipsis /* 2 */
+  overflow: hidden
+{% endhighlight %}
+  </div>
+</div>
