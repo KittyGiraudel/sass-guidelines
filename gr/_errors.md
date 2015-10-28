@@ -1,19 +1,19 @@
 
-# Warnings and Errors
+# Προειδοποιήσεις και Σφάλματα
 
-If there is a feature that is often overlooked by Sass developers, it is the ability to dynamically output warnings and errors. Indeed, Sass comes with three custom directives to print content in the standard output system (CLI, compiling app...):
+Αν υπάρχει μια λειτουργία που παραβλέπεται συχνά από αυτούς που γράφουν Sass, αυτή είναι η δυνατότητα να εμφανίζονται δυναμικά προειδοποιήσεις και σφάλματα. Πράγματι, η Sass διαθέτει τρία ειδικά directives για να εμφανίζει περιεχόμενο στο standard output system (CLI, compiling app...):
 
-* `@debug`;
-* `@warn`;
+* `@debug`·
+* `@warn`·
 * `@error`.
 
-Let's put `@debug` aside since it is clearly intended to debug SassScript, which is not our point here. We are then left with `@warn` and `@error` which are noticeably identical except that one stops the compiler while the other does not. I'll let you guess which does what.
+Ας βγάλουμε στην άκρη το `@debug` μιας και προφανώς προορίζεται για το debugging της SassScript, πράγμα που δε μας αφορά εδώ. Οπότε μένουμε με το `@warn` και το `@error` τα οποία είναι εμφανώς ίδια, εκτός του ότι το ένα διακόπτει τον compiler ενώ το άλλο όχι. Σας αφήνω να μαντέψετε ποιο κάνει τί.
 
-Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong, or display a warning when doing an assumption.
+Τώρα, υπάρχουν πολλά περιθώρια σε ένα Sass project για προειδοποιήσεις και σφάλματα. Βασικά οποιοδήποτε mixin ή function προσδοκεί ένα συγκεκριμένο τύπο ή argument θα μπορούσε να πετάξει ένα σφάλμα αν κάτι πάει στραβά, ή να εμφανίσει μία προειδοποίηση όταν υποθέτει κάτι.
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
@@ -24,9 +24,9 @@ Now, there is a lot of room in a Sass project for warnings and errors. Basically
 
 
 
-## Warnings
+## Προειδοποιήσεις
 
-Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting to convert a `px` value to `em`, for instance:
+Δείτε αυτό το function του [Sass-MQ](https://github.com/sass-mq/sass-mq) που επιδιώκει να μετατρέψει μια αξία από `px` σε `em`, για παράδειγμα:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -57,18 +57,18 @@ Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting
   </div>
 </div>
 
-If the value happens to be unitless, the function assumes the value is meant to be expressed in pixels. At this point, an assumption may be risky so the user should be warned that the software did something that could be considered unexpected.
+Εάν η αξία δεν έχει μονάδα μέτρησης, το function θεωρεί πως η αξία εκφράζεται σε pixels. Σ' αυτό το σημείο, μια υπόθεση ίσως είναι ριψοκίνδυνη, οπότε ο χρήστης θα έπρεπε να προειδοποιηθεί ότι το πρόγραμμα έκανε κάτι που θα μπορούσε να θεωρηθεί απροσδόκητο.
 
 
 
 
 
 
-## Errors
+## Σφάλματα
 
-Errors, unlike warnings, prevent the compiler from going any further. Basically, they stop the compilation and display a message in the output stream as well as the stack trace, which is handy for debugging. Because of this, errors should be thrown when there is no way for the program to keep running. When possible, try to work around the issue and display a warning instead.
+Τα σφάλματα, σε αντίθεση με τις προειδοποιήσεις, αποτρέπουν τον compiler να συνεχίσει παρακάτω. Βασικά διακόπτουν το compilation και εμφανίζουν ένα μήνυμα στο output stream όπως και στο stack trace, πράγμα που βοηθάει στο debugging. Εξαιτίας όλων αυτών, τα σφάλματα πρέπει να πετιούνται όταν δεν υπάρχει τρόπος να συνεχιστεί η εκτέλεση του προγράμματος. Όπου είναι εφικτό, δοκίμασε να διορθώσεις το πρόβλημα και προτίμησε να εμφανίσεις μία προειδοποίηση.
 
-As an example, let's say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
+Για παράδειγμα, ας πούμε ότι φτιάχνεις μία βελτιωμένη συνάρτηση για να έχεις πρόσβαση αξίες από ένα συγκεκριμένο map. Θα μπορούσε να πετάξεις ένα σφάλμα αν το ζητούμενο key δεν υπάρχει στο map.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
