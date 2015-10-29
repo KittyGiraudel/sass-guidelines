@@ -11,110 +11,16 @@
 * `@else` πρέπει να είναι στην ίδια γραμμή με τον χαρακτήρα (`}`) του προηγούμενου `@if`·
 * Πάντα αφήνετε καινούργια γραμμή μετά το τελευταίο χαρακτήρα (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Ναι
-@if $support-legacy {
-  // ...
-} @else {
-  // ...
-}
-
-// Όχι
-@if ($support-legacy == true) {
-  // ...
-}
-@else {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Ναι
-@if $support-legacy
-  // ...
-@else
-  // ...
-
-// Όχι
-@if ($support-legacy == true)
-  // ...
-@else
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/01/index.html %}
 
 Όταν ελέγχετε για κάποια μη-αληθή τιμή, να χρησιμοποιείτε πάντα την λέξη κλειδή `not` αντί να ελέγχετε για `false` ή `null`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Ναι
-@if not index($list, $item) {
-  // ...
-}
+{% include snippets/conditions/02/index.html %}
 
-// Όχι
-@if index($list, $item) == null {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Ναι
-@if not index($list, $item)
-  // ...
+Πάντα να βάζετε την μεταβλητή στην αριστερή πλευρά της δήλωσης και το (μη) αναμενόμενο αποτέλεσμα στην δεξιά πλευρά. Ανεστραμμένα conditional statements είναι συνήθως δυσκολότερα στην ανάγνωση, ειδικά απο τους άπειρους developers.
 
-// Όχι
-@if index($list, $item) == null
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/03/index.html %}
 
 Όταν χρησημοποιείτε conditional statements μέσα σε κάποιο function το οποίο θα επιστρέφει διαφορετική τιμή ανάλογα με τις προϋποθέσεις του conditional statement, βεβαιωθείτε πάντα ότι το function εξακολουθεί να έχει `@return` έξω από το πλαίσιο του conditional statement.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Ναι
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// Όχι
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Ναι
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// Όχι
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04/index.html %}
