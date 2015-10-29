@@ -1,28 +1,27 @@
+# Σύνταξη & μορφοποίηση
 
-# Syntax & formatting
+Αν με ρωτάτε, το πρώτο πράγμα που πρέπει να κάνει ένα styleguide είναι να περιγράφει τον τρόπο που θέλουμε να φαίνεται ο κώδικάς μας.
 
-If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
+Όταν διάφοροι developers συμμετέχουν στην συγγραφή CSS στο ίδιο project, είναι απλά θέμα χρόνου μέχρι ένας από αυτούς να ξεκινήσει να δρα με το δικό του τρόπο. Τα guidelines κώδικα που προωθούν την ομοιομορφία όχι μόνο προλαμβάνουν κάτι τέτοιο, αλλά επίσης βοηθούν στο διάβασμα και την ενημέρωση του κώδικα.
 
-When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.
+Γενικά, θέλουμε (εμπνευσμένα από τα [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
-
-* two (2) spaces indents, no tabs;
-* ideally, 80-characters wide lines;
-* properly written multi-line CSS rules;
-* meaningful use of whitespace.
+* δύο (2) κενά για indentation, όχι tabs,
+* ιδανικά, 80 χαρακτήρες ανά γραμμή,
+* ορθά γραμμένη CSS πολλαπλών γραμμών,
+* εποικοδομητική χρήση κενών,
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   display: block;
   overflow: hidden;
   padding: 0 1em;
 }
 
-// Nope
+// Όχι
 .foo {
     display: block; overflow: hidden;
 
@@ -32,8 +31,8 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Since Sass indented-syntax forces those coding standards
-// There is no wrong way of proceeding
+// Εφόσον η σύνταξη της Sass με indentation εφαρμόζει αυτά τα coding standards
+// δεν υπάρχει λάθος τρόπος για να προχωρήσουμε
 .foo
   display: block
   overflow: hidden
@@ -42,8 +41,7 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
   </div>
 </div>
 
-We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
-
+Δεν θα ασχοληθούμε με το ερώτημα της οργάνωσης των αρχείων σε αυτόν τον τομέα. Είναι αντικείμενο [άλλου τομέα](#architecture).
 
 
 
@@ -51,59 +49,59 @@ We will not tackle the question of file organization in this section. It is the 
 
 ## Strings
 
-CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance: it doesn't matter whether you wrap them in quotes for the CSS parser.
+Η CSS δεν απαιτεί τα strings να έχουν εισαγωγικά, ακόμη και αυτά που περιέχουν κενά. Πάρτε για παράδειγμα τα font-family names: δεν έχει σημασία αν περικλείετε εσείς τα strings με εισαγωγικά ή ο CSS parser.
 
-Because of this, Sass *also* does not require strings to be quoted. Even better (and *luckily*, you'll concede), a quoted string is strictly equivalent to its unquoted twin (e.g. `'abc'` is strictly equal to `abc`).
+Εξαιτίας αυτού, *ούτε* η Sass απαιτεί τα strings να έχουν εισαγωγικά. Ακόμη καλύτερα (και *ευτυχώς* πρέπει να παραδεχτούμε), ένα string με εισαγωγικά είναι αυστηρά ισοδύναμο με ένα χωρίς εισαγωγικά (π.χ. το `'abc'` είναι αυστηρά ισοδύναμο με το `abc`).
 
-That being said, languages that do not require strings to be quoted are definitely a minority and so, **strings should always be wrapped with single quotes** in Sass (single being easier to type than double on *qwerty* keyboards). Besides consistency with other languages, including CSS' cousin JavaScript, there are several reasons for this choice:
+Παρόλα αυτά, οι γλώσσες που δεν απαιτούν τα strings να έχουν εισαγωγικά είναι σαφώς μειοψηφία οπότε, **τα strings πρέπει πάντοτε να περικλείονται από μονά εισαγωγικά** στη Sass (μονά επειδή είναι πιο εύκολο από τα διπλά να πληκτρολογηθούν στα *qwerty* πληκτρολόγια). Εκτός της ομοιομορφίας με άλλες γλώσσες, συμπεριλαμβανομένης της συγγενούς με τη CSS Javascript, υπάρχουν διάφοροι λόγοι γι' αυτή την επιλογή:
 
-* color names are treated as colors when unquoted, which can lead to serious issues;
-* most syntax highlighters will choke on unquoted strings;
-* it helps general readability;
-* there is no valid reason not to quote strings.
+* τα ονόματα των χρωμάτων αντιμετωπίζονται σαν χρώματα όταν είναι χωρίς εισαγωγικά, πράγμα που μπορεί να οδηγήσει σε σοβαρά προβλήματα·
+* οι περισσότεροι syntax highlighters κολλάνε στα strings χωρίς εισαγωγικά·
+* βοηθάει στην γενικότερη αναγνωσιμότητα·
+* δεν υπάρχει κάποιος βάσιμος λόγος για να μην χρησιμοποιούμε εισαγωγικά.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
 
-// Nope
+// Όχι
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
 
-// Nope
+// Όχι
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
 
-// Nope
+// Όχι
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
 
-// Nope
+// Όχι
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 {% endhighlight %}
   </div>
 </div>
 
 <div class="note">
-  <p>In the previous example, <code>sans-serif</code> is not being quoted because it is a specific CSS value that needs to be unquoted.</p>
+  <p>Στο προηγούμενο παράδειγμα, το <code>sans-serif</code> δεν πήρε εισαγωγικά επειδή είναι μια συγκεκριμένη τιμή CSS που πρέπει να είναι χωρίς εισαγωγικά.</p>
 </div>
 
-URLs should be quoted as well, for the same reasons as above:
+Τα URL πρέπει επίσης να έχουν εισαγωγικά, για τους ίδιους λόγους με παραπάνω:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   background-image: url('/images/kittens.jpg');
 }
 
-// Nope
+// Όχι
 .foo {
   background-image: url(/images/kittens.jpg);
 }
@@ -111,11 +109,11 @@ URLs should be quoted as well, for the same reasons as above:
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo
   background-image: url('/images/kittens.jpg')
 
-// Nope
+// Όχι
 .foo
   background-image: url(/images/kittens.jpg)
 {% endhighlight %}
@@ -124,7 +122,7 @@ URLs should be quoted as well, for the same reasons as above:
 
 
 
-### Further Reading
+### Περαιτέρω ανάγνωση
 
 * [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
@@ -134,26 +132,25 @@ URLs should be quoted as well, for the same reasons as above:
 
 
 
-## Numbers
+## Αριθμοί
 
-In Sass, number is a data type including everything from unitless numbers to lengths, durations, frequencies, angles and so on. This allows calculations to be run on such measures.
+Στη Sass, ο αριθμός (number) είναι ένας τύπος δεδομένων που περιλαμβάνει τα πάντα από αριθμούς χωρίς μονάδες μέχρι μήκη, διάρκειες, συχνότητες, γωνίες κτλ. Αυτό επιτρέπει να γίνονται υπολογισμοί σε αυτά τα μέτρα.
 
 
+### Μηδενικά
 
-### Zeros
-
-Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
+Οι αριθμοί θα πρέπει να εμφανίζονται με μηδενικά πριν από μια δεκαδική τιμή μικρότερη της μονάδας. Ποτέ μην εμφανίζετε μηδενικά στο τέλος ενός δεκαδικού.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   padding: 2em;
   opacity: 0.5;
 }
 
-// Nope
+// Όχι
 .foo {
   padding: 2.0em;
   opacity: .5;
@@ -162,12 +159,12 @@ Numbers should display leading zeros before a decimal value less than one. Never
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo
   padding: 2em
   opacity: 0.5
 
-// Nope
+// Όχι
 .foo
   padding: 2.0em
   opacity: .5
@@ -177,44 +174,44 @@ Numbers should display leading zeros before a decimal value less than one. Never
 
 
 
-### Units
+### Μονάδες
 
-When dealing with lengths, a `0` value should never ever have a unit.
+Όταν έχουμε να κάνουμε με μήκη, μια τιμή `0` δεν πρέπει ποτέ μα ποτέ να έχει μονάδα.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 $length: 0;
 
-// Nope
+// Όχι
 $length: 0em;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 $length: 0
 
-// Nope
+// Όχι
 $length: 0em
 {% endhighlight %}
   </div>
 </div>
 
-The most common mistake I can think of regarding numbers in Sass, is thinking that units are just some strings that can be safely appended to a number. While that sounds true, it is certainly not how units work. Think of units as algebraic symbols. For instance, in the real world, multiplying 5 inches by 5 inches gives you 25 square inches. The same logic applies to Sass.
+Το πιο συνηθισμένο λάθος που μου έρχεται στο μυαλό όσον αφορά τους αριθμούς στη Sass, είναι το να πιστεύουμε ότι οι μονάδες είναι απλά κάποια strings που μπορούμε να προσαρτήσουμε με ασφάλεια σε έναν αριθμό. Ενώ ακούγεται αληθινό, σίγουρα οι μονάδες δεν λειτουργούν κατ' αυτόν τον τρόπο. Σκεφτείτε τις μονάδες σαν αλγεβρικά σύμβολα. Για παράδειγμα, στον πραγματικό κόσμο, ο πολλαπλασιασμός 5 ίντσες επί 5 ίντσες μας δίνει 25 τετραγωνικές ίντσες. Η ίδια λογική εφαρμόζεται και στη Sass.
 
-To add a unit to a number, you have to multiply this number by *1 unit*.
+Για να προσθέσετε μια μονάδα σε έναν αριθμό, πρέπει να πολλαπλασιάσετε αυτόν τον αριθμό επί *1 μονάδα*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $value: 42;
 
-// Yep
+// Ναι
 $length: $value * 1px;
 
-// Nope
+// Όχι
 $length: $value + px;
 {% endhighlight %}
   </div>
@@ -222,16 +219,16 @@ $length: $value + px;
 {% highlight sass %}
 $value: 42
 
-// Yep
+// Ναι
 $length: $value * 1px
 
-// Nope
+// Όχι
 $length: $value + px
 {% endhighlight %}
   </div>
 </div>
 
-Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
+Σημειώστε ότι το να προσθέσουμε *0 μέλη αυτής της μονάδας* επίσης λειτουργεί, αλλά θα προτιμούσα να προτείνω την προαναφερθείσα μέθοδο επειδή η πρόσθεση *0 μονάδων* μπορεί να μας μπερδέψει. Όντως, όταν προσπαθούμε να μετατρέψουμε έναν αριθμό σε μία άλλη συμβατή μονάδα, το να προσθέσουμε το 0 δεν έχει το αναμενόμενο αποτέλεσμα.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -260,19 +257,19 @@ $value: 0px + 1in
   </div>
 </div>
 
-In the end, it really depends on what you are trying to achieve. Just keep in mind that adding the unit as a string is not a good way to proceed.
+Τελικά, στην πραγματικότητα εξαρτάται από το τι προσπαθείς να πετύχεις. Θυμηθείτε ότι το να προσθέσουμε τη μονάδα σαν string δεν είναι καλός τρόπος για να προχωρήσουμε.
 
-To remove the unit of a value, you have to divide it by *one unit of its kind*.
+Για να αφαιρέσετε τη μονάδα από μια τιμή, πρέπει να τη διαιρέσετε με *μια μονάδα του είδους της*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 $length: 42px;
 
-// Yep
+// Ναι
 $value: $length / 1px;
 
-// Nope
+// Όχι
 $value: str-slice($length + unquote(''), 1, 2);
 {% endhighlight %}
   </div>
@@ -280,16 +277,16 @@ $value: str-slice($length + unquote(''), 1, 2);
 {% highlight sass %}
 $length: 42px
 
-// Yep
+// Ναι
 $value: $length / 1px
 
-// Nope
+// Όχι
 $value: str-slice($length + unquote(''), 1, 2)
 {% endhighlight %}
   </div>
 </div>
 
-Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
+Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Το να διαχωρίσουμε το αριθμητικό μέρος ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλετε.
 
 
 
@@ -300,12 +297,12 @@ Appending a unit as a string to a number results in a string, preventing any add
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   width: (100% / 3);
 }
 
-// Nope
+// Όχι
 .foo {
   width: 100% / 3;
 }
@@ -313,11 +310,11 @@ Appending a unit as a string to a number results in a string, preventing any add
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo
   width: (100% / 3)
 
-// Nope
+// Όχι
 .foo
   width: 100% / 3
 {% endhighlight %}
@@ -390,12 +387,12 @@ For starters, keywords often speak for themselves. The HSL representation is not
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   color: red;
 }
 
-// Nope
+// Όχι
 .foo {
   color: #FF0000;
 }
@@ -403,11 +400,11 @@ For starters, keywords often speak for themselves. The HSL representation is not
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo
   color: red
 
-// Nope
+// Όχι
 .foo
   color: #FF0000
 {% endhighlight %}
@@ -419,13 +416,13 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo {
   color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
-// Nope
+// Όχι
 .foo {
   color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
@@ -434,12 +431,12 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo
   color: rgba(0, 0, 0, 0.1)
   background: hsl(300, 100%, 100%)
 
-// Nope
+// Όχι
 .foo
   color: rgba(0,0,0,0.1)
   background: hsl( 300, 100%, 100% )
@@ -583,43 +580,43 @@ Lists should respect the following guidelines:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 $font-stack: 'Helvetica', 'Arial', sans-serif;
 
-// Nope
+// Όχι
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif;
 
-// Nope
+// Όχι
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
-// Nope
+// Όχι
 $font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// Nope
+// Όχι
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 $font-stack: 'Helvetica', 'Arial', sans-serif
 
-// Nope (since it is not supported)
+// Όχι (since it is not supported)
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif
 
-// Nope
+// Όχι
 $font-stack: 'Helvetica' 'Arial' sans-serif
 
-// Nope
+// Όχι
 $font-stack: ('Helvetica', 'Arial', sans-serif)
 
-// Nope
+// Όχι
 $font-stack: ('Helvetica', 'Arial', sans-serif,)
 {% endhighlight %}
   </div>
@@ -632,10 +629,10 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 {% highlight scss %}
 $shadows: 0 42px 13.37px hotpink;
 
-// Yep
+// Ναι
 $shadows: append($shadows, $shadow, comma);
 
-// Nope
+// Όχι
 $shadows: $shadows, $shadow;
 {% endhighlight %}
   </div>
@@ -643,10 +640,10 @@ $shadows: $shadows, $shadow;
 {% highlight sass %}
 $shadows: 0 42px 13.37px hotpink
 
-// Yep
+// Ναι
 $shadows: append($shadows, $shadow, comma)
 
-// Nope
+// Όχι
 $shadows: $shadows, $shadow
 {% endhighlight %}
   </div>
@@ -683,29 +680,29 @@ Illustration:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
   'large': 1200px,
 );
 
-// Nope
+// Όχι
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 $breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
 
-// Nope
+// Όχι
 $breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
 
-// Nope
+// Όχι
 $breakpoints: (small: 767px, medium: 992px, large: 1200px,)
 
-// Nope (since it is not supported)
+// Όχι (since it is not supported)
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
@@ -830,7 +827,7 @@ Illustration:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 .foo, .foo-bar,
 .baz {
   display: block;
@@ -838,7 +835,7 @@ Illustration:
   margin: 0 auto;
 }
 
-// Nope
+// Όχι
 .foo,
 .foo-bar, .baz {
     display: block;
@@ -848,14 +845,14 @@ Illustration:
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 .foo, .foo-bar,
 .baz
   display: block
   overflow: hidden
   margin: 0 auto
 
-// Nope
+// Όχι
 .foo,
 .foo-bar, .baz
     display: block
