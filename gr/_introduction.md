@@ -38,17 +38,17 @@
 
 Μερικές φορές, είναι καλύτερο να επαναλάμβανόμαστε λίγο για να κρατήσουμε τον κώδικα συντηρήσιμο, αντι να φτιάξεις κάτι βαρή, δυσμεταχείριστος και αδικαιολόγητα περίπλοκο σύστημα που είναι αδύνατο να συντηρηθεί επειδή είναι υπερβολικά περίπλοκο.
 
-Επίσης, και επιτρέψτε μου να παραθέσω τον [Harry Roberts](https://csswizardry.com) για ακόμη μια φορά, **ο πραγματισμός υπερέχει τις τελειότητας**. Μετά απο κάποιο σημείο, μάλλον θα βρείτε τον εαυτό σας να πηγαίνει ενάντια στα πράγματα που περιγράφονται εδώ. Αν βγάζουν νόημα και πιστεύετε πως είναι ορθά, μην δυστάσετε να το κάνετε. Code is just a means, not an end.
+Επίσης, και επιτρέψτε μου να παραθέσω τον [Harry Roberts](https://csswizardry.com) για ακόμη μια φορά, **ο πραγματισμός υπερέχει τις τελειότητας**. Μετά απο κάποιο σημείο, μάλλον θα βρείτε τον εαυτό σας να πηγαίνει ενάντια στα πράγματα που περιγράφονται εδώ. Αν βγάζουν νόημα και πιστεύετε πως είναι ορθά, μην δυστάσετε να το κάνετε. Ο κωδικος ειναι ενα μεσο, οχι αυτοσκοπος.
 
 ## Extending the guidelines
 
-A large part of this styleguide is strongly opinionated. I have been reading and writing Sass for several years now, to the point where I now have a lot of principles when it comes to writing clean stylesheets. I understand that it might not please nor suit everybody, and this is perfectly normal.
+Ένα μεγάλο μέρος αυτού του styleguide είναι αρκετά δογματικό. Έχω διαβάσει και γράψει Sass αρκετά χρόνια τώρα, σε βαθμό πού τώρα έχω πολλές αρχές όσον αφορά το γράψιμο καθαρών stylesheets. Καταλαβαίνω ότι μπορεί να μην ικανοποιεί ούτε να ταιριάζει σε όλους, και αυτό είναι απολύτως φυσιολογικό.
 
-Although, I believe that guidelines are made to be extended. Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from thise styleguide except for a few things; in which case, specific rules would be explained below.
+Αν και, πιστεύω πως τα guidelines γίνονται για να επεκταθούν. Επεκτείνοντας τα Sass Guidelines θα μπορούσε να είναι τόσο απλό όσο έχοντας ένα έγγραφο που πιστοποιεί ότι ο κώδικας ακολουθάει guidelines απο αυτό το styleguide εκτός από μερικά πράγματα; περίπτωση στην οποία ειδικοί κανόνες θα εξηγούνται παρακάτω.
 
-An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
+Ένα παράδειγμα απο την επέκταση του styleguide μπορεί να βρεθεί στο [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> [This](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) is an extension to [Node Styleguide](https://github.com/felixge/node-style-guide) by Felix Geisendörfer. Anything from this document overrides what could be said in the Node Styleguide.
+> [This](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει τα λεγόμενα του Node Styleguide.
 
 ###### Περαιτέρω ανάγνωση
 
