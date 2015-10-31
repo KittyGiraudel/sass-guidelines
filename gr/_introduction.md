@@ -34,11 +34,11 @@
 
 Χάρη στα ανόητα πειράματά μου όπως οι [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), οι [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) και [ένας JSON parser](https://github.com/HugoGiraudel/SassyJSON) σε Sass, ξέρουμε όλοι τι μπορεί να επιτευχθεί με αυτόν τον preprocessor.
 
-Παράλληλα η CSS είναι μια απλή γλώσσα. Η Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) in some circumstances.
+Παράλληλα, η CSS είναι μια απλή γλώσσα. Η Sass που προορίζεται για την εξαγωγή CSS, δεν θα έπρεπε να είναι αρκετά πιο περίπλοκη απο την CSS. Η [αρχή KISS](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) είναι το κλειδί και μπορεί να πάρει προτεραιότητα έναντι της [DRY αρχής](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) σε κάποιες περιπτώσεις.
 
-Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+Μερικές φορές, είναι καλύτερο να επαναλάμβανόμαστε λίγο για να κρατήσουμε τον κώδικα συντηρήσιμο, αντι να φτιάξεις κάτι βαρή, δυσμεταχείριστος και αδικαιολόγητα περίπλοκο σύστημα που είναι αδύνατο να συντηρηθεί επειδή είναι υπερβολικά περίπλοκο.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
+Επίσης, και επιτρέψτε μου να παραθέσω τον [Harry Roberts](https://csswizardry.com) για ακόμη μια φορά, **ο πραγματισμός υπερέχει τις τελειότητας**. Μετά απο κάποιο σημείο, μάλλον θα βρείτε τον εαυτό σας να πηγαίνει ενάντια στα πράγματα που περιγράφονται εδώ. Αν βγάζουν νόημα και πιστεύετε πως είναι ορθά, μην δυστάσετε να το κάνετε. Code is just a means, not an end.
 
 ## Extending the guidelines
 
@@ -46,10 +46,10 @@ A large part of this styleguide is strongly opinionated. I have been reading and
 
 Although, I believe that guidelines are made to be extended. Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from thise styleguide except for a few things; in which case, specific rules would be explained below.
 
-An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md): 
+An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
 > [This](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) is an extension to [Node Styleguide](https://github.com/felixge/node-style-guide) by Felix Geisendörfer. Anything from this document overrides what could be said in the Node Styleguide.
 
-###### Further reading
+###### Περαιτέρω ανάγνωση
 
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
