@@ -1,17 +1,17 @@
 
-# Variables
+# Μεταβλητές
 
-Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
+Οι μεταβλητές είναι η ουσία κάθε προγραμματιστικής γλώσσας. Μας επιτρέπουν να επαναχρησιμοποιούμε τιμές χωρίς να χρειάζεται να τις αντιγράφουμε ξανά και ξανά. Κυρίως, κάνουν την ενημέρωση μιας τιμής πολύ εύκολη. Δε χρειάζεται πλέον να κάνουμε αναζήτηση και αντικατάσταση ή χειροκίνητη σάρωση.
 
-However CSS is nothing but a huge basket containing all our eggs. Unlike many languages, there are no real scopes in CSS. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+Παρ' όλα αυτά η CCS δεν είναι τίποτα άλλο παρά ένα μεγάλο καλάθι που περιέχει όλα μας τα αβγά. Σε αντίθεση με πολλές γλώσσες, δεν υπάρχουν πραγματικά scopes στη CSS. Εξαιτίας αυτού, πρέπει να προσέχουμε πάρα πολύ όταν προσθέτουμε μεταβλητές διότι υπάρχει ο κίνδυνος να αντιμετωπίσουμε προβλήματα.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won't help. A new variable should be created only when all of the following criteria are met:
+Η συμβουλή μου θα ήταν να δημιουργείτε μεταβλητές μόνο όταν έχει νόημα να το κάνετε. Μην αρχικοποιείτε μεταβλητές απλά για να το κάνετε, δεν θα βοηθήσει. Μία νέα μεταβλητή πρέπει να δημιουργείται μόνο όταν ισχύουν όλα τα παρακάτω κριτήρια:
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+* η τιμή επαναλαμβάνεται τουλάχιστον δύο φορές·
+* η τιμή κατά πάσα πιθανότητα θα ανανεωθεί τουλάχιστον μια φορά·
+* όλες οι εμφανίσεις της τιμής είναι συνδεδεμένες με τη μεταβλητή (π.χ. όχι από σύμπτωση)
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
+Βασικά, δεν υπάρχει λόγος να δηλώσουμε μια μεταβλητή η οποία δεν θα ανανεωθεί ποτέ ή χρησιμοποιείται σε ένα μόνο μέρος.
 
 
 
@@ -20,37 +20,37 @@ Basically, there is no point declaring a variable that will never be updated or 
 
 ## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
+Το scoping των μεταβλητών στη Sass έχει αλλάξει με τα χρόνια. Μέχρι αρκετά πρόσφατα, οι δηλώσεις μεταβλητών μέσα σε ένα σετ κανόνων και σε άλλα scopes ήταν τοπικές από προεπιλογή. Παρ' όλα αυτά όταν υπήρχε ήδη μία global μεταβλητή με το ίδιο όνομα, η τοπική ανάθεση άλλαζε την global μεταβλητή. Από την έκδοση 3.4 και μετά, η Sass χειρίζεται σωστά την έννοια των scopes και δημιουργεί μια καινούρια τοπική μεταβλητή.
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+Τα έγγραφα αναφέρονται στην *επισκίαση global μεταβλητής*. Όταν δηλώνουμε μια μεταβλητή η οποία υπάρχει ήδη στο global scope, σε ένα εσωτερικό scope (selector, συνάρτηση, mixin...), λέμε ότι η τοπική μεταβλητή *επισκιάζει* την global. Βασικά, την παρακάμπτει μόνο για το local scope.
 
-The following code snippet explains the *variable shadowing* concept.
+Το ακόλουθο κομμάτι κώδικα εξηγεί την έννοια της *επισκίασης μεταβλητής*.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Initialize a global variable at root level.
+// Αρχικοποίησε μια global μεταβλητή σε επίπεδο root.
 $variable: 'initial value';
 
-// Create a mixin that overrides that global variable.
+// Δημιούργησε ένα mixin που παρακάμπτει την global μεταβλητή.
 @mixin global-variable-overriding {
   $variable: 'mixin value' !global;
 }
 
 .local-scope::before {
-  // Create a local variable that shadows the global one.
+  // Δημιούργησε μια τοπική μεταβλητή που επισκιάζει την global.
   $variable: 'local value';
 
-  // Include the mixin: it overrides the global variable.
+  // Κάνε include το mixin: παρακάμπτει την global μεταβλητή.
   @include global-variable-overriding;
 
-  // Print the variable's value.
-  // It is the **local** one, since it shadows the global one.
+  // Τύπωσε την τιμή της μεταβλητής.
+  // Είναι η **τοπική** μεταβλητή, εφόσον επισκιάζει την global.
   content: $variable;
 }
 
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
+// Τύπωσε την μεταβλητή σε άλλον selector που δεν κάνει επισκίαση.
+// Είναι η **global** μεταβλητή, όπως ήταν αναμενόμενο.
 .other-local-scope::before {
   content: $variable;
 }
@@ -58,26 +58,26 @@ $variable: 'initial value';
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Initialize a global variable at root level.
+// Αρχικοποίησε μια global μεταβλητή σε επίπεδο root.
 $variable: 'initial value'
 
-// Create a mixin that overrides that global variable.
+// Δημιούργησε ένα mixin που παρακάμπτει την global μεταβλητή.
 @mixin global-variable-overriding
   $variable: 'mixin value' !global
 
 .local-scope::before
-  // Create a local variable that shadows the global one.
+  // Δημιούργησε μια τοπική μεταβλητή που επισκιάζει την global.
   $variable: 'local value'
 
-  // Include the mixin: it overrides the global variable.
+  // Κάνε include το mixin: παρακάμπτει την global μεταβλητή.
   +global-variable-overriding
 
-  // Print the variable's value.
-  // It is the **local** one, since it shadows the global one.
+  // Τύπωσε την τιμή της μεταβλητής.
+  // Είναι η **τοπική** μεταβλητή, εφόσον επισκιάζει την global.
   content: $variable
 
-// Print the variable in another selector that does no shadowing.
-// It is the **global** one, as expected.
+// Τύπωσε την μεταβλητή σε άλλον selector που δεν κάνει επισκίαση.
+// Είναι η **global** μεταβλητή, όπως ήταν αναμενόμενο.
 .other-local-scope::before
   content: $variable
 {% endhighlight %}
@@ -91,7 +91,7 @@ $variable: 'initial value'
 
 ## `!default` flag
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+Όταν φτιάχνουμε μια βιβλιοθήκη, ένα framework, ένα grid system ή ένα άλλο κομμάτι Sass το οποίο έχουμε σκοπό να το διανείμουμε και να χρησιμοποιηθεί από εξωτερικούς developers, όλες οι μεταβλητές παραμετροποίησης πρέπει να δηλωθούν με το `!default` flag έτσι ώστε να μπορούν να αντικατασταθούν.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
@@ -106,15 +106,15 @@ $baseline: 1em !default
   </div>
 </div>
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Χάρη σε αυτό, ο develoepr μπορεί να ορίσει τη δική του μεταβλητή `$baseline` *προτού* εισάγει την βιλιοθήκη σας χωρίς να επαναοριστεί η τιμή του.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Developer's own variable
+// Η μεταβλητή του developer
 $baseline: 2em;
 
-// Your library declaring `$baseline`
+// Η δήλωση `$baseline` της βιβλιοθήκης σας
 @import 'your-library';
 
 // $baseline == 2em;
@@ -122,10 +122,10 @@ $baseline: 2em;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Developer's own variable
+// Η μεταβλητή του developer
 $baseline: 2em
 
-// Your library declaring `$baseline`
+// Η δήλωση `$baseline` της βιβλιοθήκης σας
 @import your-library
 
 // $baseline == 2em
@@ -140,24 +140,24 @@ $baseline: 2em
 
 ## `!global` flag
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+Το `!global` flag πρέπει μόνο να χρησιμοποιείται όταν παρακάπτουμε μία global μεταβλητή από ένα τοπικό scope. Όταν δηλώνουμε μια μεταβλητή σε επίπεδο root, το `!global` flag πρέπει να παραλείπεται.
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Yep
+// Ναι
 $baseline: 2em;
 
-// Nope
+// Όχι
 $baseline: 2em !global;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Yep
+// Ναι
 $baseline: 2em
 
-// Nope
+// Όχι
 $baseline: 2em !global
 {% endhighlight %}
   </div>
@@ -168,11 +168,11 @@ $baseline: 2em !global
 
 
 
-## Multiple variables or maps
+## Πολλαπλές μεταβλητές ή maps
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+Υπάρχουν πλεονεκτήματα στο να χρησιμοποιούμε maps παρά να χρησιμοποιούμε πολλαπλές ξεχωριστές μεταβλητές. Το κυριότερο πλεονέκτημα είναι η δυνατότητα σάρωσης ενός map, πράγμα που δεν είναι δυνατό με ξεχωριστές μεταβλητές.
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+Ένα ακόμη πλεονέκτημα χρήσης maps είναι η δυνατότητα δημιουργίας μιας μικρής getter συνάρτησης για να παρέχουμε ένα πιο φιλικό API. Για παράδειγμα, δείτε τον παρακάτω κώδικα Sass:
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
