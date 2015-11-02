@@ -145,19 +145,19 @@ $baseline: 2em
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 $baseline: 2em;
 
-// Όχι
+// Nope
 $baseline: 2em !global;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 $baseline: 2em
 
-// Όχι
+// Nope
 $baseline: 2em !global
 {% endhighlight %}
   </div>
