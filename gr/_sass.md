@@ -1,19 +1,19 @@
 
-# About Sass
+# Σχετικά με τη Sass
 
-This is how [Sass](http://sass-lang.com) describes itself in its [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+Η [Sass](http://sass-lang.com) περιγράφει τον εαυτό της με τον εξής τρόπο στο [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
-> Sass is an extension of CSS that adds power and elegance to the basic language.
+> Η Sass είναι μία επέκταση της CSS η οποία προσθέτει ισχύ και κομψότητα στη βασική γλώσσα.
 
-Sass's ultimate objective is to fix CSS's flaws. CSS, as we all know, is not the best language in the world <sup>[citation needed]</sup>. While very simple to learn, it can quickly get quite messy, especially on large projects.
+Ο απώτερος στόχος της είναι να διορθώσει τα ελλατώματα της CSS. Η CSS, όπως όλοι γνωρίζουμε, δεν είναι και η καλύτερη γλώσσα στον κόσμο <sup>[citation needed]</sup>. Παρότι είναι πολύ απλή στην εκμάθηση, μπορεί να γίνει ακατάστατη πολύ γρήγορα, ειδικά σε μεγάλα projects.
 
-This is where Sass comes in, as a meta-language, to improve CSS's syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding the CSS language.
+Σ'αυτό το σημείο έρχεται η Sass, ως μία μετα-γλώσσα, για να βελτιώσει τη σύνταξη της CSS ώστε να της παρέχει επιπλέον δυνατότητες και βολικά εργαλεία. Παράλληλα, η Sass επιδιώκει να παραμείνει συντηρητική σε σχέση με τη γλώσσα CSS.
 
-The point is not to turn CSS into a fully-featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of extra features on top of it.
+Το ζητούμενο δεν είναι να μετατρέψει τη CSS σε μία γλώσσα προγραμματισμού πλήρη δυνατοτήτων· η Sass επιδιώκει μόνο να βοηθήσει εκεί όπου η CSS αποτυγχάνει. Εξαιτίας αυτού, η εκμάθηση της Sass δεν είναι πιο δύσκολη από το να μαθαίνεις CSS: απλά προσθέτει μερικές επιπλέον δυνατότητες πάνω στις ήδη υπάρχουσες.
 
-That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
+Κατόπιν αυτού, υπάρχουν πολλοί τρόποι να χρησιμοποιήσουμε αυτές τις δυνατότητες. Κάποιοι καλοί, κάποιοι κακοί και κάποιο ασυνήθηστοι. Αυτά τα guidelines έχουν σκοπό να σου δώσουν μία συνεκτική και τεκμηριωμένη προσέγγιση για να γράψεις κώδικα σε Sass.
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [Sass](http://sass-lang.com)
 * [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
@@ -23,19 +23,19 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 
 
-## Ruby Sass or LibSass
+## Ruby Sass ή LibSass
 
-[Sass's first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, over 8 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass](https://github.com/sass/libsass) (written in C) is now close to being fully compatible with the original Ruby version.
+[Το πρώτο commit της Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) ανάγεται στα τέλη του 2006, πάνω από 8 χρόνια πριν. Περιττό να πούμε ότι έχει διανύσει πολύ δρόμο από τότε. Αρχικά αναπτύχθηκε σε Ruby, και διάφορα ports ξεφύτρωσαν από δω και από κει. Το πιο δημοφιλές, [LibSass](https://github.com/sass/libsass) (γραμμένο σε C) είναι πλέον κοντά στο να είναι πλήρως συμβατό με την πρωτότυπη έκδοση σε Ruby.
 
-In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older brother. The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
+Το 2014, [οι ομάδες του Ruby Sass και του LibSass αποφάσισαν να περιμένουν και τις δύο εκδόσεις να συγχρονιστούν πριν προχωρήσουν παρακάτω](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Από τότε, το LibSass δημοσιεύει τακτικά νέες εκδόσεις για να έχει ισότιμες δυνατότητες με τον μεγαλύτερο αδερφό του. Οι τελευταίες εναπομείνουσες ασυνέπειες έχουν συγκεντρωθεί και παρατίθεvται από μένα στο [Sass-Compatibility](http://sass-compatibility.github.io) project. Αν γνωρίζετε κάποια ασυνέπεια μεταξύ των δύο εκδόσεων που δεν αναφέρεται, παρακαλώ έχε την καλοσύνη να ανοίξεις ένα issue.
 
-Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features.
+Επιστρέφουμε στην επιλογή του compiler. Βασικά εξαρτάται από το project σου. Αν είναι ένα project σε Ruby on Rails, καλύτερα να χρησιμοποιήσεις το Ruby Sass, που ταιριάζει απόλυτα στην περίπτωση. Επίσης, να ξέρεις ότι το Ruby Sass θα είναι πάντα το σημείο αναφοράς όσον αφορά το ιmplementation και πάντα θα προηγείται του LibSass σε δυνατότητες.
 
-On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let's say NodeJS, [node-sass](https://github.com/sass/node-sass) is all chosen.
+Για projects που δεν είναι σε Ruby και η Sass πρέπει να ενταχθεί στη ροή εργασίας, το LibSass είναι πιθανώς καλύτερη ιδέα επειδή είναι εξειδικευμένο για ενσωμάτωση. Οπότε αν θες να χρησιμοποιήσεις ας πούμε NodeJS, το [node-sass](https://github.com/sass/node-sass) είναι το πιο επιθυμητό.
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [LibSass](https://github.com/sass/libsass)
 * [Sass-Compatibility](http://sass-compatibility.github.io)
@@ -46,21 +46,21 @@ On non-Ruby projects that need a workflow integration, LibSass is probably a bet
 
 
 
-## Sass or SCSS
+## Sass ή SCSS
 
-There is quite a lot of confusion regarding the semantics of the name *Sass*, and for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
+Επικρατεί μεγάλη σύγχυση σχετικά με τη σημειολογία της ονομασίας *Sass*, για έναν καλό λόγο: ως Sass εννοούμε και τον preprocessor και τη σύνταξη. Λίγο άβολο, έτσι δεν είναι;
 
-You see, Sass initially described a syntax of which the defining characteristic was its indentation-sensitivity. Soon enough, Sass maintainers decided to close the gap between Sass and CSS by providing a CSS-friendly syntax called *SCSS* for *Sassy CSS*. The motto is: if it's valid CSS, it's valid SCSS.
+Βλέπεις, η Sass αρχικά περιέγραφε μία σύνταξη στην οποία το βασικό χαρακτηριστικό ήταν η ευαισθησία στο indentation. Σύντομα οι συντηρητές της Sass αποφάσισαν να γεφυρώσουν το χάσμα μεταξύ Sass και CSS παρέχοντας μια σύνταξη φιλική ως προς τη CSS με το όνομα *SCSS*, που σημαίνει *Sassy CSS*. Το σύνθημα είναι: αν είναι έγκυρη CSS, τότε είναι έγκυρη SCSS.
 
-Since then, Sass (the preprocessor) has been providing two different syntaxes: Sass (not all-caps, [please](http://sassnotsass.com)), also known as *the indented syntax*, and SCSS. Which one to use is pretty much up to you since both are strictly equivalent in features. It's only a matter of aesthetics at this point.
+Από τότε, η Sass (ο preprocessor) παρέχει δύο διαφορετικές συντάξεις: τη Sass (χωρίς κεφαλαία [παρακαλώ](http://sassnotsass.com)), επίσης γνωστή ως *την indented σύνταξη*, και την SCSS. Το ποιά σύνταξη θα χρησιμοποιήσεις είναι στο χέρι σου μιας και οι δύο έχουν ακριβώς τις ίδιες δυνατότητες. Σ'αυτό το σημείο είναι θέμα προτίμησης.
 
-Sass's whitespace-sensitive syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to learn since it's mostly some tiny extra bits on top of CSS.
+Η whitespace-sensitive σύνταξη της Sass βασίζεται στο indentation για να απαλλαγεί από τα άγκιστρα (braces), τα ερωτηματικά (semi-colons) και άλλα σημεία στίξης, πράγμα που οδηγεί σε μια πιο λιτή και πιο σύντομη σύνταξη. Παράλληλα, η SCSS είναι πιο εύκολη στην εκμάθηση μιας και πρόκειται για μερικά μικρά επιπλέον κομμάτια πάνω στη CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, I will use SCSS rather than Sass throughout these guidelines.
+Εγώ προσωπικά προτιμώ την SCSS από τη Sass γιατί είναι πιο κοντά στη CSS και πιο φιλική για τους περισσότερους developers. Γι' αυτό το λόγο, θα χρησιμοποιώ SCSS αντί για Sass σ' αυτά τα guidelines.
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
@@ -69,27 +69,27 @@ I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to m
 
 
 
-## Other preprocessors
+## Λοιποί preprocessors
 
-Sass is a preprocessor among others. Its most serious competitor has to be [LESS](http://lesscss.org/), a NodeJS based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) - which is kind of the nerdy, unrestricted version of LESS - where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Η Sass είναι ένας preprocessor μεταξύ άλλων. Ο πιο σοβαρός ανταγωνιστής της είναι η [LESS](http://lesscss.org/), ένας preprocessor που βασίζεται σε NodeJS, ο οποίος έχει γίνει αρκετά δημοφιλής χάρη στο γνωστό CSS framework [Bootstrap](http://getbootstrap.com/) που το χρησιμοποιεί. Επίσης υπάρχει και το [Stylus](http://learnboost.github.io/stylus/) - το οποίο είναι λίγο η nerdy, δίχως περιορισμούς, έκδοση της LESS - στην οποία μπορείς να κάνεις πρακτικά ό,τι θες αφού μετατρέπει τη CSS σχεδόν σε γλώσσα προγραμματισμού.
 
-*Why choose Sass over LESS or another preprocessor?* is still a valid question today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (mostly) with original Sass, this is no longer relevant advice.
+Το *γιατί να επιλέξω Sass αντί για LESS ή κάποιον άλλον preprocessor* είναι μία βάσιμη απορία ακόμα και σήμερα. Μέχρι πρόσφατα συνιστούσαμε Sass για projects σε Ruby γιατί ο preprocessor ήταν φτιαγμένος σε Ruby και κούμπωνε καλά με το Ruby on Rails. Τώρα που το LibSass έχει συμβαδίσει (σχεδόν) με το πρωτότυπο Sass, πλέον δεν τίθεται τέτοιο θέμα.
 
-What I do like with Sass is its conservative approach to CSS. Sass's design is based on strong principles: much of the design approach comes naturally out of the core teams' beliefs that a) adding extra features has a complexity cost that needs to be justified by usefulness and, b) it should be easy to reason about what a given block of styles is doing by looking at that block alone. Also, Sass has a much sharper attention to detail than other preprocessors. As far as I can tell, the core designers care deeply about supporting every corner-case of CSS compatibility and making sure every general behavior is consistent.
+Αυτό που μ' αρέσει στη Sass είναι η συντηρητική της προσέγγιση απέναντι στη CSS. Ο σχεδιασμός της Sass βασίζεται σε ισχυρές αρχές: οι περισσότερες σχεδιαστικές προσεγγίσεις προέρχονται φυσικά από τις πεποιθήσεις των ιδρυτών της πως α) το να προσθέτεις επιπλέον δυνατότητες έχει μία επιβάρυνση σε πολυπλοκότητα η οποία πρέπει να δικαιολογείται από τη χρησιμότητα και β) πρέπει να είναι απλό να κατανοήσεις τι κάνει ένα συγκεκριμένο κομμάτι από styles μελετώντας το απομονωμένα. Επίσης, η Sass δίνει πολύ αυστηρότερη έμφαση στη λεπτομέρεια σε σχέση με άλλους preprocessors. Απ' όσο μπορώ να πω, η βασικοί σχεδιαστές νοιάζονται πολύ για την υποστήριξη της κάθε παραμικρής συμβατότητας με τη CSS και φροντίζουν η γενική συμπεριφορά της γλώσσας να είναι συνεπής.
 
-In other words, Sass is not a preprocessor aimed at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aimed at solving actual issues; helping to provide useful functionality to CSS where CSS falls short.
+Με άλλα λόγια, η Sass δεν είναι ένας preprocessor που αποσκοπεί να ευχαριστήσει κάθε nerdy wannabe προγραμματιστή σαν κι εμένα προσθέτοντας ασυνήθιστες δυνατότητες πάνω σε μια γλώσσα που δεν που δεν υποστηρίζει περιπτώσεις χρήσης με λογική. Πρόκειται για ένα λογισμικό στοχευμένο στο να λύνει πρακτικά ζητήματα· στο να παρέχει χρήσιμες δυνατότητες εκεί που η CSS υπολείπεται.
 
-Preprocessors aside, we should also mention postprocessors, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). Postprocessors are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
+Πέρα από τους preprocessors, πρέπει να επισημάνουμε και τους postprocessors, οι οποίοι έχουν αποκτήσει σημαντική δημοσιότητα τους τελευταίους μήνες, κυρίως χάρη στο [PostCSS](https://github.com/postcss/postcss) και στο [cssnext](https://cssnext.github.io/). Οι postprocessors είναι πάνω κάτω ισοδύναμοι με τους preprocessors με την εξαίρεση ότι δεν παρέχουν τίποτα περισσότερο από επερχόμενες συντακτικές δυνατότητες της CSS.
 
-You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you would write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), then compile your stylesheets with a postprocessor only to find every variable occurrence gets replaced with its value, as Sass would do.
+Δες τους postprocessors σαν ένα polyfill για δυνατότητες της CSS που δεν υποστηρίζονται ακόμα. Για παράδειγμα, μπορείς να γράψεις μεταβλητές όπως περιγράφονται στο [CSS specifications](http://dev.w3.org/csswg/css-variables/), και ύστερα να κάνεις compile τα stylesheets με έναν postprocessor, με αποτέλεσμα όπου εμφανίζεται η μεταβλητή να έχει αντικατασταθεί από την αξία της, όπως θα έκανε και η Sass.
 
-The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
+Το σκεπτικό πίσω από τους postprocessors είναι ότι μόλις οι φυλλομετρητές υποστηρίξουν νέες δυνατότητες (π.χ. μεταβλητές CSS), ο postprocessor δεν τις κάνει compile πια και αφήνει τους φυλλομετρητές να τις διαχειριστούν.
 
-While providing tomorrow's syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we'll get back to this.
+Παρότι η ιδέα του να παρέχουμε υποστήριξη για μελλοντικές συντάξεις ακούγεται αξιότιμη ιδέα, μπορώ να πως πως προτιμώ να χρησιμοποιώ Sass για τις περισσότερες εργασίες. Πάραυτα, υπάρχουν μερικές περιπτώσεις που πιστεύω ότι οι postprocessors ταιριάζουν περισσότερο από τη Sass και τα συναφή - το CSS prefixing για παράδειγμα - αλλά θα επανέλθουμε πάνω σ'αυτό.
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [LESS](http://lesscss.org/)
 * [Stylus](http://learnboost.github.io/stylus/)
