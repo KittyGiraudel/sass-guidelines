@@ -1,104 +1,38 @@
 
 # Loops
 
-Because Sass provides complex data structures such as [lists](#lists) and [maps](#maps), it is no surprise that it also gives a way for authors to iterate over those entities.
+Επειδή η Sass παρέχει πολύπλοκες δομές δεδομένων όπως [lists](#lists) και [maps](#maps), δεν αποτελεί έκπληξη το γεγονός ότι δίνει επίσης τη δυνατότητα στους συγγραφείς να μπορούν να σαρώσουν τις εν λόγω οντότητες.
 
-However, the presence of loops usually implies moderately complex logic that probably does not belong to Sass. Before using a loop, make sure it makes sense and that it actually solves an issue.
-
-
-
-
-
+Ωστόσο, η παρουσία των loops συνήθως συνεπάγεται με σχετικά σύνθετη λογική που κατά πάσα πιθανότητα δεν ανήκει στην Sass. Πριν χρησιμοποιήσεις ένα loop, βεβαιώσου ότι έχει νόημα και ότι λύνει πραγματικά ένα πρόβλημα.
 
 ## Each
 
-The `@each` loop is definitely the most-used out of the three loops provided by Sass. It provides a clean API to iterate over a list or a map.
+Από τα τρία loops που παρέχονται από τη Sass, το @each loop είναι σίγουρα αυτό που χρησιμοποιείται πιο συχνά. Παρέχει ένα καθαρό API για να μπορείς να σαρώσεις ένα list ή ένα map.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $theme in $themes {
-  .section-#{$theme} {
-    background-color: map-get($colors, $theme);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $theme in $themes
-  .section-#{$theme}
-    background-color: map-get($colors, $theme)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/01/index.html %}
 
-When iterating on a map, always use `$key` and `$value` as variable names to enforce consistency.
+Οταν σαρώνεις ένα map, πρέπει πάντοτε να χρησιμοποιείς `$key` και `$value` ως ονόματα στα variables για να υπάρχει συνοχή.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@each $key, $value in $map {
-  .section-#{$key} {
-    background-color: $value;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@each $key, $value in $map
-  .section-#{$key}
-    background-color: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/02/index.html %}
 
-Also be sure to respect those guidelines to preserve readability:
+Επίσης, φρόντισε να σεβαστείς τα παρακάτω guidelines για τη διατήρηση της αναγνωσιμότητας:
 
-* Always an empty new line before `@each`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
-
-
-
-
-
+* Να αφήνεις πάντα καινούργια γραμμή πριν το `@each`·
+* Να αφήνεις πάντα καινούργια γραμμή μετά το δεξί άγκιστρο (`}`) εκτός και εαν η επόμενη γραμμή περιέχει δεξί άγκιστρο (`}`).
 
 ## For
 
-The `@for` loop might be useful when combined with CSS' `:nth-*` pseudo-classes. Except for these scenarios, prefer an `@each` loop if you *have to* iterate over something.
+Το `@for` loop μπορεί να φανεί χρήσιμο όταν συνδυάζεται με τις ψευδοκλάσεις της CSS’ `:nth-*`. Εκτός από αυτά τα σενάρια, να προτιμάς ένα `@each` loop αν *πρέπει* να σαρώσεις κάτι.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@for $i from 1 through 10 {
-  .foo:nth-of-type(#{$i}) {
-    border-color: hsl($i * 36, 50%, 50%);
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@for $i from 1 through 10
-  .foo:nth-of-type(#{$i})
-    border-color: hsl($i * 36, 50%, 50%)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/loops/03/index.html %}
 
-Always use `$i` as a variable name to stick to the usual convention and unless you have a really good reason to, never use the `to` keyword: always use `through`. Many developers do not even know Sass offers this variation; using it might lead to confusion.
+Να χρησιμοποιείς πάντα $i ως όνομα μεταβλητής για να διατηρήσεις τη συνήθη σύμβαση, και μην χρησιμοποιείς ποτέ την λέξη κλειδί to: πάντοτε να χρησιμοποιείς through, εκτός κι αν έχεις πραγματικά καλό λόγο. Πολλοί developers δεν γνωρίζουν καν ότι η Sass προσφέρει αυτή την παραλλαγή· με τη χρήση του ενδέχεται να προκαλέσει σύγχυση.
 
-Also be sure to respect those guidelines to preserve readability:
+Επίσης, φρόντισε να σεβαστείς τα παρακάτω guidelines για τη διατήρηση της αναγνωσιμότητας:
 
-* Always an empty new line before `@for`;
-* Always an empty new line after the closing brace (`}`) unless the next line is a closing brace (`}`).
-
-
-
-
-
+* Να αφήνεις πάντα καινούργια γραμμή πριν το `@for`·
+* Να αφήνεις πάντα καινούργια γραμμή μετα το δεξί άγκιστρο (`}`) εκτός και εαν η επόμενη γραμμή περιέχει το δεξί άγκιστρο (`}`).
 
 ## While
 
-The `@while` loop has absolutely no use case in a real Sass project, especially since there is no way to break a loop from the inside. **Do not use it**.
+Το `@while` loop δεν έχει καμία απολύτως χρησιμότητα σε ένα πραγματικό Sass project, ιδίως επειδή δεν υπάρχει τρόπος να κάνεις break από το loop από μέσα. **Μην το χρησιμοποιήσεις**.
