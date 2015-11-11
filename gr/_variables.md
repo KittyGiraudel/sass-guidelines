@@ -13,11 +13,6 @@
 
 Βασικά, δεν υπάρχει λόγος να δηλώσουμε μια μεταβλητή η οποία δεν θα ανανεωθεί ποτέ ή χρησιμοποιείται σε ένα μόνο μέρος.
 
-
-
-
-
-
 ## Scoping
 
 Το scoping των μεταβλητών στη Sass έχει αλλάξει με τα χρόνια. Μέχρι αρκετά πρόσφατα, οι δηλώσεις μεταβλητών μέσα σε ένα σετ κανόνων και σε άλλα scopes ήταν τοπικές από προεπιλογή. Παρ' όλα αυτά όταν υπήρχε ήδη μία global μεταβλητή με το ίδιο όνομα, η τοπική ανάθεση άλλαζε την global μεταβλητή. Από την έκδοση 3.4 και μετά, η Sass χειρίζεται σωστά την έννοια των scopes και δημιουργεί μια καινούρια τοπική μεταβλητή.
@@ -26,147 +21,23 @@
 
 Το ακόλουθο κομμάτι κώδικα εξηγεί την έννοια της *επισκίασης μεταβλητής*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Αρχικοποίησε μια global μεταβλητή σε επίπεδο root.
-$variable: 'initial value';
-
-// Δημιούργησε ένα mixin που παρακάμπτει την global μεταβλητή.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Δημιούργησε μια τοπική μεταβλητή που επισκιάζει την global.
-  $variable: 'local value';
-
-  // Κάνε include το mixin: παρακάμπτει την global μεταβλητή.
-  @include global-variable-overriding;
-
-  // Τύπωσε την τιμή της μεταβλητής.
-  // Είναι η **τοπική** μεταβλητή, εφόσον επισκιάζει την global.
-  content: $variable;
-}
-
-// Τύπωσε την μεταβλητή σε άλλον selector που δεν κάνει επισκίαση.
-// Είναι η **global** μεταβλητή, όπως ήταν αναμενόμενο.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Αρχικοποίησε μια global μεταβλητή σε επίπεδο root.
-$variable: 'initial value'
-
-// Δημιούργησε ένα mixin που παρακάμπτει την global μεταβλητή.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Δημιούργησε μια τοπική μεταβλητή που επισκιάζει την global.
-  $variable: 'local value'
-
-  // Κάνε include το mixin: παρακάμπτει την global μεταβλητή.
-  +global-variable-overriding
-
-  // Τύπωσε την τιμή της μεταβλητής.
-  // Είναι η **τοπική** μεταβλητή, εφόσον επισκιάζει την global.
-  content: $variable
-
-// Τύπωσε την μεταβλητή σε άλλον selector που δεν κάνει επισκίαση.
-// Είναι η **global** μεταβλητή, όπως ήταν αναμενόμενο.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-
-
+{% include snippets/variables/01/index.html %}
 
 ## `!default` flag
 
 Όταν φτιάχνουμε μια βιβλιοθήκη, ένα framework, ένα grid system ή ένα άλλο κομμάτι Sass το οποίο έχουμε σκοπό να το διανείμουμε και να χρησιμοποιηθεί από εξωτερικούς developers, όλες οι μεταβλητές παραμετροποίησης πρέπει να δηλωθούν με το `!default` flag έτσι ώστε να μπορούν να αντικατασταθούν.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
 Χάρη σ' αυτό, ο developer μπορεί να ορίσει τη δική του μεταβλητή `$baseline` *προτού* εισάγει την βιλιοθήκη σας χωρίς να επαναπροσδιοριστεί η τιμή του.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Η μεταβλητή του developer
-$baseline: 2em;
-
-// Η δήλωση `$baseline` της βιβλιοθήκης σας
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Η μεταβλητή του developer
-$baseline: 2em
-
-// Η δήλωση `$baseline` της βιβλιοθήκης σας
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-
-
+{% include snippets/variables/03/index.html %}
 
 ## `!global` flag
 
 Το `!global` flag πρέπει μόνο να χρησιμοποιείται όταν παρακάπτουμε μία global μεταβλητή από ένα τοπικό scope. Όταν δηλώνουμε μια μεταβλητή σε επίπεδο root, το `!global` flag πρέπει να παραλείπεται.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$baseline: 2em;
-
-// Nope
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$baseline: 2em
-
-// Nope
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
-
-
-
-
-
+{% include snippets/variables/04/index.html %}
 
 ## Πολλαπλές μεταβλητές ή maps
 
@@ -174,47 +45,4 @@ $baseline: 2em !global
 
 Ένα ακόμη πλεονέκτημα χρήσης maps είναι η δυνατότητα δημιουργίας μιας μικρής getter συνάρτησης για να παρέχουμε ένα πιο φιλικό API. Για παράδειγμα, δείτε τον παρακάτω κώδικα Sass:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer's name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer's name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Z-indexes map, gathering all Z layers of the application
-/// @access private
-/// @type Map
-/// @prop {String} key - Layer's name
-/// @prop {Number} value - Z value mapped to the key
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Get a z-index value from a layer name
-/// @access public
-/// @param {String} $layer - Layer's name
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}
