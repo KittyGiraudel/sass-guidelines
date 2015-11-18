@@ -52,6 +52,21 @@ fr:
     - name: Pierre Choffé
       link: http://la-cascade.ghost.io
 
+gr:
+  version: 1.0.0
+  label: Greek
+  prefix: /gr/
+  available: true
+  translators:
+    - name: Kostantinos Margaritis
+      link: https://github.com/margaritis
+    - name: Adonis K.
+      link: https://github.com/varemenos
+    - name: Mod Kaffes
+      link: https://github.com/modkaffes
+    - name: Sébastien Nikolaou
+      link: https://github.com/sebdesign
+
 ko:
   version: 1.1.0
   label: Korean
@@ -108,18 +123,3 @@ zh:
       link: http://www.w3cplus.com
     - name: Sean Sun
       link: https://github.com/pinggod
-
-gr:
-  version: 1.0.0
-  label: Greek
-  prefix: /gr/
-  available: true
-  translators:
-    - name: Kostantinos Margaritis
-      link: https://github.com/margaritis
-    - name: Adonis K.
-      link: https://github.com/varemenos
-    - name: Mod Kaffes
-      link: https://github.com/modkaffes
-    - name: Sébastien Nikolaou
-      link: https://github.com/sebdesign
