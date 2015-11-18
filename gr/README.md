@@ -8,7 +8,7 @@
 
 ## Common translations
 
-| English                      | Ελληνικά                 |
+| English                      | Ελληνικά                |
 |------------------------------|-------------------------|
 | _english word or expression_ | appropriate translation |
 
