@@ -10,8 +10,47 @@
 
 | English                      | Ελληνικά                |
 |------------------------------|-------------------------|
-| _english word or expression_ | appropriate translation |
+| to crash                     | διακόπτεται              |
 
 ## Non-translatable words and expressions
 
-* List of words or expressions that should not be translated in the language
+* Sass
+* Scss
+* guidelines
+* preprocessor
+* postprocessor
+* polyfill
+* developer
+* indentation
+* compiler
+* attribute
+* block
+* conditional statement
+* directive
+* documentation
+* flag
+* global
+* grid system
+* hack
+* key
+* list
+* local
+* magic number
+* map
+* mixin
+* project
+* root
+* rule
+* ruleset
+* scope
+* selector
+* slash
+* stylesheet
+* carousel
+* cover
+* dropdown
+* header
+* footer
+* sidebar
+* theme
+* UI
