@@ -14,43 +14,43 @@
 
 ## Non-translatable words and expressions
 
-* Sass
-* Scss
-* guidelines
-* preprocessor
-* postprocessor
-* polyfill
-* developer
-* indentation
-* compiler
 * attribute
 * block
+* carousel
+* compiler
 * conditional statement
+* cover
+* developer
 * directive
 * documentation
+* dropdown
 * flag
+* footer
 * global
 * grid system
+* guidelines
 * hack
+* header
+* indentation
 * key
 * list
 * local
 * magic number
 * map
 * mixin
+* polyfill
+* postprocessor
+* preprocessor
 * project
 * root
 * rule
 * ruleset
+* Sass
 * scope
+* Scss
 * selector
+* sidebar
 * slash
 * stylesheet
-* carousel
-* cover
-* dropdown
-* header
-* footer
-* sidebar
 * theme
 * UI
