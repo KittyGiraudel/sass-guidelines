@@ -6,7 +6,7 @@
 /// @access public
 /// @author HugoGiraudel
 /// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
+/// @param {*} $value - Ακατέργαστη τιμή CSS
 /// @param {List} $prefixes - Λίστα απο prefixes για παραγωγή
 @mixin prefix($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
@@ -23,7 +23,7 @@
 /// @access public
 /// @author HugoGiraudel
 /// @param {String} $property - Unprefixed CSS property
-/// @param {*} $value - Raw CSS value
+/// @param {*} $value - Ακατέργαστη τιμή CSS
 /// @param {List} $prefixes - Λίστα απο prefixes για παραγωγή
 =prefix($property, $value, $prefixes: ())
   @each $prefix in $prefixes
