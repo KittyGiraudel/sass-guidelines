@@ -108,3 +108,13 @@ zh:
       link: http://www.w3cplus.com
     - name: Sean Sun
       link: https://github.com/pinggod
+
+
+fa:
+  version: 1.2.0
+  label: farsi
+  prefix: /fa/
+  available: true
+  translators:
+    - name: Mojtaba Rahimi
+      link: https://github.com/Mojtabarahimi8/
