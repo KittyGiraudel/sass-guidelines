@@ -180,3 +180,19 @@ zh:
     order-poll: "图表展示了开发者排列 CSS 声明顺序的方式"
     sassdoc: "本文档由 SassDoc 生成"
     wallpaper: "壁纸来源自 [Julien He](https://twitter.com/julien_he)"
+
+
+fa:
+  donate:
+    content: "اگر از این دستورالعمل های Sass لذت بردید ، خب ازش حمایت کنید."
+    button: "حمایت از این پروژه"
+  baseline:
+    content: "یک پروژه شخصی برای نوشتن کدهای Sass زیبا ، قابل مدیریت و مقایس پذیر."
+  footer:
+    content: "ساخته شده با عشق توسط [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "نکته"
+  images:
+    color-functions: "انتخاب رنگ ها و تصاویر توسط [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "نموداری که نشون میده چطور توسعه دهندگان دستورات CSS رو مرتب کنن."
+    sassdoc: "تولید مستندات توسط SassDoc"
+    wallpaper: "عکس والپیپر از [Julien He](https://twitter.com/julien_he)"
