@@ -5,11 +5,6 @@
 
 Παρόλα αυτά η συμβουλή μου είναι να ελαχιστοποιήσεις τον αριθμό των εξαρτήσεων στα απολύτως απαραίτητα. Το να διαχειρίζεσαι εξαρτήσεις είναι ένας μπελάς στον οποίο δεν θέλεις να μπλέξεις. Επίσης, η ανάγκη για εξωτερικές εξαρτήσεις στη Sass είναι μικρή έως ανύπαρκτη.
 
-
-
-
-
-
 ## Compass
 
 Το [Compass](http://compass-style.org/) είναι το κυριότερο Sass framework που κυκλοφορεί. Έχοντας αναπτυχθεί από τον [Chris Eppstein](https://twitter.com/chriseppstein), έναν από τους δύο βασικούς σχεδιαστές της Sass, δεν το βλέπω να χάνει δραματικά σε δημοτικότητα για το επόμενο διάστημα, αν θέλεις τη γνώμη μου.
@@ -26,18 +21,11 @@
   <p>Η Ruby Sass δέχεται αυτή τη στιγμή σημαντικές βελτιστοποιήσεις που στοχεύουν συγκριμένα στα styles που περιέχουν πολλή λογική με πολλές συναρτήσεις και mixins. Αυτές θα βελτιώσουν δραματικά την απόδοση σε σημείο που το Compass και άλλα frameworks δεν θα καθυστερούν πια τη Sass.</p>
 </div>
 
+###### Περαιτέρω ανάγνωση
 
-
-### Περαιτέρω ανάγνωση
-
-* [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
+* [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
-
-
-
-
-
 
 ## Συστήματα Grid
 
@@ -51,28 +39,16 @@
 
 Αλλιώς μπορείς να απευθυνθείς σε κάτι πιο απλό, όπως το [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Τελικά, η επιλογή δεν θα έχει σημαντικό αντίκτυπο στο δικό σου στυλ κώδικα, οπότε είναι λίγο πολύ στο χέρι σου ποιο θα διαλέξεις.
 
+###### Περαιτέρω ανάγνωση
 
-
-
-
-
-### Περαιτέρω ανάγνωση
-
-* [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
-* [Susy](http://susy.oddbird.net/)
 * [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
 * [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
 * [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
-* [Bootstrap's Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
+* [Bootstrap’s Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
 * [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
-
-
-
-
 
 ## SCSS-lint
 
@@ -82,18 +58,15 @@
 
 Ευτυχώς, οι προτεινόμενες ρυθμίσεις του SCSS-lint είναι αρκετά παρόμοιες με αυτές που περιγράφονται στο παρόν έγγραφο. Αν θέλεις να παραμετροποιήσεις το SCSS-lint σύμφωνα με τα Sass Guidelines, προτείνω το ακόλουθο setup:
 
-{% include scss-lint-configuration.html %}
+{% include snippets/tools/01/index.html %}
 
 <div class="note">
   <p>Αν θέλεις να ενσωματώσεις έλεγχο της SCSS στην διακασία Grunt build, θα χαρείς να μάθεις ότι υπάρχει ένα Grunt plugin γι' αυτό το σκοπό που λέγεται <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Επίσης αν ψάχνεις μια ωραία εφαρμογή που να δουλεύει με το SCSS-lint και παρόμοια εργαλεία, οι τύποι στην <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) δουλεύουν πάνω στο <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
+###### Περαιτέρω ανάγνωση
 
-
-### Περαιτέρω ανάγνωση
-
-* [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
 * [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)
 * [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
