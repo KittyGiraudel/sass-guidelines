@@ -1,9 +1,9 @@
 
-# Tools
+# Εργαλεία
 
-What's nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Το καλό με έναν CSS preprocessor τόσο δημοφιλή όσο η Sass είναι ότι έχει ένα ολόκληρο οικοσύστημα από frameworks, plugins, βιβλιοθήκες και εργαλεία. Μετά από 8 χρόνια ύπαρξης, κοντεύουμε όλο και περισσότερο στο σημείο που [οτιδήποτε μπορεί να γραφτεί σε Sass, έχει γραφτεί σε Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-However my advice would to be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don't want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
+Παρόλα αυτά η συμβουλή μου είναι να ελαχιστοποιήσεις τον αριθμό των εξαρτήσεων στα απολύτως απαραίτητα. Το να διαχειρίζεσαι εξαρτήσεις είναι ένας μπελάς στον οποίο δεν θέλεις να μπλέξεις. Επίσης, η ανάγκη για εξωτερικές εξαρτήσεις στη Sass είναι μικρή έως ανύπαρκτη.
 
 
 
@@ -12,23 +12,23 @@ However my advice would to be to lower the number of dependencies to the strict 
 
 ## Compass
 
-[Compass](http://compass-style.org/) is the main Sass framework out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don't see it dramatically losing in popularity for a while, if you want my opinion.
+Το [Compass](http://compass-style.org/) είναι το κυριότερο Sass framework που κυκλοφορεί. Έχοντας αναπτυχθεί από τον [Chris Eppstein](https://twitter.com/chriseppstein), έναν από τους δύο βασικούς σχεδιαστές της Sass, δεν το βλέπω να χάνει δραματικά σε δημοτικότητα για το επόμενο διάστημα, αν θέλεις τη γνώμη μου.
 
-Still, I do not use Compass anymore, the main reason is that it slows Sass down a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it doesn't really help.
+Όμως, δεν χρησιμοποιώ το Compass πια, κυρίως επειδή καθυστερεί πολύ την Sass. Η Ruby Sass είναι αρκετά αργή από μόνη της, οπότε το να προσθέτουμε περισσότερη Ruby και περισσότερη Sass δεν βοηθάει.
 
-The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the tip of the iceberg. Math functions, image helpers, spriting... There is so much that can be done with this great piece of software.
+Το θέμα είναι ότι χρησιμοποιούμε πολύ λίγο από το όλο framework. Το Compass είναι τεράστιο. Τα mixins για συμβατότητα μεταξύ των browsers είναι απλά η κορυφή του παγόβουνου. Μαθηματικές συναρτήσεις, βοηθοί εικόνας, εργαλεία για sprites... Υπάρχουν ένα σωρό πράγματα που μπορούν να γίνουν με αυτό το θαυμάσιο λογισμικό.
 
-Unfortunately, this is all sugar and there is no killer feature in there. An exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+Δυστυχώς, όλα αυτά είναι μικρής σημασίας και δεν υπάρχει κάποιο πραγματικά δυνατό χαρακτηριστικό εκεί μέσα. Μια εξαίρεση θα μπορούσε να γίνει για τον sprite builder που είναι *πραγματικά υπέροχος*, αλλά το [Grunticon](https://github.com/filamentgroup/grunticon) και το [Grumpicon](http://grumpicon.com/) κάνουν την ίδια δουλειά και έχουν το πλεονέκτημα ότι μπορούν να ενσωματωθούν στην διαδικασία του build.
 
-Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough, but I don't think you'll get much from it at the end of the day.
+Τελοσπάντων, δεν απαγορεύω την χρήση του Compass αλλά και ούτε το προτείνω, κυρίως επειδή δεν είναι συμβατό με την LibSass (αν και έχουν γίνει προσπάθειες προς αυτή την κατεύθυνση). Αν αισθάνεσαι καλύτερα χρησιμοποιώντας το, κάντο, αλλά δεν νομίζω ότι θα κερδίσεις πολλά από αυτό τελικά.
 
 <div class="note">
-  <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
+  <p>Η Ruby Sass δέχεται αυτή τη στιγμή σημαντικές βελτιστοποιήσεις που στοχεύουν συγκριμένα στα styles που περιέχουν πολλή λογική με πολλές συναρτήσεις και mixins. Αυτές θα βελτιώσουν δραματικά την απόδοση σε σημείο που το Compass και άλλα frameworks δεν θα καθυστερούν πια τη Sass.</p>
 </div>
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
@@ -39,21 +39,24 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
 
 
 
-## Grid systems
+## Συστήματα Grid
 
-Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+Το να μην χρησιμοποιείς ένα σύστημα grid δεν είναι πλέον επιλογή τώρα που το Responsive Web Design είναι παντού. Για να κάνουμε τα designs να φαίνονται ομοιόμορφα και σταθερά σε όλα τα μεγέθη, χρησιμοποιούμε κάποιου είδους grid για να τοποθετούμε τα αντικείμενα. Για να αποφύγουμε να γράφουμε τον κώδικα του grid ξανά και ξανά, μερικά λαμπρά μυαλά έκαναν τα δικά τους grid επαναχρησιμοποιήσιμα.
 
-Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers' speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That's right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+Για να το θέσω σαφώς: Δεν πολυσυμπαθώ τα συστήματα grid. Φυσικά και βλέπω τις προοπτικές, αλλά νομίζω ότι τα περισσότερα από αυτά είναι τελείως υπερβολικά και χρησιμοποιούνται κυρίως για να σχεδιάζουμε κόκκινες στήλες σε λευκό φόντο στις σημειώσεις ομιλιών κάποιων φυτών designers. Πότε ήταν η τελευταία φορά που σκέφτηκες *πάλι καλά που έχω αυτό το εργαλείο για να στήσω αυτό το 2-5-3.1-π grid*; Πολύ σωστά, ποτέ. Επειδή τις περισσότερες φορές, απλά θέλεις το συνηθισμένο κανονικό grid με 12 στήλες, τίποτα φανταχτερό.
 
-If you are using a CSS framework for your project like [Bootstrap](http://getbootstrap.com/) or [Foundation](http://foundation.zurb.com/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
+Αν χρησιμοποιείς ένα CSS framework για το project σου όπως το [Bootstrap](http://getbootstrap.com/) ή το [Foundation](http://foundation.zurb.com/), κατά πάσα πιθανότητα αυτό εμπεριέχει ήδη ένα σύστημα grid και σε αυτή την περίπτωση συνιστώ να το χρησιμοποιήσεις για να αποφύγεις να ασχοληθείς με ακόμα μία εξάρτηση.
 
-If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases&mdash;even the most nifty ones&mdash;will be covered. If you ask me, Susy has a slightly better community, but that's my opinion.
+Αν δεν είσαι προσκολλημένος σε ένα συγκεκριμένο σύστημα grid, θα χαρείς να μάθεις ότι υπάρχουν δύο κορυφαίες μηχανές grid γραμμένες σε Sass: το [Susy](http://susy.oddbird.net/) και το [Singularity](http://singularity.gs/). Και οι δύο κάνουν πολλά περισσότερα από ότι θα χρειαστείς ποτέ οπότε μπορείς να διαλέξεις αυτήν που προτιμάς μεταξύ των δύο και να είσαι σίγουρος ότι όλες οι ακραίες περιπτώσεις σου&mdash;ακόμη και οι πιο παράξενες&mdash;θα έχουν καλυφθεί. Αν με ρωτάς, το Suzy έχει λίγο καλύτερη κοινότητα, αλλά αυτή είναι απλά η γνώμη μου.
 
-Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
+Αλλιώς μπορείς να απευθυνθείς σε κάτι πιο απλό, όπως το [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Τελικά, η επιλογή δεν θα έχει σημαντικό αντίκτυπο στο δικό σου στυλ κώδικα, οπότε είναι λίγο πολύ στο χέρι σου ποιο θα διαλέξεις.
 
 
 
-### Further reading
+
+
+
+### Περαιτέρω ανάγνωση
 
 * [Singularity](http://singularity.gs/)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -73,22 +76,22 @@ Or you can head over to something a bit more casual, like [csswizardry-grids](ht
 
 ## SCSS-lint
 
-Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody's perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+Ο έλεγχος (lint) του κώδικα είναι πολύ σημαντικός. Συνήθως, το να ακολουθείς οδηγίες από ένα styleguide βοηθάει να ελαχιστοποιηθούν τα λάθη ποιότητας του κώδικα, αλλά κανείς δεν είναι τέλειος και πάντοτε υπάρχουν πράγματα που επιδέχονται βελτίωση. Έτσι μπορείς να πεις ότι ο έλεγχος του κώδικα είναι εξίσου σημαντικός όσο και ο σχολιασμός του.
 
-[SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
+Το [SCSS-lint](https://github.com/causes/scss-lint) είναι ένα εργαλείο που σε βοηθάει να κρατάς τα SCSS αρχεία σου καθαρά και ευανάγνωστα. Είναι πλήρως παραμετροποιήσιμο και εύκολο να ενσωματωθεί στα εργαλεία σου.
 
-Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+Ευτυχώς, οι προτεινόμενες ρυθμίσεις του SCSS-lint είναι αρκετά παρόμοιες με αυτές που περιγράφονται στο παρόν έγγραφο. Αν θέλεις να παραμετροποιήσεις το SCSS-lint σύμφωνα με τα Sass Guidelines, προτείνω το ακόλουθο setup:
 
 {% include scss-lint-configuration.html %}
 
 <div class="note">
-  <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) are working on <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Αν θέλεις να ενσωματώσεις έλεγχο της SCSS στην διακασία Grunt build, θα χαρείς να μάθεις ότι υπάρχει ένα Grunt plugin γι' αυτό το σκοπό που λέγεται <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>Επίσης αν ψάχνεις μια ωραία εφαρμογή που να δουλεύει με το SCSS-lint και παρόμοια εργαλεία, οι τύποι στην <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) δουλεύουν πάνω στο <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 
 
-### Further reading
+### Περαιτέρω ανάγνωση
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
