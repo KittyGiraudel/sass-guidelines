@@ -14,14 +14,14 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   display: block;
   overflow: hidden;
   padding: 0 1em;
 }
 
-// Όχι
+// Nope
 .foo {
     display: block; overflow: hidden;
 
@@ -63,25 +63,25 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
 
-// Όχι
+// Nope
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
 
-// Όχι
+// Nope
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 $font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
 
-// Όχι
+// Nope
 $font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
 
-// Όχι
+// Nope
 $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 {% endhighlight %}
   </div>
@@ -96,12 +96,12 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   background-image: url('/images/kittens.jpg');
 }
 
-// Όχι
+// Nope
 .foo {
   background-image: url(/images/kittens.jpg);
 }
@@ -109,11 +109,11 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo
   background-image: url('/images/kittens.jpg')
 
-// Όχι
+// Nope
 .foo
   background-image: url(/images/kittens.jpg)
 {% endhighlight %}
@@ -144,13 +144,13 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   padding: 2em;
   opacity: 0.5;
 }
 
-// Όχι
+// Nope
 .foo {
   padding: 2.0em;
   opacity: .5;
@@ -159,12 +159,12 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo
   padding: 2em
   opacity: 0.5
 
-// Όχι
+// Nope
 .foo
   padding: 2.0em
   opacity: .5
@@ -181,19 +181,19 @@ $font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 $length: 0;
 
-// Όχι
+// Nope
 $length: 0em;
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 $length: 0
 
-// Όχι
+// Nope
 $length: 0em
 {% endhighlight %}
   </div>
@@ -208,10 +208,10 @@ $length: 0em
 {% highlight scss %}
 $value: 42;
 
-// Ναι
+// Yep
 $length: $value * 1px;
 
-// Όχι
+// Nope
 $length: $value + px;
 {% endhighlight %}
   </div>
@@ -219,10 +219,10 @@ $length: $value + px;
 {% highlight sass %}
 $value: 42
 
-// Ναι
+// Yep
 $length: $value * 1px
 
-// Όχι
+// Nope
 $length: $value + px
 {% endhighlight %}
   </div>
@@ -266,10 +266,10 @@ $value: 0px + 1in
 {% highlight scss %}
 $length: 42px;
 
-// Ναι
+// Yep
 $value: $length / 1px;
 
-// Όχι
+// Nope
 $value: str-slice($length + unquote(''), 1, 2);
 {% endhighlight %}
   </div>
@@ -277,10 +277,10 @@ $value: str-slice($length + unquote(''), 1, 2);
 {% highlight sass %}
 $length: 42px
 
-// Ναι
+// Yep
 $value: $length / 1px
 
-// Όχι
+// Nope
 $value: str-slice($length + unquote(''), 1, 2)
 {% endhighlight %}
   </div>
@@ -297,12 +297,12 @@ $value: str-slice($length + unquote(''), 1, 2)
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   width: (100% / 3);
 }
 
-// Όχι
+// Nope
 .foo {
   width: 100% / 3;
 }
@@ -310,11 +310,11 @@ $value: str-slice($length + unquote(''), 1, 2)
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo
   width: (100% / 3)
 
-// Όχι
+// Nope
 .foo
   width: 100% / 3
 {% endhighlight %}
@@ -387,12 +387,12 @@ For starters, keywords often speak for themselves. The HSL representation is not
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   color: red;
 }
 
-// Όχι
+// Nope
 .foo {
   color: #FF0000;
 }
@@ -400,11 +400,11 @@ For starters, keywords often speak for themselves. The HSL representation is not
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo
   color: red
 
-// Όχι
+// Nope
 .foo
   color: #FF0000
 {% endhighlight %}
@@ -416,13 +416,13 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo {
   color: rgba(0, 0, 0, 0.1);
   background: hsl(300, 100%, 100%);
 }
 
-// Όχι
+// Nope
 .foo {
   color: rgba(0,0,0,0.1);
   background: hsl( 300, 100%, 100% );
@@ -431,12 +431,12 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo
   color: rgba(0, 0, 0, 0.1)
   background: hsl(300, 100%, 100%)
 
-// Όχι
+// Nope
 .foo
   color: rgba(0,0,0,0.1)
   background: hsl( 300, 100%, 100% )
@@ -580,43 +580,43 @@ Lists should respect the following guidelines:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 $font-stack: 'Helvetica', 'Arial', sans-serif;
 
-// Όχι
+// Nope
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif;
 
-// Όχι
+// Nope
 $font-stack: 'Helvetica' 'Arial' sans-serif;
 
-// Όχι
+// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif);
 
-// Όχι
+// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 $font-stack: 'Helvetica', 'Arial', sans-serif
 
-// Όχι (since it is not supported)
+// Nope (since it is not supported)
 $font-stack:
   'Helvetica',
   'Arial',
   sans-serif
 
-// Όχι
+// Nope
 $font-stack: 'Helvetica' 'Arial' sans-serif
 
-// Όχι
+// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif)
 
-// Όχι
+// Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif,)
 {% endhighlight %}
   </div>
@@ -629,10 +629,10 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 {% highlight scss %}
 $shadows: 0 42px 13.37px hotpink;
 
-// Ναι
+// Yep
 $shadows: append($shadows, $shadow, comma);
 
-// Όχι
+// Nope
 $shadows: $shadows, $shadow;
 {% endhighlight %}
   </div>
@@ -640,10 +640,10 @@ $shadows: $shadows, $shadow;
 {% highlight sass %}
 $shadows: 0 42px 13.37px hotpink
 
-// Ναι
+// Yep
 $shadows: append($shadows, $shadow, comma)
 
-// Όχι
+// Nope
 $shadows: $shadows, $shadow
 {% endhighlight %}
   </div>
@@ -680,29 +680,29 @@ Illustration:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
   'large': 1200px,
 );
 
-// Όχι
+// Nope
 $breakpoints: ( small: 767px, medium: 992px, large: 1200px );
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 $breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
 
-// Όχι
+// Nope
 $breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
 
-// Όχι
+// Nope
 $breakpoints: (small: 767px, medium: 992px, large: 1200px,)
 
-// Όχι (since it is not supported)
+// Nope (since it is not supported)
 $breakpoints: (
   'small': 767px,
   'medium': 992px,
@@ -827,7 +827,7 @@ Illustration:
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-// Ναι
+// Yep
 .foo, .foo-bar,
 .baz {
   display: block;
@@ -835,7 +835,7 @@ Illustration:
   margin: 0 auto;
 }
 
-// Όχι
+// Nope
 .foo,
 .foo-bar, .baz {
     display: block;
@@ -845,14 +845,14 @@ Illustration:
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Ναι
+// Yep
 .foo, .foo-bar,
 .baz
   display: block
   overflow: hidden
   margin: 0 auto
 
-// Όχι
+// Nope
 .foo,
 .foo-bar, .baz
     display: block
