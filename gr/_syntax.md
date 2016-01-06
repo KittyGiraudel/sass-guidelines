@@ -47,23 +47,23 @@
 
 ### Strings as CSS values
 
-Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+Ορισμένες τιμές CSS όπως το `initial` ή το `sans-serif` απαιτούν να μην έχουν εισαγωγικά. Πράγματι, η δήλωση `font-family: 'sans-serif'` θα αποτύχει χωρίς προειδοποίηση επειδή η CSS περιμένει ένα identifier, όχι ένα string σε εισαγωγικά. Εξαιτίας αυτού, δεν βάζουμε εισαγωγικά σε αυτές τις τιμές.
 
 {% include snippets/syntax/04/index.html %}
 
-Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
+Συνεπώς, μπορούμε να κάνουμε μια διάκριση μεταξύ strings που προορίζονται για χρήση ως τιμές CSS (CSS identifiers) όπως στο προηγούμενο παράδειγμα, και strings όταν παραμένουμε σε τύπο αρχείου Sass, για παράδειγμα map keys.
 
-We don't quote the former, but we do wrap the latter in single quotes.
+Δεν βάζουμε εισαγωγικά στα πρώτα, όμως στα δεύτερα βάζουμε μονά εισαγωγικά.
 
-### Strings containing quotes
+### Strings που περιέχουν εισαγωγικά
 
-If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+Αν ένα string περιέχει ένα ή περισσότερα μονά εισαγωγικά, μπορεί κανείς να περικλείσει το string σε διπλά εισαγωγικά (`"`), για να αποφύγει να κάνει escape σε πολλούς χαρακτήρες μέσα στο string.
 
 {% include snippets/syntax/05/index.html %}
 
 ### URLs
 
-URLs should be quoted as well, for the same reasons as above:
+Τα URL θα πρέπει επίσης να έχουν εισαγωγικά, για τους ίδιους λόγους με παραπάνω:
 
 {% include snippets/syntax/06/index.html %}
 
@@ -114,17 +114,17 @@ URLs should be quoted as well, for the same reasons as above:
 
 Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις.
 
-### Calculations
+### Υπολογισμοί
 
-**Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
+**Οι αριθμητικοί υπολογισμοί υψηλότερου επιπέδου πρέπει πάντα να βρίσκονται μέσα σε παρενθέσεις**. Αυτή η απαίτηση όχι μόνο βελτιώνει δραματικά την αναγνωσιμότητα, αλλά προλαμβάνει και κάποιες ακραίες περιπτώσεις υποχρεώνοντας την Sass να χρησιμοποιήσει τις τιμές των περιεχομένων των παρενθέσεων.
 
 {% include snippets/syntax/12/index.html %}
 
-### Magic numbers
+### Μαγικοί αριθμοί
 
-"Magic number" is an [old school programming](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it’s just a random number that happens to *just work*™ yet is not tied to any logical explanation.
+Ο "Μαγικός αριθμός" είναι ένας όρος της [παλιάς σχολής προγραμματισμού](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) για την *unnamed αριθμητική σταθερά*. Βασικά, είναι απλά ένας τυχαίος αριθμός ο οποίος συμβαίνει *απλά να δουλεύει* (*just work*™) ενώ δεν συνδέεται με καμία λογική εξήγηση.
 
-Needless to say **magic numbers are a plague and should be avoided at all costs**. When you cannot manage to find a reasonable explanation for why a number works, add an extensive comment explaining how you got there and why you think it works. Admitting you don’t know why something works is still more helpful to the next developer than them having to figure out what’s going on from scratch.
+Περιττό να πω ότι **οι μαγικοί αριθμοί είναι κατάρα και πρέπει να αποφεύγονται πάση θυσία**. Όταν δεν καταφέρνεις να βρεις μια λογική εξήγηση γιατί ένας αριθμός λειτουργεί, πρόσθεσε ένα εκτενές σχόλιο που να εξηγεί πώς έφτασες εκεί και γιατί πιστεύεις ότι λειτουργεί. Το να παραδεχτείς ότι δεν ξέρεις για ποιο λόγο λειτουργεί κάτι, είναι πιο βοηθητικό για τον επόμενο developer από το να τον αφήσεις να καταλάβει μόνος του από το μηδέν τι συμβαίνει.
 
 {% include snippets/syntax/13/index.html %}
 
