@@ -45,7 +45,7 @@
   <p>Σύμφωνα με τις προδιαγραφές της CSS, το <code>@charset</code> directive πρέπει να δηλώνεται με διπλά εισαγωγικά <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">για να θεωρείται έγκυρο</a>. Παρόλα αυτά, η Sass φροντίζει γι' αυτό όταν κάνει compile σε CSS οπότε ο τρόπος που θα το γράψεις δεν έχει αντίκτυπο στο τελικό αποτέλεσμα. Μπορείς να μείνεις με ασφάλεια στα μονά εισαγωγικά, ακόμη και για το <code>@charset</code>.</p>
 </div>
 
-### Strings as CSS values
+### Strings σαν τιμές CSS
 
 Ορισμένες τιμές CSS όπως το `initial` ή το `sans-serif` απαιτούν να μην έχουν εισαγωγικά. Πράγματι, η δήλωση `font-family: 'sans-serif'` θα αποτύχει χωρίς προειδοποίηση επειδή η CSS περιμένει ένα identifier, όχι ένα string σε εισαγωγικά. Εξαιτίας αυτού, δεν βάζουμε εισαγωγικά σε αυτές τις τιμές.
 
@@ -135,60 +135,60 @@
 * [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-## Colors
+## Χρώματα
 
-Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Τα χρώματα έχουν σημαντική θέση στη CSS. Φυσικά, η Sass καταλήγει να είναι ένας πολύτιμος σύμμαχος όσον αφορά τη χρήση χρωμάτων, κυρίως προσφέροντας πολλές [δυνατές συναρτήσεις](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-### Color formats
+### Τύποι χρωμάτων
 
-In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
+Για να κάνεις τα χρώματα όσο πιο απλά γίνεται, η συμβουλή μου είναι να τηρήσεις την ακόλουθη σειρά προτίμησης για τους τύπους χρωμάτων:
 
-1. [HSL notation](http://en.wikipedia.org/wiki/HSL_and_HSV);
-1. [RGB notation](http://en.wikipedia.org/wiki/RGB_color_model);
-1. Hexadecimal notation (lowercase and shortened).
+1. [Συμβολισμός HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
+1. [Συμβολισμός RGB](http://en.wikipedia.org/wiki/RGB_color_model);
+1. Δεκαεξαδικός συμβολισμός (με μικρά γράμματα και συντομευμένος).
 
-CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.
+Δεν πρέπει να χρησιμοποιούνται οι λέξεις κλειδιά CSS χρωμάτων, εκτός αν πρόκεται για γρήγορα πρωτότυπα. Πράγματι, είναι αγγλικές λέξεις και μερικές από αυτές δεν περιγράφουν πολύ καλά το χρώμα που αντιπροσωπεύουν, ειδικά για κάποιους που η μητρική τους γλώσσα δεν είναι τα αγγλικά. Εκτός αυτού, οι λέξεις κλειδιά δεν είναι απόλυτα σωστές εννοιολογικά· για παράδειγμα το `grey` (γκρι) είναι στην πραγματικότητα πιο σκούρο από το `darkgrey` (σκούρο γκρι), και η σύγχυση μεταξύ του `grey` και του `gray` μπορεί να οδηγήσει σε αντιφατικές χρήσεις του χρώματος.
 
-The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually.
+Ο συμβολισμός HSL είναι όχι μόνο ο πιο ευκατανόητος για το ανθρώπινο μυαλό, αλλά επίσης διευκολύνει τους συγγραφείς των stylesheet να αλλάξουν το χρώμα, επεμβαίνοντας στα hue (απόχρωση), saturation (κορεσμός), και lightness (φωτεινότητα) ξεχωριστά.
 
-RGB still has the benefit of showing right away if the color is more of a blue, a green or a red. Therefore it might be better than HSL in some situations, especially when describing a pure red, green or blue. Although it does not make it easy to build a color from the three parts.
+Το RGB έχει το πλεονέκτημα του να δείχνει αμέσως αν το χρώμα αποτελείται από περισσότερο μπλε, πράσινο ή κόκκινο. Συνεπώς μπορεί να είναι καλύτερο από το HSL σε ορισμένες περιπτώσεις, ειδικά όταν περιγράφουμε ένα καθαρό κόκκινο, πράσινο ή μπλε. Ωστόσο δεν είναι εύκολο να "χτίσουμε" ένα χρώμα από τα τρία μέρη.
 
-Lastly, hexadecimal is close to indecipherable for the human mind. Use it only as a last resort if you have to.
+Τέλος, το δεκαεξαδικό είναι σχεδόν ακατανόητο για το ανθρώπινο μυαλό. Χρησιμοποίησέ το μόνο σαν τελευταία λύση αν πρέπει.
 
 {% include snippets/syntax/14/index.html %}
 
-When using HSL or RGB notation, always add a single space after a comma (`,`) and no space between parentheses (`(`, `)`) and content.
+Όταν χρησιμοποιείς συμβολισμό HSL ή RGB, πάντα να προσθέτεις ένα κενό μετά το κόμμα (`,`) και καθόλου κενά μεταξύ των παρενθέσεων (`(`, `)`) και του περιεχομένου.
 
 {% include snippets/syntax/15/index.html %}
 
-### Colors and variables
+### Χρώματα και μεταβλητές
 
-When using a color more than once, store it in a variable with a meaningful name representing the color.
+Όταν χρησιμοποιείς ένα χρώμα πάνω από μια φορά, αποθήκευσέ το σε μια μεταβλητή με όνομα που να έχει νόημα και να αντιπροσωπεύει το χρώμα.
 
 {% include snippets/syntax/16/index.html %}
 
-Now you are free to use this variable wherever you want. However, if your usage is strongly tied to a theme, I would advise against using the variable as is. Instead, store it in another variable with a name explaining how it should be used.
+Τώρα είσαι ελεύθερος να χρησιμοποιήσεις τη μεταβλητή όποτε θέλεις. Παρόλα αυτά, αν η χρήση είναι στενά συνδεδεμένη με ένα θέμα, θα πρότεινα να μην χρησιμοποιείται η μεταβλητή όπως είναι. Αντ' αυτού, αποθήκευσέ το σε μια άλλη μεταβλητή με όνομα που να εξηγεί πώς θα έπρεπε να χρησιμοποιείται.
 
 {% include snippets/syntax/17/index.html %}
 
-Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
+Με αυτό τον τρόπο προλαμβάνουμε μια αλλαγή θέματος που να οδηγεί σε κάτι σαν το `$sass-pink: blue`.
 
-### Lightening and darkening colors
+### Κάνοντας τα χρώματα πιο φωτεινά και πιο σκόυρα
 
-Both [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
+Τόσο η συνάρτηση [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) όσο και η [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) τροποποιούν την φωτεινότητα ενός χρώματος στο διάστημα HSL προσθέτοντας ή αφαιρώντας από τη φωτεινότητα σε αυτό το διάστημα. Βασικά, δεν είναι τίποτα παραπάνω από ψευδώνυμα για την παράμετρο `$lightness` της συνάρτησης [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
-The thing is, those functions often do not provide the expected result. On the other hand, the [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) function is a nice way to lighten or darken a color by mixing it with either `white` or `black`.
+Το θέμα είναι ότι αυτές οι συναρτήσεις συχνά δεν παρέχουν το αναμενόμενο αποτέλεσμα. Από την άλλη η συνάρτηση [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) είναι ένας ωραίος τρόπος για να κάνεις πιο φωτεινό ή πιο σκούρο ένα χρώμα αναμιγνύοντάς το είτε με το `white` (άσπρο) ή με το `black` (μαύρο).
 
-The benefit of using `mix` rather than one of the two aforementioned functions is that it will progressively go to black (or white) as you decrease the proportion of the color, whereas `darken` and `lighten` will quickly blow out a color all the way to black or white.
+Το πλεονέκτημα του να χρησιμοποιείς το `mix` αντί για κάποια από τις δύο προαναφερθείσες συναρτήσεις είναι ότι πηγαίνει προοδευτικά στο μαύρο (ή το άσπρο) καθώς μειώνεις το ποσοστό του χρώματος, ενώ το `darken` και το `lighten` υπερκαλύπτουν γρήγορα όλο το χρώμα με μαύρο ή άσπρο.
 
 {% include images/color-functions.html %}
 
-If you don’t want to write the `mix` function every time, you can create two easy-to-use functions `tint` and `shade` (which are also a part of [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) to do the same thing:
+Αν δεν θέλεις να γράφεις τη συνάρτηση `mix` κάθε φορά, μπορείς να δημιουργήσεις δύο εύχρηστες συναρτήσεις, την `tint` και την `shade` (οι οποίες είναι επίσης μέρος του [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) για να κάνεις το ίδιο πράγμα:
 
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
+  <p>Η συνάρτηση <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> είναι σχεδιασμένη έτσι ώστε να αυξομειώνει πιο ομαλά τα properties λαμβάνοντας υπόψη πόσο υψηλά η χαμηλά είναι ήδη. Παράγει αποτελέσματα που είναι το ίδιο όμορφα με τα αποτελέσματα της <code>mix</code> αλλά με πιο καθαρές κλήσεις. Ωστόσο ο συντελεστής προσαύξησης δεν είναι ακριβώς ο ίδιος.</p>
 </div>
 
 ###### Περαιτέρω ανάγνωση
