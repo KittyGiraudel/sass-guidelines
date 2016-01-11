@@ -57,7 +57,7 @@
 
 ### Strings που περιέχουν εισαγωγικά
 
-Αν ένα string περιέχει ένα ή περισσότερα μονά εισαγωγικά, μπορεί κανείς να περικλείσει το string σε διπλά εισαγωγικά (`"`), για να αποφύγει να κάνει escape σε πολλούς χαρακτήρες μέσα στο string.
+Αν ένα string περιέχει ένα ή περισσότερα μονά εισαγωγικά, μπορεί κανείς να περικλείσει το string με διπλά εισαγωγικά (`"`), για να αποφύγει να κάνει escape σε πολλούς χαρακτήρες μέσα στο string.
 
 {% include snippets/syntax/05/index.html %}
 
@@ -199,21 +199,21 @@
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
-## Lists
+## Λίστες
 
-Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
+Οι λίστες είναι οι πίνακες της Sass. Μια λίστα είναι μια επίπεδη δομή δεδομένων (σε αντίθεση με τα [maps](#maps)) που έχει σαν σκοπό να αποθηκεύει τιμές οποιουδήποτε τύπου (ακόμη και λίστες, που μας οδηγεί σε εμφωλευμένες λίστες).
 
-Lists should respect the following guidelines:
+Οι λίστες πρέπει να ακολουθούν τα εξής guidelines:
 
-* either inlined or multilines;
-* necessarily on multilines if too long to fit on an 80-character line;
-* unless used as is for CSS purposes, always comma separated;
-* always wrapped in parenthesis;
-* trailing comma if multilines, not if inlined.
+* είτε σε μία σειρά, ή σε πολλές·
+* αναγκαστικά σε πολλές σειρές αν δεν χωράνε σε γραμμή 80 χαρακτήρων·
+* αν δεν χρησιμοποιούνται αυτούσιες για σκοπούς CSS, πάντα να διαχωρίζονται με κόμμα·
+* πάντα να περικλείονται από παρενθέσεις·
+* να έχουν κόμμα στο τέλος της γραμμής αν επεκτείνονται σε πολλές σειρές, να μην έχουν αν είναι στην ίδια σειρά.
 
 {% include snippets/syntax/19/index.html %}
 
-When adding new items to a list, always use the provided API. Do not attempt to add new items manually.
+Όταν προσθέτεις νέα αντικείμενα σε μια λίστα, να χρησιμοποιείς πάντα το παρεχόμενο API. Μην δοκιμάζεις να προσθέσεις νέα αντικείμενα χειροκίνητα.
 
 {% include snippets/syntax/20/index.html %}
 
@@ -224,20 +224,20 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 
 ## Maps
 
-Since Sass 3.3, stylesheet authors can define maps &mdash; the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn’t recommend it) to values of any type.
+Από την Sass 3.3 και μετά, οι συγγραφείς των stylesheet μπορούν να ορίσουν maps &mdash; τον όρο στη Sass για τους #fixme σχετιστικούς πίνακες, τα hash ή ακόμη και τα αντικείμενα Javascript. Το map είναι μια δομή δεδομένων που αντιστοιχίζει κλειδιά (που μπορούν να είναι οποιουδήποτε τύπου δεδομένων, συμπεριλαμβανομένων και των maps αν και δεν θα πρότεινα κάτι τέτοιο) σε τιμές οποιουδήποτε τύπου.
 
-Maps should be written as follows:
+Τα maps πρέπει να είναι γραμμένα ως εξής:
 
-* space after the colon (`:`);
-* opening brace (`(`) on the same line as the colon (`:`);
-* **quoted keys** if they are strings (which represents 99% of the cases);
-* each key/value pair on its own new line;
-* comma (`,`) at the end of each key/value;
-* **trailing comma** (`,`) on last item to make it easier to add, remove or reorder items;
-* closing brace (`)`) on its own new line;
-* no space or new line between closing brace (`)`) and semi-colon (`;`).
+* κενό μετά την άνω και κάτω τελεία (`:`)·
+* άνοιγμα παρένθεσης (`(`) στην ίδια γραμμή με την άνω και κάτω τελεία·
+* **κλειδιά σε εισαγωγικά** αν είναι strings (που αναπαριστά το 99% των περιπτώσεων)·
+* κάθε ζευγάρι κλειδιού/τιμής μόνο του σε νέα σειρά·
+* κόμμα (`,`) στο τέλος κάθε κλειδιού/τιμής·
+* **κόμμα στο τέλος της σειράς** (`,`) του τελευταίου αντικειμένου για να να είναι πιο εύκολο να προσθέσεις, να αφαιρέσεις ή να ανακατατάξεις τα αντικείμενα·
+* κλείσιμο παρένθεσης (`,`) σε νέα, δική της γραμμή·
+* όχι κενό ή νέα γραμμή μεταξύ της τελευταίας παρένθεσης (`)`) και του semi-colon (`;`).
 
-Illustration:
+Παράδειγμα:
 
 {% include snippets/syntax/21/index.html %}
 
@@ -253,31 +253,31 @@ Illustration:
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
-## CSS Ruleset
+## Σετ κανόνων CSS
 
-At this point, this is mostly revising what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines, including [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Σε αυτό το σημείο, αυτό είναι πάνω κάτω μια επανάληψη όσων γνωρίζουν όλοι, αλλά ορίστε πώς πρέπει να γράφεται ένα σετ κανόνων CSS (τουλάχιστον σύμφωνα με τα περισσότερα guidelines, συμπεριλαμβανομένων και των [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-* related selectors on the same line; unrelated selectors on new lines;
-* the opening brace (`{`) spaced from the last selector by a single space;
-* each declaration on its own new line;
-* a space after the colon (`:`);
-* a trailing semi-colon (`;`) at the end of all declarations;
-* the closing brace (`}`) on its own new line;
-* a new line after the closing brace `}`.
+* σχετικοί selectors στην ίδια γραμμή· άσχετοι selectors σε νέες γραμμές·
+* η αγκύλη που ανοίγει τις δηλώσεις (`{`) να χωρίζεται από τον τελευταίο selector με ένα κενό·
+* κάθε δήλωση να είναι σε νέα, δική της γραμμή·
+* ένα κενό μετά την άνω και κάτω τελεία (`:`)·
+* ένα semi-colon (`;`) στο τέλος όλων των δηλώσεων·
+* η αγκύλη που κλείνει τις δηλώσεις (`}`) να είναι σε νέα, δική της γραμμή·
+* μία νέα γραμμή μετά την τελευταία αγκύλη `}`.
 
-Illustration:
+Παράδειγμα:
 
 {% include snippets/syntax/24/index.html %}
 
-Adding to those CSS-related guidelines, we want to pay attention to:
+Επιπρόσθετα με αυτά τα guidelines που είναι σχετικά με CSS, θέλουμε να δώσουμε προσοχή και στα παρακάτω:
 
-* local variables being declared before any declarations, then spaced from declarations by a new line;
-* mixin calls with no `@content` coming before any declaration;
-* nested selectors always coming after a new line;
-* mixin calls with `@content` coming after any nested selector;
-* no new line before a closing brace (`}`).
+* τοπικές μεταβλητές που δηλώνονται πριν από όλες τις δηλώσεις, και χωρίζονται από τις δηλώσεις με μια νέα γραμμή·
+* κλήσεις σε mixin που δεν έχουν `@content` και εμφανίζονται πριν από όλες τις δηλώσεις·
+* στους εμφωλευμένους selectors που εμφανίζονται πάντα μετά από νέα γραμμή·
+* κλήσεις σε mixin που έχουν `@content` και εμφανίζονται μετά από εμφωλευμένο selector·
+* όχι νέα γραμμή πριν την τελευταία αγκύλη (`}`).
 
-Illustration:
+Παράδειγμα:
 
 {% include snippets/syntax/25/index.html %}
 
@@ -285,33 +285,33 @@ Illustration:
 
 * [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
-## Declaration Sorting
+## Ταξινόμηση των δηλώσεων
 
-I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
+Δεν μπορώ να σκεφτώ πολλά θέματα όπου οι απόψεις διίστανται τόσο όσο αυτές που αφορούν την ταξινόμηση των δηλώσεων στη CSS. Συγκεκριμένα, υπάρχουν δύο παρατάξεις εδώ:
 
-* sticking to the alphabetical order;
-* ordering declarations by type (position, display, colors, font, miscellaneous...).
+* παραμονή στην αλβαφητική ταξινόμηση·
+* ταξινόμηση δηλώσεων κατά τύπο (position, display, colors, font, διάφορα...).
 
-There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why should animations appear before the display type? There are a lot of oddities with alphabetical ordering.
+Υπάρχουν πλεονεκτήματα και μειονεκτήματα και στους δύο τρόπους. Από τη μία, η αλφαβητική ταξινόμηση είναι καθολική (τουλάχιστον για τις γλώσσες που χρησιμοποιούν το λατινικό αλφάβητο) και έτσι δεν υπάρχει επιχείρημα για την ταξινόμηση ενός property πριν από ένα άλλο. Παρόλα αυτά μου φαίνεται εξαιρετικά περίεργο να βλέπω properties όπως τα `bottom` και `top` να μην είναι ακριβώς δίπλα το ένα στο άλλο. Γιατί θα 'πρεπε τα animations να εμφανίζονται πριν το display type; Υπάρχουν πολλές παραξενιές με την αλφαβητική ταξινόμηση.
 
 {% include snippets/syntax/26/index.html %}
 
-On the other hand, ordering properties by type makes perfect sense. Every font-related declarations are gathered, `top` and `bottom` are reunited and reading a ruleset kind of feels like reading a short story. But unless you stick to some conventions like [Idiomatic CSS](https://github.com/necolas/idiomatic-css), there is a lot of room for interpretation in this way of doing things. Where would `white-space` go: font or display? Where does `overflow` belong exactly? What is the property order within a group (it could be alphabetical, oh the irony)?
+Από την άλλη, η ταξινόμηση των properties κατά τύπο βγάζει πολύ νόημα. Όλες οι δηλώσεις σχετικές με fonts είναι συγκεντρωμένες, τα `top` και `bottom` επανενώνονται και το διάβασμα ενός ruleset μοιάζει κάπως με το διάβασμα μιας μικρής ιστορίας. Αλλά εκτός αν παραμείνεις σε ορισμένες συμβάσεις όπως το [Idiomatic CSS](https://github.com/necolas/idiomatic-css), υπάρχουν πολλά περιθώρια ερμηνείας σε αυτό τον τρόπο δράσης. Πού θα πήγαινε το `white-space`: στο font ή στο display; Πού ακριβώς ανήκει το `overflow`; Ποια είναι η σειρά των properties μέσα σε ένα γκρουπ (θα μπορούσε να είναι αλφαβητική, τι ειρωνία);
 
 {% include snippets/syntax/27/index.html %}
 
-There is also another interesting subtree of type ordering called [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), that seems to be quite popular as well. Basically, Concentric CSS relies on the box-model to define an order: starts outside, moves inward.
+Υπάρχει επίσης ακόμη ένα ενδιαφέρον υποδένδρο ταξινόμησης κατά τύπο που λέγεται [Ομόκεντρη (Concentric) CSS](https://github.com/brandon-rhodes/Concentric-CSS) και φαίνεται να είναι επίσης αρκετά δημοφιλές. Βασικά, η Ομόκεντρη CSS βασίζεται στο box-model για να για να ορίσει μια σειρά: ξεκινάει από έξω και προχωράει προς τα μέσα.
 
 {% include snippets/syntax/28/index.html %}
 
-I must say I cannot decide myself. A [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determined that over 45% developers order their declarations by type against 14% alphabetically. Also, there are 39% that go full random, including myself.
+Πρέπει να πω ότι ούτε εγώ δεν μπορώ να αποφασίσω. Μία [πρόσφατη δημοσκόπηση στο CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) είχε ως αποτέλεσμα ότι πάνω από το 45% των developers ταξινομεί τις δηλώσεις κατά τύπο ενώ το 14% ταξινομεί αλφαβητικά. Ακόμη, υπάρχει κι ένα 39% που τις ταξινομεί τελείως τυχαία, συμπεριλαμβανομένου και εμού.
 
 {% include images/order-poll.html %}
 
-Because of this, I will not impose a choice in this styleguide. Pick the one you prefer, as long as you are consistent throughout your stylesheets (i.e. not the *random* option).
+Εξαιτίας αυτού, δεν θα επιβάλω κάποια επιλογή σε αυτό το styleguide. Διάλεξε όποια προτιμάς, αρκεί να είσαι σταθερός σε όλα τα stylesheets σου (πχ. όχι την *τυχαία* επιλογή).
 
 <div class="note">
-  <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
+  <p>Μια <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">πρόσφατη έρευνα</a> έδειξε ότι η χρήση του <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (το οποίο χρησιμοποιεί <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ταξινόμηση κατά τύπο</a>) για την ταξινόμηση των δηλώσεων CSS, καταλήγει στη μείωση του μέσου μεγέθους του αρχείου με συμπίεση Gzip κατά 2.7%, έναντι του 1.3% της ταξινόμησης με αλφαβητική σειρά.</p>
 </div>
 
 ###### Περαιτέρω ανάγνωση
@@ -319,65 +319,65 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
-## Selector Nesting
+## Εμφώλευση Selectors
 
-One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others.
+Ένα συγκεκριμένο χαρακτηριστικό που προσφέρει η Sass στο οποίο γίνεται υπερβολική κατάχρηση από τους developers είναι η *εμφώλευση των selectors*. Η εμφώλευση των selectors προσφέρει έναν τρόπο στους συγγραφείς stylesheet για να υπολογίσουν τους μεγάλους selectors εμφωλεύοντας μικρούς selectors μέσα σε άλλους.
 
-### General rule
+### Γενικός κανόνας
 
-For instance, the following Sass nesting:
+Για παράδειγμα, η ακόλουθη εμφώλευση Sass:
 
 {% include snippets/syntax/29/index.html %}
 
-... will generate this CSS:
+... παράγει αυτή τη CSS:
 
 {% include snippets/syntax/30/index.html %}
 
-Along the same lines, since Sass 3.3 it is possible to use the current selector reference (`&`) to generate advanced selectors. For instance:
+Παρομοίως, από την Sass 3.3 και μετά είναι δυνατόν να χρησιμοποιήσεις την αναφορά στον τρέχοντα selector (`&`) για να παράγεις εξειδικευμένους selectors. Για παράδειγμα:
 
 {% include snippets/syntax/31/index.html %}
 
-... will generate this CSS:
+... παράγει αυτή τη CSS:
 
 {% include snippets/syntax/32/index.html %}
 
-This method is often used along with [BEM naming conventions](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) to generate `.block__element` and `.block--modifier` selectors based on the original selector (i.e. `.block` in this case).
+Αυτή η μέθοδος χρησιμοποιείται συχνά μαζί με τις [Συνθήκες ονομασίας BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) για να παράγει selectors `.block__element` και `.block--modifier` βασισμένους στον αρχικό selector (πχ. `.block` σε αυτή την περίπτωση).
 
 <div class="note">
-  <p>While it might be anecdotal, generating new selectors from the current selector reference (<code>&</code>) makes those selectors unsearchable in the codebase since they do not exist per se.</p>
+  <p>Μπορεί να είναι ανεπίσημο, αλλά η παραγωγή νέων selectors με αναφορά στον τρέχοντα selector (<code>&</code>) καθιστά αδύνατη την αναζήτηση αυτών των selectors στην codebase αφού δεν υπάρχουν καθ' εαυτοί.</p>
 </div>
 
-The problem with selector nesting is that it ultimately makes code more difficult to read. One has to mentally compute the resulting selector out of the indentation levels; it is not always quite obvious what the CSS will end up being.
+Το πρόβλημα με την εμφώλευση των selectors είναι ότι τελικά κάνει τον κώδικα πιο δύσκολο στην ανάγνωση. Πρέπει κανείς να υπολογίσει νοητά τον selector που παράγεται από τα επίπεδα εμφώλευσης· δεν είναι πάντα αρκετά εμφανές τι θα καταλήξει να είναι η CSS.
 
-This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what’s going on anymore is so high that it is not worth it.
+Αυτή η δήλωση αληθεύει όλο και περισσότερο όσο οι selectors γίνονται μακρύτεροι και οι αναφορές στον τρέχοντα selector (`&`) όλο και συχνότερες. Σε ένα σημείο, ο κίνδυνος να μην μπορείς να παρακολουθήσεις και να μην καταλαβαίνεις πια τι συμβαίνει είναι τόσο υψηλός που δεν αξίζει τον κόπο.
 
-To prevent such a situation, we **avoid selector nesting as much as possible**. However, there are obviously a few exceptions to this rule.
+Για να αποφύγουμε μια τέτοια κατάσταση, **αποφεύγουμε την εμφώλευση των selectors όσο το δυνατόν περισσότερο**. Παρόλα αυτά, προφανώς υπάρχουν μερικές εξαιρέσεις σε αυτόν τον κανόνα.
 
-### Exceptions
+### Εξαιρέσεις
 
-For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
+Για αρχή, επιτρέπεται και ακόμη προτείνεται να εμφωλεύεις τα pseudo-classes και pseudo-elements μέσα στον αρχικό selector.
 
 {% include snippets/syntax/33/index.html %}
 
-Using selector nesting for pseudo-classes and pseudo-elements not only makes sense (because it deals with closely related selectors), it also helps keep everything about a component at the same place.
+Η χρήση εμφώλευσης των selectors για pseudo-classes και pseudo-elements όχι μόνο βγάζει νόημα (επειδή έχει να κάνει με στενά συνδεδεμένους selectors), αλλά και επειδή βοηθάει στο να κρατήσεις τα πάντα σχετικά με ένα component στο ίδιο σημείο.
 
-Also, when using component-agnostic state classes such as `.is-active`, it is perfectly fine to nest it under the component’s selector to keep things tidy.
+Ακόμη, όταν χρησιμοποιείς classes κατάστασης όπως το `.is-active` που δεν έχουν να κάνουν με ένα μόνο component, είναι απολύτως εντάξει να το εμφωλεύσεις κάτω από τον selector του component για να κρατήσεις τα πράγματα τακτοποιημένα.
 
 {% include snippets/syntax/34/index.html %}
 
-Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
+Τελευταίο αλλά εξίσου σημαντικό, όταν γράφεις τα styles για ένα element επειδή τυχαίνει να εμπεριέχεται σε ένα άλλο συγκεκριμένο element, είναι επίσης εντάξει να χρησιμοποιήσεις εμφώλευση για να κρατήσεις τα πάντα σχετικά με αυτό το component στο ίδιο σημείο.
 
 {% include snippets/syntax/35/index.html %}
 
-When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
+Όταν δουλεύεις με developers που δεν έχουν εμπειρία, ένας selector όπως `.no-opacity &` μπορεί να φαίνεται λίγο περίεργος. Για να αποφύγεις οποιαδήποτε σύγχυση, μπορείς να φτιάξεις ένα πολύ μικρό mixin που μετατρέπει αυτή την περίεργη σύνταξη σε ένα σαφές API.
 
 {% include snippets/syntax/36/index.html %}
 
-Rewriting our previous example, it would look like this:
+Ξαναγράφοντας το προηγούμενο παράδειγμα, θα έμοιαζε κάπως έτσι:
 
 {% include snippets/syntax/37/index.html %}
 
-As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
+Όπως με όλα, οι λεπτομέρειες είναι κάπως άσχετες, η συνέπεια είναι το κλειδί. Αν αισθάνεσαι εντελώς σίγουρος για την εμφώλευση των selectors, τότε χρησιμοποίησέ την. Απλά σιγουρέψου ότι όλη σου η ομάδα είναι εντάξει με αυτό.
 
 ###### Περαιτέρω ανάγνωση
 
