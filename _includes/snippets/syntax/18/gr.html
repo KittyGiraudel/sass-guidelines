@@ -1,0 +1,43 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Κάνε ένα χρώμα λίγο πιο φωτεινό
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα αλλάξει
+/// @param {Number} $percentage - ποσοστό του `$color` στο χρώμα που επιστρέφεται
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Κάνε ένα χρώμα λίγο πιο σκούρο
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα σκουρύνει
+/// @param {Number} $percentage - ποσοστό του `$color` στο χρώμα που επιστρέφεται
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Κάνε ένα χρώμα λίγο πιο φωτεινό
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα αλλάξει
+/// @param {Number} $percentage - ποσοστό του `$color` στο χρώμα που επιστρέφεται
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix($color, white, $percentage)
+
+/// Κάνε ένα χρώμα λίγο πιο σκούρο
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα σκουρύνει
+/// @param {Number} $percentage - ποσοστό του `$color` στο χρώμα που επιστρέφεται
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix($color, black, $percentage)
+{% endhighlight %}
+  </div>
+</div>
