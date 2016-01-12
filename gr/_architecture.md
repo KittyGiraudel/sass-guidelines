@@ -136,7 +136,7 @@ O γενικός κανόνας του φακέλου αυτού είναι να
 * `_functions.scss`
 * `_placeholders.scss` (συχνά ονομάζεται `_helpers.scss`)
 
-Όταν δουλεύετε σε ένα πολύ μεγάλο project με πολλά utilities, θα μπορούσατε να τα κάνετε group ανάλογα με το θέμα τους αντί για τον τύπο τους, για παράδειγμα typography (`_typography.scss`) theming (`_theming.scss`), κτλ. Κάθε αρχείο περιέχει όλα τα σχετικά helpers: variables, functions, mixins και placeholders. Με αυτόν τον τρόπο μπορεί γίνει ο κώδικας πιο εύκολο να σαν ανάγνωση και την συντήρηση, ειδικά όταν τα αρχεία πάρει πολύ μεγάλο.
+Όταν δουλεύετε σε ένα πολύ μεγάλο project με πολλά utilities, θα μπορούσατε να τα κάνετε group ανάλογα με το θέμα τους αντί για τον τύπο τους, για παράδειγμα typography (`_typography.scss`) theming (`_theming.scss`), κτλ. Κάθε αρχείο περιέχει όλα τα σχετικά helpers: μεταβλητές, functions, mixins και placeholders. Με αυτόν τον τρόπο μπορεί γίνει ο κώδικας πιο εύκολο να σαν ανάγνωση και την συντήρηση, ειδικά όταν τα αρχεία πάρει πολύ μεγάλο.
 
 <div class="note">
   <p>Ο φάκελος <code>utils/</code> θα μπορούσε επίσης να ονομαστεί <code>helpers/</code>, <code>sass-helpers/</code> ή <code>sass-utils/</code>, αναλόγος τι προτιμάται.</p>

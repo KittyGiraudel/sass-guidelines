@@ -16,15 +16,10 @@ $z-indexes: (
 
 /// Πάρε την τιμή του z-index απο το όνομα του επίπεδου
 /// @access public
-/// @param {String} $layer - όνομα του επιπέδου
+/// @param {String} $layer - Το όνομα του επιπέδου
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer) {
-  @if not map-has-key($z-indexes, $layer) {
-    @error 'Δεν υπάρχει επίπεδο με όνομα `#{$layer}` μέσα στα $z-indexes. '
-         + 'Το επίπεδο πρέπει να είναι ένα απο τα #{map-keys($z-indexes)}.';
-  }
-
   @return map-get($z-indexes, $layer);
 }
 {% endhighlight %}
@@ -40,14 +35,10 @@ $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 
 /// Πάρε την τιμή του z-index απο το όνομα του επίπεδου
 /// @access public
-/// @param {String} $layer - όνομα του επιπέδου
+/// @param {String} $layer - Το όνομα του επιπέδου
 /// @return {Number}
 /// @require $z-indexes
 @function z($layer)
-  @if not map-has-key($z-indexes, $layer)
-    @error 'Δεν υπάρχει επίπεδο με όνομα `#{$layer}` μέσα στα $z-indexes. '
-         + 'Το επίπεδο πρέπει να είναι ένα απο τα #{map-keys($z-indexes)}.'
-
   @return map-get($z-indexes, $layer)
 {% endhighlight %}
   </div>
