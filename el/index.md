@@ -1,6 +1,6 @@
 ---
 layout: default
-language: gr
+language: el
 direction: ltr
 ---
 

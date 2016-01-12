@@ -25,6 +25,21 @@ de:
     - name: Moritz Kröger
       link: https://github.com/morkro
 
+el:
+  version: 1.0.0
+  label: Greek
+  prefix: /el/
+  available: true
+  translators:
+    - name: Kostantinos Margaritis
+      link: https://github.com/margaritis
+    - name: Adonis K.
+      link: https://github.com/varemenos
+    - name: Mod Kaffes
+      link: https://github.com/modkaffes
+    - name: Sébastien Nikolaou
+      link: https://github.com/sebdesign
+
 en:
   version: 1.2.0
   label: English
@@ -51,21 +66,6 @@ fr:
   translators:
     - name: Pierre Choffé
       link: http://la-cascade.ghost.io
-
-gr:
-  version: 1.0.0
-  label: Greek
-  prefix: /gr/
-  available: true
-  translators:
-    - name: Kostantinos Margaritis
-      link: https://github.com/margaritis
-    - name: Adonis K.
-      link: https://github.com/varemenos
-    - name: Mod Kaffes
-      link: https://github.com/modkaffes
-    - name: Sébastien Nikolaou
-      link: https://github.com/sebdesign
 
 ko:
   version: 1.1.0
