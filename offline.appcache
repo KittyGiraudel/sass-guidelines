@@ -1,5 +1,7 @@
 CACHE MANIFEST
-# 2016-01-14 v1.2
+# 2016-01-14
+
+CACHE:
 
 # Main HTML file
 index.html
