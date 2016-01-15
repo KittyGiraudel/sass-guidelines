@@ -43,7 +43,7 @@ Back to architecture, shall we? I usually go with what I call the *7-1 pattern*:
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
+* `abstracts/`
 * `vendors/`
 
 And of course:
@@ -73,7 +73,7 @@ The `base/` folder holds what we might call the boilerplate code for the project
 * `_typography.scss`
 
 <div class="note">
-  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
+  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>\_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
 </div>
 
 ### Layout folder
@@ -125,9 +125,9 @@ On large sites and applications, it is not unusual to have different themes. The
   <p>This is very project-specific and is likely to be non-existent on many projects.</p>
 </div>
 
-### Utils folder
+### Abstracts folder
 
-The `utils/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
+The `abstracts/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here.
 
 The rule of thumb for this folder is that it should not output a single line of CSS when compiled on its own. These are nothing but Sass helpers.
 
@@ -136,10 +136,10 @@ The rule of thumb for this folder is that it should not output a single line of 
 * `_functions.scss`
 * `_placeholders.scss`
 
-When working on a very large project with a lot of utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long.
+When working on a very large project with a lot of abstract utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long.
 
 <div class="note">
-  <p>The <code>utils/</code> folder might also be called <code>utilities</code> or <code>helpers/</code>, depending on what you prefer.</p>
+  <p>The <code>abstracts/</code> folder might also be called <code>utilities</code> or <code>helpers/</code>, depending on what you prefer.</p>
 </div>
 
 ### Vendors folder
@@ -161,7 +161,7 @@ The main file (usually labelled `main.scss`) should be the only Sass file from t
 
 Files should be imported according to the folder they live in, one after the other in the following order:
 
-1. `utils/`
+1. `abstracts/`
 1. `vendors/`
 1. `base/`
 1. `layout/`
@@ -190,7 +190,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/*"</code>.</p>
+  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/\*"</code>.</p>
   <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
 </div>
 
