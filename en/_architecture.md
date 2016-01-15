@@ -189,10 +189,17 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 {% include snippets/architecture/03/index.html %}
 
-<div class="note">
-  <p>In order to not have to import each file manually, there is an extension to Ruby Sass called <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, making it possible to use glob patterns in Sass <code>@import</code> such as <code>@import "components/\*"</code>.</p>
-  <p>That being said, I would not recommend it because it imports files following the alphabetical order which is usually not what you want, especially when dealing with a source-order dependent language.</p>
-</div>
+## About globbing
+
+In computer programming, glob patterns specify sets of filenames with wildcard characters, such as `*.scss`. To a general extend, globbing means matching a set of files based on an expression instead of a list of filenames. When applied to Sass, it means importing partials into the [main file](#main-file) with a glob pattern rather than by listing them individually. This would lead to a main file looking like this:
+
+{% include snippets/architecture/05/index.html %}
+
+Sass does not support file globbing out of the box because it can be a dangerous feature as CSS is known to be order-dependant. When dynamically importing files (which usually goes in alphabetical order), one does not control the source order anymore, which can lead to hard to debug side-effects.
+
+That being said, in a strict component-based architecture with extra care not to leak any style from one partial to the other, the order should not really matter anymore, which would allow for glob imports. This would make it easier to add or remove partials as carefully updating the main file would no longer be required.
+
+When using Ruby Sass, there is a Ruby gem called [sass-globbing](https://github.com/chriseppstein/sass-globbing) that enables exactly that behavior. If running on node-sass, one can rely either on Node.js, or whatever build tool they use to handle the compilation (Gulp, Grunt, etc.).
 
 ## Shame file
 
