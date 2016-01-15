@@ -283,7 +283,7 @@ Ejemplo:
 No se me ocurren muchos temas donde las opiniones se dividen tanto como en lo que respecta a la clasificación de las declaraciones en CSS. En concreto, hay dos bandos aquí:
 
 * mantener un estricto orden alfabético;
-* ordenar las declaraciones por tipo (posición, *display*, colores, tipografía, varios...).
+* ordenar las declaraciones por tipo (posición, *display*, colores, tipografía, varios…).
 
 Hay pros y contras para estas dos posturas. Por una parte, el orden alfabético es universal (por lo menos para los idiomas que usan el alfabeto latino) así que no hay discusión posible a la hora de poner una propiedad antes que otra. Sin embargo, me parece extremadamente raro ver que propiedades como, `bottom` y `top` no estén la una justo después de la otra. ¿Por qué las animaciones deben aparecer antes que el tipo de display? Hay muchas rarezas con respecto al orden alfabético.
 
@@ -326,7 +326,7 @@ Por ejemplo, el siguiente anidamiento Sass:
 
 {% include snippets/syntax/29/index.html %}
 
-...generará el siguiente CSS:
+…generará el siguiente CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -334,7 +334,7 @@ En la misma línea, desde Sass 3.3 es posible usar la referencia al selector act
 
 {% include snippets/syntax/31/index.html %}
 
-...generará el siguiente CSS:
+…generará el siguiente CSS:
 
 {% include snippets/syntax/32/index.html %}
 

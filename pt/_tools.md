@@ -11,7 +11,7 @@ No entanto, o meu conselho seria para reduzir o número de dependências ao estr
 
 Mesmo assim, já não uso Compass, a razão principal sendo que abranda muito processamento de Sass. Sass em Ruby é bastante lento por si só, então adicionar mais Ruby e Sass por cima não ajuda de verdade.
 
-De verdade, usamos muito pouco de toda a _framework_. Compass é enorme. _Mixins_ de compatibilidade inter-browser é apenas a ponta do icebergue. Funções matemáticas, auxiliares de images, _spriting_... Há muito que pode ser feito com esta grande peça de software.
+De verdade, usamos muito pouco de toda a _framework_. Compass é enorme. _Mixins_ de compatibilidade inter-browser é apenas a ponta do icebergue. Funções matemáticas, auxiliares de images, _spriting_… Há muito que pode ser feito com esta grande peça de software.
 
 Infelizmente, isto tudo é apenas agradável, mas não essencial. Uma exceção poderia ser feita do construtor de _sprites_, que é *realmente bom*, mas [Grunticon](https://github.com/filamentgroup/grunticon) e [Grumpicon](http://grumpicon.com/) dão para a despesa, e têm o benefício de poderem ser integrados no _building process_.
 
@@ -65,7 +65,7 @@ Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descr
 
 <div class="note">
   <p>Se pretendem ligar o SCSS-lint no _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Leitura adicional

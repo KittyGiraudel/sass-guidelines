@@ -7,7 +7,7 @@ Naštěstí, jedna z hlavních výhod používání CSS preprocesoru je schopnos
 
 Nad vším tímhle snad ani nemohu dostatečně zdůraznit potřebu složek, a to dokonce i u malých projektů. Doma také nedáváte každý list papíru do jedné a té samé krabice. Používáte složky. Jednu pro dům/byt, jednu pro banku, jednu pro účty, a tak dále. Není tedy žádný důvod dělat to jinak při strukturování CSS projektu. Rozdělte codebase do smysluplně rozdělených složek tak, ať je později jednoduché najít věci, když se do kódu vrátíte později.
 
-Je tu hodně populárních architektur pro CSS projekty: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like... Všechny mají své přednosti, klady a zápory.
+Je tu hodně populárních architektur pro CSS projekty: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-like, [Foundation](http://foundation.zurb.com/)-like… Všechny mají své přednosti, klady a zápory.
 
 Já sám používám přístup shodou okolností docela podobný k [SMACSS](https://smacss.com/) od [Jonathan Snook](http://snook.ca/), který se zaměřuje na udržování věcí jednoduchých a jasných.
 
@@ -34,7 +34,7 @@ Komponenty mohou být cokoliv, tak dlouho dokud:
 * jsou v projektu znovu použitelné;
 * jsou nezávislé.
 
-Například vyhledávací formulář by měl být považován za komponentu. Měl by být znovu použitelný, na různých místech, na různých stránkách, v rozdílných situacích. Neměl by záviset na pozici v DOM (patička, postranní panel, hlavní obsah...).
+Například vyhledávací formulář by měl být považován za komponentu. Měl by být znovu použitelný, na různých místech, na různých stránkách, v rozdílných situacích. Neměl by záviset na pozici v DOM (patička, postranní panel, hlavní obsah…).
 
 Většina z jakéhokoliv rozhraní se dá představit jako malé komponenty a hodně doporučuji, abyste se drželi tohoto paradigmatu. Tím se nejen že zkrátí množství potřebného CSS pro celý projekt, ale také to bude jednodušší spravovat spíše než-li chaotický nepořádek, kde je všechno vyvedeno z míry.
 
@@ -74,7 +74,7 @@ Složka `base/` obsahuje to, co bychom mohli nazvat 'často používaný kód' p
 
 ### Složka layout
 
-Složka `layout/` obsahuje vše, co se podílí na rozvržení stránky nebo aplikace. Tato složka může obsahovat styly pro hlavní části stránky (hlavička, patička, navigace, postranní panel...), grid systém nebo dokonce CSS styly pro všechny formuláře.
+Složka `layout/` obsahuje vše, co se podílí na rozvržení stránky nebo aplikace. Tato složka může obsahovat styly pro hlavní části stránky (hlavička, patička, navigace, postranní panel…), grid systém nebo dokonce CSS styly pro všechny formuláře.
 
 * `_grid.scss`
 * `_header.scss`
@@ -188,7 +188,7 @@ Je tu ještě další způsob importování partials, který také považuji za 
   <p>Jak bylo řečeno, toto řešení bych nedoporučoval, jelikož importujete soubory podle abecedního pořadí, což obvykle není to co chcete, zvláště pokud se musíte vypořádat s pořadím souborů v závislosti na jazyku.</p>
 </div>
 
-## Ostudný soubor 
+## Ostudný soubor
 
 Zajímavý koncept, který zpopularizoval [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) a [Chris Coyier](http://css-tricks.com), který se skládá z uvedení všech CSS deklarací, hacků a věcí, na které nejsme pyšní do *ostudného souboru*. Tento soubor, který je dramaticky pojmenován `_shame.scss`, by měl být importován po ostatních souborech na konci stylu.
 

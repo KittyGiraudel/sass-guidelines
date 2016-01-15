@@ -7,7 +7,7 @@ Felizmente, um dos benefícios principais de usar um pré-processador de CSS é 
 
 Em cima disso, não posso salientar o suficiente a necessidade de pastas, mesmo em pequenos projetos. Em casa, não deixas todas as folhas de papel na mesma caixa. Tens uma para os papéis da casa, uma para documentos do banco, uma para contas e assim em diante. Não há razão para fazeres de maneira diferente quando estás a estruturar um projeto de CSS. Separa o teu código em pastas com nomes compreensíveis para depois ser fácil encontrar qualquer código quando mais tarde tiveres que voltar ao projeto.
 
-Há muitas arquiteturas populares para projectos de CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), arquitetura usada no [Bootstrap](http://getbootstrap.com/), arquitetura usada no [Foundation](http://foundation.zurb.com/)... Todas têm os seus méritos, prós e contras.
+Há muitas arquiteturas populares para projectos de CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), arquitetura usada no [Bootstrap](http://getbootstrap.com/), arquitetura usada no [Foundation](http://foundation.zurb.com/)… Todas têm os seus méritos, prós e contras.
 
 Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), e que se foca em manter as coisas simples e óbvias.
 
@@ -34,7 +34,7 @@ Componentes podem ser qualquer coisa desde que:
 * sejam reutilizáveis e usados por todo o projeto;
 * sejam independentes.
 
-Por exemplo um formulário de pesquisa deve ser tratado como um componente. Deverá ser reutilizável, em diferentes posições, páginas e em situações diversas. Não deve depender da sua posição na DOM (rodapé, barra lateral, conteúdo principal...).
+Por exemplo um formulário de pesquisa deve ser tratado como um componente. Deverá ser reutilizável, em diferentes posições, páginas e em situações diversas. Não deve depender da sua posição na DOM (rodapé, barra lateral, conteúdo principal…).
 
 A maior parte de qualquer interface pode ser pensada como pequenos componentes e eu recomendo que fique com este paradigma. Isto vai não só diminuir a quantidade de CSS necessário para um projeto completo, mas também acaba por ser muito mais fácil do que manter uma desorganização onde está tudo junto.
 
@@ -74,7 +74,7 @@ A pasta `base/` contém o que nós podemos chamar de código padrão para o proj
 
 ### Pasta Layout
 
-A pasta `layout/` contêm tudo que é necessário para criar o layout do site ou aplicação. Esta pasta contêm as folhas de estilo para as partes principais do site (cabeçalho, rodapé, navegação, barra lateral...), a grelha ou mesmo o CSS de todos os formulários.
+A pasta `layout/` contêm tudo que é necessário para criar o layout do site ou aplicação. Esta pasta contêm as folhas de estilo para as partes principais do site (cabeçalho, rodapé, navegação, barra lateral…), a grelha ou mesmo o CSS de todos os formulários.
 
 * `_grid.scss`
 * `_header.scss`

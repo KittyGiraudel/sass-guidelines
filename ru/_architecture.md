@@ -64,14 +64,14 @@ sass/
 |– base/
 |   |– _reset.scss       # Reset/normalize
 |   |– _typography.scss  # Типографские правила
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |– components/
 |   |– _buttons.scss     # Кнопки
 |   |– _carousel.scss    # Карусель
 |   |– _cover.scss       # Обложка
 |   |– _dropdown.scss    # Выпадающий список
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |– layout/
 |   |– _navigation.scss  # Навигация
@@ -80,17 +80,17 @@ sass/
 |   |– _footer.scss      # Подвал
 |   |– _sidebar.scss     # Боковая панель
 |   |– _forms.scss       # Формы
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |– pages/
 |   |– _home.scss        # Стили, особые для главной страницы
 |   |– _contact.scss     # Стили, особые для страницы контактов
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |– themes/
 |   |– _theme.scss       # Тема по умолчанию
 |   |– _admin.scss       # Тема админа
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |– utils/
 |   |– _variables.scss   # Переменные Sass
@@ -101,7 +101,7 @@ sass/
 |– vendors/
 |   |– _bootstrap.scss   # Bootstrap
 |   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # и т.д.
+|   …                    # и т.д.
 |
 |
 `– main.scss             # главный файл Sass

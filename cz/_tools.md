@@ -11,7 +11,7 @@ Každopádně mojí radou je udržet počet závislostí na opravdové minimum. 
 
 Já osobně Compass už nepoužívám a hlavním důvodem je právě to, že zpomaluje Sass, a to dost. Ruby Sass je docela pomalé samo o sobě a přidáním více Ruby a více Sassu tomu opravdu moc nepomáhá.
 
-Věc se má tak, že používáme jen velmi málo z celého frameworku. Compass je obrovský. A mixiny na podporu různých prohlížečů jsou jen špičkou ledovce. Matematické funkce, helpery pro obrázky, sprity... Je toho tak moc, co se s tímto skvělým kusem softwaru dá udělat.
+Věc se má tak, že používáme jen velmi málo z celého frameworku. Compass je obrovský. A mixiny na podporu různých prohlížečů jsou jen špičkou ledovce. Matematické funkce, helpery pro obrázky, sprity… Je toho tak moc, co se s tímto skvělým kusem softwaru dá udělat.
 
 Bohužel, všechno je to jen cukříček a není tam žádná zabijácká funkce. Vyjímkou by mohla být udělena pro sprite builder, který je *opravdu skvělý*, ale [Grunticon](https://github.com/filamentgroup/grunticon) a [Grumpicon](http://grumpicon.com/) dělají stejnou práci a mají výhodu, že mohou být připojeny v procesu sestavení.
 
@@ -38,7 +38,7 @@ Pokud ve svém projektu používáte CSS framework jako [Bootstrap](http://getbo
 
 Pokud nejste vázáni na konkrétní grid systém, budete rádi, že tu jsou dva prvotřídní Sass grid enginy: [Susy](http://susy.oddbird.net/) a [Singularity](http://singularity.gs/). Oba dělají trochu více, než budete kdy potřebovat, takže si můžete vybrat ten, který preferujete více a buďte si jisti, že všechny vaše krajní případy &mdash; dokonce i ty nejzáludnější &mdash; budou pokryty. Pokud se ptáte mě, Susy má o něco lepší komunitu, ale to je jen můj názor.
 
-Nebo můžete jít do něčeho trochu více formálního, jako [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Ať už si vyberete jak si vyberete, volba nebude mít na váš styl kódování téměř žádný dopad, takže je to jen na vás. 
+Nebo můžete jít do něčeho trochu více formálního, jako [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Ať už si vyberete jak si vyberete, volba nebude mít na váš styl kódování téměř žádný dopad, takže je to jen na vás.
 
 ###### Další četba
 
@@ -65,7 +65,7 @@ SCSS-lint doporučení jsou naštěstí velmi podobné k těm, které jsou pops�
 
 <div class="note">
   <p>Pokud chcete SCSS lint začlenit do vašeho Grunt build procesu, budete rádi vědět, že pro to existuje Grunt plugin, který se nazývá <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Stejně tak pokud hledáte elegantní aplikace, které pracují s SCSS-lintem a tak podobně, lidé z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) pracují na <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Stejně tak pokud hledáte elegantní aplikace, které pracují s SCSS-lintem a tak podobně, lidé z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) pracují na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Další četba

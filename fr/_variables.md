@@ -17,7 +17,7 @@ Rien ne sert de déclarer une variable qui ne sera jamais mise à jour ou qui n�
 
 Le scoping des variables dans Sass a évolué avec les années. Jusqu’à récemment, les déclarations de variables à l’intérieur d’un jeu de règles et autres portées étaient locales par défaut. Cependant, lorsqu’il y avait déjà une variable globale portant le même nom, la déclaration locale modifiait la variable globale. Depuis la version 3.4, Sass traite correctement le concept de portée et crée une nouvelle variable locale.
 
-La documentation parle de *global variable shadowing*. Lorsqu’on déclare à un niveau local (sélecteur, fonction, mixin,...) une variable qui existe déjà au niveau global, on dit que la variable locale *masque* la variable globale. Autrement dit, elle prend le pas sur la variable globale au niveau local.
+La documentation parle de *global variable shadowing*. Lorsqu’on déclare à un niveau local (sélecteur, fonction, mixin…) une variable qui existe déjà au niveau global, on dit que la variable locale *masque* la variable globale. Autrement dit, elle prend le pas sur la variable globale au niveau local.
 
 Le petit code qui suit explique le concept de *variable shadowing*&nbsp;:
 

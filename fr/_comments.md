@@ -1,7 +1,7 @@
 
 # Commentaires
 
-CSS est un langage délicat, plein de hacks et de bizarreries. C’est pourquoi il doit être accompagné de commentaires abondants, surtout si vous, ou quelqu’un d’autre, prévoyez de relire et de mettre à jour le code dans 6 mois ou 1 an. Ne vous mettez pas dans la situation de dire, ou laisser dire *oh p... c’est pas moi qui ai écrit ça, mais pourquoi, pourquoi&nbsp;!?*.
+CSS est un langage délicat, plein de hacks et de bizarreries. C’est pourquoi il doit être accompagné de commentaires abondants, surtout si vous, ou quelqu’un d’autre, prévoyez de relire et de mettre à jour le code dans 6 mois ou 1 an. Ne vous mettez pas dans la situation de dire, ou laisser dire *oh p… c’est pas moi qui ai écrit ça, mais pourquoi, pourquoi&nbsp;!?*.
 
 Quelle que soit la simplicité de CSS, les commentaires sont toujours utiles. Vous pourriez expliquer par exemple&nbsp;:
 
@@ -16,7 +16,7 @@ Je pourrais certainement citer encore bien d’autres raisons. Les commentaires 
 
 ## Écrire des commentaires
 
-Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est à dire `/* ... */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
+Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est à dire `/* … */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
 
 {% include snippets/comments/01/index.html %}
 
@@ -45,7 +45,7 @@ Il n’y a pas d’avantage particulier à utiliser l’une ou l’autre méthod
 SassDoc a deux rôles principaux&nbsp;:
 
 * imposer une standardisation des commentaires utilisant un système basé sur les annotations, pour tout ce qui fait partie d’une API publique ou privée&nbsp;;
-* permettre de générer une version HTML de la documentation API en utilisant n’importe quel endpoint SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* permettre de générer une version HTML de la documentation API en utilisant n’importe quel endpoint SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node…).
 
 {% include images/sassdoc.html %}
 

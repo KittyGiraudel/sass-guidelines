@@ -283,13 +283,13 @@ Illustration:
 Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en ce qui concerne l’ordre des déclarations CSS. Concrètement, deux opinions s’opposent&nbsp;:
 
 * s’en tenir à l’ordre alphabétique&nbsp;;
-* classer les déclarations par type (position, display, color, font, autres...).
+* classer les déclarations par type (position, display, color, font, autres…).
 
 Il y a du pour et du contre dans chacune. D’un côté, l’ordre alphabétique est universel (du moins pour les langues utilisant l’alphabet latin), donc il n’y a pas de dispute possible quant à la position d’un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l’une derrière l’autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L’ordre alphabétique crée de nombreuses bizarreries.
 
 {% include snippets/syntax/26/index.html %}
 
-D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme  [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?... ô ironie...).
+D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme  [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?… ô ironie…).
 
 {% include snippets/syntax/27/index.html %}
 
@@ -326,7 +326,7 @@ Par exemple, l’imbrication Sass suivante&nbsp;:
 
 {% include snippets/syntax/29/index.html %}
 
-... génèrera ce CSS&nbsp;:
+… génèrera ce CSS&nbsp;:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -334,7 +334,7 @@ En suivant la même idée, il est possible depuis Sass 3.3 d’utiliser la réf�
 
 {% include snippets/syntax/31/index.html %}
 
-... génèrera ce CSS&nbsp;:
+… génèrera ce CSS&nbsp;:
 
 {% include snippets/syntax/32/index.html %}
 

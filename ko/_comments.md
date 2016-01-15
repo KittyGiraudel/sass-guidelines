@@ -43,7 +43,7 @@ Sass에만 한정된 부분에 주석을 달 때는, C 스타일 블록 대신 S
 SassDoc은 두 가지 중요한 역할을 합니다:
 
 * 공개 혹은 비공개 API의 일부인 모든 것에 대해 주석 기반의 시스템을 이용하는 표준화된 주석을 강제한다;
-* SassDoc의 엔드포인트(CLI tool, Grunt, Gulp, Broccoli, Node...)를 이용하여 API 문서의 HTML 버전을 생성할 수 있다.
+* SassDoc의 엔드포인트(CLI tool, Grunt, Gulp, Broccoli, Node…)를 이용하여 API 문서의 HTML 버전을 생성할 수 있다.
 
 {% include images/sassdoc.html %}
 

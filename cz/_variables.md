@@ -1,7 +1,7 @@
 
 # Proměnné
 
-Proměnné jsou esencí každého programovacího jazyka. Díky nim můžeme znovu použít hodnoty místo jejich kopírování znovu a znovu. Ale hlavně se díky nim dá jednoduše aktualizovat hodnota. Už žádné další find and replace nebo ruční procházení. 
+Proměnné jsou esencí každého programovacího jazyka. Díky nim můžeme znovu použít hodnoty místo jejich kopírování znovu a znovu. Ale hlavně se díky nim dá jednoduše aktualizovat hodnota. Už žádné další find and replace nebo ruční procházení.
 
 Každopádně CSS není nic jiného než velký koš obsahující všechny naše vejce. Oproti většině jazyků, v CSS nenajdete žádné pravé scopy.
 
@@ -17,7 +17,7 @@ V podstatě deklarovat proměnnou, která se nikdy nebude aktualizovat nebo je p
 
 Scopování proměnné v Sassu se během let změnilo. Donedávna byla deklarace proměnné spolu se styly a dalšími skopy lokální již v základu. Každopádně když tu byla již ta samá globální proměnná se stejným názvem, lokální přirovnání mohlo změnit globální proměnnou. Od verze 3.4 Sass řeší koncept scopů správně a vytváří namísto toho novou lokální proměnnou.
 
-V dokumentaci se hovoří o *stínování globální proměnné*. Pokud deklarujete proměnnou, která již existuje, v globálním scopu v vnitřním prostoru (selektor, funkce, mixin...), lokální proměnná *stíňuje* tu globální. V podstatě ji přepíše jen pro daný scope.
+V dokumentaci se hovoří o *stínování globální proměnné*. Pokud deklarujete proměnnou, která již existuje, v globálním scopu v vnitřním prostoru (selektor, funkce, mixin…), lokální proměnná *stíňuje* tu globální. V podstatě ji přepíše jen pro daný scope.
 
 Následující útržka kódu vysvětluje koncept *stíňování proměnné*.
 
@@ -35,7 +35,7 @@ Díky tomu může vývojář definovat vlastní `$baseline` proměnnou *před* i
 
 ## značka `!global`
 
-Značka `!global` by se měla používat pro přepisování globálních proměnných z lokálního scopu. Pokud definujete proměnnou v kořenové úrovni, značka `!global` by se však měla vynechat. 
+Značka `!global` by se měla používat pro přepisování globálních proměnných z lokálního scopu. Pokud definujete proměnnou v kořenové úrovni, značka `!global` by se však měla vynechat.
 
 {% include snippets/variables/04/index.html %}
 

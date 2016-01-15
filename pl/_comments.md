@@ -43,7 +43,7 @@ Każda zmienna, funkcja, mixin czy placeholder, które mają zostać wielokrotni
 SassDoc spełnia dwie zasadnicze funkcje:
 
 * wymusza ustandaryzowane komentarze z użyciem systemu opartego o przypisy, dla wszystkich elementów publicznego lub prywatnego API;
-* pozwala na generowanie w HTMLu dokumentacji danego API z użyciem jednego z wielu mechanizmów. (program CLI, Grunt, Gulp, Broccoli, Node...)
+* pozwala na generowanie w HTMLu dokumentacji danego API z użyciem jednego z wielu mechanizmów. (program CLI, Grunt, Gulp, Broccoli, Node…)
 
 {% include images/sassdoc.html %}
 

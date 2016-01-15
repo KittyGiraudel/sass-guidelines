@@ -3,11 +3,11 @@
 
 At konstruere et CSS projekt er højest sandsynlig noget af det sværeste du kommer til at lave i et projekts levetid. At holde arkitekturen konsistent og meningsfuld er endnu sværere.
 
-Heldigvis er en af hovedfordelene ved at have en CSS preprocessor evnen til at kunne splitte kodebasen i flere filer, uden at det påvirker performance (som `@import` CSS-direktivet ville gøre). Takket være Sass' overload af `@import` direktivet, så er det fuldstændig sikkert (og faktisk anbefalet) at bruge så mange filer som nødvendigt i udvikling, og derefter samle alle i ét enkelt stylesheet når man går i produktion. 
+Heldigvis er en af hovedfordelene ved at have en CSS preprocessor evnen til at kunne splitte kodebasen i flere filer, uden at det påvirker performance (som `@import` CSS-direktivet ville gøre). Takket være Sass' overload af `@import` direktivet, så er det fuldstændig sikkert (og faktisk anbefalet) at bruge så mange filer som nødvendigt i udvikling, og derefter samle alle i ét enkelt stylesheet når man går i produktion.
 
 Oven på det, så kan jeg ikke udtrykke nødvendigheden for mapper nok, selv ved mindre projekter. Du smider ikke alle dine papirark i den samme kasse derhjemme. Du bruger mapper; en til huset/lejligheden, en til banken, en til regningerne og så videre. Der er ingen grund til ikke at strukturere et CSS projekt på samme måde. Split kodebasen i meningsfulde mapper, så det er nemt at finde tingene senere når du er nødt til at vende tilbage til koden.
 
-Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-lignende, [Foundation](http://foundation.zurb.com/)-lignende... De har alle deres meritter, fordele og ulemper.
+Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-lignende, [Foundation](http://foundation.zurb.com/)-lignende… De har alle deres meritter, fordele og ulemper.
 
 Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://smacss.com/) fra [Jonathan Snook](http://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
 
@@ -34,7 +34,7 @@ Komponenter kan være hvad som helst, så længe de:
 * er genbrugelige og genbrugt på tværs af projektet;
 * er uafhængige.
 
-For eksempel bør en søgeformular behandles som et komponent. Det bør være genbrugeligt ved forskellige positioner, på forskellige sider og i forskellige situationer. Den bør ikke være afhængig af dens position i DOM'en (footer, sidebar, hovedindhold...)
+For eksempel bør en søgeformular behandles som et komponent. Det bør være genbrugeligt ved forskellige positioner, på forskellige sider og i forskellige situationer. Den bør ikke være afhængig af dens position i DOM'en (footer, sidebar, hovedindhold…).
 
 Størstedelen af ethvert interface kan tænkes som små komponenter, og jeg anbefaler kraftigt at du holder dig til dette paradigme. Det vil ikke kun forkorte mængden af CSS der skal bruges til hele projektet, men det gør det også meget nemmere at håndtere end et kaotisk rod, hvor alting flyder rundt.
 
@@ -74,7 +74,7 @@ Ideelt set, så kan vi ende med noget som dette:
 
 ### Layout mappen
 
-`layout/` mappen indeholder alt der omhandler layoutet af siden eller applikationen. Denne mappe kan have stylesheets for hoveddelene af siden (header, footer, navigation, sidebar...), gitter-systemet eller endda CSS styles for alle formularerne.
+`layout/` mappen indeholder alt der omhandler layoutet af siden eller applikationen. Denne mappe kan have stylesheets for hoveddelene af siden (header, footer, navigation, sidebar…), gitter-systemet eller endda CSS styles for alle formularerne.
 
 * `_grid.scss`
 * `_header.scss`

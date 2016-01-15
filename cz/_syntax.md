@@ -43,7 +43,7 @@ Jak již bylo řečeno, jazyky, které nevyžadují, aby byly řetězce obaleny 
 
 ### Textové řetězce jako CSS hodnoty
 
-Specifické CSS hodnoty jako `initial` nebo `sans-serif` vyžadují, aby nebyly v uvozovkách. Deklarace jako `font-family: 'sans-serif'` tiše selže, protože CSS očekává identifikátor, ne řetězec s uvozovkami. Z toho důvodu nepoužíváme uvozovky na tyto hodnoty. 
+Specifické CSS hodnoty jako `initial` nebo `sans-serif` vyžadují, aby nebyly v uvozovkách. Deklarace jako `font-family: 'sans-serif'` tiše selže, protože CSS očekává identifikátor, ne řetězec s uvozovkami. Z toho důvodu nepoužíváme uvozovky na tyto hodnoty.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -150,7 +150,7 @@ Pokud barvu používáte více než jednou, uložte jí do proměnné se smyslup
 
 {% include snippets/syntax/16/index.html %}
 
-Odteď budete moci používat tuto proměnnou kdekoliv chcete. Pokud je však vaše proměnná velmi svázaná s tématem, radil bych, abyste ji nepoužívali tak, jak je. Namísto toho ji uložte v jiné proměnné se jménem vysvětlující, jak by se měla používat. 
+Odteď budete moci používat tuto proměnnou kdekoliv chcete. Pokud je však vaše proměnná velmi svázaná s tématem, radil bych, abyste ji nepoužívali tak, jak je. Namísto toho ji uložte v jiné proměnné se jménem vysvětlující, jak by se měla používat.
 
 {% include snippets/syntax/17/index.html %}
 
@@ -283,7 +283,7 @@ Ilustrace:
 Nenapadá mě snad žádné jiné téma, kde jsou názory tak rozdělené jako právě v řazení CSS deklarací. Konkrétně se dělí na dvě frakce:
 
 * držet se abecedního pořadí;
-* řadit deklarace dle typu (pozice, zobrazení, barvy, písmo, a další...).
+* řadit deklarace dle typu (pozice, zobrazení, barvy, písmo, a další…).
 
 V obou případech najdete výhody i nevýhody. Na jednu stranu je abecení pořadí univerzální (alespoň pro jazyky, které používají latinku), takže nemůže nastat situace, kdy se budete muset rozhodnout, jestli toto bude před tím, nebo ne. Každopádně vidět `bottom` a `top` od sebe je tak trochu divné. Proč by měly animace být před typem zobrazení? S abecedním pořadí existuje dost zvláštností.
 
@@ -326,7 +326,7 @@ Například následující vnořování v Sass:
 
 {% include snippets/syntax/29/index.html %}
 
-... vygeneruje toto CSS:
+… vygeneruje toto CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -334,7 +334,7 @@ Ve stejném duchu, od Sass 3.3, je možné použít referenci na aktuální sele
 
 {% include snippets/syntax/31/index.html %}
 
-... vygeneruje toto CSS:
+… vygeneruje toto CSS:
 
 {% include snippets/syntax/32/index.html %}
 

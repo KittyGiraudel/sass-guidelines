@@ -43,7 +43,7 @@ Every variable, function, mixin and placeholder that is intended to be reused al
 SassDoc has two major roles:
 
 * forcing standardized comments using an annotation-based system for everything that is part of a public or private API;
-* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* being able to generate an HTML version of the API documentation by using any of the SassDoc endpoints (CLI tool, Grunt, Gulp, Broccoli, Node…).
 
 {% include images/sassdoc.html %}
 

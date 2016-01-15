@@ -11,7 +11,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 그렇지만, 전 더이상 Compass를 추천하지 않습니다. 가장 큰 이유로는 Sass를 매우 느리게 만들기 때문입니다. Ruby Sass는 그 자체로도 꽤 느리기 때문에 그 위에 Ruby와 Sass를 더해서 좋을 게 없습니다.
 
-문제는 우리가 전체 프레임워크에서 아주 적은 일부만을 사용한다는 점입니다. Compass는 거대합니다. 크로스 브라우저 호환 믹스인은 빙산의 일각에 불과하죠. 수학 함수, 이미지 헬퍼, 스프라이트... 이 훌륭한 소프트웨어를 가지고 할 수 있는 일이 너무나도 많습니다.
+문제는 우리가 전체 프레임워크에서 아주 적은 일부만을 사용한다는 점입니다. Compass는 거대합니다. 크로스 브라우저 호환 믹스인은 빙산의 일각에 불과하죠. 수학 함수, 이미지 헬퍼, 스프라이트… 이 훌륭한 소프트웨어를 가지고 할 수 있는 일이 너무나도 많습니다.
 
 불행하게도, 이들은 모두 구문상 편의성syntactic sugar이며 킬러 기능이 존재하지 않습니다. *정말로 훌륭한* 스프라이트 빌더는 예외가 될 수 있겠지만, [Grunticon](https://github.com/filamentgroup/grunticon)과 [Grumpicon](http://grumpicon.com/)도 같은 일을 잘 수행하며 빌드 프로세스에 삽입할 수 있다는 장점도 갖고 있습니다.
 
@@ -65,7 +65,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 <div class="note">
   <p>SCSS lint를 Grunt 빌드 프로세스에 추가하고 싶으시다면, 기쁘게도 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>라고 하는 Grunt 플러그인이 있습니다.</p>
-  <p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="http://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat...)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
+  <p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="http://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat…)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
 </div>
 
 ###### 참고

@@ -83,7 +83,7 @@
 {% highlight scss %}
 @mixin shadows($shadows...) {
   // type-of($shadows) == 'arglist'
-  // ...
+  // …
 }
 {% endhighlight %}
   </div>
@@ -91,7 +91,7 @@
 {% highlight sass %}
 =shadows($shadows...)
   // type-of($shadows) == 'arglist'
-  // ...
+  // …
 {% endhighlight %}
   </div>
 </div>
@@ -104,7 +104,7 @@ Sass очень умён в работе с примесями и объявле
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 @mixin dummy($a, $b, $c) {
-  // ...
+  // …
 }
 
 // Yep
@@ -130,7 +130,7 @@ $params: (
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 =dummy($a, $b, $c)
-  // ...
+  // …
 
 // Yep
 +dummy(true, 42, 'kittens')
