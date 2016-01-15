@@ -11,7 +11,7 @@ Sin embargo, mi consejo es que debes disminuir al mínimo el número de dependen
 
 Aún asi, yo no uso Compass, la razón principal es que ralentiza muchísimo a Sass. Ruby Sass es bastante lento por si mismo, así que añadirle más Ruby y más Sass por encima no ayuda demasiado.
 
-Lo que ocurre es que usamos una parte muy pequeña del *framework*. Compass es enorme. Los *mixins* de compatibilidad entre navegadores son solo la punta del iceberg. Funciones matemáticas, utilidades de imagen, *spriting*... Hay muchas cosas que puedes hacer con este gran software.
+Lo que ocurre es que usamos una parte muy pequeña del *framework*. Compass es enorme. Los *mixins* de compatibilidad entre navegadores son solo la punta del iceberg. Funciones matemáticas, utilidades de imagen, *spriting*… Hay muchas cosas que puedes hacer con este gran software.
 
 Desafortunadamente, toda esta azucar no proporciona ninguna característica impresionante. Se puede hacer una excepción con el constructor de *sprites* que es *muy bueno*. Pero por ejemplo [Grunticon](https://github.com/filamentgroup/grunticon) y [Grumpicon](http://grumpicon.com/) cumplen la misma función también y además tienen la ventaja de poderse conectar durante el proceso de construcción.
 
@@ -65,7 +65,7 @@ Afortunadamente, las recomendaciones para limpiar el código con SCC-lint son mu
 
 <div class="note">
   <p>Si quieres conectar SCSS-lint con Grunt en tu proceso de desarrollo, estarás encantado con saber que hay un *plugin* de Grunt para eso llamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>También, si estás en la búsqueda de una aplicación limpia que trabaje con SCSS-lint y similares, los chicos de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) están trabajando en <a href="https://houndci.com/">Hound</a>.</p>
+  <p>También, si estás en la búsqueda de una aplicación limpia que trabaje con SCSS-lint y similares, los chicos de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) están trabajando en <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Más información

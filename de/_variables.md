@@ -17,7 +17,7 @@ Grundsätzlich macht es keinen Sinn eine Variable zu erstellen die niemals aktua
 
 Der Scope von Variablen in Sass hat sich über die Jahre verändert. Bis vor kurzem waren Deklarationen innerhalb des Regelwerk und andere Scopes standardmäßig lokal. Wenn es jedoch eine globale Variable mit demselben Namen gab, hat die lokale Variable die globale überschrieben. Seit Version 3.4 allerdings, greift Sass das Konzept von Scopes korrekt und erzeugt stattdessen eine neue lokale Variable.
 
-Sass' Dokumentation spricht von *Beschattung globaler Variablen*. Wenn eine Variable im inneren Scope (Selektor, Funktion, Mixin, ...) deklariert, aber schon im globalen Scope existiert, dann sagt man dass die globale Variable *beschattet* wird. Grundsätzlich überscheibt es nur den lokalen Scope.
+Sass' Dokumentation spricht von *Beschattung globaler Variablen*. Wenn eine Variable im inneren Scope (Selektor, Funktion, Mixin, …) deklariert, aber schon im globalen Scope existiert, dann sagt man dass die globale Variable *beschattet* wird. Grundsätzlich überscheibt es nur den lokalen Scope.
 
 Folgendes Code-Snippet erklärt das Konzept der *Variablenbeschattung*:
 

@@ -34,7 +34,7 @@ Los componentes pueden ser cualquier cosa, siempre y cuando:
 * sea reutilizable y se reutilice a lo largo del proyecto;
 * sea independiente.
 
-Por ejemplo, un formulario de búsqueda debería ser tratado como un componente. Debería ser reutilizable, en diferentes lugares, en diferentes páginas y en varias situaciones. No debe depender de su posición en el DOM (pie de página, barra lateral, contenido principal...).
+Por ejemplo, un formulario de búsqueda debería ser tratado como un componente. Debería ser reutilizable, en diferentes lugares, en diferentes páginas y en varias situaciones. No debe depender de su posición en el DOM (pie de página, barra lateral, contenido principal…).
 
 La mayor parte de cualquier interfaz puede concebirse en forma de pequeños componentes y recomiendo encarecidamente que lo hagas. Esto no solo reducirá la cantidad de CSS necesario para todo el proyecto, sino que también se convierte en un código mucho más fácil de mantener que un desorden caótico donde todo está hecho un lío.
 
@@ -74,7 +74,7 @@ La carpeta `base/` contiene lo que podríamos llamar el código estándar para e
 
 ### Carpeta Layout
 
-La carpeta `layout/` contiene todo lo que tiene que ver con la disposición del sitio o la aplicación. Esta carpeta puede contener hojas de estilo para las partes principales del sitio (header, footer, navigation, sidebar...), el sistema de retícula o incluso el estilo CSS para los formularios.
+La carpeta `layout/` contiene todo lo que tiene que ver con la disposición del sitio o la aplicación. Esta carpeta puede contener hojas de estilo para las partes principales del sitio (header, footer, navigation, sidebar…), el sistema de retícula o incluso el estilo CSS para los formularios.
 
 * `_grid.scss`
 * `_header.scss`

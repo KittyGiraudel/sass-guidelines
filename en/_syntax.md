@@ -149,7 +149,7 @@ In order to make colors as simple as they can be, my advice would be to respect 
 
 CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.
 
-The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. 
+The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually.
 
 RGB still has the benefit of showing right away if the color is more of a blue, a green or a red. Therefore it might be better than HSL in some situations, especially when describing a pure red, green or blue. Although it does not make it easy to build a color from the three parts.
 
@@ -290,7 +290,7 @@ Illustration:
 I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
 
 * sticking to the alphabetical order;
-* ordering declarations by type (position, display, colors, font, miscellaneous...).
+* ordering declarations by type (position, display, colors, font, miscellaneous…).
 
 There are pros and cons for both ways. On one hand, alphabetical order is universal (at least for languages using the latin alphabet) so there is no argument about sorting one property before another. However, it seems extremely weird to me to see properties such as `bottom` and `top` not right next to each other. Why should animations appear before the display type? There are a lot of oddities with alphabetical ordering.
 
@@ -329,7 +329,7 @@ For instance, the following Sass nesting:
 
 {% include snippets/syntax/29/index.html %}
 
-... will generate this CSS:
+… will generate this CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -337,7 +337,7 @@ Along the same lines, since Sass 3.3 it is possible to use the current selector 
 
 {% include snippets/syntax/31/index.html %}
 
-... will generate this CSS:
+… will generate this CSS:
 
 {% include snippets/syntax/32/index.html %}
 

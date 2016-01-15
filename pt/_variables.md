@@ -17,7 +17,7 @@ Basicamente, não vale a pena declarar uma variável que nunca irá ser atualiza
 
 O contexto das variáveis no Sass mudou ao longo dos anos. Até muito recentemente, as declarações de variáveis dentro de rulesets e  outros contextos eram locais por omissão. No entanto quando já havia uma variável global com o mesmo nome, a declaração local iria alterar o valor da variável global. Desde a versão 3.4, o Sass lida corretamente com o conceito de contextos, e cria uma variável local em vez de substituir a global.
 
-A documentação fala na *ocultação de variáveis globais*. Quando se declara uma variável, que já existe no contexto global, dentro de um contexto local (selector, função, mixin...), diz-se que a variável local está a *ocultar* a variável global. Basicamente substitui o seu valor dentro do contexto local.
+A documentação fala na *ocultação de variáveis globais*. Quando se declara uma variável, que já existe no contexto global, dentro de um contexto local (selector, função, mixin…), diz-se que a variável local está a *ocultar* a variável global. Basicamente substitui o seu valor dentro do contexto local.
 
 O enxerto de código seguinte explica o conceito de *ocultação de variável*
 

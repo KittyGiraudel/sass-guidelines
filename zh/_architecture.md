@@ -7,7 +7,7 @@
 
 最重要的是，我无法形容我是多么需要设置大量的文件夹——即使是小项目中。这就像是在家里，你不会将所有的纸片放在同一个盒子中。你可以使用文件夹：一个为房产，一个为银行，一个为账单，等等。没有理由在构架 CSS 项目时不这么做。拆分代码库到多个有意义的文件夹，当你回头来找东西的时候就会发现是那么容易。
 
-有很多受欢迎的构建 CSS 项目的体系结构：[OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/) 式, [Foundation](http://foundation.zurb.com/) 式...它们各有优劣，难分伯仲。
+有很多受欢迎的构建 CSS 项目的体系结构：[OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/) 式, [Foundation](http://foundation.zurb.com/) 式…它们各有优劣，难分伯仲。
 
 我自己使用的方式，与 [Jonathan Snook](http://snook.ca/) 的 [SMACSS](https://smacss.com/) 非常相似，其致力于保持代码简洁易见。
 
@@ -30,7 +30,7 @@
 - 在整个项目中可以重用，具有可复用性；
 - 各自独立。
 
-例如，搜索框就应该被视为一个组件，可以在不同位置、不同页面、多种环境下重复使用。它不应该受限于 DOM 中的位置（页脚、侧边栏、主内容区...）。
+例如，搜索框就应该被视为一个组件，可以在不同位置、不同页面、多种环境下重复使用。它不应该受限于 DOM 中的位置（页脚、侧边栏、主内容区…）。
 
 几乎所有的接口都可以被视为小组件，而且强烈建议坚持这种模式。这不仅仅会精简整个项目中 CSS 的代码量，而且也会比维护一个到处无逻辑的烂摊子容易得多。
 
@@ -74,7 +74,7 @@
 
 ### Layout文件夹
 
-`layout/` 文件夹存放构建网站或者应用程序使用到的布局部分。该文件夹存放网站主体（头部、尾部、导航栏、侧边栏...）的样式表、栅格系统甚至是所有表单的 CSS 样式。
+`layout/` 文件夹存放构建网站或者应用程序使用到的布局部分。该文件夹存放网站主体（头部、尾部、导航栏、侧边栏…）的样式表、栅格系统甚至是所有表单的 CSS 样式。
 
 * `_grid.scss`
 * `_header.scss`
@@ -88,7 +88,7 @@
 </div>
 
 ### Components文件夹
- 
+
 对于小型组件来说，有一个 `components/` 文件夹来存放。相对于 `layout/` 的*宏观*（定义全局线框结构），`components/` 更专注于局部组件。该文件夹包含各类具体模块，基本上是所有的独立模块，比如一个滑块、一个加载块、一个部件……由于整个网站或应用程序主要由微型模块构成，`components/` 中往往有大量文件。
 
 * `_media.scss`

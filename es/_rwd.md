@@ -7,7 +7,7 @@ No creo que sea necesario tener que explicar lo que es el Responsive Web Design 
 
 Creo que puedo decir con seguridad que las *medias queries* no deberían estar vinculadas a dispositivos específicos. Por ejemplo, es una mala idea intentar trabajar con tamaños para iPads o teléfonos Blackberry específicamente. Las *medias queries* deberían trabajar con una amplia gama de tamaños de pantalla, justo hasta que el diseño se rompa y la siguiente *media query* haga su función.
 
-Por las mismas razones, los puntos de ruptura no deberían llevar el nombre de los dispositivos, sino algo más general. Sobre todo porque algunos teléfonos son ahora más grandes que algunas tablets, algunas tablets más grandes que un ordenador pequeño y así sucesivamente...
+Por las mismas razones, los puntos de ruptura no deberían llevar el nombre de los dispositivos, sino algo más general. Sobre todo porque algunos teléfonos son ahora más grandes que algunas tablets, algunas tablets más grandes que un ordenador pequeño y así sucesivamente…
 
 {% include snippets/rwd/01/index.html %}
 

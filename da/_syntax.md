@@ -283,7 +283,7 @@ Illustration:
 Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er når det kommer til sortering af deklarationer i CSS. Helt konkret, så er to fraktioner på spil her:
 
 * at holde sig til den alfabetiske rækkefølge;
-* at arrangere deklarationerne efter type (position, display, farver, skrifttype, diverse...).
+* at arrangere deklarationerne efter type (position, display, farver, skrifttype, diverse…).
 
 Der er fordele og ulemper ved begge tilgange. På den ene side, så er alfabetisk sortering universelt (i det mindste for sprog, der anvender det latinske alfabet), så der er ikke noget argument om at sortere en egenskab efter en anden. Dog finder jeg det ekstremt mærkeligt ikke at se værdier som `bottom` og `top` lige ved siden af hinanden. Hvorfor skulle animationer komme før display-typen? Der er mange særheder ved en alfabetisk arrangering.
 
@@ -326,7 +326,7 @@ For eksempel, så vil den følgende Sass indlejring:
 
 {% include snippets/syntax/29/index.html %}
 
-... generere denne CSS:
+… generere denne CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -334,7 +334,7 @@ På samme måde er det siden Sass 3.3 muligt at anvende den nuværende selektor-
 
 {% include snippets/syntax/31/index.html %}
 
-... vil generere denne CSS:
+… vil generere denne CSS:
 
 {% include snippets/syntax/32/index.html %}
 
@@ -358,7 +358,7 @@ Til at starte med, så er det tilladt og endda anbefalet at indlejre pseudo-klas
 
 At anvende selektor-indlejring til pseudo-klasser og pseudo-elementer giver ikke alene mening (fordi det håndterer tæt relaterede selektorer), det hjælper også med at holde alt omkring et komponent på det samme sted.
 
-Dertil, så når komponent-agnostiske tilstandsklasser såsom `.is-active` anvendes, så er det helt i orden at indlejre det under komponentets selektor for at holde tingene pæne. 
+Dertil, så når komponent-agnostiske tilstandsklasser såsom `.is-active` anvendes, så er det helt i orden at indlejre det under komponentets selektor for at holde tingene pæne.
 
 {% include snippets/syntax/34/index.html %}
 

@@ -1,7 +1,7 @@
 
 # Avisos e erros
 
-Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no *standard output system* (CLI, compilador...):
+Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no *standard output system* (CLI, compilador…):
 
 * `@debug`;
 * `@warn`;

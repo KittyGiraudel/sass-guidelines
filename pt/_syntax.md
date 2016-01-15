@@ -326,7 +326,7 @@ Por exemplo, o seguinte código aninhado em Sass:
 
 {% include snippets/syntax/29/index.html %}
 
-... vai gerar este CSS:
+… vai gerar este CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -334,7 +334,7 @@ Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor
 
 {% include snippets/syntax/31/index.html %}
 
-... vai gerar este CSS:
+… vai gerar este CSS:
 
 {% include snippets/syntax/32/index.html %}
 

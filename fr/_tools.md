@@ -11,7 +11,7 @@ Mon conseil toutefois est de restreindre le nombre de dépendances au strict min
 
 À titre personnel, je ne l’utilise plus car il ralentit considérablement Sass. Ruby Sass en lui-même est déjà assez lent, et l’ajout de code Ruby et Sass supplémentaire n’arrange pas les choses.
 
-En fait, nous n’utilisons qu’une petite partie du framework. Compass est énorme. Les mixins de compatibilité navigateurs ne sont que la partie visible de l’iceberg. Fonctions mathématiques, helpers pour les images, sprites... il y a tant de choses possibles avec ce formidable outil.
+En fait, nous n’utilisons qu’une petite partie du framework. Compass est énorme. Les mixins de compatibilité navigateurs ne sont que la partie visible de l’iceberg. Fonctions mathématiques, helpers pour les images, sprites… il y a tant de choses possibles avec ce formidable outil.
 
 Malheureusement, il s’agit pour l’essentiel de *sucre syntactique* mais pas de fonctionnalités exceptionnelles. Une exception serait la fonctionnalité de construction de sprites, mais [Grunticon](https://github.com/filamentgroup/grunticon) et [Grumpicon](http://grumpicon.com/) font le même travail aussi bien, avec l’avantage d’être pluggables dans le process de déploiement.
 
@@ -65,7 +65,7 @@ Par chance, les recommandations de SCSS-lint sont très similaires à celles de 
 
 <div class="note">
   <p>Au cas où vous voudriez intégrer SCSS-lint à votre processus de développement Grunt, il existe un plugin appelé <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>De plus, si vous cherchez une application soignée qui fonctionne avec SCSS-lint et autres, les ingénieurs de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) travaillent sur <a href="https://houndci.com/">Hound</a>.</p>
+  <p>De plus, si vous cherchez une application soignée qui fonctionne avec SCSS-lint et autres, les ingénieurs de <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) travaillent sur <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Lectures complémentaires

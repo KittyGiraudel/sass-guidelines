@@ -11,7 +11,7 @@ Deshalb ist mein Ratschlag die Anzahl von Dependencies auf ein Minium zu halten.
 
 Dennoch benutze ich Compass nicht mehr, denn der Hauptgrund ist, dass es Sass ziemlich verlangsamt. Ruby Sass selber ist schon langsam, von daher macht noch mehr Ruby und Sass es nicht besser.
 
-Das Ding ist, dass wir wirklich wenig von dem gesamten Framework verwenden. Compass ist groß. Cross-Browser Kompabilitäts-Mixins sind nur die Spitze des Eisbergs. Mathematische Funktionen, Image-Helfer, Spriting, ... da gibt es soviel was mit dem großartigen Stück Software erledigt werden kann.
+Das Ding ist, dass wir wirklich wenig von dem gesamten Framework verwenden. Compass ist groß. Cross-Browser Kompabilitäts-Mixins sind nur die Spitze des Eisbergs. Mathematische Funktionen, Image-Helfer, Spriting, … da gibt es soviel was mit dem großartigen Stück Software erledigt werden kann.
 
 Unglücklicherweise ist das alles nur Zucker und es gibt kein wirkliches Killer-Feature. Eine Ausnahme könnte der Sprite-Builder sein, welcher *wirklich gut* ist, aber [Grunticon](https://github.com/filamentgroup/grunticon) oder [Grumpicon](http://grumpicon.com/) erledigen den Job genauso gut und haben den Vorteil in dem Build-Prozess integriert werden zu können.
 
@@ -62,7 +62,7 @@ Glücklicherweise sind die SCSS-Lint Empfehlungen sehr ähnlich zu denen die hie
 
 <div class="note">
   <p>Falls du SCSS-Lint in deinen Grunt Prozess einbauen möchtest, freut es dich bestimmt zu wissen das es dafür bereits ein Grunt-Plugin namens <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a> gibt.</p>
-  <p>Falls du außerdem auf der Jagd nach einer schicken Anwendung bist, welche mit SCSS-Lint oder ähnlichen läuft, die Leute von <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) arbeiten an <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Falls du außerdem auf der Jagd nach einer schicken Anwendung bist, welche mit SCSS-Lint oder ähnlichen läuft, die Leute von <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) arbeiten an <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
 ###### Weitere Informationen

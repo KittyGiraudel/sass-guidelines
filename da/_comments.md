@@ -43,7 +43,7 @@ Hver variabel, funktion, mixin og placeholder, der har til hensigt at blive genb
 SassDoc har to overordnede roller:
 
 * at tvinge standardiserede kommentarer ved anvendelse af et annotations-baseret system til alt der er en del af en offentlig eller privat API;
-* at være i stand til at generere en HTML version af API-dokumentationen ved hjælp af SassDoc endpoints (CLI værktøjer, Grunt, Gulp, Broccoli, Node...)
+* at være i stand til at generere en HTML version af API-dokumentationen ved hjælp af SassDoc endpoints (CLI værktøjer, Grunt, Gulp, Broccoli, Node…)
 
 {% include images/sassdoc.html %}
 

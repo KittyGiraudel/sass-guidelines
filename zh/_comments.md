@@ -43,7 +43,7 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 SassDoc 主要有两个作用：
 
 - 作为公有或私有 API 的一部分，在所有的地方使用一个注释系统强制标准化注释。
-- 通过使用任意的 SassDoc 终端(CLI tool, Grunt, Gulp, Broccoli, Node...)，能够生成 API 文档的 HTML 版本。
+- 通过使用任意的 SassDoc 终端(CLI tool, Grunt, Gulp, Broccoli, Node…)，能够生成 API 文档的 HTML 版本。
 
 {% include images/sassdoc.html %}
 
