@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0
+## 1.2.0 ([September 1st, 2015](https://github.com/HugoGiraudel/sass-guidelines/pull/223))
 
 * Added a note about Sass-Boilerplate (https://github.com/HugoGiraudel/sass-guidelines/commit/6f6df33)
 * Added a note about regexing leading zeros (https://github.com/HugoGiraudel/sass-guidelines/commit/a3f1313)
@@ -21,7 +21,7 @@
 * Dramatically improved TL;DR section (https://github.com/HugoGiraudel/sass-guidelines/commit/774160e)
 * Slightly improved the Contributing section (https://github.com/HugoGiraudel/sass-guidelines/commit/c050153)
 
-## 1.1.0
+## 1.1.0 ([April 11th, 2015](https://github.com/HugoGiraudel/sass-guidelines/pull/125))
 
 * Added extra further readings (https://github.com/HugoGiraudel/sass-guidelines/commit/4b400c5)
 * Added something about the syntax toggle in the options panel (https://github.com/HugoGiraudel/sass-guidelines/commit/5b3328e)
@@ -35,6 +35,6 @@
 * Improved respond-to mixin to make it slightly more robust (https://github.com/HugoGiraudel/sass-guidelines/commit/a27553e)
 * Updated author bio (https://github.com/HugoGiraudel/sass-guidelines/commit/3e5743c)
 
-## 1.0.0
+## 1.0.0 ([January 3rd, 2015](https://github.com/HugoGiraudel/sass-guidelines/commit/23b225c22850a898c3f2656bad19b91495eabf09))
 
 * Initial commit
