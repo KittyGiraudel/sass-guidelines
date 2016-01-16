@@ -11,110 +11,16 @@
 * `@else` на одной строке с предыдущей закрывающей скобкой (`}`);
 * Всегда новая пустая строка после последней закрывающей скобки (`}`), если на следующей строке не стоит закрывающая скобка (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@if $support-legacy {
-  // ...
-} @else {
-  // ...
-}
-
-// Nope
-@if ($support-legacy == true) {
-  // ...
-}
-@else {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@if $support-legacy
-  // ...
-@else
-  // ...
-
-// Nope
-@if ($support-legacy == true)
-  // ...
-@else
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/01/index.html %}
 
 При тестировании на отрицающее значение, всегда используйте ключевое слово `not`, а не проверки на `false` или `null`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@if not index($list, $item) {
-  // ...
-}
+{% include snippets/conditions/02/index.html %}
 
-// Nope
-@if index($list, $item) == null {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@if not index($list, $item)
-  // ...
+<!-- TODO translate -->Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
 
-// Nope
-@if index($list, $item) == null
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/03/index.html %}
 
 При использовании условных операторов внутри функции для возврата другого результата, основанного на некоторых условиях, убедитесь, что `@return` находится вне условных операторов.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// Nope
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// Nope
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04/index.html %}
