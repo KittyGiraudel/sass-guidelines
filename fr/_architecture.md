@@ -126,10 +126,10 @@ La règle générale concernant ce dossier est qu’il ne devrait pas retourner 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (souvent appelé `_helpers.scss`)
+* `_placeholders.scss`
 
 <div class="note">
-  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>helpers/</code>, <code>sass-helpers/</code> ou <code>sass-utils/</code>, au choix.</p>
+  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
 </div>
 
 ### Dossier vendors
