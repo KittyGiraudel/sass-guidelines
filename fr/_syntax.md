@@ -41,6 +41,10 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>Selon les spécifications CSS, la déclaration <code>@charset</code> doit utiliser des guillemets doubles <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">pour être considérée valide</a>. Cependant, Sass s’en assure en compilant vos feuilles de styles si bien que vous pouvez tout à fait utiliser des guillemets simples, même pour <code>@charset</code>.</p>
+</div>
+
 ### Chaînes comme valeurs CSS
 
 Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
