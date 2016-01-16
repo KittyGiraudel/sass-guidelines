@@ -9,52 +9,14 @@
 
 По этим же причинам наименование точек остановки не должно соотвествовать устройствам, а иметь более общие названия. Тем более, что некоторые телефоны теперь больше, чем планшеты, а некоторые планшеты больше экранов маленьких компьютеров, и тому подобное…
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$breakpoints: (
-  'medium': (min-width: 800px),
-  'large': (min-width: 1000px),
-  'huge': (min-width: 1200px),
-);
-
-// Nope
-$breakpoints: (
-  'tablet': (min-width: 800px),
-  'computer': (min-width: 1000px),
-  'tv': (min-width: 1200px),
-);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$breakpoints: ('medium': (min-width: 800px), 'large': (min-width: 1000px), 'huge': (min-width: 1200px))
-
-// Nope
-$breakpoints: ('tablet': (min-width: 800px), 'computer': (min-width: 1000px), 'tv': (min-width: 1200px))
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/01/index.html %}
 
 Таким образом любое соглашение по наименованию точек остановки, которое даёт кристально чистое понимание, что дизайн не привязан к особым устройствам, будет работать до тех пор, пока даёт ощущение масштаба.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$breakpoints: (
-  'seed': (min-width: 800px),
-  'sprout': (min-width: 1000px),
-  'plant': (min-width: 1200px),
-);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant': (min-width: 1200px))
-{% endhighlight %}
-  </div>
+{% include snippets/rwd/02/index.html %}
+
+<!-- TODO translate --><div class="note">
+  <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
 ###### Дальнейшее чтение
@@ -65,45 +27,10 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 После того, как вы объявили ваши точки остановки, вам нужен способ, чтобы использовать их в медиа-запросах. Есть много способов сделать это, но я должен сказать, что я большой поклонник получения точек остановки из карт через функцию получения. Эта система является одновременно простой и эффективной.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Управление отзывчивостью.
-/// @access public
-/// @param {String} $breakpoint - точка остановки
-/// @requires $breakpoints
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
-      @content;
-    }
-  } @else {
-    @error 'Не указано значение для `#{$breakpoint}`. '
-         + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.';
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Управление отзывчивостью.
-/// @access public
-/// @param {String} $breakpoint - точка остановки
-/// @requires $breakpoints
-=respond-to($breakpoint)
-  @if map-has-key($breakpoints, $breakpoint)
-    @media #{inspect(map-get($breakpoints, $breakpoint))}
-      @content
-
-  @else
-    @error 'Не указано значение для `#{$breakpoint}`. '
-         + 'Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.'
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Очевидно, что это довольно упрощенный менеджер точек остановки, который не будет работать, когда надо обрабатывать произвольные или множественные точки остановки.</p>
+  <p>Очевидно, что это довольно упрощённый менеджер точек остановки, который не будет работать, когда надо обрабатывать произвольные и/или множественные точки остановки.</p>
   <p>Если вам нужно управление отзывчивостью с расширенными настройками, могу порекоммендовать вам не изобретать колесо, а воспользоваться отличными <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> или <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
 </div>
 
@@ -116,44 +43,11 @@ $breakpoints: ('seed': (min-width: 800px), 'sprout': (min-width: 1000px), 'plant
 
 Не так давно были довольно жаркие дебаты о том, где именно должны быть описаны медиа-запросы: должны ли они быть в селекторах (как это позволяет Sass) или строго отделены от них? Я должен сказать, что я искренний защитник системы *медиа-запросов-внутри-системы*, я думаю, что это хорошо сочетается с идеей *компонентов*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  color: red;
-
-  @include respond-to('medium') {
-    color: blue;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  color: red
-
-  +respond-to('medium')
-    color: blue
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/rwd/04/index.html %}
 
 Это создаст следующий CSS:
 
-<div>
-{% highlight css %}
-.foo {
-  color: red;
-}
-
-@media (min-width: 800px) {
-  .foo {
-    color: blue;
-  }
-}
-{% endhighlight %}
-</div>
+{% include snippets/rwd/05/index.html %}
 
 Вы могли слышать, что это правило приводит к дублированию медиа-запросов в получаемом CSS. Это, безусловно, верно. Хотя, [были сделаны тесты](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries), которые говорят о том, что это не имеет значения, как только Gzip (или что-то подобное) делает свое дело:
 
