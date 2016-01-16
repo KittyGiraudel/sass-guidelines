@@ -224,16 +224,6 @@ Illustration :
 
 {% include snippets/syntax/21/index.html %}
 
-### Déboguer une map Sass
-
-Si vous êtes perdu, ou si vous vous demandez quelles opérations magiques se déroulent dans une map Sass, pas d’inquiétude, il existe des moyens de s’y retrouver.
-
-{% include snippets/syntax/22/index.html %}
-
-Si vous voulez connaître la profondeur de la map, ajoutez également la fonction suivante. Le mixin l’affichera automatiquement.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Lectures complémentaires
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
