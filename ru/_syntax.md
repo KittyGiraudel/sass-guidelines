@@ -11,110 +11,61 @@
 * правильно написанные многострочные CSS правила;
 * осмысленное использование пробелов.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  display: block;
-  overflow: hidden;
-  padding: 0 1em;
-}
-
-// Nope
-.foo {
-    display: block; overflow: hidden;
-
-    padding: 0 1em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Так как Sass-синтаксис заставляет использовать эти стандарты написания
-// Не будет способа неправльного подхода к написанию
-.foo
-  display: block
-  overflow: hidden
-  padding: 0 1em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/01/index.html %}
 
 Мы не будем решать вопрос организации файлов в этом разделе. Это объект архитектуры [другого раздела](#architecture).
 
 ## Строки
 
+Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or strings (usually unquoted), so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
+
+### Кодировка
+
+To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
+
+{% include snippets/syntax/02/index.html %}
+
+### Кавычки
+
 CSS не требует, чтобы строки были помещены в кавычки, даже те, что содержат пробелы. Возьмите названия семейства шрифтов, например: не имеет значения, оборачиваете ли вы их в кавычки для CSS-парсера или нет.
 
 Из-за этого, Sass *также* не требует помещения строк в кавычки. Даже лучше (и, *к счастью,* вы согласитесь), строка в кавычках является точным соответствием её двойника без кавычек (например, строка `'abc'` строго равна `abc`).
 
-Языки, которые не требуют, чтобы строки были в кавычках, определенно, в меньшинстве, так что **строки должны всегда быть обёрнуты в одинарные кавычки** в Sass (одну проще набрать, чем двойную, на *QWERTY*-клавиатуре). Кроме того, для согласованности с другими языками, в том числе с двоюродным братом CSS – JavaScript’ом, есть несколько причин для такого выбора:
+Языки, которые не требуют, чтобы строки были в кавычках, определенно, в меньшинстве, так что **строки должны всегда быть обёрнуты в одинарные кавычки** (`'`) в Sass (одну проще набрать, чем двойную, на *QWERTY*-клавиатуре). Кроме того, для согласованности с другими языками, в том числе с двоюродным братом CSS – JavaScript’ом, есть несколько причин для такого выбора:
 
 * названия цветов рассматриваются как цвета, когда без кавычек, что может привести к серьёзным проблемам;
 * большинство синтаксических анализаторов будут в шоке от строк без кавычек;
 * это помогает общей читаемости;
 * нет правильной причины не обворачивать строки в кавычки.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif;
+{% include snippets/syntax/03/index.html %}
 
-// Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif;
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$font-stack: 'Helvetica Neue Light', 'Helvetica', 'Arial', sans-serif
-
-// Nope
-$font-stack: "Helvetica Neue Light", "Helvetica", "Arial", sans-serif
-
-// Nope
-$font-stack: Helvetica Neue Light, Helvetica, Arial, sans-serif
-{% endhighlight %}
-  </div>
+<!-- TODO translate --><div class="note">
+  <p>As per the CSS specifications, the <code>@charset</code> directive should be declared in double quotes <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">to be considered valid</a>. However, Sass takes care of this when compiling to CSS so the authoring has no impact on the final result. You can safely stick to single quotes, even for <code>@charset</code>.</p>
 </div>
 
-<div class="note">
-  <p>В предыдущем примере <code>sans-serif</code> не был обёрнут в кавычки, потому что это специальное значение CSS, которые должно быть без кавычек.</p>
-</div>
+<!-- TODO translate -->
+### Strings as CSS values
+
+Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+
+{% include snippets/syntax/04/index.html %}
+
+<!-- TODO translate --> Hence, we can make a distinction between strings intended to be used as CSS values (CSS identifiers) like in the previous example, and strings when sticking to the Sass data type, for instance map keys.
+
+We don't quote the former, but we do wrap the latter in single quotes.
+
+### Строки с кавычками
+
+<!-- TODO: translate --> If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+
+{% include snippets/syntax/05/index.html %}
+
+### URL'ы
 
 URL тоже должны быть в кавычках, по тем же причинам, что и выше:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  background-image: url('/images/kittens.jpg');
-}
-
-// Nope
-.foo {
-  background-image: url(/images/kittens.jpg);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo
-  background-image: url('/images/kittens.jpg')
-
-// Nope
-.foo
-  background-image: url(/images/kittens.jpg)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/06/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -129,148 +80,37 @@ URL тоже должны быть в кавычках, по тем же при�
 
 Числа должны отображать нули перед десятичным значением меньше единицы. Никогда не пишите без нулей.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  padding: 2em;
-  opacity: 0.5;
-}
+{% include snippets/syntax/07/index.html %}
 
-// Nope
-.foo {
-  padding: 2.0em;
-  opacity: .5;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo
-  padding: 2em
-  opacity: 0.5
-
-// Nope
-.foo
-  padding: 2.0em
-  opacity: .5
-{% endhighlight %}
-  </div>
+<!-- TODO translate --><div class="note">
+  <p>In Sublime Text and other editors providing a regular-expression powered search and replace, it is very easy to add a leading zero to (most if not all) float numbers. Simply replace <code>\s+\.(\d+)</code> with <code> 0.$1</code>. Do not forget the space before the <code>0</code> though.</p>
 </div>
 
 ### Единицы измерения
 
 При работе с длинами, '0' (ноль) никогда не должен иметь единицу измерения.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$length: 0;
+{% include snippets/syntax/08.html %}
 
-// Nope
-$length: 0em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$length: 0
-
-// Nope
-$length: 0em
-{% endhighlight %}
-  </div>
+<!-- TODO translate --><div class="note">
+  <p>Beware, this practice should be limited to lengths only. Having a unitless zero for a time property such as <code>transition-delay</code> is not allowed. Theoretically, if a unitless zero is specified for a duration, the declaration is deemed invalid and should be discarded. Not all browsers are that strict, but some are. Long story short: only omit the unit for lenghts.</p>
 </div>
 
 Самая распространённая ошибка о числах в Sass, которую можно только представить – это думать, что единицы – лишь строки, которые можно свободно прилагать к числу. Хотя это и звучит как правда, это, конечно же, не то, как единицы работают. Думайте о единицах в контексте алгебраических символов. Например, в реальном мире, умножение 5 дюймов на 5 дюймов даст вам 25 квадратных дюймов. Та же логика применима и к Sass.
 
 Чтобы добавить единицу измерения в число, нужно умножить это число на *1 единицу измерения*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$value: 42;
-
-// Yep
-$length: $value * 1px;
-
-// Nope
-$length: $value + px;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$value: 42
-
-// Yep
-$length: $value * 1px
-
-// Nope
-$length: $value + px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/09/index.html %}
 
 Заметим, что добавление *0 единиц этого значения* также работает, но я скорее бы порекомендовал вышеупомянутый метод, так как добавление *0 единиц измерения* может быть немного запутанным. Действительно, при попытке преобразовать число в другую единицу измерения, добавление 0 не будет делать этот трюк.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$value: 42 + 0px;
-// -> 42px
-
-$value: 1in + 0px;
-// -> 1in
-
-$value: 0px + 1in;
-// -> 96px
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$value: 42 + 0px
-// -> 42px
-
-$value: 1in + 0px
-// -> 1in
-
-$value: 0px + 1in
-// -> 96px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/10/index.html %}
 
 В конце концов, это действительно зависит от того, чего вы пытаетесь достичь. Просто имейте в виду, что добавление единицы измерения как строки – не лучшее решение.
 
 Чтобы убрать единицу измерения из значения, нужно разделить его на *одну единицу этой же меры*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$length: 42px;
-
-// Yep
-$value: $length / 1px;
-
-// Nope
-$value: str-slice($length + unquote(''), 1, 2);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$length: 42px
-
-// Yep
-$value: $length / 1px
-
-// Nope
-$value: str-slice($length + unquote(''), 1, 2)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/11/index.html %}
 
 Добавляя единицу измерения как строку в число превращает всё в строку, предотвращая любую дополнительную операцию. Разделение числа и единицы измерения тоже возвращает строку. Это не то, чего вы хотите.
 
@@ -278,32 +118,7 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 **Числовые рассчёты должны всегда быть в круглых скобках**. Мало того, что это требование значительно улучшает читаемость, оно также предотвращает некоторые крайние случаи, заставляя Sass считать содержимое скобок.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  width: (100% / 3);
-}
-
-// Nope
-.foo {
-  width: 100% / 3;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo
-  width: (100% / 3)
-
-// Nope
-.foo
-  width: 100% / 3
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/12/index.html %}
 
 ### Магические числа
 
@@ -311,29 +126,7 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 Излишне говорить, **магические числа — чума, и их следует избегать любой ценой**. Если вы не можете найти разумное объяснение тому, почему число работает, добавьте обширный комментарий, объясняющий, как вы туда попали и почему вы думаете, что это работает. Признание в том, что вы не знаете, почему что-то работает, будет еще более полезным для следующего разработчика, чем исследования происходящего на пустом месте.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * 1. Магическое число. Это минимальное число, которое я смог найти, чтобы выровнять верх
- * `.foo` с его предком. В идеале мы должны исправить это по-правильному.
- */
-.foo {
-  top: 0.327em; /* 1 */
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * 1. Магическое число. Это минимальное число, которое я смог найти, чтобы выровнять верх
- * `.foo` с его предком. В идеале мы должны исправить это по-правильному.
- */
-.foo
-  top: 0.327em /* 1 */
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/13/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -353,101 +146,31 @@ $value: str-slice($length + unquote(''), 1, 2)
 1. [Ключеые слова CSS](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Обозначение HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Обозначение RGB](http://en.wikipedia.org/wiki/RGB_color_model);
-1. Шестнадцатеричная нотация. Предпочтительно в нижнем регистре и по возможности укороченная.
+1. Шестнадцатеричное обозначение (в нижнем регистре и сокращённое).
 
-Во-первых, ключевые слова часто говорят сами за себя. Представление HSL – не только самое простое для человеческого мозга <SUP>[указать источник]</SUP>, это также делает его лёгким для настройки цвета путём регулировки цветового тона, насыщенности и яркости индивидуально. RGB по-прежнему имеет преимущество, показывая прямо сейчас, если цвет более синий, зелёный или красный, но это не делает его лёгким в построении цвета из трёх частей. Наконец, шестнадцатеричное представление слишком сложно для расшифровки человеческим умом.
+<!-- TODO translate -->CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  color: red;
-}
+The HSL representation is not only the easiest one for the human brain to comprehend<sup>[citation needed]</sup>, it also makes it easy for stylesheet authors to tweak the color by adjusting the hue, saturation and lightness individually. 
 
-// Nope
-.foo {
-  color: #FF0000;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo
-  color: red
+RGB still has the benefit of showing right away if the color is more of a blue, a green or a red. Therefore it might be better than HSL in some situations, especially when describing a pure red, green or blue. Although it does not make it easy to build a color from the three parts.
 
-// Nope
-.foo
-  color: #FF0000
-{% endhighlight %}
-  </div>
-</div>
+Lastly, hexadecimal is close to indecipherable for the human mind. Use it only as a last resort if you have to.
+
+{% include snippets/syntax/14/index.html %}
 
 При использовании обозначений HSL или RGB, всегда пишите один пробел после запятой (`,`) и без пробела между скобками (`(`, `)`) и содержанием.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo {
-  color: rgba(0, 0, 0, 0.1);
-  background: hsl(300, 100%, 100%);
-}
-
-// Nope
-.foo {
-  color: rgba(0,0,0,0.1);
-  background: hsl( 300, 100%, 100% );
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo
-  color: rgba(0, 0, 0, 0.1)
-  background: hsl(300, 100%, 100%)
-
-// Nope
-.foo
-  color: rgba(0,0,0,0.1)
-  background: hsl( 300, 100%, 100% )
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/15/index.html %}
 
 ### Цвета и переменные
 
 При использовании цвета более одного раза, сохраняйте его в переменной с осмысленным названием, описывающим цвет.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$sass-pink: #c69;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$sass-pink: #c69
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/16/index.html %}
 
 Теперь вы можете использовать эту переменную, когда вы захотите. Однако, если ваше использование сильно привязано к теме, я бы не советовал использовать переменные как есть. Вместо этого, храните их в других переменных с именем, объясняющим, как она должна быть использована.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$main-theme-color: $sass-pink;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$main-theme-color: $sass-pink
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/17/index.html %}
 
 Это будет препятствовать изменениям темы, ведущим к чему-то вроде `$sass-pink: blue`.
 
@@ -463,48 +186,7 @@ $main-theme-color: $sass-pink
 
 Если вы не хотите писать функцию `mix` каждый раз, вы можете создать две простых в использовании функции `tint` и `shade` (которые также являются частью [Compass](HTTP://compass- style.org/reference/compass/helpers/colors/#shade)), чтобы сделать то же самое:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Немного осветлить цвет
-/// @access public
-/// @param {Color} $color - цвет для осветления
-/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
-/// @return {Color}
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-
-/// Немного затемнить цвет
-/// @access public
-/// @param {Color} $color - цвет для затемнения
-/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
-/// @return {Color}
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Немного осветлить цвет
-/// @access public
-/// @param {Color} $color - цвет для осветления
-/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
-/// @return {Color}
-@function tint($color, $percentage)
-  @return mix($color, white, $percentage)
-
-/// Немного затемнить цвет
-/// @access public
-/// @param {Color} $color - цвет для затемнения
-/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
-/// @return {Color}
-@function shade($color, $percentage)
-  @return mix($color, black, $percentage)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/18/index.html %}
 
 <div class="note">
   <p>Функция <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> разработана, чтобы изменять свойства более плавно, принимая во внимание, насколько они уже изменены. Результат так же хорош, как и от <code>mix</code>, но с более удобным вызовом. Хотя, множитель масштабирования – не совсем то же самое.</p>
@@ -524,85 +206,21 @@ $main-theme-color: $sass-pink
 
 Списки должны соблюдать следующие правила:
 
-* если не слишком длинный и помещается на 80-символьную строку, всегда отображать его на одной строке;
+* либо строчные, либо многострочные;
+* для многострочных обязательно умещаться в 80-знаковый предел;
 * если не используется для целей CSS, всегда пользуйтесь запятой в качестве разделителя;
-* если не пустой или вложен в другой список, никогда не пишите скобки;
-* никогда не добавляйте точку с запятой.
+* всегда обёрнуты скобками;
+* завершающая запятая для многострочных, для строчных не надо.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif;
-
-// Nope
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif;
-
-// Nope
-$font-stack: 'Helvetica' 'Arial' sans-serif;
-
-// Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif);
-
-// Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif,);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$font-stack: 'Helvetica', 'Arial', sans-serif
-
-// Nope (since it is not supported)
-$font-stack:
-  'Helvetica',
-  'Arial',
-  sans-serif
-
-// Nope
-$font-stack: 'Helvetica' 'Arial' sans-serif
-
-// Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif)
-
-// Nope
-$font-stack: ('Helvetica', 'Arial', sans-serif,)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/19/index.html %}
 
 При добавлении новых записей в список, всегда используйте прилагаемый API. Не пытайтесь добавлять новые элементы вручную.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$shadows: 0 42px 13.37px hotpink;
-
-// Yep
-$shadows: append($shadows, $shadow, comma);
-
-// Nope
-$shadows: $shadows, $shadow;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$shadows: 0 42px 13.37px hotpink
-
-// Yep
-$shadows: append($shadows, $shadow, comma)
-
-// Nope
-$shadows: $shadows, $shadow
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/20/index.html %}
 
 ###### Дальнейшее чтение
 
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](http://sassylists.com)
 
 ## Карты
@@ -622,123 +240,13 @@ $shadows: $shadows, $shadow
 
 Пример:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$breakpoints: (
-  'small': 767px,
-  'medium': 992px,
-  'large': 1200px,
-);
-
-// Nope
-$breakpoints: ( small: 767px, medium: 992px, large: 1200px );
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$breakpoints: ('small': 767px, 'medium': 992px, 'large': 1200px,)
-
-// Nope
-$breakpoints: ( 'small': 767px, 'medium': 992px, 'large': 1200px )
-
-// Nope
-$breakpoints: (small: 767px, medium: 992px, large: 1200px,)
-
-// Nope (since it is not supported)
-$breakpoints: (
-  'small': 767px,
-  'medium': 992px,
-  'large': 1200px,
-)
-{% endhighlight %}
-  </div>
-</div>
-
-### Отладка карт Sass
-
-Если вы когда-нибудь терялись, не понимая, что за сумасшедшая магия происходит в карте Sass, не волнуйтесь, потому что есть ещё путь к спасению.
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin debug-map($map) {
-  @at-root {
-    @debug-map {
-      __toString__: inspect($map);
-      __length__: length($map);
-      __depth__: if(function-exists('map-depth'), map-depth($map), null);
-      __keys__: map-keys($map);
-      __properties__ {
-        @each $key, $value in $map {
-          #{'(' + type-of($value) + ') ' + $key}: inspect($value);
-        }
-      }
-    }
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=debug-map($map)
-  @at-root
-    @debug-map
-      __toString__: inspect($map)
-      __length__: length($map)
-      __depth__: if(function-exists('map-depth'), map-depth($map), null)
-      __keys__: map-keys($map)
-      __properties__
-        @each $key, $value in $map
-          #{'(' + type-of($value) + ') ' + $key}: inspect($value)
-{% endhighlight %}
-  </div>
-</div>
-
-Если вы заинтересованы в глубине карты кода, добавьте следующую функцию. Примесь будет отображать её автоматически.
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Вычислить максимальную глубину карты
-/// @param {Map} $map
-/// @return {Number} max depth of `$map`
-@function map-depth($map) {
-  $level: 1;
-
-  @each $key, $value in $map {
-    @if type-of($value) == 'map' {
-      $level: max(map-depth($value) + 1, $level);
-    }
-  }
-
-  @return $level;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Вычислить максимальную глубину карты
-/// @param {Map} $map
-/// @return {Number} max depth of `$map`
-@function map-depth($map)
-  $level: 1
-
-  @each $key, $value in $map
-    @if type-of($value) == 'map'
-      $level: max(map-depth($value) + 1, $level)
-
-  @return $level;
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/21/index.html %}
 
 ###### Дальнейшее чтение
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
 * [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
@@ -760,43 +268,7 @@ $breakpoints: (
 
 Пример:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-.foo, .foo-bar,
-.baz {
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-// Nope
-.foo,
-.foo-bar, .baz {
-    display: block;
-    overflow: hidden;
-    margin: 0 auto }
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-.foo, .foo-bar,
-.baz
-  display: block
-  overflow: hidden
-  margin: 0 auto
-
-// Nope
-.foo,
-.foo-bar, .baz
-    display: block
-    overflow: hidden
-    margin: 0 auto
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/24/index.html %}
 
 Дополняя те руководства по CSS, мы должны обратить внимание на:
 
@@ -808,49 +280,7 @@ $breakpoints: (
 
 Пример:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo, .foo-bar,
-.baz {
-  $length: 42em;
-
-  @include ellipsis;
-  @include size($length);
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-
-  &:hover {
-    color: red;
-  }
-
-  @include respond-to('small') {
-    overflow: visible;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo, .foo-bar,
-.baz
-  $length: 42em
-
-  +ellipsis
-  +size($length)
-  display: block
-  overflow: hidden
-  margin: 0 auto
-
-  &:hover
-    color: red
-
-  +respond-to('small')
-    overflow: visible
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/25/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -865,117 +295,21 @@ $breakpoints: (
 
 Есть плюсы и минусы в обоих вариантах. С одной стороны, сортировка в алфавитном порядке является универсальной (по крайней мере, для языков, использующих латинский алфавит), поэтому нет никаких споров о сортировке свойств. Тем не менее, мне весьма странно видеть свойства, такие как `bottom` и `top`, не рядом друг с другом. Почему анимации должны быть перед `display`? Есть много странностей с алфавитным упорядочиванием.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  background: black;
-  bottom: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-  height: 100px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  width: 100px;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  background: black
-  bottom: 0
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-  height: 100px
-  overflow: hidden
-  position: absolute
-  right: 0
-  width: 100px
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/26/index.html %}
 
-С другой стороны, сортировка свойств по типу имеет смысл. Каждые объявления, относящиеся к шрифтам, располагаются рядом, как `top` и `bottom`, и чтение набора правил отчасти становится похожим на чтение рассказа. Но если вы не будете придерживаться некоторых соглашений, таких, как [Idiomatic CSS](https://github.com/necolas/idiomatic-css), есть много места для толкования. Где будет `white-space` – рядом со шрифтами или с `display`? Где расположить `overflow`? Что такое порядок свойств в группе? (Это может быть в алфавитном порядке, о ирония)
+С другой стороны, сортировка свойств по типу имеет смысл. Каждые объявления, относящиеся к шрифтам, располагаются рядом, как `top` и `bottom`, и чтение набора правил отчасти становится похожим на чтение рассказа. Но если вы не будете придерживаться некоторых соглашений, таких, как [Idiomatic CSS](https://github.com/necolas/idiomatic-css), есть много места для толкования. Где будет `white-space` – рядом со шрифтами или с `display`? Где расположить `overflow`? Что такое порядок свойств в группе? (Это может быть в алфавитном порядке, о ирония.)
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  height: 100px;
-  width: 100px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: black;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  height: 100px
-  width: 100px
-  overflow: hidden
-  position: absolute
-  bottom: 0
-  right: 0
-  background: black
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/27/index.html %}
 
 Существует также ещё одно интересное поддерево типа упорядочивания, называется [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), он, кажется, довольно популярен, что хорошо. В основном, Concentric CSS опирается на блочную модель, чтобы определить порядок: начинается за пределами, движется внутрь.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background: black;
-  overflow: hidden;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  width: 100px
-  height: 100px
-  position: absolute
-  right: 0
-  bottom: 0
-  background: black
-  overflow: hidden
-  color: white
-  font-weight: bold
-  font-size: 1.5em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/28/index.html %}
 
 Я должен сказать, что не могу решить это сам. [Недавний опрос на CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) установил, что более 45% разработчиков упорядочивают свойства по их назначению, против 14% в алфавитном порядке. Кроме того, есть 39%, кто делает это случайно, я в том числе.
 
 {% include images/order-poll.html %}
 
-Поэтому я не буду навязывать вам выбор. Выберите тот, который вы предпочитаете, пока вы последовательны в ваших стилях.
+Поэтому я не буду навязывать вам выбор. Выберите тот, который вы предпочитаете, пока вы последовательны в ваших стилях (то есть не выбирая его *случайно*).
 
 <div class="note">
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Недавние исследования</a> показали, что использование <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (которое использует <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">упорядочивание по типу</a>) помогает уменьшить общий размер файла на 2.7% при сжатии Gzip, в сравнении с 1.3%, когда происходит упорядочение по алфавиту.</p>
@@ -983,12 +317,8 @@ $breakpoints: (
 
 ###### Дальнейшее чтение
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Вкладывание селекторов
 
@@ -998,76 +328,19 @@ $breakpoints: (
 
 Например, такая вложенность Sass:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  .bar {
-    &:hover {
-      color: red;
-    }
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  .bar
-    &:hover
-      color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/29/index.html %}
 
 …создаст такой CSS:
 
-<div>
-{% highlight css %}
-.foo .bar:hover {
-  color: red;
-}
-{% endhighlight %}
-</div>
+{% include snippets/syntax/30/index.html %}
 
 В Sass 3.3 можно использовать ссылку на текущий селектор, используя `&`, чтобы создать дополнительные селекторы. Например:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  &-bar {
-    color: red;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  &-bar
-    color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/31/index.html %}
 
 …сгенерирует такой CSS:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo-bar {
-  color: red;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo-bar
-  color: red
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/32/index.html %}
 
 Этот метод часто используется в [методологии BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) для генерации селекторов `.block__element` и `.block--modifier`, основанных на базовом селекторе (т.е. `.block` в данном примере).
 
@@ -1085,140 +358,27 @@ $breakpoints: (
 
 Во-первых, можно, и я даже рекомендую вкладывать псевдоклассы и псевдоэлементы в родительский селектор.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  color: red;
-
-  &:hover {
-    color: green;
-  }
-
-  &::before {
-    content: 'псевдоэлемент';
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  color: red
-
-  &:hover
-    color: green
-
-  &::before
-    content: 'псевдоэлемент'
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/33/index.html %}
 
 Использование вложенности селекторов для псевдоклассов и псевдоэлементов не только имеет смысл (потому что имеет дело с тесно связанными селекторами), но также помогает держать всю информацию о компоненте в одном месте.
 
 Кроме того, при использовании классов, обозначающих состояние, таких как `.is-active`, это прекрасно подходит для того, чтобы вкладывать их под селектор компонента, чтобы всё выглядело аккуратно.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
-
-  &.is-active {
-    font-weight: bold;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  &.is-active
-    font-weight: bold
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/34/index.html %}
 
 Последнее, но не менее важное – при оформлении элемента часто случается, что он содержится в другом элементе, и тут также хорошо использовать вложенность, чтобы держать всё о компоненте в том же месте.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
-
-  .no-opacity & {
-    display: none;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  .no-opacity &
-    display: none
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/35/index.html %}
 
 При работе с неопытными разработчиками, селекторы, такие как `.no-opacity &`, могут выглядеть немного странно. Для предотвращения какой-либо путаницы, можно построить очень короткую примесь, которая преобразует этот странный синтаксис в явный API.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Примесь для предоставления простого API вложенности
-/// @param {String} $selector - Selector
-@mixin when-inside($selector) {
-  #{$selector} & {
-    @content;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Примесь для предоставления простого API вложенности
-/// @param {String} $selector - Selector
-=when-inside($selector) {
-  #{$selector} &
-    @content
-}
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/syntax/36/index.html %}
 
 Переписывание нашего предыдущего примера будет выглядеть следующим образом:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  // ...
+{% include snippets/syntax/37/index.html %}
 
-  @include when-inside('.no-opacity') {
-    display: none;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  // ...
-
-  +when-inside('.no-opacity')
-    display: none
-{% endhighlight %}
-  </div>
-</div>
-
-Как и везде, специфика несколько неуместна, последовательность является ключевым фактором. Если вы чувствуете, что полностью уверены во вложенности селекторов, тогда используйте ее. Просто убедитесь, что вся ваша команда справится с этим.
+Как и везде, специфика несколько неуместна, последовательность является ключевым фактором.<!-- TODO fix --> Если вы чувствуете, что полностью уверены во вложенности селекторов, тогда используйте её<!-- TODO replace “е” to “ё” when necessary -->. Просто убедитесь, что вся ваша команда справится с этим.
 
 ###### Дальнейшее чтение
 

@@ -40,8 +40,16 @@
 
 Кроме того, и позвольте мне процитировать [Гарри Робертса](https://csswizardry.com) еще раз, **прагматизм – козырь совершенства**. В какой-то момент, вы, вероятно, пойдёте против правил, описанных здесь. Если это имеет смысл — сделайте это. Код – просто средство, а не цель.
 
+## Дополняя руководство
+
+Большая часть этого руководства исключительно избирательна. Я читал и писал Sass годами, так что у меня теперь есть много принципов о написании чистых таблиц стилей. Я понимаю, что это может не нравиться и не подходить всем, и это совершенно нормально.
+
+Более того, я верю, что это руководство создано дополняться. <!-- TODO translate --> Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from thise styleguide except for a few things; in which case, specific rules would be explained below.
+
+Пример дополнения к руководству можно найти [в репозитории SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md): 
+
+> [Это](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) расширение для [Node Styleguide](https://github.com/felixge/node-style-guide) от Феликса Гейзендёрфер. <!-- TODO translate --> Anything from this document overrides what could be said in the Node Styleguide.
+
 ###### Дальнейшее чтение
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
