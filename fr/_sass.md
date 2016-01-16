@@ -13,11 +13,6 @@ Il ne s’agit pas de transformer CSS en langage de programmation. L’intention
 
 Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommendations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
 
-###### Lectures complémentaires
-
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
-
 ## Ruby Sass ou LibSass
 
 [Le premier commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) remonte à la fin 2006, il y a plus de 8 ans. Inutile de dire qu’il a fait un long chemin depuis. À l’origine le projet a été développé en Ruby, mais d’autres variantes sont apparues ici et là. Celle qui a rencontré le plus de succès, [LibSass](https://github.com/sass/libsass) (écrite en C) est désormais proche de la compatibilité totale avec la version Ruby originale.
@@ -30,9 +25,7 @@ Pour des projets non-Ruby, LibSass est probablement une meilleure idée. Si vous
 
 ###### Lectures complémentaires
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass ou SCSS
@@ -68,10 +61,3 @@ On peut voir les postprocesseurs comme un polyfill pour les fonctionnalités CSS
 L’idée intéressante derrière les postprocesseurs est qu’une fois la compatibilité acquise (p.ex. une fois que les navigateurs supporteront les variables CSS), le postprocesseur ne les compile plus et laisse le navigateur prendre le relais.
 
 Même s’il peut être intéressant de travailler dès aujourd’hui avec la syntaxe de demain, je préfère pour ma part utiliser Sass pour des tâches plus courantes. Cependant, il est des cas où je pense que les postprocesseurs sont plus adaptés que Sass et les autres —&nbsp;par exemple pour les préfixes CSS&nbsp;— mais nous reviendrons là-dessus tout à l’heure.
-
-###### Lectures complémentaires
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)

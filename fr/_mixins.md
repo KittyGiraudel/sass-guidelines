@@ -21,7 +21,6 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 ## Listes d'Arguments
 
@@ -61,5 +60,4 @@ Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne
 
 ###### Lectures complémentaires
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
