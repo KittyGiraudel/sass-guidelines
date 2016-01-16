@@ -43,7 +43,7 @@ Cada variable, función, *mixin* y *placeholder* que tiene como objetivo ser reu
 SassDoc tiene dos funciones principales:
 
 * forzar el uso de comentarios estandarizados basados en un sistema de anotación para todo lo que es parte de una API pública o privada;
-* ser capaz de generar una versión HTML de la documentación de la API utilizando cualquiera de los *endpoints* de SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* ser capaz de generar una versión HTML de la documentación de la API utilizando cualquiera de los *endpoints* de SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node…).
 
 {% include images/sassdoc.html %}
 

@@ -1,7 +1,7 @@
 
 # Varování a chyby
 
-Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, kompilování applikace...), což může být pro někoho překvapením.
+Pokud bych měl vybrat jednu funkci, která je často Sass vývojáři přehlížena, je to nepochybně možnost dynamického výstupu chyb a varování. Sass obsahuje tři vlastní direktivy pro výpis obsahu ve standardním výstupu systému (CLI, kompilování applikace…), což může být pro někoho překvapením.
 
 * `@debug`;
 * `@warn`;

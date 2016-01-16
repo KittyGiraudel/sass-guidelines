@@ -11,7 +11,7 @@ Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego min
 
 Osobiście nie korzystam już z Compassa. Głównym tego powodem jest fakt, że powoduje on znaczne jego spowolnienie. Ruby Sass jest powolne samo w sobie, więc dodawanie więcej Ruby i Sassa ponad to wcale nie pomaga.
 
-Rzecz w tym, że tak naprawdę używa się bardzo małego procenta całej funkcjonalności tego frameworka. Compass jest olbrzymi. Mixiny dla zapewnienia kompatybilności pomiędzy przeglądarkami to tylko wierzchołek góry lodowej. Funkcje matematyczne, funkcje pomagające z obrazkami, spriting... Compass dodaje bardzo dużo funkcjonalności.
+Rzecz w tym, że tak naprawdę używa się bardzo małego procenta całej funkcjonalności tego frameworka. Compass jest olbrzymi. Mixiny dla zapewnienia kompatybilności pomiędzy przeglądarkami to tylko wierzchołek góry lodowej. Funkcje matematyczne, funkcje pomagające z obrazkami, spriting… Compass dodaje bardzo dużo funkcjonalności.
 
 Niestety, można powiedzieć że to są tylko słodycze, a naprawdę brak jest jakiejś *zabójczej* funkcjonalności. Wyjątkiem może być funkcja budowania sprite’ów, która jest *naprawdę świetna*, lecz [Grunticon](https://github.com/filamentgroup/grunticon) i [Grumpicon](http://grumpicon.com/) robią to równie dobrze i mają ponadto tą zaletę, że można je dołączyć do zautomatyzowanego procesu budowania (jeśli z takiego korzystamy).
 
@@ -62,7 +62,7 @@ Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do
 
 <div class="note">
   <p>Chcąc dołączyć SCSS-lint do obecnego procesu budowania w Gruncie, dostępny jest plugin do Grunta o nazwie <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Poza tym, chłopaki z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) pracują obecnie nad <a href="https://houndci.com/">Hound</a>, który współpracuje z SCSS-lint i jemu podobnymi</p>
+  <p>Poza tym, chłopaki z <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) pracują obecnie nad <a href="https://houndci.com/">Hound</a>, który współpracuje z SCSS-lint i jemu podobnymi</p>
 </div>
 
 ###### Dalsze informacje

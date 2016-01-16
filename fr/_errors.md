@@ -1,7 +1,7 @@
 
 # Avertissements et erreurs
 
-S’il est une fonctionnalité de Sass souvent délaissée par les développeurs, c’est sa capacité à retourner dynamiquement des messages d’avertissement et d’erreur. Sass vient en effet avec trois directives permettant d’imprimer un contenu dans le système de sortie standard (CLI, compiling app...)&nbsp;:
+S’il est une fonctionnalité de Sass souvent délaissée par les développeurs, c’est sa capacité à retourner dynamiquement des messages d’avertissement et d’erreur. Sass vient en effet avec trois directives permettant d’imprimer un contenu dans le système de sortie standard (CLI, compiling app…)&nbsp;:
 
 * `@debug`;
 * `@warn`;

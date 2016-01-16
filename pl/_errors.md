@@ -1,7 +1,7 @@
 
 # Ostrzeżenia i błędy
 
-Jeśli miałbym wybrać jedną z funkcji Sassa, która jest najczęściej pomijana przez deweloperów, jest to niewątpliwie możliwość dynamicznego wysyłania ostrzeżeń i błędów. Co może być dla niektórych niespodzianką, Sass zawiera trzy własne dyrektywy do wydruku treści w przeznaczonych do tego systemach (CLI, aplikacja do kompilowania,...):
+Jeśli miałbym wybrać jedną z funkcji Sassa, która jest najczęściej pomijana przez deweloperów, jest to niewątpliwie możliwość dynamicznego wysyłania ostrzeżeń i błędów. Co może być dla niektórych niespodzianką, Sass zawiera trzy własne dyrektywy do wydruku treści w przeznaczonych do tego systemach (CLI, aplikacja do kompilowania,…):
 
 * `@debug`;
 * `@warn`;

@@ -43,7 +43,7 @@ Každá proměnná, funkce, mixin a placeholder, která je zamýšlena býti zno
 SassDoc má dvě hlavní role:
 
 * vynutit standardizované komentáře využívající systému založeném na anotacích pro všechno, co je součástí veřejného nebo privátního API;
-* být schopný generovat HTML verze API dokumentace za použití některého ze SassDoc koncového bodu (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* být schopný generovat HTML verze API dokumentace za použití některého ze SassDoc koncového bodu (CLI tool, Grunt, Gulp, Broccoli, Node…).
 
 {% include images/sassdoc.html %}
 

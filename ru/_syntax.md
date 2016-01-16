@@ -1123,7 +1123,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 .foo {
-  // ...
+  // …
 
   &.is-active {
     font-weight: bold;
@@ -1134,7 +1134,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 .foo
-  // ...
+  // …
 
   &.is-active
     font-weight: bold
@@ -1148,7 +1148,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 .foo {
-  // ...
+  // …
 
   .no-opacity & {
     display: none;
@@ -1159,7 +1159,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 .foo
-  // ...
+  // …
 
   .no-opacity &
     display: none
@@ -1199,7 +1199,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
 .foo {
-  // ...
+  // …
 
   @include when-inside('.no-opacity') {
     display: none;
@@ -1210,7 +1210,7 @@ $breakpoints: (
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
 .foo
-  // ...
+  // …
 
   +when-inside('.no-opacity')
     display: none

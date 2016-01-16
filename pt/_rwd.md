@@ -7,7 +7,7 @@ Não creio que tenhamos ainda de apresentar o que é Web Design Responsivo, agor
 
 Acho que é seguro dizer que as *media queries* não devem estar agarradas a dispositivos específicos. Por exemplo, seria definitivamente uma má ideia ter especificamente iPhones ou Blackberries como público-alvo. As *media queries* devem afetar um conjunto de tamanhos de ecrã, pelo menos até o design partir e a próxima *media query* entrar em acção.
 
-Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além...
+Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além…
 
 {% include snippets/rwd/01/index.html %}
 

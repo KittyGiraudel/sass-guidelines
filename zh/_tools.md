@@ -62,7 +62,7 @@
 
 <div class="note">
   <p>如果你想将 SCSS-lint 插入到 Grunt 构建过程中，那么 Grunt 插件 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a> 一定会对你有所帮助。</p>
-  <p>此外，如果你在寻找一个运行 SCSS-lint 的简洁工具，那么 <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) 正在开发的 <a href="https://houndci.com/">Hound</a> 也会对你有所帮助。</p>
+  <p>此外，如果你在寻找一个运行 SCSS-lint 的简洁工具，那么 <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) 正在开发的 <a href="https://houndci.com/">Hound</a> 也会对你有所帮助。</p>
 </div>
 
 ###### 扩展阅读

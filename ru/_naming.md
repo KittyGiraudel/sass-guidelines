@@ -19,11 +19,11 @@ Sass placeholder (`%placeholder`) намеренно исключены из э�
 $vertical-rhythm-baseline: 1.5rem;
 
 @mixin size($width, $height: $width) {
-  // ...
+  // …
 }
 
 @function opposite-direction($direction) {
-  // ...
+  // …
 }
 {% endhighlight %}
   </div>
@@ -32,10 +32,10 @@ $vertical-rhythm-baseline: 1.5rem;
 $vertical-rhythm-baseline: 1.5rem
 
 =size($width, $height: $width)
-  // ...
+  // …
 
 @function opposite-direction($direction)
-  // ...
+  // …
 {% endhighlight %}
   </div>
 </div>
@@ -84,19 +84,19 @@ $css-positions: top, right, bottom, left, center
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-$su-configuration: ( ... );
+$su-configuration: ( … );
 
 @function su-rainbow($unicorn) {
-  // ...
+  // …
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-$su-configuration: ( ... )
+$su-configuration: ( … )
 
 @function su-rainbow($unicorn)
-  // ...
+  // …
 {% endhighlight %}
   </div>
 </div>

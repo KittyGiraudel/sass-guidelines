@@ -7,7 +7,7 @@ Heureusement, l’un des principaux bénéfices de l’utilisation de préproces
 
 On n’insistera jamais assez sur la nécessité d’utiliser des dossiers, même sur des projets de dimension modeste. À la maison, vous ne rangez pas tous vos papiers dans la même boîte. Vous utilisez des dossiers&nbsp;: un pour les papiers de la maison, un pour la banque, un pour les factures, etc. Il en va de même lorsqu’on structure un projet CSS. Éclatez votre code en plusieurs dossiers qui font sens, de façon à retrouver ce que vous cherchez quand vous devez revenir sur le code.
 
-Il existe plusieurs architectures populaires pour les projets CSS&nbsp;: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](http://getbootstrap.com/) ou de [Foundation](http://foundation.zurb.com/)... Elles ont toutes leurs mérites et chacune a du pour et du contre.
+Il existe plusieurs architectures populaires pour les projets CSS&nbsp;: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](http://getbootstrap.com/) ou de [Foundation](http://foundation.zurb.com/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
 
 Personnellement j’utilise une approche assez similaire à [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
 
@@ -34,7 +34,7 @@ Les composants peuvent être ce qu’on veut, du moment que&nbsp;:
 * ils sont réutilisables et réutilisés à travers le projet&nbsp;;
 * ils sont indépendants.
 
-Par exemple, un formulaire de recherche devrait être traité comme un composant. Il devrait être réutilisable, à différents endroits, sur différentes pages, dans des situations variées. Il ne devrait pas dépendre de sa position dans le DOM (footer, sidebar, main content...).
+Par exemple, un formulaire de recherche devrait être traité comme un composant. Il devrait être réutilisable, à différents endroits, sur différentes pages, dans des situations variées. Il ne devrait pas dépendre de sa position dans le DOM (footer, sidebar, main content…).
 
 La plupart des éléments constituant une interface peuvent être pensés comme des composants et je recommande de se tenir à ce paradigme. Non seulement cela réduira le CSS nécessaire à un projet, mais encore ce sera bien plus facile à maintenir qu’un code chaotique et confus.
 
@@ -74,7 +74,7 @@ Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boi
 
 ### Dossier layout
 
-Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar...), pour le système de grille ou même les styles CSS pour tous les formulaires.
+Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar…), pour le système de grille ou même les styles CSS pour tous les formulaires.
 
 * `_grid.scss`
 * `_header.scss`

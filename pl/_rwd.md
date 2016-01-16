@@ -7,7 +7,7 @@ Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia.
 
 Wydaje mi się, że można spokojnie powiedzieć, że media queries nie powinny być podporządkowane konkretnym urządzeniom. Dla przykładu, celowanie w iPady czy telefony Blackberry jest niewątpliwie złym pomysłem. Media queries powinny zajmować się pewnym zakresem rozmiarów ekranów, do czasu kiedy design ulega załamaniu i następna media query zaczyna obowiązywać.
 
-Z tych samych powodów, breakpointy nie powinny być nazywane w nawiązaniu do konkretnych urządzeń, lecz bardziej ogólnie. Zwłaszcza teraz, gdy telefony stają się większe niż niektóre tablety, niektóre zaś tablety większe niż komputery o małych ekranach, i tak dalej...
+Z tych samych powodów, breakpointy nie powinny być nazywane w nawiązaniu do konkretnych urządzeń, lecz bardziej ogólnie. Zwłaszcza teraz, gdy telefony stają się większe niż niektóre tablety, niektóre zaś tablety większe niż komputery o małych ekranach, i tak dalej…
 
 {% include snippets/rwd/01/index.html %}
 

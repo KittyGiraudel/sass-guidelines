@@ -30,7 +30,7 @@ Komponenty mogą reprezentować wszystko, o tyle o ile:
 * mogą być wielokrotne użyte, w wielu miejscach w projekcie,
 * są niezależne.
 
-Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w różnych miejscach, na różnych stronach i w różnych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka...).
+Na przykład, formularz wyszukiwania powinien być traktowany jako komponent. Powinien on być przeznaczony do wielokrotnego użytku, w różnych miejscach, na różnych stronach i w różnych sytuacjach. Jego funkcjonalność i wygląd nie powinny zależeć od jego miejsca w DOMie (czy to będzie nagłówek, panel boczny, stopka…).
 
 Zdecydowana większość elementów interfejsu może być traktowana jako małe elementy i jestem wielkim zwolennikiem tego poglądu. Pomaga on nie tylko zmniejszyć ilość CSSu potrzebnego dla całego projektu, ale także ułatwia utrzymanie całości kodu w porządku.
 
@@ -78,7 +78,7 @@ W folderze `base/` znajduje się wszystko to, co możemy nazwać "gotowcem" dla 
 
 ### Folder layout
 
-Folder `layout/` zawiera wszystko, co odpowiada za rozmieszczenie elementów na stronie czy w aplikacji. Folder ten składać się może z arkuszy stylów przeznaczonych dla głównych partii strony (nagłówek, stopka, nawigacja, pasek boczny...), grid systemu czy nawet reguł CSS dla wszystkich formularzy.
+Folder `layout/` zawiera wszystko, co odpowiada za rozmieszczenie elementów na stronie czy w aplikacji. Folder ten składać się może z arkuszy stylów przeznaczonych dla głównych partii strony (nagłówek, stopka, nawigacja, pasek boczny…), grid systemu czy nawet reguł CSS dla wszystkich formularzy.
 
 * `_grid.scss`
 * `_header.scss`

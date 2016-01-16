@@ -3,7 +3,7 @@
 
 In Ihrer [Dokumentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) beschreibt sich [Sass](http://sass-lang.com) als:
 
-> [...] eine Erweiterung von CSS, welche Leistung und Eleganz zur ursprünglichen Sprache hinzufügt.
+> […] eine Erweiterung von CSS, welche Leistung und Eleganz zur ursprünglichen Sprache hinzufügt.
 
 Das ultimative Ziel von Sass ist es, die Fehler von CSS zu beheben. Denn wir wissen ja alle, dass CSS wirklich nicht die beste Sprache der Welt ist <sup>[Zitat benötigt]</sup>. Sie ist zwar sehr einfach zu lernen, kann aber, gerade in großen Projekten, sehr schnell unübersichtlich werden.
 

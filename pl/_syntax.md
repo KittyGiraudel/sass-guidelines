@@ -290,7 +290,7 @@ Przykład:
 Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak bardzo podzielone, jak jest to w przypadku sortowania deklaracji w CSSie. W szczególności należy tu mówić o dwóch poglądach:
 
 * porządek alfabetyczny,
-* porządkowanie deklaracji ze względu na ich typ (pozycja, `display`, kolory, czcionki i inne...).
+* porządkowanie deklaracji ze względu na ich typ (pozycja, `display`, kolory, czcionki i inne…).
 
 Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne jest uniwersalne (przynajmniej dla języków opartych o alfabet łaciński), więc przynajmniej nie sprawia ono większego problemu. Moim jednak zdaniem, nieumieszczanie własności takich jak `bottom` i `top` obok siebie jest pomysłem conajmniej dziwnym. Dlaczego też deklaracje dot. animacji miały by się znajdować przed własnością `display`? Jak można się domyśleć, w sortowaniu alfabetycznym nie trudno się doszukać szeregu takich nieścisłości.
 
@@ -329,7 +329,7 @@ Na przykład, poniższe zagnieżdżenie w Sassie:
 
 {% include snippets/syntax/29/index.html %}
 
-... wygeneruje taki kod CSS:
+… wygeneruje taki kod CSS:
 
 {% include snippets/syntax/30/index.html %}
 
@@ -337,7 +337,7 @@ Oprócz tego, od momentu wydania Sassa w wersji 3.3 możliwe jest odwoływanie s
 
 {% include snippets/syntax/31/index.html %}
 
-... wygeneruje taki kod CSS:
+… wygeneruje taki kod CSS:
 
 {% include snippets/syntax/32/index.html %}
 

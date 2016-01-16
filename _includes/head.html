@@ -18,13 +18,15 @@
   </script>
 
   <script>
-  loadCSS('/css/full.css');
+  loadCSS('/css/full.css', null, 'screen');
   loadFont('sg', '/css/fonts/data-woff.css', '/css/fonts/data-woff2.css', '/css/fonts/data-ttf.css');
   </script>
 
   <noscript>
-    <link rel="stylesheet" href="{{ '/css/full.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/full.css' | prepend: site.baseurl }}" media="screen">
   </noscript>
+
+  <link rel="stylesheet" href="{{ '/css/print.css' | prepend: site.baseurl }}" media="print">
 
   <script>document.createElement('picture')</script>
 

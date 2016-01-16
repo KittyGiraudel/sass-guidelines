@@ -17,7 +17,7 @@ Básicamente, no hay ningún sentido en declarar una variable que nunca se actua
 
 La variable *scoping* (alcance) ha cambiado a lo largo de los años. Hasta hace muy poco, las declaraciones de variables dentro de los conjuntos de reglas y otros alcances eran locales por defecto. Sin embargo cuando ya había una variable global con el mismo nombre, la asignación local cambiaría dicha variable global. Desde la versión 3.4, Sass fuerza correctamente el concepto de *scope* y crea una nueva variable local.
 
-Los documentos hablan de *ocultar o sombrear la variable global*. Cuando se declara una variable que ya existe en el alcance global dentro de un ámbito interno (selector, función, *mixin*...), se dice que la variable local esta *sombreando* a la variable global. Básicamente, la sobrescribe solo en el ámbito local.
+Los documentos hablan de *ocultar o sombrear la variable global*. Cuando se declara una variable que ya existe en el alcance global dentro de un ámbito interno (selector, función, *mixin*…), se dice que la variable local esta *sombreando* a la variable global. Básicamente, la sobrescribe solo en el ámbito local.
 
 El siguiente fragmento de código explica el concepto de *sombreado de variable*:
 

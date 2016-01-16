@@ -30,7 +30,7 @@ Komponenten können alles sein, solange sie:
 * wiederverwendbar und innerhalb des Projekt verwendet werden;
 * unabhängig sind.
 
-Ein Suchfeld zum Beispiel sollte wie eine Komponente behandelt werden. Wiederverwendbar an verschiedenen Positionen, unterschiedlichen Seiten in mehreren Situation. Dazu noch unabhängig vom DOM (footer, sidebar, main content, ...).
+Ein Suchfeld zum Beispiel sollte wie eine Komponente behandelt werden. Wiederverwendbar an verschiedenen Positionen, unterschiedlichen Seiten in mehreren Situation. Dazu noch unabhängig vom DOM (footer, sidebar, main content, …).
 
 Die meisten Interfaces können als Set aus kleinen Komponenten gesehen werden. Ich kann nur empfehlen sich an so ein Paradigma zu halten, denn das wird nicht nur CSS ersparen sondern auch die Wartbarkeit gegenüber einem chaotischen Durcheinander einfacher machen.
 
@@ -78,7 +78,7 @@ Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird ei
 
 ### Layout Ordner
 
-Im `layout/` Ordner ist alles was für die Seite oder Applikation als Design definiert wird. Hier können Stylesheets für die Hauptbereiche der Seite (header, footer, navigation, sidebar, ...), das Gridsystem oder Formulare drin sein. 
+Im `layout/` Ordner ist alles was für die Seite oder Applikation als Design definiert wird. Hier können Stylesheets für die Hauptbereiche der Seite (header, footer, navigation, sidebar, …), das Gridsystem oder Formulare drin sein.
 
 * `_grid.scss`
 * `_header.scss`

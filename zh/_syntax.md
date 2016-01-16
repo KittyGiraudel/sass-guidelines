@@ -286,7 +286,7 @@ map 的使用应该遵循下述规范：
 难以想象竟有这么多关于划分 CSS 声明顺序的讨论。具体而言，有如下两派：
 
 - 坚持以字母顺序排列；
-- 以类型（`position`, `display`, `colors`, `font`, miscellaneous...）顺序排列；
+- 以类型（`position`, `display`, `colors`, `font`, miscellaneous…）顺序排列；
 
 这两种方式各有利弊。一方面，字母排序方式通俗易懂（至少对于语言中使用拉丁字母的人来说），所以排序的过程完全没有争议。但是，这种排序的结果却十分奇怪，如 `bottom` 和 `top` 竟然彼此不相邻。为什么 `animations` 属性出现在 `display` 属性之前？字母排序方式有太多诸如此类的怪相了。
 
@@ -324,7 +324,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 比如下述Sass选择器的嵌套：
 
 {% include snippets/syntax/29/index.html %}
- 
+
 生成的 CSS:
 
 {% include snippets/syntax/30/index.html %}
