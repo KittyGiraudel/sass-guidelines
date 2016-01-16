@@ -1,9 +1,11 @@
 
 # Sur l’auteur
 
-Je m’appelle [Hugo Giraudel](http://hugogiraudel.com), je suis un développeur front-end français basé à Berlin. J’ai écrit beaucoup de choses sur Sass depuis plus de deux ans et je suis l’auteur de projets liés à Sass tels que [SassDoc](http://sassdoc.com) et [Sass-Compatibility](http://sass-compatibility.github.io). J’ai également écrit un livre sur CSS intitulé [CSS3 Pratique du Design Web](http://www.amazon.fr/dp/2212140231).
+Je m’appelle [Hugo Giraudel](http://hugogiraudel.com), je suis un développeur front-end français de 24 ans, actuellement en poste à [Edenspiekermann](http://edenspiekermann.com) à Berlin (Allemagne) et ce depuis 2015.
 
-J’ai également rédigé quelques bibliothèques Sass, pour le plaisir&nbsp;: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) et [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
+Je travaille avec Sass depuis maintenant plusieurs années et suis l’auteur de nombreux projets tournant autour de ce langage, tels que [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) et [Sass-Compatibility](http://sass-compatibility.github.io). Si vous désirez en savoir plus sur mes contributions envers la communauté Sass, jetez un oeil à [cette liste](http://github.com/HugoGiraudel/awesome-sass).
+
+Je suis également l’auteur d’un livre français sur CSS intitulé [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (publié aux éditions *Eyrolles*), ainsi qu’un livre sur Sass (en Anglais) intitulé [Jump Start Sass](https://learnable.com/books/jump-start-sass) (publié aux éditions *Learnable*).
 
 <div class="button-wrapper">
   <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
