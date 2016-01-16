@@ -62,12 +62,16 @@ Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
 
 ### Dossier base
 
-Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boilerplate*) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style (que j’ai l’habitude d’appeler `_base.scss`) définissant quelques styles standard pour les éléments HTML les plus employés.
+Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boilerplate*) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style définissant quelques styles standard pour les éléments HTML les plus employés (que j’ai l’habitude d’appeler `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
 
+<div class="note">
+  <p>Si votre projet utilise <em>beaucoup</em> d’animations CSS, vous pouvez envisager d’ajouter un fichier <code>_animations.scss</code> contenant les définitions de <code>@keyframes</code> pour toutes vos animations. Si vous n’utilisez les animations que de façon sporadique, laissez leur déclaration près des sélecteurs qui les emploient.</p>
+</div>
+ 
 ### Dossier layout
 
 Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar…), pour le système de grille ou même les styles CSS pour tous les formulaires.
