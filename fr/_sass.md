@@ -13,6 +13,10 @@ Il ne s’agit pas de transformer CSS en langage de programmation. L’intention
 
 Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommendations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
 
+###### Lectures complémentaires
+
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
+
 ## Ruby Sass ou LibSass
 
 [Le premier commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) remonte à la fin 2006, il y a plus de 8 ans. Inutile de dire qu’il a fait un long chemin depuis. À l’origine le projet a été développé en Ruby, mais d’autres variantes sont apparues ici et là. Celle qui a rencontré le plus de succès, [LibSass](https://github.com/sass/libsass) (écrite en C) est désormais proche de la compatibilité totale avec la version Ruby originale.
