@@ -50,6 +50,10 @@ Et bien sûr&nbsp;:
 
 * `main.scss`
 
+<div class="note">
+  <p>Si vous souhaitez utiliser le pattern 7-1, il y a déjà un <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> sur GitHub. Il contient tout ce dont vous avez besoin pour démarrer avec cette architecture.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
