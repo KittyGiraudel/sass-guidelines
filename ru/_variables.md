@@ -21,133 +21,23 @@
 
 Следующий фрагмент кода объясняет задумку *затенения переменных*.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Объявить глобальную переменную на корневом уровне.
-$variable: 'initial value';
-
-// Создать примесь, которая перезаписывает глобальные переменные.
-@mixin global-variable-overriding {
-  $variable: 'mixin value' !global;
-}
-
-.local-scope::before {
-  // Создать локальную переменную, которая затеняет глобальную.
-  $variable: 'local value';
-
-  // Применить примесь: она перезапишет глобальную переменную.
-  @include global-variable-overriding;
-
-  // Вывести значение переменной.
-  // Здесь значение из **локальной** переменной, так как она затеняет
-  // глобальную.
-  content: $variable;
-}
-
-// Вывести эту переменную в другом селекторе, который не делает затенения.
-// Здесь значение **глобальное**, как и ожидалось.
-.other-local-scope::before {
-  content: $variable;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Объявить глобальную переменную на корневом уровне.
-$variable: 'initial value'
-
-// Создать примесь, которая перезаписывает глобальные переменные.
-@mixin global-variable-overriding
-  $variable: 'mixin value' !global
-
-.local-scope::before
-  // Создать локальную переменную, которая затеняет глобальную.
-  $variable: 'local value'
-
-  // Применить примесь: она перезапишет глобальную переменную.
-  +global-variable-overriding
-
-  // Вывести значение переменной.
-  // Здесь значение из **локальной** переменной, так как она затеняет
-  // глобальную.
-
-// Вывести эту переменную в другом селекторе, который не делает затенения.
-// Здесь значение **глобальное**, как и ожидалось.
-.other-local-scope::before
-  content: $variable
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/01/index.html %}
 
 ## Флаг `!default`
 
 При построении библиотеки, фреймворка, сетки или любого кода Sass, который предназначен для использования другими разработчиками, все переменные должны быть определены с флагом `!default`, чтобы они могли быть перезаписаны.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$baseline: 1em !default;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$baseline: 1em !default
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/02/index.html %}
 
 Благодаря этому, разработчик может определить свою собственную переменную `$baseline` *перед* импортом вашей библиотеки, при этом она не будет переопределена.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Переменная разработчика
-$baseline: 2em;
-
-// Ваша библиотека определяет `$baseline`
-@import 'your-library';
-
-// $baseline == 2em;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Переменная разработчика
-$baseline: 2em
-
-// Ваша библиотека определяет `$baseline`
-@import your-library
-
-// $baseline == 2em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/03/index.html %}
 
 ## Флаг `!global`
 
 Флаг `!global` следует использовать только тогда, когда вы переопределяете глобальную переменную из локальной области видимости. При определении переменной на корневом уровне, флаг `global` должен быть опущен.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$baseline: 2em;
-
-// Nope
-$baseline: 2em !global;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$baseline: 2em
-
-// Nope
-$baseline: 2em !global
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/04/index.html %}
 
 ## Много переменных или карты
 
@@ -155,47 +45,4 @@ $baseline: 2em !global
 
 Другое преимущество использования карт в способности создать небольшую функцию для получения значений, чтобы обеспечить удобный API. Например, рассмотрим следующий код Sass:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Карта Z-index’ов, собирает все Z-слои приложения
-/// @access private
-/// @type Map
-/// @prop {String} key - Имя слоя
-/// @prop {Number} value - значение Z, соответствущее ключу
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Получение значения z-index из имени слоя
-/// @access public
-/// @param {String} $layer - Имя слоя
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Карта Z-index’ов, собирает все Z-слои приложения
-/// @access private
-/// @type Map
-/// @prop {String} key - Имя слоя
-/// @prop {Number} value - значение Z, соответствущее ключу
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Получение значения z-index из имени слоя
-/// @access public
-/// @param {String} $layer - Имя слоя
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/variables/05/index.html %}
