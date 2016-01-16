@@ -17,12 +17,8 @@
 
 ###### Дальнейшее чтение
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Компоненты
 
@@ -54,58 +50,15 @@
 
 * `main.scss`
 
+<!-- TODO translate --><div class="note">
+  <p>If you are looking to use the 7-1 pattern, there is a <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> ready on GitHub. It should contain everything you need to get started with this architecture.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 В идеале, мы можем закончить с чем-то похожим:
 
-<div class="highlight"><pre><code>
-sass/
-|
-|– base/
-|   |– _reset.scss       # Reset/normalize
-|   |– _typography.scss  # Типографские правила
-|   ...                  # и т.д.
-|
-|– components/
-|   |– _buttons.scss     # Кнопки
-|   |– _carousel.scss    # Карусель
-|   |– _cover.scss       # Обложка
-|   |– _dropdown.scss    # Выпадающий список
-|   ...                  # и т.д.
-|
-|– layout/
-|   |– _navigation.scss  # Навигация
-|   |– _grid.scss        # Сетка
-|   |– _header.scss      # Шапка
-|   |– _footer.scss      # Подвал
-|   |– _sidebar.scss     # Боковая панель
-|   |– _forms.scss       # Формы
-|   ...                  # и т.д.
-|
-|– pages/
-|   |– _home.scss        # Стили, особые для главной страницы
-|   |– _contact.scss     # Стили, особые для страницы контактов
-|   ...                  # и т.д.
-|
-|– themes/
-|   |– _theme.scss       # Тема по умолчанию
-|   |– _admin.scss       # Тема админа
-|   ...                  # и т.д.
-|
-|– utils/
-|   |– _variables.scss   # Переменные Sass
-|   |– _functions.scss   # Функции Sass
-|   |– _mixins.scss      # Примеси Sass
-|   |– _helpers.scss     # Помощники классов & placeholder’ов
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # и т.д.
-|
-|
-`– main.scss             # главный файл Sass
-</code></pre></div>
+{% include snippets/architecture/01/index.html %}
 
 <div class="note">
   <p>Следующие файлы имеют то же соглашение по именованию, что и выше: они отделены нижним подчеркиванием.</p>
@@ -113,11 +66,15 @@ sass/
 
 ### Папка Base
 
-Папка `base/` содержит то, что мы можем назвать общим шаблоном проекта. Там вы можете найти файл сброса, некоторые типографские правила, и, вероятно, стили (я привык их называть `_base.scss`), определяющие некоторые стандартные стили для часто используемых элементов HTML.
+Папка `base/` содержит то, что мы можем назвать общим шаблоном проекта. Там вы можете найти файл сброса, некоторые типографские правила, и, вероятно, стили, определяющие некоторые стандартные стили для часто используемых элементов HTML (я привык их называть `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<!-- TODO translate --><div class="note">
+  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
+</div>
 
 ### Папка Layout
 
@@ -177,10 +134,12 @@ sass/
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (часто называется `_helpers.scss`)
+* `_placeholders.scss`
+
+<!-- TODO translate -->When working on a very large project with a lot of utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long. 
 
 <div class="note">
-  <p>Папка <code>utils/</code> может также быть названа <code>helpers/</code>, <code>sass-helpers/</code> или <code>sass-utils/</code>, на ваше усмотрение.</p>
+  <p>Папка <code>utils/</code> может также быть названа <code>utilities/</code> или <code>helpers/</code>, на ваше усмотрение.</p>
 </div>
 
 ### Папка Vendors
@@ -194,7 +153,7 @@ sass/
 
 Если вы хотите что-то переписать в этих файлах, то я рекомендую вам ввести восьмую папку `vendors-extensions/`, в которой вы будете хранить файлы перезаписи свойств с точно такими же именами.
 
-Например, файл `vendors-extensions/_boostrap.scss`, содержащий все CSS-правила на перезапись CSS-правил Bootstrap. Это для того, чтобы не править сами внешние модули, что на самом деле не очень хорошая идея.
+Например, файл `vendors-extensions/_bootstrap.scss`, содержащий все CSS-правила на перезапись CSS-правил Bootstrap. Это для того, чтобы не править сами внешние модули, что на самом деле не очень хорошая идея.
 
 ### Файл Main
 
@@ -202,8 +161,8 @@ sass/
 
 Файлы должны быть импортированы в соответствии с папкой размещения, один за другим, в соответствуещем порядке:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -217,72 +176,7 @@ sass/
 * новая строка после вставки последнего `@import` из одной и той же папки;
 * не писать расширения файлов и нижние подчеркивания.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import 'vendors/bootstrap';
-@import 'vendors/jquery-ui';
-
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/mixins';
-@import 'utils/placeholders';
-
-@import 'base/reset';
-@import 'base/typography';
-
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
-
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/cover';
-@import 'components/dropdown';
-
-@import 'pages/home';
-@import 'pages/contact';
-
-@import 'themes/theme';
-@import 'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import vendors/bootstrap
-@import vendors/jquery-ui
-
-@import utils/variables
-@import utils/functions
-@import utils/mixins
-@import utils/placeholders
-
-@import base/reset
-@import base/typography
-
-@import layout/navigation
-@import layout/grid
-@import layout/header
-@import layout/footer
-@import layout/sidebar
-@import layout/forms
-
-@import components/buttons
-@import components/carousel
-@import components/cover
-@import components/dropdown
-
-@import pages/home
-@import pages/contact
-
-@import themes/theme
-@import themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/02/index.html %}
 
 Существует ещё один способ импорта, который действует так же. С одной стороны, это делает файл более читаемым. С другой стороны, это делает его обновление немного более болезненным. Во всяком случае, вам решать, что лучше, это не имеет большого значения. Основной файл следует следующим принципам:
 
@@ -292,127 +186,19 @@ sass/
 * новая строка после последнего импорта файла из папки;
 * не писать расширения файлов и нижние подчеркивания.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@import
-  'vendors/bootstrap',
-  'vendors/jquery-ui';
-
-@import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins',
-  'utils/placeholders';
-
-@import
-  'base/reset',
-  'base/typography';
-
-@import
-  'layout/navigation',
-  'layout/grid',
-  'layout/header',
-  'layout/footer',
-  'layout/sidebar',
-  'layout/forms';
-
-@import
-  'components/buttons',
-  'components/carousel',
-  'components/cover',
-  'components/dropdown';
-
-@import
-  'pages/home',
-  'pages/contact';
-
-@import
-  'themes/theme',
-  'themes/admin';
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@import
-  vendors/bootstrap,
-  vendors/jquery-ui
-
-@import
-  utils/variables,
-  utils/functions,
-  utils/mixins,
-  utils/placeholders
-
-@import
-  base/reset,
-  base/typography
-
-@import
-  layout/navigation,
-  layout/grid,
-  layout/header,
-  layout/footer,
-  layout/sidebar,
-  layout/forms
-
-@import
-  components/buttons,
-  components/carousel,
-  components/cover,
-  components/dropdown
-
-@import
-  pages/home,
-  pages/contact
-
-@import
-  themes/theme,
-  themes/admin
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/03/index.html %}
 
 <div class="note">
   <p>Для того, чтобы не импортировать каждый файл вручную, есть расширение Ruby Sass, которое называется <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, оно позволяет использовать glob-шаблон в <code>@import</code> Sass, например – <code>@import "components/*"</code>.</p>
-  <p>Как было сказано, я не рекомендую это, потому что используется упорядочение по алфавиту, что иногда может быть не тем, что вы хотите, особенно, когда вы имеете дело с языком, в котором важно упорядочение.</p>
+  <p>Как было сказано, я не рекомендую это, потому что используется упорядочение по алфавиту, что иногда может быть не тем, что вы хотите, особенно, когда вы имеете дело с языком, в котором важно упорядочивание.</p>
 </div>
 
 ## Файл позора
 
 Это интересная идея, которая стала популярна благодаря [Гарри Робертсу](http://csswizardry.com), [Дэйву Руперту](http://daverupert.com) и [Крису Койеру](http://css-tricks.com) и состоит в том, чтобы складывать все хаки и код, которым вы не гордитесь, в *файл позора*. Поэтому этот файл и имеет такое драматическое название – `_shame.scss`, импортируется в самом конце.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/**
- * Особое исправление навигации.
- *
- * Кто-то использовал ID в коде шапки (`#header a {}`), который перекрывает
- * селекторы nav (`.site-nav a {}`). Используйте `!important`, чтобы
- * перекрыть их, до тех пор, пока я не перепишу шапку.
- */
-.site-nav a {
-    color: #BADA55 !important;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/**
- * Особое исправление навигации.
- *
- * Кто-то использовал ID в коде шапки (`#header a {}`), который перекрывает
- * селекторы nav (`.site-nav a {}`). Используйте `!important`, чтобы
- * перекрыть их, до тех пор, пока я не перепишу шапку.
- */
-.site-nav a
-    color: #BADA55 !important
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/architecture/04/index.html %}
 
 ###### Дальнейшее чтение
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
