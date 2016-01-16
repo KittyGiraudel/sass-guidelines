@@ -13,32 +13,7 @@ Sass placeholder (`%placeholder`) намеренно исключены из э�
 
 Что же касается переменных, функций и примесей, то мы будем придерживаться чего-то очень *CSS-ного*: **нижние подчеркивания и дефисы**, и, прежде всего – смысл.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$vertical-rhythm-baseline: 1.5rem;
-
-@mixin size($width, $height: $width) {
-  // ...
-}
-
-@function opposite-direction($direction) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$vertical-rhythm-baseline: 1.5rem
-
-=size($width, $height: $width)
-  // ...
-
-@function opposite-direction($direction)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/01/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -50,26 +25,7 @@ $vertical-rhythm-baseline: 1.5rem
 
 Как и для многих языков, я предлагаю делать константы переменными в верхнем регистре. Это не только очень старое соглашение, но это также хорошо контрастирует с обычными строчными переменными.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-$CSS_POSITIONS: top, right, bottom, left, center;
-
-// Nope
-$css-positions: top, right, bottom, left, center;
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-$CSS_POSITIONS: top, right, bottom, left, center
-
-// Nope
-$css-positions: top, right, bottom, left, center
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/02/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -81,25 +37,7 @@ $css-positions: top, right, bottom, left, center
 
 Например, если вы работаете над проектом *Sassy Unicorn*, который предназначен для использования разработчиками по всему миру (кто бы не хотел, не так ли?), вы можете рассмотреть возможность использования `su-` как пространство имен. Это достаточно верно, чтобы предотвратить любые споры в именах, и достаточно коротко, чтобы не быть болью при написании кода.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-$su-configuration: ( ... );
-
-@function su-rainbow($unicorn) {
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-$su-configuration: ( ... )
-
-@function su-rainbow($unicorn)
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/naming/03/index.html %}
 
 <div class="note">
   <p>Обратите внимание, что автоматическое создание пространств имён, безусловно, цель для предстоящего проекта <code>@import</code> из Sass 4.0. Так как это становится всё ближе и ближе, то использование библиотек с пространством имён, написанным вручную, может стать сложнее в использовании.</p>
