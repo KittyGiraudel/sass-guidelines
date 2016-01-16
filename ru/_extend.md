@@ -1,66 +1,45 @@
 
 # Extend
 
-Указание `@extend` – одна из возможностей, которая сделала Sass таким известным несколько лет назад. Напомню: она позволяет Sass оформить элемент A именно так, как будто бы он также соответствует селектору B. Разумеется, эта возможность является ценным союзником при написании модульного CSS.
+<!-- TODO translate -->The `@extend` directive is a powerful feature that is frequently misunderstood. In general, it makes it possible to tell Sass to style a selector A as though it also matched selector B. Needless to say, this can be a valuable ally when writing modular CSS.
 
-Однако я чувствую, что должен предостеречь вас от этой возможности. Указание `@extend` – всё ещё замысловатая задумка, которая может принести больше вреда, чем пользы, особенно когда неправильно используется. Дело в том, что при расширении селектора, вы практически не имеете возможности ответить на вопросы о том, что происходит, не имея глубоких знаний всей кодовой базы:
+However, the true purpose of `@extend` is to maintain the relationships (constraints) within extended selectors between rulesets. What exactly does this mean?
 
-* где мой текущий селектор будет добавлен?
-* я, наверное, сейчас сделаю что-то нежелательное?
-* насколько много CSS генерируются одним указанием?
+- Selectors have *constraints* (e.g. `.bar` in `.foo > .bar` must have a parent `.foo`);
+- These constraints are *carried over* to the extending selector (e.g. `.baz { @extend .bar; }` will produce `.foo > .bar, .foo > .baz`);
+- The declarations of the extended selector will be shared with the extending selector.
 
-Чтобы вы знали, результат может различаться от ничего до создания катастрофических побочных эффектов. Из-за этого, мой совет – избегать указания `@extend`. Это может показаться жестоким, но, в конце концов, это может спасти вас от головной боли и неприятностей.
+Given that, it's straightforward to see how extending selectors with lenient constraints can lead to selector explosion. If `.baz .qux` extends `.foo .bar`, the resulting selector can be `.foo .baz .qux` or `.baz .foo .qux`, as both `.foo` and `.baz` are general ancestors. They can be parents, grandparents, etc.
 
-Как говорится:
+Always try to define relationships via [selector placeholders](http://www.sitepoint.com/sass-reference/placeholders/), not actual selectors. This will give you the freedom to use (and change) any naming convention you have for your selectors, and since relationships are only defined once inside the placeholders, you are far less likely to produce unintended selectors.
 
-> Никогда не говори никогда.<br>
-> &mdash; По-видимому, [не Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
+For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector _is a kind of_ the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
 
-Есть ситуации, в которых расширяющие селекторы могут быть полезны, и стоят того, чтобы их использовать. Тем не менее, всегда имейте в виду эти правила, чтобы не попасть в беду:
+{% include snippets/extend/01/index.html %}
 
-* Используйте указание `@extend` внутри модуля, но не в разных модулях.
-* Используйте указание `@extend` исключительно на `%placeholder`'ы, а не на обычные селекторы.
-* Убедитесь, что `%placeholder`, который вы расширяете, присутствует как можно реже в таблице стилей.
+There are many scenarios where extending selectors are helpful and worthwhile. Always keep in mind these rules so you can `@extend` with care:
 
-Если вы собираетесь использовать расширения, позвольте мне также напомнить вам, что это не очень хорошо работает с блоками `@media`. Как вы, возможно, знаете, Sass не в состоянии расширить внешний селктор изнутри медиа-запроса. При этом, компилятор просто вылетает, говоря вам, что вы не можете делать так. Не очень приятно. Тем более, что медиа-запросы – это почти всё, что мы знаем.
-
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  content: 'foo';
-}
-
-@media print {
-  .bar {
-    // Это не работает. Ещё хуже: это ломает.
-    @extend .foo;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  content: 'foo'
-
-@media print
-  .bar
-    // Это не работает. Ещё хуже: это ломает.
-    @extend .foo
-{% endhighlight %}
-  </div>
-</div>
-
-> Вы не можете расширить внешний селектор из медиа-запроса с помощью @extend.<br>
-> Вы можете делать @extend только с селекторами внутри одного и того же указания.
+* Use extend on `%placeholders` primarily, not on actual selectors.
+* When extending classes, only extend a class with another class, _never_ a [complex selector](http://www.w3.org/TR/selectors4/#syntax).
+* Directly extend a `%placeholder` as few times as possible.
+* Avoid extending general ancestor selectors (e.g. `.foo .bar`) or general sibling selectors (e.g. `.foo ~ .bar`). This is what causes selector explosion.
 
 <div class="note">
-  <p>Говорят, что <code>@extend</code> уменьшает размер файла, так как комбинирует селекторы, а не дублирует код. Это правда, однако, разница незначительна для <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a>.</p>
-  <p>Если вы не можете использовать Gzip (или что-то похожее), то использование <code>@extend</code> может быть и не так плохо, пока вы понимаете, что делаете.</p>
+  <p>It is often said that <code>@extend</code> helps with the file size since it combines selectors rather than duplicating properties. That is true, however the difference is negligible once <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> has done its compression.</p>
+  <p>That being said, if you cannot use Gzip (or any equivalent) then switching to a <code>@extend</code> approach might be valuable, especially if stylesheet weight is your performance bottleneck.</p>
 </div>
 
-Подводя итог, я бы **не рекомендовал использовать указание `@extend`**, исключая только некоторые конкретные обстоятельства, но я не буду заходить так далеко, чтобы запрещать её.
+### Extend and media queries
+
+You should only extend selectors within the same media scope (`@media` directive). Think of a media query as another constraint.
+
+{% include snippets/extend/02/index.html %}
+
+To sum up, I would advise to use `@extend` only for maintaining relationships within selectors. If two selectors are characteristically similar, that is the perfect use-case for `@extend`. If they are unrelated but share some rules, a `@mixin` might suit you better.
+
+<div class="note">
+  <p>Thanks to <a href="https://twitter.com/davidkpiano">David Khourshid</a> for his help and expertise on this section.</p>
+</div>
 
 ###### Дальнейшее чтение
 
@@ -68,3 +47,4 @@
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
