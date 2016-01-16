@@ -11,144 +11,36 @@
 
 Как было сказано, примеси чрезвычайно полезны, и вы должны их использовать. Правило гласит, что если вам случится встретить набор свойств CSS, которые всегда появляются вместе по какой-либо причине (то есть не случайно), то вы можете поместить их в примесь. [Хак Micro-clearfix от Николаса Галлагера](http://nicolasgallagher.com/micro-clearfix-hack/) заслуживает быть помещенным в примесь (без аргументов), например.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Помощник для сброса внутреннего обтекания
-/// @author Николас Галлагер
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Помощник для сброса внутреннего обтекания
-/// @author Николас Галлагер
-/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
-@mixin clearfix
-  &::after
-    content: ''
-    display: table
-    clear: both
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/01/index.html %}
 
 Еще один обоснованный пример примеси: примесь для определения размера элемента, одновременно определяющий и `ширину`, и `высоту`. Код станет не только легче набирать, но и легче читать.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Помощник для определения размера
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Помощник для определения размера
-/// @author Hugo Giraudel
-/// @param {Length} $width
-/// @param {Length} $height
-=size($width, $height: $width)
-  width: $width
-  height: $height
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/02/index.html %}
 
 ###### Дальнейшее чтение
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+## Argument-less mixins
+
+<!-- TODO translate -->Sometimes mixins are used only to avoid repeating the same group of declarations over and over again, yet do not need any parameter or have sensible enough defaults so that we don’t necessarily have to pass arguments.
+
+In such cases, we can safely omit the parentheses when calling them. The `@include` keyword (or `+` sign in indented-syntax) already acts as a indicator that the line is a mixin call; there is no need for extra parentheses here.
+
+{% include snippets/mixins/08/index.html %}
 
 ## Список аргументов
 
 Когда имеете дело с неизвестным количеством аргументов в примеси, используйте `arglist`, а не список. Думайте об `arglist` как о восьмом скрытом недокументированном типе данных Sass, неявность которого позволяет использовать произвольное количество аргументов в примеси или функции, подписи которых содержат `...`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin shadows($shadows...) {
-  // type-of($shadows) == 'arglist'
-  // ...
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=shadows($shadows...)
-  // type-of($shadows) == 'arglist'
-  // ...
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/03/index.html %}
 
 Теперь, когда вы делаете примесь, которая принимает несколько аргументов (3 или более), подумайте дважды, прежде чем создавать один список – может быть, будет легче передавать их по одному.
 
 Sass очень умён в работе с примесями и объявлениями функций, так что вы можете передавать список или карту в качестве списка аргументов для функции или примеси, и это считается как рядом аргументов.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@mixin dummy($a, $b, $c) {
-  // ...
-}
-
-// Yep
-@include dummy(true, 42, 'kittens');
-
-// Yep but nope
-$params: true, 42, 'kittens';
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
-
-// Yep
-$params: true, 42, 'kittens';
-@include dummy($params...);
-
-// Yep
-$params: (
-  'c': 'kittens',
-  'a': true,
-  'b': 42
-);
-@include dummy($params...);
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-=dummy($a, $b, $c)
-  // ...
-
-// Yep
-+dummy(true, 42, 'kittens')
-
-// Yep but nope
-$params: true, 42, 'kittens'
-$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3))
-
-// Yep
-$params: true, 42, 'kittens'
-+dummy($params...)
-
-// Yep
-$params: ( 'c': 'kittens', 'a': true, 'b': 42, )
-+dummy($params...)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/04/index.html %}
 
 ###### Дальнейшее чтение
 
@@ -162,86 +54,18 @@ $params: ( 'c': 'kittens', 'a': true, 'b': 42, )
 
 Если вы не можете использовать Autoprefixer, Bourbon и Compass, то тогда вы должны использовать вашу собственную примесь для подстановки префиска свойствам CSS. Но, пожалуйста, не делайте на свойство по примеси, вручную выводя каждый вендор.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Nope
-@mixin transform($value) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  transform: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Nope
-=transform($value)
-  -webkit-transform: $value
-  -moz-transform: $value
-  transform: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/05/index.html %}
 
 Делайте это по-умному.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Примесь, которая выводит вендорные префиксы
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - свойство CSS без префикса
-/// @param {*} $value - Сырое значение свойства CSS
-/// @param {List} $prefixes - Список префиксов для вывода
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Примесь, которая выводит вендорные префиксы
-/// @access public
-/// @author HugoGiraudel
-/// @param {String} $property - свойство CSS без префикса
-/// @param {*} $value - Сырое значение свойства CSS
-/// @param {List} $prefixes - Список префиксов для вывода
-=prefix($property, $value, $prefixes: ())
-  @each $prefix in $prefixes
-    -#{$prefix}-#{$property}: $value
-
-  #{$property}: $value
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/06/index.html %}
 
 Использование этой примеси будет очень простым:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-.foo {
-  @include prefix(transform, rotate(90deg), webkit ms);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-.foo
-  +prefix(transform, rotate(90deg), webkit ms)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/mixins/07/index.html %}
 
 Пожалуйста, помните о том, что это плохое решение. Например, это не поможет справиться со сложными placeholder’ами, такими как те, которые нужны для Flexbox. Поэтому использование Autoprefixer будет куда лучшим вариантом.
 
 ###### Дальнейшее чтение
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
