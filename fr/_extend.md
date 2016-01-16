@@ -1,40 +1,42 @@
 
 # Extend
 
-La directive `@extend` est certainement l’une des fonctionnalités de Sass qui ont le plus contribué à la popularité du préprocesseur il y a quelques années. Pour mémoire, elle permet d’indiquer à Sass qu’il doit styler un élément A comme s’il correspondait à un élément B. Il va sans dire que c’est un allié de poids lorsqu’on écrit un CSS modulaire.
+La directive `@extend` est une fonctionnalité puissante qui est bien souvent mal comprise. En règle générale, elle permet d’indiquer à Sass qu’il doit styler un sélecteur A comme s’il correspondait à un élément B. Il va sans dire que c’est un allié de poids lorsqu’on écrit un CSS modulaire.
 
-Cependant, je dois vous avertir des dangers de cette fonctionnalité. Aussi intelligente soit-elle, `@extend` demeure un concept délicat qui peut faire plus de mal que de bien, surtout quand mal utilisé. Le problème en effet est que lorsque l’on étend un sélecteur, on n’a que peu voire pas de moyen de répondre aux questions suivantes sans une connaissance approfondie de l’ensemble du code&nbsp;:
+Cependant, le vrai rôle de `@extend` est d’indiquer et de maintenir des relations (contraintes) au sein des sélecteurs étendus entre plusieurs règles. Concrètement, qu’est-ce que cela signifie ?
 
-* où mon sélecteur courant sera-t-il ajouté&nbsp;?
-* y a-t-il un risque d’effets collatéraux&nbsp;?
-* quelle est l’ampleur du CSS généré par cette extension&nbsp;?
+* Les sélecteurts ont des contraintes (p.ex. `.bar` dans `.foo > .bar` doit avoir un parent `.foo`) ;
+* Ces contraintes sont passées au sélecteur qui étend (p.ex. `.baz { @extend .bar; }` va produire `.foo > .bar, .foo > .baz`) ;
+* Les déclarations du sélecteur étendu sont partagées avec le sélecteur qui étend.
 
-Et quoi qu’on sache, le résultat pourrait aller de aucun effet secondaire à de désatreux dommages collatéraux. C’est pourquoi mon premier conseil serait d’éviter complètement la directive `@extend`. Ça peut sembler brutal, mais au bout du compte ça peut vous épargner quelques problèmes et maux de tête.
+Sachant cela, il est assez évident de voir comment le fait d’étendre des sélecteurs avec des contraintes trop souples peut engendrer une explosion de sélecteurs. Si `.baz .qux` étend `.foo .bar`, le sélecteur résultant peut être `.foo .baz .qux` ou `.baz .foo .qux`, dans la mesure où `.foo` et `.baz` sont des parents génériques. Ils peuvent être des parents, des grand-parents, etc.
 
-Ceci dit, vous connaissez le dicton&nbsp;:
-
-> Ne jamais dire jamais.<br>
-> &mdash; Apparemment, [ce n’est pas Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
-
-Il y a bien sûr des scénarios dans lesquels l’extension de sélecteurs peut s’avérer utile et valable.  Mais gardez toujours à l’esprit ces règles si vous voulez vous éviter de sérieux problèmes&nbsp;:
-
-* utilisez `@extend` à l’intérieur d’un module, pas entre plusieurs modules.
-* utilisez `@extend` sur des placeholders uniquement, pas sur des sélecteurs.
-* assurez-vous que le placeholder que vous étendez est aussi peu présent que possible dans la feuille de styles.
-
-Si vous utilisez `@extend`, rappelez-vous également qu’il ne fonctionne pas bien avec les blocs `@media`. Comme vous le savez, Sass ne sait pas étendre un sélecteur extérieur depuis l’intérieur d’une media query. Si vous le faites, le compilateur plante et vous annonce qu’il ne peut pas le faire. Pas terrible, d’autant que les media queries sont monnaie courante aujourd’hui.
+Essayez toujours de définir des relations via les [placeholders](http://www.sitepoint.com/sass-reference/placeholders/), plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
 
 {% include snippets/extend/01/index.html %}
 
-> You may not @extend an outer selector from within @media.<br>
-> You may only @extend selectors within the same directive.
+Il y a de nombreux scénarios où étendre des sélecteurs peut être pratique et utile. Gardez toujours en tête ces règles afin de pouvoir utiliser `@extend` sans crainte :
+
+* N’étendez que des `%placeholders`, pas de vrais sélecteurs.
+* Étendez un même `%placeholder` aussi peu de fois que possible.
+* Évitez les sélecteurs parents génériques (p.ex. `.foo .bar`) ou les voisins génériques (p.ex. `.foo ~ .bar`). C’est précisément ce qui créé des problèmes de sélecteurs.
 
 <div class="note">
-  <p>On dit souvent que <code>@extend</code> diminue la taille du fichier puisqu’il combine les sélecteurs et évite la duplication des propriétés. C’est vrai, cependant la différence est négligeable une fois que <a href="http://fr.wikipedia.org/wiki/Gzip">Gzip</a> a opéré sa compression.</p>
-  <p>Cela étant, si vous ne pouvez pas utiliser Gzip (ou un équivalent), passer à une approche d’<code>@extend</code> n’est pas nécessairement un problème si vous savez ce que vous faites.</p>
+  <p>Il est souvent dit que <code>@extend</code> aide à réduire la taille des feuilles de styles dans la mesure où il combine les sélecteurs plutôt que de dupliquer les déclarations. C’est vrai, cependant la différence devient négligeable quand <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> a effectué la compression.</p>
+  <p>Ceci étant dit, si vous ne pouvez pas utiliser Gzip (ou équivalent), basculer sur une approche utilisant <code>@extend</code> peut être envisageable, surtout si la taille de la feuille de styles constitue un problème de performance.</p>
 </div>
 
-Pour résumer, je conseille de **ne pas utiliser la directive `@extend`**, sauf dans des circonstances particulières, mais je n’irai pas jusqu’à l’interdire.
+### Extend et les media queries
+
+Vous ne devez étendre que des sélecteurs faisant partie du même cadre de média (directive `@media`). Considérez les media queries comme une autre contrainte.
+
+{% include snippets/extend/02/index.html %}
+
+Pour résumer, il est recommandé d’utiliser `@extend` exclusivement pour maintenir des relations entre les sélecteurs. Si deux sélecteurs ont des caractéristiques similaires, il y a là un cas d’utilisation typique pour `@extend`. S’ils n’ont rien à voir mais partagent quelques déclarations, un `@mixin` est probablement plus approprié.
+
+<div class="note">
+  <p>Merci à <a href="https://twitter.com/davidkpiano">David Khourshid</a> pour son aide et son expertise dans cette section.</p>
+</div>
 
 ###### Lectures complémentaires
 
