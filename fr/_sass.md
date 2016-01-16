@@ -54,7 +54,7 @@ Ce que j’aime avec Sass c’est son approche conservatrice de CSS. La concepti
 
 En d’autres termes, Sass n’est pas un préprocesseur destiné à faire plaisir à des nerdy comme moi en ajoutant des fonctionnalités extraordinaires à un langage dont l’intention n’a jamais été de supporter des structures logiques. C’est un logiciel créé pour résoudre de vrais problèmes, qui aide les développeurs en ajoutant des fonctionnalités utiles à CSS lorsque celui-ci se révèle insatisfaisant.
 
-À côté des préprocesseurs, nous devons aussi mentionner les postprocesseurs dont on a beaucoup parlé dernièrement, principalement grâce à [PostCSS](https://github.com/postcss/postcss) et à [cssnext](https://cssnext.github.io/). Les postprocesseurs sont assez proches des préprocesseurs, à ceci près qu’ils ne font qu’ajouter la syntaxe future de CSS.
+À côté des préprocesseurs, nous devons aussi mentionner d’autres outils de *processing* dont on a beaucoup parlé dernièrement, principalement grâce à [PostCSS](https://github.com/postcss/postcss) et à [cssnext](https://cssnext.github.io/). On parle souvent de “postprocesseurs” dans la mesure où ils compilent de la syntaxe propriétaire ou non-standardisée en CSS actuel. Ceci étant dit, ils sont assez proches des préprocesseurs, à ceci près qu’ils ne font qu’ajouter la syntaxe future de CSS.
 
 On peut voir les postprocesseurs comme un polyfill pour les fonctionnalités CSS non supportées. Par exemple, on peut écrire des variables de la manière dont elles sont décrites dans les [spécifications CSS](http://dev.w3.org/csswg/css-variables/), puis compiler les feuilles de style avec un postprocesseur qui ne fera que remplacer chaque occurrence de la variable par sa valeur, tout comme le ferait Sass.
 
