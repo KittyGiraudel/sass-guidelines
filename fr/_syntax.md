@@ -88,6 +88,10 @@ S’agissant de longueurs, une valeur égale à `0` ne doit pas être suivie de 
 
 {% include snippets/syntax/08/index.html %}
 
+<div class="note">
+  <p>Attention, cette pratique doit être utilisée uniquement pour les longueurs. Les zéros sans unité ne sont pas autorisés pour les propriétés utilisant des durées, comme <code>transition-delay</code>. Théoriquement, si un zéro sans unité est utilisé comme durée, la déclaration est jugée invalide. Tous les navigateurs ne sont pas aussi stricts, mais certains le sont. Pour résumer : n’omettez l’unité que pour les longueurs.</p>
+</div>
+
 L’erreur la plus courante en ce qui concerne les nombres dans Sass est de penser que les unités sont de simples chaînes de caractères qu’on peut accoler à un nombre sans problème. Même si cela semble vrai, ce n’est pas ainsi que les unités fonctionnent. On peut voir les unités comme des symboles algébriques. Par exemple, dans le monde réel, si on multiplie 5 mètres par 5 mètres, on obtient 25 mètres carrés. La même logique s’applique à Sass.
 
 Pour ajouter une unité à un nombre, vous devez multiplier ce nombre par *1 unité*.
