@@ -11,12 +11,6 @@ Let’s put `@debug` aside since it is clearly intended to debug SassScript, whi
 
 Now, there is a lot of room in a Sass project for warnings and errors. Basically any mixin or function expecting a specific type or argument could throw an error if something went wrong, or display a warning when doing an assumption.
 
-###### Further reading
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## Warnings
 
 Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting to convert a `px` value to `em`, for instance:
@@ -32,3 +26,5 @@ Errors, unlike warnings, prevent the compiler from going any further. Basically,
 As an example, let’s say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
 
 {% include snippets/errors/02/index.html %}
+
+For more information on how to use `@error` efficiently, [this introduction about error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) should help you.
