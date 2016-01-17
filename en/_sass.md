@@ -50,7 +50,7 @@ Sass’s whitespace-sensitive syntax relies on indentation to get rid of braces,
 
 ## Other preprocessors
 
-Sass is a preprocessor among others. Its most serious competitor has to be [LESS](http://lesscss.org/), a Node.js based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) - which is kind of the nerdy, unrestricted version of LESS - where you can do pretty much whatever you want since it almost turns CSS into a programming language.
+Sass is a preprocessor among others. Its most serious competitor has to be [LESS](http://lesscss.org/), a Node.js based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](http://getbootstrap.com/) using it. There is also [Stylus](http://learnboost.github.io/stylus/) — which is kind of the nerdy, unrestricted version of LESS — where you can do pretty much whatever you want since it almost turns CSS into a programming language.
 
 *Why choose Sass over LESS or another preprocessor?* is still a valid question today. Not so long ago, we used to recommend Sass for Ruby-based projects because it was first made in Ruby and played well with Ruby on Rails. Now that LibSass has caught up (mostly) with original Sass, this is no longer relevant advice.
 
