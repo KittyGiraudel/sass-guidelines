@@ -24,7 +24,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 ## Argument-less mixins
 
-Parfois les mixins sont utilisés simplement pour éviter de répéter le même groupe de déclarations encore et encore, et par conséquent ne nécessitent pas de paramètres, ou se trouvent avoir des valeurs par défaut suffisamment éloquentes qu’il n’est pas nécessaire de leur passer d’arguments.
+Parfois les mixins sont utilisés simplement pour éviter de répéter le même groupe de déclarations encore et encore, et par conséquent ne nécessitent pas de paramètres, ou se trouvent avoir des valeurs par défaut suffisamment éloquentes qu’il ne soit pas nécessaire de leur passer d’arguments.
 
 Dans ces cas de figure, on peut tout à fait omettre les parenthèses lorsqu’on appelle un mixin. Le mot-clé `@include` (ou signe `+` dans le cas de la syntaxe indentée) fait déjà office d’indicateur qu’il s’agit d’une inclusion de mixin ; les parenthèses sont obsolètes.
 
