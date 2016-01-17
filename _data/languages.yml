@@ -26,7 +26,7 @@ de:
       link: https://github.com/morkro
 
 el:
-  version: 1.0.0
+  version: 1.2.0
   label: Greek
   prefix: /el/
   available: true
