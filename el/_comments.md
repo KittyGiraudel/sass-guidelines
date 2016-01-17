@@ -43,7 +43,7 @@
 Το SassDoc έχει δύο σημαντικούς ρόλους:
 
 * Να αναγκάζει την σύνταξη τυποποιημένων σχολίων χρησιμοποιώντας ένα σύστημα βασισμένο στα annotations για οτιδήποτε έχει να κάνει με το public ή private API;
-* το να μπορεί να παράγει μια έκδοση HTML του API documentation χρησιμοποιώντας οποιοδήποτε απο τα εργαλεία του SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node...).
+* το να μπορεί να παράγει μια έκδοση HTML του API documentation χρησιμοποιώντας οποιοδήποτε απο τα εργαλεία του SassDoc (CLI tool, Grunt, Gulp, Broccoli, Node…).
 
 {% include images/sassdoc.html %}
 
