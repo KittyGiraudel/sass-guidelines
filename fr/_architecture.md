@@ -17,12 +17,8 @@ Personnellement j’utilise une approche assez similaire à [SMACSS](https://sma
 
 ###### Lectures complémentaires
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
 * [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Composants
 
@@ -54,6 +50,10 @@ Et bien sûr&nbsp;:
 
 * `main.scss`
 
+<div class="note">
+  <p>Si vous souhaitez utiliser le pattern 7-1, il y a déjà un <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> sur GitHub. Il contient tout ce dont vous avez besoin pour démarrer avec cette architecture.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
@@ -66,12 +66,16 @@ Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
 
 ### Dossier base
 
-Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boilerplate*) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style (que j’ai l’habitude d’appeler `_base.scss`) définissant quelques styles standard pour les éléments HTML les plus employés.
+Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boilerplate*) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style définissant quelques styles standard pour les éléments HTML les plus employés (que j’ai l’habitude d’appeler `_base.scss`).
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
 
+<div class="note">
+  <p>Si votre projet utilise <em>beaucoup</em> d’animations CSS, vous pouvez envisager d’ajouter un fichier <code>_animations.scss</code> contenant les définitions de <code>@keyframes</code> pour toutes vos animations. Si vous n’utilisez les animations que de façon sporadique, laissez leur déclaration près des sélecteurs qui les emploient.</p>
+</div>
+ 
 ### Dossier layout
 
 Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar…), pour le système de grille ou même les styles CSS pour tous les formulaires.
@@ -130,10 +134,10 @@ La règle générale concernant ce dossier est qu’il ne devrait pas retourner 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (souvent appelé `_helpers.scss`)
+* `_placeholders.scss`
 
 <div class="note">
-  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>helpers/</code>, <code>sass-helpers/</code> ou <code>sass-utils/</code>, au choix.</p>
+  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
 </div>
 
 ### Dossier vendors
@@ -196,5 +200,4 @@ Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswiz
 
 ###### Lectures complémentaires
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
