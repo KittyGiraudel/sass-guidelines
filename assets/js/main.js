@@ -1,38 +1,6 @@
 (function (global) {
   'use strict';
 
-  function hasClass(elem, className) {
-    if (typeof elem.classList !== 'undefined') {
-      return elem.classList.contains(className);
-    }
-
-    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-  }
-
-  function addClass(elem, className) {
-    if (typeof elem.classList !== 'undefined') {
-      return elem.classList.add(className);
-    }
-
-    if (!hasClass(elem, className)) {
-        elem.className += ' ' + className;
-    }
-  }
-
-  function removeClass(elem, className) {
-    if (typeof elem.classList !== 'undefined') {
-      return elem.classList.remove(className);
-    }
-
-    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-    if (hasClass(elem, className)) {
-      while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-        newClass = newClass.replace(' ' + className + ' ', ' ');
-      }
-      elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    }
-  }
-
   /**
    * The application class.
    * @param {Object} config
@@ -176,15 +144,15 @@
     var currentBottom = current + this.getDocumentHeight();
 
     if (current > top) {
-      addClass(this.tableOfContents, 'sticky');
+      this.tableOfContents.classList.add('sticky');
     } else {
-      removeClass(this.tableOfContents, 'sticky');
+      this.tableOfContents.classList.remove('sticky');
     }
 
     if (currentBottom > bottom) {
-      addClass(this.tableOfContents, 'sticky-bottom');
+      this.tableOfContents.classList.add('sticky-bottom');
     } else {
-      removeClass(this.tableOfContents, 'sticky-bottom');
+      this.tableOfContents.classList.remove('sticky-bottom');
     }
   };
 
@@ -196,12 +164,12 @@
     var tocElem = this.tableOfContents.querySelector('a[href="#' + heading[0].id + '"]');
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
     
-    if (!!tocElem && !hasClass(tocElem, 'in-viewport')) {
+    if (!!tocElem && !tocElem.classList.contains('in-viewport')) {
       if (inViewportElem) { 
-        removeClass(inViewportElem, 'in-viewport'); 
+        inViewportElem.classList.remove('in-viewport'); 
       }
 
-      addClass(tocElem, 'in-viewport');
+      tocElem.classList.add('in-viewport');
     }
   };
 
@@ -214,9 +182,9 @@
     Array.prototype.slice.call(input).forEach(function (element) {
       element.addEventListener('click', function (event) {
         if (element.value === 'sass') {
-          addClass(document.body, 'sass');
+          document.body.classList.add('sass');
         } else {
-          removeClass(document.body, 'sass');
+          document.body.classList.remove('sass');
         }
       });
     });
