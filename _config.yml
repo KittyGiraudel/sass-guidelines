@@ -19,3 +19,10 @@ kramdown:
 
 sass:
     style: :compressed
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: []
+  blanklines: false
+  startings: []
