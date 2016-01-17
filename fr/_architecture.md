@@ -159,8 +159,8 @@ Le fichier principal (généralement appelé `main.scss`) devrait être le seul 
 
 Les fichiers doivent être importés en fonction du dossier dans lequel ils sont rangés, l’un après l’autre dans l’ordre suivant&nbsp;:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
