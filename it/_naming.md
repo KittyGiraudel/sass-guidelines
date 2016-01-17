@@ -7,11 +7,11 @@ Ci sono alcune cose a cui si possono dare nomi in Sass, ed è importante sceglie
 
 * variabili;
 * funzioni;
-* mixin;
+* _mixin_;
 
 I placeholder di Sass sono omessi deliberatamente da questa lista, dato che possono esser considerati come dei normali selettori CSS, che seguono dunque la stessa convenzione sui nomi delle classi.
 
-Riguardo variabili, funzioni e mixin, rimaniamo con qualcosa di molto *CSS*: **minuscolo separato da trattino**, e accertiamoci che abbiano un senso.
+Riguardo variabili, funzioni e _Mixin_, rimaniamo con qualcosa di molto *CSS*: **minuscolo separato da trattino**, e accertiamoci che abbiano un senso.
 
 {% include snippets/naming/01/index.html %}
 
@@ -21,7 +21,7 @@ Riguardo variabili, funzioni e mixin, rimaniamo con qualcosa di molto *CSS*: **m
 
 ## Costanti
 
-Se ti capita di essere uno sviluppatore di framework, o di scrivere una libreria, può capitare di trovarsi di fronte a variabili che non sono intese come qualcosa da poter aggiornare in ogni circostanza: sono delle costanti. Sfortunatamente (o fortunatamente?), Sass non offre nessuna maniera per definire queste entità. Dobbiamo così far leva su una stretta convenzione per i nomi in modo da raggiungere il nostro obiettivo.
+Se ti capita di essere uno sviluppatore di _framework_, o di scrivere una libreria, può capitare di trovarsi di fronte a variabili che non sono intese come qualcosa da poter aggiornare in ogni circostanza: sono delle costanti. Sfortunatamente (o fortunatamente?), Sass non offre nessuna maniera per definire queste entità. Dobbiamo così far leva su una stretta convenzione per i nomi in modo da raggiungere il nostro obiettivo.
 
 Come per molti linguaggi, suggerisco di nominare le variabili costanti completamente in maiuscolo e divise da trattino basso nel caso formato da più parole. Non solo questa è una convenzione piuttosto vecchia, ma rende anche evidente la differenza con le variabili minuscole-trattino.
 
@@ -33,7 +33,7 @@ Come per molti linguaggi, suggerisco di nominare le variabili costanti completam
 
 ## Namespace
 
-Se si vuol distribuire il proprio codice sass, ad esempio in una libreria, un framework, una griglia o qualsiasi altra cosa, si può considerare di applicare un namespace alle proprie variabili, funzioni, mixin e placeholder, in modo da evitare conflitti con altro codice.
+Se si vuol distribuire il proprio codice Sass, ad esempio in una libreria, un framework, una griglia o qualsiasi altra cosa, si può considerare di applicare un namespace alle proprie variabili, funzioni, _mixin_ e _placeholder_, in modo da evitare conflitti con altro codice.
 
 Ad esempio, se si lavora su un progetto *Sassy Unicorn* che sarà adottato da sviluppatori di tutto il mondo, si può considerare di usare `su-` come namespace. Questo è abbastanza specifico per prevenire qualsiasi collisione con altri nomi, e abbastanza corto da non essere una palla da scrivere ogni volta.
 

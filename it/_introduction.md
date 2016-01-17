@@ -35,7 +35,7 @@ Alla fin fine, se c'è una cosa che mi piacerebbe arrivasse da tutte queste line
 
 Grazie ai miei esperimenti scemi come [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) con Sass, siamo tutti ben consapevoli di ciò che si può fare con questo preprocessore.
 
-D'altro canto, CSS è un linguaggio semplice. Sass, essendo inteso come strumento per scrivere CSS, non dovrebbe essere più complesso che del normale CSS. Il [principio KISS ](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) è la cosa più importante qui, e può anche prender la precedenza sul [principio DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself), in alcune circostanze.
+D'altro canto, CSS è un linguaggio semplice. Sass, essendo inteso come strumento per scrivere CSS, non dovrebbe essere più complesso che del normale CSS. Il [principio KISS ](http://en.wikipedia.org/wiki/KISS_principle) (_Keep It Simple Stupid_) è la cosa più importante qui, e può anche prender la precedenza sul [principio DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (_Don’t Repeat Yourself_), in alcune circostanze.
 
 Certe volte è meglio ripetere un po' di codice per mantenere il tutto più semplice da manutenere, piuttosto che costruire sistemi pesanti, ingombranti e inutilmente complicati che sono un incubo da manutenere perchè troppo complessi.
 
@@ -43,13 +43,13 @@ Fatemi ancora citare [Harry Roberts](https://csswizardry.com): **il pragmatismo 
 
 ## Estendere le linee guida
 
-Buona parte di questa guida di stile è scritta secondo le mie opinioni. Sono anni che leggo e scrivo sass ed ho ormai un sacco di principi quando si tratta di scrivere fogli di stile puliti. Capisco che questo possa non piacere o non andare bene a qualcuno ed è perfettamente normale.
+Buona parte di questa guida di stile è scritta secondo le mie opinioni. Sono anni che leggo e scrivo Sass ed ho ormai un sacco di principi quando si tratta di scrivere fogli di stile puliti. Capisco che questo possa non piacere o non andare bene a qualcuno. È perfettamente normale.
 
 Tuttavia credo che le linee guida siano fatte per essere estese. Estendere queste linee guida per Sass potrebbe essere così semplice come avere un documento che afferma che il vostro codice segue le linee di questa guida tranne che per qualche punto. In un caso del genere le regole specifiche andrebbero illustrate di seguito.
 
 Un esempio di estensione di una guida di stile può essere trovata nella [repository SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> [Questa](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) è una estensione della [guida di stile di Nonde](https://github.com/felixge/node-style-guide) di Felix Geisendörfer. Tutto ciò che è scritto in questo documento può non tenere conto di quanto scritto nella guida di stile di Node.
+> [Questa](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) è una estensione della [guida di stile di Node](https://github.com/felixge/node-style-guide) di Felix Geisendörfer. Tutto ciò che è scritto in questo documento può non tenere conto di quanto scritto nella guida di stile di Node.
 
 ###### Approfondimenti
 
