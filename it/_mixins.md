@@ -24,7 +24,7 @@ Un altro esempio valido potrebbe essere un Mixin per impostare la grandezza di u
 
 ## Mixin senza argomenti
 
-Ci sono casi in cui i mixin sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte e, o non hanno bisogno di nessun parametro, o hanno dei valori di default che non necessitano che siano passati gli argomenti.
+Ci sono casi in cui i mixin sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte e, o non hanno bisogno di nessun parametro, o hanno dei valori di default che non necessitano alcun passaggio di argomenti.
 
 In questi casi, possiamo tranquillamente omettere le parentesi quando li richiamiamo. L'istruzione `@include` (o il simbolo `+` nella sintassi indentata) bastano a indicare che quella linea è la chiamata di un mixin; non c'è bisogno di parentesi extra.
 
