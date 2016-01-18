@@ -73,7 +73,7 @@ O φάκελος `base/` περιέχει αυτό που αποκαλούμε �
 * `_typography.scss`
 
 <div class="note">
-  <p>Αν το project σας χρησιμοποιεί <em>πολλά</em> CSS animations, ίσως πρέπει να σκεφτείτε την προσθήκη του αρχείου <code>_animations.scss</code> μέσα το οποίο θα περιέχει τους <code>@keyframes</code> ορισμούς απο όλα τα animations σας. Εάν τα χρησιμοποιείτε περιστασιακά, αφήστε τα να βρίσκονται μαζί τους selectors που τα χρησιμοποιούν.</p>
+  <p>Αν το project σας χρησιμοποιεί <em>πολλά</em> CSS animations, ίσως πρέπει να σκεφτείτε την προσθήκη του αρχείου <code>\_animations.scss</code> μέσα το οποίο θα περιέχει τους <code>@keyframes</code> ορισμούς απο όλα τα animations σας. Εάν τα χρησιμοποιείτε περιστασιακά, αφήστε τα να βρίσκονται μαζί τους selectors που τα χρησιμοποιούν.</p>
 </div>
 
 ### Φάκελος Layout
@@ -190,7 +190,7 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>Προκειμένου να μην χρειάζεται να κάνεις import κάθε αρχείο χειροκίνητα, υπάρχει ένα extension για την Ruby Sass το οποίο ονομάζεται <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, καθιστώντας δυνατή την χρήση glob patterns στην Sass <code>@import</code> όπως <code>@import "components/*"</code>.</p>
+  <p>Προκειμένου να μην χρειάζεται να κάνεις import κάθε αρχείο χειροκίνητα, υπάρχει ένα extension για την Ruby Sass το οποίο ονομάζεται <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, καθιστώντας δυνατή την χρήση glob patterns στην Sass <code>@import</code> όπως <code>@import "components/\*"</code>.</p>
   <p>Κατόπιν αυτού, δεν θα το συνιστούσα επειδή κάνει imports αρχεία ακολουθώντας αλφαβητική σειρά το οποίο συνήθως δεν είναι αυτό που θέλετε, ειδικά όταν έχεις να κάνεις με γλώσσες που βασίζονται στην σειρά του κώδικα.</p>
 </div>
 
