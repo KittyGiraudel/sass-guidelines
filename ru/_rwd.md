@@ -15,8 +15,8 @@
 
 {% include snippets/rwd/02/index.html %}
 
-<!-- TODO translate --><div class="note">
-  <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
+<div class="note">
+  <p>Предыдущие примеры используют вложенные карты для определений точек остановки, однако это зависит от того, какой менеджер точек остановки вы используете. Вы могли бы предпочесть строки вместо внутренних карт для большей гибкости (например, <code>'(min-width: 800px)'</code>).</p>
 </div>
 
 ###### Дальнейшее чтение

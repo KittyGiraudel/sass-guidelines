@@ -17,7 +17,7 @@
 
 {% include snippets/conditions/02/index.html %}
 
-<!-- TODO translate -->Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
+Всегда храните часть с переменной в левой стороне условия, а (не)ожиданный результат на правой. Обратные условия гораздо сложнее читать, особенно неопытным разработчикам.
 
 {% include snippets/conditions/03/index.html %}
 

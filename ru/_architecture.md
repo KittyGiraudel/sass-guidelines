@@ -50,8 +50,8 @@
 
 * `main.scss`
 
-<!-- TODO translate --><div class="note">
-  <p>If you are looking to use the 7-1 pattern, there is a <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> ready on GitHub. It should contain everything you need to get started with this architecture.</p>
+<div class="note">
+  <p>Если вы хотите использовать шаблон 7-1, уже есть готовый <a href="https://github.com/HugoGiraudel/sass-boilerplate">шаблон</a> на GitHub. В нём должно быть всё, что вам нужно для начала работы с такой архитектурой.</p>
 </div>
 
 {% include images/wallpaper.html %}
@@ -72,8 +72,8 @@
 * `_reset.scss`
 * `_typography.scss`
 
-<!-- TODO translate --><div class="note">
-  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
+<div class="note">
+  <p>Если в вашем проекте<em>много</em> CSS-анимаций, вы можете решить добавить файл <code>_animations.scss</code> для хранения всех определений <code>@keyframes</code> всех ваших анимаций. Если вы используете их не регулярно, оставьте их рядом с селекторами, в которых вы их используете.</p>
 </div>
 
 ### Папка Layout
@@ -136,7 +136,7 @@
 * `_functions.scss`
 * `_placeholders.scss`
 
-<!-- TODO translate -->When working on a very large project with a lot of utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long. 
+При работе с очень крупным проектом с большим числом утилит, может быть интересным группировать их по тематикам вместо типов, например – типография (`_typography.scss`), темы (`_theming.scss`), и так далее. Каждый файл содержит все связанные помощники: переменные, функции, примеси и заполнители. Если делать так, код будет проще исследовать и поддерживать, особенно когда файлы становятся очень большими.
 
 <div class="note">
   <p>Папка <code>utils/</code> может также быть названа <code>utilities/</code> или <code>helpers/</code>, на ваше усмотрение.</p>

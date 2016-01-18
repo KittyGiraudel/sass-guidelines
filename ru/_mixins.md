@@ -24,9 +24,9 @@
 
 ## Argument-less mixins
 
-<!-- TODO translate -->Sometimes mixins are used only to avoid repeating the same group of declarations over and over again, yet do not need any parameter or have sensible enough defaults so that we don’t necessarily have to pass arguments.
+Иногда примеси используются только для избежания повторения одной и той же группы объявлений снова и снова, им не нужны параметры или у них достаточно гибкие параметры по-умолчанию, так что совсем не обязательно передавать какие-либо аргументы. 
 
-In such cases, we can safely omit the parentheses when calling them. The `@include` keyword (or `+` sign in indented-syntax) already acts as a indicator that the line is a mixin call; there is no need for extra parentheses here.
+В таких случаях можно спокойно опустить скобки при вызовах. Ключевое слово `@include` (или знак `+` в табулированном синтаксисе) уже работает как показатель вызова примеси; так что не нужно пустых скобок.
 
 {% include snippets/mixins/08/index.html %}
 
