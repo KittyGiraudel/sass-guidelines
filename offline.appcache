@@ -21,6 +21,7 @@ zh/index.html
 
 # CSS Files
 css/full.css
+css/print.css
 css/fonts/data-ttf.css
 css/fonts/data-woff.css
 css/fonts/data-woff2.css
