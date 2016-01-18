@@ -21,7 +21,14 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+
+## Argument-less mixins
+
+Parfois les mixins sont utilisés simplement pour éviter de répéter le même groupe de déclarations encore et encore, et par conséquent ne nécessitent pas de paramètres, ou se trouvent avoir des valeurs par défaut suffisamment éloquentes qu’il ne soit pas nécessaire de leur passer d’arguments.
+
+Dans ces cas de figure, on peut tout à fait omettre les parenthèses lorsqu’on appelle un mixin. Le mot-clé `@include` (ou signe `+` dans le cas de la syntaxe indentée) fait déjà office d’indicateur qu’il s’agit d’une inclusion de mixin ; les parenthèses sont obsolètes.
+
+{% include snippets/mixins/08/index.html %}
 
 ## Listes d'Arguments
 
@@ -61,5 +68,4 @@ Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne
 
 ###### Lectures complémentaires
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

@@ -41,6 +41,10 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 
 {% include snippets/syntax/03/index.html %}
 
+<div class="note">
+  <p>Selon les spécifications CSS, la déclaration <code>@charset</code> doit utiliser des guillemets doubles <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">pour être considérée valide</a>. Cependant, Sass s’en assure en compilant vos feuilles de styles si bien que vous pouvez tout à fait utiliser des guillemets simples, même pour <code>@charset</code>.</p>
+</div>
+
 ### Chaînes comme valeurs CSS
 
 Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
@@ -78,11 +82,19 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code> 0.$1</code>. N’oubliez pas l’espace précédantg le <code>0</code> par contre.</p>
+</div>
+
 ### Unités
 
 S’agissant de longueurs, une valeur égale à `0` ne doit pas être suivie de son unité.
 
 {% include snippets/syntax/08/index.html %}
+
+<div class="note">
+  <p>Attention, cette pratique doit être utilisée uniquement pour les longueurs. Les zéros sans unité ne sont pas autorisés pour les propriétés utilisant des durées, comme <code>transition-delay</code>. Théoriquement, si un zéro sans unité est utilisé comme durée, la déclaration est jugée invalide. Tous les navigateurs ne sont pas aussi stricts, mais certains le sont. Pour résumer : n’omettez l’unité que pour les longueurs.</p>
+</div>
 
 L’erreur la plus courante en ce qui concerne les nombres dans Sass est de penser que les unités sont de simples chaînes de caractères qu’on peut accoler à un nombre sans problème. Même si cela semble vrai, ce n’est pas ainsi que les unités fonctionnent. On peut voir les unités comme des symboles algébriques. Par exemple, dans le monde réel, si on multiplie 5 mètres par 5 mètres, on obtient 25 mètres carrés. La même logique s’applique à Sass.
 
@@ -131,12 +143,17 @@ Les couleurs occupent une place importante dans le langage CSS. Naturellement, S
 
 Pour simplifier les couleurs autant que possible, mon conseil est de respecter l’ordre de préférence suivant pour les formats&nbsp;:
 
-1. [Mots-clés de couleurs CSS](http://www.w3.org/TR/css3-color/#svg-color);
-2. [Notation HSL](http://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re);
-3. [Notation RGB](http://fr.wikipedia.org/wiki/Rouge_vert_bleu);
-4. Notation hexadécimale. De préférence en minuscules et en version raccourcie lorsque c’est possible.
+1. [Notation HSL](http://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re);
+2. [Notation RGB](http://fr.wikipedia.org/wiki/Rouge_vert_bleu);
+3. Notation hexadécimale (en minuscules et en version raccourcie lorsque c’est possible).
 
-Pour commencer, les mots-clés parlent souvent par eux-mêmes. La représentation HSL quant à elle est non seulement la plus simple à comprendre<sup>[citation requise]</sup>, mais également celle qui nous permet le plus aisément d’ajuster les couleurs en modifiant la teinte (hue), la saturation et la luminosité. RGB nous aide à repérer tout de suite si la couleur tient plus du bleu, du vert ou du rouge, mais il ne nous permet pas de construire facilement une couleur à partir des trois. Enfin, la notation hexadécimale est à peu près indéchiffrable pour un cerveau humain.
+Les mots-clés de couleur ne devrait pas être utilisés, sauf quand il s’agit de prototypage rapide. En effet, ils sont en anglais et certains d’entre eux font un bien piêtre travail quand il s’agit d’exprimer la couleur qu’ils représentent, surtout pour des personnes dont l’anglais n’est pas la langue maternelle. De plus, les mots-clés n’ont pas vraiment de valeur sémantique. Par exemple, `grey` se trouve être plus foncé que `darkgrey`, et la confusion entre `grey` et `gray` peut engendrer une utilisation incohérente de cette couleur.
+
+La représentation HSL n’est pas seulement la plus facile à appréhender pour le cerveau humain <sup>[citation requise]</sup>, elle rend aussi les modifications de couleurs plus simples en permettant d’ajuster la teinte, la saturation et la valeur de manière individuelle.
+
+Le format RGB a également l’avantage d’indiquer du premier coup d’oeil si la couleur est plutôt bleue, verte ou rouge. C’est pourquoi il peut être plus approprié que le format HSL dans certains cas, surtout quand il s’agit de décrire un pur rouge, vert ou bleu. Cependant, ce format rend la construction d’une couleur via ses trois composantes difficile.
+
+Enfin, héxadédimal est presque indéchiffrable pour le cerveau humain. Ne l’utilisez qu’en dernier recours, si vous en avez besoin.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -224,16 +241,6 @@ Illustration :
 
 {% include snippets/syntax/21/index.html %}
 
-### Déboguer une map Sass
-
-Si vous êtes perdu, ou si vous vous demandez quelles opérations magiques se déroulent dans une map Sass, pas d’inquiétude, il existe des moyens de s’y retrouver.
-
-{% include snippets/syntax/22/index.html %}
-
-Si vous voulez connaître la profondeur de la map, ajoutez également la fonction suivante. Le mixin l’affichera automatiquement.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Lectures complémentaires
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
@@ -309,12 +316,8 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
 
 ###### Lectures complémentaires
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Imbrication des sélecteurs
 

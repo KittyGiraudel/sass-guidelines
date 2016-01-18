@@ -40,8 +40,16 @@ Parfois, il vaut mieux se répéter un peu pour conserver un code maintenable pl
 
 Encore une citation de [Harry Roberts](https://csswizardry.com)&nbsp;: **le pragmatisme doit prendre le pas sur la perfection**.  Il est possible qu’à certains moments vous soyez amené à aller contre les règles énoncées ici. Si ça fait sens, si ça vous paraît juste, faites-le. Le code est un moyen, pas une fin en soi.
 
+## Étendre le guide de style
+
+Une grande partie de ce guide de style est basée sur mes propres opinions. J’ai lu et écrit du code Sass depuis plusieurs années déjà, au point où j’ai adopté un grand nombre de principes quand il s’agit d’écrire du code CSS propre. Je comprends que tout ne convienne pas à tout le monde, c’est parfaitement normal.
+
+C’est pourquoi je pense qu’un guide de style est fait pour être étendu. S’approprier Sass Guidelines peut vouloir dire avoir un document stipulant que le code s’en tient à ces conventions à l’exception de quelques règles personnelles ; suite à quoi ces règles seraient détaillées.
+
+Un exemple d’extension de guide de style peut être trouvé dans le [dépôt SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) (traduit): 
+
+> [Ceci](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) est une extension de [Node Styleguide](https://github.com/felixge/node-style-guide) par Felix Geisendörfer. Toute chose stipulée dans ce document prévaut sur une indication contraire mentionnée dans Node Styleguide.
+
 ###### Lectures complémentaires
 
-* [Principe KISS](http://fr.wikipedia.org/wiki/Principe_KISS)
-* [Principe DRY](http://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
