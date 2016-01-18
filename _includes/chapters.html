@@ -1,35 +1,84 @@
-{% include_relative {{ include.path }}_author.md %}
-{% include_relative {{ include.path }}_contributing.md %}
 
 {::options parse_block_html="true" /}
-<div class="toc">
+
+<section class="chapter  chapter--author">
+{% include_relative {{ include.path }}_author.md %}
+</section>
+
+<section class="chapter  chapter--contributing">
+{% include_relative {{ include.path }}_contributing.md %}
+</section>
+
+<section class="chapter  chapter--toc  toc">
 {% include_relative {{ include.path }}_toc.md %}
-</div>
-{::options parse_block_html="false" /}
+</section>
 
+<section class="chapter  chapter--sass">
 {% include_relative {{ include.path }}_sass.md %}
+</section>
+
+<section class="chapter  chapter--introduction">
 {% include_relative {{ include.path }}_introduction.md %}
+</section>
+
+<section class="chapter  chapter--syntax">
 {% include_relative {{ include.path }}_syntax.md %}
+</section>
 
 {% include donate.html %}
 
+<section class="chapter  chapter--naming">
 {% include_relative {{ include.path }}_naming.md %}
+</section>
+
+<section class="chapter  chapter--comments">
 {% include_relative {{ include.path }}_comments.md %}
+</section>
+
+<section class="chapter  chapter--architecture">
 {% include_relative {{ include.path }}_architecture.md %}
+</section>
+
+<section class="chapter  chapter--rwd">
 {% include_relative {{ include.path }}_rwd.md %}
+</section>
 
 {% include donate.html %}
 
+<section class="chapter  chapter--variables">
 {% include_relative {{ include.path }}_variables.md %}
+</section>
+
+<section class="chapter  chapter--extend">
 {% include_relative {{ include.path }}_extend.md %}
+</section>
+
+<section class="chapter  chapter--mixins">
 {% include_relative {{ include.path }}_mixins.md %}
+</section>
+
+<section class="chapter  chapter--conditions">
 {% include_relative {{ include.path }}_conditions.md %}
+</section>
 
 {% include donate.html %}
 
+<section class="chapter  chapter--loops">
 {% include_relative {{ include.path }}_loops.md %}
+</section>
+
+<section class="chapter  chapter--errors">
 {% include_relative {{ include.path }}_errors.md %}
+</section>
+
+<section class="chapter  chapter--tools">
 {% include_relative {{ include.path }}_tools.md %}
+</section>
+
+<section class="chapter  chapter--tldr">
 {% include_relative {{ include.path }}_tldr.md %}
+</section>
 
 {% include donate.html %}
+
+{::options parse_block_html="false" /}

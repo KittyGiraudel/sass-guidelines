@@ -8,12 +8,11 @@ Now if you feel like contributing, please know that tweeting about it, spreading
 Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it so I can keep working on it!
 
 <div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
+  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+  <a href="https://gum.co/sass-guidelines" target="\_blank" class="button">
     {% include icons/dollar.html %}
     Support Sass Guidelines
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
+  </a><a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="\_blank" class="button">
     {% include icons/twitter.html %}
     Spread the word
   </a>
