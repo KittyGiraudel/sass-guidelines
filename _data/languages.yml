@@ -1,5 +1,5 @@
 cz:
-  version: 1.1.0
+  version: 1.1
   label: Czech
   prefix: /cz/
   available: true
@@ -8,7 +8,7 @@ cz:
       link: https://github.com/HoBi
 
 da:
-  version: 1.1.0
+  version: 1.1
   label: Danish
   prefix: /da/
   available: true
@@ -17,7 +17,7 @@ da:
       link: http://codepen.io/andersschmidt/
 
 de:
-  version: 1.2.0
+  version: 1.2
   label: German
   prefix: /de/
   available: true
@@ -26,7 +26,7 @@ de:
       link: https://github.com/morkro
 
 el:
-  version: 1.2.0
+  version: 1.2
   label: Greek
   prefix: /el/
   available: true
@@ -41,14 +41,14 @@ el:
       link: https://github.com/sebdesign
 
 en:
-  version: 1.2.0
+  version: 1.2
   label: English
   prefix: /
   available: true
   translators: []
 
 es:
-  version: 1.1.0
+  version: 1.1
   label: Spanish
   prefix: /es/
   available: true
@@ -59,7 +59,7 @@ es:
       link: https://github.com/davidkpiano
 
 fr:
-  version: 1.2.0
+  version: 1.2
   label: French
   prefix: /fr/
   available: true
@@ -68,7 +68,7 @@ fr:
       link: http://la-cascade.ghost.io
 
 ko:
-  version: 1.1.0
+  version: 1.1
   label: Korean
   prefix: /ko/
   available: true
@@ -77,7 +77,7 @@ ko:
       link: https://github.com/kimdhoe
 
 pl:
-  version: 1.2.0
+  version: 1.2
   label: Polish
   prefix: /pl/
   available: true
@@ -88,7 +88,7 @@ pl:
       link: http://github.com/matchabros
 
 pt:
-  version: 1.1.0
+  version: 1.1
   label: Portuguese
   prefix: /pt/
   available: true
@@ -103,7 +103,7 @@ pt:
       link: https://github.com/eduardoboucas
 
 ru:
-  version: 1.0.0
+  version: 1.0
   label: Russian
   prefix: /ru/
   available: true
@@ -114,7 +114,7 @@ ru:
       link: https://github.com/PavelDemyanenko
 
 zh:
-  version: 1.2.0
+  version: 1.2
   label: Chinese
   prefix: /zh/
   available: true
