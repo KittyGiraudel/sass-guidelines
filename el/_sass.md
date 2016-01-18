@@ -15,13 +15,7 @@
 
 ### Περαιτέρω ανάγνωση
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
-
-
-
-
-
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass ή LibSass
 
@@ -33,18 +27,10 @@
 
 Όταν θέλεις να εντάξεις τη Sass στη ροή εργασίας σου σε κάποιο project που δεν είναι σε Ruby, το LibSass είναι πιθανώς καλύτερη ιδέα επειδή είναι εξειδικευμένο γι' αυτή την περίπτωση. Οπότε αν θες να χρησιμοποιήσεις ας πούμε NodeJS, το [node-sass](https://github.com/sass/node-sass) είναι το πιο επιθυμητό.
 
-
-
 ### Περαιτέρω ανάγνωση
 
-* [LibSass](https://github.com/sass/libsass)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
+* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
-
-
-
-
-
 
 ## Sass ή SCSS
 
@@ -58,16 +44,9 @@
 
 Εγώ προσωπικά προτιμώ την SCSS από τη Sass γιατί είναι πιο κοντά στη CSS και πιο φιλική για τους περισσότερους developers. Γι' αυτό το λόγο, θα χρησιμοποιώ SCSS αντί για Sass σ' αυτά τα guidelines.
 
-
-
 ### Περαιτέρω ανάγνωση
 
 * [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
-
-
-
-
-
 
 ## Λοιποί preprocessors
 
@@ -79,19 +58,10 @@
 
 Με άλλα λόγια, η Sass δεν είναι ένας preprocessor που αποσκοπεί να ευχαριστήσει κάθε nerdy wannabe προγραμματιστή σαν κι εμένα προσθέτοντας ασυνήθιστες δυνατότητες πάνω σε μια γλώσσα που δεν που δεν υποστηρίζει περιπτώσεις χρήσης με λογική. Πρόκειται για ένα λογισμικό στοχευμένο στο να λύνει πρακτικά ζητήματα· στο να παρέχει χρήσιμες δυνατότητες εκεί που η CSS υπολείπεται.
 
-Πέρα από τους preprocessors, πρέπει να επισημάνουμε και τους postprocessors, οι οποίοι έχουν αποκτήσει σημαντική δημοσιότητα τους τελευταίους μήνες, κυρίως χάρη στο [PostCSS](https://github.com/postcss/postcss) και στο [cssnext](https://cssnext.github.io/). Οι postprocessors είναι πάνω κάτω ισοδύναμοι με τους preprocessors με την εξαίρεση ότι δεν παρέχουν τίποτα περισσότερο από επερχόμενες συντακτικές δυνατότητες της CSS.
+Πέρα από τους preprocessors, πρέπει να επισημάνουμε και εργαλεία post-processing, τα οποία έχουν αποκτήσει σημαντική δημοσιότητα τους τελευταίους μήνες, κυρίως χάρη στο [PostCSS](https://github.com/postcss/postcss) και στο [cssnext](https://cssnext.github.io/). Συχνά αναφέρονται ως «postprocessors» επειδή κάνουν transpile επερχόμενες συντακτικές αλλαγές σε τωρινή CSS. Πέρα απ' αυτό, είναι πάνω κάτω ισοδύναμοι με τους preprocessors με την εξαίρεση ότι δεν παρέχουν τίποτα περισσότερο από επερχόμενες συντακτικές δυνατότητες της CSS.
 
 Δες τους postprocessors σαν ένα polyfill για δυνατότητες της CSS που δεν υποστηρίζονται ακόμα. Για παράδειγμα, μπορείς να γράψεις μεταβλητές όπως περιγράφονται στις [προδιαγραφές της CSS](http://dev.w3.org/csswg/css-variables/), και ύστερα να κάνεις compile τα stylesheets με έναν postprocessor, με αποτέλεσμα όπου εμφανίζεται η μεταβλητή να έχει αντικατασταθεί από την τιμή της, όπως θα έκανε και η Sass.
 
 Το σκεπτικό πίσω από τους postprocessors είναι ότι μόλις οι φυλλομετρητές υποστηρίξουν νέες δυνατότητες (π.χ. μεταβλητές CSS), ο postprocessor δεν τις κάνει compile πια και αφήνει τους φυλλομετρητές να τις διαχειριστούν.
 
 Παρότι η ιδέα του να παρέχουμε υποστήριξη για μελλοντικές συντάξεις ακούγεται αξιότιμη ιδέα, μπορώ να πως πως προτιμώ να χρησιμοποιώ Sass για τις περισσότερες εργασίες. Πάραυτα, υπάρχουν μερικές περιπτώσεις που πιστεύω ότι οι postprocessors είναι καταλληλότεροι από τη Sass και τα συναφή - το CSS prefixing για παράδειγμα - αλλά θα επανέλθουμε πάνω σ'αυτό.
-
-
-
-### Περαιτέρω ανάγνωση
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)
