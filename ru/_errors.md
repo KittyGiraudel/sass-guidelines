@@ -21,34 +21,7 @@
 
 Возьмём функцию из [Sass-MQ](https://github.com/sass-mq/sass-mq), предполагающую конвертирование из `px` в `em`, например:
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-@function mq-px2em($px, $base-font-size: $mq-base-font-size) {
-  @if unitless($px) {
-    @warn 'Предполагаем, что #{$px} должно быть в пикселях, пытаемся явно преобразовать.';
-    @return mq-px2em($px + 0px);
-  } @else if unit($px) == em {
-    @return $px;
-  }
-
-  @return ($px / $base-font-size) * 1em;
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-@function mq-px2em($px, $base-font-size: $mq-base-font-size)
-  @if unitless($px)
-    @warn 'Предполагаем, что #{$px} должно быть в пикселях, пытаемся явно преобразовать.'
-    @return mq-px2em($px + 0px)
-  @else if unit($px) == em
-    @return $px
-
-  @return ($px / $base-font-size) * 1em
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/errors/01/index.html %}
 
 Если значение отсутствет, то функция предполагает, что значение подразумевает собой измерение в пикселях. С этой точки зрения, предположение может быть рискованным для пользователя и поэтому он должен быть предупреждён, что программа сделает что-то, что может быть неожиданным поведением.
 
@@ -58,56 +31,4 @@
 
 Как пример, давайте скажем, что вы хотите сделать функцию получения для доступа к значениям определенной карты. Вы можете вывести ошибку, если нужный ключ не существует в карте переменных.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-/// Карта Z-index’ов, собирает все Z-слои приложения
-/// @access private
-/// @type Map
-/// @prop {String} key - Имя слоя
-/// @prop {Number} valye - значение Z, соответствующее ключу
-$z-indexes: (
-  'modal': 5000,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
-);
-
-/// Получение значения z-index из имени слоя
-/// @access public
-/// @param {String} $layer - Имя слоя
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer) {
-  @if not map-has-key($z-indexes, $layer) {
-    @error 'Нет слоя с именем `#{$layer}` в $z-indexes. '
-         + 'Слой должен быть одним из #{map-keys($z-indexes)}.';
-  }
-
-  @return map-get($z-indexes, $layer);
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-/// Карта Z-index’ов, собирает все Z-слои приложения
-/// @access private
-/// @type Map
-/// @prop {String} key - Имя слоя
-/// @prop {Number} valye - значение Z, соответствущее ключу
-$z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
-
-/// Получение значения z-index из имени слоя
-/// @access public
-/// @param {String} $layer - Имя слоя
-/// @return {Number}
-/// @require $z-indexes
-@function z($layer)
-  @if not map-has-key($z-indexes, $layer)
-    @error 'Нет слоя с именем `#{$layer}` в $z-indexes. '
-       + 'Слой должен быть одним из #{map-keys($z-indexes)}.';
-
-  @return map-get($z-indexes, $layer)
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/errors/02/index.html %}
