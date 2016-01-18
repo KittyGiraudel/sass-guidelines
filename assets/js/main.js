@@ -22,8 +22,8 @@
     this.evalClientResolution();
     this.validateHeadings();
 
-    if (this.isLargerThanMobile) { 
-      this.evalHeadingsPosition(); 
+    if (this.isLargerThanMobile) {
+      this.evalHeadingsPosition();
     }
 
     this.bindUI();
@@ -90,13 +90,13 @@
     var headingsTop = null;
 
     for (var i = 0, headings = this.headings.length; i < headings; i++) {
-      // Store offsetTop. The check is only required because 
+      // Store offsetTop. The check is only required because
       // <h1 id="table-of-contents"> is display: none; and hence returns 0.
       // We don't want <h3>, because it's omitted in the ToC.
       headingsTop = this.getOffset(this.headings[i]);
 
-      if (headingsTop && this.headings[i].nodeName !== 'H3') { 
-        this.headingsOffset.push([ this.headings[i], headingsTop ]); 
+      if (headingsTop && this.headings[i].nodeName !== 'H3') {
+        this.headingsOffset.push([ this.headings[i], headingsTop ]);
       }
 
       // Create anchor element
@@ -105,7 +105,7 @@
   };
 
   /**
-   * Evaluates current documentElement|body.scrollTop, compares it to headings offset 
+   * Evaluates current documentElement|body.scrollTop, compares it to headings offset
    * and calls highlightTableOfContents() to highlight current visible section.
    * @param {Object} [event]
    */
@@ -116,8 +116,8 @@
       // Loop over all headings offsets & compare scrollTop if already passed a value.
       for (var i = 0, offsets = this.headingsOffset.length; i < offsets; i++) {
         if (
-          scrollTop >= this.headingsOffset[i][1] && 
-          this.headingsOffset[i+1] && 
+          scrollTop >= this.headingsOffset[i][1] &&
+          this.headingsOffset[i+1] &&
           !(scrollTop >= this.headingsOffset[i + 1][1])
         ) {
           this.highlightTableOfContents(this.headingsOffset[i]);
@@ -160,13 +160,13 @@
    * Takes an offset, searches toc headline based on that and toggles '.in-viewport'.
    * @param {Array} heading
    */
-  App.prototype.highlightTableOfContents = function (heading) { 
+  App.prototype.highlightTableOfContents = function (heading) {
     var tocElem = this.tableOfContents.querySelector('a[href="#' + heading[0].id + '"]');
     var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
-    
+
     if (!!tocElem && !tocElem.classList.contains('in-viewport')) {
-      if (inViewportElem) { 
-        inViewportElem.classList.remove('in-viewport'); 
+      if (inViewportElem) {
+        inViewportElem.classList.remove('in-viewport');
       }
 
       tocElem.classList.add('in-viewport');
@@ -195,10 +195,12 @@
    * @param {HTMLElement} elem
    */
   App.prototype.createHeadingsAnchor = function (elem) {
+    var title = elem.innerText || elem.textContent;
     var link = document.createElement('a');
     link.setAttribute('href', '#' + elem.id);
     link.innerHTML = '🔗';
-    link.setAttribute('class', 'anchor-link')
+    link.innerHTML += '<span class="visually-hidden">Link to “' + title + '”</span>';
+    link.setAttribute('class', 'anchor-link');
 
     elem.appendChild(link);
   };
