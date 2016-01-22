@@ -1,0 +1,47 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Clareia levemente uma cor
+/// @access public
+/// @param {Color} $color - cor a clarear
+/// @param {Number} $percentage - porcentagem de `$color` na cor a ser
+/// retornada
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Escurece levemente uma cor
+/// @access public
+/// @param {Color} $color - cor a escurecer
+/// @param {Number} $percentage - porcentagem de `$color` na cor a ser
+/// retornada
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Clareia levemente uma cor
+/// @access public
+/// @param {Color} $color - cor a clarear
+/// @param {Number} $percentage - porcentagem de `$color` na cor a ser
+/// retornada
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix($color, white, $percentage)
+
+/// Escurece levemente uma cor
+/// @access public
+/// @param {Color} $color - cor a escurecer
+/// @param {Number} $percentage - porcentagem de `$color` na cor a ser
+/// retornada
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix($color, black, $percentage)
+{% endhighlight %}
+  </div>
+</div>

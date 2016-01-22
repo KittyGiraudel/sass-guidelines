@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Solução para a especificidade na Nav.
+ *
+ * Alguém utilizou um ID no código do cabeçalho (`#header a {}`) que supera os
+ * seletores na nav (`.site-nav a {}`). Use !important para sobrescrever isso
+ * até eu ter tempo de refatorar as coisas do cabeçalho.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Solução para a especificidade na Nav.
+ *
+ * Alguém utilizou um ID no código do cabeçalho (`#header a {}`) que supera os
+ * seletores na nav (`.site-nav a {}`). Use !important para sobrescrever isso
+ * até eu ter tempo de refatorar as coisas do cabeçalho.
+ */
+.site-nav a
+    color: #BADA55 !important
+{% endhighlight %}
+  </div>
+</div>

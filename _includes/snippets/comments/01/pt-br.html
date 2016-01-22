@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Classe auxiliadora para encurtar e adicionar uma elipse a uma string muito
+ * longa para caber numa única linha.
+ * 1. Previne o conteúdo de ser modelado, forçando uma única linha.
+ * 2. Adiciona uma elipse ao final da linha.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Classe auxiliadora para encurtar e adicionar uma elipse a uma string muito
+ * longa para caber numa única linha.
+ * 1. Previne o conteúdo de ser modelado, forçando uma única linha.
+ * 2. Adiciona uma elipse ao final da linha.
+ */
+.ellipsis
+  white-space: nowrap /* 1 */
+  text-overflow: ellipsis /* 2 */
+  overflow: hidden
+{% endhighlight %}
+  </div>
+</div>

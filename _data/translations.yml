@@ -136,6 +136,21 @@ ko:
     sassdoc: "SassDoc에 의해 생성된 문서"
     wallpaper: "배경화면 by [Julien He](https://twitter.com/julien_he)"
 
+pt-br:
+  donate:
+    content: "Se você gosta do Sass Guidelines, considere apoiá-lo."
+    button: "Apoie o Sass Guidelines"
+  baseline:
+    content: "Um guia de estilo engajado com a escrita sã, manutenível e escalável de Sass."
+  footer:
+    content: "Feito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Nota"
+  images:
+    color-functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Gráfico mostrando como desenvolvedores ordenam as suas declarações em CSS"
+    sassdoc: "Documentação gerada pelo SassDoc"
+    wallpaper: "Papel de parede por [Julien He](https://twitter.com/julien_he)"
+
 pl:
   donate:
     content: "Jeśli spodobał Ci się Sass Guidelines, proszę byś rozważył jego wsparcie."

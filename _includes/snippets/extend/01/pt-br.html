@@ -1,0 +1,28 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+.foo {
+  content: 'foo';
+}
+
+@media print {
+  .bar {
+    // Isso não funciona. Pior ainda: quebra a aplicação.
+    @extend .foo;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+.foo
+  content: 'foo'
+
+@media print
+  .bar
+    // Isso não funciona. Pior ainda: quebra a aplicação.
+    @extend .foo
+{% endhighlight %}
+  </div>
+</div>

@@ -1,0 +1,58 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Inicialize uma variável global no ponto mais alto.
+$variable: 'initial value';
+
+// Crie um mixin que irá sobrescrever aquela variável global.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Crie uma variável local para mascarar a global.
+  $variable: 'local value';
+
+  // Inclua o mixin: isso irá sobrescrever a variável global.
+  @include global-variable-overriding;
+
+  // Exiba o valor da variável.
+  // Essa é a variável **local**, visto que essa mascara a global.
+  content: $variable;
+}
+
+// Exiba a variável em outro seletor que não faça mascaramento.
+// Essa é a variável **global**, como esperado.
+.other-local-scope::before {
+  content: $variable;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Inicialize uma variável global no ponto mais alto.
+$variable: 'initial value'
+
+// Crie um mixin que irá sobrescrever aquela variável global.
+@mixin global-variable-overriding
+  $variable: 'mixin value' !global
+
+.local-scope::before
+  // Crie uma variável local para mascarar a global.
+  $variable: 'local value'
+
+  // Inclua o mixin: isso irá sobrescrever a variável global.
+  +global-variable-overriding
+
+  // Exiba o valor da variável.
+  // Essa é a variável **local**, visto que essa mascara a global.
+  content: $variable
+
+// Exiba a variável em outro seletor que não faça mascaramento.
+// Essa é a variável **global**, como esperado.
+.other-local-scope::before
+  content: $variable
+{% endhighlight %}
+  </div>
+</div>

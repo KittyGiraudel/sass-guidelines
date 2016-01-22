@@ -1,0 +1,19 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Adiciona o módulo atual a lista de módulos importados.
+// A sinalização `!global` é obrigatória para que venha a atualizar a variável
+// global.
+$imported-modules: append($imported-modules, $module) !global;
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Adiciona o módulo atual a lista de módulos importados.
+// A sinalização `!global` é obrigatória para que venha a atualizar a variável
+// global.
+$imported-modules: append($imported-modules, $module) !global
+{% endhighlight %}
+  </div>
+</div>
