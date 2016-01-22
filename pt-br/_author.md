@@ -1,15 +1,15 @@
 
-# About the author
+# Sobre o autor
 
-My name is [Hugo Giraudel](http://hugogiraudel.com), I am a 23 year-old French front-end developer, based in Berlin (Germany) since 2015, currently working at [Edenspiekermann](http://edenspiekermann.com).
+Me chamo [Hugo Giraudel](http://hugogiraudel.com), sou um desenvolvedor front-end francês de 23 anos de idade, morando em Berlim (Alemanha) desde 2015, trabalhando atualmente na [Edenspiekermann](http://edenspiekermann.com).
 
-I have been writing Sass for several years now and am the author of many Sass-related projects such as [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) and [Sass-Compatibility](http://sass-compatibility.github.io). If you are interested in more of my contributions to the Sass community, have a look at [that list](http://github.com/HugoGiraudel/awesome-sass).
+Venho escrevendo sobre Sass já faz alguns anos e sou autor de muitos projetos relacionados a Sass como o [SassDoc](http://sassdoc.com), a [Referência de Sass do SitePoint](http://sitepoint.com/sass-reference/) e o [Sass-Compatibility](http://sass-compatibility.github.io). Se tiver interesse em mais contribuições minhas na comunidade de Sass, dê uma olhada [nessa lista](http://github.com/HugoGiraudel/awesome-sass).
 
-I also happen to be the author of a book about CSS (in French) entitled [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions), as well as a book about Sass (in English) entitled [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
+Acontece que também sou o autor de um livro sobre CSS (em francês) intitulado de [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (edições pela *Eyrolles*), assim como um livro sobre Sass (em inglês) intitulado [Jump Start Sass](https://learnable.com/books/jump-start-sass) (edições pela *Learnable*).
 
 <div class="button-wrapper">
   <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    Catch me on Twitter
+    Me encontre no Twitter
   </a>
 </div>
