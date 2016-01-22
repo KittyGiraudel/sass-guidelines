@@ -198,7 +198,7 @@
     var title = elem.innerText || elem.textContent;
     var link = document.createElement('a');
     link.setAttribute('href', '#' + elem.id);
-    link.innerHTML = '🔗';
+    link.innerHTML = '§';
     link.innerHTML += '<span class="visually-hidden">Link to “' + title + '”</span>';
     link.setAttribute('class', 'anchor-link');
 
