@@ -5,7 +5,7 @@ O Sass Guidelines é um projeto gratuito que mantenho em meu tempo livre. Não �
 
 Agora, se você está querendo contribuir, saiba que tuitando sobre, espalhando a palavra, ou consertando um errinho ortográfico abrindo uma *issue* ou um *pull-request* no [repositório do GitHub](https://github.com/HugoGiraudel/sass-guidelines), seria ótimo!
 
-Por último, mas não menos importante, antes de começarmos: se aproveitou esse documento, ou se é útil para você ou para a sua equipe, por favor, considere apoiar o projeto para que eu possa continuar trabalhando nele!
+Por último, mas não menos importante, antes de começarmos: se gostou desse documento, ou se é útil para você ou para a sua equipe, por favor, considere apoiar o projeto para que eu possa continuar trabalhando nele!
 
 <div class="button-wrapper">
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
