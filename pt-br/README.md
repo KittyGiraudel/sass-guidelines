@@ -1,19 +1,49 @@
-# Translation notes
+# Notas de tradução
 
-> **About this file:** when dealing with a translation, please copy this file in your language folder, translate it and fill it appropriately (remove this block though). This file is an important document to maintain as it ensures consistency across all present and future translators.
+O objetivo desse arquivo é definir algumas orientações frequentes para traduções feitas por diversas pessoas. Como devem saber, traduzir qualquer coisa de um idioma para o outro é, normalmente, complicado e a subjetividade está frequentemente presente. Torna-se importante então declarar explicitamente acordos de traduções frequentes para um idioma específico, como a melhor forma de traduzir uma determinada expressão ou quais expressões não deve ser traduzidas de forma alguma, por exemplo.
 
-The purpose of this file is to define some common guidelines for translations performed by several people. As you might know, translating anything from one language to another is usually tricky and subjectivity is commonly present. It becomes important then to explicitly state common translation agreements for a particular language, like the best way to translate a certain expression or which expressions should not be translated at all, for example.
+## Orientações
 
-## Guidelines
+* Todos os termos em língua estrangeira não traduzidos devem ser obrigatoriamente destacados por itálico. Exemplo: *issue*.
+* Todas as abreviações escolhidas a serem mantidas em sua língua original e seu respectivo significado, deverão seguir a regra do primeiro item. A abreviação deverá ser acompanhadas de seu significado original junto de sua tradução, ambos com aspas em torno, separados por vírgula e com parenteses. Exemplo: *KISS* (*"Keep It Simple, Stupid"*, "Mantenha simples, idiota").
+* Priorizar a terceira pessoa do plural.
 
-* List of guidelines, if applicable for the language
+## Traduções frequentes
 
-## Common translations
+| Inglês                   | Português                                         |
+|--------------------------|---------------------------------------------------|
+| *styleguide*             | guia de estilo                                    |
+| *developer*              | desenvolvedor                                     |
+| *citation needed*        | carece de fontes                                  |
+| *further reading*        | leitura adicional                                 |
+| *library*                | biblioteca                                        |
+| *stylesheet*             | folha de estilo                                   |
+| *codebase*               | base de código                                    |
+| *bitwise operator*       | operador binário                                  |
+| *quotes*                 | aspas                                             |
+| *single quotes*          | apóstrofo                                         |
+| *to crash*               | rebentar                                          |
+| *loop*                   | ciclo                                             |
+| *TL;DR*                  | Longo Demais; Não Li                              |
+| *tab*                    | tabulação                                         |
+| *indentation*            | indentação                                        |
 
-| English                      | Your language           |
-|------------------------------|-------------------------|
-| _english word or expression_ | appropriate translation | 
+## Palavras e expressões não traduzidas
 
-## Non-translatable words and expressions
-
-* List of words or expressions that should not be translated in the language
+* *commit*
+* *issue* (quando no contexto de GitHub, Bitbucket, e produtos semelhantes)
+* *framework*
+* *software*
+* *polyfill*
+* *string*
+* *array*
+* *debug*
+* *mixin*
+* *namespace*
+* *placeholder*
+* *endpoint*
+* *breakpoint*
+* *media query*
+* *flag*
+* *sprite*
+* *lint*
