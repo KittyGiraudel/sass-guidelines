@@ -1,48 +1,48 @@
 
 # Variables
 
-Le variabili sono l'essenza di ogni linguaggio di programmazione. Le variabili ci permettono di riutilizzare un valore senza doverlo copiare e incollare ogni volta. Ancora più importante, le variabili ci permettono di aggiornare un valoro molto facilmente. Addio al cerca e sostituisci o alla sostituzione manuale.
+Le variabili sono l'essenza di ogni linguaggio di programmazione. Ci permettono di riutilizzare un valore senza doverlo copiare e incollare ogni volta. Ancora più importante, le variabili ci permettono di aggiornare un valore molto facilmente. Addio al cerca e sostituisci o alla sostituzione manuale.
 
-Tuttavia CSS non è altro che un enorme cestino che contiene tutte le nostre uova. A differenza di altri linguaggi, CSS non implementa uno _scope_. Because of this, we have to pay real attention when adding variables at the risk of witnessing conflicts.
+Tuttavia CSS non è altro che un enorme cestino che contiene tutte le nostre uova. A differenza di altri linguaggi, CSS non implementa uno _scope_. Per questo motivo, dobbiamo fare attenzione ai possibili conflitti quando aggiungiamo variabili.
 
-My advice would be to only create variables when it makes sense to do so. Do not initiate new variables for the heck of it, it won’t help. A new variable should be created only when all of the following criteria are met:
+Il mio consiglio è di creare variabili solo quando ha senso farlo. Non inizializzate nuove variabili per il gusto di farlo, non aiuterà. Una nuova variabile dovrebbe essere creata solo quando sono validi i seguenti criteri:
 
-* the value is repeated at least twice;
-* the value is likely to be updated at least once;
-* all occurrences of the value are tied to the variable (i.e. not by coincidence).
+* il valore è ripetuto almeno due volte;
+* il valore ha la possibilità di essere aggiornato almeno una volta:
+* tutte le occorrenze del valore sono legate a una variabile; (es: non per coincidenza).
 
-Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
+In pratica, non c'è nessun motivo di dicharare una variabile che non verrà mai aggiornata o che verrà usata solo in un posto.
 
 ## Scoping
 
-Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
+Lo _Scoping_ in Sass è cambiato molto durante gli anni. Fino a poco tempo fa, la dichiarazione di una variabile all'interno di set di regole e altri _scope_ era considerata locale di _default_. Tuttavia quando esisteva già una variabile globale con lo stesso nome, l'assegnazione della variabile locale avrebbe sovrascritto quella globale. Dalla versione 3.4, Sass implementa il concetto di _scope_ e crea una nuova variabile locale invece di sovrascrivere quella globale.
 
-The docs talk about *global variable shadowing*. When declaring a variable that already exists on the global scope in an inner scope (selector, function, mixin...), the local variable is said to be *shadowing* the global one. Basically, it overrides it just for the local scope.
+La documentazione parla di *oscuramento della variabile globale*. In pratica quando si dichiara in uno _scope_ interno (selettori, funzioni, mixin...) una variabile che esiste già nello scope globale, la variabile locale *oscura* quella globale. Fondamentalmente la sovrascrive momentaneamente solo per lo _scope_ locale.
 
-The following code snippet explains the *variable shadowing* concept.
+Il seguente frammento di codice spiega il concetto di *oscuramento variabili* .
 
 {% include snippets/variables/01/index.html %}
 
 ## `!default` flag
 
-When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
+Quando si costruisce una libreria, un framework, un sistema di griglie o un qualsiasi pezzo in Sass che si vuole distribuire e che sarà utilizzato da altri sviluppatori, tutte le variabili di configurazione devono essere contrassegnate con il _flag_ `!default`, in modo da poter essere sovrascritte.
 
 {% include snippets/variables/02/index.html %}
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Grazie a questo, uno sviluppatore può definire la propria variabile `$baseline` *prima* di importare la vostra libreria senza dover vedere il proprio valore ridefinito.
 
 {% include snippets/variables/03/index.html %}
 
 ## `!global` flag
 
-The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
+Il _flag_ `!global` dovrebbe essere usato solamente quando si sovrascrive una variabile globale da uno _scope_ locale. Quando si definisce una variabile fuori da un selettore, un mixin o una funzione, il flag `!global` dovrebbe essere omesso.
 
 {% include snippets/variables/04/index.html %}
 
-## Multiple variables or maps
+## Variabili multiple o mappe
 
-There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
+Ci sono molti vantaggi ad usare le mappe invece che variabili distinte. Il principale è poter iterare in una mappa, cosa impossibile con variabili separate.
 
-Another pro of using a map is the ability to create a little getter function to provide a friendlier API. For instance, consider the following Sass code:
+Un altro vantaggio di usare una mappa è la possibilità di creare una funzione _getter_ per fornire una _API_ più chiara. Per esempio, date un occhiata al seguente codice Sass:
 
 {% include snippets/variables/05/index.html %}
