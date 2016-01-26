@@ -5,7 +5,7 @@
     "critical.css": "jekyll build && mv _site/css/critical.css _includes/critical.css",
     "main.min.js": "cat assets/js/main.js | node_modules/.bin/uglifyjs > assets/js/main.min.js",
     "build": "npm run clean && npm run main.min.js && npm run utilities.js && npm run critical.css",
-    "npm start": "npm run build && jekyll s"
+    "start": "npm run build && jekyll s"
   },
   "devDependencies": {
     "fg-loadcss": "^0.2.4",
