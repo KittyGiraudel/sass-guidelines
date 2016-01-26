@@ -46,14 +46,17 @@
   text-align: center;
 }
 
+/**
+ * UI specific buttons
+ */
 .button-ui {
   display: block;
   margin: 1rem;
   padding: 0.5rem;
   border: 0.25em solid;
   border-radius: 0.35em;
-  background: transparent;
-  color: #999;
+  background-color: transparent;
+  color: rgb(204, 204, 204);
   font-size: 0.8em;
   font-weight: 400;
   text-align: center;

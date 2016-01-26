@@ -21,7 +21,7 @@
     overflow-y: auto;
     font-size: 0.8em;
     opacity: 0.4;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     transition: opacity 5s ease-in-out;
   }
 
@@ -74,11 +74,11 @@
     padding-left: 15px;
     margin-top: 10px;
     margin-bottom: 0;
-    color: #666;
+    color: rgb(102, 102, 102);
   }
 
   .toc > ul > li {
-    border-bottom: 1px double #EFEFEF;
+    border-bottom: 1px double rgb(239, 239, 239);
     margin-bottom: 10px;
     padding-bottom: 10px;
   }

@@ -14,7 +14,7 @@
   -webkit-transform: translateX(100%); /* 3 */
   -ms-transform: translateX(100%); /* 3 */
   transform: translateX(100%); /* 3 */
-  background: white;
+  background-color: rgb(255, 255, 255);
   transition: 0.15s cubic-bezier(0.32, 1, 0.53, 0.8);
 
   /**
@@ -55,8 +55,8 @@
 .aside__title {
   margin: 0;
   padding: 0.5rem 1rem;
-  background: $light-pink;
-  color: white;
+  background-color: $light-pink;
+  color: rgb(255, 255, 255);
   font-size: 1.25em;
   text-transform: uppercase;
 }
@@ -89,7 +89,7 @@
   position: absolute;
   bottom: 0;
   left: -70px;
-  background: white;
+  background-color: rgb(255, 255, 255);
 
   @include respond-to('medium') {
     background: transparent;

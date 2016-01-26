@@ -6,7 +6,7 @@
   @include vertical-rhythm;
   margin: 0;
   padding: 1rem 0;
-  background: $quote-background;
+  background-color: $quote-background;
   font-size: 1.2em; /* 1 */
 
   @include respond-to('medium') {

@@ -15,9 +15,12 @@
   height: 0;
   margin: 0;
   opacity: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
 }
 
+/**
+ * Visually hide an element while keeping it accessible
+ */
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);

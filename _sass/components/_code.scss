@@ -31,8 +31,8 @@
   @include vertical-rhythm;
   @include expand;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: $code-background;
-  color: white;
+  background-color: $code-background;
+  color: rgb(255, 255, 255);
 
   /**
    * <pre> element direct child of `.highlight` modules
@@ -46,292 +46,292 @@
 
 .highlight code,
 .highlight pre {
-  color: #fdce93;
+  color: rgb(253, 206, 147);
   font-family: $code-font-stack;
 }
 
 .highlight .hll {
-  background-color: #222;
+  background-color: rgb(34, 34, 34);
 }
 
 .highlight .c {
-  color: #7f9f7f;
+  color: rgb(127, 159, 127);
 }
 
 .highlight .err {
-  color: #e37170;
-  background-color: #3d3535;
+  color: rgb(227, 113, 112);
+  background-color: rgb(61, 53, 53);
 }
 
 .highlight .g {
-  color: #7f9f7f;
+  color: rgb(127, 159, 127);
 }
 
 .highlight .k {
-  color: #f0dfaf;
+  color: rgb(240, 223, 175);
 }
 
 .highlight .l {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .n {
-  color: #dcdccc;
+  color: rgb(220, 220, 204);
 }
 
 .highlight .o {
-  color: #f0efd0;
+  color: rgb(240, 239, 208);
 }
 
 .highlight .x {
-  color: #ccc;
+  color: rgb(240, 239, 208);
 }
 
 .highlight .p {
   // Slightly enlighten this color which is too dark
-  color: lighten(#41706f, 15%);
+  color: lighten(rgb(65, 112, 111), 15%);
 }
 
 .highlight .cm {
-  color: #7f9f7f;
+  color: rgb(127, 159, 127);
 }
 
 .highlight .cp {
-  color: #7f9f7f;
+  color: rgb(127, 159, 127);
 }
 
 .highlight .c1 {
-  color: #7f9f7f;
+  color: rgb(127, 159, 127);
 }
 
 .highlight .cs {
-  color: #cd0000;
+  color: rgb(205, 0, 0);
   font-weight: bold;
 }
 
 .highlight .gd {
-  color: #cd0000;
+  color: rgb(205, 0, 0);
 }
 
 .highlight .ge {
-  color: #ccc;
+  color: rgb(204, 204, 204);
   font-style: italic;
 }
 
 .highlight .gr {
-  color: red;
+  color: rgb(255, 0, 0);
 }
 
 .highlight .gh {
-  color: #dcdccc;
+  color: rgb(220, 220, 204);
   font-weight: bold;
 }
 
 .highlight .gi {
-  color: #00cd00;
+  color: rgb(0, 205, 0);
 }
 
 .highlight .go {
-  color: gray;
+  color: rgb(128, 128, 128);
 }
 
 .highlight .gp {
-  color: #dcdccc;
+  color: rgb(220, 220, 204);
   font-weight: bold;
 }
 
 .highlight .gs {
-  color: #ccc;
+  color: rgb(204, 204, 204);
   font-weight: bold;
 }
 
 .highlight .gu {
-  color: purple;
+  color: rgb(128, 0, 128);
   font-weight: bold;
 }
 
 .highlight .gt {
-  color: #0040D0;
+  color: rgb(0, 64, 208);
 }
 
 .highlight .kc {
-  color: #dca3a3;
+  color: rgb(220, 163, 163);
 }
 
 .highlight .kd {
-  color: #ffff86;
+  color: rgb(255, 255, 134);
 }
 
 .highlight .kn {
-  color: #dfaf8f;
+  color: rgb(223, 175, 143);
   font-weight: bold;
 }
 
 .highlight .kp {
-  color: #cdcf99;
+  color: rgb(205, 207, 153);
 }
 
 .highlight .kr {
-  color: #cdcd00;
+  color: rgb(205, 205, 0);
 }
 
 .highlight .kt {
-  color: #00cd00;
+  color: rgb(0, 205, 0);
 }
 
 .highlight .ld {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .m {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }
 
 .highlight .s {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .na {
-  color: #9ac39f;
+  color: rgb(154, 195, 159);
 }
 
 .highlight .nb {
-  color: #efef8f;
+  color: rgb(239, 239, 143);
 }
 
 .highlight .nc {
-  color: #efef8f;
+  color: rgb(239, 239, 143);
 }
 
 .highlight .no {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .nd {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .ni {
-  color: #c28182;
+  color: rgb(194, 129, 130);
 }
 
 .highlight .ne {
-  color: #c3bf9f;
+  color: rgb(195, 191, 159);
   font-weight: bold;
 }
 
 .highlight .nf {
-  color: #efef8f;
+  color: rgb(239, 239, 143);
 }
 
 .highlight .nl {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .nn {
-  color: #8fbede;
+  color: rgb(143, 190, 222);
 }
 
 .highlight .nx {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .py {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .nt {
-  color: #9ac39f;
+  color: rgb(154, 195, 159);
 }
 
 .highlight .nv {
-  color: #dcdccc;
+  color: rgb(220, 220, 204);
 }
 
 .highlight .ow {
-  color: #f0efd0;
+  color: rgb(240, 239, 208);
 }
 
 .highlight .w {
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .highlight .mf {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }
 
 .highlight .mh {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }
 
 .highlight .mi {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }
 
 .highlight .mo {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }
 
 .highlight .sb {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .sc {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .sd {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .s2 {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .se {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .sh {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .si {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .sx {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .sr {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .s1 {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .ss {
-  color: #cc9393;
+  color: rgb(204, 147, 147);
 }
 
 .highlight .bp {
-  color: #efef8f;
+  color: rgb(239, 239, 143);
 }
 
 .highlight .vc {
-  color: #efef8f;
+  color: rgb(239, 239, 143);
 }
 
 .highlight .vg {
-  color: #dcdccc;
+  color: rgb(220, 220, 204);
 }
 
 .highlight .vi {
-  color: #ffffc7;
+  color: rgb(255, 255, 199);
 }
 
 .highlight .il {
-  color: #8cd0d3;
+  color: rgb(140, 208, 211);
 }

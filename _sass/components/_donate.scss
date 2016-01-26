@@ -6,7 +6,7 @@
   @include expand;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: $donate-background;
+  background-color: $donate-background;
   text-align: center;
 
   @include respond-to('medium') {
@@ -25,7 +25,7 @@
  * Button from donate module
  */
 .donate .button {
-  background: white;
+  background-color: rgb(255, 255, 255);
   margin-left: 0;
   margin-right: 0;
 }

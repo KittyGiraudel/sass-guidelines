@@ -17,7 +17,7 @@ html {
  */
 body {
   font: 1.125em / 1.4 $text-font-stack;
-  color: #333;
+  color: rgb(51, 51, 51);
 }
 
 
@@ -43,7 +43,7 @@ a,
 /**
  * Prevent back-links in TL;DR lists from being underlined
  */
-:not(.toc) > h1:last-of-type ~ ul [href^='#'] {
+#content > h1:last-of-type ~ ul [href^='#'] {
   text-decoration: none;
   opacity: 0.5;
   color: $dark-pink;
