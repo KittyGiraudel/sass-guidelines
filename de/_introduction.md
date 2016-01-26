@@ -48,7 +48,7 @@ Dennoch glaube Ich dass dieser Styleguide dazu gemacht ist erweitert zu werden. 
 
 Ein Beispiel einer Erweiterung der Styleguide kann in dem [SassDoc Repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) gefunden werden:
 
-> [Dies](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) ist einer Erweiterung zu den [Node Styleguides](https://github.com/felixge/node-style-guide) von Felix Geisendörfer. Alles aus diesem Dokument überschreibt was in den Node Styleguides definiert sein könnte.
+> Dies ist einer Erweiterung zu den [Node Styleguides](https://github.com/felixge/node-style-guide) von Felix Geisendörfer. Alles aus diesem Dokument überschreibt was in den Node Styleguides definiert sein könnte.
 
 ###### Weitere Informationen
 

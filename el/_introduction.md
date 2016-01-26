@@ -48,7 +48,7 @@
 
 Ένα παράδειγμα απο την επέκταση του styleguide μπορεί να βρεθεί στο [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> [This](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει τα λεγόμενα του Node Styleguide.
+> This είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει τα λεγόμενα του Node Styleguide.
 
 ###### Περαιτέρω ανάγνωση
 

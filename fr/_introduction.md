@@ -46,9 +46,9 @@ Une grande partie de ce guide de style est basée sur mes propres opinions. J’
 
 C’est pourquoi je pense qu’un guide de style est fait pour être étendu. S’approprier Sass Guidelines peut vouloir dire avoir un document stipulant que le code s’en tient à ces conventions à l’exception de quelques règles personnelles ; suite à quoi ces règles seraient détaillées.
 
-Un exemple d’extension de guide de style peut être trouvé dans le [dépôt SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) (traduit): 
+Un exemple d’extension de guide de style peut être trouvé dans le [dépôt SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) (traduit):
 
-> [Ceci](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) est une extension de [Node Styleguide](https://github.com/felixge/node-style-guide) par Felix Geisendörfer. Toute chose stipulée dans ce document prévaut sur une indication contraire mentionnée dans Node Styleguide.
+> Ceci est une extension de [Node Styleguide](https://github.com/felixge/node-style-guide) par Felix Geisendörfer. Toute chose stipulée dans ce document prévaut sur une indication contraire mentionnée dans Node Styleguide.
 
 ###### Lectures complémentaires
 

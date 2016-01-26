@@ -48,7 +48,7 @@ Jestem przekonany, że tego typu przewodniki powinny być tworzone z myślą o i
 
 Przykład takiego rozwinięcia przewodnika jest dostępny na [repozytorium SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> [To](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) jest rozwinięciem [Node Styleguide](https://github.com/felixge/node-style-guide), autorstwa Felixa Geisendörfera. Wszystko z tego dokumentu "nadpisuje" to, co znajduje się w Node Styleguide.
+> To jest rozwinięciem [Node Styleguide](https://github.com/felixge/node-style-guide), autorstwa Felixa Geisendörfera. Wszystko z tego dokumentu "nadpisuje" to, co znajduje się w Node Styleguide.
 
 ###### Dalsze informacje
 
