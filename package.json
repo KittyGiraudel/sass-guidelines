@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "clean": "rm -rf node_modules && npm install && rm -rf assets/js/main.min.js && rm -rf _site",
+    "utilities.js": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js assets/js/loadFont.js | node_modules/.bin/uglifyjs > _includes/utilities.js",
+    "critical.css": "jekyll build && mv _site/css/critical.css _includes/critical.css",
+    "main.min.js": "cat assets/js/main.js | node_modules/.bin/uglifyjs > assets/js/main.min.js",
+    "build": "npm run clean && npm run main.min.js && npm run utilities.js && npm run critical.css",
+    "npm start": "npm run build && jekyll s"
+  },
   "devDependencies": {
     "fg-loadcss": "^0.2.4",
     "uglify-js": "^2.4.15",
