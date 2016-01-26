@@ -9,7 +9,7 @@
   <meta name="keywords" content="{{ site.keywords }}">
 
   <style>
-  {% include critical.css %}{% for language in site.data.translations %}{% if language[1].note != "" %}:lang({{ language[0] }}) .note>p:first-child::before{content:"{{ language[1].note }} — "}{% endif %}{% endfor %}
+  {% include critical.css %}{% if site.data.translations[page.language].note != "" %}:lang({{ page.language }}) .note>p:first-child::before{content:"{{ site.data.translations[page.language].note }} — "}{% endif %}
   </style>
 
   <script>
