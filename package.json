@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "uglify-js": "^2.4.15"
+    "fg-loadcss": "^0.2.4",
+    "uglify-js": "^2.4.15",
+    "woff2-feature-test": "^1.0.2"
   }
 }
