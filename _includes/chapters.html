@@ -2,9 +2,9 @@
 {% include_relative {{ include.path }}_contributing.md %}
 
 {::options parse_block_html="true" /}
-<div class="toc">
+<nav class="toc" aria-label="Document">
 {% include_relative {{ include.path }}_toc.md %}
-</div>
+</nav>
 {::options parse_block_html="false" /}
 
 {% include_relative {{ include.path }}_sass.md %}
