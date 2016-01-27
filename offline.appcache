@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2016-01-26.2
+# 2016-01-27
 
 CACHE:
 
@@ -22,7 +22,6 @@ zh/index.html
 # CSS Files
 css/full.css
 css/print.css
-css/fonts/data-ttf.css
 css/fonts/data-woff.css
 css/fonts/data-woff2.css
 
