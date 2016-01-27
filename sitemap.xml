@@ -1,58 +1,17 @@
+---
+---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>http://sass-guidelin.es/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/zh/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/fr/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/de/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/ko/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/pl/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/pt/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/ru/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/es/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sass-guidelin.es/da/</loc>
-  <lastmod>2015-07-24T14:43:12+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
+  {% for language in site.data.languages %}
+  <url>
+    <loc>http://sass-guidelin.es{{ language[1].prefix }}</loc>
+    <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  {% endfor %}
 </urlset>
