@@ -1,9 +1,9 @@
 
 # Variables
 
-Las variables son la esencia de cualquier lenguage de programación. Nos permiten reutilizar valores sin tener que copiarlos una y otra vez. Más importante, permiten la actualización de un valor de manera sencilla. No más buscar y reemplazar valores de manera manual.
+Las variables son la esencia de cualquier lenguaje de programación. Nos permiten reutilizar valores sin tener que copiarlos una y otra vez. Más importante, permiten la actualización de un valor de manera sencilla. No más buscar y reemplazar valores de manera manual.
 
-Sin embargo CSS no es más que una cesta enorme que contiene todos nuestros elementos. A diferencia de muchos lenguages, no hay alcances (*scopes*) reales en CSS. Debido a esto, debemos prestar especial atención cuando añadimos variables a riesgo de presenciar conflictos.
+Sin embargo CSS no es más que una cesta enorme que contiene todos nuestros elementos. A diferencia de muchos lenguajes, no hay alcances (*scopes*) reales en CSS. Debido a esto, debemos prestar especial atención cuando añadimos variables a riesgo de presenciar conflictos.
 
 Mi consejo sería que solo crearas variables cuando tenga sentido hacerlo. No inicies nuevas variables solo por el gusto de hacerlo, no va a ayudar. Una nueva variable debe crearse solo cuando se cumplen los siguientes criterios:
 
