@@ -26,7 +26,7 @@ En 2014, [los equipos de Ruby Sass y LibSass decidieron esperar para sincronizar
 
 Volviendo al tema, la tarea de elegir un compilador, en realidad, dependerá de tu proyecto. Si está basado en ruby on Rails, es mejor utilizar Ruby Sass, que es perfectamente adecuado para este caso. Además, ten en cuenta que Ruby Sass siempre será la implementación de referencia y siempre llevará las características de LibSass.
 
-En los proyectos que no están en Ruby, pero que necesitan una integración en tu flujo de trabajo, LibSass es probablemente una mejor idea, ya que se dedica a poner dicho código en un contenedor específico para cada lenguaje. Así que si quieres utlizar, por ejemplo, Node.js,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
+En los proyectos que no están en Ruby, pero que necesitan una integración en tu flujo de trabajo, LibSass es probablemente una mejor idea, ya que se dedica a poner dicho código en un contenedor específico para cada lenguaje. Así que si quieres utilizar, por ejemplo, Node.js,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
 
 ###### Más información
 
