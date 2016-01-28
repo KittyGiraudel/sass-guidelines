@@ -11,7 +11,7 @@ Es aquí donde Sass tiene sentido, ya que actúa como un meta-lenguaje para mejo
 
 La idea no es convertir a CSS en un lenguaje de programación totalmente funcional; Sass solo quiere mejorar los puntos donde CSS falla. Por tanto, empezar con Sass no es más difícil que aprender CSS: Sass simplemente agrega un par de características adicionales.
 
-Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta giuía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
+Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta guía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
 
 ###### Más información
 
