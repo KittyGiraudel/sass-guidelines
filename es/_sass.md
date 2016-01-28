@@ -9,7 +9,7 @@ El objetivo principal de Sass es el de corregir los defectos de CSS. Como todos 
 
 Es aquí donde Sass tiene sentido, ya que actúa como un meta-lenguaje para mejorar la sintaxis de CSS con el fin de proporcionar características extra y herramientas útiles. Por su parte, Sass quiere mostrarse conservador en lo que respecta al lenguaje CSS.
 
-La idea no es convertir a CSS en un lenguaje de programación totalmente funcional; Sass solo quiere mejorar los puntos donde CSS falla. Por tanto, empezar con Sass no es más dificil que aprender CSS: Sass simplemente agrega un par de características adicionales.
+La idea no es convertir a CSS en un lenguaje de programación totalmente funcional; Sass solo quiere mejorar los puntos donde CSS falla. Por tanto, empezar con Sass no es más difícil que aprender CSS: Sass simplemente agrega un par de características adicionales.
 
 Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta giuía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
 

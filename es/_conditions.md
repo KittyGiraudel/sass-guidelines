@@ -17,7 +17,7 @@ Cuando se evalúa un valor booleano falso, utiliza siempre la palabra clave `not
 
 {% include snippets/conditions/02/index.html %}
 
-Pon siempre la parte de la variable en la parte izquierda de la sentencia y el (in)esperado resultado en la derecha. Las sentencias condicionales invertidas son con frecuencia, más dificiles de leer, especialmente para desarrolladores inexpertos.
+Pon siempre la parte de la variable en la parte izquierda de la sentencia y el (in)esperado resultado en la derecha. Las sentencias condicionales invertidas son con frecuencia, más difíciles de leer, especialmente para desarrolladores inexpertos.
 
 {% include snippets/conditions/03/index.html %}
 
