@@ -5,7 +5,7 @@ Así se describe [Sass](http://sass-lang.com) en su [documentación](http://sass
 
 > Sass (acrónimo de Syntactically Awesome StyleSheets) es una extensión de CSS que añade características muy potentes y elegantes a este lenguaje de estilos.
 
-El objetivo principal de Sass es el de corregir los defectos de CSS. Como todos sabemos, CSS no es el mejor lenguage del mundo <sup>[cita requerida]</sup> y aunque es sencillo de aprender, puede generar rápidamente un conjunto de código muy desordenado, especialmente en proyectos grandes.
+El objetivo principal de Sass es el de corregir los defectos de CSS. Como todos sabemos, CSS no es el mejor lenguaje del mundo <sup>[cita requerida]</sup> y aunque es sencillo de aprender, puede generar rápidamente un conjunto de código muy desordenado, especialmente en proyectos grandes.
 
 Es aquí donde Sass tiene sentido, ya que actúa como un meta-lenguaje para mejorar la sintaxis de CSS con el fin de proporcionar características extra y herramientas útiles. Por su parte, Sass quiere mostrarse conservador en lo que respecta al lenguaje CSS.
 
