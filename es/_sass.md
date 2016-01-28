@@ -39,7 +39,7 @@ En los proyectos que no están en Ruby, pero que necesitan una integración en t
 
 Hay una gran confusión con respecto a la semántica del nombre *Sass*, y por una buena razón: Sass nombra tanto al preprocesador como a su propia sintaxis. No muy adecuado ¿verdad?
 
-Verás, inicialmente Sass describe una sintaxis en la que su caractarística principal era la de ser sensible a espacios en blanco y tabulaciones. Rápidamente, quienes mantienen Sass dicidieron cerrar la brecha entre Sass y CSS, proporcionando una sintaxis CSS amigable llamada *SCSS* también conocida como *Sassy CSS*. Su lema es: si es CSS válido, es SCSS válido.
+Verás, inicialmente Sass describe una sintaxis en la que su característica principal era la de ser sensible a espacios en blanco y tabulaciones. Rápidamente, quienes mantienen Sass dicidieron cerrar la brecha entre Sass y CSS, proporcionando una sintaxis CSS amigable llamada *SCSS* también conocida como *Sassy CSS*. Su lema es: si es CSS válido, es SCSS válido.
 
 Desde entonces, Sass (el preprocesador) ha estado proporcionando dos sintaxis diferentes: Sass (no todas en mayúsculas, [por favor](http://sassnotsass.com)), también conocida como *sintaxis con sangría*, y SCSS. La elección entre cuál usar, depende mucho de tus preferencias, ya que ambas tienen características totalmente equivalentes. Llegados a este punto, es simplemente una cuestión de estética.
 
