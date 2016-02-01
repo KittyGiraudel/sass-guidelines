@@ -1,0 +1,20 @@
+#skip {
+  background-color: rgb(255, 255, 255);
+  color: inherit;
+  padding: 8px 10px;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 0.5em;
+  top: -2.5rem;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  transition: none;
+
+  &:focus { 
+    top: 0.5em;
+    width: auto; 
+    height: auto; 
+  }
+}
