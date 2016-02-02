@@ -131,12 +131,12 @@ Los colores ocupan un lugar importante en el lenguaje CSS. Naturalmente, Sass te
 
 Con el objetivo de que trabajar con los colores sea tan simple como sea posible, mi consejo es que respetes el siguiente orden de preferencia de los formatos de color:
 
-1. [Pablabras reservadas para color en CSS -En inglés](http://www.w3.org/TR/css3-color/#svg-color);
+1. [Palabras reservadas para color en CSS -En inglés](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Notación HSL](http://es.wikipedia.org/wiki/Modelo_de_color_HSV);
 1. [Notación RGB](http://es.wikipedia.org/wiki/RGB);
 1. Notación hexadecimal. Preferiblemente en minúsculas y en formato corto cuando sea posible.
 
-Para principiantes, las palabras reservadas a menudo hablan por si mismas. La representación HSL no solo es la más sencilla de comprender para el cerebro humano<sup>[cita requerida]</sup>, sino que también facilita a los autores de las hojas de estilo modificar el color al ajutar el tono, la saturación y la luminosidad de forma individual. RGB todavía tiene la ventaja de mostrar de inmediato si el color tiene más de azul, o de verde o de rojo, pero no signifia que sea fácil construir un color con estas tres partes. Por último, el formato hexadecimal está cerca de ser indescifrable para la mente humana.
+Para principiantes, las palabras reservadas a menudo hablan por si mismas. La representación HSL no solo es la más sencilla de comprender para el cerebro humano<sup>[cita requerida]</sup>, sino que también facilita a los autores de las hojas de estilo modificar el color al ajustar el tono, la saturación y la luminosidad de forma individual. RGB todavía tiene la ventaja de mostrar de inmediato si el color tiene más de azul, o de verde o de rojo, pero no significa que sea fácil construir un color con estas tres partes. Por último, el formato hexadecimal está cerca de ser indescifrable para la mente humana.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -146,7 +146,7 @@ Al usar HSL o notación RGB, siempre se debe añadir un espacio simple después 
 
 ### Colores Y Variables
 
-Cuando se utiliza un color más de una vez, se debe almacenar en una variable con un nombre significativo que respresente al color.
+Cuando se utiliza un color más de una vez, se debe almacenar en una variable con un nombre significativo que representa al color.
 
 {% include snippets/syntax/16/index.html %}
 
@@ -248,12 +248,12 @@ Si tienes interés en conocer la profundidad del mapa, añade la siguiente funci
 
 ## Conjunto De Reglas CSS
 
-Llegados a este punto, esto es sobretodo una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjuto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Llegados a este punto, esto es sobretodo una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjunto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * los selectores relacionados deben ir en la misma línea; los selectores no vinculados en nuevas líneas;
 * la llave de apertura (`{`) deben ir separada por un espacio del selector;
 * cada declaración debe ir en una línea nueva;
-* añadir un espacio despúes de los dos puntos (`:`);
+* añadir un espacio después de los dos puntos (`:`);
 * poner punto y coma (`;`) al final de todas las declaraciones;
 * la llave de cierre (`}`) debe ir en una línea nueva;
 * añadir una línea después de la llave de cierre (`}`).
@@ -289,7 +289,7 @@ Hay pros y contras para estas dos posturas. Por una parte, el orden alfabético 
 
 {% include snippets/syntax/26/index.html %}
 
-Por otra parte, ordenar las propiedades por tipo tiene mucho sentido. cada declaración relacionada con la tipografía está reunida, `top` y `bottom` están una debajo de la otra y leer un cojunto de reglas parece como leer un cuento corto. Pero a menos que mantengas algun acuerdo como las que se exponen en [CSS idiomático](https://github.com/necolas/idiomatic-css), hay mucho espacio para la interpretación en esta forma de escribir CSS. ¿Dónde debería ir `white-space`: en tipografía o en pantalla?, ¿Dónde pertenece `overflow` exactamente?, ¿Cuál es el orden de una propiedad dentro de un grupo? (podría ser en orden alfabético, ¡oh! ironía)
+Por otra parte, ordenar las propiedades por tipo tiene mucho sentido. cada declaración relacionada con la tipografía está reunida, `top` y `bottom` están una debajo de la otra y leer un conjunto de reglas parece como leer un cuento corto. Pero a menos que mantengas algún acuerdo como las que se exponen en [CSS idiomático](https://github.com/necolas/idiomatic-css), hay mucho espacio para la interpretación en esta forma de escribir CSS. ¿Dónde debería ir `white-space`: en tipografía o en pantalla?, ¿Dónde pertenece `overflow` exactamente?, ¿Cuál es el orden de una propiedad dentro de un grupo? (podría ser en orden alfabético, ¡oh! ironía)
 
 {% include snippets/syntax/27/index.html %}
 
@@ -356,7 +356,7 @@ Para los principiantes, se permite e incluso se recomienda anidar pseudo-clases 
 
 {% include snippets/syntax/33/index.html %}
 
-Usar la anidación para las pseudo-clases y pseudo-elementos no solo tiene sentido (porque trata selectores estrechamente relacionados), sino que también ayuda a mantenter todo lo relacionado con un componente en un mismo lugar.
+Usar la anidación para las pseudo-clases y pseudo-elementos no solo tiene sentido (porque trata selectores estrechamente relacionados), sino que también ayuda a mantener todo lo relacionado con un componente en un mismo lugar.
 
 Además, cuando se utilizan clases de estado independientes del dispositivo como `.is-active`, está perfectamente bien anidar bajo el selector del componente para mantenerlo todo ordenado.
 

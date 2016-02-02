@@ -30,9 +30,9 @@ De todas formas, no prohíbo el uso de Compass aunque tampoco lo recomiendo, esp
 
 ## Sistemas De Retícula
 
-No es una opción no utilizar un sistema de retícula ahora que el *Responsive Web Design* está por todas partes. Para que los diseños parezcan consistententes y coherentes en todos los tamaños, utilizamos algo así como una retícula para disponer los elementos. Para evitar tener que escribir el código de esta retícula una y otra vez, algunas mentes brillantes desarrollaron una retícula reutilizable.
+No es una opción no utilizar un sistema de retícula ahora que el *Responsive Web Design* está por todas partes. Para que los diseños parezcan consistentes y coherentes en todos los tamaños, utilizamos algo así como una retícula para disponer los elementos. Para evitar tener que escribir el código de esta retícula una y otra vez, algunas mentes brillantes desarrollaron una retícula reutilizable.
 
-Déjame ser directo: no soy muy fan de los sistemas de retícula. Por supuesto que veo su potencial, pero creo que muchos de ellos son completamente excesivos y en su mayoría sirven para dibujar columnas rojas sobre un fondo blanco en las presentaciones de diseñadores nerds. ¿Cúando fue la última vez que pensaste *Gracias-a-Dios-tengo-esta-herramienta-para-construir-retículas-de-2-5-3.2-π*?. Eso es, nunca. Porque en la mayoría de los casos, quieres usar la típica retícula de 12 columnas. Nada estrafalario.
+Déjame ser directo: no soy muy fan de los sistemas de retícula. Por supuesto que veo su potencial, pero creo que muchos de ellos son completamente excesivos y en su mayoría sirven para dibujar columnas rojas sobre un fondo blanco en las presentaciones de diseñadores nerds. ¿Cuándo fue la última vez que pensaste *Gracias-a-Dios-tengo-esta-herramienta-para-construir-retículas-de-2-5-3.2-π*?. Eso es, nunca. Porque en la mayoría de los casos, quieres usar la típica retícula de 12 columnas. Nada estrafalario.
 
 Si estás usando un *framework* CSS para tu proyecto, como [Bootstrap](http://getbootstrap.com/) o [Foundation](http://foundation.zurb.com/), hay muchas probabilidades de que ya incluya un sistema de retícula, en cuyo caso recomendaría que usaras estos para evitar tener que tratar con otra dependencia.
 

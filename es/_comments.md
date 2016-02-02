@@ -12,7 +12,7 @@ Tan simple como pueda ser CSS, aún queda sitio para muchos comentarios. Estos p
 * el orden de las declaraciones CSS;
 * el proceso de pensamiento detrás de una manera de hacer las cosas.
 
-Y probablemente haya olvidado muchas otras diversas razones para realizar comentarios. Comentar lleva muy poco tiempo cuando se realiza al mismo tiempo que escribes el código, así que házlo en el momento correcto. Volver atrás y comentar un trozo de código antiguo, no solo es completamente irreal, sino que también es extremadamente molesto.
+Y probablemente haya olvidado muchas otras diversas razones para realizar comentarios. Comentar lleva muy poco tiempo cuando se realiza al mismo tiempo que escribes el código, así que hazlo en el momento correcto. Volver atrás y comentar un trozo de código antiguo, no solo es completamente irreal, sino que también es extremadamente molesto.
 
 ## Escribiendo Comentarios
 

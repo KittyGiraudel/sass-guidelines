@@ -1,7 +1,7 @@
 
 # Convenciones De Nomenclatura
 
-En esta sección, no vamos a debatir cuáles son las mejores convenciones de nomenclatura en CSS para mejorar el mantenimiento y la escalabilidad; esto no solo depente de tí, sino que también está fuera del alcance de una guía de estilo. Sugiero los que están recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+En esta sección, no vamos a debatir cuáles son las mejores convenciones de nomenclatura en CSS para mejorar el mantenimiento y la escalabilidad; esto no solo depende de tí, sino que también está fuera del alcance de una guía de estilo. Sugiero los que están recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Hay algunas cosas a las que se les puede asignar un nombre en Sass, y es importante que tengan un nombre adecuado, así todo tu código será coherente y fácil de leer:
 
