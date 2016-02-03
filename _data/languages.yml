@@ -102,6 +102,15 @@ pt:
     - name: Eduardo Bouças
       link: https://github.com/eduardoboucas
 
+pt-br:
+  version: 1.2
+  label: Brazilian Portuguese
+  prefix: /pt-br/
+  available: false
+  translators:
+    - name: Jhonny Moreira
+      link: https://github.com/jhonnymoreira
+
 ru:
   version: 1.0
   label: Russian
