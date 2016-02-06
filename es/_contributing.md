@@ -7,14 +7,4 @@ Si te apetece contribuir a este proyecto, puedes escribir un Tweet al respecto, 
 
 Por último, pero no por ello menos importante antes de empezar: si te ha gustado este documento, o si ha sido útil para ti o tu equipo, por favor, ¡considera hacer una donación!
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Apoya a *Sass Guidelines*
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} por @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    ¡Corre la voz!
-  </a>
-</div>
+{% include contributing.html %}

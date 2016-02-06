@@ -7,14 +7,4 @@
 
 Прежде, чем мы начнём: если вам понравился этот документ, или он оказался полезен вам или вашей команде, пожалуйста, подумайте о его поддержке!
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Поддержите руководство Sass
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Расскажите о руководстве Sass
-  </a>
-</div>
+{% include contributing.html %}
