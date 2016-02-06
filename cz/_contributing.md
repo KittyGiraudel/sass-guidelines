@@ -7,14 +7,4 @@ Pokud byste rádi chtěli přispět, budu rád za jakýkoliv tweet, či jinou me
 
 V neposlední řadě, než začneme: pokud se vám tento dokument líbil, nebo pro vás byl užitečný, zvažte, prosím, jeho podporu!
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Podpořit Sass Guidelines
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Sdílet
-  </a>
-</div>
+{% include contributing.html %}

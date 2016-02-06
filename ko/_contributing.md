@@ -7,14 +7,4 @@ Sass Guidelines는 여가시간에 유지하는 무료 프로젝트입니다. �
 
 시작에 앞서 마지막으로: 이 문서를 즐기셨다면, 혹은 이 문서가 여러분이나 여러분의 팀에 유용하다면, 후원을 고려해주시기 바랍니다!
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Support Sass Guidelines
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Spread the word
-  </a>
-</div>
+{% include contributing.html %}

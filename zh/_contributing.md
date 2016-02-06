@@ -7,14 +7,4 @@ Sass指南是我利用空暇时间维持的一个免费项目。不用多说,相
 
 在开始之前最后但不是最终的一句话：如果你喜欢这份样式指南，如果它对你或你的团队大有裨益，请考虑支持它，从而鼓励我持续迭代不断改进本文！
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Support Sass Guidelines
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Spread the word
-  </a>
-</div>
+{% include contributing.html %}

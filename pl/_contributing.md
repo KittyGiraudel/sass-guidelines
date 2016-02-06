@@ -7,14 +7,4 @@ Jeśli chcesz uczestniczyć w jego współtworzeniu, możesz tweetnąć o nim al
 
 I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik, albo jeśli uznasz go jako przydatny dla Twojego zespołu, proszę rozważ jego wsparcie, tak bym mógł nadal nad nim pracować!
 
-<div class="button-wrapper">
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
-    Wesprzyj Sass Guidelines
-  </a>
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Tweetnij o Sass Guidelines
-  </a>
-</div>
+{% include contributing.html %}
