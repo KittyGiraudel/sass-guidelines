@@ -17,6 +17,9 @@
 #    <a href="http://hugogiraudel.com">Hugo Giraudel</a>
 
 cz:
+  contributing:
+    support_button: "Podpořit Sass Guidelines"
+    tweet_button: "Sdílet"
   donate:
     button: "Podpořit Sass Guidelines"
     content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jeho podporu."
@@ -32,6 +35,9 @@ cz:
     wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"
 
 da:
+  contributing:
+    support_button: "Støt Sass Guidelines"
+    tweet_button: "Spred ordet"
   donate:
     content: "Hvis du nød Sass Guidelines, overvej venligst at støtte dem."
     button: "Støt Sass Guidelines"
@@ -47,6 +53,9 @@ da:
     wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"
 
 de:
+  contributing:
+    support_button: "Sass Guidelines unterstützen"
+    tweet_button: "Weitersagen"
   donate:
     content: "Wenn dir Sass Guidelines gefallen, denke doch bitte über eine Unterstützung nach."
     button: "Unterstütze Sass Guidelines"
@@ -62,6 +71,9 @@ de:
     wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"
 
 el:
+  contributing:
+    support_button: "Υποστηρίξτε το Sass Guidelines"
+    tweet_button: "Διαδώστε το"
   donate:
     content: "Αν εκτίμησες τα Sass Guidelines, στήριξε την προσπάθεια."
     button: "Στήριξε τα Sass Guidelines"
@@ -77,6 +89,9 @@ el:
     wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"
 
 en:
+  contributing:
+    support_button: "Support Sass Guidelines"
+    tweet_button: "Spread the word"
   donate:
     content: "If you enjoy Sass Guidelines, please consider supporting them."
     button: "Support Sass Guidelines"
@@ -92,6 +107,9 @@ en:
     wallpaper: "Wallpaper by [Julien He](https://twitter.com/julien_he)"
 
 es:
+  contributing:
+    support_button: "Apoya a Sass Guidelines"
+    tweet_button: "¡Corre la voz!"
   donate:
     content: "Si has disfrutado de Sass Guidelines, por favor considera hacer una donación."
     button: "Donar a Sass Guidelines"
@@ -107,6 +125,9 @@ es:
     wallpaper: "Fondo de pantalla realizado por [Julen He](https://twitter.com/julien_he)"
 
 fr:
+  contributing:
+    support_button: "Soutenir Sass Guidelines"
+    tweet_button: "Faites passer le message"
   donate:
     content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir."
     button: "Soutenir Sass Guidelines"
@@ -122,6 +143,9 @@ fr:
     wallpaper: "Fond d’écran par [Julien He](https://twitter.com/julien_he)"
 
 ko:
+  contributing:
+    support_button: "Support Sass Guidelines"
+    tweet_button: "Spread the word"
   donate:
     content: "Sass Guidelines가 맘에 드신다면 후원을 고려해주시기 바랍니다."
     button: "Sass Guidelines 후원하기"
@@ -137,6 +161,9 @@ ko:
     wallpaper: "배경화면 by [Julien He](https://twitter.com/julien_he)"
 
 pl:
+  contributing:
+    support_button: "Wesprzyj Sass Guidelines"
+    tweet_button: "Tweetnij o Sass Guidelines"
   donate:
     content: "Jeśli spodobał Ci się Sass Guidelines, proszę byś rozważył jego wsparcie."
     button: "Wesprzyj Sass Guidelines"
@@ -152,6 +179,9 @@ pl:
     wallpaper: "Tapeta stworzona przez [Julien He](https://twitter.com/julien_he)"
 
 pt:
+  contributing:
+    support_button: "Apoiar Sass Guidelines"
+    tweet_button: "Espalhar a palavra"
   donate:
     content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
     button: "Apoie o Guia de Sass"
@@ -167,6 +197,9 @@ pt:
     wallpaper: "Fundo de parede por [Julien He](https://twitter.com/julien_he)"
 
 ru:
+  contributing:
+    support_button: "Поддержите руководство Sass"
+    tweet_button: "Расскажите о руководстве Sass"
   donate:
     content: "Если вам понравилось Sass руководство, пожалуйста, поддержите его."
     button: "Поддержите Sass руководство"
@@ -182,6 +215,9 @@ ru:
     wallpaper: "Обои от [Julien He](https://twitter.com/julien_he)"
 
 zh:
+  contributing:
+    support_button: "Support Sass Guidelines"
+    tweet_button: "Spread the word"
   donate:
     content: "如果你喜欢 Sass Guidelines，请支持它"
     button: "支持 Sass Guidelines"
