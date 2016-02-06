@@ -18,7 +18,8 @@ kramdown:
   toc_levels: 1..2
 
 sass:
-    style: :compressed
+  sass_dir: assets/sass
+  style: :compressed
 
 compress_html:
   clippings: all
