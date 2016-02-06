@@ -236,7 +236,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   var sassGuidelines = new App({
     addOffsetView: 50,
-    headings: document.querySelectorAll('#content > h1[id], #content > h2[id], #content > h3[id]'),
+    headings: document.querySelectorAll('.chapter > h1[id], .chapter > h2[id], .chapter > h3[id]'),
     tableOfContents: document.querySelector('.toc'),
     languagePicker: document.getElementById('language-picker'),
     footer: document.querySelector('.footer')
