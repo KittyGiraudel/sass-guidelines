@@ -1,0 +1,33 @@
+---
+---
+
+/* TEAM */
+
+
+    Front-end developer: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+    Designer: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+    Author: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+
+/* THANKS */
+
+    {% for language in site.data.languages %}{% for translator in language[1].translators %}
+    {{ language[1].label }} translator: {{ translator.name }}
+    Contact: {{ translator.link }}
+    {% endfor %}{% endfor %}
+
+/* SITE */
+
+
+    Last update: Sat Feb 6 13:12:47 2016 +0100
+    Languages: HTML, CSS (Sass), JavaScript
+    Components: Jekyll
+    Hosting: GitHub Pages
