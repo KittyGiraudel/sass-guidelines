@@ -27,7 +27,7 @@
 /* SITE */
 
 
-    Last update: Sat Feb 6 13:12:47 2016 +0100
+    Last update: {{ site.time | date_to_long_string }}
     Languages: HTML, CSS (Sass), JavaScript
     Components: Jekyll
     Hosting: GitHub Pages
