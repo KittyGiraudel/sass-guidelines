@@ -1,0 +1,26 @@
+configuration:
+  version: 1.2
+  label: French
+  prefix: /fr/
+  available: true
+  translators:
+    - name: Pierre Choffé
+      link: http://la-cascade.ghost.io
+
+translations:
+  contributing:
+    support_button: "Soutenir Sass Guidelines"
+    tweet_button: "Faites passer le message"
+  donate:
+    content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir."
+    button: "Soutenir Sass Guidelines"
+  baseline:
+    content: "Un guide de style engagé pour du code Sass sain, maintenable et extensible."
+  footer:
+    content: "Fait avec amour par [Hugo Giraudel](http://hugogiraudel.com), traduit par [Pierre Choffé](http://la-cascade.ghost.io)"
+  note: "Note"
+  images:
+    color-functions: "Illustration de la différence entre `lighten`/`darken` et `mix` par [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Tableau montrant comment les développeurs ordonnent leurs déclarations CSS"
+    sassdoc: "Documentation générée par SassDoc"
+    wallpaper: "Fond d’écran par [Julien He](https://twitter.com/julien_he)"

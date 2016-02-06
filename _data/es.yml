@@ -1,0 +1,28 @@
+configuration:
+  version: 1.1
+  label: Spanish
+  prefix: /es/
+  available: true
+  translators:
+    - name: Sonia Conde
+      link: https://github.com/soniar4i
+    - name: David Khourshid
+      link: https://github.com/davidkpiano
+
+translations:
+  contributing:
+    support_button: "Apoya a Sass Guidelines"
+    tweet_button: "¡Corre la voz!"
+  donate:
+    content: "Si has disfrutado de Sass Guidelines, por favor considera hacer una donación."
+    button: "Donar a Sass Guidelines"
+  baseline:
+    content: "Una guía de estilo comprometida en desarrollar Sass sano, sostenible y escalable."
+  footer:
+    content: "Hecho con amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Nota"
+  images:
+    color-functions: "Ilustración de la diferencia entre `lighten`/`darken` y `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Gráfico que muestra cómo los desarrolladores ordenan sus declaraciones CSS"
+    sassdoc: "Documentación generada por SassDoc"
+    wallpaper: "Fondo de pantalla realizado por [Julen He](https://twitter.com/julien_he)"

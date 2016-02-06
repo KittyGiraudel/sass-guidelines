@@ -1,0 +1,26 @@
+configuration:
+  version: 1.1
+  label: Korean
+  prefix: /ko/
+  available: true
+  translators:
+    - name: Donghee Kim
+      link: https://github.com/kimdhoe
+
+translations:
+  contributing:
+    support_button: "Support Sass Guidelines"
+    tweet_button: "Spread the word"
+  donate:
+    content: "Sass Guidelines가 맘에 드신다면 후원을 고려해주시기 바랍니다."
+    button: "Sass Guidelines 후원하기"
+  baseline:
+    content: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
+  footer:
+    content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
+  note: "주"
+  images:
+    color-functions: "`lighten`/`darken` 과 `mix` 사이의 차이를 보여주는 삽화 by [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "개발자들의 CSS 선언 정렬 방식을 보여주는 도표"
+    sassdoc: "SassDoc에 의해 생성된 문서"
+    wallpaper: "배경화면 by [Julien He](https://twitter.com/julien_he)"

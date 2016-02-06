@@ -1,0 +1,28 @@
+configuration:
+  version: 1.0
+  label: Russian
+  prefix: /ru/
+  available: true
+  translators:
+    - name: Даниил Пронин
+      link: https://github.com/grawl
+    - name: Pavel Demyanenko
+      link: https://github.com/PavelDemyanenko
+
+translations:
+  contributing:
+    support_button: "Поддержите руководство Sass"
+    tweet_button: "Расскажите о руководстве Sass"
+  donate:
+    content: "Если вам понравилось Sass руководство, пожалуйста, поддержите его."
+    button: "Поддержите Sass руководство"
+  baseline:
+    content: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
+  footer:
+    content: "Сделал с любовью [Хьюго Гираудел](http://hugogiraudel.com), перевели [Даниил Пронин](http://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
+  note: "Заметка"
+  images:
+    color-functions: "Иллюстрация разницы между функциями `lighten`/`darken` и `mix` в Sass от [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "График, показывающий, как разработчики упорядочивают свой CSS"
+    sassdoc: "Документация, сгенерированная в SassDoc"
+    wallpaper: "Обои от [Julien He](https://twitter.com/julien_he)"

@@ -1,0 +1,32 @@
+configuration:
+  version: 1.2
+  label: Greek
+  prefix: /el/
+  available: true
+  translators:
+    - name: Kostantinos Margaritis
+      link: https://github.com/margaritis
+    - name: Adonis K.
+      link: https://github.com/varemenos
+    - name: Mod Kaffes
+      link: https://github.com/modkaffes
+    - name: Sébastien Nikolaou
+      link: https://github.com/sebdesign
+
+translations:
+  contributing:
+    support_button: "Υποστηρίξτε το Sass Guidelines"
+    tweet_button: "Διαδώστε το"
+  donate:
+    content: "Αν εκτίμησες τα Sass Guidelines, στήριξε την προσπάθεια."
+    button: "Στήριξε τα Sass Guidelines"
+  baseline:
+    content: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
+  footer:
+    content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Σημείωση"
+  images:
+    color-functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
+    sassdoc: "Το documentation δημιουργήθηκε με SassDoc"
+    wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"
