@@ -1,0 +1,17 @@
+
+{% capture sass_path %}snippets/{{ include.path }}/{{ include.file|default: page.language }}.sass{% endcapture %}
+{% capture scss_path %}snippets/{{ include.path }}/{{ include.file|default: page.language }}.scss{% endcapture %}
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+{% include {{ scss_path }} %}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+{% include {{ sass_path }} %}
+{% endhighlight %}
+  </div>
+</div>
+
