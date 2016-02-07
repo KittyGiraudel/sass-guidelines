@@ -5,7 +5,8 @@
     "critical.css": "jekyll build && mv _site/css/critical.css _includes/critical.css",
     "main.min.js": "cat assets/js/main.js | node_modules/.bin/uglifyjs > assets/js/main.min.js",
     "build": "npm run clean && npm run main.min.js && npm run utilities.js && npm run critical.css",
-    "start": "npm run build && jekyll s"
+    "start": "npm run build && jekyll s",
+    "sass-convert": "find _includes/snippets -type f -name '.sass' -delete && sass-convert --from scss --to sass -R _includes/snippets"
   },
   "devDependencies": {
     "fg-loadcss": "^0.2.4",
