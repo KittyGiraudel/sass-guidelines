@@ -33,15 +33,15 @@
 
   <!-- Asynchronous CSS and fonts -->
   <script>
-  loadCSS('/css/full.css', null, 'screen');
-  loadFont('sg', '/css/fonts/data-woff.css', '/css/fonts/data-woff2.css');
+  loadCSS('/assets/css/full.css', null, 'screen');
+  loadFont('sg', '/assets/css/fonts/data-woff.css', '/assets/css/fonts/data-woff2.css');
   </script>
   <noscript>
-    <link rel="stylesheet" href="{{ '/css/full.css' | prepend: site.baseurl }}" media="screen" />
+    <link rel="stylesheet" href="{{ '/assets/css/full.css' | prepend: site.baseurl }}" media="screen" />
   </noscript>
 
   <!-- Print CSS -->
-  <link rel="stylesheet" href="{{ '/css/print.css' | prepend: site.baseurl }}" media="print" />
+  <link rel="stylesheet" href="{{ '/assets/css/print.css' | prepend: site.baseurl }}" media="print" />
 
   <!-- Responsive images setup -->  
   <script>document.createElement('picture')</script>

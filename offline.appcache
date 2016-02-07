@@ -20,10 +20,10 @@ ru/index.html
 zh/index.html
 
 # CSS Files
-css/full.css
-css/print.css
-css/fonts/data-woff.css
-css/fonts/data-woff2.css
+assets/css/full.css
+assets/css/print.css
+assets/css/fonts/data-woff.css
+assets/css/fonts/data-woff2.css
 
 # JS Files
 assets/js/main.min.js
