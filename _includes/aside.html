@@ -27,10 +27,10 @@
 
     <div class="custom-select language-picker">
       <select id="language-picker">
-        {% for language in site.data.languages %}
-        {% if language[1].available %}
-        {% capture _p %}{{ language[1].prefix }}index.html{% endcapture %}
-        <option {% if _p == page.url %}selected{% endif %} value="{{ language[1].prefix }}">{{ language[1].label }} ({{ language[1].version }})</option>
+        {% for language in site.languages %}
+        {% if site.data[language].configuration.available %}
+        {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
+        <option {% if _p == page.url %}selected{% endif %} value="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</option>
         {% endif %}
         {% endfor %}
       </select>
@@ -38,10 +38,10 @@
 
     <noscript>
       <ul>
-        {% for language in site.data.languages %}
-        {% if language[1].available %}
-        {% capture _p %}{{ language[1].prefix }}index.html{% endcapture %}
-        <li {% if _p == page.url %}class="is-selected"{% endif %}><a href="{{ language[1].prefix }}">{{ language[1].label }} ({{ language[1].version }})</a></li>
+        {% for language in site.languages %}
+        {% if site.data[language].configuration.available %}
+        {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
+        <li {% if _p == page.url %}class="is-selected"{% endif %}><a href="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</a></li>
         {% endif %}
         {% endfor %}
       </ul>

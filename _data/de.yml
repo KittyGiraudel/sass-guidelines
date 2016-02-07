@@ -1,0 +1,26 @@
+configuration:
+  version: 1.2
+  label: German
+  prefix: /de/
+  available: true
+  translators:
+    - name: Moritz Kröger
+      link: https://github.com/morkro
+
+translations:
+  contributing:
+    support_button: "Sass Guidelines unterstützen"
+    tweet_button: "Weitersagen"
+  donate:
+    content: "Wenn dir Sass Guidelines gefallen, denke doch bitte über eine Unterstützung nach."
+    button: "Unterstütze Sass Guidelines"
+  baseline:
+    content: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
+  footer:
+    content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."
+  note: "Notiz"
+  images:
+    color-functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
+    sassdoc: "Dokumentation von SassDoc generiert"
+    wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"

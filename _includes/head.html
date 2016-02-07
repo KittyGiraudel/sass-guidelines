@@ -6,14 +6,14 @@
 
   <!-- Site title -->
   {% capture site_title %}
-  {% if page.title %}{{ page.title }}{% elsif page.language != 'en' %}{{ site.title }} — {{ site.data.languages[page.language].label }} translation{% else %}{{ site.title }}{% endif %}
+  {% if page.title %}{{ page.title }}{% elsif page.language != 'en' %}{{ site.title }} — {{ site.data[page.language].configuration.label }} translation{% else %}{{ site.title }}{% endif %}
   {% endcapture %}
   <title>{{ site_title|strip }}</title>
   <meta name="og:title" content="{{ site_title|strip }}" />
 
   <!-- Site description & keywords -->
-  <meta name="description" content="{{ site.data.translations[page.language].baseline.content }}" />
-  <meta name="og:description" content="{{ site.data.translations[page.language].baseline.content }}" />
+  <meta name="description" content="{{ site.data[page.language].translations.baseline.content }}" />
+  <meta name="og:description" content="{{ site.data[page.language].translations.baseline.content }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
 
   <!-- Site URL -->
@@ -22,7 +22,7 @@
 
   <!-- Critical CSS -->
   <style>
-  {% include critical.css %}{% if site.data.translations[page.language].note != "" %}:lang({{ page.language }}) .note>p:first-child::before{content:"{{ site.data.translations[page.language].note }} — "}{% endif %}
+  {% include critical.css %}{% if site.data[page.language].translations.note != "" %}:lang({{ page.language }}) .note>p:first-child::before{content:"{{ site.data[page.language].translations.note }} — "}{% endif %}
   </style>
 
   <!-- JavaScript utilities -->

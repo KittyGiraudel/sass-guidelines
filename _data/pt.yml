@@ -1,0 +1,32 @@
+configuration:
+  version: 1.1
+  label: Portuguese
+  prefix: /pt/
+  available: true
+  translators:
+    - name: Ricardo Magalhães
+      link: https://github.com/magalhini
+    - name: Gonçalo Morais
+      link: https://github.com/gnclmorais
+    - name: Sara Vieira
+      link: https://github.com/saravieira
+    - name: Eduardo Bouças
+      link: https://github.com/eduardoboucas
+
+translations:
+  contributing:
+    support_button: "Apoiar Sass Guidelines"
+    tweet_button: "Espalhar a palavra"
+  donate:
+    content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
+    button: "Apoie o Guia de Sass"
+  baseline:
+    content: "Um guia de estilo opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
+  footer:
+    content: "Escrito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Nota"
+  images:
+    color-functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Gráfico demonstrativo de como os programadores ordenam as suas declarações de CSS"
+    sassdoc: "Documentação gerada por SassDoc"
+    wallpaper: "Fundo de parede por [Julien He](https://twitter.com/julien_he)"
