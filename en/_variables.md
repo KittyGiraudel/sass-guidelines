@@ -29,7 +29,7 @@ When building a library, a framework, a grid system or any piece of Sass that is
 
 {% include snippets/variables/02/index.html %}
 
-Thanks to this, a developer can define his own `$baseline` variable *before* importing your library without seeing his value redefined.
+Thanks to this, a developer can define their own `$baseline` variable *before* importing your library without seeing their value redefined.
 
 {% include snippets/variables/03/index.html %}
 
