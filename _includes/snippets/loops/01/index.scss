@@ -1,0 +1,5 @@
+@each $theme in $themes {
+  .section-#{$theme} {
+    background-color: map-get($colors, $theme);
+  }
+}

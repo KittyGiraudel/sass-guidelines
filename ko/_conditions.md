@@ -11,17 +11,17 @@ Sass가 `@if`과 `@else` 지시어를 통해 조건문을 제공한다는 것을
 * `@else` 문은 이전의 닫는 중괄호(`}`)와 같은 줄에;
 * 다음 줄이 닫는 중괄호(`}`)가 아닌 한 마지막 닫는 중괄호(`}`) 뒤에는 빈 새 줄 하나.
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 거짓 값을 테스트할 때는, `false`나 `null` 대신 언제나 `not` 키워드를 사용하세요.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 언제나 변수 부분을 조건문의 왼쪽에, 기대되는 (혹은 기대되지 않는) 결과를 오른쪽에 놓으세요. 거꾸로 된 조건문은, 특히 경험이 적은 개발자들이 읽기에 더 어렵습니다.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 어떤 조건에 따라 다른 결과를 반환하는 함수 안에서 조건문을 사용할 때는, 반드시 함수가 조건문 블록 밖에서도 `@return`문을 갖도록 만드세요.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}
 

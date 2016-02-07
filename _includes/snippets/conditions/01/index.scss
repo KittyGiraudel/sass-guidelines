@@ -1,0 +1,14 @@
+// Yep
+@if $support-legacy {
+  // …
+} @else {
+  // …
+}
+
+// Nope
+@if ($support-legacy == true) {
+  // …
+}
+@else {
+  // …
+}

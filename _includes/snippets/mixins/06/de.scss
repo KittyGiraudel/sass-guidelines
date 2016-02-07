@@ -1,0 +1,13 @@
+/// Helfer-Mixing um Vendor-Prefixe hinzuzfügen
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - CSS-Eigenschaft ohne Prefix
+/// @param {*} $value - Reiner CSS-Wert
+/// @param {List} $prefixes - Liste von Prefixen die hinzugefügt werden soll
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}

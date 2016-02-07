@@ -11,11 +11,11 @@ Men jeg føler, at jeg må advare dig imod at misbruge magten ved mixins. Igen, 
 
 Med det på plads, så er mixins ekstremt brugbare og du bør bruge et par stykker. Tommelfingerreglen er, at hvis det hænder for dig at du opdager en gruppe CSS egenskaber, der altid opstår som værende sammen af en grund (og ikke af tilfældighed), så kan du putte dem i en mixin i stedet. [Mikro-clearfix hacket fra Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) fortjener at blive puttet i en (argumentløs) mixin, for eksempel.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Et andet validt eksempel ville være en mixin til at definere størrelsen på et element, der definerer både `width` og `height` på samme tid. Ikke alene vil det gøre koden meget lettere at skrive, men også nemmere at læse.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Videre læsning
 
@@ -27,13 +27,13 @@ Et andet validt eksempel ville være en mixin til at definere størrelsen på et
 
 Når du står overfor et ukendt antal af argumenter i en mixin, så brug altid en `arglist` fremfor en liste. Tænk på `arglist` som den 8. skjulte, udokumenterede datatype fra Sass der anvendes implicit når et arbitrært antal af argumenter bliver videregivet til en mixin eller en funktion, hvis signatur indeholder `...`.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Når du bygger en mixin, der accepterer en håndfuld argumenter (3 eller flere), så tænk to gange før du forener dem som en liste eller et map, i den tro at det vil være nemmere end at videregive dem alle en for en.
 
 Sass er faktisk ret smart med mixins og funktions-deklarationer, så smart at du faktisk kan give den en liste eller et map som en arglist til en funktion/mixin, således at det bliver parset som en serie af argumenter.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Videre læsning
 
@@ -47,15 +47,15 @@ Desværre er Autoprefixer ikke altid en mulighed. Hvis du bruger enten [Bourbon]
 
 Hvis du ikke kan bruge Autoprefixer og hverken kan bruge Bourbon eller Compass, så da, og kun da, kan du have dine egne mixins til at præfikse CSS egenskaber. Men. Lad venligst være med at bygge en mixin per enhed, der manuelt udskriver hver udbyder.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Gør det på den smarte måde.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 Derfra vil brugen af denne mixin være meget ligetil:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Hav venligst for øje, at dette er en ringe løsning. For eksempel kan den ikke håndtere komplekse polyfills som dem der kræves til Flexbox. I den situation vil Autoprefixer være et langt bedre valg.
 

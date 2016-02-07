@@ -1,0 +1,11 @@
+/// Berechne die maximale Tiefe einer Map
+/// @param {Map} $map
+/// @return {Number} maximale Tiefe von `$map`
+@function map-depth($map)
+  $level: 1
+
+  @each $key, $value in $map
+    @if type-of($value) == "map"
+      $level: max(map-depth($value) + 1, $level)
+
+  @return $level

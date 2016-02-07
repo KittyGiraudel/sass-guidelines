@@ -177,7 +177,7 @@ Celem zapewnienia lepszej przejrzystości, plik główny powinien respektować p
 * bez nowej linii po ostatnim imporcie z danego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Istnieje także inne podejście do importowania plików cząstkowych (partials), które wydaje mi się równie poprawne. W tym przypadku z jednej strony plik główny zdaje się być bardziej czytelny, z drugiej zaś jego aktualizowanie może być nieco bardziej utrudnione. Zgodnie z tą metodą, plik główny powinien respektować poniższe założenia:
 
@@ -187,7 +187,7 @@ Istnieje także inne podejście do importowania plików cząstkowych (partials),
 * pusta linia po ostatnim imporcie dla danego folderu,
 * rozszerzenie pliku i poprzedzający w nazwie podkreślnik powinny być pominięte.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>Aby nie importować pojedynczo każdego z plików, powstało rozszerzenie do Ruby Sass zwane <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, które umożliwia wykorzystywanie tzw. glob patterns w <code>@import</code> Sassa, takich jak <code>@import "components/*"</code>.</p>
@@ -198,7 +198,7 @@ Istnieje także inne podejście do importowania plików cząstkowych (partials),
 
 Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry’ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Dalsze informacje
 

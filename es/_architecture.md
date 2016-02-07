@@ -171,7 +171,7 @@ Con el fin de mantener la legibilidad, el archivo principal debe respetar las si
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Hay otra forma de importar las partes de un proyecto que también que me parece válida. La parte positiva, es que hace que el archivo sea más legible. Pero por otro lado, las actualizaciones son un poco más dolorosas. De todos modos, voy a dejarte decidir qué es lo mejor, pues no importa demasiado. Para esta manera de hacer las cosas, el archivo principal debe respetar las siguientes pautas:
 
@@ -181,7 +181,7 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 * dejar una línea en blanco después del último archivo importado de una carpeta;
 * las extensiones de archivo y los guiones principales se omiten.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>Con el objetivo de no tener que importar cada archivo manualmente, hay una extensión de Ruby Sass llamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, con la que es posible usar patrones globales en Sass <code>@import</code> como <code>@import "components/*"</code>.</p>
@@ -192,7 +192,7 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 
 Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un *archivo de la verguenza*. Este archivo, titulado dramáticamente `_shame.scss`, se importará después de todos los otros archivos, al final de la hoja de estilo.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Más información
 

@@ -21,7 +21,7 @@ Warto także zaznaczyć, że w typowym projekcie Sassa, ostrzeżenia i błędy m
 
 Weźmy za przykład tą funkcję z projektu [Sass-MQ](https://github.com/sass-mq/sass-mq), która konwertuje wartości z `px` do `em`:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Jeśli podana wartość okaże się nie mieć jednostki, funkcja z góry zakłada, że chodzi tu o piksele. W tym miejscu, takie założenie może być ryzykowne i z tego też powodu użytkownik powinien być ostrzeżony, że oprogramowanie zrobiło coś, co może być uznane za nieoczekiwane.
 
@@ -31,4 +31,4 @@ Błędy, w odróżnieniu do ostrzeżeń, zatrzymują kompilator i zapobiegają j
 
 Dla przykładu, powiedzmy że budowana jest funkcja wydobywająca wartość z danej mapy. Można wówczas wysyłać błąd za każdym razem, gdy żądany klucz nie istnieje.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

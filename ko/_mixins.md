@@ -11,11 +11,11 @@
 
 믹스인은 아주 유용하며 아마 여러분도 사용하고 있을 겁니다. 대략적으로 이야기하자면, (우연이 아닌) 어떤 이유로 항상 같이 모습을 보이는 CSS 속성들의 그룹을 발견하게 되면, 그것들을 믹스인에 넣을 수 있습니다. 예를 들면 [Nicolas Gallagher의 마이크로 클리어픽스 핵](http://nicolasgallagher.com/micro-clearfix-hack/)은 (매개변수 없는) 믹스인 안에 들어갈 만합니다.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 다른 타당한 예로는 요소의 크기를 조절하는 믹스인이 있으며, `width`와 `height`를 동시에 정의합니다. 이는 코드 입력을 간단하게 만들 뿐만 아니라 쉽게 읽을 수 있도록 해 줍니다.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### 참고
 
@@ -27,13 +27,13 @@
 
 믹스인에 들어가는 매개변수의 개수를 알 수 없을 때는, 리스트 대신 항상 `arglist`를 사용하세요. `arglist`는 임의의 수의 매개변수를 믹스인이나 함수에 전달할 때 암묵적으로 사용되는 Sass의 여덟 번째 데이터 유형이라고 생각할 수 있으며, `...`이 그 특징입니다.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 몇 개의 매개변수(3개 혹은 그 이상)를 취하는 믹스인을 만들 때, 하나하나 넘겨주는 것보다 쉬울 거라는 생각으로 매개변수들을 리스트나 맵으로 병합하기 전에 다시 생각해 보세요.
 
 Sass는 사실 믹스인과 함수 선언에 재주가 있어서, 리스트나 맵을 함수/믹스인에 매개변수 리스트로 전달해 일련의 매개변수들로 읽히도록 할 수 있습니다.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### 참고
 
@@ -47,15 +47,15 @@ Sass는 사실 믹스인과 함수 선언에 재주가 있어서, 리스트나 �
 
 만약 Autoprefixer를 사용할 수 없고 Bourbon이나 Compass도 사용할 수 없다면, 오직 그런 경우에만, 여러분 스스로 CSS 속성에 프리픽스를 붙이는 믹스인을 만들어 사용할 수 있습니다. 하지만. 바라건대 속성마다 하나씩 믹스인을 만들어 각 벤더를 수동으로 출력하진 마세요.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 영리한 방식으로 하세요.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 이 믹스인을 사용하는 것은 아주 간단합니다:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 이것은 조악한 해결책이라는 점을 명심하세요. 예를 들면, Flexbox에 필요한 것과 같은 복잡한 폴리필은 처리하지 못합니다. 그런 면에서, Autoprefixer를 사용하는 것이 훨씬 나은 선택입니다.
 

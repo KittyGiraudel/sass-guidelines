@@ -18,12 +18,12 @@ E eu provavelmente esqueci-me de um monte de outros motivos também. Comentar le
 
 Idealmente, *qualquer* conjunto de regras de CSS deveria ser precedido por um comentário ao estilo de C, explicando o propósito do bloco de CSS. Este comentário também incluiria explicações numeradas referentes a partes específicas conjunto de regras. Por exemplo:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 Basicamente, tudo o que não é óbvio à primeira vista deverá ser comentado. Documentação excessiva é algo que não existe. Lembrem-se de que não conseguem *comentar em demasia*, por isso vão em frente e escrevam comentários para tudo que valer a pena.
 
 Ao comentar uma secção específica de Sass, usem comentários *in-line* em vez de blocos ao estilo de C. Isto fará o comentário invisível no *output*, mesmo no modo expandido durante desenvolvimento.
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Leitura adicional
 
@@ -33,7 +33,7 @@ Ao comentar uma secção específica de Sass, usem comentários *in-line* em vez
 
 Cada variável, função, *mixin* e *placeholder* que se destina a ser reutilizado em todo o código deverá ser documentado como parte da API global usando [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Três barras (<code>/</code>) necessárias.</p>
@@ -48,7 +48,7 @@ SassDoc tem duas funções principais:
 
 Aqui está um exemplo de um _mixin_ documentado extensivamente com SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Leitura adicional
 

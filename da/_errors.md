@@ -21,7 +21,7 @@ Der er masser af plads i et Sass projekt til advarsler og fejl. Basalt set forve
 
 Tag, for eksempel, denne funktion fra [Sass-MQ](https://github.com/sass-mq/sass-mq), der forsøger at konvertere en `px` til `em`:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Hvis værdien viser sig at være enhedsløs, så vil funktionen antage at værdien er ment som at skulle være udtrykt i pixels. Herved kan en antagelse være risikabel for brugeren og bør blive advaret om, at softwaren gjorde noget der kunne opfattes som uventet.
 
@@ -31,4 +31,4 @@ Fejl, modsat advarsler, forhindrer compileren i at fortsætte. De stopper basalt
 
 For eksempel, lad os sige at du er ved at bygge en getter funktion, der tilgår værdier fra et specifikt map. Du kunne give en fejl, hvis den anmodede nøgle ikke eksisterer i map'et.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

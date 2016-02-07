@@ -11,16 +11,16 @@ De qualquer forma, se alguma vez necessitarem delas, por favor respeitem as segu
 * Colocar a instrução `@else` na mesma linha que o fecho das chavetas anteriores (`}`);
 * Colocar sempre uma linha em branco após fechar as últimas chavetas (`}`), a menos que a linha seguinte seja uma chaveta de fecho (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 Quando se testa um valor falso, usem sempre a palavra-chave `not` ao invés de testar contra `false` ou `null`.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Quando se usa instruções condicionais dentro de uma função para devolver um resultado diferente baseado nalguma condição, certifiquem-se que a função ainda possui uma instrução `@return` fora de qualquer bloco condicional.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 Quando se utilizam expresões condicionais dentro de uma função para retornar um resultado diferente baseado numa condição, certifiquem-se que a função devolve sempre uma expressão `@return` fora de qualquer bloco condicional.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

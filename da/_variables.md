@@ -21,23 +21,23 @@ Dokumentationen taler om *overskygning af globale variabler*. Når en variabel, 
 
 Følgende kodestykke forklarer konceptet bag *overskygning af variabler*.
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## `!default` flaget
 
 Når du bygger et bibliotek, et framework, et gittersystem, eller ethvert andet stykke Sass der er tiltænkt at blive distribueret og anvendt af eksterne udviklere, bør alle konfigurations-variabler være defineret med `!default` flaget, så de kan blive overskrevet.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Takket være dette, så kan en udvikler definere hans egen `$baseline` variabel *før* han importerer dit bibliotek, uden at se hans værdi blive redefineret.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## `!global` flaget
 
 `!global` flaget bør kun anvendes når en global variabel fra et lokalt scope overskrives. Når en variabel på root-niveauet defineres, bør `!global` flaget udelades.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Flere variabler eller maps
 
@@ -45,4 +45,4 @@ Der er fordele ved at bruge maps frem for flere, særskilte variabler. Den prim�
 
 En anden fordel ved at bruge et map er evnen til at skabe en lille getter-funktion der giver en lettere tilgængelig API. For eksempel, overvej følgende Sass kode:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

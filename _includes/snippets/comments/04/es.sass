@@ -1,0 +1,31 @@
+/// Mixin que ayuda a definir tanto `width` como `height` simultáneamente.
+//
+// / @author Hugo Giraudel
+//
+// / @access public
+//
+// / @param {Length} $width - `width` del elemento
+// / @param {Length} $height ($width) - `height` del elemento
+//
+// / @example scss - Usage
+// /   .foo {
+// /     @include size(10em);
+// /   }
+//
+// /   .bar {
+// /     @include size(100%, 10em);
+// /   }
+//
+// / @example css - CSS output
+// /   .foo {
+// /     width: 10em;
+// /     height: 10em;
+// /   }
+//
+// /   .bar {
+// /     width: 100%;
+// /     height: 10em;
+// /   }
+=size($width, $height: $width)
+  width: $width
+  height: $height

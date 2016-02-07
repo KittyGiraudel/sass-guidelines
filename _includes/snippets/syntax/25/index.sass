@@ -1,0 +1,17 @@
+.foo, .foo-bar,
+.baz
+  $length: 42em
+
+  +ellipsis
+
+  +size($length)
+
+  display: block
+  overflow: hidden
+  margin: 0 auto
+
+  &:hover
+    color: red
+
+  +respond-to("small")
+    overflow: visible

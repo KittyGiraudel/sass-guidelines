@@ -1,0 +1,7 @@
+// Eigene Variable des Entwickler
+$baseline: 2em;
+
+// Deine Library welche `$baseline` deklariert
+@import 'your-library';
+
+// $baseline == 2em;

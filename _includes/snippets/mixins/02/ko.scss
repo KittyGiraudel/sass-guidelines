@@ -1,0 +1,8 @@
+/// 요소 크기를 설정하는 헬퍼
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

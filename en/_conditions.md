@@ -11,16 +11,16 @@ Anyway, if you ever find yourself in need of them, please respect the following 
 * `@else` statements on the same line as previous closing brace (`}`).
 * Always an empty new line after the last closing brace (`}`) unless the next line is a closing brace (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 When testing for a falsy value, always use the `not` keyword rather than testing against `false` or `null`.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Always put the variable part on the left side of the statement, and the (un)expected result on the right. Reversed conditional statements often are more difficult to read, especially to unexperienced developers.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

@@ -1,0 +1,26 @@
+%foo
+  content: 'foo'
+
+// Nope
+@media print
+  .bar
+    // Ça ne marche pas. Pire : c'est un crash.
+    @extend %foo
+
+// Yep
+@media print
+  .bar
+    @at-root (without: media)
+      @extend %foo
+
+// Yep
+%foo
+  content: 'foo'
+
+  &-print
+    @media print
+      content: 'foo print'
+
+@media print
+  .bar
+    @extend %foo-print

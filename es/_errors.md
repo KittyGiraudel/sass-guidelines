@@ -21,7 +21,7 @@ Ahora, hay un montón de sitio en un proyecto Sass para las advertencias y los e
 
 Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor en `px` a `em`:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Si el valor no tiene unidades, la función asume que el valor estará expresado en píxeles. En este punto, hacer este tipo de hipótesis puede ser arriesgado, por lo que el usuario debe recibir una advertencia de que el software ha hecho algo que podría considerarse inesperado.
 
@@ -31,4 +31,4 @@ Los errores, a diferencia de las advertencias, impiden al compilador ir más all
 
 Como ejemplo, digamos que construyes una función *getter* para acceder a los valores de un mapa específico. Se podría producir un error si la clave solicitada no existe en el mapa.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

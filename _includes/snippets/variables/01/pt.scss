@@ -1,0 +1,26 @@
+// Inicia uma variável global ao nível de raiz.
+// Neste caso, a flag `!global` é opcional.
+$variable: 'initial value' !global;
+
+// Cria um mixin que substitui a variável global anterior.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Cria uma variável local que se sobrepõe à global anterior.
+  $variable: 'local value';
+
+  // Inclui o mixin: substitui a variável global.
+  @include global-variable-overriding;
+
+  // Imprime o valor da variável.
+  // É o valor **local**, visto que se sobrepõe à global.
+  content: $variable;
+}
+
+// Imprime a variável noutro seletor que nada sobrepõe.
+// É a variável **global**, como esperado.
+.other-local-scope::before {
+  content: $variable;
+}

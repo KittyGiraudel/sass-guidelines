@@ -1,0 +1,10 @@
+/**
+ * Réparation du problème de spécificité sur la Nav.
+ *
+ * Quelqu’un a utilisé un ID dans le code du header (`#header a {}`) qui
+ * prend le pas sur les sélecteurs nav (`.site-nav a {}`). Utiliser !important
+ * pour l’écraser en attendant de trouver le temps de refactoriser le header.
+ */
+.site-nav a {
+  color: #BADA55 !important;
+}

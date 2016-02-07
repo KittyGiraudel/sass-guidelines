@@ -1,0 +1,10 @@
+/**
+ * Arreglo específico para la navegación
+ *
+ * Alguien utilizó un ID en el código del *header* (`#header a {}`) lo que sobreescribe a
+ * los selectores nav (`.site-nav a {}`). Usar !important para anularlo hasta que
+ * tenga tiempo de arreglarlo.
+ */
+.site-nav a {
+  color: #BADA55 !important;
+}

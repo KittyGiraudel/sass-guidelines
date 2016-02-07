@@ -1,0 +1,17 @@
+/// Hellt eine Farbe leicht auf
+/// @access public
+/// @param {Color} $color - zu färbende Farbe
+/// @param {Number} $percentage - Prozent von `$color` welcher die Farbe wiedergegeben werden soll
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Verdunkelt eine Farbe leicht
+/// @access public
+/// @param {Color} $color - zu verdunkelnde Farbe
+/// @param {Number} $percentage - Prozent von `$color` welcher die Farbe wiedergegeben werden soll
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

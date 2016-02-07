@@ -21,23 +21,23 @@ V dokumentaci se hovoří o *stínování globální proměnné*. Pokud deklaruj
 
 Následující útržka kódu vysvětluje koncept *stíňování proměnné*.
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## značka `!default`
 
 Pokud vytváříte knihovnu, framework, grid systém nebo jakoukoli jinou část Sassu, která se bude zveřenovat a používat externími vývojáři, všechny konfigurační proměnné by měly být označeny značkou `!default`, takže budou moci být přepsány.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Díky tomu může vývojář definovat vlastní `$baseline` proměnnou *před* importováním vaší knihovny a neuvidí svou proměnnou přepsanou.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## značka `!global`
 
 Značka `!global` by se měla používat pro přepisování globálních proměnných z lokálního scopu. Pokud definujete proměnnou v kořenové úrovni, značka `!global` by se však měla vynechat.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Více proměnných nebo mapy
 
@@ -45,4 +45,4 @@ Používání map spíše než více proměnných má několik výhod. Největš
 
 Další plus pro používání map je možnost vytvořit malou getter funkci pro přátelštější API. Zvažte například následující Sass kód:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

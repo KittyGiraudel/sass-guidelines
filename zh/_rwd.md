@@ -9,11 +9,11 @@
 
 与之相同的观点是，断点不应该用设备来命名，而应使用更通用的方式。特别是，现在有一些手机比平板更大，而有一些平板比电脑更大……
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 就此来说，任何不与特定设备关联而表达清晰的命名约定，都会因其广泛的通用性获得认可。
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>上面的示例使用了嵌套的 map，但这并不是强制或绝对的，你完全可以使用字符串来代替（比如 <code>'(min-width: 800px)'</code>）。</p>
@@ -27,7 +27,7 @@
 
 一旦用自己钟意的方式命名完断点，就需要有一种方式在实际的媒体查询中使用它。有太多方法可以做这件事，我自己非常乐意使用 `map-get()` 函数读取断点地图的方法。这套系统简洁而高效。
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>显然，这样管理断点相当简单，但当需要自定义或使用多个断点会爱到一定的制约。</p><p>如果你希望能更好管理断点，我可以建议你使用类似 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a> 或 <a href="https://github.com/eduardoboucas/include-media">Include-Media</a>，没有必要自己重新去造轮子。</p>
@@ -42,7 +42,7 @@
 
 就在不久之前，有一个关于应该在哪里书写媒体查询的热门讨论：媒体查询是应该与选择器写在一起（Sass 允许这种方式），还是要彻底地分离开？我想说我是**媒体查询紧贴选择器**方式的狂热捍卫者，并且认为这会和**组件**一样表现得很棒。
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 生成结果：
 

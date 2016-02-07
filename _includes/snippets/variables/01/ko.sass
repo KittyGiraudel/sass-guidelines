@@ -1,0 +1,22 @@
+// 루트 수준에 전역 변수를 초기화합니다.
+$variable: "initial value"
+
+// 전역 변수를 덮어쓰게 하는 믹스인을 만듭니다.
+=global-variable-overriding
+  $variable: "mixin value" !global
+
+.local-scope::before
+  // 전역 변수를 가리는 지역 변수를 만듭니다.
+  $variable: "local value"
+
+  // 믹스인 인클루드: 전역 변수를 덮어씁니다.
+  +global-variable-overriding
+
+  // 변수의 값을 출력합니다.
+  // 전역 변수를 가리기 때문에, **지역** 변수의 값이 출력됩니다.
+  content: $variable
+
+// 변수 가림이 없는 다른 선택자에서 변수를 출력합니다.
+// 예상대로, **전역** 변수의 값이 출력됩니다.
+.other-local-scope::before
+  content: $variable

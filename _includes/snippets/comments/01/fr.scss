@@ -1,0 +1,12 @@
+/**
+ * Helper class pour tronquer et ajouter une ellipse à une chaîne
+ * de caractères trop longue pour tenir sur une ligne
+ * 1. Empêche le retour automatique à la ligne,
+ * force l’affichage sur une seule ligne.
+ * 2. Ajoute une ellipse à la fin de la ligne si dépassement.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}

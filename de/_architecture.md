@@ -177,7 +177,7 @@ Um die Lesbarkeit einzuhalten, solltest du außerdem diese Richtlinien beachten:
 * eine neue Zeile nach dem letzten import aus einem Ordner;
 * Dateiendungen und Unterstriche am Anfang weglassen.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenfalls als richtig sehe. Auf der anderen Seite macht es das aktualisieren zwar schwieriger, aber da kannst du selbst entscheiden, welche Struktur dir am besten gefällt. Hier sollten diese Richtlinien beachtet werden:
 
@@ -187,7 +187,7 @@ Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenf
 * eine neue Zeile nach dem letzten import aus einem Ordner;
 * Dateiendungen und Unterstriche am Anfang weglassen.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>Damit nicht jede Datei einzeln und manuell importiert werden muss, gibt es die Ruby Sass Extension <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>. Dadurch ist es möglich, das sogenannte Glob-Pattern in Sass' <code>@import</code> durch <code>@import "components/*"</code> zu verwenden.</p>
@@ -198,7 +198,7 @@ Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenf
 
 Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) und [Chris Coyier](http://css-tricks.com), wo alle Deklarationen, Hacks und Dinge auf die wir nicht stolz sind, in einer *Shame-Datei* zusammengefasst sind. Die dramatisch benannte `_shame.scss` sollte nach jeder anderen Datei und ganz am Ende deines Stylesheets  importiert werden.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Weitere Informationen
 

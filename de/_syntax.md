@@ -12,7 +12,7 @@ Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](http://cssguid
 * ordentlich geschriebene, mehrzeilige CSS Regeln;
 * sinnvoller Gebrauch von Leerzeichen.
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 Wir werden uns hier noch nicht der Dateiorganisation widmen, das ist Thema in einer [anderen Kategorie](#architektur).
 
@@ -24,7 +24,7 @@ Ob du es glaubst oder nicht, Strings spielen eine große Rolle in CSS und Sass. 
 
 Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-8](http://de.wikipedia.org/wiki/UTF-8) durch die `@charset` Regel im [Main Stylesheet](#main-datei) zu erzwingen. Versicher dich, dass es die allererste Regel in deinem Stylesheet ist, und nichts davor kommt.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Anführungszeichen
 
@@ -39,7 +39,7 @@ Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen z
 * es unterstützt die generelle Lesbarkeit;
 * es gibt keinen wirklichen Grund es nicht zu tun.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 <div class="note">
 	<p>Laut CSS Spezifikation, muss die <code>@charset</code> Regel mit doppelten Anführungszeichen deklariert werden um <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">valide</a> zu sein. Wie auch immer, Sass kümmert sich bereits darum wenn es CSS kompiliert, deswegen wird es kaum eine Auswirkung auf das Endergebnis haben. Deshalb kannst du ohne Probleme bei einfachen Anführungszeichen bleiben, selbst bei <code>@charset</code>.</p>
@@ -49,7 +49,7 @@ Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen z
 
 Bestimmte CSS Werte wie `initial` oder `sans-serif` müssen nicht in Anführungszeichen stehen. Tatsächlich wird CSS unbemerkt versagen, wenn `font-family: 'sans-serif'` benutzt wird, da es einen Identifier erwartet und keinen String. Deshalb setzen wir diese Werte nicht in Anführungszeichen.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Deshalb können wir zwischen Strings die wie im vorigen Beispiel als CSS Werte (CSS Identifier) vorgesehen sind, und Strings die sich in Sass auf Datentypen wie beispielsweise Map Keys beziehen, unterscheiden.
 
@@ -59,13 +59,13 @@ Wir setzen ersteres nicht in Anführungszeichen, aber letzteres in einfache.
 
 Wenn ein String mehrere einfache Anführungszeichen beinhaltet, mag man drüber nachdenken diese in doppelte (`"`) zu setzen, um zu vermeiden zu viele Zeichen escapen zu müssen.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URLs
 
 URLs sollten aus denselben Gründen wie oben in Anführungszeichen gesetzt werden:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Weitere Informationen
 
@@ -80,7 +80,7 @@ In Sass sind Zahlen ein Datentyp der alles von einheitlosen Zahlen über Längen
 
 Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, anzeigen. Eine Null niemals hinten anhängen.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 <div class="note">
 	<p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code> 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
@@ -90,7 +90,7 @@ Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, 
 
 Wenn es um Längen geht, sollte eine `0` niemals eine weitere Einheit besitzen.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 <div class="note">
 	<p>Diese Praktik sollte nur bei Längen angewandt werden. Eine einheitenlose Null für Zeiteneinheiten wie <code>transition-delay</code> ist nicht erlaubt. Falls eine einheitenlose Null für eine Zeitdauer spezifiziert ist, sollte die Deklaration theoretischerweise als invalide erachtet und verworfen werden. Nicht alle Browser sind so strikt, aber manche. Langer Rede kurzer Sinn: Einheiten nur bei Längen weglassen.</p>
@@ -100,17 +100,17 @@ Der häufigste Fehler den ich mir bei Zahlen in Sass vorstellen kann, ist der Ge
 
 Um eine Einheit zu einer Zahl hinzuzufügen, musst du diese Zahl mit *einer Einheit* multiplizieren.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Einen *0 Wert der Einheit* hinzuzufügen funktioniert ebenfalls, aber ich empfehle eher die obrige Methode da es sonst etwas verwirrend ist. Wenn du versuchst eine Zahl in eine andere kompatible Einheit zu konvertieren, wird 0 hinzuzufügen nicht klappen.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 Am Ende kommt es wirklich darauf an was du erreichen möchtest. Versuch dich einfach daran zu erinnern, das eine Einheit als String hinzuzufügen kein guter Weg ist fortzufahren.
 
 Um die Einheit von einem Wert zu entfernen, musst du es um *eine Einheit seiner Art* teilen.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst.
 
@@ -118,7 +118,7 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 **Numerische Berechnungen auf höchser Ebene sollten immer in Klammern stehen**. Es erhöht nicht nur enorm die Lesbarkeit, sondern umgeht auch Edge Cases indem Sass gezwungen wird den Inhalt von Klammern zu erst zu berechnen.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Magische Zahlen
 
@@ -126,7 +126,7 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 **Magische Zahlen sind schlechter Programmierstil und sollten unter allen Umständen vermieden werden**. Falls du mal keine gute Erklärung finden kannst, weshalb eine Zahl funktioniert, dann füg ein ausführlichen Kommentar hinzu der erklärt wie du dahin gekommen bist und weshalb du denkst dass es funktioniert. Zuzugeben dass du nicht weißt weshalb etwas funktioniert, ist manchmal hilfreicher für den nächsten Entwickler als wenn er komplett von Anfang herausfinden muss was passiert.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Weitere Informationen
 
@@ -155,21 +155,21 @@ RGB hingegen hat immernoch den Vorteil direkt zu zeigen ob eine Farbe mehr in Ri
 
 Zuletzt, Hexadezimale Darstellung ist schwer lesbar für das menschliche Gedächtnis.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Wenn der HSL oder RGB-Farbaum verwendet wird, füge immer ein Leerzeichen nach dem Komma (`,`) hinzu, und keines zwischen Klammern und Inhalt (`(`, `)`).
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Farben und Variablen
 
 Wenn du eine Farbe mehr als einmal verwendest, speicher sie in einer sinnvoll benannten Variable.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 Nun kannst du die Variable überall verwenden wo du willst. Wenn du aber stark an ein Theme gebunden bist, würde ich gegen diese Nutzung von Variablen argumentieren. Stattdessen, speicher die Variable in einer weiteren wo der Name erklärt wie sie eingesetzt werden soll.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 Dadurch verhinderst du auch bei einem Themewechsel etwas wie `$sass-pink: blue` machen zu müssen.
 
@@ -185,7 +185,7 @@ Der Vorteil von `mix` ist weder die oben genannten Funktionen, sondern dass es s
 
 Wenn du nicht jedesmal die `mix` Funktion schreiben möchtest, kannst du dir auch zwei einfach zu verwendene Funktionen namens `tint` und `shade` (welche ebenfalls zu [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade) dazu gehören) schreiben, um genau dasselbe zu erreichen:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p>Die <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> Funktion ist entworfen worden, um Werte flüssiger zu skalieren indem sie berücksichtigt wie hell oder dunkel sie bereits sind. Sie sollte Ergebnisse liefern, die genauso gut wie <code>mix</code> sind, aber mit einer eindeutigeren Aufrufkonvention. Der Skalierfaktor ist dennoch nicht derselbe.</p>
@@ -211,11 +211,11 @@ Listen sollten folgende Guidelines beachten:
 * immer in Klammern;
 * ein abschließendes Komma wenn mehrzeilig, keines wenn einzeilig.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Wenn neue Inhalte zu einer Liste hinzugefügt werden sollen, dann verwende immer die vorgesehene API. Füg sie nicht manuell hinzu.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Weitere Informationen
 
@@ -239,7 +239,7 @@ Maps sollten folgendermaßen geschrieben werden:
 
 Illustration:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ###### Weitere Informationen
 
@@ -267,7 +267,7 @@ An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was je
 
 Illustration:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 Zusätzlich zu den CSS bezogenen Guidelines, richtet sich unsere Aufmerksamkeit auf:
 
@@ -279,7 +279,7 @@ Zusätzlich zu den CSS bezogenen Guidelines, richtet sich unsere Aufmerksamkeit 
 
 Illustration:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Weitere Informationen
 
@@ -294,15 +294,15 @@ Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander g
 
 Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen vor dem Display-Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 Auf der anderen Seite macht die Sortierung nach Typ perfekt Sinn. Jede font bezogene Deklaration ist gesammelt, `top` und `bottom` sind beisammen und ein Regelwerk zu lesen fühlt sich einfach an wie eine Kurzgeschichte. Aber solange du dich an Konventionen wie [Idiomatic CSS](https://github.com/necolas/idiomatic-css) hälst, gibt es eine Menge Spielraum für Interpretationen wie man etwas machen soll. Wo gehört `white-space` hin: font oder display? Wozu gehört `overflow` nun wirklich? Was ist die Reihenfolge innerhalb einer Gruppe (es könnte alphabetisch sein, welch Ironie)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Es gibt noch einen weiteren Ansatz bei der Sortierung nach Typ, genannt [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), welcher ebenfalls ziemlich bekannt zu sein scheint. Grundsätzlich richtet sich Concentric CSS an das box-model um die Reihenfolge zu definieren: von außen nach innen.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 Ich kann mich selber nicht entscheiden. Eine [kürzliche Umfrage auf CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) kam zum Schluss dass über 45% der Entwickler ihre Deklarationen nach Typ sortieren, wobei nur 14% die alphabetische Reihenfolge verwenden. Gleichzeitig sortieren 39% vollkommen zufällig, mich selbst eingeschlossen.
 
@@ -327,7 +327,7 @@ Ein bestimmtes Feature von Sass, welches von vielen Entwickler übermäßig miss
 
 Zum Beispiel, folgende Sass Verschachtelung:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 ... wird dieses CSS generieren:
 
@@ -335,7 +335,7 @@ Zum Beispiel, folgende Sass Verschachtelung:
 
 Bei den gleichen Zeilen, ist es seit Sass 3.3 möglich die Selektorreferenz (`&`) zu verwenden um erweiterte Selektoren zu erzeugen. Zum Beispiel:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 ... wird dieses CSS generieren:
 
@@ -357,25 +357,25 @@ Um dem ganzen also Vorzubeugen, **vermeiden wir Selektoren zu verschachteln so v
 
 Für Anfänger ist es erlaubt und sogar empfohlen Pseudoklassen und Pseudoelemente innerhalb des Selektors zu verschachteln.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 Pseudoklassen sowie Pseudoelemente zu verschachteln macht nicht nur Sinn (da es mit nah verwandten Selektoren zu tun hat), es hilft auch alles einer Komponente an einem Platz zu halten.
 
 Es ist ebenfalls absolut in Ordnung, Komponentenbezogene Statusklassen wie `.is-active` innerhalb des Selektors der Komponenten anzuordnen, einfach um es ordentlich zu halten.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 Zu guter Letzt, wenn ein Element gestaltet werden muss weil es innerhalb eines weiteren Elements angeordnet ist, ist es ebenso in Ordnung diese zu verschachteln um alles was diese Komponente betrifft am selben Platz zu haben.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Wenn man mit unerfahrenden Entwicklern arbeitet, mögen Selektoren wie `.no-opacity &` ein bisschen komisch aussehen. Um jeder Verwirrung vorzubeugen, kannst du ein wirklich kurzes Mixin schreiben welches die Syntax in eine explizite API umwandelt.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Wenn wir also unser voriges Beispiel umschreiben, würde es wie folgt aussehen:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Wie mit allem, ist dieser spezifische Fall irgendwie irrelevant, denn wichtig ist Konsistenz. Wenn du dich also absolut okay mit Verschachtelung von Selektoren fühlst, dann mach es so. Versicher dich nur das auch dein ganzes Team damit einverstanden ist.
 

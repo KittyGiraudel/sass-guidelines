@@ -177,7 +177,7 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 * μια κενή γραμμή μετά απο το τελευταίο import ενός φακέλου·
 * οι επεκτάσεις των αρχείων και οι χαρακτήρες κάτω παύλας που προηγούνται πρέπει να παραλειφθούν.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Υπάρχει ακόμα ένας τρόπος για να κάνεις import partial αρχεία τον οποίο θεωρώ έγκυρο. Στη θετική πλευρά, κάνει τα αρχεία ευανάγνωστα. Απο την άλλη, τα κάνει δυσκολότερα στην ενημέρωση. Εν πάση περιπτώσει, θα αφήσω εσάς να αποφασίσετε ποια είναι η καλύτερη, δεν έχει πολύ σημασία. Για αυτόν τον τρόπο, το αρχείο main θα πρέπει να τηρεί τις ακόλουθες κατευθυντήριες γραμμές:
 
@@ -187,7 +187,7 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 * μια κενή γραμμή μετά το τελευταίο import ενός φακέλου·
 * οι επεκτάσεις των αρχείων και οι χαρακτήρες κάτω παύλας που προηγούνται πρέπει να παραλειφθούν.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>Προκειμένου να μην χρειάζεται να κάνεις import κάθε αρχείο χειροκίνητα, υπάρχει ένα extension για την Ruby Sass το οποίο ονομάζεται <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, καθιστώντας δυνατή την χρήση glob patterns στην Sass <code>@import</code> όπως <code>@import "components/\*"</code>.</p>
@@ -198,7 +198,7 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 
 Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλή απο τους [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) και [Chris Coyier](http://css-tricks.com) that το οποίο συνηστά να βάζεις όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο αρχείο *shame*. Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Περαιτέρω ανάγνωση
 

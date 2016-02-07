@@ -1,0 +1,15 @@
+/// Φώτισε ελαφρά ένα χρώμα
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα επεξεργαστούμε
+/// @param {Number} $percentage - το ποσοστό του `$color` το οποίο θα περιέχεται μέσα στο χρώμα που θα επιστραφεί
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+/// Σκούρυνε ελαφρά ένα χρώμα
+/// @access public
+/// @param {Color} $color - χρώμα το οποίο θα σκουρύνει
+/// @param {Number} $percentage - το ποσοστό του `$color` το οποίο θα περιέχεται μέσα στο χρώμα που θα επιστραφεί
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)

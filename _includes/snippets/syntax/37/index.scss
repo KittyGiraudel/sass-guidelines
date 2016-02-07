@@ -1,0 +1,7 @@
+.foo {
+  // …
+
+  @include when-inside('.no-opacity') {
+    display: none;
+  }
+}

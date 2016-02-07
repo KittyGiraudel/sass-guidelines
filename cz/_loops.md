@@ -9,11 +9,11 @@ Každopádně, přítomnost cyklů obvykle implikuje středně složitou logiku,
 
 Cyklus `@each` je definitivně nejpoužívanější z Sass cyklů. Poskytuje čisté API pro procházení seznamu nebo mapy.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Pokud procházíte mapu, vždy používejte `$key` a `$value` jako jména proměnných, abyste zachovali konzistentnost.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 Také se ujistěte, že dodržujete tyto pokyny, pro zachování čitelnosti:
 
@@ -24,7 +24,7 @@ Také se ujistěte, že dodržujete tyto pokyny, pro zachování čitelnosti:
 
 Cyklus `@for` může být užitečný, pokud kombinujete CSS pseudo třídu `:nth-*`. Kromě tohoto případu preferujte spíše cyklus `@each`, pokud *musíte* něco procházet.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Vždy používejte `$i` jako jméno proměnné, abyste se drželi obecné konvence, tedy pokud nemáte jiný dobrý důvod proč tak neučinit. Nikdy nepoužívejte klíčové slovo `to`, vždy používejte `through`. Mnoho vývojářů ani neví, že Sass má tuto možnost a používání může vést k záměně.
 

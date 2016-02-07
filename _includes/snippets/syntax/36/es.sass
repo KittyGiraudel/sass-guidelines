@@ -1,0 +1,5 @@
+/// Mixin para porporcionar un API sencillo al selector anidado
+/// @param {String} $selector - Selector
+=when-inside($selector)
+  #{$selector} &
+    @content

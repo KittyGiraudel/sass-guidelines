@@ -13,7 +13,7 @@ Los *placeholders* han sido omitidos deliberadamente de esta lista ya que pueden
 
 En cuanto a las variables, las funciones y los *mixins*, utilizaremos algo muy *CSSable*: **minúsculas-delimitadas-con-guiones** y especialmente, nombres que tengan un significado claro.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Más información
 
@@ -25,7 +25,7 @@ Si quieres ser un desarrollador de *frameworks* o de librerías, puede que te en
 
 Como con muchos lenguajes, sugiero que se utilice la opción todo-mayúsculas cuando se trata de constantes. No solo es una convención muy antigua, sino que también contrasta con las variables minúsculas separadas con guión.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Más información
 
@@ -37,7 +37,7 @@ Si tienes la intención de distribuir tu código Sass, como por ejemplo, en el c
 
 Por ejemplo, si trabajas en un proyecto llamado *Sassy Unicorn* que será utilizado por los desarrolladores de todo el mundo (quién no lo haría, ¿eh?), podrías considerar utilizar `su-` como nombre de espacio. Es lo suficientemente específico para evitar colisiones de nombres y lo suficientemente corto como para no ser un lío a la hora de escribirlo.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Ten en cuenta que los espacios de nombres automáticos son sin duda un objetivo de diseño para <code>@import</code> en la nueva versión de Sass 4.0. Cuanto más se aproxima la solución, se volverá cada vez menos útil hacerlo de manera manual; eventualmente, las librerías nombradas manualmente pueden ser más difíciles de utilizar.</p>

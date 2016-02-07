@@ -18,13 +18,13 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 
 理想上，**任何** CSS 规则集之前都应该使用 C 风格注释来解释 CSS 块的核心。这个注释也要记录对规则集特定部分编号的解释。比如：
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 基本上，任何不能明显看出意义的地方都应该注释，但不要随处注释。记住不要**注释太多**，掌握尺度让每一处注释都有意义。
 
 当注释 Sass 的一个特定部分时，应该使用 Sass 单行注释而不是 C 风格的注释块。这么做将不会输出注释，即使是在开发时的扩展模式。
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### 扩展阅读
 
@@ -34,7 +34,7 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 
 每一个旨在代码库中复用的变量、函数、混合宏和占位符，都应该使用 [SassDoc](http://sassdoc.com) 记录下来作为全部 API 的一部分。
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>需要三个反斜杠(<code>/</code>)</p>
@@ -49,7 +49,7 @@ SassDoc 主要有两个作用：
 
 这里有一个深入整合 SassDoc 生成文档的例子：
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### 扩展阅读
 

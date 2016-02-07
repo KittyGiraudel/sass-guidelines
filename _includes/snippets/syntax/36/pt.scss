@@ -1,0 +1,7 @@
+/// Mixin auxiliar que fornece uma API simples para aninhar selectores
+/// @param {String} $selector - Selector
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}

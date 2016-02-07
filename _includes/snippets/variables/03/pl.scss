@@ -1,0 +1,7 @@
+// Zmienna dewelopera
+$baseline: 2em;
+
+// `$baseline` deklarowana przez Twoją bibliotekę
+@import 'your-library';
+
+// $baseline == 2em;

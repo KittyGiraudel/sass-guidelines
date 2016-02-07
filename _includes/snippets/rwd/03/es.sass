@@ -1,0 +1,14 @@
+/// Gestor Responsive.
+/// @access public
+/// @param {String} $breakpoint - Punto de ruptura
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
+      @content
+  @else
+    @error "No se ha encontrado un valor para `#{$breakpoint}`. " + "Por favor, asegúrate que está definido en el mapa `$breakpoints`."

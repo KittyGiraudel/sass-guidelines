@@ -11,11 +11,11 @@ Czuję jednak potrzebę by ostrzec przed nadużywaniem mocy mixinów. Należy mi
 
 Mając to na uwadze, mixiny są niezwykle przydatne i, bez wątpienia, powinno się ich używać. Główną zasadą jest w tym przypadku to, że grupa własności CSS występująca razem z jakiegoś powodu (nie z przypadku) może zostać umieszczona w mixinie. [Micro-clearfix hack od Nicolasa Gallaghera](http://nicolasgallagher.com/micro-clearfix-hack/), na przykład, zasługuje na umieszczenie go w (bezargumentowym) mixinie.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Innym słusznym przykładem może być mixin do określenia rozmiarów elementu, definiujący zarówno `width` i `height`. Nie tylko sprawi on, że kod będzie łatwiejszy do pisania, ale i przyjemniejszy do czytania.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Dalsze informacje
 
@@ -28,19 +28,19 @@ Czasami mixiny używane są jedynie w celu uniknięcia powtarzania tych samych g
 
 W tych wypadkach, wywołując mixin możemy spokojnie pomijać nawiasy. Słowo kluczowe `@include` (albo `+` dla wciętej składni) w wystarczającym stopniu sygnalizuje, iż mamy do czynienia z wywołaniem mixinu; nie ma więc tu potrzeby dla dodatkowych nawiasów.
 
-{% include snippets/mixins/08/index.html %}
+{% include snippet.html path="mixins/08" file="index" %}
 
 ## Listy argumentów
 
 Mając do czynienia z nieokreśloną liczbą argumentów w mixinie, należy używać `arglist`, zamiast listy. `arglist` może być traktowany jako ósmy typ danych w Sassie, który podawany jest jako dowolna liczba argumentów dla mixinu albo funkcji, której sygnatura zawiera `...`.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Budując mixin, który akceptuje wiele argumentów (3 lub więcej), należy dwa razy pomyśleć zanim wprost poda się je jako listę albo mapę myśląc, że tak będzie łatwiej.
 
 Sass jest dosyć sprytny jeśli chodzi o deklaracje mixinów i funkcji, do tego stopnia że pozwala on na podawanie listy lub mapy jako `arglist` do funkcji/mixinu, które tym samym zostają przeanalizowane jako argumenty.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Dalsze informacje
 
@@ -54,15 +54,15 @@ Niestety, zdarzają się przypadki w których z Autoprefixera skorzystać nie mo
 
 Jeśli jednak nie można skorzystać ani z Autoprefixera, ani z Bourbona czy Compassu, wtedy i tylko wtedy, można tworzyć własne mixiny dla prefixowania własności CSSa. Proszę jednak by nie tworzyć osobnych mixinów dla każdej z własności.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Zróbmy to mądrzej.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 Użycie takiego mixinu powinno być dosyć jasne:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Proszę mieć jednak na uwadze, że jest to dosyć kiepskie rozwiązanie. Na przykład, nie rozwiąże to problemu bardziej skomplikowanych składni, takich jak ta wymagana dla Flexboxa. W tych przypadkach, użycie Autoprefixera było by o wiele lepszą opcją.
 

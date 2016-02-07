@@ -21,7 +21,7 @@
 
 使用 [Sass-MQ](https://github.com/sass-mq/sass-mq) 中的这个函数可以转换 `px` 为 `em`，展示如下：
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 如果碰巧值是无单位的，这个函数就会默认单位是像素。就这一点而论，一个假设可能会带来风险，所以软件应该能够预测风险并提醒使用者。
 
@@ -31,4 +31,4 @@
 
 举个例子，假设你创建了一个 getter 函数来从特定 map 中获取值。如果想要获取的值并不在 map 中，就可能会抛出错误。
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

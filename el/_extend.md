@@ -15,7 +15,7 @@
 
 Για να κληρονομήσεις styles, χρησιμοποίησε το `@extend` μόνο αν ο εκτεινόμενος `.class` ή `%placeholder` selector _είναι ένα είδος_ επεκταμένου selector. Για παράδειγμα, ένα `.error` είναι ένα είδος `.warning`, οπότε το `.error` μπορεί να κάνει `@extend .warning`.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 Υπάρχουν πολλά σενάρια στα οποία η επέκταση βοηθάει και αξίζει τον κόπο. Να θυμάσαι πάντα τους εξής κανόνες για να μπορείς να κάνεις `@extend` με προσοχή:
 
@@ -33,7 +33,7 @@
 
 Να επεκτείνεις selectors μόνο μέσα στο ίδιο media scope (`@media` directive). Σκέψου το media query ως άλλο ένα εμπόδιο.
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 Για να συνοψίσουμε, προτείνω την χρήση του `@extend` μόνο για την διατήρηση των σχέσεων εντός κάποιων selectors. Αν δύο selectors έχουν παρόμοια χαρακτηριστικά, τότε είναι η ιδανική περίπτωση για το `@extend`. Αν δεν έχουν κάποια σχέση αλλά μοιράζονται μερικά rules, ένα `@mixin` θα ταίριαζε καλύτερα.
 

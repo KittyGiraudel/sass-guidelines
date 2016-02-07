@@ -1,0 +1,14 @@
+/// 맵의 최대 깊이를 계산한다
+/// @param {Map} $map
+/// @return {Number} `$map`의 최대 깊이
+@function map-depth($map) {
+  $level: 1;
+
+  @each $key, $value in $map {
+    @if type-of($value) == 'map' {
+      $level: max(map-depth($value) + 1, $level);
+    }
+  }
+
+  @return $level;
+}

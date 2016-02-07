@@ -18,13 +18,13 @@ CSS는 간단해질 수도 있지만, 그래도 주석의 여지가 많이 있�
 
 이상적으로, *어느 것이든* CSS 규칙은 CSS 블록의 요점을 설명하는 C 스타일 주석을 앞세워야 합니다. 이 주석은 규칙의 특정 부분에 대해 번호를 붙인 설명도 제공합니다. 예를 들면:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 기본적으로 첫눈에 명확하지 않은 것에는 전부 주석이 달려야 합니다. 너무 과한 문서화 같은 것은 없습니다. *주석을 너무 많이* 다는 것은 불가능하다는 것을 기억하세요. 그러니 불길로 뛰어들어 가치가 있는 것에는 모두 주석을 붙이세요.
 
 Sass에만 한정된 부분에 주석을 달 때는, C 스타일 블록 대신 Sass 인라인 주석을 사용하세요. 이것은 주석이 산출물에서는 물론이고, 개발하는 동안의 확장 모드에서도 보이지 않게 해 줍니다.
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### 참고
 
@@ -34,7 +34,7 @@ Sass에만 한정된 부분에 주석을 달 때는, C 스타일 블록 대신 S
 
 코드베이스 전역에서 사용되도록 만들어진 모든 변수, 함수, 믹스인, 플레이스홀더는 [SassDoc](http://sassdoc.com)을 이용하여 전역 API의 일부로서 문서화되어야 합니다.
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>슬래시(<code>/</code>) 세 개가 필수입니다.</p>
@@ -49,7 +49,7 @@ SassDoc은 두 가지 중요한 역할을 합니다:
 
 SassDoc으로 문서화된 믹스인의 예시입니다:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### 참고
 

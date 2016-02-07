@@ -1,0 +1,8 @@
+/**
+ * 1. Magische Zahl. Das ist der niedrigste Wert den ich finden konnte, 
+ * um die Höhe von `.foo` zu seinem Elternelement auszurichten. 
+ * Idealerweise sollten wir das beheben.
+ */
+.foo {
+  top: 0.327em; /* 1 */
+}

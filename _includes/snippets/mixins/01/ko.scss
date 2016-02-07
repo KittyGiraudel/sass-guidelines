@@ -1,0 +1,10 @@
+/// 내부 float을 해제하는 헬퍼
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

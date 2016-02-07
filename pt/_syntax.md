@@ -12,7 +12,7 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
 * regras de CSS multi-linha devidamente escritas
 * uso significativo de espaço em branco
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos esse tópico na [secção de arquitetura](#arquitetura).
 
@@ -24,7 +24,7 @@ Acreditem ou não, strings desempenham um papel muito importante tanto em ecosis
 
 Para evitar algum eventual problema com codificação de carateres, é recomendado forçar o modo [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) na principal [folhas de estilo](#ficheiro-principal), utilizando a directiva `@charset`. Certifiquem-se que é o primeiro elemento da folhas de estilo e que não existe mais nenhum caráter antes deste.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Aspas
 
@@ -39,13 +39,13 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 * ajuda em geral à leitura;
 * não existe uma razão válida para não as usar;
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 ### Strings como valores CSS
 
 Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Desta forma, podemos fazer uma distinção entre strings que pretendemos utilizar como valores de CSS (identificadores) como no exemplo anterior, e strings quando nos referimos aos tipos de dados em Sass, como por exemplo índices de mapas.
 
@@ -55,13 +55,13 @@ Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simpl
 
 Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URLs
 
 URLs devem ser envolvidos em aspas:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Leitura adicional
 
@@ -76,29 +76,29 @@ Em Sass, um número representa um tipo de dados que inclui tudo desde números s
 
 Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1). Nunca se deve mostrar zeros no final.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se apenas que adicionar o número-unidade como string não é uma boa prática.
 
 Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
 
@@ -106,7 +106,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 **Cálculos numéricos de maior prioridade devem sempre estar presentes entre parênteses**. Isto não só melhora significativamente a sua leitura, como evita que aconteçam alguns casos extremos como forçar Sass a avaliar e computar o conteúdo entre parênteses.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Números mágicos
 
@@ -114,7 +114,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Leitura adicional
 
@@ -138,21 +138,21 @@ De maneira a tornar cores em Sass o mais simples possível, o meu conselho é qu
 
 Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>carece de fontes</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Quando usarem a anotação HSL ou RGB, adicionem sempre um espaço simples depois da vírgula (`,`) e removam os espaços entre os parênteses (`(`, `)`) e o conteúdo.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Cores e variáveis
 
 No caso de utilizarmos uma cor mais que uma vez, será provavelmente útil guardá-la numa variável cujo nome diga algo sobre essa cor.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso estiver demasiado preso a um tema, eu não recomendaria utilizar a variável desta forma. Em vez disso, devemos guardá-la numa variável cujo nome explique como deve ser utilizada.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`.
 
@@ -168,7 +168,7 @@ A vantagem de usar a `mix` em vez das primeiras funções mencionadas é que est
 
 Se não quiserem escrever a função `mix` todas as vezes, podem criar duas funções fáceis-de-usar `tint` e `shade` (que já fazem parte de [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) que fazem essencialmente o mesmo:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p>A função <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> permite efetuar um escalamento das propriedades mais fluído tendo em conta o quão alto ou baixo o seu valor já é. Deverá oferecer resultados que são tão agradáveis como o `mix` mas com uma convenção mais clara. O fator de escala não é exactamente o mesmo, no entanto.</p>
@@ -194,11 +194,11 @@ As listas devem respeitar as seguintes orientações:
 * sempre envolvivas em parêntesis;
 * finalizadas com um ponto final em multi-linha.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar adicionar novos itens manualmente.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Leitura adicional
 
@@ -222,17 +222,17 @@ Mapas devem ser escritos da seguinte forma:
 
 Ilustração:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ### Debugging num mapa Sass
 
 Se alguma vez estiveres perdido e a pensar que diabo de magia negra está a acontecer num mapa Sass, não te preocupes porque existe caminho para a salvação.
 
-{% include snippets/syntax/22/index.html %}
+{% include snippet.html path="syntax/22" file="index" %}
 
 Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin vai mostrá-la automaticamente.
 
-{% include snippets/syntax/23/index.html %}
+{% include snippet.html path="syntax/23" %}
 
 ###### Leitura adicional
 
@@ -260,7 +260,7 @@ A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas
 
 Ilustração:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
@@ -272,7 +272,7 @@ Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
 Ilustração:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Leitura adicional
 
@@ -287,15 +287,15 @@ Não me ocorrem muitos tópicos em que as opiniões sejam tão divididas como s�
 
 Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética é universal (pelo menos em todos os idiomas que usam o alfabeto latino), portanto não existe dúvida quanto a colocar uma propriedade antes de outra. No entanto, parece-me bastante estranho ver propriedades como `bottom` e `top` separadas uma da outra. Por que motivo apareceriam animações antes do tipo `display`? Há imensas peculiaridades na ordenação alfabética.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 Por outro lado, ordenar propriedades por tipo faz todo o sentido. Todas as declarações relacionadas com tipos de letra estão próximas, `top` e `bottom` estão juntas e ler um conjunto de regras quase se assemelha a ler uma pequena história. Mas a não ser que te mantenhas fiel a algumas convenções, como [Idiomatic CSS](https://github.com/necolas/idiomatic-css), há imenso espaço para interpretação própria nesta forma de fazer as coisas. Onde ficaria `white-space`: `font` ou `display`? Onde é que `overflow` pertence exactamente? Qual é a ordem das declarações dentro de um grupo (poderia ser ordem alfabética; ah, a ironia)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Há ainda outro tipo de ordenação interessante chamado [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), que parece ser também bastante popular. Basicamente, o Concentric CSS baseia-se no box-model para definir uma ordem: começa no exterior, move-se para o interior.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) apurou que mais de 45% dos programadores ordenam as suas declarações por tipo, contra 14% que o fazem alfabeticamente. Há ainda 39% que o fazem de uma forma totalmente aleatória, incluindo eu próprio.
 
@@ -324,7 +324,7 @@ Uma das características do Sass que está a ser extremamente mal usada por muit
 
 Por exemplo, o seguinte código aninhado em Sass:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … vai gerar este CSS:
 
@@ -332,7 +332,7 @@ Por exemplo, o seguinte código aninhado em Sass:
 
 Do mesmo modo, desde o Sass 3.3 que é possível usar uma referência ao seletor atual (`&`) para gerar seletores avançados. Por exemplo:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … vai gerar este CSS:
 
@@ -354,25 +354,25 @@ Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível
 
 Para começar, é permitido e até aconselhado aninhar pseudo-classes e pseudo-elementos no seletor inicial.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 Aninhar seletores em pseudo-classes e pseudo-elementos não só faz sentido (porque lida com seletores intimamente ligados), mas também ajuda a manter tudo relacionado com um determinado componente num único sítio.
 
 Além disso, quando se usam classes de estado independentes de um componente, como `.is-active`, é perfeitamente aceitável aninhá-las sob o selctor do componente, de modo a manter tudo limpo.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 Por fim, quando se estiliza um elemento só porque ele está dentro de outro elemento específico, é também aceitável aninhá-lo, de modo a manter tudo sobre um determinado componente no mesmo sítio.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Quando se trabalha com programadores inexperientes, um seletor como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Reescrevendo o nosso exemplo anterior, ficaria então assim:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com seletores aninhados, então usa seletores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 

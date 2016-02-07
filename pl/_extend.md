@@ -15,7 +15,7 @@ Zawsze staraj się definiować powiązania za pomocą [placeholderów](http://ww
 
 Dla dziedziczenia stylów używaj `@extend` wyłącznie wtedy, gdy rozwijający selektor `.class` czy `%placeholder` jest _tego rodzaju_, co rozwijany selektor. Na przykład, `.error` jest podobny do `.warning`, więc `.error` może wykorzystywać `@extend .warning`.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 Istnieje wiele sytuacji, w których rozwijanie selektorów może być pomocne i warte uwagi. Należy mieć jednak w pamięci poniższe zasady:
 
@@ -33,7 +33,7 @@ Istnieje wiele sytuacji, w których rozwijanie selektorów może być pomocne i 
 
 Selektory należy rozwijać jedynie w ramach tego samego scope'u media (dyrektywy `@media`). Traktujmy tym samym media query jako kolejne ograniczenie dla extendów.
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 Podsumowując, zalecam wykorzystywanie dyrektywy `@extend` jedynie dla utrzymywania powiązań pomiędzy selektorami. Jeśli dwa selektory są w sposób charakterystyczny podobne do siebie, jest to idealny przykład dla wykorzystania `@extend`. Jeśli nie są one ze sobą szczególnie powiązane lecz jedynie dzielą pewne reguły, `@mixin` może być lepszym rozwiązaniem.
 

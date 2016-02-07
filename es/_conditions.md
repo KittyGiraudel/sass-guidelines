@@ -11,16 +11,16 @@ De todas formas, si algún día te encuentras con la necesidad de utilizarlas, p
 * La sentencia `@else` debe ir en la misma línea que la llave de cierre anterior (`}`).
 * Deja siempre una línea en blanco después de la última llave de cierre (`}`) a menos que la siguiente línea tenga otra llave de cierre (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 Cuando se evalúa un valor booleano falso, utiliza siempre la palabra clave `not` en lugar de evaluar con `falso` o `null`
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Pon siempre la parte de la variable en la parte izquierda de la sentencia y el (in)esperado resultado en la derecha. Las sentencias condicionales invertidas son con frecuencia, más difíciles de leer, especialmente para desarrolladores inexpertos.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 Cuando se utilizan sentencias condicionales dentro de una función para devolver un resultado diferente basado en alguna condición, siempre debes de asegurarte que la función tiene una declaracón `@return` fuera de cualquier bloque condicional.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

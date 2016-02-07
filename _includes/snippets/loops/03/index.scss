@@ -1,0 +1,5 @@
+@for $i from 1 through 10 {
+  .foo:nth-of-type(#{$i}) {
+    border-color: hsl($i * 36, 50%, 50%);
+  }
+}

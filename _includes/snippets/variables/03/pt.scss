@@ -1,0 +1,7 @@
+// Variável definida pelo programador
+$baseline: 2em;
+
+// A declaração de `$baseline` da vossa biblioteca
+@import 'your-library';
+
+// $baseline == 2em;

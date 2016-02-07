@@ -13,7 +13,7 @@ Sachant cela, il est assez évident de voir comment le fait d’étendre des sé
 
 Essayez toujours de définir des relations via les [placeholders](http://www.sitepoint.com/sass-reference/placeholders/), plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 Il y a de nombreux scénarios où étendre des sélecteurs peut être pratique et utile. Gardez toujours en tête ces règles afin de pouvoir utiliser `@extend` sans crainte :
 
@@ -30,7 +30,7 @@ Il y a de nombreux scénarios où étendre des sélecteurs peut être pratique e
 
 Vous ne devez étendre que des sélecteurs faisant partie du même cadre de média (directive `@media`). Considérez les media queries comme une autre contrainte.
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 Pour résumer, il est recommandé d’utiliser `@extend` exclusivement pour maintenir des relations entre les sélecteurs. Si deux sélecteurs ont des caractéristiques similaires, il y a là un cas d’utilisation typique pour `@extend`. S’ils n’ont rien à voir mais partagent quelques déclarations, un `@mixin` est probablement plus approprié.
 

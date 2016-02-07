@@ -21,7 +21,7 @@ Agora, há muito espaço num projecto de Sass para avisos e erros. Basicamente, 
 
 Considerem esta função de [Sass-MQ](https://github.com/sass-mq/sass-mq) a tentar converter um valor em `px` para `em`, por exemplo:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Se o valor fornecido não possuir unidade, a função assume que o valor está expresso em píxeis. Neste ponto, uma suposição poderá ser arriscada, pelo que o utilizador deverá ser avisado que o software fez algo que poderá ser considerado inesperado.
 
@@ -31,4 +31,4 @@ Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicame
 
 Como exemplo, digamos que querem construir uma função *getter* para aceder a valores de um mapa específico. Poderiam lançar um erro se a chave pedida não existir no mapa.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

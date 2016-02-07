@@ -1,0 +1,10 @@
+/**
+ * 너무 길어서 한 줄에 안 들어가는 문자열을 자르고 말줄임표를 붙이는 헬퍼 클래스.
+ * 1. 줄바꿈을 방지하고, 한 줄로 유지되도록 강제한다.
+ * 2. 줄 끝에 말줄임표를 붙인다.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}

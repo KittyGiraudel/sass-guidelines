@@ -12,7 +12,7 @@ Tady je zhruba to, co chceme (beze studu inspirováno [CSS Guidelines](http://cs
 * správně psané víceřádkové CSS pravidla;
 * smysluplné použití mezer.
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 V této části nebudeme řešit organizaci souboru. Je to předmětem [jiné sekce](#architektura).
 
@@ -24,7 +24,7 @@ Věřte nebo ne, řetězce hrají docela důležitou roli jak v CSS, tak i Sass 
 
 Aby se zabránilo možným problémům s kódováním znaků, je vysoce doporučeno nastavit kódování [UTF-8](http://en.wikipedia.org/wiki/UTF-8) v [hlavním souboru se styly](#hlavn-soubor) použitím `@charset` direktivy. Ujistěte se, že je kódování nastaveno hned na prvním místě ve stylech a není před ním žádný znak.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Uvozovky
 
@@ -39,13 +39,13 @@ Jak již bylo řečeno, jazyky, které nevyžadují, aby byly řetězce obaleny 
 * napomáhá obecné čitelnosti;
 * není žádný důvod proč řetězce neobalovat uvozovkami.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 ### Textové řetězce jako CSS hodnoty
 
 Specifické CSS hodnoty jako `initial` nebo `sans-serif` vyžadují, aby nebyly v uvozovkách. Deklarace jako `font-family: 'sans-serif'` tiše selže, protože CSS očekává identifikátor, ne řetězec s uvozovkami. Z toho důvodu nepoužíváme uvozovky na tyto hodnoty.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Proto můžeme rozlišovat mezi řetězci, které mají být použiti jako CSS hodnoty (CSS identifikátory) jako v předchozím případě a řetězci, které se drží Sass datového typu, jako například klíče mapy.
 
@@ -55,13 +55,13 @@ Nepoužíváme uvozovky v prvním případně, ale v druhém případě využív
 
 Pokud řetězec obsahuje jednu nebo více jednoduchých uvozovek, může se řetězec namísto toho zabalit dvojitými uvozovkami (`"`), aby se zabránilo úniku znaků z řetězce.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URL
 
 URL by měly být také zabaleny v uvozovkách ze stejných důvodů jako je výše:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Další četba
 
@@ -76,29 +76,29 @@ V Sassu je číslo datový typ, včetně všeho od bezjednotkových čísel po d
 
 Čísla by měla zobrazovat nulu před tečkou pro hodnoty menší než jedna. Nikdy nezobrazujte koncové nuly.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 ### Jednotky
 
 Pokud se zaměříme na jednotky, `0` by nikdy neměla mít definovanou jednotku.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 Nejčastější chybou, která mě napadne v souvislosti s čísly v Sassu, je ta, že jednotky jsou jen nějaké textové řetězce, které mohou být bezpečně dosazeny k číslu. I když to je pravda, určitě to není jak jednotky fungují. Představte si jednotky jako algebraické symboly. Například v reálném světě, násobení 5 centimetrů 5 centimetry vám dá 25 centimetrů čtverečních. Stejná logika platí i pro Sass.
 
 Pro přidání jednotky k číslu musíte číslo vynásobit *1 jednotkou*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Všimněte si, že *0 členů té jednotky* také funguje, ale já bych vám raději doporučoval zmíněnou metodu, jelikož přidáním *0 jednotky* může být tak trochu matoucí. Avšak pokud se budete snažit převést číslo do jiné kompatibilní jednotky, přidání 0 na to nebude stačit.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 Nakonec to všechny závisí na tom, čeho se snažíte dosáhnout. Jenom mějte na paměti, že přidáním jednotky v řetězci není dobrou cestou jak to dělat.
 
 Pro odstranění jednotky z hodnoty ji musíte vydělit *jednou jednotkou svého druhu*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Připojením jednotky v řetězci k číslu vznikne řetězec, který zamezí jakýmkoli dalším operacím na hodnotě. Krajení numerické části čísla jednotkou také vyústí v řetězec. A to není to, co chcete.
 
@@ -106,7 +106,7 @@ Připojením jednotky v řetězci k číslu vznikne řetězec, který zamezí ja
 
 **Numerické výpočty na nejvyšší úrovni by měly být vždy zabaleny v závorkách**. Nejen, že tento požadavek výrazně zlěpší čitelnost, ale také zabrání některým krajním případům tím, že nutí Sass vyhodnotit obsah závorek.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Magická čísla
 
@@ -114,7 +114,7 @@ Připojením jednotky v řetězci k číslu vznikne řetězec, který zamezí ja
 
 Netřeba snad ani dodávat, že **magická čísla jsou mor a mělo by se jim vyhýbat za jakoukoli cenu**. Pokud nemůžete najít rozumné vysvětlení, proč číslo funguje, přidejte rozsáhlý komentář vysvětlující jak jste se tam dostali a proč si myslíte, že to funguje. Přiznáním se, že nevíte proč něco funguje je stále více užitečné pro dalšího vývojáře, než aby sám musel přijít na to co se děje on nuly.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Další četba
 
@@ -138,21 +138,21 @@ Aby byly barvy tak jednoduché, jak jen mohou být, moje rada je respektovat ná
 
 Pro začátek, klíčová slova často mluví sami za sebe. HSL reprezentace je nejen ta nejjednodušší pro lidský mozek na pochopení <sup>[citation needed]</sup>, ale také ulehčuje autorům stylu vyladit barvu úpravou odstínu, sytosti a světlosti individuálně. RGB má stále tu výhodu, že hned vidíte, jestli má barva více modré, zelené, nebo červené, ale to neznamená, že je vytvoření barvy ze tří částí jednoduché. Poslední, hexadecimální, je pro lidskou mysl skoro nečitelný.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Při používání HSL nebo RGB notace vždy přidejte jednu mezeru po čárce (`,`), ale nepřidávejte žádnou mezeru mezi závorkami (`(`, `)`) a obsahem.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Barvy a proměnné
 
 Pokud barvu používáte více než jednou, uložte jí do proměnné se smysluplným názvem reprezentující barvu.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 Odteď budete moci používat tuto proměnnou kdekoliv chcete. Pokud je však vaše proměnná velmi svázaná s tématem, radil bych, abyste ji nepoužívali tak, jak je. Namísto toho ji uložte v jiné proměnné se jménem vysvětlující, jak by se měla používat.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 Tímto zabráníte problémům vyplývajících ze změny tématu jako `$sass-pink: blue`.
 
@@ -168,7 +168,7 @@ Výhoda ve využívání `mix` spíše než jednu z těch dvou funkcí shora je,
 
 Pokud nechcete pokaždé psát `mix` funkci, můžete vytvořit dvě jednoduché funkce `tint` a `shade` (které jsou také částí [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) aby dělaly tu stejnou věc:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p>Funkce <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> je navržena tak, že škáluje vlastnosti více plynule tím, že vezme v úvahu, jak vysoké nebo nízké již jsou. To by mělo poskytnou výsledky, které jsou hezké jako <code>mix</code>, ale s jasnější konvencí pro volání. Měřítko přesně totéž.</p>
@@ -194,11 +194,11 @@ Seznamy by měly být tvořeny podle následujícího manuálu:
 * vždy musí být zabalený v závorkách;
 * koncová čárka se přidává pokud je víceřádkový, pokud je jednořádkový, tak ne.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Pokud přidáváte nové položky do seznamu, vždy používejte dodávané API. Nepokoušejte se přidávat položky manuálně.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Další četba
 
@@ -222,17 +222,17 @@ Mapy by se měly psát tak, jako je popsáno níže:
 
 Ilustrace:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ### Debugování Sass map
 
 Pokud se někdy ocitnete ztraceni, nebo budete přemýšlet, co za šílenou magii se právě v Sass mapě děje, pak se nebojte, protože je tu stále možnost záchrany.
 
-{% include snippets/syntax/22/index.html %}
+{% include snippet.html path="syntax/22" file="index" %}
 
 Pokud jste zvědavi, do jaké hloubky vaše mapa sahá, přidejte následující funkci. Mixin ji zobrazí automaticky.
 
-{% include snippets/syntax/23/index.html %}
+{% include snippet.html path="syntax/23" %}
 
 ###### Další četba
 
@@ -260,7 +260,7 @@ V tuto chvíli zde uvedu, co většina asi ví, jak by měly být CSS pravidla p
 
 Ilustrace:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 Přidáním těchto pokynů k CSS budeme dávat pozor na toto:
 
@@ -272,7 +272,7 @@ Přidáním těchto pokynů k CSS budeme dávat pozor na toto:
 
 Ilustrace:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Další četba
 
@@ -287,15 +287,15 @@ Nenapadá mě snad žádné jiné téma, kde jsou názory tak rozdělené jako p
 
 V obou případech najdete výhody i nevýhody. Na jednu stranu je abecení pořadí univerzální (alespoň pro jazyky, které používají latinku), takže nemůže nastat situace, kdy se budete muset rozhodnout, jestli toto bude před tím, nebo ne. Každopádně vidět `bottom` a `top` od sebe je tak trochu divné. Proč by měly animace být před typem zobrazení? S abecedním pořadí existuje dost zvláštností.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 Na druhou stranu, řazení vlastností podle typu dává perfektní smysl. Každá deklarace okolo písma je u sebe, `top` a `bottom` jsou znovu u sebe a číst pravidla je jako číst krátký příběh. Ale dokud nezačnete používat nějaké konvence jako [Idiomatic CSS](https://github.com/necolas/idiomatic-css), je tu spoustu možností jak danou věc udělat. Kde by se měla řadit `white-space`? Do písma, nebo zobrazení? Kam přesně patří `overflow`? Jaké je pořadí vlastností v dané skupině (mělo by to být abecedně, jaká to ironie)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Je tu také další zajímavý způsob řazení nazývaný [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), což vypadá, že je také populární. Concentric CSS pro určení pořadí v podstatě spoléhá na box-model.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 Musím říci, že se sám nemohu rozhodnout. [Nedávný průzkum na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) zjistil, že přes 45% vývojářů řadí své deklarace podle typu a oproti tomu 14% abecedně. Ale je tu také 39%, kteří vše řadí náhodně, včetně mě.
 
@@ -324,7 +324,7 @@ Jedna konkrétní funkce Sass, která je až příliš zneužívána spoustou v�
 
 Například následující vnořování v Sass:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … vygeneruje toto CSS:
 
@@ -332,7 +332,7 @@ Například následující vnořování v Sass:
 
 Ve stejném duchu, od Sass 3.3, je možné použít referenci na aktuální selektor (`&`) ke generování rozšířených selektorů. Například:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … vygeneruje toto CSS:
 
@@ -354,25 +354,25 @@ Abyste se takovýmto situacím vyhnuli, **vyhýbejte se vnořeným selektorům j
 
 Pro začátek, je dovoleno a dokonce doporučeno nořit pseudo třídy a pseudo elementy do původního selektoru.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 Používání noření pro pseudo třídy a pseudo selektory nejenom že dává smysl (protože se vypořádává s úzce souvisejícími selektory), ale také pomáhá udržet všechno o komponentě na jednom místě.
 
 Také když používáte třídy, které určují pravdivost, jako například `.is-active`, je naprosto v pořádku vnořit ji do selektoru komponenty, abyste zachovali věci v pořádku.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 V neposlední řadě, když stylujete element protože musí být obsažen v nějakém specifickém elementu, je často fajn použít noření k udržení všeho o komponentě na stejném místě.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Když pracujete s nezkušenými vývojáři, selektor jako `.no-opacity &` může vypadat tak trochu divně. Abyste zabránili jakýmkoli rozpakům, můžete udělat velmi krátký mixin, který přemění tuto divnou syntaxi na výslovné API.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Přepsáním předešlého příkladu by to vypadalo asi takto:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Jako asi se vším, specifika jsou poněkud nedůležitá, důležitá je konzistence. Pokud noření plně důvěřujete, klidně noření používejte. Jenom se ujistěte, že to nikomu z vašeho týmu nevadí.
 

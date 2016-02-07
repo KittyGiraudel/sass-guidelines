@@ -1,0 +1,7 @@
+// La variable du développeur
+$baseline: 2em;
+
+// La déclaration de `$baseline` dans votre bibliothèque
+@import 'your-library';
+
+// $baseline == 2em;

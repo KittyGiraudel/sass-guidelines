@@ -1,0 +1,17 @@
+/// Mapa dos z-indexes, reunindo todas as camadas Z da aplicação
+/// @access private
+/// @type Map
+/// @prop {String} key - Nome da camada
+/// @prop {Number} value - Valor de Z mapeado à chave (key)
+$z-indexes: ("modal": 5000, "dropdown": 4000, "default": 1, "below": -1)
+
+/// Obtém um valor de z-index através do nome de uma camada
+/// @access public
+/// @param {String} $layer - Nome da camada
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer)
+  @if not map-has-key($z-indexes, $layer)
+    @error "There is no layer named `#{$layer}` in $z-indexes. " + "Layer should be one of #{map-keys($z-indexes)}."
+
+  @return map-get($z-indexes, $layer)

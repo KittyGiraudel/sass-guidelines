@@ -1,0 +1,7 @@
+.foo {
+  color: red;
+
+  @include respond-to('medium') {
+    color: blue;
+  }
+}

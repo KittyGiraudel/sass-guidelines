@@ -11,11 +11,11 @@ Ale mám pocit, že vás musím varovat před zneužitím moci mixinů. Opět pl
 
 Jak již bylo řečeno, mixiny jsou extrémně užitečné a měli byste nějaké používat. Pokud je nějaká skupina vlastností, které se z nějakého důvodu zobrazují spolu (a není to tedy náhoda), můžete si je dát do mixinu. Například [micro-clearfix hack od Nicolase Gallaghera](http://nicolasgallagher.com/micro-clearfix-hack/) si zaslouží být vložen do mixinu.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Dalším příkladem může být mixin pro nastavení velikosti elementu, který bude definovat `with` a `height` ve stejném okamžiku. Nejenom, že by bylo psát kód jednodušší, ale také by se lépe četl.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Další četba
 
@@ -27,13 +27,13 @@ Dalším příkladem může být mixin pro nastavení velikosti elementu, který
 
 Pokud se máte v mixinu utkat s neznámým počtem argumentů, vždy použijte spíše `arglist` než-li seznam. O `arglist` můžete přemýšlet jako o 8. skrytém nezdokumentovaném data typu ze Sassu, který se implicitně používá při průchodu libovolného počtu argumentů mixinu nebo funkce, kde se využívá `...`.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Nyní, při vytváření mixinu, který akceptuje několik argumentů (tím myslím 3 a více), přemýšlejte dvakrát před jejich spojením do seznamu nebo mapy, jelikož si myslíte, že je bude jednodušší zpracovat, než s jeden po druhém.
 
 Sass je vlastně pěkně chytrý, co se deklarace mixinů a funkcí týče. Tak moc, že vlastně můžete předat seznam nebo mapu jako arglist funckci/mixinu, a ten si to naparsuje jako sérii argumentů.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Další četba
 
@@ -47,15 +47,15 @@ Bohužel vždy není možné Autoprefixer použít. Pokud používáte [Bourbon]
 
 Pokud nemůžete použít Autoprefixer ani Bourbon nebo Compass, pak a jen tehdy můžete použít svůj vlastní mixin, který se s prefixováním CSS vlastností popere. Ale, prosím vás, nedělejte pro každou vlastnost svůj vlastní mixin, který ručně vypíše každý vendor.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Udělejte to chytře.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 Použití takového mixinu pak bude velmi jednoduché:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Prosím, vemte na vědomí, že je to velmi špatné řešení. Například se to nemůže vypořádat se složitými polyfily, jako ty, co jsou potřeba pro Flexbox. V tomto případně by bylo použití Autoprefixeru daleko lepší řešení.
 

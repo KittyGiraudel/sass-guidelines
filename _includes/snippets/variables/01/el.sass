@@ -1,0 +1,22 @@
+// Αρχικοποίησε μια global μεταβλητή σε επίπεδο root.
+$variable: "initial value"
+
+// Δημιούργησε ένα mixin που παρακάμπτει την global μεταβλητή.
+=global-variable-overriding
+  $variable: "mixin value" !global
+
+.local-scope::before
+  // Δημιούργησε μια τοπική μεταβλητή που επισκιάζει την global.
+  $variable: "local value"
+
+  // Κάνε include το mixin: παρακάμπτει την global μεταβλητή.
+  +global-variable-overriding
+
+  // Τύπωσε την τιμή της μεταβλητής.
+  // Είναι η **τοπική** μεταβλητή, εφόσον επισκιάζει την global.
+  content: $variable
+
+// Τύπωσε την μεταβλητή σε άλλον selector που δεν κάνει επισκίαση.
+// Είναι η **global** μεταβλητή, όπως ήταν αναμενόμενο.
+.other-local-scope::before
+  content: $variable

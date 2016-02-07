@@ -9,11 +9,11 @@ Wydaje mi się, że można spokojnie powiedzieć, że media queries nie powinny 
 
 Z tych samych powodów, breakpointy nie powinny być nazywane w nawiązaniu do konkretnych urządzeń, lecz bardziej ogólnie. Zwłaszcza teraz, gdy telefony stają się większe niż niektóre tablety, niektóre zaś tablety większe niż komputery o małych ekranach, i tak dalej…
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 Każda konwencja nazwowa, jaką w tym miejscu przyjmiemy, będzie dobra o ile tylko będzie przejrzysta i da w wystarczającym stopniu do zrozumienia, że nie jest ona związana konkretnymi urządzeniami.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>Poprzednie przykłady korzystają z zagnieżdżonych map do definiowania breakpointów, niemniej jednak w dużej mierze zależy to od konkretnego menadżera breakpointów, jaki jest w danej sytuacji wykorzystywany. Możesz również zdecydować się na korzystanie z ciągów znaków (strings) zamiast map dla lepszej elastyczności (np. <code>'(min-width: 800px)'</code>).</p>
@@ -27,7 +27,7 @@ Każda konwencja nazwowa, jaką w tym miejscu przyjmiemy, będzie dobra o ile ty
 
 W momencie gdy breakpointy są już nazwane, potrzeba sposobu by ich faktycznie użyć w media queries. Jest wiele możliwości by to zrobić, jednak muszę przyznać że jestem wielkim fanem funkcji wydobywających breakpointy z map.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>Oczywiście, jest to dosyć uproszczone podejście do zarządzania breakpointami. Jeśli potrzebne jest rozwiązanie bardziej rozbudowane, zalecam nie odkrywać Ameryki na nowo lecz sprawdzić to, co już istnieje, na przykład <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> czy <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
@@ -42,7 +42,7 @@ W momencie gdy breakpointy są już nazwane, potrzeba sposobu by ich faktycznie 
 
 Nie tak dawno temu, w społeczności pojawiła się dosyć burzliwa dyskusja na temat tego gdzie powinno się deklarować media queries: czy powinny one się znajdować w ramach bloków selektorów (na co Sass pozwala), czy raczej winny one być odseparowane. Muszę przyznać, że jestem zwolennikiem poglądu by *media queries znajdowały się w ramach selektorów*, bowiem współgra on z ideą *komponentów*.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 Co prowadzi do następującego CSSu:
 

@@ -11,11 +11,11 @@
 
 话虽如此，混合宏确实非常有用，你应该学习使用它。经验告诉我们，如果你发现有一组 CSS 属性经常因同一个原因一起出现（非巧合），那么你就可以使用混合宏来代替。比如[Nicolas Gallagher的清除浮动](http://nicolasgallagher.com/micro-clearfix-hack/)应当放入一个混合宏的实例。
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 另一个有效的实例是通过在混合宏中绑定 `width` 和 `height` 属性，可以为元素设置宽高。这样不仅会淡化不同类型代码间的差异，也便于阅读。
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### 扩展阅读
 
@@ -26,19 +26,19 @@
 
 有时候我们使用混合宏只是为了避免重复声明相同的样式，这种情况下，往往不需要传递参数。所以，为了简洁起见，我们可以删除圆括号，使用 `@include` 关键字来表示当前行调用了混合宏。
 
-{% include snippets/mixins/08/index.html %}
+{% include snippet.html path="mixins/08" file="index" %}
 
 ## 参数列表
 
 当混合宏需要处理数量不明的参数时，通常使用 `arglist` 而不是列表。可以认为 `arglist` 是 Sass 中隐藏而未被记录的第八个数据类型，通常当需要任意数量参数的时候，被隐式使用到参数中含有 `...` 标志的混合宏和函数中。
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 现在，当要建立一个接收多个参数（默认为 3 或者更多）的混合宏时，在将它们合并为列表或者 map 之前，要反复考量这样做是否比一个个的单独存在更易于使用。
 
 Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一个列表或 map，它会自动解析为一系列的参数。
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### 扩展阅读
 
@@ -52,15 +52,15 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 
 如果你不能使用 Autoprefixe，甚至也不能使用 Bourbon 和 Compass，那么接下来唯一的方式，就是使用自己的混合宏处理带有前缀的 CSS 属性。但是，请不要为每个属性建立混合宏，更不要无脑输出每个浏览器的前缀（有些根本就不存在）。
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 比较好的做法是
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 然后就可以非常简单地使用混合宏了：
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 请记住，这是一个糟糕的解决方案。例如，他不能处理那些需要复杂的前缀，比如 `flexbox`。在这个意义上说，使用 Autoprefixer 是一个更好地选择。
 

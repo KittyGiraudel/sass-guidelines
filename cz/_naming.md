@@ -13,7 +13,7 @@ Sass placeholdery jsou z tohoto seznamu úmyslně vynechány, jelikož mohou bý
 
 Pokud jde o proměnné, funce a mixiny, držme se něčeho velmi *ve stylu CSS*: **malé písmo oddělené pomlčkami** a především smysluplného.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Další četba
 
@@ -25,7 +25,7 @@ Pokud jste náhodou vývojáři frameworku, nebo píšete knihovnu, pravděpodob
 
 Tak jako pro mnoho jazyků, doporučuji proměnné, pokud jsou konstantami, psát velkým písmem. Nejen že je to velmi stará konvence, ale také snadno poznáte, že je daná proměnná právě konstantou, jelikož je v kontrastu s proměnnými psanými malým písmem a oddělenými pomlčkami.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Další četba
 
@@ -37,7 +37,7 @@ Pokud máte v úmyslu svůj Sass kód rozšířit, v případě knihovny, framew
 
 Například, pokud pracujete na projektu *Sassy Unicorn*, se kterým budou moci pracovat vývojáři z celého světa (kdo by ne, že ano?), můžete zvážit použít `su-` jako namespace. Je to dost specifické aby se zabránilo jakémukoli kolidování názvu a krátké dost na to, aby to nebolelo psát.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Poznámka: automatické namespacy budou definitivně designový cíl pro připravovaný <code>@import</code> od Sassu 4.0. Čím je blíže k uskutečnění, tím je méně a méně užitečné dělat namespace ručně. Případně ručně namespacované knihovny mohou být složitější na použití.</p>

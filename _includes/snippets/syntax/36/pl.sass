@@ -1,0 +1,5 @@
+/// Pomocniczy mixin zapewniający proste API dla zagnieżdżania selektorów
+/// @param {String} $selector - Selektor
+=when-inside($selector)
+  #{$selector} &
+    @content

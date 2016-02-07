@@ -9,11 +9,11 @@
 
 같은 이유로, 브레이크포인트는 기기의 이름이 아니라 보다 보편적인 것을 따라서 이름 지어져야 합니다. 특히 몇몇 폰은 이제 태블릿보다 크고, 몇몇 태블릿은 일부 작은 스크린의 컴퓨터보다 크기 때문입니다.
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 이런 견지에서 볼 때, 디자인이 특정 기기에 직접적으로 관련되지 않았다는 것을 명확히 밝히는 어떤 작명 관례도 괜찮습니다. 크기에 대한 감을 전해줄 수 있기만 하면 됩니다.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>앞의 예시들은 브레이크포인트를 정의하기 위해 맵을 중첩해서 사용하고 있지만, 이건 여러분이 어떤 브레이크포인트 매니저를 사용하는가에 전적으로 달렸습니다. 유연성을 위해 맵을 포개어넣는 대신 문자열을 선택할 수도 있을 겁니다. (예를 들면 <code>'(min-width: 800px)'</code>).</p>
@@ -27,7 +27,7 @@
 
 일단 원하는 방식으로 브레이크포인트의 이름을 짓고 나면, 실제 미디어쿼리에서 사용할 방법이 필요합니다. 많은 방법들이 있지만 전 getter 함수로 읽을 수 있는 브레이크포인트 맵의 열혈 팬이라는 것을 밝혀야겠습니다. 이 시스템은 간단하면서도 효과적입니다.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>확실히, 이건 아주 단순한 브레이크포인트 매니저입니다. 좀 더 많은 기능을 제공하는 브레이크포인트 매니저가 필요하다면, 바퀴를 새로 발명할 것 없이 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a>, <a href="https://github.com/eduardoboucas/include-media">include-media</a>와 같은 효과가 검증된 것을 사용하기를 권합니다.</p>
@@ -42,7 +42,7 @@
 
 얼마 전, 미디어 쿼리를 어디에 작성해야 하는지에 대한 치열한 논쟁이 있었습니다: 선택자 안으로 들어가야 하는가(Sass에서는 가능하므로), 아니면 철저하게 분리해야 하는가? 저는 *선택자-속-미디어-쿼리* 시스템의 열렬한 옹호자라는 점을 밝혀야겠습니다. 그 쪽이 *컴퍼넌트* 아이디어와 잘 어울린다고 생각하거든요.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 위의 코드는 다음의 CSS를 만들어냅니다:
 

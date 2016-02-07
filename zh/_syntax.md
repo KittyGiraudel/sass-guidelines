@@ -12,7 +12,7 @@
 - 正确书写多行CSS规则；
 - 有意义的使用空格。
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 在本部分中不会涉及有关文件组织的问题，相关讨论在[另一节](#section-50)中。
 
@@ -24,7 +24,7 @@
 
 为了避免潜在的字符编码问题，强力建议在[入口文件](#section-54)中通过 `@charset` 指令使用 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 编码格式。请确保该指令是文件的第一条语句，并排除其他字符编码声明。
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### 引用
 
@@ -39,7 +39,7 @@ CSS 中不要求字符串必须用引号包裹，甚至是字符串中包含空�
 - 提高可读性；
 - 没有正当理由不去用引号包裹字符串。
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 <div class="note">
   <p>CSS 规范建议, 将 <code>@charset</code> 指令用双引号包裹起来 <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">才是有效的</a>. 不过，Sass 在编译的时候已经自动修正了相关信息，所以无论何种方式都可以生成正确的代码，即使是只有 <code>@charset</code>。</p>
@@ -49,7 +49,7 @@ CSS 中不要求字符串必须用引号包裹，甚至是字符串中包含空�
 
 CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事实上，`font-family: 'sans-serif'` 该声明是错误的，因为 CSS 希望获得的是一个标识符，而不是一个字符串。因此，我们无须引用这些值。
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 就像上例这样，我们就可以区别用于 CSS 值的字符串（CSS 标识符）和 Sass 的字符串类型了（比如 map 的值）。
 
@@ -59,13 +59,13 @@ CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事
 
 如果字符串内包含了一个或多个单引号，一种解决方案就是使用双引号包裹整个字符串，从而避免使用过多的转义字符。
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URLs
 
 URL 最好也用引号包裹起来，原因和上面所描述一样：
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### 扩展阅读
 
@@ -80,13 +80,13 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 当数字小于 `1` 时，应该在小数点前写出 `0.` 永远不要显示小数尾部的 `0`。
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 ### 单位
 
 当定义长度时，`0` 后面不需要加单位。
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 <div class="note">
   <p>注意，该建议只是针对于长度而言，对于类似 <code>transition-delay</code> 的时间属性就是不适合的。理论上，如果持续时间的属性值为无单位的 0，那么该属性值就会被认为是无效的。虽然并不是所有的浏览器都这么严格检查属性值，但确实有一些浏览器会这么做。简而言之：只有长度可以使用无单位的 0 作为属性值。</p>
@@ -96,17 +96,17 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 将一个单位添加给数字的时候，实际上是让该数值乘以*`1`个单位*。
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 需要注意的是加上一个 *`0unit`* 也可以正确解析，但是这种方式在某种程度上会造成一些混乱，所以我更愿意推荐上面的方式。事实上，将一个数字转换为其他兼容单位时，加 `0` 操作并不会造成错误。
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 这一切最终取决于你想要达到怎样的效果。只要记住，像添加一个字符串一样添加一个单位并不是一种好的处理方式。
 
 要删除一个值的单位，你需要除以*相同类型的 `1` 单位*。
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。
 
@@ -114,7 +114,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 **最高级运算应该始终被包裹在括号中**。这么做不仅是为了提高可读性，也是为了防止一些 Sass 强制要求对括号内内容计算的极端情况。
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Magic numbers
 
@@ -122,7 +122,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 相信不用多说你也会理解，**幻数是一场瘟疫，应不惜一切代价以避免**。当你对数值的解析方式无法找到一个合理解释时，你可以对此提交一个内容宽泛的评论，包括你是怎样遇见这个问题以及你认为它应该怎样工作。承认自己不清楚一些机制的解析方式，远比让以后的开发者从零开始弄清它们更有帮助。
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### 扩展阅读
 
@@ -151,21 +151,21 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 最后，十六进制对于人类的思维来说是比较难以理解的，除非必要，否则请优先考虑前几种方式。
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 使用 HSL 值或者 RGB 值，通常在逗号 (`,`)后面追加一个空格，而不在前后括号 (`(`, `)`) 和值之间添加空格。
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### 颜色和变量
 
 当一个颜色被多次调用时，最好用一个有意义的变量名来保存它。
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 现在，你就可以在任何需要的地方随意使用这个变量了。不过，如果你是在一个主题中使用，我不建议固定的使用这个变量。相反，可以使用另一个标识方式的变量来保存它。
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 这样做可以防止一个主题变化而出现此类结果 `$sass-pink: blue`。
 
@@ -181,7 +181,7 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 如果你不想每次都写 `mix` 函数，你可以创建两个易用的 `tint` 和 `shade` ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade) 的一部分)来处理相同的事：
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 函数的设计初衷是为了更流畅地调试属性——以实际的高低为调试基础。它如同<code>mix</code>一样好用，并且提供了更清晰地调用约定。比例因子并不完全相同。</p>
@@ -207,11 +207,11 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 - 始终使用括号包裹；
 - 始终不要添加尾部的逗号。
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 当需要给列表添加一个新列表项时，请遵守其提供的 API，不要试图手动给列表添加列表项。
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### 扩展阅读
 
@@ -235,7 +235,7 @@ map 的使用应该遵循下述规范：
 
 示例:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ###### 扩展阅读
 
@@ -263,7 +263,7 @@ map 的使用应该遵循下述规范：
 
 示例:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 添加与 CSS 相关的规范时，我们需要注意：
 
@@ -275,7 +275,7 @@ map 的使用应该遵循下述规范：
 
 示例:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### 扩展阅读
 
@@ -290,15 +290,15 @@ map 的使用应该遵循下述规范：
 
 这两种方式各有利弊。一方面，字母排序方式通俗易懂（至少对于语言中使用拉丁字母的人来说），所以排序的过程完全没有争议。但是，这种排序的结果却十分奇怪，如 `bottom` 和 `top` 竟然彼此不相邻。为什么 `animations` 属性出现在 `display` 属性之前？字母排序方式有太多诸如此类的怪相了。
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 另一方面，按照类型排序则让属性显得更具有意义。每个和字体相关的属性被声明在一起，`top` 和 `bottom` 也结合在一起，最终审阅CSS规则集感觉就像是在读故事。除非你坚持诸如 [Idiomatic CSS](https://github.com/necolas/idiomatic-css)的规定，不然类型声明顺序可以有更丰富充实的表现。`white-space` 应该放在哪里：font还是dispaly? `overflow` 应该归属何处？如何进行组内排序（如果是字母排序，这岂不成了个笑话）？
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 此外也有其他类型排序的分支，比如[Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)，他看起来相当流行。Concentric CSS 的基础是依赖盒模型定义顺序：由外而内。
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 我必须说我不能对此下任何判定。一份 [CSS-Tricks 做的统计报告](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)确认，超过 45% 的开发者使用类型顺序声明，而只有 14% 使用字母顺序。此外还有 39% 的开发者随意而为，这其中就包括我。
 
@@ -323,7 +323,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 比如下述Sass选择器的嵌套：
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 生成的 CSS:
 
@@ -331,7 +331,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 从 Sass3.3 开始，可以在同一行中使用最近选择器引用(`&`)来实现高级选择器，比如：
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 生成的 CSS:
 
@@ -353,25 +353,25 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 首先，在最外层选择器中嵌套伪类和伪元素是被允许，也是受推荐的。
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 使用选择器嵌套选择伪类和伪元素不仅仅有道理的（因为它的处理功能与选择器紧密相关），而且有助于保持总体的一致性。
 
 当然，如果使用类似 `.is-active` 类名来控制当前选择器状态，也可以这样使用选择器嵌套。
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 这并不是最重要的，当一个元素的样式在另一个容器中有其他指定的样式时，可以使用嵌套选择器让他们保持在同一个地方。
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 当一个没太多经验的开发者，不对类似于 `.no-opacity &` 这样的选择器造成混淆。可能创建一个 `mixin` 来处理。
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 重写刚才的示例，他看起来像这样：
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 这所有的一切，有些是无关紧要的细节，关键是要保持一致性。如果你觉得完全有信心搞定选择器嵌套，然后你就使用了选择器嵌套。可你还要确保你的整个团队也能搞定选择器的嵌套。
 

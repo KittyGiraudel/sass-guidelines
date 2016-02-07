@@ -1,0 +1,10 @@
+.foo {
+  content: 'foo';
+}
+
+@media print {
+  .bar {
+    // 이 코드는 듣지 않을 뿐더러 충돌을 일으킵니다.
+    @extend .foo;
+  }
+}

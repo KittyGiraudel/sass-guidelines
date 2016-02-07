@@ -1,0 +1,5 @@
+@each $key, $value in $map {
+  .section-#{$key} {
+    background-color: $value;
+  }
+}

@@ -18,13 +18,13 @@
 
 Ιδανικά, *κάθε* CSS ruleset πρέπει να προηγείται απο ενα ένα C-style σχόλιο εξηγώντας το νόημα του CSS μπλοκ. Αυτό το σχόλιο επίσης φιλοξενεί αριθμημένες διευκρινίσεις σχετικά με συγκεκριμένων τμημάτων του ruleset. Για παράδειγμα:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 Πρακτικά οτιδήποτε δεν είναι προφανές με την πρώτη ματιά πρέπει να έχει σχόλια. Υπάρχει πάντα χώρος για παραπάνω documentation. Να θυμάστε πως ποτέ δεν θα έχετε *σχολιάσει αρκετά*, γι αυτό γράψτε όσα περισσότερα σχόλια μπορείτε για οτιδήποτε θεωρείται σημαντικό.
 
 Όταν σχολιάζετε ένα τμήμα σχετικό με την Sass, χρησιμοποιείστε inline Sass σχόλια αντί για σχόλια C-style block ετσι ώστε αυτά να μην εμφανιστούν στο τελικό αποτέλεσμα, ακόμα και σε λειτουργία expanded κατα την διάρκεια ανάπτυξης του κώδικα.
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Περαιτέρω ανάγνωση
 
@@ -34,7 +34,7 @@
 
 Κάθε μεταβλητή, συνάρτηση, mixin και placeholder τα οποία έχουν ως σκοπό να ξαναχρησιμοποιηθούν παντού στο code base σας πρέπει να έχουν documentation στο πλαίσιο του global API χρησιμοποιώντας το [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Απαιτούνται τρία slashes (<code>/</code>).</p>
@@ -49,7 +49,7 @@
 
 Παρακάτω μπορείτε να δείτε ένα παράδειγμα ενός mixin το οποίο είναι εκτενώς documented με το SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Περαιτέρω ανάγνωση
 

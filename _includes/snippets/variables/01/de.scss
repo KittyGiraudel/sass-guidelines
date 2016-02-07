@@ -1,0 +1,25 @@
+// Initialisiere eine globale Variable auf Root-Level.
+$variable: 'initial value';
+
+// Erstelle ein Mixin das die globale Variable überschreibt.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Erstelle eine lokale Variable die eine globale beschattet.
+  $variable: 'local value';
+
+  // Füg den Mixin ein: es überschreibt die globale Variable.
+  @include global-variable-overriding;
+
+  // Geb den Wert der Variable aus.
+  // Es ist der **lokale**, da er die globale beschattet.
+  content: $variable;
+}
+
+// Geb die Variable in einem anderen Selektor aus, welcher nicht beschattet.
+// Es ist wie erwartet die **globale**.
+.other-local-scope::before {
+  content: $variable;
+}

@@ -13,7 +13,7 @@ Sass' Platzhalter habe ich absichtlich ausgelassen, da sie als reguläre CSS Sel
 
 Bezüglich Variablen, Funktionen und Mixins werden wir uns an etwas sehr *CSS-mäßigen* richten: Kleinbuchstaben, getrennt durch Bindestrich und vor allem bedeutsam.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Weitere Informationen
 
@@ -25,7 +25,7 @@ Falls du ein Framework- oder Library-Entwickler sein solltest, magst du wahrsche
 
 Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben und Snake Case zu schreiben, wenn sie Constants sein sollen. Es ist nicht nur eine sehr alte Konvention, sondern stellt auch einen guten Kontrast zu in Kleinbuchstaben und mit Bindestrich getrennten Variablen.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Weitere Informationen
 
@@ -37,7 +37,7 @@ Falls du deinen Sass Code in Form einer Library, Framework, Gridsystem oder was 
 
 Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches von Entwicklern auf der ganzen Welt (wieso auch nicht, oder?) verwendet wird, könntest du den Namespace `su-` benutzen. Er ist spezifisch genug um nicht mit anderen Namespaces in Konflikt zu geraten, und kurz genug um dir auf die Dauer beim schreiben nicht auf die Nerven zu gehen.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Beachte das automatisches Namespacing ein Designziel für die zukünftige Umgestaltung von <code>@import</code> in Sass 4.0 ist. Je näher wir vor der Verwirklichung stehen, desto weniger von nutzen ist es manuell Namespaces zu vergeben; eventuell werden Libraries deren Namespace manuell gepflegt wurde, sogar schwieriger zu benutzen sein.</p>

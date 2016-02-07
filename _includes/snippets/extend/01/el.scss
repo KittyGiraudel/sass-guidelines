@@ -1,0 +1,27 @@
+%button {
+  display: inline-block;
+  // …  styles των κουμπιών
+
+  // Σχέση: ένα %button που είναι παιδί ενός %modal
+  %modal > & {
+    display: block;
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+// Yep
+.modal {
+  @extend %modal;
+}
+
+// Nope
+.modal {
+  @extend %modal;
+
+  > .button {
+    @extend %button;
+  }
+}

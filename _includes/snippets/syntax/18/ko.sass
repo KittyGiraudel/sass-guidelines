@@ -1,0 +1,15 @@
+/// 색을 약간 밝게 한다
+/// @access public
+/// @param {Color} $color - 밝게 만들려는 색
+/// @param {Number} $percentage - 반환될 색 내 `$color`의 백분율
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+/// 색을 약간 어둡게 한다
+/// @access public
+/// @param {Color} $color - 어둡게 만들려는 색
+/// @param {Number} $percentage - 반환될 색 내 `$color`의 백분율
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)

@@ -1,0 +1,9 @@
+// Yep
+.foo {
+  @include center;
+}
+
+// Nope
+.foo {
+  @include center();
+}

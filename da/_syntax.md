@@ -12,7 +12,7 @@ Groft sagt, så ønsker vi (skamløst inspireret af [CSS Guidelines](http://cssg
 * ordentligt skrevede, multi-linje CSS-regler;
 * meningsfuld brug af whitespace.
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 Vi vil ikke tackle spørgsmålet omkring filorganisering i denne sektion. Det er formålet for [en anden sektion](#arkitektur).
 
@@ -24,7 +24,7 @@ Tro det eller ej, så spiller strenge en ret stor rolle i økosystemerne for bå
 
 For at undgå potentielle problemer med karakter-encoding, så anbefales det kraftigt at tvinge [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-filen) ved at anvende `@charset` direktivet. Vær sikker på at det er det allerførste element i stylesheetet, og at der ikke er nogen form for karakterer før det.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Citationstegn
 
@@ -39,13 +39,13 @@ Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en m
 * det hjælper med generel læsbarhed;
 * der er ingen god grund til ikke at citere strenge.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 ### Strenge som CSS værdier
 
 Specifikke CSS værdier, såsom `initial` eller `sans-serif` kræver ikke at blive citeret. Det er klart, at `font-family: 'sans-serif'` vil fejle i stilhed fordi CSS forventer en identifier og ikke en citeret streng. På grund af dette, så citerer vi ikke disse værdier.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Dermed kan vi lave en distinktion mellem strenge der har til hensigt at blive brugt som CSS værdier (CSS identifiers), som i det forrige eksempel, og strenge der holder sig til Sass' datatype, som for eksempel map-nøgler.
 
@@ -55,13 +55,13 @@ Vi citerer ikke den førstnævnte, men vi indpakker den sidstnævnte i enkelte c
 
 Hvis en streng indeholder en eller flere citationstegn, så kan man overveje at indpakke strengen i dobbelte citationstegn (`"`) i stedet, for at undgå at escape for mange karakterer inden i strengen.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URL'er
 
 URL'er bør også blive citeret af de samme grunde som ovenfor:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Videre læsning
 
@@ -76,29 +76,29 @@ I Sass er tal en datatype der inkluderer alt lige fra enhedsløse numre til læn
 
 Tal bør vise foranstillede nuller før en decimalværdi, der er mindre end et. Vis aldrig efterstillede nuller.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 ### Enheder
 
 Når du arbejder med længder, så bør en værdi af `0` aldrig have en enhed.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 Den mest typiske fejl jeg kan komme i tanke om, i relation til tal i Sass, er at tænke på enheder som kun værende strenge der trygt kan tilføjes til et tal. Selvom det lyder sandt, så er det absolut ikke sådan enheder virker. Tænk på enheder som algebraiske symboler. For eksempel, som i den virkelig verden, hvis du ganger 5 tommer med 5 tommer så får du 25 kvadrattommer. Den samme logik gælder ved Sass.
 
 For at tilføje en enhed til et tal, så er du nødt til at gange dette tal med *1 enhed*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Bemærk at tilføjelse af *0 medlem af samme enhed* også virker, men jeg vil hellere anbefale den førnævnte metode, siden *0 enhed* kan være en anelse forvirrende. Det er klart, at når man forsøger at konvertere et tal til en anden kompatibel enhed, så vil tilføjelse af 0 ikke være nok.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 Når alt kommer til alt, så afhænger det af hvad du forsøger at opnå. Bare hold det i tankerne, at tilføjelse af en enhed til en streng ikke altid er en god fremgangsmåde.
 
 For at fjerne en værdis enhed, så er du nødt til at dividere den med *en enhed af dets slags*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket forhindrer enhver yderligere operation på værdien. At opdele den numeriske del af et tal med en enhed resulterer også i en streng. Dette er ikke hvad du ønsker.
 
@@ -106,7 +106,7 @@ Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket
 
 **Numeriske kalkulationer på top-niveau bør altid indpakkes i paranteser**. Ikke alene forbedrer dette krav læsbarheden dramatisk, det forhindrer også særtilfælde ved at tvinge Sass til at evaluere indholdet af paranteserne.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Magiske tal
 
@@ -114,7 +114,7 @@ Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket
 
 Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når du ikke kan finde en fornuftig forklaring for hvorfor et tal virker, så tilføj en uddybende kommentar der forklarer hvordan du er nået hertil, og hvorfor du tror det virker. At indrømme at du ikke ved hvorfor noget virker er stadig mere hjælpsomt for den næste udvikler, end at få dem til regne ud hvad det er der sker fra bunden af.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Videre læsning
 
@@ -138,21 +138,21 @@ For at holde farver så simple som muligt, så vil mit råd være at respektere 
 
 Som udgangspunkt, så taler nøgleord ofte for sig selv. HSL-repræsentationen er ikke kun den nemmeste for den menneskelige hjerne at forstå <sup>[citation mangler]</sup>, den er også nemmere for forfattere af stylesheets når det kommer til at fintune farven ved at justere nuance, mætning og lyshed hver for sig. RGB har stadig en fordel ved med det samme at vise om farven er mere en blå, en grøn eller en rød, men den gør det ikke nemmere at bygge en farve ud af de tre dele. Til sidst, så er hexidecimaler tættest på at være uforståeligt for det menneskelige sind.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Når man anvender HSL eller RGB, så tilføj altid et enkelt mellemrum efter et komma (`,`) og ingen mellemrum mellem paranteser (`(`, `)`) og indhold.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Farver og variabler
 
 Når en farve anvendes mere end én gang, så gem den i en variabel med et meningsfuldt navn, der repræsenterer farven.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 Du står dig nu frit for at anvende denne variabel hvorend du vil. Dog, hvis din brug er tæt koblet til et tema, så vil jeg fraråde at anvende variablen som den er. Gem den i stedet i en anden variabel med et navn der forklarer hvordan den bør bruges.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 Ved at gøre det på denne måde, forhindrer du at tema-ændringer fører til ting som `$sass-pink: blue`.
 
@@ -168,7 +168,7 @@ Fordelen ved at anvende `mix` i stedet for at en af de to førnævnte funktioner
 
 Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to letanvendelige funktioner kaldet `tint` og `shade` (der også er en del af [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)), til at udføre den samme ting:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> funktionen er designet til at skalere egenskaber mere flydende ved at tage hvor høje og lave de allerede er med i betragtning. Den bør give resultater der er ligeså gode som <code>mix'</code> men med en klarere konvention for kald. Skaleringsfaktoren er dog ikke helt den samme.</p>
@@ -194,11 +194,11 @@ Lister bør respektere de følgende retningslinjer:
 * altid indpakked i paranteser;
 * efterstillede kommaer hvis flere linjer, ikke hvis indlejret.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Når du tilføjer nye artikler til en liste, så brug altid den medfølgende API. Forsøg ikke at tilføje nye artikler manuelt.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Videre læsning
 
@@ -221,17 +221,17 @@ Maps bør altid blive skrevet som følgende:
 
 Illustration:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ### Debugging af et Sass map
 
 Hvis du nogensinde har følt dig fortabt, og tænkt hvilken skør magi der foregår i et Sass map, så fortvivl ikke, der stadig er en måde at blive reddet på.
 
-{% include snippets/syntax/22/index.html %}
+{% include snippet.html path="syntax/22" file="index" %}
 
 Hvis du er interesseret i at vide dybden af map'et, så tilføj følgende funktion. Mixin'en vil vise det automatisk.
 
-{% include snippets/syntax/23/index.html %}
+{% include snippet.html path="syntax/23" %}
 
 ###### Videre læsning
 
@@ -259,7 +259,7 @@ På dette tidspunkt, hvilket mest er en opsummering af hvad alle ved, men her er
 
 Illustration:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 
 Ifølge disse CSS-relaterede retningslinjer, så ønsker vi at være opmærksomme på:
@@ -272,7 +272,7 @@ Ifølge disse CSS-relaterede retningslinjer, så ønsker vi at være opmærksomm
 
 Illustration:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Videre læsning
 
@@ -287,15 +287,15 @@ Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er nå
 
 Der er fordele og ulemper ved begge tilgange. På den ene side, så er alfabetisk sortering universelt (i det mindste for sprog, der anvender det latinske alfabet), så der er ikke noget argument om at sortere en egenskab efter en anden. Dog finder jeg det ekstremt mærkeligt ikke at se værdier som `bottom` og `top` lige ved siden af hinanden. Hvorfor skulle animationer komme før display-typen? Der er mange særheder ved en alfabetisk arrangering.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 På den anden side, giver arrangering af egenskaber efter type perfekt mening. Enhver skrifttype-relateret deklaration bliver samlet, `top` og `bottom` er genforenet, og at læse et regelsæt føles lidt ligesom at læse en kort historie. Men medmindre du holder til konventioner såsom [Idiomatic CSS](https://github.com/necolas/idiomatic-css), så opstår der en masse plads til fortolkning ved denne måde. Hvor bør `white-space` være: font eller display? Hvor hører `overflow` til helt præcist? Hvad er rækkefølgen for egenskaber i en gruppe (det kunne være alfabetisk, ironisk nok)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Der findes også en helt anden, interessant underart af type-sortering kaldet [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), der virker til også at være ret populær. Grundlæggende, så læner Concentric CSS sig op ad box-modellen for at definere en rækkefølge: den starter udefra og bevæger sig indad.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 For at tale for mig selv, så kan jeg ikke beslutte mig. En nylig afstemning på [recent poll on CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) konkluderede, at over 45% af udviklerne arrangerer deres deklarationer efter type imod 14%, der gør det alfabetisk. Dertil, så går 39% fuldstændig tilfældig til værks, inklusiv mig selv.
 
@@ -324,7 +324,7 @@ En særlig funktionalitet som Sass giver, der bliver misbrugt alt for meget af m
 
 For eksempel, så vil den følgende Sass indlejring:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … generere denne CSS:
 
@@ -332,7 +332,7 @@ For eksempel, så vil den følgende Sass indlejring:
 
 På samme måde er det siden Sass 3.3 muligt at anvende den nuværende selektor-reference (`&`) til at generere avancerede selektorer. For eksempel:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … vil generere denne CSS:
 
@@ -354,25 +354,25 @@ For at undgå en sådan situation, så **undgår vi indlejring af selektorer så
 
 Til at starte med, så er det tilladt og endda anbefalet at indlejre pseudo-klasser og pseudo-elementer inden i den indledende selektor.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 At anvende selektor-indlejring til pseudo-klasser og pseudo-elementer giver ikke alene mening (fordi det håndterer tæt relaterede selektorer), det hjælper også med at holde alt omkring et komponent på det samme sted.
 
 Dertil, så når komponent-agnostiske tilstandsklasser såsom `.is-active` anvendes, så er det helt i orden at indlejre det under komponentets selektor for at holde tingene pæne.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 Sidst, men ikke mindst, så når et element styles fordi det eksisterer inden i et andet specifikt element, så er det også fint at bruge indlejring til at holde alt omkring komponentet på det samme sted.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Når der arbejdes med uerfarne udviklere, så kan en selektor såsom `.no-opacity &` virke en anelse underlig. For at undgå enhver forvirring, så kan du bygge en meget kortfattet mixin, der transformerer denne underlige syntaks om til en eksplicit API.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Ved at genskrive vores tidligere eksempel, så vil det se ud som dette:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Som med alting, så er det specifikke rimelig irrelevant, da det er konsistens der er det vigtige. Hvis du føler dig fuldstændig sikker på selektor-indlejring, så brug selektor-indlejring. Bare sikr dig, at hele dit team er med på det.
 

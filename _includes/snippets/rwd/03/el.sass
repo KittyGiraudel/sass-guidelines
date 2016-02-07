@@ -1,0 +1,14 @@
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
+      @content
+  @else
+    @error "Δεν βρέθηκε τιμή για το `#{$breakpoint}`. " + "Παρακαλώ βεβαιώσου πως το έχεις ορίσει μέσα στο `$breakpoints` map."

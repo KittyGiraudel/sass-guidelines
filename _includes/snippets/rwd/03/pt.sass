@@ -1,0 +1,10 @@
+/// Gestor Responsivo.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  @if map-has-key($breakpoints, $breakpoint)
+    @media #{inspect(map-get($breakpoints, $breakpoint))}
+      @content
+  @else
+    @error "No value found for `#{$breakpoint}`. " + "Please make sure it is defined in `$breakpoints` map."

@@ -1,0 +1,5 @@
+/// Helper mixin to provide simple API to selector nesting
+/// @param {String} $selector - Selector
+=when-inside($selector)
+  #{$selector} &
+    @content

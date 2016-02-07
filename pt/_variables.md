@@ -21,23 +21,23 @@ A documentação fala na *ocultação de variáveis globais*. Quando se declara 
 
 O enxerto de código seguinte explica o conceito de *ocultação de variável*
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## Flag `!default`
 
 Quando se está a construir uma biblioteca, uma *framework*, um sistema de grelhas ou qualquer pedaço de código Sass com a intenção de ser distribuido e usado por programadores externos, todas as variáveis de configuração devem ser definidas com o marcador `!default` de forma a que possam ser substituidas.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Graças a isto, um programador pode definir a sua própria variável `$baseline` *antes* de importar a vossa biblioteca, sem que esta substitua o valor da vossa variável.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## Flag `!global`
 
 O marcador `!global` deve ser usado apenas quando se vai substituir uma variável global a partir de um contexto local. Quando se define uma variável num contexto global, o uso deste marcador deve ser omitido.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Variáveis multiplas ou mapas
 
@@ -45,4 +45,4 @@ Existem vantagens em usar mapas em vez de múltiplas variáveis. A principal é 
 
 Outra vantagem de usar um mapa, é a habilidade de criar uma função de leitura para providenciar uma API mais amigável. Por exemplo, considerem o seguinte código Sass:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

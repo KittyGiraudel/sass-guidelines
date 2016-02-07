@@ -18,13 +18,13 @@ A pravděpodobně jsem ještě zapomněl mnoho dalších důvodů. Komentování
 
 Nejlepší je, když *každé* CSS pravidlo předchází předchází komentář ve stylu jazyka C, který vysvětluje smysl CSS bloku. Tento komentář může také obsahuje očíslované vysvětlení pro specifické části pravidel. Například:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 V podstatě všechno co není zřejmé na první pohled, by mělo být okomentováno. Není tu nic takového jako přiliš mnoho dokumentace. Pamatujte, že nemůžete *komentovat zas tak mnoho*, takže nažhavte klávesy a pište komentáře pro všechno, co za to stojí.
 
 Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře namísto blokových komentářů ve stylu jazyka C. To zapříčiní, že se komentář nezobrazí ve výstupu, dokonce i v expanded módu během vývoje.
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Další četba
 
@@ -34,7 +34,7 @@ Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře 
 
 Každá proměnná, funkce, mixin a placeholder, která je zamýšlena býti znovupoužitelná v codebase by měla být dokumentována jako část globálního API využívající [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Jsou vyžadovány tři lomítka (<code>/</code>).</p>
@@ -49,7 +49,7 @@ SassDoc má dvě hlavní role:
 
 Zde je příklad rozsáhle dokumentovaného mixinu se SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Další četba
 

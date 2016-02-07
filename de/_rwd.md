@@ -9,11 +9,11 @@ Ich denke ich kann mit Sicherheit sagen dass Media Queries nicht auf ein bestimm
 
 Aus demselben Grund sollten Breakpoints nicht nach einem Endgerät, sondern allgemeiner benannt werden. Gerade da einige Smartphones mittlerweile größer als ein Tablet sind, manche Tablets größer als ein kleiner Desktopmonitor, und so weiter...
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 An diesem Punkt wird jede Namenskonvention, die klar macht dass ein Design nicht auf einen bestimmten Gerätetyp zugeschnitten ist, den Zweck erfüllen. Solange sie die Größenordnung erraten lässt.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>Das vorige Beispiel verwendet verschachtelte Maps um Breakpoints zu definieren, wie auch immer, das hängt ganz davon ab was für eine Art von Breakpointmanager du verwendest. Du könntest für eine bessere Flexibilität genauso gut Strings (z.B. <code>'(min-width: 800px)'</code>) anstatt Maps verwenden.</p>
@@ -27,7 +27,7 @@ An diesem Punkt wird jede Namenskonvention, die klar macht dass ein Design nicht
 
 Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg finden sie in deinen Media Queries anzuwenden. Es gibt eine Menge Wege, doch ich muss sagen das ich ein großer Fan von Breakpoint-Maps mit einer Getter-Funktion bin. Es ist einfach und effizient.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>Das ist natürlich ein ziemlich einfacher Breakpoint-Manager. Falls du einen etwas toleranteren brauchst, kann ich dir nur empfehlen das Rad nicht neu zu erfinden und dir <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> oder <a href="https://github.com/eduardoboucas/include-media">include-media</a> anzuschauen.</p>
@@ -42,7 +42,7 @@ Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg
 
 Noch garnicht lange her, gab es eine ziemlich hitzige Diskussion darüber wo man Media Queries deklarieren soll: gehören sie innerhalb eines Selektors (wie Sass es möglich macht) oder strikt getrennt? Ich muss sagen dass ich ein leidenschaftlicher Verfechter des *Media-Queries-in-Selektor* Systems bin, da ich denke dass es gut mit der Idee von *Komponenten* einher geht.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 Führt zu folgenden CSS:
 

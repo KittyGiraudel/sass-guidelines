@@ -1,0 +1,11 @@
+/// Mixin para producir prefijos de proveedores
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - propiedad CSS sin prefijo
+/// @param {*} $value - Valor CSS en crudo
+/// @param {List} $prefixes - Lista de prefijos a producir
+=prefix($property, $value, $prefixes: ())
+  @each $prefix in $prefixes
+    -#{$prefix}-#{$property}: $value
+
+  #{$property}: $value

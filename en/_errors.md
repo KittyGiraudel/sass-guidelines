@@ -21,7 +21,7 @@ Now, there is a lot of room in a Sass project for warnings and errors. Basically
 
 Take this function from [Sass-MQ](https://github.com/sass-mq/sass-mq) attempting to convert a `px` value to `em`, for instance:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 If the value happens to be unitless, the function assumes the value is meant to be expressed in pixels. At this point, an assumption may be risky so the user should be warned that the software did something that could be considered unexpected.
 
@@ -31,4 +31,4 @@ Errors, unlike warnings, prevent the compiler from going any further. Basically,
 
 As an example, let’s say you build a getter function to access values from a specific map. You could throw an error if the requested key does not exist in the map.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

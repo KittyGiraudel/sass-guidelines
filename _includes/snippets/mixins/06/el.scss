@@ -1,0 +1,13 @@
+/// Βοηθητικό mixin για να την παραγωγή vendor prefixes
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - Unprefixed CSS property
+/// @param {*} $value - Ακατέργαστη τιμή CSS
+/// @param {List} $prefixes - Λίστα απο prefixes για παραγωγή
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}

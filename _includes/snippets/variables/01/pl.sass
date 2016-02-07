@@ -1,0 +1,22 @@
+// Zainicjuj globalną zmienną na poziomie głównym.
+$variable: "initial value"
+
+// Utwórz mixin, który nadpisuje globalną zmienną.
+=global-variable-overriding
+  $variable: "mixin value" !global
+
+.local-scope::before
+  // Utwórz lokalną zmienną, która przysłania tą globalną.
+  $variable: "local value"
+
+  // Użyj mixinu: zastąpi on globalną zmienną.
+  +global-variable-overriding
+
+  // Wydrukuj wartość zmiennej.
+  // Będzie to ta **lokalna**, jako że przysłoniła tą globalną.
+  content: $variable
+
+// Wydrukuj zmienną w innym selektorze, który jej nie przysłoni.
+// Będzie to ta **globalna**, jak oczekiwano.
+.other-local-scope::before
+  content: $variable

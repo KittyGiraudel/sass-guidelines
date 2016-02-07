@@ -1,0 +1,7 @@
+$length: 42px
+
+// Yep
+$value: $length / 1px
+
+// Nope
+$value: str-slice($length + unquote(""), 1, 2)

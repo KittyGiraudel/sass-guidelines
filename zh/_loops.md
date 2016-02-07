@@ -9,11 +9,11 @@
 
 `@each` 循环绝对是Sass提供的三个循环方式中最常用的。它提供了一个简洁的 API 来迭代列表或 map。
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 当迭代一个 map 时，通常使用 `$key` 和 `$value` 作为变量名称来确保一致性。
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 同时遵守下述规则，确保可读性：
 
@@ -24,7 +24,7 @@
 
 当需要聚合伪类 `:nth-*` 的时候，使用 `@for` 循环很有用。除了这些使用场景，如果*必须*迭代最好还是使用 `@each` 循环。
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 要坚持一贯的传统，始终使用 `$i` 作为变量名，除非有非常好的原因，否则永远不要使用 `to` 关键字：而是始终使用 `through`。许多开发者甚至不知道 Sass 有这个变化；使用它可能会造成混乱。
 

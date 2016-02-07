@@ -1,0 +1,13 @@
+// Yep
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+// Nope
+$breakpoints: (
+  'tablet': (min-width: 800px),
+  'computer': (min-width: 1000px),
+  'tv': (min-width: 1200px),
+);

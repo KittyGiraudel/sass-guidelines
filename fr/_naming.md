@@ -13,7 +13,7 @@ Les placeholders Sass sont délibérément omis, car ils peuvent être considér
 
 En ce qui concerne les variables, les fonctions et les mixins, nous allons nous tenir à quelque chose de très *CSS*&nbsp;: **bas-de-casse et séparation par un tiret**, et surtout signifiant.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -25,7 +25,7 @@ Si vous êtes un développeur de frameworks ou si vous écrivez des bibliothèqu
 
 Comme dans de nombreux langages, je suggère d’utiliser des variables tout en majuscules et snake-case pour indiquer qu’il s’agit de constantes. C’est non seulement une convention déjà ancienne, mais elle contraste fortement avec les variables tout en minuscules et séparées par des tirets.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -37,7 +37,7 @@ Si vous avez l’intention de distribuer votre code Sass, sous forme de biblioth
 
 Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné à être utilisé par les développeurs du monde entier (qui ne le ferait pas&nbsp;?) il est important d’utiliser un namespace, tel que `su-`, suffisamment spécifique pour éviter toute collision de noms et suffisamment court pour ne pas devenir pénible à écrire.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d’&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>

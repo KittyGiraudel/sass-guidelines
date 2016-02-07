@@ -15,7 +15,7 @@ Versuch immer solche Beziehungen durch [Selektorenplatzhalter](http://www.sitepo
 
 Um Styles zu vererben, benutze `@exend` nur wenn der erweiternde `.class` oder `%placeholder` Selektor _ähnlich_ zu dem zu erweiterndem Selektor ist. Zum Beispiel `.error` ist ähnlich zu `.warning`, also kann `.error` `@extend .warning`.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. Trotzdem behalte immer folgende Regeln im Kopf, damit du behutsam `@extend` benutzen kannst:
 
@@ -33,7 +33,7 @@ Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. T
 
 Du solltest Selektoren nur innerhalb desselben Media Scopes (`@media` Regel) erweitern. Stell dir ein Media Query als weitere Beschränkung vor.
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhalb von Selektoren zu pflegen. Wenn zwei Selektoren charakteristisch gleich sind, ist es der perfekte Anwendungsfall für `@extend`. Wenn sie jedoch ohne Beziehung zueinander stehen, aber gleiche Regeln teilen dann passt ein `@mixin` besser.
 

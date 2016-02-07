@@ -1,0 +1,14 @@
+// Yep
+.foo, .foo-bar,
+.baz {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+// Nope
+.foo,
+.foo-bar, .baz {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto }

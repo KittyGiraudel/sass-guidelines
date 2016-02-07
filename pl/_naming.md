@@ -13,7 +13,7 @@ Placeholdery w Sassie zostały celowo tutaj ominięte bowiem traktować je nale�
 
 W odniesieniu natomiast do zmiennych, funkcji i mixinów, utrzymujemy konwencję znaną z *CSSa*: **małe litery, myślniki jako separatory**, a przede wszystkim – nazwy muszą nieść ze sobą znaczenie.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Dalsze informacje
 
@@ -25,7 +25,7 @@ Każdy deweloperem pracujący z frameworkami, czy też zajmujący się określon
 
 Jak w przypadku wielu innych języków programowania, zalecam korzystanie z nazw opartych o wielkie litery, rozdzielane znakami podkreślenia, aby oznaczyć stałe. Nie tylko jest to już przyjętą konwencją, ale także wyraźnie kontrastuje ze zmiennymi pisanymi małymi literami, rozdzielanymi myślnikami.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Dalsze informacje
 
@@ -37,7 +37,7 @@ Jeśli zamierzamy rozpowszechniać swój kod pisany w Sassie, na przykład jako 
 
 Na przykład, pracując nad projektem *Sassowski Jednorożec*, który z założenia ma być wykorzystywany przez deweloperów na całym świecie (kto by nie chciał z czegoś tak nazwanego korzystać?), warto się zastanowić się czy nie było by dobrze używać prefiksu `sj-` dla wszelkich nazw. Wydaje się, że będzie to na tyle specyficzne, że zapobiegnie wszelkim kolizjom nazwowym a jednocześnie też na tyle krótkie, że nie będzie sprawiało problemów przy pisaniu kodu.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Warto zaznaczyć, że automatyczne ograniczanie przestrzeni nazw jest jednym ze składników nadchodzących zmian w funkcji <code>@import</code> w wersji 4.0 Sassa. Jak już odpowiednie zmiany wejdą w życie, ręczne ograniczanie przestrzeni stanie się coraz to mniej użyteczne, a w końcu stanie się nawet problematyczne.</p>

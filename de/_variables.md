@@ -21,23 +21,23 @@ Sass' Dokumentation spricht von *Beschattung globaler Variablen*. Wenn eine Vari
 
 Folgendes Code-Snippet erklärt das Konzept der *Variablenbeschattung*:
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## `!default` flag
 
 Wenn eine Library, ein Framework, ein Gridsystem oder irgendwas anders in Sass verbreitet, und von externen Entwicklern benutzt wird, sollten alle Konfigurationsvariablen als `!default` markiert werden, sodass sie auch überschrieben werden können.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Dadurch ist es einem Entwicker möglich, seine eigene `$baseline` Variable *vor* dem importieren deiner Library zu defineren, ohne dass sie überschrieben wird.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## `!global` flag
 
 Das `!global` Flag sollte nur benutzt werden wenn eine globale Variable vom lokalen Scope überschrieben wird. Wenn eine Variable auf dem Root-Level definiert wird, sollte das `!global` Flag weggelassen werden.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Mehrere Variablen oder Maps
 
@@ -45,4 +45,4 @@ Es gibt Vorteile Maps anstatt mehreren eindeutigen Variablen zu verwenden. Der g
 
 Ein weiterer Vorteil von Maps ist die Möglichkeit eine kleine Getter-Funktion zu schreiben, um eine freundlichere API bereitzustellen. Stell dir zum Beispiel folgenden Sass-Code vor:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

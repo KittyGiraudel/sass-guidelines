@@ -1,0 +1,9 @@
+// Yep
+.foo {
+  width: (100% / 3);
+}
+
+// Nope
+.foo {
+  width: 100% / 3;
+}

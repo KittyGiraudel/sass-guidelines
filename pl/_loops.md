@@ -9,11 +9,11 @@ Obecność pętli zakłada zazwyczaj stosunkowo skomplikowane rozwiązania, któ
 
 Pętla `@each` jest zdecydowanie najczęściej używaną z trzech form pętli dostarczanych przez Sassa. Zapewnia ona czyste API do iteracji wewnątrz listy czy mapy.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Iterując wewnątrz mapy, należy używać `$key` i `$value` jako nazw zmiennych celem wymuszenia spójności.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 Należy się także upewnić, aby respektować poniższe zasady dla lepszej czytelności kodu:
 
@@ -24,7 +24,7 @@ Należy się także upewnić, aby respektować poniższe zasady dla lepszej czyt
 
 Pętle `@for` mogą wydawać się użyteczne w połączeniu z pseudo-klasą `:nth-*` w CSSie. Z wyjątkiem tych sytuacji, zaleca się preferowanie pętli `@each` jeśli naprawdę *trzeba* iterować wewnątrz czegoś.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Używajmy `$i` jako nazwy zmiennej by trzymać się ustalonej konwencji i, chyba że jest ku temu jakiś naprawdę ważny powód, nigdy nie używajmy słowa `to`. Należy zawsze korzystać z `through`. Wielu deweloperów nawet nie zdaje sobie sprawy z tego, że Sass daje taką możliwość.
 

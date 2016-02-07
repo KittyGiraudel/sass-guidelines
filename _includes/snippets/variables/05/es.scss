@@ -1,0 +1,20 @@
+/// Mapa de Z-indexes, reuniendo todos las capas Z de la aplicación
+/// @access private
+/// @type Map
+/// @prop {String} key - Nombre de la capa
+/// @prop {Number} value - Valor Z asignada a la clave
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);
+
+/// Obtener todos los z-index a partir del nombre de una capa
+/// @access public
+/// @param {String} $layer - Nombre de la capa
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}

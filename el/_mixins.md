@@ -11,11 +11,11 @@
 
 Κατόπιν αυτού, τα mixins είναι πολύ χρήσιμα και καλό είναι να τα χρησιμοποιείς. Εμπειρικά, αν εντοπίσεις κάποια CSS properties τα οποία εμφανίζονται πάντα μαζί για κάποιο λόγο (δηλ. όχι τυχαία), μπορείς να τα βάλεις σε ένα mixin. Το [micro-clearfix hack του Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) αξίζει να μπει σε ένα (argumentless) mixin για παράδειγμα.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Άλλο ένα αξιόλογο παράδειγμα θα ήταν ένα mixin που θα ορίζει το μέγεθος ενός element, ορίζονται το `width` και το `height` ταυτόχρονα. Όχι μόνο θα έκανε τον κώδικα ελαφρύτερο κατά την πληκτρολόγηση, αλλά και πιο ευανάγνωστο.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Περαιτέρω ανάγνωση
 
@@ -28,19 +28,19 @@
 
 Σ' αυτές τις περιπτώσεις, μπορούμε να παραλείξουμε άφοβα τις παρενθέσεις όταν τα καλούμε. Το `@include` keyword (ή το σύμβολο `+` σε indented-syntax) ήδη λειτουργεί ως δείκτης ότι σ' αυτή η γραμμή καλείται ένα mixin· δε χρειάζονται επιπλέον παρενθέσεις εδώ.
 
-{% include snippets/mixins/08/index.html %}
+{% include snippet.html path="mixins/08" file="index" %}
 
 ## Arguments list
 
 Όταν έχουμε να κάνουμε με έναν άγνωστο αριθμό από arguments σε ένα mixin, χρησιμοποιούμε πάντα μία `arglist` αντί για μία λίστα. Δες την `arglist` ως το όγδοο κρύφο undocumented data type της Sass που χρησιμοποιείται έμμεσα όταν περνάμε έναν αυθαίρετο αριθμό από arguments σε ένα mixin ή σε μία συνάρτηση της οποίας το signature περιέχει `...`.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Οπότε, όταν φτιάχνουμε ένα mixin που δέχεται αρκετά arguments (ας πούμε 3 ή περισσότερα), σκέψου καλά πριν τα συγχωνεύσεις σε μία λίστα ή ένα map με τη λογική ότι θα είναι πιο εύκολο από το να τα περάσεις ένα-ένα.
 
 Η Sass είναι αρκετά έξυπνη όσον αφορά τα declarations στα mixins και στις συναρτήσεις, τόσο που μπορείς να περάσεις μία λίστα ή ένα map ως arglist σε μία συνάρτηση function/mixin ώστε να την αναγνωρίσει ως μια σειρά από arguments.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Περαιτέρω ανάγνωση
 
@@ -54,15 +54,15 @@
 
 Αν δε μπορείς να χρησιμοποιήσεις το Autoprefixer ούτε το Bourbon ούτε το Compass, τότε και μόνο τότε μπορείς να φτιάξεις το δικό σου mixin για να κάνεις prefix τις ιδιότητες της CSS. Αλλά. Μην φτιάξεις ένα mixin για κάθε ιδιότητα που εκτυπώνε όλους τους vendors.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Κάντο με τον έξυπνο τρόπο.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 Οπότε μετά η χρήση αυτού του mixin είναι προφανής:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Μην ξεχνάς ότι αυτή είναι μία Please keep in mind this is a κακή λύση. Για παράδειγμα, δε μπορεί να διαχειριστεί σύνθετα polyfills όπως αυτά που χρειάζονται για το Flexbox. Μ' αυτή τη λογική, η χρήση του Autoprefixer είναι πολύ καλύτερη λύση.
 

@@ -9,11 +9,11 @@ Allerdings mögen Loops sonst eher komplexe Logik andeuten welche wahrscheinlich
 
 Der `@each`-Loop ist definitiv der meist genutzte aller von Sass zur Verfügung gestellten Loops. Es bietet eine saubere API um über eine Liste oder Map zu iterieren.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Wenn du über eine Map iterierst, benutze immer `$key` und `$value` als Variablennamen um konsistent zu bleiben.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 Halte dich außerdem für eine bessere Lesbarkeit an folgende Richtlinien:
 
@@ -24,7 +24,7 @@ Halte dich außerdem für eine bessere Lesbarkeit an folgende Richtlinien:
 
 Der `@for`-Loop ist in Kombination mit der CSS Pseudoklasse `:nth-*` hilfreich. Außer in diesem Fall, solltest du eher einen `@each`-Loop verwenden wenn du über etwas iterieren *musst*.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Als Variablennamen solltest du immer `$i` verwenden. Dadurch hälst du dich an bekannte Konventionen und solange du keinen wirklichen guten Grund hast, nutze immer das `through`-Keyword anstatt dem `to`-Keyword. Viele Entwickler wissen nicht einmal das Sass diese Variationen anbietet, deshalb kann es zu Verwirrungen kommen.
 

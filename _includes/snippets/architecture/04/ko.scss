@@ -1,0 +1,10 @@
+/**
+ * Nav 한정성 해결.
+ *
+ * 누군가 헤더 코드에 ID를 사용해서 (`#header a {}`) 네비게이션 선택자
+ * (`.site-nav a {}`)가 무효화됨. 헤더 부분 리팩터링할 시간이 날 때까지
+ * !important로 덮어쓸 것.
+ */
+.site-nav a {
+  color: #BADA55 !important;
+}

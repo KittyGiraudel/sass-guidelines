@@ -171,7 +171,7 @@ For at bevare læsbarheden, bør main filen respektere følgende retningslinjer:
 * en ny linje efter den sidste import fra en mappe;
 * filtyper og ledende underscores udeladt.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Der er en anden måde at importerer partials, som jeg også anser som værende i orden. På den lyse side, så gør det filen mere læsbar. På den anden side, så gør dét det mere smertefuldt at opdatere. Under alle omstændigheder, så vil jeg lade dig om at beslutte hvad der er bedst, da det ikke betyder særlig meget. For denne måde, bør `main` filen respektere følgende guidelines:
 
@@ -181,7 +181,7 @@ Der er en anden måde at importerer partials, som jeg også anser som værende i
 * en ny linje efter den sidste import fra en mappe;
 * filtyper og ledende underscores udeladt.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>For ikke at skulle importere hver fil manuelt, så findes der en udvidelse til Ruby Sass kaldet <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, der gør det muligt at anvende glob-mønstre i Sass <code>@import</code> som eksempelvis <code>@import "components/*"</code>.</p>
@@ -192,7 +192,7 @@ Der er en anden måde at importerer partials, som jeg også anser som værende i
 
 Der findes et interessant koncept, der allerede er blevet gjort populært af [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) og [Chris Coyier](http://css-tricks.com), hvilket involverer at alle CSS-deklarationer, hacks og ting vi ikke er stolte af, bliver smidt i en *shame fil*. Denne fil, med den dramatiske titel `_shame.scss`, bliver så importeret efter alle andre filer, til sidst i stylesheetet.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Videre læsning
 

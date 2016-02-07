@@ -9,11 +9,11 @@ No entanto, a presença de ciclos normalmente implica lógica moderadamente comp
 
 O ciclo `@each` é definitivamente o mais usado dos três ciclos que Sass oferece. Apresenta uma API simples para iterar uma lista ou mapa.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Ao iterar um mapa, usem sempre `$key` e `$value` como nomes de variáveis para manter a consistência.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 Façam também questão de respeitar as seguintes diretrizes para preservar a legibilidade:
 
@@ -24,7 +24,7 @@ Façam também questão de respeitar as seguintes diretrizes para preservar a le
 
 O ciclo `@for` poderá ser útil quando combinado com as pseudo-classes `:nth-*` de CSS. À exceção destes cenários, é preferível um ciclo `@each` se *têm* de iterar sobre algo.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Usem sempre `$i` como nome de variável para manter a convenção comum e a menos que tenham boa razão para tal, nunca usem a palavra-chave `to`: usem sempre `through`. Muitos programadores não sabem que Sass oferece esta variação; usá-la poderá levar a confusão.
 

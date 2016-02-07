@@ -1,0 +1,9 @@
+// Yep
+$breakpoints: (
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px,
+);
+
+// Nope
+$breakpoints: ( small: 767px, medium: 992px, large: 1200px );

@@ -21,7 +21,7 @@ Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기�
 
 [Sass-MQ](https://github.com/sass-mq/sass-mq)의 `px` 값을 `em`으로 변환하려 시도하는 이 함수를 예로 들겠습니다:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 만약 값에 단위가 없으면 이 함수는 그 값이 픽셀로 표현되어야 하는 것으로 추정합니다. 이 시점에서, 추정은 위험할 수 있으며 따라서 사용자는 소프트웨어가 예기치 않은 것으로 간주될 수 있는 행동을 했다는 경고를 받아야 합니다.
 
@@ -31,4 +31,4 @@ Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기�
 
 가령 특정 맵의 값에 접근하는 getter 함수를 만든다고 합시다. 만약 요청된 키가 맵에 존재하지 않으면 오류를 던질 수 있습니다.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

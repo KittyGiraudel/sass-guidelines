@@ -1,0 +1,15 @@
+/// Stopniowo rozjaśniaj kolor
+/// @access public
+/// @param {Color} $color - kolor do rozjaśnienia
+/// @param {Number} $percentage - procent pierwotnego `$color` w zwróconej wartości
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+/// Stopniowo przyciemniaj kolor
+/// @access public
+/// @param {Color} $color - kolor do przyciemnienia
+/// @param {Number} $percentage - procent pierwotnego `$color` w zwróconej wartości
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)

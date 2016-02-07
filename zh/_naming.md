@@ -13,7 +13,7 @@
 
 就变量、函数和混合宏的命名而言，我们坚持一些很 *CSS-y* 的风格：**小写连字符分隔**，有意义的命名。
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### 扩展阅读
 
@@ -25,7 +25,7 @@
 
 对于众多编程语言，我建议使用全大写方式书写常量。这不仅是一个由来已久的编程习惯，而且可以很好的与小写连字符变量加以区别。
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### 扩展阅读
 
@@ -37,7 +37,7 @@
 
 举例来说，如果你参加了一个名为 *Sassy Unicorn* 的项目——这意味着全球的开发者都可能会使用它（谁都有可能，对吧？），你可能会考虑使用 `su-` 作为一个命名空间。这确实非常独特，既不会引发命名冲突，又足够短小而没有书写困难。
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>需要注意的是，自动命名空间功能绝对是即将到来的Sass4.0中重构的<code>@import</code>的一个设计目标。随着即将取得结果，将会越来越少的需要手动命名，最终，手动命名库名实际上会越来越难用。</p>

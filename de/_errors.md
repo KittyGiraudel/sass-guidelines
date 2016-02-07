@@ -21,7 +21,7 @@ Es gibt eine Menge Spielraum für Warnungen und Fehler in einem Sass Projekt. Gr
 
 Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche versucht einen `px`-Wert in `em` umzuwandeln, als Beispiel:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Wenn der Wert ohne Einheit ist, geht die Funktion davon aus das es als Pixel behandelt werden soll. An dieser Stelle ist eine Vermutung eventuell zu riskant, deshalb sollte der Entwickler davor gewarnt werden dass die Software etwas unerwartes ausgeben könnte.
 
@@ -31,4 +31,4 @@ Fehler, im Gegenteil zu Warnungen, hindern den Compiler dabei weiter zu machen. 
 
 Lass uns als Beispiel annehmen dass du eine Getter-Funktion hast um Werte aus einer bestimmten Map zu erreichen. Du könntest einen Fehler anzeigen wenn der angeforderte Key in der Map nicht existiert.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

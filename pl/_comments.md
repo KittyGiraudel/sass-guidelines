@@ -18,13 +18,13 @@ Prawdopodobnie pominąłem tu wiele innych ważnych sytuacji. Pisanie komentarzy
 
 Najlepiej jest, gdy *każdy* zestaw reguł jest poprzedzony komentarzem, napisanym w stylu komentarzy z języka C, który objaśnia znaczenie danego bloku kodu. Komentarz ten także może dotyczyć konkretnych reguł. Dla przykładu:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 W zasadzie wszystko, co na pierwszy rzut oka może nie być do końca jasne, powinno być komentowane. Nie istnieje coś takiego, jak zbyt duża dokumentacja. Pamiętajmy o tym i śmiało piszmy komentarze!
 
 Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych komentarzy, zamiast bloków w stylu języka C. Dzięki temu takie komentarze nie zostaną dodane do wyjściowego, skompilowanego pliku CSS, nawet w trybie "expanded".
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Dalsze informacje
 
@@ -34,7 +34,7 @@ Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych k
 
 Każda zmienna, funkcja, mixin czy placeholder, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Trzy ukośniki (<code>/</code>) są wymagane.</p>
@@ -49,7 +49,7 @@ SassDoc spełnia dwie zasadnicze funkcje:
 
 Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Dalsze informacje
 

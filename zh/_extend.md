@@ -15,7 +15,7 @@
 
 当继承 `.class` 或 `%placeholder` 时，如果父类和子类是同一类型，那么建议只使用 `@extend` 来实现，比如 `.error` 是 `.warning` 的一种，那么 `.error` 就可以通过 `@extend .warning` 来实现。
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 扩展选择器在许多情境下是有用和值得的。始终牢记下面这些规则，谨慎使用 `@extend` 指令：
 
@@ -33,7 +33,7 @@
 
 应该只在同一个媒体查询作用域下继承选择器，将媒体查询视为一种对作用域的限制。
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 简而言之，建议将 `@extend` 只用于维持选择器之间的关系。如果两个选择器的内容具有典型的相似性和结构性，那么这就是使用 `@extend` 的最佳场景了。如果它们之间没有关联，只是某些样式相似，那么使用 `@mixin` 更合适。
 

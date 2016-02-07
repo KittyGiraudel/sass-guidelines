@@ -18,13 +18,13 @@ Und wahrscheinlich habe ich noch eine Menge weiterer Gründe vergessen warum man
 
 Idealerweise, ist *jedes* CSS Regelwerk durch einen im C-Stil vorangestellten Kommentar, welcher erklärt was der jeweilige CSS Block soll, versehen. Der Kommentar beinhaltet ebenfalls eine nummerierte Liste an Erklärung zu bestimmten Teilen des Regelwerk. Zum Beispiel:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 Grundsätzlich alles was auf dem ersten Blick nicht offensichtlich ist sollte kommentiert werden. Es gibt nicht zu viel Dokumentation. Vergiss nicht, dass es auch nicht so etwas wie *zuviele Kommentare* gibt. Also leg los und schreib Kommentare für alles was sich lohnt.
 
 Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommentare anstatt des C-Stil Block. Das macht die Kommentare unsichtbar im Output und selbst im erweiterten Modus bei der Entwicklung.
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Weitere Informationen
 
@@ -34,7 +34,7 @@ Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommen
 
 Jede Variable, Funktion, Mixin und Platzhalter welches nicht vorgesehen ist innerhalb der Codebasis wiederverwendet zu werden, sollte via [SassDoc](http://sassdoc.com) als Teil der globalen API dokumentiert werden.
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Drei Schrägstriche (<code>/</code>) erforderlich.</p>
@@ -49,7 +49,7 @@ SassDoc hat zwei Hauptaufgaben:
 
 Beispiel eines umfangreich dokumentiertem Mixin über SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Weitere Informationen
 

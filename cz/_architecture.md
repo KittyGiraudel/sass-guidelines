@@ -171,7 +171,7 @@ V zájmu zachování čitelnosti by měl hlavní soubor respektovat tyto pokyny:
 * nový řádek po posledním importu ze složky;
 * vynechat přípony souborů a podtržítko na začátku.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Je tu ještě další způsob importování partials, který také považuji za validní. Na jednu stranu to dělá soubor více čitelným, ale na stranu druhou dělá úpravy trochu více bolestné. Každopádně, nechám vás rozhodnout se, který způsob je nejlepší - moc na tom nezáleží. Pro tento způsob by měl hlavní soubor dodržovat tyto pokyny:
 
@@ -181,7 +181,7 @@ Je tu ještě další způsob importování partials, který také považuji za 
 * nový řádek po posledním importu ze složky;
 * vynechat přípony souborů a podtžítko na začátku.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>Abyste nemuseli importovat každý soubor ručně, můžete využít Ruby Sass rozšíření zvané <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, díky kterému můžete používat globální vzory v Sass <code>@import</code> jako např. <code>@import "components/*"</code>.</p>
@@ -192,7 +192,7 @@ Je tu ještě další způsob importování partials, který také považuji za 
 
 Zajímavý koncept, který zpopularizoval [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) a [Chris Coyier](http://css-tricks.com), který se skládá z uvedení všech CSS deklarací, hacků a věcí, na které nejsme pyšní do *ostudného souboru*. Tento soubor, který je dramaticky pojmenován `_shame.scss`, by měl být importován po ostatních souborech na konci stylu.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Další četba
 

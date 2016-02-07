@@ -1,0 +1,5 @@
+/// Βοηθητικό mixin το οποίο προσφέρει ένα απλό API για εμφώλευση selector
+/// @param {String} $selector - Selector
+=when-inside($selector)
+  #{$selector} &
+    @content

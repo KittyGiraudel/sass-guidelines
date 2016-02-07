@@ -12,7 +12,7 @@
 * 적절하게 쓰인 여러 행의 CSS 규칙;
 * 공백의 의미 있는 사용.
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 이 절에서는 파일 구조에 대한 질문과는 씨름하지 않겠습니다. 그것은 [다른 절](#section-51)의 주제입니다.
 
@@ -24,7 +24,7 @@
 
 문자 인코딩과 관련한 잠재적인 문제를 피하기 위해서는, [메인 스타일시트](#main-)에서 `@charset` 지시어를 사용해 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 인코딩을 강제하는 것이 강력하게 권장됩니다. 이 지시어가 스타일시트의 가장 첫 번째 요소이고 어떤 종류의 문자도 앞에 오지 않도록 하세요.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### 따옴표
 
@@ -39,13 +39,13 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 * 전반적인 가독성에 도움이 된다;
 * 문자열을 따옴표로 감싸지 않을 적절한 이유가 없다.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 ### CSS 값인 문자열
 
 `initial`이나 `sans-serif` 같은 특정 CSS 값은 따옴표로 싸여서는 안됩니다. `font-family: 'sans-serif'` 같은 선언의 경우 CSS는 인용부호가 붙은 문자열이 아니라 식별자를 기대하고 있기 때문에 아무 경고도 없이 작동하지 않을 것입니다. 이 때문에, 그런 값들은 따옴표로 감싸지 않습니다.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 따라서, 우리는 앞의 예처럼 CSS 값(CSS 식별자)으로 사용될 문자열과 맵 키와 같은 Sass 자료 유형에 쓰일 문자열을 구별할 수 있습니다.
 
@@ -55,13 +55,13 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 
 만약 문자열이 하나 혹은 여러 개의 작은 따옴표를 포함하고 있다면, 문자열 안에서 과도한 문자 이스케이프를 피하기 위해 대신 큰 따옴표(`"`)로 문자열을 감싸는 것을 고려해 볼 수 있습니다.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URL
 
 URL 역시 위와 동일한 이유로 따옴표로 감싸여야 합니다:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### 참고
 
@@ -76,29 +76,29 @@ Sass에서 숫자는 단위가 없는 숫자에서부터 길이, 기간, 빈도,
 
 숫자는 1보다 작은 소수 앞에 앞장서는 영을 표기해야 합니다. 뒤따르는 영은 절대 표기하지 마세요.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 ### 단위
 
 길이를 다룰 때, `0` 값은 절대로 단위를 가져선 안 됩니다.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수는 단위가 숫자에 안전하게 덧붙여질 수 있는 문자열이라고 생각하는 것입니다. 이게 그럴 듯하게 들리긴 하지만, 단위가 작동하는 방식은 분명히 아닙니다. 단위를 대수 기호라고 생각해보세요. 예를 들어 실제 세계에서, 5인치에 5인치를 곱하면 25 제곱 인치가 나옵니다. 똑같은 논리가 Sass에도 적용됩니다.
 
 단위를 숫자에 붙이기 위해서는, 이 숫자에 *1 단위*를 곱해야 합니다.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 *0 단위*를 더하는 것도 역시 같은 결과를 내긴 하지만, *0 단위*를 더하는 것은 약간 혼란스러울 수 있기 때문에 앞서 언급한 방법을 추천합니다. 사실, 숫자를 다른 호환되는 단위로 변환하려고 할 때, 0을 더하는 것은 효과가 없습니다.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 결국에는, 여러분이 달성하려고 하는 것이 무엇인지에 달려있습니다. 단위를 문자열로서 더하는 것은 좋은 방법이 아니라는 점을 명심하세요.
 
 값의 단위를 제거하기 위해서는, *그 종류의 한 단위*로 나누어야 합니다.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 단위를 문자열로서 숫자에 덧붙이면 결과물은 문자열이 되며, 그 값으로 더이상 연산을 할 수 없습니다. 숫자의 숫자 부분을 단위에서 잘라내면 그 결과 역시 문자열이 됩니다. 이것은 여러분이 원하는 것이 아닙니다.
 
@@ -106,7 +106,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 **최상위 숫자 계산은 언제나 괄호로 감싸져야 합니다**. 이 요건은 가독성을 향상시킬 뿐만 아니라, Sass가 괄호 안의 수치를 계산하도록 강제함으로써 일부 예외적인 상황을 방지합니다.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### 매직 넘버
 
@@ -114,7 +114,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 말할 것도 없이 **매직 넘버는 역병 같은 존재이며 무슨 수를 써서라도 피해야 합니다**. 왜 매직넘버가 효과를 내는지에 대한 합리적인 설명을 찾을 수 없을 때는, 어떻게 거기에 도달했고 왜 효과를 낸다고 생각하는지를 설명하는 충분한 주석을 달아놓으세요. 무언가가 제대로 작동하는 이유를 모른다고 인정하는 것이 그래도 아무런 사전 정보 없이 알아내게 하는 것보다 다음 개발자에게 더 도움이 됩니다.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### 참고
 
@@ -138,21 +138,21 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 우선, 키워드는 자명한 서식입니다. HSL 표기는 인간의 두뇌로 이해하기에 가장 쉬울 뿐만 아니라<sup>[citation needed]</sup> 스타일시트 작성자가 색상, 채도, 명도를 조정함으로써 색을 변경하는 일을 쉽게 만듭니다. RGB 역시 색이 청색, 녹색, 적색 중 어느 것에 가까운지 바로 보여주는 이점을 갖고 있지만 세 속성으로부터 색을 제조하는 일을 쉽게 만들어주진 않습니다. 마지막으로, 16진법은 인간의 머리로는 거의 해독이 불가능합니다.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이스 한 칸을 더하고 괄호(`(`, `)`)와 내용 사이에는 스페이스를 넣지 마세요.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### 색과 변수
 
 색을 한 번 이상 사용할 때는 색을 대변하는 의미 있는 이름을 붙여 변수에 저장하세요.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 이제 이 변수를 언제든 원할 때마다 자유롭게 사용할 수 있습니다. 하지만, 만약 변수의 용도가 테마와 깊은 관련이 있다면, 변수를 그대로 사용하지 말라고 조언하겠습니다. 대신, 그 변수가 어떻게 사용되어야 하는지 설명하는 이름을 붙여 다른 변수에 저장하세요.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 이렇게 함으로써 테마 변경이 `$sass-pink: blue` 같은 사태를 초래하는 것을 방지할 수 있습니다.
 
@@ -168,7 +168,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 만약 매번 `mix` 함수를 쓰는 것을 원치 않으신다면, 두 가지 사용하기 쉬운 ([Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)에 포함되어 있기도 한) `tint`와 `shade` 평션을 만들어 같은 일을 할 수 있습니다:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 함수는 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 함수는 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
@@ -194,12 +194,12 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 * 언제나 괄호로 감싼다;
 * 여러 줄인 경우 뒤따르는 쉼표를 붙이고, 한 줄인 경우 제외한다.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 
 리스트에 새로운 아이템을 추가할 때는, 언제나 제공된 API를 이용하세요. 수동으로 새로운 아이템을 추가하려고 하지 마세요.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### 참고
 
@@ -223,17 +223,17 @@ Sass 3.3부터, 스타일시트 작성자는 맵을 정의할 수 있는데, 이
 
 보기:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ### Sass 맵 디버그
 
 어떤 미친 마법이 Sass 맵에서 일어나고 있는 건지 알 수 없어 헤매는 스스로를 발견하게 된다면, 아직 구원받을 수 있는 방법이 있으니 걱정하지 마십시오.
 
-{% include snippets/syntax/22/index.html %}
+{% include snippet.html path="syntax/22" file="index" %}
 
 맵의 깊이를 알고 싶으시면 아래 함수를 추가하세요. 위의 믹스인이 자동으로 값을 표시할 것입니다.
 
-{% include snippets/syntax/23/index.html %}
+{% include snippet.html path="syntax/23" %}
 
 ###### 참고
 
@@ -261,7 +261,7 @@ Sass 3.3부터, 스타일시트 작성자는 맵을 정의할 수 있는데, 이
 
 보기:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심을 기울여야 합니다:
 
@@ -273,7 +273,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 보기:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### 참고
 
@@ -288,15 +288,15 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 두 가지 방법 모두 장단점이 있습니다. 우선, 알파벳순은 (적어도 로마자를 사용하는 언어에서는) 보편적인 만큼 한 속성을 다른 속성 앞에 정렬하는 문제가 논쟁거리가 못됩니다. 하지만, `bottom`과 `top` 같은 속성들이 서로 붙어있지 않은 모습이 제겐 엄청나게 이상해보입니다. 왜 애니메이션이 디스플레이 유형보다 먼저 나와야 합니까? 알파벳순에는 이상한 점이 많이 있습니다.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 반면, 유형별로 속성을 정렬하는 것은 아주 타당합니다. 모든 폰트 관련 선언들이 한데 모이고, `top`과 `bottom`은 재결합하며 규칙들을 보면 마치 짧은 이야기를 읽는 느낌입니다. 그러나 [Idiomatic CSS](https://github.com/necolas/idiomatic-css)와 같은 관례를 고수하지 않는 한 이 방식은 여러가지로 해석될 수 있습니다. `white-space`는 어디로 가야 할까요: 폰트 혹은 디스플레이? `overflow`는 정확히 어디에 속할까요? 그룹 내에서 속성들의 순서는 어떻게 되어야 할까요(역설적이게도, 알파벳순으로 정렬할 수도 있겠죠)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 유형별 정렬의 다른 흥미로운 하위 갈래로 [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)라는 것이 있는데, 이것 역시 꽤 많이 사용되는 듯 합니다. 기본적으로, Concentric CSS는 순서를 정의하기 위해 박스 모델에 의존합니다: 바깥쪽에서 출발해서, 안쪽으로 들어오게 되죠.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 저 스스로도 결정할 수가 없다는 점을 말씀드려야겠습니다. [CSS Tricks에서의 최근 설문조사](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)에 따르면 45% 이상의 개발자들이 유형별로, 14%가 알파벳순으로 선언을 정렬하는 것으로 나타났습니다. 또한, 완전히 임의로 정렬하는 39%의 개발자들도 있습니다. 저를 포함해서요.
 
@@ -325,7 +325,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 예로, 아래의 Sass는:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … 이런 CSS를 만들어냅니다:
 
@@ -333,7 +333,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 같은 방식으로, Sass 3.3부터는 현재 선택자 참조(`&`)를 이용해 고급 선택자를 생성하는 것이 가능합니다. 예를 들면:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … 위의 코드는 이런 CSS를 생성합니다:
 
@@ -355,25 +355,25 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 우선, 원래의 선택자 안에 가상 클래스와 가상 요소를 내포하는 것은 허용되며 나아가 추천할 만합니다.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 가상 클래스와 가상 요소에 선택자 내포를 사용하는 것은 (밀접하게 관련된 선택자를 다루므로) 타당할 뿐만 아니라, 한 컴퍼넌트에 관한 모든 것을 같은 장소에 유지하는 데 도움이 됩니다.
 
 또한, `.is-active` 같은 컴퍼넌트에 독립적인 상태 클래스를 사용할 때, 컴퍼넌트의 선택자 아래에 내포하여 깔끔하게 정리하는 것에는 아무 문제가 없습니다.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 마지막으로 짚어야 할 것으로, 요소를 꾸밀 때, 그것이 우연히 다른 특정 요소 안에 들어가있다면 그 컴퍼넌트에 관한 모든 것을 한 곳에 유지하기 위해 내포를 사용하는 것은 문제가 없습니다.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 경험이 적은 개발자와 함께 일한다면, `.no-opacity &` 같은 선택자는 조금 이상해보일 수 있습니다. 혼란을 방지하기 위해, 이 이상한 구문을 명확한 API로 바꿔놓는 아주 짧은 믹스인을 만들 수 있습니다.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 앞의 예시를 다시 쓰면 이렇게 됩니다:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 모든 것이 그렇듯이, 세부사항은 크게 상관이 없으며, 일관성이 핵심입니다. 선택자 내포에 충분한 확신이 있다면 선택자 내포를 사용하세요. 단지 여러분의 팀 전체가 그 선택에 동의하는지 확실히 하시면 됩니다.
 

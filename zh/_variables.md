@@ -21,23 +21,23 @@ Sass 中变量的作用域在过去几年已经发生了一些改变。直到最
 
 以下代码片可以解析**变量影子**的概念。
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## `!default`标识符
 
 如果创建一个库、框架、栅格系统甚至任何的 Sass 片段，是为了分发经验或者被其他开发者使用，那么与之配置的所有变量都应该使用 `!default` 标志来定义，方便其他开发者重写变量。
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 多亏如此，开发者才能在引入你的库之前定义自用的 `$baseline`，引入后又不必担心自己的值被重定义了。
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## `!global`标识符
 
 `!global` 标志应该只在局部范围的全局变量被覆盖时使用。定义根级别的变量时，`!global` 标志应该省略。
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## 多变量或maps
 
@@ -45,4 +45,4 @@ Sass 中变量的作用域在过去几年已经发生了一些改变。直到最
 
 另一个支持使用 map 的原因，是它可以创建 `map-get()` 函数以提供友好 API 的功能。比如，思考一下下述 Sass 代码：
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

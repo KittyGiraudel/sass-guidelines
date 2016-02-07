@@ -1,0 +1,3 @@
+// Add current module to the list of imported modules.
+// `!global` flag is required so it actually updates the global variable.
+$imported-modules: append($imported-modules, $module) !global;

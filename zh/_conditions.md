@@ -11,16 +11,16 @@
 - `@else` 语句和它前面的右闭大括号(`}`)写在同一行；
 - 务必在右闭大括号(`}`)后添加空行，除非下一行还是右闭大括号(`}`)，那么就在最后一个右闭大括号(`}`)后添加空行。
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 测试一个错误值时，通常使用 `not` 关键字而不是比较与 `false` 或 `null` 等值。
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 通常将变量置于语句的左侧，而将结果置于右侧。如果使用相反的顺序，通常会增加阅读难度，特别是对于没有经验的开发者。
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 当使用条件语句并在一些条件下有内联函数返回不同结果时，始终要确保最外层函数有一个 `@return` 语句。
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

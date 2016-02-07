@@ -12,7 +12,7 @@ Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines]
 * Du CSS écrit sur plusieurs lignes ;
 * Une utilisation efficace des lignes vides.
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 Nous n’aborderons pas la question de l’organisation des fichiers dans cette section. C’est l’objet d’une [autre section](#architecture).
 
@@ -24,7 +24,7 @@ Nous n’aborderons pas la question de l’organisation des fichiers dans cette 
 
 Afin d’éviter tout problème potentiel lié à l’encodage des caractères, il est recommandé de forcer l’encodage [UTF-8](http://fr.wikipedia.org/wiki/UTF-8) dans le [fichier principal](#fichier-principal) en utilisant la directive `@charset`. Assurez-vous que ce soit le premier élément de la feuille de style et qu’il n’y ait aucun caractère de quelque nature en amont.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Guillemets
 
@@ -39,7 +39,7 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 * la lisibilité est améliorée&nbsp;;
 * il n’y a pas de raison valable de ne pas utiliser de guillemets.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 <div class="note">
   <p>Selon les spécifications CSS, la déclaration <code>@charset</code> doit utiliser des guillemets doubles <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">pour être considérée valide</a>. Cependant, Sass s’en assure en compilant vos feuilles de styles si bien que vous pouvez tout à fait utiliser des guillemets simples, même pour <code>@charset</code>.</p>
@@ -49,7 +49,7 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 
 Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Il convient de faire une distinction entre les chaînes de caractères qui sont des valeurs CSS (il s'agit d’identifiants CSS) comme dans l’exemple qui précède, et les chaînes de caractères correspondant à des types de données Sass (par exemple les clés des maps).
 
@@ -59,13 +59,13 @@ On ne met pas de guillemets pour les premières, mais il en faut pour ces derni�
 
 Si une chaîne de caractères contient un ou plusieurs guillemets simples, on peut éviter l’utilisation d’échappements répétés en enveloppant la chaîne à l’intérieur de guillemets doubles (`"`) .
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### URLs
 
 Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-dessus&nbsp;:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -80,7 +80,7 @@ Dans Sass, un nombre est une donnée qui peut avoir une unité ou pas et qui dé
 
 Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N’écrivez pas de zéros finaux après le point.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 <div class="note">
   <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code> 0.$1</code>. N’oubliez pas l’espace précédantg le <code>0</code> par contre.</p>
@@ -90,7 +90,7 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
 
 S’agissant de longueurs, une valeur égale à `0` ne doit pas être suivie de son unité.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 <div class="note">
   <p>Attention, cette pratique doit être utilisée uniquement pour les longueurs. Les zéros sans unité ne sont pas autorisés pour les propriétés utilisant des durées, comme <code>transition-delay</code>. Théoriquement, si un zéro sans unité est utilisé comme durée, la déclaration est jugée invalide. Tous les navigateurs ne sont pas aussi stricts, mais certains le sont. Pour résumer : n’omettez l’unité que pour les longueurs.</p>
@@ -100,17 +100,17 @@ L’erreur la plus courante en ce qui concerne les nombres dans Sass est de pens
 
 Pour ajouter une unité à un nombre, vous devez multiplier ce nombre par *1 unité*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Remarquez qu’en ajoutant *0 membre de cette unité* on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l’ajout de *0 unité* peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas&nbsp;:
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode.
 
 Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois son unité*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le résultat est une chaîne de caractères, ce qui vous empêche d’effectuer toute opération sur la valeur. De même avec l’opération `slice` si vous découpez la partie numérique d’un nombre —&nbsp;ce qui n’est sans doute pas le résultat souhaité.
 
@@ -118,7 +118,7 @@ Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le
 
 **Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s’en trouve considérablement améliorée, mais les éventuels cas *borderline* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Nombres magiques
 
@@ -126,7 +126,7 @@ L’expression "nombre magique" est un [vieux terme de programmation](http://fr.
 
 Est-il utile de préciser que **les nombres magiques sont une plaie et doivent être évités à tout prix** ? Si vous ne pouvez pas expliquer logiquement la raison pour laquelle un nombre fonctionne, ajoutez un commentaire détaillant la façon dont vous êtes arrivé à ce nombre et pourquoi vous pensez qu’il est approprié. Il vaut mieux expliquer pourquoi vous ne comprenez pas comment quelque chose fonctionne que de laisser au développeur qui vous suivra le soin de comprendre les raisons de votre choix.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Lectures complémentaires
 
@@ -155,21 +155,21 @@ Le format RGB a également l’avantage d’indiquer du premier coup d’oeil si
 
 Enfin, héxadédimal est presque indéchiffrable pour le cerveau humain. Ne l’utilisez qu’en dernier recours, si vous en avez besoin.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Si vous utilisez la notation HSL ou RGB, ajoutez toujours un espace après la virgule, mais n’ajoutez pas d’espace entre les parenthèses et le contenu.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Couleurs et variables
 
 Si vous utilisez une couleur plusieurs fois, enregistrez-la dans une variable portant un nom représentatif de la couleur.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 Vous pouvez maintenant utiliser cette variable où vous voulez. Cependant, si son usage est lié à un thème, je vous conseille de ne pas utiliser la variable directement mais plutôt de l’enregistrer elle-même dans une autre variable dont le nom explique la fonction.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 De cette façon vous éviterez qu’une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`.
 
@@ -185,7 +185,7 @@ L’avantage d’utiliser `mix` plutôt que les deux fonctions précédemment ci
 
 Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez créer deux fonctions faciles à utiliser, `tint` et `shade` (qui sont incluses dans [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) pour obtenir la même chose&nbsp;:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p>La fonction <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> échelonne les propriétés de manière plus fluide en prenant en compte leur degré de luminosité actuelle. Elle donne des résultats aussi beaux que <code>mix</code> mais avec des conventions d’utilisation plus claires. Le facteur d’échelonnage n’est cependant pas le même.</p>
@@ -211,11 +211,11 @@ Les listes doivent respecter les recommandations suivantes&nbsp;:
 * toujours entre parenthèses&nbsp;;
 * ajouter une virgule après le dernier élément de la liste si elle compte plusieurs lignes.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API fournie. N’essayez pas de les ajouter manuellement.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -239,7 +239,7 @@ Les maps doivent être écrites comme suit&nbsp;:
 
 Illustration :
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -267,7 +267,7 @@ Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrai
 
 Illustration:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 En plus de ces recommandations liées à CSS, nous devons être attentifs aux points suivants&nbsp;:
 
@@ -279,7 +279,7 @@ En plus de ces recommandations liées à CSS, nous devons être attentifs aux po
 
 Illustration:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -294,15 +294,15 @@ Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en c
 
 Il y a du pour et du contre dans chacune. D’un côté, l’ordre alphabétique est universel (du moins pour les langues utilisant l’alphabet latin), donc il n’y a pas de dispute possible quant à la position d’un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l’une derrière l’autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L’ordre alphabétique crée de nombreuses bizarreries.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme  [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?… ô ironie…).
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Il existe encore un autre modèle d’ordonnancement des types, [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), qui semble assez populaire lui aussi. Concentric CSS s’appuie sur le modèle de boîte pour définir l’ordre&nbsp;: il part de l’extérieur pour aller vers l’intérieur.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 Je dois dire que je n’arrive pas à me décider moi-même. Un [récent sondage de CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) a montré que plus de 45% des développeurs ordonnent leurs déclarations par type, contre 14% par ordre alphabétique. 39% le font au hasard, et j’en fais partie.
 
@@ -327,7 +327,7 @@ Parmi les fonctionnalités offertes par Sass, l’une d’entre elles est souven
 
 Par exemple, l’imbrication Sass suivante&nbsp;:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … génèrera ce CSS&nbsp;:
 
@@ -335,7 +335,7 @@ Par exemple, l’imbrication Sass suivante&nbsp;:
 
 En suivant la même idée, il est possible depuis Sass 3.3 d’utiliser la référence au sélecteur courant (`&`) pour générer des sélecteurs avancés, par exemple&nbsp;:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … génèrera ce CSS&nbsp;:
 
@@ -357,25 +357,25 @@ Pour éviter de telles situations, nous **évitons l’imbrication des sélecteu
 
 Pour commencer, il est permis —&nbsp;et même recommandé&nbsp;— d’imbriquer les pseudo-classes et les pseudo-éléments à l’intérieur du sélecteur initial.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 Non seulement l’imbrication des pseudo-classes et pseudo-éléments est parfaitement justifiée (parce qu’il s’agit de sélecteurs étroitement liés) mais aussi elle permet de conserver tout ce qui concerne un même composant au même endroit.
 
 De plus, lorsqu’on utilise des classes décrivant un état indépendant du composant telles que `.is-active`, il est tout à fait justifié de les imbriquer dans le sélecteur du composant de façon à avoir un code bien ordonné.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 *Last but not least*, lorsqu’on applique un style à un élément parce qu’il se trouve être contenu dans un autre élément spécifique, il est également logique de l’imbriquer afin que tout ce qui concerne cet élément soit réuni au même endroit.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Quand on travaille avec des développeurs peu expérimentés, un sélecteur comme `.no-opacity &` peut paraître étrange. Pour éviter toute confusion, vous pouvez créer un petit mixin qui transforme cette syntaxe bizarre en une API explicite.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Nous pouvons réécrire notre exemple précédent ainsi&nbsp;:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l’imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l’équipe soit d’accord avec cette façon de faire.
 

@@ -21,23 +21,23 @@ Dokumentacja traktuje także o *przysłanianiu zmiennych (variable shadowing)*. 
 
 Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## Flaga `!default`
 
 Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być deklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* importowaniem danej biblioteki bez obawy o to, że jego zmienna ulegnie zmianie.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## Flaga `!global`
 
 Flaga `!global` powinna być użyta jedynie wtedy, gdy zmienna z lokalnego zasięgu ma nadpisać zmienną globalną. Deklarując zmienną na głównym poziomie, flaga `!global` powinna zostać pominięta.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Wiele zmiennych lub map
 
@@ -45,4 +45,4 @@ Używanie map zamiast wielu odrębnych zmiennych ma swoje zalety. Pozwala to prz
 
 Kolejnym plusem tworzenia map jest możliwość konstruowania małych funkcji wydobywających, dających nam przyjazne w obsłudze API. Na przykład, rozważmy następujący kod:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

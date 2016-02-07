@@ -9,11 +9,11 @@ Toutefois, la présence de boucles implique généralement une logique légèrem
 
 La boucle `@each` est certainement la plus utilisée des trois boucles de Sass. Elle fournit une API propre pour itérer sur une liste ou une map.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Lorsque vous effectuez une itération sur une map, utilisez toujours les noms de variables `$key` et `$value` pour renforcer la cohérence.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 De plus, assurez-vous de respecter ces recommandations qui aideront à préserver la lisibilité&nbsp;:
 
@@ -24,7 +24,7 @@ De plus, assurez-vous de respecter ces recommandations qui aideront à préserve
 
 La boucle `@for` peut être utile en lien avec les pseudo-classes CSS `:nth-*`. Mis à part ce scénario, préférez la boucle `@each` pour les itérations.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Utilisez toujours `$i` comme nom de variable pour respecter les conventions habituelles, à moins d’avoir une bonne raison de ne pas le faire. N’utilisez jamais le mot-clé `to`, mais toujours le mot-clé `through`. Nombreux sont les développeurs qui ne connaissent pas cette variante Sass.
 

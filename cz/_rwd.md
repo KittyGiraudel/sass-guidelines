@@ -9,11 +9,11 @@ Myslím si, že mohu bez problému říci, že media queries by neměla být vá
 
 Ze stejného důvodu by breakpointy neměly být pojmenovány podle zařízení ale podle něčeho obecnějšího. Hlavně proto, že některé telefony jsou nyní větší než tablety, některé tablety větší než malé počítače atd.
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 V tomto bodě naprosto stačí, pokud použijeme jakoukoli jmennou konvenci, která dává smysl a není spjata s konkrétními zařízeními.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>Předešlý příklad používá vnořené mapy pro definování breakpointů, každopádně opravdu záleží jen na vás, jaký druh správy použijete. Můžete se rozhodnout pro textové řetězce, spíše než-li pro vnitřní mapy, kvůli větší pružnosti (tedy <code>'(min-width: 800px)'</code>).</p>
@@ -27,7 +27,7 @@ V tomto bodě naprosto stačí, pokud použijeme jakoukoli jmennou konvenci, kte
 
 Jakmile pojmenujete své breakpointy tak, jak chcete, budete potřebovat najít způsob, jak je používat v media queries. Je mnoho způsobů jak tak učinit, ale musím říci, že nejvíce fandím breakpointové mapě, kterou čtu pomocí getter funkce. Tento způsob je zároveň jednoduchý a efektivní.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>Je zřejmé, že je to poměrně zjednodušující řešení pro správu breakpointů. Pokud potřebujete něco tolerantnějšího, doporučuji vám, abyste znovu nevynalézali kolo a použili něco co bylo ověřeno jako efektivní, právě jako <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> nebo <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
@@ -42,7 +42,7 @@ Jakmile pojmenujete své breakpointy tak, jak chcete, budete potřebovat najít 
 
 Ne tak dávno probíhala poměrně vzrušující debata o tom, kde by se měla media queries psát: patří do selektorů (jak to umožňuje Sass) nebo by se měly psát striktně mimo ně? Musím uznat, že jsem vášnivým zastáncem systému *media-queries-v-selektorech* a myslím si, že to funguje skvěle s ideou *komponent*.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 Což vede k následujícímu CSS výstupu:
 

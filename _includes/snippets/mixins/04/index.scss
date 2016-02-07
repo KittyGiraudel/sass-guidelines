@@ -1,0 +1,22 @@
+@mixin dummy($a, $b, $c) {
+  // …
+}
+
+// Yep
+@include dummy(true, 42, 'kittens');
+
+// Yep but nope
+$params: (true, 42, 'kittens');
+$value: dummy(nth($params, 1), nth($params, 2), nth($params, 3));
+
+// Yep
+$params: (true, 42, 'kittens');
+@include dummy($params...);
+
+// Yep
+$params: (
+  'c': 'kittens',
+  'a': true,
+  'b': 42,
+);
+@include dummy($params...);

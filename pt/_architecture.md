@@ -172,7 +172,7 @@ De maneira a preservar a legibilidade, o ficheiro principal deverá seguir as se
 * uma linha de espaço depois da última importação de uma pasta;
 * extensões e underscores antes do nome devem ser omitidos.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 Existe outra maneira de importar parciais que também considero válida. O lado positivo dela é que torna o ficheiro mais legível. Por outro lado, faz qualquer mudança a esse ficheiro mais difícil. De qualquer maneira eu vou deixar isto ao vosso critério pois a diferença não é muita. Ao importar desta maneira o ficheiro principal deve seguir as seguintes diretrizes:
 
@@ -182,7 +182,7 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 * uma linha de espaço depois da ultima importação numa pasta;
 * extensões e underscores antes do nome devem ser omitidos.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/*"</code>.</p>
@@ -193,7 +193,7 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 
 Existe um conceito interessante que foi tornado popular por [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) que consiste em colocar todas as declarações, hacks e coisas das quais não estamos propriamente orgulhosos num *ficheiro vergonhoso*. Este ficheiro dramaticamente chamado `_shame.css`, seria importado depois de todos os outros mesmo no fim da folha de estilo.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### Leitura Adicional
 

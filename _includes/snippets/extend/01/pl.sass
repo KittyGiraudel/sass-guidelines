@@ -1,0 +1,22 @@
+%button
+  display: inline-block
+
+  // … style dot. przycisku
+
+  // Powiązanie: %button będący dzieckiem %modal
+  %modal > &
+    display: block
+
+.button
+  @extend %button
+
+// Yep
+.modal
+  @extend %modal
+
+// Nope
+.modal
+  @extend %modal
+
+  > .button
+    @extend %button

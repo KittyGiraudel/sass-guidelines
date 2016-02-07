@@ -1,0 +1,27 @@
+%button {
+  display: inline-block;
+  // … Button Styles
+
+  // Beziehung: ein %button, welcher ein Kind von %modal ist
+  %modal > & {
+    display: block;
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+// Yep
+.modal {
+  @extend %modal;
+}
+
+// Nope
+.modal {
+  @extend %modal;
+
+  > .button {
+    @extend %button;
+  }
+}

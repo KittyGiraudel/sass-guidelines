@@ -11,16 +11,16 @@ W każdym razie, gdy zajdzie jednak potrzeba skorzystania z instrukcji warunkowy
 * `@else` na tej samej linii, co nawias zamykający (`}`),
 * Nowa pusta linia po ostatnim nawiasie zamykającym (`}`), chyba że następna linia zaczyna się od takiego nawiasu (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 Testując czy podana wartość jest fałszywa, należy używać słowa `not` zamiast testowania wobec `false` czy `null`.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Należy zawsze umieszczać nazwę zmiennej po lewej stronie wyrażenia, a (nie)oczekiwany rezultat po prawej. Odwrócone instrukcje warunkowe są mniej zrozumiałe, szczególnie dla niedoświadczonych programistów.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 Używając instrukcji warunkowych w ramach funkcji by zwracały one różne rezultaty, w zależności od jakiegoś warunku, należy się upewnić aby funkcja miała instrukcję `@return` poza jakimkolwiek blokiem warunkowym.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

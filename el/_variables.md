@@ -21,23 +21,23 @@
 
 Το ακόλουθο κομμάτι κώδικα εξηγεί την έννοια της *επισκίασης μεταβλητής*.
 
-{% include snippets/variables/01/index.html %}
+{% include snippet.html path="variables/01" %}
 
 ## `!default` flag
 
 Όταν φτιάχνουμε μια βιβλιοθήκη, ένα framework, ένα grid system ή ένα άλλο κομμάτι Sass το οποίο έχουμε σκοπό να το διανείμουμε και να χρησιμοποιηθεί από εξωτερικούς developers, όλες οι μεταβλητές παραμετροποίησης πρέπει να δηλωθούν με το `!default` flag έτσι ώστε να μπορούν να αντικατασταθούν.
 
-{% include snippets/variables/02/index.html %}
+{% include snippet.html path="variables/02" file="index" %}
 
 Χάρη σ' αυτό, ο developer μπορεί να ορίσει τη δική του μεταβλητή `$baseline` *προτού* εισάγει την βιλιοθήκη σας χωρίς να επαναπροσδιοριστεί η τιμή του.
 
-{% include snippets/variables/03/index.html %}
+{% include snippet.html path="variables/03" %}
 
 ## `!global` flag
 
 Το `!global` flag πρέπει μόνο να χρησιμοποιείται όταν παρακάπτουμε μία global μεταβλητή από ένα τοπικό scope. Όταν δηλώνουμε μια μεταβλητή σε επίπεδο root, το `!global` flag πρέπει να παραλείπεται.
 
-{% include snippets/variables/04/index.html %}
+{% include snippet.html path="variables/04" file="index" %}
 
 ## Πολλαπλές μεταβλητές ή maps
 
@@ -45,4 +45,4 @@
 
 Ένα ακόμη πλεονέκτημα χρήσης maps είναι η δυνατότητα δημιουργίας μιας μικρής getter συνάρτησης για να παρέχουμε ένα πιο φιλικό API. Για παράδειγμα, δείτε τον παρακάτω κώδικα Sass:
 
-{% include snippets/variables/05/index.html %}
+{% include snippet.html path="variables/05" %}

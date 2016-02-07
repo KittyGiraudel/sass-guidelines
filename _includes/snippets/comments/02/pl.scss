@@ -1,0 +1,3 @@
+// Dodaj moduł do listy modułów importowanych.
+// Flaga `!global` jest niezbędna dla aktualizowania globalnej zmiennej.
+$imported-modules: append($imported-modules, $module) !global;

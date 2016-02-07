@@ -1,0 +1,7 @@
+/// Helfer-Mixin um eine einfachere API für verschachtelte Selektoren zu bieten
+/// @param {String} $selector - Selektor
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}

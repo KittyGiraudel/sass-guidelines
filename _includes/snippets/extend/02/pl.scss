@@ -1,0 +1,37 @@
+%foo {
+  content: 'foo';
+}
+
+// Nope
+@media print {
+  .bar {
+    // To nie działa. Co więcej - kompilator się wysypie.
+    @extend %foo;
+  }
+}
+
+// Yep
+@media print {
+  .bar {
+    @at-root (without: media) {
+      @extend %foo;
+    }
+  }
+}
+
+// Yep
+%foo {
+  content: 'foo';
+
+  &-print {
+    @media print {
+      content: 'foo print';
+    }
+  }
+}
+
+@media print {
+  .bar {
+    @extend %foo-print;
+  }
+}

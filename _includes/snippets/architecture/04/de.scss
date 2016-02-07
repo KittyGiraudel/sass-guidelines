@@ -1,0 +1,11 @@
+/**
+ * Nav spezifischer fix.
+ *
+ * Jemand hat eine ID im Header-Code (`#header a {}`) verwendet, welche den
+ * Nav-Selektor (`.site-nav a {}`) überschreibt. Nutze !important um es zu
+ * überschreiben, bis ich Zeit gefunden habe um den Header-Bereich zu
+ * refactoren.
+ */
+.site-nav a {
+  color: #BADA55 !important;
+}

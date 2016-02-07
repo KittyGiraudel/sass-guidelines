@@ -24,7 +24,7 @@ Der er scenarier, hvor at udvide selektorer kan være hjælpsomt og tiden værd.
 
 Hvis du skal til at anvende extend, så lad mig minde dig om at den ikke fungerer godt sammen med `@media` blokke. Som du muligvis ved, så er Sass ikke i stand til at udvide en ydre selektor inden i en media query. Når du gør det, så bryder compileren simpelthen ned, og fortæller dig at du ikke kan gøre sådan. Ikke så fedt. Især da media queries nu næsten er alt hvad vi laver.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 > Du bør ikke @extend'e en ydre selektor indefra @media.<br>
 > Du bør kun @extend'e selektorer inden for det samme direktiv.

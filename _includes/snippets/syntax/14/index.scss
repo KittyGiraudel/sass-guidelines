@@ -1,0 +1,24 @@
+// Yep
+.foo {
+  color: hsl(0, 100%, 50%);
+}
+
+// Also yep
+.foo {
+  color: rgb(255, 0, 0);
+}
+
+// Nope
+.foo {
+  color: #f00;
+}
+
+// Nope
+.foo {
+  color: #FF0000;
+}
+
+// Nope
+.foo {
+  color: red;
+}

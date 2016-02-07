@@ -9,11 +9,11 @@ Jeg tænker at det er sikkert at sige, at media queries ikke bør være forbunde
 
 Af de samme grunde, så bør breakpoints ikke blive navngivet efter enheder men efter noget mere generelt. Især fordi at nogle telefoner nu er større end tablets, nogle tablets større en nogle små skærmcomputere, og så videre...
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 Hertil vil enhver navngivningskonvention, der gør det krystalklart at et design ikke er tæt forbundet til en specifik enhedstype, gøre arbejdet godt så længe det giver en slags fornemmelse for størrelsesorden.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>De forrige eksempler anvender indlejrede maps til at definere breakpoints, men dette afhænger faktisk af hvilken slags breakpoint-manager du anvender. Du kunne gå efter strenge fremfor indre maps for mere fleksibilitet (e.g. <code>'(min-width: 800px)'</code>).</p>
@@ -27,7 +27,7 @@ Hertil vil enhver navngivningskonvention, der gør det krystalklart at et design
 
 Når du har navngivet dine breakpoints som du ønsker, så har du brug for en måde til rent faktisk at bruge dem i egentlige media queries. Der findes rigeligt med måder at gøre dette på, men jeg må sige at jeg er stor fan af et breakpoint map, der læses af en getter funktion. Denne tilgang er både enkel og effektiv.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>Det er åbenlyst, at dette er en rimelig simpel breakpoint manager. Hvis du har behov for en mere eftergivende en, så anbefaler jeg at du ikke genopfinder hjulet og bruger noget som er bevist effektivt, såsom <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> eller <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
@@ -42,7 +42,7 @@ Når du har navngivet dine breakpoints som du ønsker, så har du brug for en m�
 
 For ikke så længe siden var der en ret ophedet debat omkring hvorhenne media queries bør blive skrevet: hører de til indeni selektorer (som Sass tillader det), eller skal de være helt afkoblet fra dem? Jeg bliver nødt til at sige, at jeg er en stærk forsvarer af *media-queries-indeni-selektorer*-tilgangen, da jeg synes at det spiller godt sammen med idéen om komponenter.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 Hvilket leder til det følgende CSS output:
 

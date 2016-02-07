@@ -24,7 +24,7 @@ Há cenários onde extender seletores pode valer a pena e até ajudar. No entant
 
 Se vão usar o extend, deixem-me também lembrar que ele não funciona bem com blocos `@media`. Tal como devem saber, o Sass é incapaz de extender um seletor exterior a partir de dentro de uma *media query*. Quando se experimenta, o compilador simplesmente rebenta, avisando-vos de que não consegue fazer tal coisa. Não é bom. Especialmente porque *media queries* são maioritariamente o que fazemos agora.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 > Não devem usar o @extend num seletor exterior a partir de dentro de um bloco @media. <br>
 > Só devem usar o @extend em seletors a partir de dentro da mesma diretiva.

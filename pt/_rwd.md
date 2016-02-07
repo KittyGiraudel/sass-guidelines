@@ -9,11 +9,11 @@ Acho que é seguro dizer que as *media queries* não devem estar agarradas a dis
 
 Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim algo mais geral. Especialmente agora, porque alguns telemóveis são maiores que tablets e algumas tablets são maiores que pequenos ecrãs de computadores, e por aí além…
 
-{% include snippets/rwd/01/index.html %}
+{% include snippet.html path="rwd/01" file="index" %}
 
 Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o design não está intimamente agarrado a um tipo de dispositivo especifíco e que dê uma ideia da escala de magnitudes.
 
-{% include snippets/rwd/02/index.html %}
+{% include snippet.html path="rwd/02" %}
 
 <div class="note">
   <p>Os exemplos anteriores utilizam mapas aninhados para definir breakpoints; no entanto isto depende bastante no tipo de gestor de breakpoints que seja utilizado. Podem optar por strings em vez de usar mapas, para maior flexibilidade (e.g. <code>'(min-width: 800px)'</code>).</p>
@@ -27,7 +27,7 @@ Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o 
 
 Assim que definam os breakpoints da maneira que quiserem, é necessário arranjar uma maneira de os usar realmente em *media queries*. Há imensas maneiras de o fazer, mas confesso que sou grande fã do mapa de breakpoints acedido por uma função de leitura. Este sistema é simples e eficiente.
 
-{% include snippets/rwd/03/index.html %}
+{% include snippet.html path="rwd/03" %}
 
 <div class="note">
   <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
@@ -43,7 +43,7 @@ Assim que definam os breakpoints da maneira que quiserem, é necessário arranja
 Não há muito tempo atrás, houve um debate aceso sobre onde é que as *media queries* deveriam ser escritas: deveriam ser escritas dentro dos selectores (tal como Sass o permite), ou deveriam ser separadas?
 Tenho a dizer que sou um defensor renhido do sistema *media-queries-dentro-de-selectores*, um vez que acho que encaixa bem com a ideia de *componentes*.
 
-{% include snippets/rwd/04/index.html %}
+{% include snippet.html path="rwd/04" file="index" %}
 
 Que gera o seguinte resultado em CSS:
 

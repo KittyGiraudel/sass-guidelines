@@ -1,0 +1,10 @@
+/// Βοηθητικό mixin για να καθαρίσει τα εσωτερικά floats
+/// @author Nicolas Gallagher
+/// @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

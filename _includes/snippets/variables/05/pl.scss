@@ -1,0 +1,20 @@
+/// Mapa z-indeksów, zbiera wszystkie warstwy Z aplikacji
+/// @access private
+/// @type Map
+/// @prop {String} key - Nazwa warstwy
+/// @prop {Number} value - Wartość Z przypisana do klucza
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);
+
+/// Wydobądź wartość z-index z nazwy warstwy
+/// @access public
+/// @param {String} $layer - Nazwa warstwy
+/// @return {Number}
+/// @require $z-indexes
+@function z($layer) {
+  @return map-get($z-indexes, $layer);
+}

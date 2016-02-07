@@ -21,7 +21,7 @@ V Sass projektu je nespočet využití pro varování a chyby. V podstatě každ
 
 Vezměte si tuto funkci z [Sass-MQ](https://github.com/sass-mq/sass-mq), která se pokouší převést `px` hodnotu na `em` hodnotu, například:
 
-{% include snippets/errors/01/index.html %}
+{% include snippet.html path="errors/01" file="index" %}
 
 Pokud je hodnota bezjednotková, funkce předpokládá, že je hodnota vyjádřena pixely. Na tomto místě může být předpoklad riskantní, a proto by měl být uživatel varován, že software provedl něco, co by mohlo být považováno za neočekávané.
 
@@ -31,4 +31,4 @@ Chyby, oproti varováním, zabraňují kompilátoru běžet dále. V podstatě z
 
 Například pojďme říci, že vytváříte getter funkci pro přístup k hodnotám ze specifické mapy. Můžete vyhodit error, pokud v mapě není požadovaný klíč.
 
-{% include snippets/errors/02/index.html %}
+{% include snippet.html path="errors/02" %}

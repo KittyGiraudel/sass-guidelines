@@ -24,7 +24,7 @@ Samozřejmě existují případy, kde by extendování selektorů mohlo být k u
 
 Pokud se rozhodnete použít extend, dovolte mi připomenout, že si to moc dobře nerozumí s `@media` bloky. Jak asi víte, Sass není schopen extendnout vnější selektor z media query. Pokud tak učiníte, kompilátor se jednoduše zhroutí a řekne vám, že takovéto věci nemůžete dělat. Nic moc, zejména proto, že media queries téměř všichni známe.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 > Nemůžete použít @extend z vnějšího selektoru v rámci @media.<br>
 > Můžete použít pouze @extend selektory v rámci stejné direktivy.

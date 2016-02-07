@@ -15,7 +15,7 @@ Always try to define relationships via [selector placeholders](http://www.sitepo
 
 For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector _is a kind of_ the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
 
-{% include snippets/extend/01/index.html %}
+{% include snippet.html path="extend/01" %}
 
 There are many scenarios where extending selectors are helpful and worthwhile. Always keep in mind these rules so you can `@extend` with care:
 
@@ -33,7 +33,7 @@ There are many scenarios where extending selectors are helpful and worthwhile. A
 
 You should only extend selectors within the same media scope (`@media` directive). Think of a media query as another constraint.
 
-{% include snippets/extend/02/index.html %}
+{% include snippet.html path="extend/02" %}
 
 To sum up, I would advise to use `@extend` only for maintaining relationships within selectors. If two selectors are characteristically similar, that is the perfect use-case for `@extend`. If they are unrelated but share some rules, a `@mixin` might suit you better.
 

@@ -9,11 +9,11 @@ Dog indebærer tilstedeværelsen af løkker ofte en moderat, kompleks logik, der
 
 `@each` løkken er klart en af de mest anvendte af de tre løkker Sass tilbyder. Den giver os en ren API til at iterere over en liste eller et map.
 
-{% include snippets/loops/01/index.html %}
+{% include snippet.html path="loops/01" file="index" %}
 
 Når der itereres over et map, så anvend altid `$key` og `$value` som variabelnavne for at fastholde konsistens.
 
-{% include snippets/loops/02/index.html %}
+{% include snippet.html path="loops/02" file="index" %}
 
 Sikr dig også, at du respekterer disse guidelines for at bevare læsbarhed:
 
@@ -24,7 +24,7 @@ Sikr dig også, at du respekterer disse guidelines for at bevare læsbarhed:
 
 `@for` løkken er brugbar når den kombineres med CSS' `:nth-*` pseudo-klasser. Bortset fra disse scenarier, så foretræk en `@each` løkke hvis du *er nødt til* at iterere over noget.
 
-{% include snippets/loops/03/index.html %}
+{% include snippet.html path="loops/03" file="index" %}
 
 Anvend altid `$i` som variabelnavn, for at holde dig til den almene konvention, og medmindre du har en virkelig god grund til det, så brug aldrig `to` nøgleordet: brug altid `through`. Mange udviklere ved slet ikke at Sass tilbyder denne variation; at anvende den kan lede til forvirring.
 

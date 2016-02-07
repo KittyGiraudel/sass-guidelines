@@ -1,0 +1,13 @@
+/// 벤더 프리픽스를 산출하는 믹스인 헬퍼
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - 프리픽스가 붙지 않은 CSS 속성
+/// @param {*} $value - 가공되지 않은 CSS 값
+/// @param {List} $prefixes - 산출할 프리픽스 리스트
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}

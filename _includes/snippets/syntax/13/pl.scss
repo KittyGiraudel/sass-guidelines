@@ -1,0 +1,8 @@
+/**
+ * 1. Magiczna liczba. Wartość ta jest najniższą jaką znalazłem,
+ * która pozwala mi na wyrównanie góry `.foo` z jego parentem.
+ * Najlepiej by jednak było, gdybyśmy to porządnie zrobili.
+ */
+.foo {
+  top: 0.327em; /* 1 */
+}

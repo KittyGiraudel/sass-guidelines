@@ -172,7 +172,7 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 * 한 폴더로부터의 마지막 import 다음에는 새 줄 하나로 간격을 둔다.
 * 파일 확장자와 앞에 붙는 언더스코어는 생략한다.
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 부분 파일을 불러오는 다른 합당한 방법도 있습니다. 밝은 면을 보자면, 이 방법은 파일을 보다 읽기 좋게 만듭니다. 반면, 수정하는 일은 약간 괴로워집니다. 어쨌든, 어느 것이 최고인지는 여러분이 결정하게 하겠습니다. 이건 별 문제가 안 되니까요. 이 방법으로 하면, 메인 파일은 이 가이드라인을 준수해야 합니다:
 
@@ -182,7 +182,7 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 * 한 폴더로부터의 마지막 import 다음에는 새 줄 하나로 간격을 둔다;
 * 파일 확장자와 앞에 붙는 언더스코어는 생략한다.
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>각 파일을 수동으로 불러오지 않기 위해서는, <code>@import "components/*"</code>와 같이 Sass <code>@import</code>에서 glob 패턴을 사용할 수 있게 해주는 <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>이라는 Ruby Sass의 확장이 있습니다.</p>
@@ -193,7 +193,7 @@ CSS 프로젝트를 위한 잘 알려진 설계 양식들이 많이 있습니다
 
 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com), [Chris Coyier](http://css-tricks.com)에 의해 알려진 흥미로운 개념이 있습니다. 이는 모든 CSS 선언과 핵, 그리고 우리가 자랑스럽게 여기지 않는 것들을 *수치 파일*에 넣는 것으로 이루어집니다. 이 파일은, 극적이게도 `_shame.scss`라고 불리며, 스타일시트의 맨 끝에서, 다른 모든 파일들 다음으로 불러들여질 것입니다.
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### 참고
 

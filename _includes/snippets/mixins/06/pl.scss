@@ -1,0 +1,13 @@
+/// Mixin do produkowania vendor prefixów
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - Własność CSS bez prefixu
+/// @param {*} $value - Wartość
+/// @param {List} $prefixes - Lista prefixów
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}

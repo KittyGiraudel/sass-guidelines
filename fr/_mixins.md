@@ -11,11 +11,11 @@ Mais je dois vous mettre en garde contre l’abus de mixins. Là encore, le plus
 
 Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (c’est-à-dire pas par pure coïncidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d’être déclaré dans un mixin (sans argument).
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Un autre exemple valable serait un mixin permettant de dimensionner un élément, qui définirait à la fois sa largeur et sa hauteur, en même temps. Non seulement il simplifie la saisie du code mais il en facilite également la lecture.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Lectures complémentaires
 
@@ -28,19 +28,19 @@ Parfois les mixins sont utilisés simplement pour éviter de répéter le même 
 
 Dans ces cas de figure, on peut tout à fait omettre les parenthèses lorsqu’on appelle un mixin. Le mot-clé `@include` (ou signe `+` dans le cas de la syntaxe indentée) fait déjà office d’indicateur qu’il s’agit d’une inclusion de mixin ; les parenthèses sont obsolètes.
 
-{% include snippets/mixins/08/index.html %}
+{% include snippet.html path="mixins/08" file="index" %}
 
 ## Listes d'Arguments
 
 Lorsque vous avez affaire à un nombre inconnu d’arguments dans un mixin, utilisez toujours une `arglist` plutôt qu’une liste. On peut voir `arglist` comme le 8<sup>e</sup> type de données de Sass, caché et non documenté, qui est implicitement utilisé lorsqu’on passe un nombre arbitraire d’arguments dans un mixin ou une fonction dont la signature contient `...`.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Quand vous construisez un mixin qui accepte quelques arguments (disons 3 ou plus), pensez à deux fois avant de les merger sous forme de liste ou de map en croyant que ce sera plus facile que de les passer un par un.
 
 Sass gère très intelligemment les mixins et les déclarations de fonction, vous pouvez passer une liste ou une map comme une `arglist` dans une fonction ou un mixin de façon à ce qu'ils soient traités comme une série d’arguments.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Lectures complémentaires
 
@@ -54,15 +54,15 @@ Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si v
 
 Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe constructeur.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Faites-le plus intelligemment.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 L’utilisation de ce mixin devrait être assez simple&nbsp;:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Gardez à l’esprit que c’est une solution assez pauvre. Par exemple, elle ne peut pas traiter les polyfills complexes tels que ceux requis pour Flexbox. En ce sens, Autoprefixer est une bien meilleure solution.
 

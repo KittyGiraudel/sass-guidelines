@@ -18,13 +18,13 @@ Og jeg glemte sikkert en masse andre grunde. Kommentering tager meget lidt tid n
 
 Ideelt set, så bør *alle* CSS regelsæt foranstilles med en C-stil kommentar, der forklarer grunden bag CSS-blokken. Denne kommentar indeholder nummererede forklaringer, der vedrører specifikke dele af regelsættet. For eksempel:
 
-{% include snippets/comments/01/index.html %}
+{% include snippet.html path="comments/01" %}
 
 Alt, der basalt set ikke er åbenlyst ved første øjekast, bør blive kommenteret. Der er ikke noget der hedder for meget dokumentation. Husk, at du kan ikke *kommentere for meget*, så kom i gang og skriv kommentarer til alt der gør sig fortjent til det.
 
 Når du kommenterer en Sass-specifik sektion, så anvend indlejrede Sass-kommentarer i stedet for en C-stil blok. Dette gør kommentaren usynlig for outputtet, selv ved udvidet tilstand under udvikling.
 
-{% include snippets/comments/02/index.html %}
+{% include snippet.html path="comments/02" %}
 
 ###### Videre læsning
 
@@ -34,7 +34,7 @@ Når du kommenterer en Sass-specifik sektion, så anvend indlejrede Sass-komment
 
 Hver variabel, funktion, mixin og placeholder, der har til hensigt at blive genbrugt igennem hele kodebasen, bør dokumenteres som en del af den globale API ved at anvende [SassDoc](http://sassdoc.com).
 
-{% include snippets/comments/03/index.html %}
+{% include snippet.html path="comments/03" %}
 
 <div class="note">
   <p>Tre skråstreger (<code>/</code>) påkrævet.</p>
@@ -49,7 +49,7 @@ SassDoc har to overordnede roller:
 
 Her er et eksempel af en mixin, der er omfattende dokumenteret med SassDoc:
 
-{% include snippets/comments/04/index.html %}
+{% include snippet.html path="comments/04" %}
 
 ###### Videre læsning
 

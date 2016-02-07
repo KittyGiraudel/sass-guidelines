@@ -1,0 +1,12 @@
+/**
+ * Classe auxiliar para truncar e adicionar reticências a uma
+ * string comprida demais para caber em apenas uma linha.
+ * 1. Previne o conteúdo de transbordar para outras linhas,
+ *    forçando-o a uma linha apenas.
+ * 2. Adiciona reticências no final da linha.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}

@@ -1,0 +1,18 @@
+.foo, .foo-bar,
+.baz {
+  $length: 42em;
+
+  @include ellipsis;
+  @include size($length);
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+
+  &:hover {
+    color: red;
+  }
+
+  @include respond-to('small') {
+    overflow: visible;
+  }
+}

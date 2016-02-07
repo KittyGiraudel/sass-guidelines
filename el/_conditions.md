@@ -11,16 +11,16 @@
 * Το `@else` πρέπει να είναι στην ίδια γραμμή με το αριστερό άγκιστρο (`{`) του προηγούμενου `@if`·
 * Να αφήνεις πάντα καινούργια γραμμή μετά το τελευταίο δεξί άγκιστρο (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 Όταν ελέγχετε για κάποια μη-αληθή τιμή, να χρησιμοποιείτε πάντα την λέξη κλειδή `not` αντί να ελέγχετε για `false` ή `null`.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Πάντα να βάζετε την μεταβλητή στην αριστερή πλευρά της δήλωσης και το (μη) αναμενόμενο αποτέλεσμα στην δεξιά πλευρά. Ανεστραμμένα conditional statements είναι συνήθως δυσκολότερα στην ανάγνωση, ειδικά απο τους άπειρους developers.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 Όταν χρησημοποιείτε conditional statements μέσα σε κάποιο function το οποίο θα επιστρέφει διαφορετική τιμή ανάλογα με τις προϋποθέσεις του conditional statement, βεβαιωθείτε πάντα ότι το function εξακολουθεί να έχει `@return` έξω από το πλαίσιο του conditional statement.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}

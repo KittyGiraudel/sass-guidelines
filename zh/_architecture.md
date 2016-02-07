@@ -173,7 +173,7 @@
 - 从不同文件夹中引入的文件之间用空行分隔；
 - 忽略文件扩展名和下划线前缀。
 
-{% include snippets/architecture/02/index.html %}
+{% include snippet.html path="architecture/02" file="index" %}
 
 这里还有另一种引入的有效方式。令人高兴的是，它使文件更具有可读性；令人沮丧的是，更新时会有些麻烦。不管怎么说，由你决定哪一个最好，这没有任何问题。 对于这种方式，主要文件应遵守如下准则：
 
@@ -183,7 +183,7 @@
 - 新的文件跟在最后的文件夹后面
 - 文件扩展名都可以省略
 
-{% include snippets/architecture/03/index.html %}
+{% include snippet.html path="architecture/03" file="index" %}
 
 <div class="note">
   <p>为了不用亲自引入每一个文件，有一个叫做 <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a> 的 Ruby Sass 扩展程序，使在 Sass 的 <code>@import</code> 中,使其做为 glob 模式，就像这样：<code>@import "components/*"</code></p>
@@ -194,7 +194,7 @@
 
 另一个有意思的方面，由业内已流行的 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) 和 [Chris Coyier](http://css-tricks.com) 引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个 *shame file*。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
 
-{% include snippets/architecture/04/index.html %}
+{% include snippet.html path="architecture/04" %}
 
 ###### 扩展阅读
 

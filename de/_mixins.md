@@ -11,11 +11,11 @@ Dennoch habe ich das Gefühl, vor dem Missbrauch von Mixins warnen zu müssen. D
 
 Davon abgesehen sind Mixins extrem hilfreich und du solltest ein paar verwenden. Die Faustformel hierbei ist, wenn dir auffällt das eine bestimmte Gruppe von CSS Werten immer zusammen auftritt (also nicht zufällig), dann kannst du ein Mixin draus machen. Der [Mikro-Clearfix Hack von Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) zum Beispiel, verdient es (ohne Argumente) in einem Mixin zu sein.
 
-{% include snippets/mixins/01/index.html %}
+{% include snippet.html path="mixins/01" %}
 
 Ein weiteres Beispiel ist ein Mixin welches die Maße `width` und `height` für ein Element gleichzeitig definiert. Es macht den Code nicht nur schlanker zum schreiben, sondern auch einfacher zu lesen.
 
-{% include snippets/mixins/02/index.html %}
+{% include snippet.html path="mixins/02" %}
 
 ###### Weitere Informationen
 
@@ -28,19 +28,19 @@ Manchmal werden Mixins nur dazu benutzt, um zu verhindern dass man eine Gruppe v
 
 In solchen Fällen können wir beim Aufruf ohne Probleme die Klammern weglassen. Das `@include` Keyword (oder `+` Zeichen in der Intended-Syntax) verhält sich bereits als ein Indikator dafür dass die Zeile ein Mixinaufruf ist; es werden keine extra Klammern benötigt.
 
-{% include snippets/mixins/08/index.html %}
+{% include snippet.html path="mixins/08" file="index" %}
 
 ## Parameterliste
 
 Wenn du es mit einer unbekannten Anzahl von Parametern in einem Mixin zu tun hast, solltest du lieber `arglist` anstatt einer Liste verwenden. Stell dir `arglist` als den 8. versteckten und undokumentierten Datentyp mit der `...` Signatur in Sass vor, welcher unbedingt genutzt werden sollte, sobald du eine willkürliche Anzahl von Parametern in deinem Mixin oder Funktion hast.
 
-{% include snippets/mixins/03/index.html %}
+{% include snippet.html path="mixins/03" file="index" %}
 
 Wenn du also ein Mixin erstellst welches eine handvoll Parameter (3 oder mehr)  akzeptiert, überlege dir zweimal bevor du sie als Liste oder Map zusammenfügst weil du denkst es wäre einfacher als jeden Parameter nacheinander.
 
 Sass ist sogar ziemlich Clever bei Mixin- und Funktionsdeklarationen. So sehr dass du selbst eine Liste oder Map als `arglist` in ein Mixin oder eine Funktion übergeben kannst, welche dann als Serie von Parametern aufgefasst wird.
 
-{% include snippets/mixins/04/index.html %}
+{% include snippet.html path="mixins/04" file="index" %}
 
 ###### Weitere Informationen
 
@@ -54,15 +54,15 @@ Unglücklicherweise ist Autoprefixer nicht für jeden eine Option. Wenn du entwe
 
 Falls du weder Autoprefixer, Bourbon noch Compass benutzen kannst, dann, aber auch nur dann, kannst du deine eigenen Mixins schreiben um CSS Werte mit Prefixe zu versehen. Aber. Erstell dir keine Mixins die jede Eigenschaft einzeln ausgeben.
 
-{% include snippets/mixins/05/index.html %}
+{% include snippet.html path="mixins/05" file="index" %}
 
 Mach es auf eine clevere Art und Weise.
 
-{% include snippets/mixins/06/index.html %}
+{% include snippet.html path="mixins/06" %}
 
 Das Mixin zu verwenden sollte ziemlich unkompliziert sein:
 
-{% include snippets/mixins/07/index.html %}
+{% include snippet.html path="mixins/07" file="index" %}
 
 Bitte merk dir dass das eine wirklich schlechte Umsetzung ist. Zum Beispiel kann es nicht mit komplexen Polyfills, wie für Flexbox nötig, umgehen. In dem Fall ist Autoprefixer die bessere Wahl.
 

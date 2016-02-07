@@ -13,7 +13,7 @@ Sass-placeholdere er bevidst fjernet fra denne liste, siden de kan betragtes som
 
 Når det kommer til variabler, funktioner og mixins, så holder vi os til noget meget *CSS-agtigt*: **små bogstaver og afgrænset med bindestreg**, og først og fremmest meningsfuldt.
 
-{% include snippets/naming/01/index.html %}
+{% include snippet.html path="naming/01" file="index" %}
 
 ###### Videre læsning
 
@@ -25,7 +25,7 @@ Hvis du tilfældigvis er en framework-udvikler eller biblioteksforfatter, så fi
 
 Som ved mange sprog, så anbefaler jeg variabelnavne i store bogstaver, med underscore som mellemrum når de er konstanter. Det er ikke blot en meget gammel konvention, men det giver også en god kontrast til de sædvanlige "små bogstaver med bindestreger som mellemrum"-variabler.
 
-{% include snippets/naming/02/index.html %}
+{% include snippet.html path="naming/02" file="index" %}
 
 ###### Videre læsning
 
@@ -37,7 +37,7 @@ Hvis du har til hensigt at distribuere din Sass kode, i tilfældet af et bibliot
 
 For eksempel, hvis du arbejder på et *Sassy Unicorn* projekt, der er tænkt som at blive brugt af udviklere over hele verden (hvem ville ikke det, ikk?), så kunne du overveje at bruge `su-` som et namespace. Det er specifikt nok til at forebygge enhver navnekollision og er kort nok til at ikke at være træls at skrive.
 
-{% include snippets/naming/03/index.html %}
+{% include snippet.html path="naming/03" file="index" %}
 
 <div class="note">
   <p>Bemærk, at automatisk namespacing absolut er et designmål for den kommende <code>@import</code> opdatering fra Sass 4.0. Efterhånden som det kommer tættere på at være realitet, så vil det blive mindre og mindre brugbart at foretage manuel namespacing; efterhånden vil manuelt namespacede biblioteker muligvis blive sværere at bruge.</p>

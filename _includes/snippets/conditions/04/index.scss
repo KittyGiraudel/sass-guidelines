@@ -1,0 +1,17 @@
+// Yep
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  }
+
+  @return false;
+}
+
+// Nope
+@function dummy($condition) {
+  @if $condition {
+    @return true;
+  } @else {
+    @return false;
+  }
+}

@@ -12,7 +12,7 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
 * prawidłowo napisanych wieloliniowych reguł CSSa,
 * sensownego użycia tzw. znaków niedrukowalnych (whitespaces).
 
-{% include snippets/syntax/01/index.html %}
+{% include snippet.html path="syntax/01" %}
 
 W tej sekcji nie zajmiemy się jeszcze zagadnieniem organizacji plików. Poruszone to zostanie w [dalszym miejscu](#architektura).
 
@@ -24,7 +24,7 @@ Choć może się to wydawać nie do końca oczywistym, łańcuchy (ciągi znakó
 
 Aby uniknąć potencjalnych problemów z kodowaniem znaków (character encoding), zalecanym jest by stosować system [UTF-8](https://pl.wikipedia.org/wiki/UTF-8) w [głównym arkuszu](#gwny-plik) z użyciem dyrektywy `@charset`. Należy się również upewnić, by był to pierwszy element w arkuszu i żeby nic wcześniej się przed nim nie znajdowało.
 
-{% include snippets/syntax/02/index.html %}
+{% include snippet.html path="syntax/02" file="index" %}
 
 ### Cudzysłowia
 
@@ -39,7 +39,7 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
 * poprawia to ogólną czytelność,
 * nie ma absolutnie żadnego słusznego powodu, by nie umieszczać ciągów pomiędzy cudzysłowami.
 
-{% include snippets/syntax/03/index.html %}
+{% include snippet.html path="syntax/03" file="index" %}
 
 <div class="note">
   <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
@@ -49,7 +49,7 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
 
 Niektóre z wartości CSS, takie jak `initial` czy `sans-serif` wymagają, by nie znajdowały się pomiędzy cudzysłowami. Deklaracja `font-family: 'sans-serif'` zostanie pominięta, bowiem CSS oczekuje identyfikatora, a nie ciągu w cudzysłowach. Z tego też powodu unikamy umieszczania tych wartości w cudzysłowach.
 
-{% include snippets/syntax/04/index.html %}
+{% include snippet.html path="syntax/04" file="index" %}
 
 Możemy dzięki temu zauważyć różnicę pomiędzy ciągami przeznaczonymi do użycia jako wartości CSS (identyfikatory), jak te w poprzednim przykładzie, oraz ciągami wykorzystywanymi przy typach danych w Sassie, jak na przykład klucze map.
 
@@ -59,13 +59,13 @@ Tych pierwszych nie umieszczamy w cudzysłowach, te drugie natomiast pomiędzy z
 
 Jeżeli ciąg zawiera jeden lub więcej cudzysłowów, można rozważyć umieszczenie całego ciągu wewnątrz znaków podwójnych cudzysłowów (`"`). Zaoszczędzi nam to korzystanie ze zbyt wielu tzw. znaków ucieczki.
 
-{% include snippets/syntax/05/index.html %}
+{% include snippet.html path="syntax/05" file="index" %}
 
 ### Adresy URL
 
 Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
 
-{% include snippets/syntax/06/index.html %}
+{% include snippet.html path="syntax/06" file="index" %}
 
 ###### Dalsze informacje
 
@@ -80,7 +80,7 @@ W Sassie, liczby są typem danych w którego skład wchodzą zarówno liczby nie
 
 Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość wynosi mniej niż jeden. Nigdy nie dodawajmy zer końcowych.
 
-{% include snippets/syntax/07/index.html %}
+{% include snippet.html path="syntax/07" file="index" %}
 
 <div class="note">
   <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code> 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
@@ -90,7 +90,7 @@ Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość 
 
 Zajmując się długościami, wartość `0` nigdy nie powinna mieć jednostki.
 
-{% include snippets/syntax/08/index.html %}
+{% include snippet.html path="syntax/08" file="index" %}
 
 <div class="note">
   <p>Uwaga, praktyka ta powinna być ograniczona jedynie do długości. Pominięcie jednostki w przypadku takiej własności jak <code>transition-delay</code> jest niedozwolone. W teorii, pozbawione jednostki zero przypisane jako wartość czasu trwania animacji czy przejścia jest nieprawidłowe i będzie zignorowane. Nie wszystkie przeglądarki są jednak tak surowe. Pamiętajmy jednak, by omijać jednostki tylko i wyłącznie dla wartości reprezentujących długości.</p>
@@ -100,17 +100,17 @@ Najczęściej powtarzającym się błędem jaki przychodzi mi do głowy na myśl
 
 By dodać jednostkę do liczby, należy pomnożyć tą liczbę przez *1 jednostkę*.
 
-{% include snippets/syntax/09/index.html %}
+{% include snippet.html path="syntax/09" file="index" %}
 
 Pamiętaj, że dodając *0 tej jednostki* też zadziała, lecz ja bym rekomendował używanie wyżej wspomnianej metody. Dodawanie *0 jednostki* może być trochę mylące. I tak, próbując przekonwertować liczbę do innej, kompatybilnej jednostki, dodawanie 0 nie zadziała.
 
-{% include snippets/syntax/10/index.html %}
+{% include snippet.html path="syntax/10" file="index" %}
 
 Ostatecznie zależy to w dużej mierze od tego, co staramy się osiągnąć. Należy mieć jednak na uwadze to, że dodawanie jednostki jako ciągu znaków nie jest dobrym rozwiązaniem.
 
 By usunąć jednostkę z określonej wartości, dzielmy ją przez *jedną jednostkę jej typu*.
 
-{% include snippets/syntax/11/index.html %}
+{% include snippet.html path="syntax/11" file="index" %}
 
 Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież nie o to nam chodzi.
 
@@ -118,7 +118,7 @@ Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekol
 
 **Obliczenia najwyższego poziomu powinny być zawsze otoczone nawiasami**. Ten wymóg nie tylko drastycznie poprawia czytelność kodu, zapobiega on także niektórym rzadkim sytuacjom wymuszając na Sassie określenie wartości tego, co zawarte jest w tym nawiasie.
 
-{% include snippets/syntax/12/index.html %}
+{% include snippet.html path="syntax/12" file="index" %}
 
 ### Liczby magiczne
 
@@ -126,7 +126,7 @@ Liczby magiczne są elementem [programowania starego typu](http://en.wikipedia.o
 
 Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cenę**. Jeśli nie można sobie poradzić ze znalezieniem rozsądnego wytłumaczenia dlaczego dana liczba jest po prostu odpowiednia, pamiętajmy się o dodaniu wyczerpującego komentarza wyjaśniającego dlaczego na taką liczbę się zdecydowaliśmy i dlaczego się ona tutaj sprawdza. Przyznanie się do tego, że czegoś do końca nie wiemy jest zawsze lepsze dla innego dewelopera, niż pozostawianie im takiej łamigłówki do rozwiązania.
 
-{% include snippets/syntax/13/index.html %}
+{% include snippet.html path="syntax/13" %}
 
 ###### Dalsze informacje
 
@@ -155,21 +155,21 @@ RGB posiada zaś tą zaletę, że patrząc na dane wartości w łatwy sposób mo
 
 Na koniec, określenia szesnastkowe są dla ludzkiego umysłu niemal nie do rozszyfrowania. Używaj ich jedynie w ostateczności.
 
-{% include snippets/syntax/14/index.html %}
+{% include snippet.html path="syntax/14" file="index" %}
 
 Używając systemu HSL czy RGB, zawsze dodawaj pojedynczą spację po przecinku (`,`), lecz bez spacji pomiędzy nawiasami (`(`, `)`) i ich zawartością.
 
-{% include snippets/syntax/15/index.html %}
+{% include snippet.html path="syntax/15" file="index" %}
 
 ### Barwy i zmienne
 
 Używając danej barwy więcej niż jeden raz, warto ją umieścić w zmiennej o nazwie, która w sposób konkretny reprezentuje dany kolor.
 
-{% include snippets/syntax/16/index.html %}
+{% include snippet.html path="syntax/16" file="index" %}
 
 W tym momencie można używać tej zmiennej kiedykolwiek zachodzi taka potrzeba. Pamiętajmy jednak, że jeśli jej użycie jest silnie powiązane z określonym motywem, zalecałbym nie używać tej zmiennej "tak po prostu". Zamiast tego, warto by ją przypisać do jakiejś innej zmiennej o nazwie objaśniającej jak powinna być właściwie użyta.
 
-{% include snippets/syntax/17/index.html %}
+{% include snippet.html path="syntax/17" file="index" %}
 
 Robiąc to w ten sposób zapobiega się sytuacji, w której zmiana motywu doprowadzi do czegoś jak `$sass-pink: blue`.
 
@@ -185,7 +185,7 @@ Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnia
 
 Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, proste w użyciu, funkcje `tint` i `shade` (będące, co ciekawe, częścią [Compassa](http://compass-style.org/reference/compass/helpers/colors/#shade)), które dadzą ten sam efekt:
 
-{% include snippets/syntax/18/index.html %}
+{% include snippet.html path="syntax/18" %}
 
 <div class="note">
   <p>Funkcja <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
@@ -211,11 +211,11 @@ Listy powinny być tworzone według następujących zasad:
 * lista powinna być umieszczana wewnątrz nawiasów,
 * końcowy przecinek tylko i wyłącznie w przypadku list zajmujących wiele linii.
 
-{% include snippets/syntax/19/index.html %}
+{% include snippet.html path="syntax/19" file="index" %}
 
 Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już API. Nie próbujmy dodawać niczego ręcznie.
 
-{% include snippets/syntax/20/index.html %}
+{% include snippet.html path="syntax/20" file="index" %}
 
 ###### Dalsze informacje
 
@@ -239,7 +239,7 @@ Mapy powinny być tworzone w następujący sposób:
 
 Przykład:
 
-{% include snippets/syntax/21/index.html %}
+{% include snippet.html path="syntax/21" file="index" %}
 
 ###### Dalsze informacje
 
@@ -267,7 +267,7 @@ W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie po
 
 Przykład:
 
-{% include snippets/syntax/24/index.html %}
+{% include snippet.html path="syntax/24" file="index" %}
 
 Dodając do powyższych reguł związanych z samym CSSem warto też zwrócić uwagę, by:
 
@@ -279,7 +279,7 @@ Dodając do powyższych reguł związanych z samym CSSem warto też zwrócić uw
 
 Przykład:
 
-{% include snippets/syntax/25/index.html %}
+{% include snippet.html path="syntax/25" file="index" %}
 
 ###### Dalsze informacje
 
@@ -294,15 +294,15 @@ Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak b
 
 Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne jest uniwersalne (przynajmniej dla języków opartych o alfabet łaciński), więc przynajmniej nie sprawia ono większego problemu. Moim jednak zdaniem, nieumieszczanie własności takich jak `bottom` i `top` obok siebie jest pomysłem conajmniej dziwnym. Dlaczego też deklaracje dot. animacji miały by się znajdować przed własnością `display`? Jak można się domyśleć, w sortowaniu alfabetycznym nie trudno się doszukać szeregu takich nieścisłości.
 
-{% include snippets/syntax/26/index.html %}
+{% include snippet.html path="syntax/26" file="index" %}
 
 Z drugiej zaś strony, porządkowanie własności według typu zdaje się mieć sens. Każda deklaracja związana z czcionkami jest obok siebie, `top` i `bottom` są znowu razem, a czytanie takiego zestawu reguł zdaje się być przyjemnością. Jednak o ile nie wymagane jest trzymanie się reguł określonych konwencji, takich jak [Idiomatic CSS](https://github.com/necolas/idiomatic-css), niektóre kwestie pozostają problematyczne. Gdzie, na przykład, umieścić własność `white-space`? W grupie fontów, czy obok `display`? Co zrobić z `overflow`? Wreszcie, jaka jest kolejność wewnątrz danej grupy tematycznej (czyżby alfabetyczna, o ironio)?
 
-{% include snippets/syntax/27/index.html %}
+{% include snippet.html path="syntax/27" file="index" %}
 
 Istnieje również inny interesujący pogląd na porządkowanie reguł zwany [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS), który zdaje się zyskiwać na popularności. W dużym skrócie, Concentric CSS opiera się na założeniu modelu pudełkowego (box-model) i w ten też sposób definiuje porządek deklaracji: od wewnątrz (pudełka) do zewnątrz.
 
-{% include snippets/syntax/28/index.html %}
+{% include snippet.html path="syntax/28" file="index" %}
 
 Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
 
@@ -327,7 +327,7 @@ Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloper�
 
 Na przykład, poniższe zagnieżdżenie w Sassie:
 
-{% include snippets/syntax/29/index.html %}
+{% include snippet.html path="syntax/29" file="index" %}
 
 … wygeneruje taki kod CSS:
 
@@ -335,7 +335,7 @@ Na przykład, poniższe zagnieżdżenie w Sassie:
 
 Oprócz tego, od momentu wydania Sassa w wersji 3.3 możliwe jest odwoływanie się do obecnego selektora poprzez (`&`), celem wygenerowania bardziej złożonego selektora. Dla przykładu:
 
-{% include snippets/syntax/31/index.html %}
+{% include snippet.html path="syntax/31" file="index" %}
 
 … wygeneruje taki kod CSS:
 
@@ -357,25 +357,25 @@ Aby zapobiec tego typu sytuacjom, **unikamy zagnieżdżania selektorów jeśli t
 
 Przede wszystkim, dozwolone jest – a nawet rekomendowane – zagnieżdżanie pseudo-klas i pseudo-elementów wewnątrz selektorów.
 
-{% include snippets/syntax/33/index.html %}
+{% include snippet.html path="syntax/33" file="index" %}
 
 Użycie zagnieżdżania selektorów dla pseudo-klas i pseudo-elementów nie tylko ma sens (wszak dotyczy ono blisko powiązanych ze sobą selektorów), ale także pomaga w utrzymaniu całości komponentu w jednym miejscu.
 
 Ponadto, uzasadnionym jest także umieszczanie niezależnych klas, takich jak `.is-active`, w ramach selektora danego komponentu.
 
-{% include snippets/syntax/34/index.html %}
+{% include snippet.html path="syntax/34" file="index" %}
 
 Wreszcie, rozsądnym jest również zagnieżdżanie reguł dotyczących elementu znajdującego się wewnątrz innego elementu, tak aby deklaracje dotyczące całego komponentu znajdowały się w jednym miejscu.
 
-{% include snippets/syntax/35/index.html %}
+{% include snippet.html path="syntax/35" file="index" %}
 
 Pracując z niedoświadczonymi deweloperami, takie selektory jak `.no-opacity &` mogą wydawać się trochę dziwne. By zapobiec wszelkim nieścisłościom, warto zbudować krótki mixin, który przetworzy taką składnię w wyraźne API.
 
-{% include snippets/syntax/36/index.html %}
+{% include snippet.html path="syntax/36" %}
 
 Pozwoli nam to zmodyfikować poprzedni przykład, który teraz będzie wyglądał tak:
 
-{% include snippets/syntax/37/index.html %}
+{% include snippet.html path="syntax/37" file="index" %}
 
 Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz się pewien zagnieżdżania selektorów, korzystaj z tego. Pamiętaj jednak by cały zespół, z którym pracujesz, się temu nie sprzeciwiał.
 

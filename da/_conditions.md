@@ -11,16 +11,16 @@ Under alle omstændigheder, hvis du nogensinde finder behovet for dem, så respe
 * `@else` udsagn skal være på den samme linje som den forrige, lukkende klamme (`}`).
 * Hav altid en ny, tom linje efter den sidste, lukkende klamme (`}`), medmindre den næste linje er en lukkende klamme (`}`).
 
-{% include snippets/conditions/01/index.html %}
+{% include snippet.html path="conditions/01" file="index" %}
 
 Når du tester en falsk værdi, skal du altid bruge `not` keywordet i stedet for at teste det imod `false` eller `null`.
 
-{% include snippets/conditions/02/index.html %}
+{% include snippet.html path="conditions/02" file="index" %}
 
 Læg altid variabel-delen på den venstre side af et udsagn, og det (u)forventede resultat på den højre side. Omvendte betingede udsagn er ofte sværere at læse, især for uerfarne udviklere.
 
-{% include snippets/conditions/03/index.html %}
+{% include snippet.html path="conditions/03" file="index" %}
 
 Når du anvender betingede udsagn inden for en funktion, for at returnere et forskelligt resultat baseret på nogle betingelser, så vær altid sikker på at funktionen stadig har et `@return` udsagn uden for enhver betinget blok.
 
-{% include snippets/conditions/04/index.html %}
+{% include snippet.html path="conditions/04" file="index" %}
