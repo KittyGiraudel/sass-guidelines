@@ -14,7 +14,7 @@ Groft sagt, så ønsker vi (skamløst inspireret af [CSS Guidelines](http://cssg
 
 {% include snippets/syntax/01/index.html %}
 
-Vi vil ikke tackle spørgsmålet omkring filorganisering i denne sektion. Det er formålet for [en anden sektion](#architecture).
+Vi vil ikke tackle spørgsmålet omkring filorganisering i denne sektion. Det er formålet for [en anden sektion](#arkitektur).
 
 ## Strenge
 
@@ -22,7 +22,7 @@ Tro det eller ej, så spiller strenge en ret stor rolle i økosystemerne for bå
 
 ### Encoding
 
-For at undgå potentielle problemer med karakter-encoding, så anbefales det kraftigt at tvinge [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-file) ved at anvende `@charset` direktivet. Vær sikker på at det er det allerførste element i stylesheetet, og at der ikke er nogen form for karakterer før det.
+For at undgå potentielle problemer med karakter-encoding, så anbefales det kraftigt at tvinge [UTF-8](http://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-filen) ved at anvende `@charset` direktivet. Vær sikker på at det er det allerførste element i stylesheetet, og at der ikke er nogen form for karakterer før det.
 
 {% include snippets/syntax/02/index.html %}
 

@@ -1,7 +1,7 @@
 
 # Loops
 
-Da Sass komplexe Datenstrukturen wie [Listen](#lists) und [Maps](#maps) anbietet, ist es keine Überraschung das es Autoren ebenfalls die Möglichkeit gibt über diese zu iterieren.
+Da Sass komplexe Datenstrukturen wie [Listen](#listen) und [Maps](#maps) anbietet, ist es keine Überraschung das es Autoren ebenfalls die Möglichkeit gibt über diese zu iterieren.
 
 Allerdings mögen Loops sonst eher komplexe Logik andeuten welche wahrscheinlich nicht zu Sass gehört. Bevor du einen Loop benutzt, vergewissere dich dass es Sinn macht und auch ein Problem löst.
 

@@ -1,7 +1,7 @@
 
 # Løkker
 
-Fordi Sass giver os komplekse datastrukturer såsom [lister](#lists) og [maps](#maps), så er det ikke nogen overraskelse, at det også giver forfattere en måde at iterere over disse enheder.
+Fordi Sass giver os komplekse datastrukturer såsom [lister](#lister) og [maps](#maps), så er det ikke nogen overraskelse, at det også giver forfattere en måde at iterere over disse enheder.
 
 Dog indebærer tilstedeværelsen af løkker ofte en moderat, kompleks logik, der sandsynligvis ikke hører til Sass. Før en løkke anvendes bør man sikre sig at den giver mening, og faktisk løser et problem.
 

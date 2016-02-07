@@ -14,7 +14,7 @@ Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](http://cssguid
 
 {% include snippets/syntax/01/index.html %}
 
-Wir werden uns hier noch nicht der Dateiorganisation widmen, das ist Thema in einer [anderen Kategorie](#architecture).
+Wir werden uns hier noch nicht der Dateiorganisation widmen, das ist Thema in einer [anderen Kategorie](#architektur).
 
 ## Strings
 
@@ -22,7 +22,7 @@ Ob du es glaubst oder nicht, Strings spielen eine große Rolle in CSS und Sass. 
  
 ### Encoding
 
-Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-8](http://de.wikipedia.org/wiki/UTF-8) durch die `@charset` Regel im [Main Stylesheet](#main-file) zu erzwingen. Versicher dich, dass es die allererste Regel in deinem Stylesheet ist, und nichts davor kommt.
+Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-8](http://de.wikipedia.org/wiki/UTF-8) durch die `@charset` Regel im [Main Stylesheet](#main-datei) zu erzwingen. Versicher dich, dass es die allererste Regel in deinem Stylesheet ist, und nichts davor kommt.
 
 {% include snippets/syntax/02/index.html %}
 

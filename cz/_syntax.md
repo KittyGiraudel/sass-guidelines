@@ -22,7 +22,7 @@ Věřte nebo ne, řetězce hrají docela důležitou roli jak v CSS, tak i Sass 
 
 ### Kódování
 
-Aby se zabránilo možným problémům s kódováním znaků, je vysoce doporučeno nastavit kódování [UTF-8](http://en.wikipedia.org/wiki/UTF-8) v [hlavním souboru se styly](#main-file) použitím `@charset` direktivy. Ujistěte se, že je kódování nastaveno hned na prvním místě ve stylech a není před ním žádný znak.
+Aby se zabránilo možným problémům s kódováním znaků, je vysoce doporučeno nastavit kódování [UTF-8](http://en.wikipedia.org/wiki/UTF-8) v [hlavním souboru se styly](#hlavn-soubor) použitím `@charset` direktivy. Ujistěte se, že je kódování nastaveno hned na prvním místě ve stylech a není před ním žádný znak.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -184,7 +184,7 @@ Pokud nechcete pokaždé psát `mix` funkci, můžete vytvořit dvě jednoduché
 
 ## Seznamy
 
-Seznamy jsou Sass verzí polí. Seznam má strukturu jednorozměrného pole (na rozdíl od [mapy](#maps)), které jsou navrženy tak, aby mohly obsahovat hodnoty jakéhokoli typu (včetně listů, což vede k vnořeným seznamům).
+Seznamy jsou Sass verzí polí. Seznam má strukturu jednorozměrného pole (na rozdíl od [mapy](#mapy)), které jsou navrženy tak, aby mohly obsahovat hodnoty jakéhokoli typu (včetně listů, což vede k vnořeným seznamům).
 
 Seznamy by měly být tvořeny podle následujícího manuálu:
 

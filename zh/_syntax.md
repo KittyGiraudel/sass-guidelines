@@ -14,7 +14,7 @@
 
 {% include snippets/syntax/01/index.html %}
 
-在本部分中不会涉及有关文件组织的问题，相关讨论在[另一节](#architecture)中。
+在本部分中不会涉及有关文件组织的问题，相关讨论在[另一节](#section-50)中。
 
 ## 字符串
 
@@ -22,7 +22,7 @@
 
 ### 编码
 
-为了避免潜在的字符编码问题，强力建议在[入口文件](#入口文件)中通过 `@charset` 指令使用 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 编码格式。请确保该指令是文件的第一条语句，并排除其他字符编码声明。
+为了避免潜在的字符编码问题，强力建议在[入口文件](#section-54)中通过 `@charset` 指令使用 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 编码格式。请确保该指令是文件的第一条语句，并排除其他字符编码声明。
 
 {% include snippets/syntax/02/index.html %}
 
