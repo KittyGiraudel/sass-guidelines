@@ -19,12 +19,17 @@
 
 ## Translating
 
-There are 4 things to translate, each one of them described in the following sections:
+There are 5 things to translate, each one of them described in the following sections:
 
+* [The config](#the-config)
 * [The README](#the-readme)
 * [The content](#the-content)
 * [The meta-data](#the-meta-data)
 * [The code snippets](#the-code-snippets)
+
+### The config
+
+In `_config.yml`, simply add the language shortcode of your translation to the `languages` array.
 
 ### The README
 
