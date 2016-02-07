@@ -10,7 +10,17 @@ github_username:  HugoGiraudel
 safe: true
 
 # Build settings
-exclude: [node_modules]
+exclude: 
+  - node_modules
+  - CHANGELOG.md
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - TRANSLATING.md
+  - README.md
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
 markdown: kramdown
 
 kramdown:
