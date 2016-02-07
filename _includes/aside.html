@@ -26,11 +26,10 @@
     </h2>
 
     <div class="custom-select language-picker">
-      <select id="language-picker">
+      <select id="language-picker" data-current-page="{{ page.url }}">
         {% for language in site.languages %}
         {% if site.data[language].configuration.available %}
-        {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
-        <option {% if _p == page.url %}selected{% endif %} value="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</option>
+        <option {% if site.data[language].configuration.prefix == page.url %}selected{% endif %} value="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</option>
         {% endif %}
         {% endfor %}
       </select>
