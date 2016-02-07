@@ -3,9 +3,9 @@
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
     {% include icons/dollar.html %}
-    {{ site.data.translations[page.language].contributing.support_button }}
+    {{ site.data[page.language].translations.contributing.support_button }}
   </a><a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
     {% include icons/twitter.html %}
-    {{ site.data.translations[page.language].contributing.tweet_button }}
+    {{ site.data[page.language].translations.contributing.tweet_button }}
   </a>
 </div>
