@@ -21,6 +21,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - CNAME
+  - vendor
+  - tmp
 markdown: kramdown
 
 kramdown:
