@@ -1,8 +1,14 @@
 /**
+ * Aside options panel accessibility wrapper
+ */
+.aside[aria-hidden='true'] {
+  display: none;
+}
+
+/**
  * Aside options panel
  * 1. Fixed offscreen
  * 2. Full width on small screens
- * 3. Off-canvas from right of screen
  */
 .aside__content {
   position: fixed; /* 1 */
@@ -11,11 +17,7 @@
   bottom: 0; /* 1 */
   z-index: 30;
   width: 100%; /* 2 */
-  -webkit-transform: translateX(0); /* 3 */
-  -ms-transform: translateX(0); /* 3 */
-  transform: translateX(0); /* 3 */
   background-color: rgb(255, 255, 255);
-  transition: transform 0.15s 0.15s cubic-bezier(0.32, 1, 0.53, 0.8);
 
   /**
    * Fixed width on large screens
@@ -33,16 +35,6 @@
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 20;
-}
-
-.aside[aria-hidden="true"] {
-  display: none;
-}
-
-.aside[aria-hidden="true"] .aside__content {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
 }
 
 /**
