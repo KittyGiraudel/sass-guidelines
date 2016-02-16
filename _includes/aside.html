@@ -1,63 +1,67 @@
-<aside class="aside" id="aside">
-  <h1 class="aside__title">Options</h1>
+<div class="aside" aria-hidden="true" id="options-panel">
+  <div class="aside__overlay" tabindex="-1" data-modal-hide></div>
+  <div class="aside__content" role="dialog">
+    <div role="document">
+      <h1 class="aside__title">Options</h1>
 
-  <section class="aside__section  aside__section--syntax">
-    <h2 class="aside__heading">Code syntax</h2>
+      <section class="aside__section  aside__section--syntax">
+        <h2 class="aside__heading">Code syntax</h2>
 
-    <ul class="aside__radio-list">
-      <li>
-        <label for="sass" class="button" tabindex="0">
-        <input type="radio" name="syntax" id="sass" value="sass" />
-        Sass
-        </label>
-      </li>
-      <li>
-        <label for="scss" class="button" tabindex="0">
-        <input type="radio" name="syntax" id="scss" value="scss" checked />
-        SCSS
-        </label>
-      </li>
-    </ul>
-  </section>
+        <fieldset>
+          <ul class="aside__radio-list">
+            <li>
+              <div class="button">
+                <input type="radio" name="syntax" id="sass" value="sass" />
+                <label for="sass">Sass</label>
+              </div>
+            </li>
+            <li>
+              <div class="button">
+                <input type="radio" name="syntax" id="scss" value="scss" checked />
+                <label for="scss">SCSS</label>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
 
-  <section class="aside__section  aside__section--language">
-    <h2 class="aside__heading">
-      <label for="language-picker">Language</label>
-    </h2>
+      <section class="aside__section  aside__section--language">
+        <h2 class="aside__heading">
+          <label for="language-picker">Language</label>
+        </h2>
 
-    <div class="custom-select language-picker">
-      <select id="language-picker" data-current-page="{{ page.url }}">
-        {% for language in site.languages %}
-        {% if site.data[language].configuration.available %}
-        <option {% if site.data[language].configuration.prefix == page.url %}selected{% endif %} value="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</option>
-        {% endif %}
-        {% endfor %}
-      </select>
+        <div class="custom-select language-picker">
+          <select id="language-picker" data-current-page="{{ page.url }}">
+            {% for language in site.languages %}
+            {% if site.data[language].configuration.available %}
+            <option {% if site.data[language].configuration.prefix == page.url %}selected{% endif %} value="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+
+        <noscript>
+          <ul>
+            {% for language in site.languages %}
+            {% if site.data[language].configuration.available %}
+            {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
+            <li {% if _p == page.url %}class="is-selected"{% endif %}><a href="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </noscript>
+      </section>
+
+      <section class="aside__section  aside__section--extras">
+        <h2 class="aside__heading">Extras</h2>
+
+        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
+        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
+        {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
+      </section>
+
+      <button data-modal-hide type="button" title="Close the options panel" class="aside__toggle">&times;</button>
     </div>
-
-    <noscript>
-      <ul>
-        {% for language in site.languages %}
-        {% if site.data[language].configuration.available %}
-        {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
-        <li {% if _p == page.url %}class="is-selected"{% endif %}><a href="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</a></li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </noscript>
-  </section>
-
-  <section class="aside__section  aside__section--extras">
-    <h2 class="aside__heading">Extras</h2>
-
-    <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
-    <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
-    {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-    <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
-  </section>
-
-  <label for="aside-toggle" class="aside__toggle  button-ui">
-    {% include icons/settings.html %}
-    <span class="visually-hidden">Toggle the options panel</span>
-  </label>
-</aside>
+  </div>
+</div>
