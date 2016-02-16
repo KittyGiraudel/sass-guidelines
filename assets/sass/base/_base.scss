@@ -66,6 +66,15 @@ a,
 }
 
 /**
+ * Reset fieldset styles to make it invisible
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
  * Main container
  * 1. Position context for absolutely positioned children
  * 2. Leave some room for table of contents on large screens
