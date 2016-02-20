@@ -45,10 +45,16 @@ What I do like with Sass is its conservative approach to CSS. Sass’ design is 
 
 In other words, Sass is not a preprocessor aimed at pleasing nerdy wannabe programmers like me by adding extraordinary features on top of a language that is not intended to support any logical use-cases. It is a software aimed at solving actual issues; helping to provide useful functionality to CSS where CSS falls short.
 
-Preprocessors aside, we should also mention post-processing tools, which have received significant exposure in the last few months, thanks mainly to [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/). They are often referred to as “postprocessors” as they transpile yet-to-come standard syntax into today’s CSS. Otherwise, they are pretty much equivalent to preprocessors except they do not provide anything else other than upcoming CSS syntax.
+Preprocessors aside, we should also mention tools like [PostCSS](https://github.com/postcss/postcss) and [cssnext](https://cssnext.github.io/) which have received significant exposure these last few months.
 
-You can think of postprocessors as a polyfill for unsupported CSS features. For instance, you would write variables as they are described in the [CSS specifications](http://dev.w3.org/csswg/css-variables/), then compile your stylesheets with a postprocessor only to find every variable occurrence gets replaced with its value, as Sass would do.
+PostCSS is commonly (and incorrectly) referred to as a “postprocessor”. The assumption, combined with the unfortunate name, is that PostCSS parses over CSS that has already been processed by a preprocessor. While it can work this way, it is not a requirement so PostCSS is actually just a “processor”.
 
-The idea behind postprocessors is that once browsers support new features (e.g. CSS variables), the postprocessor does not compile them anymore and lets browsers take over.
+It lets you access “tokens” of your stylesheets (like selectors, properties and values), process these with JavaScript to perform some operation of any kind and compile the results to CSS. For example, the popular prefixing library [Autoprefixer](https://github.com/postcss/autoprefixer) is built with PostCSS. It parses every rule to see if vendor prefixes are needed by referencing the browser support tool [CanIUse](http://caniuse.com) and then removes and adds vendor prefixes that are needed.
 
-While providing tomorrow’s syntax today is something of a noble idea, I have to say I still prefer using Sass for most tasks. However, there are some occasions where I believe postprocessors are more suited than Sass and the like - CSS prefixing for instance - but we’ll get back to this.
+This is incredibly powerful and great for building libraries that work with any preprocessor (as well as vanilla CSS), but PostCSS isn’t particularly easy to use yet. You have to know a bit of JavaScript to build anything with it, and its API can be confusing at times. While Sass only provides a set of features that are useful to write CSS, PostCSS provides direct access to the CSS AST (*abstract syntax tree*) and JavaScript.
+
+In short, Sass is somewhat easy and will solve most of your problems. On the other hand, PostCSS can be difficult to take in hand (if you aren’t great with JavaScript) but turns out to be incredibly powerful. There’s no reason why you can’t and shouldn’t use both. In fact, PostCSS offers an official SCSS parser for just this thing.
+
+<div class="note">
+  <p>Thanks to <a href="https://github.com/corysimmons">Cory Simmons</a> for his help and expertise on this section.</p>
+</div>
