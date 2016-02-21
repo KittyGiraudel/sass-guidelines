@@ -19,8 +19,8 @@
 
 /* THANKS */
 
-    {% for language in site.data.languages %}{% for translator in language[1].translators %}
-    {{ language[1].label }} translator: {{ translator.name }}
+    {% for language in site.languages %}{% for translator in site.data[language].configuration.translators %}
+    {{ site.data[language].configuration.label }} translator: {{ translator.name }}
     Contact: {{ translator.link }}
     {% endfor %}{% endfor %}
 
