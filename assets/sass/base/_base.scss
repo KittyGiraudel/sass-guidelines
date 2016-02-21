@@ -43,7 +43,7 @@ a,
 /**
  * Prevent back-links in TL;DR lists from being underlined
  */
-#content > h1:last-of-type ~ ul [href^='#'] {
+.chapter--tldr li > a[href^='#'] {
   text-decoration: none;
   opacity: 0.5;
   color: $dark-pink;

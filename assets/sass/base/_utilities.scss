@@ -6,19 +6,6 @@
 }
 
 /**
- * Hide a checkbox while keeping it accessible
- * 1. Prevent a page jump when toggling the checkbox through a label
- */
-.checkbox-hack {
-  position: fixed; /* 1 */
-  width: 0;
-  height: 0;
-  margin: 0;
-  opacity: 0;
-  clip: rect(0 0 0 0);
-}
-
-/**
  * Visually hide an element while keeping it accessible
  */
 .visually-hidden {
