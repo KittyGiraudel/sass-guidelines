@@ -43,7 +43,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 Sass 的空白敏感语法通过缩进以摆脱大括号、分号和其他符号，从而实现了简洁凝练的语法格式。与之相比，SCSS 则更容易学习，因为它只是在 CSS 上添加了一点点额外的功能。
 
-<p>我自己更喜欢 SCSS，因为它更接近 CSS 的原生面貌，对开发者来说具有友好性。因此，样式指南全文将使用 SCSS 而不是 Sass 语法格式来演示。你可以通过<label for="aside-toggle" class="link-like">左侧的可选面板</label>切换到 Sass 的缩进语法</p>
+<p>我自己更喜欢 SCSS，因为它更接近 CSS 的原生面貌，对开发者来说具有友好性。因此，样式指南全文将使用 SCSS 而不是 Sass 语法格式来演示。你可以通过<button type="button" data-modal-show="options-panel" class="link-like">左侧的可选面板</button>切换到 Sass 的缩进语法</p>
 
 ###### 扩展阅读
 

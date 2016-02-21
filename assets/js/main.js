@@ -242,5 +242,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     footer: document.querySelector('.footer')
   });
 
+  var aside = new Modal(document.getElementById('options-panel'));
+
   sassGuidelines.initialize();
 });

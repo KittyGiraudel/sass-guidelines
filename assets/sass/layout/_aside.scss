@@ -1,21 +1,23 @@
 /**
+ * Aside options panel accessibility wrapper
+ */
+.aside[aria-hidden='true'] {
+  display: none;
+}
+
+/**
  * Aside options panel
  * 1. Fixed offscreen
  * 2. Full width on small screens
- * 3. Off-canvas from right of screen
  */
-.aside {
+.aside__content {
   position: fixed; /* 1 */
   top: 0; /* 1 */
   right: 0; /* 1 */
   bottom: 0; /* 1 */
-  z-index: 2;
+  z-index: 30;
   width: 100%; /* 2 */
-  -webkit-transform: translateX(100%); /* 3 */
-  -ms-transform: translateX(100%); /* 3 */
-  transform: translateX(100%); /* 3 */
   background-color: rgb(255, 255, 255);
-  transition: 0.15s cubic-bezier(0.32, 1, 0.53, 0.8);
 
   /**
    * Fixed width on large screens
@@ -23,6 +25,16 @@
   @include respond-to('medium') {
     width: $sidebar-width;
   }
+}
+
+.aside__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
 }
 
 /**
@@ -84,16 +96,17 @@
 
 /**
  * Toggle button from options panel
+ * 1. Vertical alignment inside aside header
+ * 2. Enlarging without positioning issues
  */
 .aside__toggle {
   position: absolute;
-  bottom: 0;
-  left: -70px;
-  background-color: rgb(255, 255, 255);
-
-  @include respond-to('medium') {
-    background: transparent;
-  }
+  top: 0.4em; /* 1 */
+  right: 0.5em;
+  color: rgb(255, 255, 255);
+  border: 0;
+  background-color: transparent;
+  transform: scale(1.25); /* 2 */
 }
 
 /**
