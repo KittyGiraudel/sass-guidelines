@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# Stop if any of the following commands fails
+set -e
+
+# Add local executables to PATH
+PATH=$(npm bin):$PATH
+
+# Folders
+DIST_FOLDER=_site
+TMP_FOLDER=.tmp
+INCLUDES_FOLDER=_includes
+ASSETS_FOLDER=assets
+CSS_FOLDER=$ASSETS_FOLDER/css
+JS_FOLDER=$ASSETS_FOLDER/js
+
+# Files
+DIST_CSS_FILE=$CSS_FOLDER/main.css
+DIST_JS_FILE=$JS_FOLDER/main.js
+DIST_JS_MIN_FILE=$JS_FOLDER/main.min.js
+CRITICAL_FILE=$INCLUDES_FOLDER/critical.css
+UTILITIES_FILE=$INCLUDES_FOLDER/utilities.js
+TMP_FILE=$TMP_FOLDER/main.css
+PID_FILE=$TMP_FOLDER/jekyll.pid
+
+# Other configuration
+CRITICAL_URL=http://localhost:4000
+UNCSS_IGNORED_SELECTORS="/\\.anchor-link/,/\\.sass/,/\\.sticky/,/\\.in\\-viewport/"
+# Count the number of steps in file, omitting the string
+# in next command and the function name (2). Very meta.
+NUMBER_OF_STEPS=$(($(grep -cow "build_step" "$0")-2))
+
+# Helper function to echo a step
+build_step ()
+{
+  CURRENT_STEP=$((${CURRENT_STEP:-0}+1))
+  echo "\n[${CURRENT_STEP}/${NUMBER_OF_STEPS}] ${1}"
+}
+
+# Build process
+build_step "Clean and start fresh"
+rm -rf node_modules && rm -rf $DIST_FOLDER && rm -rf $TMP_FOLDER && mkdir $TMP_FOLDER && touch $CRITICAL_FILE && touch $UTILITIES_FILE && npm install
+
+build_step "Run Jekyll"
+jekyll serve --no-watch --detach --destination $DIST_FOLDER
+
+build_step "Run uncss on the main CSS file and create a temporary file"
+uncss $DIST_FOLDER/index.html --stylesheets $DIST_CSS_FILE --ignore $UNCSS_IGNORED_SELECTORS > $TMP_FILE
+
+build_step "Autoprefix the temporary CSS file"
+postcss --use autoprefixer $TMP_FILE -d $TMP_FOLDER
+
+build_step "Minify the temporary CSS file"
+cleancss $TMP_FILE --output $TMP_FILE
+
+build_step "Run criticalcss on the temporary CSS file and create critical CSS file"
+criticalcss run --url $CRITICAL_URL --file $TMP_FILE --output $CRITICAL_FILE && kill -9 $(pgrep -f jekyll)
+
+build_step "Minify critical CSS file"
+cleancss $CRITICAL_FILE --output $CRITICAL_FILE
+
+build_step "Concatenate and minify JS utilities"
+cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js $JS_FOLDER/loadFont.js | uglifyjs > $UTILITIES_FILE
+
+build_step "Minify main JavaScript file"
+cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js $DIST_JS_FILE | uglifyjs > $DIST_JS_MIN_FILE
+
+build_step "Run Jekyll again with freshly created critical CSS and JS utilities"
+jekyll build --quiet --destination $DIST_FOLDER
+
+build_step "Replace existing the main CSS file with the optimised one"
+mv $TMP_FILE $DIST_FOLDER/$DIST_CSS_FILE
