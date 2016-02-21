@@ -1,16 +1,18 @@
 {
   "scripts": {
-    "clean": "rm -rf node_modules && npm install && rm -rf assets/js/main.min.js && rm -rf _site",
-    "utilities.js": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js assets/js/loadFont.js | node_modules/.bin/uglifyjs > _includes/utilities.js",
-    "critical.css": "jekyll build && mv _site/assets/css/critical.css _includes/critical.css",
-    "main.min.js": "cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/main.js | node_modules/.bin/uglifyjs > assets/js/main.min.js",
-    "build": "npm run clean && npm run main.min.js && npm run utilities.js && npm run critical.css",
+    "build": "bin/build",
+    "postbuild": "bin/testbuild",
     "start": "npm run build && jekyll s"
   },
   "devDependencies": {
     "accessible-modal-dialog": "^1.0.1",
+    "autoprefixer": "^6.3.3",
+    "clean-css": "^3.4.9",
+    "criticalcss": "^1.0.1",
     "fg-loadcss": "^0.2.4",
+    "postcss-cli": "^2.5.1",
     "uglify-js": "^2.4.15",
+    "uncss": "^0.13.0",
     "woff2-feature-test": "^1.0.2"
   }
 }
