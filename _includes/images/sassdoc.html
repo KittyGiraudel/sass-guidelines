@@ -1,3 +1,4 @@
+{::options parse_block_html="false" /}
 
 <figure role="group">
   <img alt="{{ site.data[page.language].translations.images.sassdoc|markdownify|strip_html }}"
@@ -7,5 +8,7 @@
                /assets/images/sassdoc-preview_large.png 1200w,
                /assets/images/sassdoc-preview_huge.png  1590w"
         data-proofer-ignore />
-  <figcaption>{{ site.data[page.language].translations.images.sassdoc|markdownify }}</figcaption>
+  <figcaption>{{ site.data[page.language].translations.images.sassdoc|markdownify|replace:"<p>",""|replace:"</p>","" }}</figcaption>
 </figure>
+
+{::options parse_block_html="true" /}

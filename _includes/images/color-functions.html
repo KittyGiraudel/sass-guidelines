@@ -1,3 +1,4 @@
+{::options parse_block_html="false" /}
 
 <figure role="group">
   <img alt="{{ site.data[page.language].translations.images.color-functions|markdownify|strip_html }}"
@@ -7,5 +8,7 @@
              /assets/images/lighten-darken-mix_large.png 1200w,
              /assets/images/lighten-darken-mix_huge.png  1590w"
     data-proofer-ignore />
-  <figcaption>{{ site.data[page.language].translations.images.color-functions|markdownify }}</figcaption>
+  <figcaption>{{ site.data[page.language].translations.images.color-functions|markdownify|replace:"<p>",""|replace:"</p>","" }}</figcaption>
 </figure>
+
+{::options parse_block_html="true" /}
