@@ -17,6 +17,11 @@ layout: compress
 
     {% include translation-warning.html %}
 
+    <button type="button" data-modal-show="options-panel" class="button-ui  button-ui--toggle">
+      {% include icons/settings.html %}
+      <span class="visually-hidden">Toggle the options panel</span>
+    </button>
+
     <main class="main" aria-label="Content" id="main">
       <div class="container" id="content">
         {{ content }}

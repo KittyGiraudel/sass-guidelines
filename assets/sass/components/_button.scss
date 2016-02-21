@@ -88,3 +88,16 @@
     left: auto;
   }
 }
+
+/**
+ * Button to open options panel
+ * 1. Fix it on large screens
+ */
+.button-ui--toggle {
+  @include respond-to('medium') {
+    position: fixed; /* 1 */
+    right: 0;
+    bottom: 0;
+    left: auto;
+  }
+}

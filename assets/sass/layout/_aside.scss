@@ -95,11 +95,11 @@
 }
 
 /**
- * Toggle button from options panel
+ * Close button from options panel
  * 1. Vertical alignment inside aside header
  * 2. Enlarging without positioning issues
  */
-.aside__toggle {
+.aside__close {
   position: absolute;
   top: 0.4em; /* 1 */
   right: 0.5em;
@@ -144,24 +144,4 @@
     width: 50%;
     padding: 0 0.5rem;
   }
-}
-
-/**
- * Aside options panel when opened
- * 1. Not off-canvas anymore
- * 2. Make it scrollable if needed
- */
-#aside-toggle:checked ~ .aside {
-  -webkit-transform: translateX(0); /* 1 */
-  -ms-transform: translateX(0); /* 1 */
-  transform: translateX(0); /* 1 */
-  overflow: auto; /* 2 */
-  box-shadow: -0.3em 0 .25em rgba(0, 0, 0, 0.1);
-}
-
-/**
- * Move the toggle button in the options panel
- */
-#aside-toggle:checked ~ .aside .aside__toggle {
-  left: 0;
 }
