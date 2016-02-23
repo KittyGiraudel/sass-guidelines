@@ -63,7 +63,7 @@ build_step "Concatenate and minify JS utilities"
 cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js $JS_FOLDER/loadFont.js | uglifyjs > $UTILITIES_FILE
 
 build_step "Minify main JavaScript file"
-cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js $DIST_JS_FILE | uglifyjs > $DIST_JS_MIN_FILE
+cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js $JS_FOLDER/Sidebar.js $JS_FOLDER/App.js $DIST_JS_FILE | uglifyjs > $DIST_JS_MIN_FILE
 
 build_step "Run Jekyll again with freshly created critical CSS and JS utilities"
 jekyll build --quiet --destination $DIST_FOLDER
