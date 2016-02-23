@@ -10,7 +10,7 @@ layout: compress
   <body id="top">
     <a id="skip" href="#main">Skip to main content</a>
 
-    {% include icons.svg %}
+    {% include sprite.svg %}
     {% include header.html %}
 
     <h2 class="baseline">{{ site.data[page.language].translations.baseline.content }}</h2>
@@ -18,7 +18,7 @@ layout: compress
     {% include translation-warning.html %}
 
     <button type="button" data-modal-show="options-panel" class="button-ui  button-ui--toggle">
-      {% include icons/settings.html %}
+      {% include icon.html icon="settings" %}
       <span class="visually-hidden">Toggle the options panel</span>
     </button>
 
@@ -31,7 +31,7 @@ layout: compress
     {% include aside.html %}
 
     <a href="#top" class="button-ui  button-ui--back">
-      {% include icons/up.html %}
+      {% include icon.html icon="up" %}
       <span class="visually-hidden">Get back to top</span>
     </a>
 
