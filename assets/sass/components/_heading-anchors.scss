@@ -2,9 +2,13 @@
  * Anchor links
  */
 .anchor-link {
-  color: rgb(153, 153, 153);
-  text-decoration: none;
-  transform: scale(0.5);
-  display: inline-block;
-  margin-left: 10px;
+  display: none;
+
+  @include respond-to('medium') {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 8px;
+  }
 }

@@ -1,11 +1,14 @@
+{::options parse_block_html="false" /}
 
 <div class="button-wrapper">
   {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
   <a href="https://gum.co/sass-guidelines" target="_blank" class="button">
-    {% include icons/dollar.html %}
+    {% include icon.html icon="euro" %}
     {{ site.data[page.language].translations.contributing.support_button }}
   </a><a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
+    {% include icon.html icon="twitter" %}
     {{ site.data[page.language].translations.contributing.tweet_button }}
   </a>
 </div>
+
+{::options parse_block_html="true" /}

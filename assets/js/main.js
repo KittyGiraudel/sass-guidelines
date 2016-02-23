@@ -99,8 +99,9 @@
         this.headingsOffset.push([ this.headings[i], headingsTop ]);
       }
 
+      var svg = document.querySelector('meta[name="svg-link-icon"]').getAttribute('content');
       // Create anchor element
-      this.createHeadingsAnchor(this.headings[i]);
+      this.createHeadingsAnchor(this.headings[i], svg);
     }
   };
 
@@ -194,13 +195,14 @@
    * Creates anchor and adds it to passed element.
    * @param {HTMLElement} elem
    */
-  App.prototype.createHeadingsAnchor = function (elem) {
+  App.prototype.createHeadingsAnchor = function (elem, content) {
     var title = elem.innerText || elem.textContent;
     var link = document.createElement('a');
     link.setAttribute('href', '#' + elem.id);
-    link.innerHTML = '§';
+    link.innerHTML = content || '§';
     link.innerHTML += '<span class="visually-hidden">Link to “' + title + '”</span>';
-    link.setAttribute('class', 'anchor-link');
+    link.setAttribute('class', 'anchor-link button-ui');
+    link.setAttribute('title', 'Link to “' + title + '”');
 
     elem.appendChild(link);
   };
@@ -236,7 +238,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
   var sassGuidelines = new App({
     addOffsetView: 50,
-    headings: document.querySelectorAll('.chapter > h1[id], .chapter > h2[id], .chapter > h3[id]'),
+    headings: document.querySelectorAll('.chapter > h1[id]'),
     tableOfContents: document.querySelector('.toc'),
     languagePicker: document.getElementById('language-picker'),
     footer: document.querySelector('.footer')
