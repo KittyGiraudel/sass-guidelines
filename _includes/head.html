@@ -39,16 +39,14 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" media="screen" />
   </noscript>
 
-  <!-- Print CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/print.css' | prepend: site.baseurl }}" media="print" />
-
   <!-- Responsive images setup -->  
-  <script>document.createElement('picture')</script>
   <script src="{{ '/assets/js/picturefill.min.js' | prepend: site.baseurl }}" async></script>
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
   <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+
+  <!-- SVG for JavaScript usage -->
   <meta name="svg-link-icon" content='{% include icon.html icon="pin" %}' />
   <meta name="svg-pencil-icon" content='{% include icon.html icon="pencil" %}' />
 
