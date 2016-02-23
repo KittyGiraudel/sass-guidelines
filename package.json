@@ -4,7 +4,8 @@
     "postbuild": "bin/testbuild",
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
-    "start": "npm run build && jekyll s"
+    "start": "npm run build && jekyll s",
+    "js": "cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/App.js assets/js/Sidebar.js assets/js/main.js | uglifyjs > assets/js/main.min.js"
   },
   "devDependencies": {
     "accessible-modal-dialog": "^1.0.1",
