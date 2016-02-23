@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+  var offset = 50;
   var headings = document.querySelectorAll('.chapter:not(.toc) > h1[id]');
 
   var app = new window.App({
@@ -6,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   });
 
   var sidebar = new window.Sidebar({
-    addOffsetView: 50,
+    addOffsetView: offset,
     headings: headings,
     tableOfContents: document.querySelector('.toc'),
     footer: document.querySelector('.footer')
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   var aside = new Modal(document.getElementById('options-panel'));
 
   var url = new window.UrlManager({
-    offset: 50,
+    offset: offset,
     updateOn: headings
   });
 });
