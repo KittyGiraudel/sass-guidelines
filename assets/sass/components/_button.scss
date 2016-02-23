@@ -2,15 +2,23 @@
  * Buttons
  * 1. Full width buttons on small screens
  */
-.button {
-  margin: 0 1rem $vertical-rhythm-baseline;
+.button,
+.button-ui {
   display: block; /* 1 */
-  padding: 1rem;
   border: 3px solid;
   border-radius: 1337px;
-  color: $secondary-color;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+}
+
+/**
+ * Regular buttons
+ */
+.button {
+  margin: 0 1rem $vertical-rhythm-baseline;
+  padding: 1rem;
+  color: $secondary-color;
 
   @include on-event {
     color: $main-color;
@@ -48,22 +56,12 @@
  * UI specific buttons
  */
 .button-ui {
-  display: block;
   margin: 1rem;
   padding: 0.5rem;
-  border: 3px solid;
-  border-radius: 1337px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: rgb(204, 204, 204);
   font-size: 0.8em;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
   z-index: 5;
-
-  @include respond-to('medium') {
-    background-color: transparent;
-  }
 
   /**
    * Icon inside UI button
@@ -79,24 +77,17 @@
   }
 }
 
-/**
- * Button to get back to top of the page
- * 1. Fix it on large screens
- */
-.button-ui--back {
-  position: fixed; /* 1 */
+.button-ui--back,
+.button-ui--toggle {
+  position: fixed;
   right: 0;
-  bottom: 50px;
   left: auto;
 }
 
-/**
- * Button to open options panel
- * 1. Fix it on large screens
- */
+.button-ui--back {
+  bottom: 50px;
+}
+
 .button-ui--toggle {
-  position: fixed; /* 1 */
-  right: 0;
   bottom: 0;
-  left: auto;
 }

@@ -17,7 +17,7 @@ html {
  */
 body {
   font: 1.125em / 1.45 $text-font-stack;
-  color: rgb(51, 51, 51);
+  color: $dark-grey;
 }
 
 
@@ -37,20 +37,6 @@ a,
 
   @include on-event {
     color: $main-color;
-  }
-}
-
-/**
- * Prevent back-links in TL;DR lists from being underlined
- */
-.chapter--tldr li > a[href^='#'] {
-  text-decoration: none;
-  opacity: 0.5;
-  color: $dark-pink;
-  transition: opacity 0.15s ease-out;
-
-  @include on-event {
-    opacity: 1;
   }
 }
 
@@ -76,7 +62,7 @@ fieldset {
 
 /**
  * Main container
- * 1. Position context for absolutely positioned children
+ * 1. Position context for absolutely positioned .toc
  * 2. Leave some room for table of contents on large screens
  */
 .main {

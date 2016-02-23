@@ -1,10 +1,11 @@
 /**
  * Anchor links
+ * 1. Magic number
  */
 .anchor-link {
   display: inline-block;
   position: absolute;
   margin: 0;
   right: 0;
-  top: 8px;
+  top: 8px; /* 1 */
 }
