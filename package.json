@@ -2,6 +2,7 @@
   "scripts": {
     "build": "bin/build",
     "postbuild": "bin/testbuild",
+    "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
     "start": "npm run build && jekyll s"
   },
@@ -13,6 +14,7 @@
     "fg-loadcss": "^0.2.4",
     "postcss-cli": "^2.5.1",
     "spritesh": "^1.0.8",
+    "svgo": "^0.6.1",
     "uglify-js": "^2.4.15",
     "uncss": "^0.13.0",
     "woff2-feature-test": "^1.0.2"
