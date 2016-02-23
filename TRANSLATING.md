@@ -6,7 +6,7 @@
 
 2. Copy the `en/` folder and rename it after your language shortcode (e.g. `fr/` for French).
 
-3. Add an `index.md` file in your folder containing strictly (replace `<language_shortcode>` with your language shortcode of course; if your language is right-to-left, replace `ltr` with `rtl`):
+3. Add an `index.md` file in your folder containing strictly the following (replace `<language_shortcode>` with your language shortcode of course; if your language is right-to-left, replace `ltr` with `rtl`):
   ```
   ---
   layout: default
@@ -48,7 +48,7 @@ In the `_data` folder, duplicate the `en.yml` file and rename it after your tran
 For instance, here is the object for the Polish translation:
 
 ```yml
-pl:
+configuration:
   version: 1.2 # The version of the translation
   label: Polish # The name of the language
   prefix: /pl/ # The route to access it (language short code)
