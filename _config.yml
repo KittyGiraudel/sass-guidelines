@@ -5,11 +5,22 @@ keywords: CSS, Sass, SCSS, styleguide, guidelines
 baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
-github_username:  HugoGiraudel
-
-safe: true
+languages:
+  - cz
+  - da
+  - de
+  - el
+  - en
+  - es
+  - fr
+  - ko
+  - pl
+  - pt
+  - ru
+  - zh
 
 # Build settings
+safe: true
 exclude: 
   - node_modules
   - CHANGELOG.md
@@ -24,8 +35,8 @@ exclude:
   - vendor
   - .tmp
   - bin
-markdown: kramdown
 
+markdown: kramdown
 kramdown:
   auto_ids: true
   toc_levels: 1..2
@@ -40,17 +51,3 @@ compress_html:
   endings: []
   blanklines: false
   startings: []
-
-languages:
-  - cz
-  - da
-  - de
-  - el
-  - en
-  - es
-  - fr
-  - ko
-  - pl
-  - pt
-  - ru
-  - zh
