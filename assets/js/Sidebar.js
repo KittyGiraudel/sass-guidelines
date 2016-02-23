@@ -1,26 +1,8 @@
 (function (global) {
   'use strict';
 
-  function getDocumentHeight () {
-    return global.innerHeight || document.clientHeight || document.body.clientHeight;
-  }
-
-  function getDocumentScrollTop () {
-    return document.documentElement.scrollTop || document.body.scrollTop;
-  }
-
   function evalClientResolution () {
     return global.matchMedia('(min-width: 975px)').matches;
-  }
-
-  function getOffset (elem) {
-    var offset = 0;
-
-    do {
-      if (!isNaN(elem.offsetTop)) offset += elem.offsetTop;
-    } while(elem = elem.offsetParent);
-
-    return offset;
   }
 
   var Sidebar = function (config) {
@@ -32,7 +14,7 @@
 
     this.headingsOffset = Array.prototype.slice.call(this.headings)
       .map(function (heading) {
-        return [ heading, getOffset(heading) ];
+        return [ heading, global.getOffset(heading) ];
       });
 
     this.initialize();
@@ -50,7 +32,7 @@
   };
 
   Sidebar.prototype.evalHeadingsPosition = function () {
-    var scrollTop = getDocumentScrollTop() + this.addOffsetView;
+    var scrollTop = global.getDocumentScrollTop() + this.addOffsetView;
 
     if (this.isLargerThanMobile) {
       // Loop over all headings offsets & compare scrollTop if already passed a value.
@@ -75,10 +57,10 @@
   };
 
   Sidebar.prototype.adjustTableOfContents = function () {
-    var top = getOffset(this.tableOfContents);
-    var bottom = getOffset(this.footer);
-    var current = getDocumentScrollTop();
-    var currentBottom = current + getDocumentHeight();
+    var top = global.getOffset(this.tableOfContents);
+    var bottom = global.getOffset(this.footer);
+    var current = global.getDocumentScrollTop();
+    var currentBottom = current + global.getDocumentHeight();
 
     if (current > top) {
       this.tableOfContents.classList.add('sticky');
