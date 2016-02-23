@@ -3,7 +3,7 @@
  */
 .chapter {
   h1, h2, h3, h4, h6, p, ul, ol, pre, img {
-    @include vertical-rhythm;
+    margin-bottom: $vertical-rhythm-baseline;
   }
 }
 
@@ -12,6 +12,7 @@
  */
 ul, ol {
   list-style-position: inside;
+  padding-left: 3px;
 }
 
 ul ul,

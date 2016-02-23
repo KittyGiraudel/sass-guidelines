@@ -8,20 +8,6 @@
   padding-right: 1rem;
 }
 
-/// Make an element slightly overflow its container on the sides on large screens
-@mixin expand {
-  @include respond-to('medium') {
-    margin-left: -1rem;
-    margin-right: -1rem;
-  }
-}
-
-/// Apply vertical rhythm
-/// @author Hugo Giraudel
-@mixin vertical-rhythm {
-  margin-bottom: $vertical-rhythm-baseline;
-}
-
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self (false) - Whether or not to include current selector
@@ -40,15 +26,6 @@
     &:focus {
       @content;
     }
-  }
-}
-
-/// Contexts
-/// @author Hugo Giraudel
-/// @param {String | List} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
   }
 }
 

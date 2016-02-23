@@ -2,8 +2,7 @@
  * Notes
  */
 .note {
-  @include vertical-rhythm;
-  @include expand;
+  margin-bottom: $vertical-rhythm-baseline;
   background-color: $note-background;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);

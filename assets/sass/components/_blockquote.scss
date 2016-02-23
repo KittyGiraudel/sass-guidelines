@@ -2,10 +2,7 @@
  * Quotes
  */
 blockquote {
-  @include vertical-rhythm;
-  @include expand;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 0 $vertical-rhythm-baseline;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;

@@ -3,8 +3,7 @@
  * 1. Make it proheminent
  */
 .translation-warning {
-  @include vertical-rhythm;
-  margin: 0;
+  margin: 0 0 $vertical-rhythm-baseline;
   padding: 1rem 0;
   background-color: $quote-background;
   font-size: 1.2em; /* 1 */
