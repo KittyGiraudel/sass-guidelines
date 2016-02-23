@@ -1,5 +1,16 @@
+.chapter {
+  position: relative;
+}
+
 .chapter::after {
   content: '';
   display: table;
   clear: both;
+}
+
+.chapter__edit {
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  margin: 0;
 }

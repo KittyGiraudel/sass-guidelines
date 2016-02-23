@@ -13,6 +13,7 @@
     this.languagePicker     = config.languagePicker;
     this.footer             = config.footer;
     this.isLargerThanMobile = false;
+    this.language           = document.documentElement.getAttribute('lang');
   };
 
   /**
@@ -20,12 +21,9 @@
    */
   App.prototype.initialize = function () {
     this.evalClientResolution();
+    this.isLargerThanMobile && this.createEditLinks();
     this.validateHeadings();
-
-    if (this.isLargerThanMobile) {
-      this.evalHeadingsPosition();
-    }
-
+    this.isLargerThanMobile && this.evalHeadingsPosition();
     this.bindUI();
     this.adjustTableOfContents();
     this.addEvents();
@@ -198,11 +196,33 @@
   App.prototype.createHeadingsAnchor = function (elem, content) {
     var title = elem.innerText || elem.textContent;
     var link = document.createElement('a');
-    link.setAttribute('href', '#' + elem.id);
+    link.href = '#' + elem.id;
     link.innerHTML = content || '§';
     link.innerHTML += '<span class="visually-hidden">Link to “' + title + '”</span>';
     link.setAttribute('class', 'anchor-link button-ui');
     link.setAttribute('title', 'Link to “' + title + '”');
+
+    elem.appendChild(link);
+  };
+
+  App.prototype.createEditLinks = function () {
+    var chapters = document.querySelectorAll('.chapter:not(.toc)');
+    var svg = document.querySelector('meta[name="svg-pencil-icon"]').getAttribute('content');
+    var that = this;
+
+    Array.prototype.slice.call(chapters).forEach(function (chapter) {
+      that.createEditLink(chapter, svg);
+    });
+  };
+
+  App.prototype.createEditLink = function (elem, content) {
+    var chapter = elem.id.split('chapter-')[1];
+    var link = document.createElement('a');
+    link.href = 'https://github.com/HugoGiraudel/sass-guidelines/edit/gh-pages/' + this.language + '/_' + chapter + '.md';
+    link.innerHTML = content || '§';
+    link.innerHTML += '<span class="visually-hidden">Edit this chapter on GitHub</span>';
+    link.setAttribute('class', 'chapter__edit  button-ui');
+    link.setAttribute('title', 'Edit this chapter on GitHub');
 
     elem.appendChild(link);
   };
