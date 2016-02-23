@@ -5,9 +5,4 @@ O meu nome é [Hugo Giraudel](http://hugogiraudel.com) e sou um Programador Fron
 
 Escrevi também algumas bibliotecas de Sass, algumas delas simplesmente por diversão: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) e [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Encontra-me no Twitter
-  </a>
-</div>
+{% include twitter.html %}

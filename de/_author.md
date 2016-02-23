@@ -7,9 +7,4 @@ Seit mehreren Jahren entwickle ich nun in Sass und bin Autor vieler Sass bezogen
 
 Außerdem habe ich das Buch (Französisch) [CSS3 Pratique du Design Web](http://www.amazon.fr/dp/2212140231) (*Eyrolles* Edition), sowie ein Buch über Sass (Englisch) namens [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* Edition) verfasst.
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Folg mir auf Twitter
-  </a>
-</div>
+{% include twitter.html %}

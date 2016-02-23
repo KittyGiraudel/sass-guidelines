@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/morkro
 
 translations:
+  twitter: "Folg mir auf Twitter"
   contributing:
     support_button: "Sass Guidelines unterstützen"
     tweet_button: "Weitersagen"

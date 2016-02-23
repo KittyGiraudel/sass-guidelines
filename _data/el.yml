@@ -14,6 +14,7 @@ configuration:
       link: https://github.com/sebdesign
 
 translations:
+  twitter: "Επισκεφθείτε με στο Twitter"
   contributing:
     support_button: "Υποστηρίξτε το Sass Guidelines"
     tweet_button: "Διαδώστε το"

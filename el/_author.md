@@ -7,9 +7,4 @@
 
 Επίσης είμαι ο συγγραφέας ενός βιβλίου για CSS (στα γαλλικά) που ονομάζεται [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (Εκδόσεις *Eyrolles*), όπως και ενός βιβλίου για Sass (στα αγγλικά) που ονομάζεται [Jump Start Sass](https://learnable.com/books/jump-start-sass) (Εκδόσεις *Learnable*).
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Επισκεφθείτε με στο Twitter
-  </a>
-</div>
+{% include twitter.html %}

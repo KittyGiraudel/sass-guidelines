@@ -10,6 +10,7 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  twitter: "Napisz do mnie na Twitterze"
   contributing:
     support_button: "Wesprzyj Sass Guidelines"
     tweet_button: "Tweetnij o Sass Guidelines"

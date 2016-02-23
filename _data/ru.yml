@@ -10,6 +10,7 @@ configuration:
       link: https://github.com/PavelDemyanenko
 
 translations:
+  twitter: "Лови меня в Твиттере"
   contributing:
     support_button: "Поддержите руководство Sass"
     tweet_button: "Расскажите о руководстве Sass"

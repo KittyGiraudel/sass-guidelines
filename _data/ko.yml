@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/kimdhoe
 
 translations:
+  twitter: "Catch me on Twitter"
   contributing:
     support_button: "Support Sass Guidelines"
     tweet_button: "Spread the word"

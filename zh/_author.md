@@ -7,9 +7,4 @@
 
 已出版图书 [《CSS3 Pratique du Design Web》](http://css3-pratique.fr/)（法语版）和[《Jump Start Sass》](https://learnable.com/books/jump-start-sass)（英语版）。
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Catch me on Twitter
-  </a>
-</div>
+{% include twitter.html %}

@@ -7,9 +7,4 @@ Piszę w Sassie już od kilku lat i jestem autorem wielu projektów związanych 
 
 Napisałem ponadto książkę o CSSie (w jęz. francuskim) zatytułowaną [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (wyd. *Eyrolles*), a także książkę o Sassie (w jęz. angielskim) pod tytułem [Jump Start Sass](https://learnable.com/books/jump-start-sass) (wyd. *Learnable*).
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button">
-    {% include icons/twitter.html %}
-    Napisz do mnie na Twitterze
-  </a>
-</div>
+{% include twitter.html %}

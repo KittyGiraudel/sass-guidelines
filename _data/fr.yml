@@ -8,6 +8,7 @@ configuration:
       link: http://la-cascade.ghost.io
 
 translations:
+  twitter: "Suivez-moi sur Twitter"
   contributing:
     support_button: "Soutenir Sass Guidelines"
     tweet_button: "Faites passer le message"

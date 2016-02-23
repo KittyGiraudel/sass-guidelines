@@ -8,6 +8,7 @@ configuration:
       link: http://codepen.io/andersschmidt/
 
 translations:
+  twitter: "Fang mig på Twitter"
   contributing:
     support_button: "Støt Sass Guidelines"
     tweet_button: "Spred ordet"
