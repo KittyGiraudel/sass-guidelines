@@ -4,6 +4,13 @@
     <div role="document">
       <h1 class="aside__title">Options</h1>
 
+      <section class="aside__section  aside__section--extras">
+        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
+        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
+        {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
+      </section>
+
       <section class="aside__section  aside__section--syntax">
         <h2 class="aside__heading">Code syntax</h2>
 
@@ -50,15 +57,6 @@
             {% endfor %}
           </ul>
         </noscript>
-      </section>
-
-      <section class="aside__section  aside__section--extras">
-        <h2 class="aside__heading">Extras</h2>
-
-        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
-        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
-        {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
       </section>
 
       <button data-modal-hide type="button" title="Close the options panel" class="aside__close">&times;</button>

@@ -50,7 +50,8 @@
  * Sub-sections from options panel
  */
 .aside__section {
-  padding: 0 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid $light-grey;
 }
 
 /**
@@ -58,25 +59,21 @@
  */
 .aside__title {
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   background-color: $light-pink;
   color: rgb(255, 255, 255);
-  font-size: 1.25em;
-  text-transform: uppercase;
+  font-size: 1em;
 }
 
 /**
  * Headings from options panel
  */
 .aside__heading {
-  margin: 1rem 0;
+  margin: 0 0 0.5em;
   padding: 0.5rem 0;
-  border-bottom: 0.1em solid;
   text-transform: capitalize;
   font-size: 0.9em;
   color: $dark-grey;
-  text-align: end;
-  font-weight: 400;
 }
 
 /**
