@@ -3,7 +3,7 @@ import h from './helpers';
 var App = function (config) {
   this.languagePicker = config.languagePicker;
   this.language = document.documentElement.getAttribute('lang');
-  this.isLargerThanMobile = evalClientResolution();
+  this.isLargerThanMobile = h.evalClientResolution(680);
   this.chapters = document.querySelectorAll('.chapter:not(.toc)');
 
   this.initialize();
