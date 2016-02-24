@@ -35,6 +35,9 @@ exclude:
   - vendor
   - .tmp
   - bin
+  - assets/js/vendor
+  - assets/js/src
+  - assets/js/bundle.js
 
 markdown: kramdown
 kramdown:
