@@ -1,6 +1,16 @@
-_site
+# Jekyll build
+_site   
+# Cache file from Jekyll
+.jekyll-metadata
+# Cache folder from Sass
 .sass-cache
-node_modules
+# npm packages
+node_modules   
+# Mac OS annoying files
 .DS_Store
+# Temporary folder from build script
 .tmp
+# Temporary folder from html-proofer
+tmp
+# Temporary file from rollup
 bundle.js
