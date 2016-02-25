@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.language }}" dir="{{ page.direction|lower }}" manifest="/offline.appcache">
+<html lang="{{ page.language }}" dir="{{ page.direction|lower }}" {% if jekyll.environment != 'LOCAL' %}manifest="/offline.appcache"{% endif %}>
 
   {% include head.html %}
 
