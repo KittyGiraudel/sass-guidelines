@@ -14,3 +14,5 @@ node_modules
 tmp
 # Temporary file from rollup
 bundle.js
+# Log files
+*.log
