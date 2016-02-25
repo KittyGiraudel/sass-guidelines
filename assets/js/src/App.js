@@ -42,13 +42,10 @@ App.prototype.createHeadingsAnchors = function (elem, content) {
 
   Array.prototype.slice.call(this.chapters).forEach(function (chapter) {
     var heading = chapter.querySelector('h1[id]');
-    var label = 'Link to “' + (heading.innerText || heading.textContent) + '”';
     var link = document.createElement('a');
     link.href = '#' + heading.id;
-    link.innerHTML = svg + '<span class="visually-hidden">' + label +'</span>';
+    link.innerHTML = svg;
     link.setAttribute('class', 'anchor-link button-ui');
-    link.setAttribute('title', label);
-
     heading.appendChild(link);
   });
 };
@@ -59,14 +56,11 @@ App.prototype.createEditLinks = function () {
 
   Array.prototype.slice.call(this.chapters).forEach(function (chapter) {
     var id = chapter.id.split('chapter-')[1];
-    var label = 'Edit this chapter on GitHub';
     var link = document.createElement('a');
     link.href = 'https://github.com/HugoGiraudel/sass-guidelines/edit/gh-pages/' + that.language + '/_' + id + '.md';
-    link.innerHTML = svg + '<span class="visually-hidden">' + label + '</span>';
+    link.innerHTML = svg;
     link.setAttribute('class', 'chapter__edit  button-ui');
-    link.setAttribute('title', label);
     link.setAttribute('target', '_blank');
-
     chapter.appendChild(link);
   });
 };
