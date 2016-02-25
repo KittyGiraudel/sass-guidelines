@@ -9,7 +9,7 @@ var Sidebar = function (config) {
 
   this.headingsOffset = Array.prototype.slice.call(this.headings)
     .map(function (heading) {
-      return [ heading, getOffset(heading) ];
+      return [ heading, h.getOffset(heading) ];
     });
 
   this.initialize();
@@ -27,7 +27,7 @@ Sidebar.prototype.initialize = function () {
 };
 
 Sidebar.prototype.evalHeadingsPosition = function () {
-  var scrollTop = getDocumentScrollTop() + this.addOffsetView;
+  var scrollTop = h.getDocumentScrollTop() + this.addOffsetView;
 
   if (this.isLargerThanMobile) {
     // Loop over all headings offsets & compare scrollTop if already passed a value.
@@ -52,10 +52,10 @@ Sidebar.prototype.evalHeadingsPosition = function () {
 };
 
 Sidebar.prototype.adjustTableOfContents = function () {
-  var top = getOffset(this.tableOfContents);
-  var bottom = getOffset(this.footer);
-  var current = getDocumentScrollTop();
-  var currentBottom = current + getDocumentHeight();
+  var top = h.getOffset(this.tableOfContents);
+  var bottom = h.getOffset(this.footer);
+  var current = h.getDocumentScrollTop();
+  var currentBottom = current + h.getDocumentHeight();
 
   if (current > top) {
     this.tableOfContents.classList.add('sticky');

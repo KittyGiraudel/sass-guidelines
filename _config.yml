@@ -35,7 +35,7 @@ exclude:
   - vendor
   - .tmp
   - bin
-  - assets/js/vendor
+  - assets/js/vendor/loadFont.js
   - assets/js/src
   - assets/js/bundle.js
 
