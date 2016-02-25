@@ -3,6 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.github.environment %}
+  <meta name="environment" content="{{ site.github.environment }}" />
+  {% endif %}
 
   <!-- Site title -->
   {% capture site_title %}
@@ -47,8 +50,8 @@
   <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
 
   <!-- SVG for JavaScript usage -->
-  <meta name="svg-link-icon" content='{% include icon.html icon="pin" %}' />
-  <meta name="svg-pencil-icon" content='{% include icon.html icon="pencil" %}' />
+  <meta name="svg-link-icon" content='{% include icon.html icon="pin" title="Link to this section" %}' />
+  <meta name="svg-pencil-icon" content='{% include icon.html icon="pencil" title="Edit this chapter on GitHub" %}' />
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary" />
