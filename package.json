@@ -4,7 +4,8 @@
     "postbuild": "bin/testbuild",
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
-    "start": "npm run build && jekyll s",
+    "start": "npm run build && npm run watch",
+    "watch": "JEKYLL_ENV=LOCAL jekyll s --incremental --config _config.yml,_config.dev.yml",
     "js": "rollup --format iife assets/js/src/main.js > assets/js/bundle.js && cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/bundle.js | uglifyjs > assets/js/main.min.js"
   },
   "devDependencies": {
