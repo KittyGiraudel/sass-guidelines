@@ -33,7 +33,6 @@ exclude:
   - Gemfile.lock
   - CNAME
   - vendor
-  - .tmp
   - _bin
   - assets/js/vendor
   - assets/js/src
