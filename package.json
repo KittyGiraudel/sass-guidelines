@@ -23,15 +23,12 @@
     "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.3",
     "clean-css": "^3.4.9",
     "criticalcss": "^1.0.1",
-    "postcss-cli": "^2.5.1",
     "rollup": "^0.25.4",
     "semistandard": "^7.0.5",
     "spritesh": "^1.0.8",
     "svgo": "^0.6.1",
-    "uglify-js": "^2.4.15",
-    "uncss": "^0.13.0"
+    "uglify-js": "^2.4.15"
   }
 }
