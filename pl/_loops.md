@@ -1,6 +1,8 @@
 
 # Pętle
 
+{% include chapter-buttons.html %}
+
 Ponieważ Sass daje możliwość korzystania z kompleksowych struktur danych, takich jak [listy](#listy) i [mapy](#mapy), nie jest niespodzianką że Sass zapewnia także dostęp do iteracji wewnątrz nich.
 
 Obecność pętli zakłada zazwyczaj stosunkowo skomplikowane rozwiązania, które w arkuszach Sassa znaleźć się raczej nie powinny. Zanim zostanie podjęta decyzja o użyciu pętli należy się zastanowić, czy aby na pewno rozwiąże ona jakiś problem.

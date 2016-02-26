@@ -1,6 +1,8 @@
 
 # Indledning
 
+{% include chapter-buttons.html %}
+
 ## Hvorfor en styleguide
 
 En styleguide er ikke bare hyggelæsning, der maler et ideelt billede af din kode. Det er et vigtigt dokument i et projekts liv, der beskriver hvordan og hvorfor kode bør blive skrevet. Det kan se overdrevet ud til små projekter, men det hjælper meget med at holde kodebasen ren, skalérbar og let at vedligeholde.

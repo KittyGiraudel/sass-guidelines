@@ -1,6 +1,8 @@
 
 # Mixins
 
+{% include chapter-buttons.html %}
+
 Los *Mixins* son una de las características más utilizadas dentro de todo el lenguaje Sass. Son la clave para la reutilización y los componentes DRY. Y por una buena razón: los *mixins* permiten a los desarrolladores definir estilos que pueden volver a usarse a lo largo de la hoja de estilo sin necesidad de recurrir a las clases no semánticas, como por ejemplo `.float-left`.
 
 Pueden contener reglas CSS completas y casi todo lo que se permite en cualquier parte de un documento Sass. Incluso pueden pasarse argumentos, al igual que en las funciones. Sobra decir que las posibilidades son infinitas.

@@ -1,6 +1,8 @@
 
 # Responsive Web Design i breakpointy
 
+{% include chapter-buttons.html %}
+
 Nie wydaje mi się, by zagadnienie Responsive Web Design wymagało wprowadzenia. Zwłaszcza teraz, gdy jest ono obecne dosłownie wszędzie. Można jednak pokusić się o pytanie – *dlaczego przewodnik dla stylu Sassa zawiera sekcję poświęconą RWD?* Tak naprawdę to jest kilka rzeczy, które można zrobić aby pracowało się z breakpointami przyjemniej, dlatego też postanowiłem poruszyć ten temat tutaj.
 
 ## Nazywanie breakpointów

@@ -1,6 +1,8 @@
 
 # Warnungen und Fehler
 
+{% include chapter-buttons.html %}
+
 Wenn es ein Feature gibt welches von Entwicklern oft übersehen wird, dann ist es die Fähigkeit dynamisch Warnungen und Fehler auszugeben. Tatsächlich kommt Sass mit drei eigenen Funktionen um Inhalt in dem Standardausgabesystem (CLI, kompilierte App, …) darzustellen.
 
 * `@debug`;

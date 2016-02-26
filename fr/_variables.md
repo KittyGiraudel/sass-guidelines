@@ -1,6 +1,8 @@
 
 # Variables
 
+{% include chapter-buttons.html %}
+
 Les variables sont l’essence de tout langage de programmation. Elles nous permettent de réutiliser des valeurs sans avoir à les recopier sans cesse. Plus important encore, elles facilitent les mises à jour. Plus besoin de chercher et remplacer, ni de rechercher manuellement.
 
 Cependant, CSS n’est rien d’autre qu’un grand panier contenant tous nos oeufs. Contrairement à de nombreux langages, CSS ne connaît pas vraiment la notion de *portée lexicale* (*scope*). Il nous faut donc être attentifs lorsque nous ajoutons de nouvelles variables, si nous voulons éviter les conflits.

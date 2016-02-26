@@ -1,6 +1,8 @@
 
 # O Sassu
 
+{% include chapter-buttons.html %}
+
 Takto je [Sass](http://sass-lang.com) popisován v jeho [dokumentaci](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass je CSS rozšíření, které dodává sílu a eleganci základnímu jazyku.

@@ -1,6 +1,8 @@
 
 # Responzivní Web Design a breakpointy
 
+{% include chapter-buttons.html %}
+
 Nemyslím si, že je Responzivní Web Design stále nutné představovat, když je to nyní snad všude. Každopádně se můžete ptát *proč je sekce o RWD v Sass manuálu?* Ve skutečnosti existuje pár věcí, které mohou být udělány tak, aby se s breakpointy pracovalo jednodušeji, takže myslím, že by nebyl špatný nápad je tady uvést.
 
 ## Naming breakpoints

@@ -1,6 +1,8 @@
 
 # Advarsler og Fejl
 
+{% include chapter-buttons.html %}
+
 Hvis der er en funktionalitet, der ofte bliver overset af Sass udviklere, så er det evnen til dynamisk at outputte advarsler og fejl. Rent faktisk, så har Sass tre særlige direktiver til udprintning af indhold i gængse output-systemer (CLI, kompileringsapps…):
 
 * `@debug`;

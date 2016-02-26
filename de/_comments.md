@@ -1,6 +1,8 @@
 
 # Kommentieren
 
+{% include chapter-buttons.html %}
+
 CSS ist eine knifflige Sprache, voller Hacks und Seltsamkeiten. Deshalb sollte es viel kommentiert werden, besonders wenn du oder jemand anders die Absicht hat deinen Code nach 6 Monaten oder 1 Jahr nochmal zu lesen oder updaten. Lass dich oder jemand anderen niemals in die Position *Ich-hab-das-nicht-geschrieben-Oh-mein-Gott-warum* kommen.
 
 So einfach CSS sein kann, es ist immer Raum für Kommentare. Diese könnten unter anderem erklären:

@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 La directive `@extend` est une fonctionnalité puissante qui est bien souvent mal comprise. En règle générale, elle permet d’indiquer à Sass qu’il doit styler un sélecteur A comme s’il correspondait à un élément B. Il va sans dire que c’est un allié de poids lorsqu’on écrit un CSS modulaire.
 
 Cependant, le vrai rôle de `@extend` est d’indiquer et de maintenir des relations (contraintes) au sein des sélecteurs étendus entre plusieurs règles. Concrètement, qu’est-ce que cela signifie ?

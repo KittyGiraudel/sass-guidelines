@@ -1,6 +1,8 @@
 
 # Avisos e erros
 
+{% include chapter-buttons.html %}
+
 Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no *standard output system* (CLI, compilador…):
 
 * `@debug`;

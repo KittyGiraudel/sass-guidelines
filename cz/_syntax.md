@@ -1,6 +1,8 @@
 
 # Syntaxe & formátování
 
+{% include chapter-buttons.html %}
+
 Pokud byste se mě zeptali, co je první věc, kterou by každá příručka měla obsahovat, bylo by to jak má kód vypadat.
 
 Když se několik vývojářů zapojí do psaní CSS ve stejném projektu, je jen otázkou času, než si jeden z nich začne dělat věci po svém. Manuály pro kód, které podporují konzistenci nejen že tomuto zabraňují, ale také pomáhají pokud jde o čtení a aktualizaci kódu.

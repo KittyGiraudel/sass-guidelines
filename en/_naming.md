@@ -1,6 +1,8 @@
 
 # Naming conventions
 
+{% include chapter-buttons.html %}
+
 In this section, we will not deal with the best CSS naming conventions for maintainability and scale; not only is that up to you, it’s also out of the scope of a Sass styleguide. I suggest those recommended by [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 There are a few things you can name in Sass, and it is important to name them well so the whole code base looks both consistent and easy to read:

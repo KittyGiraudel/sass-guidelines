@@ -1,6 +1,8 @@
 
 # Architecture
 
+{% include chapter-buttons.html %}
+
 La conception de l’architecture d’un projet CSS est probablement l’une des étapes les plus complexes dans la vie d’un projet. Conserver la cohérence de l’architecture et son sens est encore plus difficile.
 
 Heureusement, l’un des principaux bénéfices de l’utilisation de préprocesseurs est la possibilité d’éclater le code en plusieurs fichiers sans impacter la performance (contrairement à la directive CSS `@import`). Grâce à la surcharge de la directive `@import` dans Sass, on peut de manière sûre (et recommandée) utiliser autant de fichiers que nécessaire dans le développement, qui seront tous compilés en une feuille de style unique pour la production.

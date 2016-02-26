@@ -1,6 +1,8 @@
 
 # Proměnné
 
+{% include chapter-buttons.html %}
+
 Proměnné jsou esencí každého programovacího jazyka. Díky nim můžeme znovu použít hodnoty místo jejich kopírování znovu a znovu. Ale hlavně se díky nim dá jednoduše aktualizovat hodnota. Už žádné další find and replace nebo ruční procházení.
 
 Každopádně CSS není nic jiného než velký koš obsahující všechny naše vejce. Oproti většině jazyků, v CSS nenajdete žádné pravé scopy.

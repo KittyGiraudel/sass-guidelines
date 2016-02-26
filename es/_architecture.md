@@ -1,6 +1,8 @@
 
 # Arquitectura
 
+{% include chapter-buttons.html %}
+
 Establecer la arquitectura del CSS es probablemente una de las cosas más difíciles que tendrás que hacer en la vida de un proyecto. Mantener esa arquitectura coherente y significativa es aún más difícil.
 
 Afortunadamente, uno de los principales beneficios de utilizar un preprocesador CSS es tener la capacidad de dividir el código en varios archivos sin afectar al rendimiento (como haría la directiva `@import` en CSS). Gracias a la directiva `@import` de Sass, es perfectamente seguro (y de hecho recomendable) usar tantos archivos como sean necesarios en el desarrollo, compilandolo todo en una sola hoja de estilo cuando vaya a producción.

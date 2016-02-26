@@ -1,6 +1,8 @@
 
 # Konwencje nazw
 
+{% include chapter-buttons.html %}
+
 W tej sekcji nie zajmiemy się konwencjami na nazywanie elementów składni CSSa, które to mają za zadanie pomóc w łatwości utrzymania i skalowania kodu; nie tylko decyzja w tej kwestii należy do autora kodu, ale nie jest to też coś, co należy do zakresu merytorycznego tego przewodnika. Zalecam tym samym zapoznanie się z [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Jest jednak w Sassie kilka rzeczy posługujących się nazwami i ważne jest, by nazywać je w sposób, dzięki któremu kod będzie spójny i czytelny:

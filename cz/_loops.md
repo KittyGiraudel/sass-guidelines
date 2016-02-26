@@ -1,6 +1,8 @@
 
 # Cykly
 
+{% include chapter-buttons.html %}
+
 Protože Sass umožňuje komplexní datové struktury jako [seznamy](#seznamy) a [mapy](#mapy), není až takové překvapení, že také umožňuje tyto struktury procházet.
 
 Každopádně, přítomnost cyklů obvykle implikuje středně složitou logiku, která do Sassu pravděpodobně nepatří. A tedy proto se před tím, než-li cyklus použijete, ujistěte, že dává smysl a opravdu řeší problém.

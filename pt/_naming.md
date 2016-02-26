@@ -1,6 +1,8 @@
 
 # Convenções de nomenclatura
 
+{% include chapter-buttons.html %}
+
 Nesta secção, não iremos lidar com as melhores convenções de nomenclatura para manutenção e escalabilidade; não só isso apenas vos diz respeito, como também está fora do âmbito de um guia de estilo de Sass. Eu sugiro os recomendados por [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Existem algumas coisas às quais podem dar nome em Sass, e é importante nomeá-las corretamente para que toda a base de código pareça consistente e fácil de ler:

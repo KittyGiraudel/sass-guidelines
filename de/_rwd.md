@@ -1,6 +1,8 @@
  
 # Responsive Webdesign und Breakpoints
 
+{% include chapter-buttons.html %}
+
 Ich denke nicht das wir groß über Responsive Webdesign sprechen müssen, wo es mittlerweile überall zu finden ist. Dennoch fragst du dich bestimmt, *warum gibt es eine RWD Sektion in einem Sass Styleguide*? Eigentlich gibt es ein paar Dinge die getan werden können um die Benutzung von Breakpoints einfach zu machen, deshalb dachte ich es wäre garkeine schlechte Idee sie hier aufzulisten.
 
 ## Breakpoints benennen

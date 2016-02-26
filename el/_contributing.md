@@ -1,6 +1,8 @@
 
 # Πως μπορείτε να συνεισφέρετε
 
+{% include chapter-buttons.html %}
+
 Το Sass Guidelines είναι ένα ελεύθερο project που συντηρώ στον ελεύθερό μου χρόνο. Περιττό να πω ότι απαιτείται πάρα πολλή δουλειά για να διατηρηθεί το project ενημερωμένο, τεκμηριωμένο και συναφές. Ευτυχώς, έχω τη βοήθεια πολλών σπουδαίων ανθρώπων που συνεισφέρουν, ειδικά όσον αφορά τη συντήρηση δεκάδων <button type="button" data-modal-show="options-panel" class="link-like">διαφορετικών μεταφράσεων</button>. Be sure to thank them!
 
 Τώρα αν ενδιαφέρεστε να συνεισφέρετε, παρακαλώ γνωρίζετε πως ένα tweet που αναφέρει το project, ή την διάδοσή του, ακόμα και η διόρθωση ενός ορθογραφικού λάθους ανοίγοντας ένα issue ή pull-request στο [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) θα ήταν υπέροχο!

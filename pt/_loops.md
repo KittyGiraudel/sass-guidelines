@@ -1,6 +1,8 @@
 
 # Ciclos
 
+{% include chapter-buttons.html %}
+
 Visto que Sass providencia estruturas de dados complexas, tal como [listas](#listas) e [mapas](#mapas), não é surpresa fornecer também formas de iterar sobre essas entidades.
 
 No entanto, a presença de ciclos normalmente implica lógica moderadamente complexa que provavelmente não pertence a Sass. Antes de usar um ciclo, certifiquem-se que tal faz sentido e que realmente resolve um problema.

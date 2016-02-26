@@ -1,6 +1,8 @@
 
 # Mixiny
 
+{% include chapter-buttons.html %}
+
 Mixiny jsou jednou z nejvíce používaných funkcí celého Sassu. Jsou klíčem pro znovupoužitelnost a DRY komponenty. A to z dobrých důvodů: mixiny dovolují autorům definovat styly, které mohou být použity napříč styly bez potřeby využívat nesémantické třídy jako `.float-left`.
 
 Mohou obsahovat všechny CSS pravidla a v podstatě cokoliv, co je dovoleno používat kdekoli jinde v Sassu. Dokonce mohou přijímat argumenty, přesně jako funkce. Netřeba říkat, že možností je nekonečno.

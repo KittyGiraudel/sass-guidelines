@@ -1,6 +1,8 @@
 
 # Advertencias Y Errores
 
+{% include chapter-buttons.html %}
+
 Hay una característica que muchas veces es pasada por alto por los desarrolladores Sass, y es la capacidad de generar advertencias e informes de errores de manera dinámica. De hecho, Sass viene con tres directivas personalizadas para imprimir contenido en el sistema de salida estándar (CLI, compiling app…):
 
 * `@debug`;

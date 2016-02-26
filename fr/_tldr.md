@@ -1,6 +1,8 @@
 
 # Too Long; Didn’t read
 
+{% include chapter-buttons.html %}
+
 Ces règles de conduite sont assez longues, par conséquent il est de bon ton d’avoir une version plus concise. Voici un résumé.
 
 ## Principes fondamentaux

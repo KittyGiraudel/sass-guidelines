@@ -1,6 +1,8 @@
 
 # Architektur
 
+{% include chapter-buttons.html %}
+
 Die Architektur eines CSS Projekts gehört wohl zu den schwierigsten Themen innerhalb eines Projekts. Sie dann noch konsistent und logisch zu halten, ist gleich viel schwieriger.
 
 Zum Glück ist einer der Hauptvorteile eines CSS Präprozessor der, eine Codebasis über mehrere Dateien aufzuteilen ohne dabei die Performance zu beeinflussen (so wie die CSS Regel `@import` es tun würde). Dank der Erweiterung von `@import` in Sass, ist es sicher (und empfohlen) während der Entwicklung soviele Dateien wie nötig zu nutzen und sie dann in der Produktion zu einem Stylesheet zu kompilieren.

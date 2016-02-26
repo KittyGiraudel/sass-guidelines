@@ -1,6 +1,8 @@
 
 # Responsive Web Design et points de rupture
 
+{% include chapter-buttons.html %}
+
 Je ne pense pas qu’il soit nécessaire de présenter le Responsive Web Design qui est maintenant omniprésent. Cependant vous vous demandez peut-être *pourquoi diable parler de RWD dans un guide de style Sass&nbsp;?* En fait, Sass peut nous faciliter la vie avec les points de rupture, voici ce qu’on peut faire.
 
 ## Nommer les points de rupture

@@ -1,6 +1,8 @@
 
 # Mixins
 
+{% include chapter-buttons.html %}
+
 Mixins gehören zu den meist genutzten Features in der gesamten Sass-Sprache. Sie sind aus gutem Grund der Schlüssel zur Wiederverwendbarkeit und DRY-Komponenten: Mixins erlauben es dem Autor durch sein gesamtes Stylesheet hinweg Styles wiederzuverwenden, ohne auf nicht-semantische Klassen wie `.float-left` zurückzufallen.
 
 Sie können komplette CSS-Regeln beinhalten, und so gut wie alles was sonst noch in einem Sass-Dokument erlaubt ist. Sogar Parameter, genauso wie Funktionen, sind möglich. Die Möglichkeiten hierbei sind unendlich.

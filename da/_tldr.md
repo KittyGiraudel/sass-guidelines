@@ -1,6 +1,8 @@
 
 # Too Long; Didn't read
 
+{% include chapter-buttons.html %}
+
 For at opsummere, så ønsker vi:
 
 * Indentering á to (2) mellemrum, ingen tabs;

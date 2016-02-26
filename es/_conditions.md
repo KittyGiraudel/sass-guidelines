@@ -1,6 +1,8 @@
 
 # Sentencias Condicionales
 
+{% include chapter-buttons.html %}
+
 Probablemente ya sabes que Sass proporciona instrucciones condicionales a través de las directivas `@if` y `@else`. A menos que tengas algún elemento con una lógica demasiado compleja en tu código, no hay necesidad de tener sentencias condicionales en tus hojas de estilo normales. En realidad, se usan principalmente en las librerías y los *frameworks*.
 
 De todas formas, si algún día te encuentras con la necesidad de utilizarlas, por favor, respeta las siguientes pautas:

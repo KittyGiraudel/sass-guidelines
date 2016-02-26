@@ -1,6 +1,8 @@
 
 # Conventions de nommage
 
+{% include chapter-buttons.html %}
+
 Dans cette section, nous ne traiterons pas des conventions de nommage CSS pour une meilleure maintenabilité et le passage à l’échelle ; non seulement cela dépend de chacun, mais cela sort du cadre d’un guide de style Sass. Je vous suggère de consulter les conventions recommandées par [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Il existe un certain nombre de choses que l’on peut nommer en Sass, et il est important de bien les nommer de façon à assurer la cohérence et la lisibilité de votre code&nbsp;:

@@ -1,6 +1,8 @@
 
 # Comentarios
 
+{% include chapter-buttons.html %}
+
 CSS es un lenguajes complicado, lleno de *hacks* y rarezas. Debido a esto, debería de tener muchos muchos comentarios, especialmente si tú o alguien más tiene la intención de leer y actualizar el código dentro de 6 meses o 1 año. No dejes que ni tú, ni nadie se encuentre en la situación de: *yo-no-escribí-esto-oh-dios-mio-por-qué*.
 
 Tan simple como pueda ser CSS, aún queda sitio para muchos comentarios. Estos podrían explicar:

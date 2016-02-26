@@ -1,6 +1,8 @@
 
 # O Sassie
 
+{% include chapter-buttons.html %}
+
 Zdaniem twórców [Sassa](http://sass-lang.com), zawartym w jego [dokumentacji](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass jest rozszerzeniem dla CSSa, które dodaje mu mocy i elegancji.

@@ -1,6 +1,8 @@
 
 # Zmienne
 
+{% include chapter-buttons.html %}
+
 Zmienne należą do istoty każdego języka programowania. Pozwalają nam na wielokrotne użycie określonych wartości bez potrzeby ich kopiowania. Przede wszystkim jednak, umożliwiają nam one aktualizowanie tych wartości w bardzo łatwy sposób.
 
 Można jednak powiedzieć, że CSS jest niczym innym jak jednym wielkim kotłem pełnym wielu różności. W przeciwieństwie do innych języków, CSS nie zna koncepcji zasięgu widoczności (scope). Możliwość powstania konfliktu nazw musimy mieć więc stale na uwadze, jeśli dodajemy nowe zmienne.

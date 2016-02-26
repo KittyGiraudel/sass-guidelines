@@ -1,6 +1,8 @@
 
 # 关于作者
 
+{% include chapter-buttons.html %}
+
 [Hugo Giraudel](http://hugogiraudel.com)，23 岁，来自法国的前端工程师，现居柏林，目前在 [Edenspiekermann](http://edenspiekermann.com) 工作。
 
 拥有多年的 Sass 开发经验，开发的项目包括：[SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) 和 [Sass-Compatibility](http://sass-compatibility.github.io)。更多信息，请查阅这里的[项目列表](http://github.com/HugoGiraudel/awesome-sass)。

@@ -1,6 +1,8 @@
 
 # Komentování
 
+{% include chapter-buttons.html %}
+
 CSS je ošemetný jazyk plný hacků a podivností. Díky tomu by měl být hodně komentován, zvláště pokud vy nebo někdo jiný zamýšlíte číst a upravovat kód za 6 měsíců nebo rok. Nenechte se, nebo někoho jiného, dostat do pozice *Já-jsem-tohle-pane-bože-nenapsal*.
 
 I přesto, že se CSS může zdát jednoduché, je mnoho situací, kdy může komentář hodně vysvětlit. Mohou vysvětlit takové věci jako:

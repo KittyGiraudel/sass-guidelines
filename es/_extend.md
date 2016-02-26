@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 La directiva `@extend` tiene que ser una de las características que hicieron tan popular a Sass hace un par de años. A modo de recordatorio, `@extend` hace que sea posible decirle a Sass que añada estilo a un elemento A, exactamente como si el selector coincidiese con el selector B. No hace falta decir, que esto puede ser un valioso aliado al escribir CSS modular.
 
 Sin embargo, me siento en la obligación de advertirte acerca de esta característica. Tan inteligente como suena, `@extend` todavía es un concepto complicado que podría hacer más mal que bien, especialmene cuando se usa mal. El tema es que, cuando se extiende un selector, no tienes una manera de responder a algunas cuestiones sin tener un conocimiento en profundidad de todo el código:

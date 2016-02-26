@@ -1,6 +1,8 @@
 
 # Variabler
 
+{% include chapter-buttons.html %}
+
 Variabler er essencen af ethvert programmeringssprog. De tillader os at genbruge værdier uden at være nødsaget til at kopiere dem igen og igen. Vigtigst er dog at de gør opdateringen af en værdi meget nem. Slut med søg og erstat, eller manuel gennemgang.
 
 Dog er CSS intet andet end en kæmpe kurv, der indeholder alle vores æg. Modsat mange sprog, så er der ikke nogen egentlige scopes i CSS. På grund af det er vi nødt til at holde særligt øje, når vi tilføjer variabler med risiko for at opleve konflikter.

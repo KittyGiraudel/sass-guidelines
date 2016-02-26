@@ -1,6 +1,8 @@
 
 # Introduction
 
+{% include chapter-buttons.html %}
+
 ## Pourquoi un guide de style
 
 Un guide de style n’est pas simplement un document agréable à lire, qui décrit l’état idéal de votre code. C’est un document-clé dans la vie d’un projet, qui décrit la façon dont un code devrait être écrit et pourquoi. C’est peut-être beaucoup pour un projet modeste, mais c’est une aide inappréciable pour créer un code propre, extensible et maintenable.

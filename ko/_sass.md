@@ -1,6 +1,8 @@
 
 # Sass에 대해
 
+{% include chapter-buttons.html %}
+
 [Sass](http://sass-lang.com)는 [공식 문서](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)에서 스스로를 이렇게 묘사하고 있습니다:
 
 > 사스는 기초 언어에 힘과 우아함을 더해주는 CSS의 확장이다.

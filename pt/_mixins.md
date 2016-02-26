@@ -1,6 +1,8 @@
 
 # Mixins
 
+{% include chapter-buttons.html %}
+
 Os Mixins são uma das funcionalidades mais usadas em todo o Sass. São a chave para reutilização de código e componentes DRY (DRY significa, em Inglês, *Don't Repeat Yourself*. Em português podemos traduzir para "Não te repitas"). Os Mixins têm esta caraterística por uma boa razão: eles permitem que o programador defina estilos que podem ser reutilizados em todas os ficheiros de estilos, sem precisarem de utilizar classes não semânticas como `.float-left`.
 
 Os Mixins podem conter regras de CSS e praticamente tudo o que é permitido num documento Sass.

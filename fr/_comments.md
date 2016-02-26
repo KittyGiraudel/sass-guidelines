@@ -1,6 +1,8 @@
 
 # Commentaires
 
+{% include chapter-buttons.html %}
+
 CSS est un langage délicat, plein de hacks et de bizarreries. C’est pourquoi il doit être accompagné de commentaires abondants, surtout si vous, ou quelqu’un d’autre, prévoyez de relire et de mettre à jour le code dans 6 mois ou 1 an. Ne vous mettez pas dans la situation de dire, ou laisser dire *oh p… c’est pas moi qui ai écrit ça, mais pourquoi, pourquoi&nbsp;!?*.
 
 Quelle que soit la simplicité de CSS, les commentaires sont toujours utiles. Vous pourriez expliquer par exemple&nbsp;:

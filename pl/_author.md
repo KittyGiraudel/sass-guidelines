@@ -1,6 +1,8 @@
 
 # O autorze
 
+{% include chapter-buttons.html %}
+
 Nazywam się [Hugo Giraudel](http://hugogiraudel.com). Jestem 23-letnim front-end developerem. Pochodzę z Francji, a mieszkam od 2015 roku w Berlinie. Obecnie pracuję w [Edenspiekermann](http://edenspiekermann.com).
 
 Piszę w Sassie już od kilku lat i jestem autorem wielu projektów związanych z Sassem, takich jak [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) i [Sass-Compatibility](http://sass-compatibility.github.io). [Tutaj](http://github.com/HugoGiraudel/awesome-sass) znajduje się pełna lista projektów, które składają się na mój wkład do społeczności Sassa.

@@ -1,6 +1,8 @@
 
 # Úvod
 
+{% include chapter-buttons.html %}
+
 ## Proč mít příručku
 
 Příručka není jenom bezvýznamný dokument na bezduché přečtení, nebo představení ideálního stavu pro váš kód. Je to klíčový dokument projektu, který popisuje, jak a proč psát kód. Pro malé projekty se může zdát spíše jako zbytečnost, ale opravdu dost pomáhá udržovat codebase čistou a jednoduše upravitelnou.
