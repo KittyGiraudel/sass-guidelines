@@ -5,7 +5,7 @@ var App = function (config) {
   this.language = document.documentElement.getAttribute('lang');
   this.isLargerThanMobile = h.evalClientResolution(680);
   this.chapters = document.querySelectorAll('.chapter:not(.toc)');
-
+  this.idIndex = 100;
   this.editSvg = document.querySelector('meta[name="svg-pencil-icon"]').getAttribute('content');
   this.linkSvg = document.querySelector('meta[name="svg-link-icon"]').getAttribute('content');
 
@@ -35,7 +35,7 @@ App.prototype.getEditLink = function (chapter) {
   var id = chapter.id.split('chapter-')[1];
   var link = document.createElement('a');
   link.href = 'https://github.com/HugoGiraudel/sass-guidelines/edit/gh-pages/' + this.language + '/_' + id + '.md';
-  link.innerHTML = this.editSvg;
+  link.innerHTML = this.editSvg.replace(/title\-\d+/g, ('title-' + this.idIndex++));
   link.setAttribute('class', 'chapter__edit button-ui');
   link.setAttribute('target', '_blank');
 
@@ -46,7 +46,7 @@ App.prototype.getAnchorLink = function (chapter) {
   var heading = chapter.querySelector('h1[id]');
   var link = document.createElement('a');
   link.href = '#' + heading.id;
-  link.innerHTML = this.linkSvg;
+  link.innerHTML = this.linkSvg.replace(/title\-\d+/g, ('title-' + this.idIndex++));
   link.setAttribute('class', 'chapter__link button-ui');
 
   return link;
