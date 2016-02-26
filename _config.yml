@@ -34,7 +34,7 @@ exclude:
   - CNAME
   - vendor
   - .tmp
-  - bin
+  - _bin
   - assets/js/vendor
   - assets/js/src
   - assets/images/icons

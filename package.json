@@ -2,7 +2,7 @@
   "scripts": {
     "postinstall": "npm run js:vendors",
     "build": "npm run icons && npm run js:build && npm run css:critical",
-    "postbuild": "bin/testbuild",
+    "postbuild": "_bin/testbuild",
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
     "start": "npm run build && npm run watch",
