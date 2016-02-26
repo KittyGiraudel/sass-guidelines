@@ -13,7 +13,7 @@ npm start
 
 ### `start`
 
-Runs the [`build`](#build) task and then the [`watch`](#watch) task. It is used when cloning the project for the first time in order to work on it. After the first time, you can use `npm run watch` only.
+Runs the [`build`](#build) task and then the [`watch`](#watch) task. It is used when cloning the project for the first time in order to work on it. After the first time, you can run the [`watch`](#watch) task only.
 
 ### `watch`
 
@@ -21,15 +21,23 @@ Runs Jekyll in development mode (local environment, file watcher, dev config, in
 
 ### `build`
 
-Runs the `bin/build` Bash script. This script ultimately generates `_includes/critical.css`. 
+Runs the [`icons`](#icons), [`css:critical`](#csscritical), [`js:build`](#jsbuild)  tasks.
 
 npm automatically executes the `postbuild` task after the `build` task. The `postbuild` task runs the `bin/testbuild` Bash script. This script makes sure the build happened correctly.
 
 ### `icons`
 
-Runs [spritesh](https://github.com/edenspiekermann/sprite.sh) to generate `_includes/sprite.svg`.
+Generates `_includes/sprite.svg`.
 
 npm automatically executes the `preicons` task before the `icons` task. The `preicons` task runs [svgo](https://github.com/ajstarks/svgo) to optimise SVG files before building the sprite.
+
+### `css:critical`
+
+Generates `_includes/critical.css`.
+
+### `js:build`
+
+Runs the [`js:lint`](#jslint), [`js:vendors`](#jsvendords), [`js:main`](#jsmain), [`js:utilities`](#jsutilities) tasks.
 
 ### `js:vendors`
 
@@ -43,11 +51,9 @@ npm automatically executes this task after `npm install`.
 
 Generates `_includes/utilities.js` from third-party vendor scripts ([loadCSS](https://github.com/filamentgroup/loadCSS), [woff2-feature-test](https://github.com/filamentgroup/woff2-feature-test), [OptimizedWebfontLoading](https://gist.github.com/HugoGiraudel/2a65d6a37675412a2463)). These utilities are being inlined in the `<head>` instead of being bundled in the main JavaScript file.
 
-### `js:build`
+### `js:main`
 
 Generates the minified main JavaScript file with [rollup](http://rollupjs.org/).
-
-npm automatically executes the `prejs:build` task before the `js:build` task. The `pre:jsbuild` task only runs the [`js:vendors`](#jsvendors) task.
 
 ### `js:lint`
 
