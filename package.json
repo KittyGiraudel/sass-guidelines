@@ -1,29 +1,36 @@
 {
   "scripts": {
-    "postinstall": "npm run prejs",
+    "postinstall": "npm run js:vendors",
     "build": "bin/build",
     "postbuild": "bin/testbuild",
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
     "start": "npm run build && npm run watch",
     "watch": "JEKYLL_ENV=LOCAL jekyll s --incremental --config _config.yml,_config.dev.yml",
-    "prejs": "cp node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/vendor",
-    "js": "rollup --format iife assets/js/src/main.js | uglifyjs > assets/js/main.min.js",
-    "postjs": "semistandard assets/js/src"
+    "prejs:build": "npm run js:vendors",
+    "js:vendors": "cp node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
+    "js:utilities": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
+    "js:build": "rollup --format iife assets/js/src/main.js | uglifyjs > assets/js/main.min.js",
+    "js:lint": "semistandard assets/js/src"
+  },
+  "dependencies": {
+    "accessible-modal-dialog": "^1.0.1",
+    "blingdotjs": "gist:7d867cda127e64d38f28",
+    "fg-loadcss": "^0.2.4",
+    "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
+    "picturefill": "^3.0.2",
+    "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "accessible-modal-dialog": "^1.0.1",
     "autoprefixer": "^6.3.3",
     "clean-css": "^3.4.9",
     "criticalcss": "^1.0.1",
-    "fg-loadcss": "^0.2.4",
     "postcss-cli": "^2.5.1",
     "rollup": "^0.25.4",
     "semistandard": "^7.0.5",
     "spritesh": "^1.0.8",
     "svgo": "^0.6.1",
     "uglify-js": "^2.4.15",
-    "uncss": "^0.13.0",
-    "woff2-feature-test": "^1.0.2"
+    "uncss": "^0.13.0"
   }
 }
