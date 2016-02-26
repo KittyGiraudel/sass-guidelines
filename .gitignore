@@ -16,3 +16,5 @@ tmp
 bundle.js
 # Log files
 *.log
+# JavaScript third party vendor
+assets/js/vendor/accessible-modal-dialog.js
