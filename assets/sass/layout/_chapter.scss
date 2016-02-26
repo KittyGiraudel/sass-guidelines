@@ -8,9 +8,45 @@
   clear: both;
 }
 
-.chapter__edit {
-  position: absolute;
-  top: 8px;
-  right: 50px;
+.chapter__buttons {
+  @media (min-width: 601px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 90px;
+    padding: 8px 0;
+  }
+}
+
+.chapter__edit,
+.chapter__link {
   margin: 0;
+  display: inline-block;
+}
+
+.chapter__edit {
+  margin-left: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .chapter > h1 {
+    text-align: center;
+  }
+
+  .chapter__buttons {
+    position: relative;
+  }
+
+  .chapter__buttons::before {
+    content: '';
+    width: 55px;
+    height: 2px;
+    background-color: $light-grey;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
