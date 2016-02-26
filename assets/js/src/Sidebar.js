@@ -1,86 +1,72 @@
+/* globals $ */
+
 import h from './helpers';
 
-var Sidebar = function (config) {
-  this.addOffsetView = config.addOffsetView || 0;
-  this.headings = config.headings;
-  this.tableOfContents = config.tableOfContents;
-  this.footer = config.footer;
-  this.isLargerThanMobile = h.evalClientResolution(975);
+export default (function () {
+  'use strict';
 
-  this.headingsOffset = Array.prototype.slice.call(this.headings)
-    .map(function (heading) {
-      return [ heading, h.getOffset(heading) ];
-    });
+  // DOM queries
+  var tableOfContents = $('.toc')[0];
+  var footer = $('.footer')[0];
+  var headings = $('.chapter:not(.toc) > h1[id]');
 
-  this.initialize();
-};
-/**
- * Initializes application by calling all necessary functions.
- */
-Sidebar.prototype.initialize = function () {
-  this.isLargerThanMobile && this.evalHeadingsPosition();
-  this.adjustTableOfContents();
+  // Internal variables
+  var addOffsetView = 50;
+  var isLargerThanMobile = h.evalClientResolution(975);
+  var headingsOffset = headings.map(function (heading) {
+    return [ heading, h.getOffset(heading) ];
+  });
 
-  document.addEventListener('scroll', this.adjustTableOfContents.bind(this), false);
-  addEventListener('scroll', this.evalHeadingsPosition.bind(this), false);
-  addEventListener('resize', h.evalClientResolution.bind(975), false);
-};
+  var evalHeadingsPosition = function () {
+    var scrollTop = h.getDocumentScrollTop() + addOffsetView;
 
-Sidebar.prototype.evalHeadingsPosition = function () {
-  var scrollTop = h.getDocumentScrollTop() + this.addOffsetView;
-
-  if (this.isLargerThanMobile) {
-    // Loop over all headings offsets & compare scrollTop if already passed a value.
-    for (var i = 0, offsets = this.headingsOffset.length; i < offsets; i++) {
-      if (
-        scrollTop >= this.headingsOffset[i][1] &&
-        this.headingsOffset[i+1] &&
-        scrollTop < this.headingsOffset[i + 1][1]
-      ) {
-        this.highlightTableOfContents(this.headingsOffset[i]);
-      }
-
-      // Last element reached.
-      else if (
-        this.headingsOffset[i] === this.headingsOffset[offsets-1] &&
-        scrollTop >= this.headingsOffset[i][1]
-      ) {
-        this.highlightTableOfContents(this.headingsOffset[offsets-1]);
+    if (isLargerThanMobile) {
+      // Loop over all headings offsets & compare scrollTop if already passed a value.
+      for (var i = 0, offsets = headingsOffset.length; i < offsets; i++) {
+        if (
+          scrollTop >= headingsOffset[i][1] &&
+          headingsOffset[i + 1] &&
+          scrollTop < headingsOffset[i + 1][1]
+        ) {
+          highlightTableOfContents(headingsOffset[i]);
+        // Last element reached.
+        } else if (
+          headingsOffset[i] === headingsOffset[offsets - 1] &&
+          scrollTop >= headingsOffset[i][1]
+        ) {
+          highlightTableOfContents(headingsOffset[offsets - 1]);
+        }
       }
     }
-  }
-};
+  };
 
-Sidebar.prototype.adjustTableOfContents = function () {
-  var top = h.getOffset(this.tableOfContents);
-  var bottom = h.getOffset(this.footer);
-  var current = h.getDocumentScrollTop();
-  var currentBottom = current + h.getDocumentHeight();
+  var adjustTableOfContents = function () {
+    var top = h.getOffset(tableOfContents);
+    var bottom = h.getOffset(footer);
+    var current = h.getDocumentScrollTop();
+    var topFn = current > top ? 'add' : 'remove';
+    var bottomFn = (current + h.getDocumentHeight()) > bottom ? 'add' : 'remove';
 
-  if (current > top) {
-    this.tableOfContents.classList.add('sticky');
-  } else {
-    this.tableOfContents.classList.remove('sticky');
-  }
+    tableOfContents.classList[topFn]('sticky');
+    tableOfContents.classList[bottomFn]('sticky-bottom');
+  };
 
-  if (currentBottom > bottom) {
-    this.tableOfContents.classList.add('sticky-bottom');
-  } else {
-    this.tableOfContents.classList.remove('sticky-bottom');
-  }
-};
+  var highlightTableOfContents = function (heading) {
+    var tocElem = tableOfContents.querySelector('a[href="#' + heading[0].id + '"]');
+    var inViewportElem = tableOfContents.querySelector('.in-viewport');
 
-Sidebar.prototype.highlightTableOfContents = function (heading) {
-  var tocElem = this.tableOfContents.querySelector('a[href="#' + heading[0].id + '"]');
-  var inViewportElem = this.tableOfContents.querySelector('.in-viewport');
-
-  if (!!tocElem && !tocElem.classList.contains('in-viewport')) {
-    if (inViewportElem) {
-      inViewportElem.classList.remove('in-viewport');
+    if (!!tocElem && !tocElem.classList.contains('in-viewport')) {
+      inViewportElem && inViewportElem.classList.remove('in-viewport');
+      tocElem.classList.add('in-viewport');
     }
+  };
 
-    tocElem.classList.add('in-viewport');
-  }
-};
+  // Bind listeners
+  document.addEventListener('scroll', adjustTableOfContents, false);
+  window.addEventListener('scroll', evalHeadingsPosition, false);
+  window.addEventListener('resize', h.evalClientResolution.bind(975), false);
 
-export default Sidebar;
+  // Initial test
+  evalHeadingsPosition();
+  adjustTableOfContents();
+}());

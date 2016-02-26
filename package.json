@@ -1,25 +1,34 @@
 {
   "scripts": {
-    "build": "bin/build",
+    "postinstall": "npm run js:vendors",
+    "build": "npm run icons && npm run js:build && npm run css:critical",
     "postbuild": "bin/testbuild",
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
     "start": "npm run build && npm run watch",
     "watch": "JEKYLL_ENV=LOCAL jekyll s --incremental --config _config.yml,_config.dev.yml",
-    "js": "rollup --format iife assets/js/src/main.js > assets/js/bundle.js && cat node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/bundle.js | uglifyjs > assets/js/main.min.js"
+    "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
+    "js:utilities": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
+    "js:main": "rollup --format iife assets/js/src/main.js | uglifyjs > assets/js/main.min.js",
+    "js:lint": "semistandard assets/js/src",
+    "js:build": "npm run js:lint && npm run js:vendors && npm run js:main && npm run js:utilities",
+    "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --output _includes/critical.css && cleancss _includes/critical.css --output _includes/critical.css"
+  },
+  "dependencies": {
+    "accessible-modal-dialog": "^1.0.1",
+    "blingdotjs": "gist:7d867cda127e64d38f28",
+    "fg-loadcss": "^0.2.4",
+    "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
+    "picturefill": "^3.0.2",
+    "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "accessible-modal-dialog": "^1.0.1",
-    "autoprefixer": "^6.3.3",
     "clean-css": "^3.4.9",
     "criticalcss": "^1.0.1",
-    "fg-loadcss": "^0.2.4",
-    "postcss-cli": "^2.5.1",
     "rollup": "^0.25.4",
+    "semistandard": "^7.0.5",
     "spritesh": "^1.0.8",
     "svgo": "^0.6.1",
-    "uglify-js": "^2.4.15",
-    "uncss": "^0.13.0",
-    "woff2-feature-test": "^1.0.2"
+    "uglify-js": "^2.4.15"
   }
 }

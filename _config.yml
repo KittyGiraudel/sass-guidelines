@@ -21,7 +21,7 @@ languages:
 
 # Build settings
 safe: true
-exclude: 
+exclude:
   - node_modules
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
@@ -35,9 +35,8 @@ exclude:
   - vendor
   - .tmp
   - bin
-  - assets/js/vendor/loadFont.js
+  - assets/js/vendor
   - assets/js/src
-  - assets/js/bundle.js
 
 markdown: kramdown
 kramdown:

@@ -1,18 +1,14 @@
 export default {
   evalClientResolution: function evalClientResolution (size) {
-    return matchMedia('(min-width: ' + size + 'px)').matches;
+    return window.matchMedia('(min-width: ' + size + 'px)').matches;
   },
 
   getDocumentHeight: function getDocumentHeight () {
-    return innerHeight || document.clientHeight || document.body.clientHeight;
+    return window.innerHeight || document.clientHeight || document.body.clientHeight;
   },
 
   getDocumentScrollTop: function getDocumentScrollTop () {
     return document.documentElement.scrollTop || document.body.scrollTop;
-  },
-
-  evalClientResolution: function evalClientResolution () {
-    return matchMedia('(min-width: 975px)').matches;
   },
 
   getOffset: function getOffset (elem) {
@@ -20,8 +16,8 @@ export default {
 
     do {
       if (!isNaN(elem.offsetTop)) offset += elem.offsetTop;
-    } while(elem = elem.offsetParent);
+    } while (elem = elem.offsetParent); // eslint-disable-line
 
     return offset;
   }
-}
+};
