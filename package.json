@@ -8,7 +8,8 @@
     "start": "npm run build && npm run watch",
     "watch": "JEKYLL_ENV=LOCAL jekyll s --incremental --config _config.yml,_config.dev.yml",
     "prejs": "cp node_modules/accessible-modal-dialog/accessible-modal-dialog.js assets/js/vendor",
-    "js": "rollup --format iife assets/js/src/main.js | uglifyjs > assets/js/main.min.js"
+    "js": "rollup --format iife assets/js/src/main.js | uglifyjs > assets/js/main.min.js",
+    "postjs": "semistandard assets/js/src"
   },
   "devDependencies": {
     "accessible-modal-dialog": "^1.0.1",
@@ -18,6 +19,7 @@
     "fg-loadcss": "^0.2.4",
     "postcss-cli": "^2.5.1",
     "rollup": "^0.25.4",
+    "semistandard": "^7.0.5",
     "spritesh": "^1.0.8",
     "svgo": "^0.6.1",
     "uglify-js": "^2.4.15",
