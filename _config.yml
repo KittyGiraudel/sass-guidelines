@@ -21,6 +21,7 @@ languages:
 
 # Build settings
 safe: true
+data_dir: ./_locales
 exclude:
   - node_modules
   - CHANGELOG.md
