@@ -1,17 +1,22 @@
 import App from './App';
 import Sidebar from './Sidebar';
+import UrlManager from './UrlManager';
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  var app = new App({
+  const offset = 50;
+  const headings = document.querySelectorAll('.chapter:not(.toc) > h1[id]');
+
+  const app = new App({
     languagePicker: document.getElementById('language-picker')
   });
 
-  var sidebar = new Sidebar({
-    addOffsetView: 50,
-    headings: document.querySelectorAll('.chapter:not(.toc) > h1[id]'),
+  const sidebar = new Sidebar({
+    addOffsetView: offset,
+    headings: headings,
     tableOfContents: document.querySelector('.toc'),
     footer: document.querySelector('.footer')
   });
 
-  var aside = new Modal(document.getElementById('options-panel'));
+  const aside = new Modal(document.getElementById('options-panel'));
+  const url = new UrlManager({ offset, updateOn: headings });
 });

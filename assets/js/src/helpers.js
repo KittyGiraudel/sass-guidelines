@@ -1,21 +1,17 @@
 export default {
-  evalClientResolution: function evalClientResolution (size) {
-    return matchMedia('(min-width: ' + size + 'px)').matches;
+  evalClientResolution (size) {
+    return matchMedia(`(min-width: ${size}px)`).matches;
   },
 
-  getDocumentHeight: function getDocumentHeight () {
+  getDocumentHeight () {
     return innerHeight || document.clientHeight || document.body.clientHeight;
   },
 
-  getDocumentScrollTop: function getDocumentScrollTop () {
+  getDocumentScrollTop () {
     return document.documentElement.scrollTop || document.body.scrollTop;
   },
 
-  evalClientResolution: function evalClientResolution () {
-    return matchMedia('(min-width: 975px)').matches;
-  },
-
-  getOffset: function getOffset (elem) {
+  getOffset (elem) {
     var offset = 0;
 
     do {
