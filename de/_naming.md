@@ -1,6 +1,8 @@
 
 # Namenskonventionen
 
+{% include chapter-buttons.html %}
+
 In dieser Sektion werden wir uns nicht den besten CSS Namenskonventionen für Wartbarkeit und Skalierbarkeit widmen; das gehört nicht zum Umfang eines Sass Styleguide und sollte generell dir überlassen sein. Ich würde die Konventionen von [CSS Guidelines](http://cssguidelin.es/#naming-conventions) empfehlen.
 
 Es gibt ein paar Dinge die in Sass benannt werden können, und es ist wichtig diese auch gut zu benennen damit deine gesamte Codebasis konsistent und einfach zu lesen ist:

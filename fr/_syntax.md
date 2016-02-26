@@ -1,6 +1,8 @@
 
 # Syntaxe & formatage
 
+{% include chapter-buttons.html %}
+
 À mon avis, la première chose que devrait proposer un guide de style est de décrire la façon dont notre code doit être écrit, du point vue de son aspect.
 
 Lorsque plusieurs développeurs sont impliqués dans l’écriture de CSS sur un même projet, il ne faut pas longtemps avant que l’un d’entre eux commence à faire les choses à sa façon. Les directives servent à éviter cette perte de cohérence, mais aussi à aider chacun à lire et à mettre à jour le code.

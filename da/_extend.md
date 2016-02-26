@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 `@extend` direktivet er en af de funktionaliteter der har gjort Sass så populært for et par år siden. Som en påmindelse, så er det muligt at fortælle Sass at det skal style element A præcis som hvis det også matchede selektor B. Det er derfor unnødvendigt at sige, at det kan ende med at blive en ret værdifuld allieret når der skal skrives modulært CSS.
 
 Når der er sagt, så føler jeg, at jeg bør advare dig imod denne funktionalitet. Selvom den er smart, så er `@extend` stadig et ret udfordrende koncept, der kan gøre mere skade end gavn, især hvis anvendt forkert. Sagen er den, at når en selektor udvides, så har du lidt til ingen måde at at svare på disse spørgsmål uden at have dyb kendskab til hele kodebasen:

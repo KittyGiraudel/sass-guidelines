@@ -1,6 +1,8 @@
 
 # Too Long; Didn’t read
 
+{% include chapter-buttons.html %}
+
 These guidelines are quite long and sometimes it is good to have them summed up in a shorter version. Below is this summary.
 
 ## Key principles

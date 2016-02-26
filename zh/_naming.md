@@ -1,6 +1,8 @@
 
 # 命名约定
 
+{% include chapter-buttons.html %}
+
 在本节，我们不会讨论适用于大规模和可维护的最佳 CSS 命名方案，因为这不仅仅超过了个人的能力范围，也不是一个Sass样式指南可以解决的问题。我个人推荐遵从 [CSS Guidelines](http://cssguidelin.es/#naming-conventions) 的建议。
 
 良好的命名对保持整体代码的一致性和可读性非常重要，在 Sass 中可以命名的地方如下：

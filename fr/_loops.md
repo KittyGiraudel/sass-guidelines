@@ -1,6 +1,8 @@
 
 # Boucles
 
+{% include chapter-buttons.html %}
+
 Sass nous offre des structures complexes telles que les [listes](#listes) et les [maps](#maps), il n’est donc pas surprenant qu’il nous permette d’effectuer des itérations sur ces entités.
 
 Toutefois, la présence de boucles implique généralement une logique légèrement complexe qui ne fait sans doute pas partie de la philosophie de Sass. Avant d’utiliser une boucle, assurez-vous que cela a un sens et que cela résout effectivement un problème.

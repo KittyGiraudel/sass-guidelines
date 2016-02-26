@@ -14,7 +14,7 @@
     top: 0;
     right: 0;
     margin: 0;
-    width: 90px;
+    width: 95px;
     padding: 8px 0;
   }
 }
@@ -25,7 +25,7 @@
   display: inline-block;
 }
 
-.chapter__edit {
+.chapter__buttons .button-ui + .button-ui {
   margin-left: 10px;
 }
 

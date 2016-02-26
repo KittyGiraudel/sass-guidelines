@@ -1,6 +1,8 @@
 
 # 总结概要
 
+{% include chapter-buttons.html %}
+
 简而言之，本文主要包括以下几个方面的内容:
 
 ## 核心原则

@@ -1,6 +1,8 @@
 
 # Syntax & formatting
 
+{% include chapter-buttons.html %}
+
 If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
 
 When several developers are involved in writing CSS on the same project(s), it is only a matter of time before one of them starts doing things their own way. Code guidelines that promote consistency not only prevent this, but also help when it comes to reading and updating the code.

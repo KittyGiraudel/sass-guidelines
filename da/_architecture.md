@@ -1,6 +1,8 @@
 
 # Arkitektur
 
+{% include chapter-buttons.html %}
+
 At konstruere et CSS projekt er højest sandsynlig noget af det sværeste du kommer til at lave i et projekts levetid. At holde arkitekturen konsistent og meningsfuld er endnu sværere.
 
 Heldigvis er en af hovedfordelene ved at have en CSS preprocessor evnen til at kunne splitte kodebasen i flere filer, uden at det påvirker performance (som `@import` CSS-direktivet ville gøre). Takket være Sass' overload af `@import` direktivet, så er det fuldstændig sikkert (og faktisk anbefalet) at bruge så mange filer som nødvendigt i udvikling, og derefter samle alle i ét enkelt stylesheet når man går i produktion.

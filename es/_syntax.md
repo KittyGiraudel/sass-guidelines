@@ -1,6 +1,8 @@
 
 # Sintaxis Y Formato
 
+{% include chapter-buttons.html %}
+
 En mi opinión, la primera cosa que debe hacer una guía de estilo es describir la forma en que queremos que luzca nuestro código.
 
 Cuando varios desarrolladores están involucrados en la escritura CSS dentro del mismo proyecto o proyectos, es sólo cuestión de tiempo antes de que uno de ellos empiece a hacer las cosas a su manera. Las guías de estilo que fomentan la coherencia no solo previenen esto, sino que también ayudan a la hora de leer y actualizar el código.

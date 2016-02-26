@@ -1,6 +1,8 @@
 
 # Ferramentas
 
+{% include chapter-buttons.html %}
+
 O que um pré-processador de CSS tão popular como Sass tem de bom é que vem com todo um ecossistema de _frameworks_, _plugins_, bibliotecas e ferramentas. Após 8 anos de existência, estamos cada vez mais perto do ponto onde [tudo o que pode ser escrito em Sass foi escrito em Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 No entanto, o meu conselho seria para reduzir o número de dependências ao estritamente necessário. Gerir dependências é uma espécie de inferno do qual não querem fazer parte. Além disso, há pouca ou nenhuma necessidade de dependências externas no que toca a Sass.

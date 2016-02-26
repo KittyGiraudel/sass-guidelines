@@ -1,6 +1,7 @@
 
 # Acerca Del Autor
 
+{% include chapter-buttons.html %}
 Mi nombre es [Hugo Giraudel](http://hugogiraudel.com), soy un desarrollador front-end nacido en Francia y actualmente basado en Berlín, Alemania. Llevo desarrollando en Sass desde hace casi dos años y soy el autor de algunos proyectos relacionados con Sass como, [SassDoc](http://sassdoc.com) y [Sass-Compatibility](http://sass-compatibility.github.io). También he escrito un libro sobre CSS (en francés) titulado [CSS3 Pratique du Design Web](http://www.amazon.fr/dp/2212140231).
 
 También he escrito algunas librerías Sass como las que aparecen a continuación, solo por el placer de hacerlo (En inglés):

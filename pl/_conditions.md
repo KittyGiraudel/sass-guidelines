@@ -1,6 +1,8 @@
 
 # Instrukcje warunkowe (conditionals)
 
+{% include chapter-buttons.html %}
+
 Sass zapewnia wsparcie dla instrukcji warunkowych poprzez dyrektywy `@if` i `@else`. Jeśli w bazie kodu brak jest średnio lub bardzo skomplikowanych rozwiązań, nie ma większej potrzeby dla stosowania tychże instrukcji. W zasadzie to one głównie istnieją dla potrzeb bibliotek i frameworków.
 
 W każdym razie, gdy zajdzie jednak potrzeba skorzystania z instrukcji warunkowych, należy to robić w zgodności z poniższymi zasadami:

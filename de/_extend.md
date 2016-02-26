@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 Die `@extend` Regel ist ein mächtiges Feature welches häufig missverstanden wird. Generell ermöglicht es Sass zu sagen, dass ein Element A exakt gleich wie Selektor B gestyled werden soll. Deshalb kann es ein wertvoller Verbündeter bei modularem CSS sein.
 
 Dennoch, der wahre Grund von `@extend` ist es die Beziehung (Beschränkungen) innerhalb erweiterter Selektoren zwischen Regelwerken zu pflegen. Was genau bedeutet das?

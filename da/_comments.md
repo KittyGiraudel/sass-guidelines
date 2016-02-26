@@ -1,6 +1,8 @@
 
 # Kommentering
 
+{% include chapter-buttons.html %}
+
 CSS er et udfordrende sprog, fyldt med hacks og mærkværdigheder. På grund af det, så bør det blive kraftigt kommenteret, især hvis du eller andre har til hensigt at læse eller opdatere koden 6 måneder, eller 1 år, fra nu. Lad ikke dig selv eller andre komme i en situation af *Jeg-har-ikke-skrevet-det-her-åh-gud-hvorfor*.
 
 Så simpelt som CSS kan blive, så er der stadig masser af plads til kommentarer. Disse kunne forklare:

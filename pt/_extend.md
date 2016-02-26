@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 A diretiva `@extend` tem de ser uma das características que tornou Sass tão popular há uns anos atrás. Como lembrete, ela permite dizer ao Sass para estilizar um elemento A, tal como se ele fosse abrangido pelo seletor B. Escusado será dizer que isto pode ser um valioso aliado quando se escreve CSS modular.
 
 No entanto sinto-me na necessidade de vos avisar que esta característica, por muito inteligente que seja, é um conceito traiçoeiro, especialmente quando usado indevidamente. O problema é que quando se extende um seletor, há pouca ou nenhuma forma de responder as seguintes perguntas sem terem um conhecimento profundo de toda a base de código.

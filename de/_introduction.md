@@ -1,6 +1,8 @@
 
 # Einleitung
 
+{% include chapter-buttons.html %}
+
 ## Warum ein Styleguide
 
 Ein Styleguide ist nicht nur einfach ein schönes Dokument um darzustellen wie dein Code idealerweise aussehen sollte, sondern er ist essenziell für das Projekt, um zu beschreiben weshalb und wie Code geschrieben werden sollte. Zwar sieht es in kleinen Projekten etwas nach Overkill aus, zahlt sich am Ende aber in Sachen Skalierbarkeit, Wartbarkeit und einer sauberen Codebasis aus.

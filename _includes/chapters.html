@@ -1,44 +1,54 @@
 {::options parse_block_html="true" /}
 
 <section id="chapter-author" class="chapter chapter--author">
+  {% assign current_chapter = 'author' %}
   {% include_relative {{ include.path }}_author.md %}
 </section>
 
 <section id="chapter-contributing" class="chapter chapter--contributing">
+  {% assign current_chapter = 'contributing' %}
   {% include_relative {{ include.path }}_contributing.md %}
 </section>
 
 <nav class="chapter toc" aria-label="Document" id="chapter-toc chapter--toc">
+  {% assign current_chapter = 'toc' %}
   {% include_relative {{ include.path }}_toc.md %}
 </nav>
 
 <section id="chapter-sass" class="chapter chapter--sass">
+  {% assign current_chapter = 'sass' %}
   {% include_relative {{ include.path }}_sass.md %}
 </section>
 
 <section id="chapter-introduction" class="chapter chapter--introduction">
+  {% assign current_chapter = 'introduction' %}
   {% include_relative {{ include.path }}_introduction.md %}
 </section>
 
 <section id="chapter-syntax" class="chapter chapter--syntax">
+  {% assign current_chapter = 'syntax' %}
   {% include_relative {{ include.path }}_syntax.md %}
 </section>
 
 {% include donate.html %}
 
 <section id="chapter-naming" class="chapter chapter--naming">
+  {% assign current_chapter = 'naming' %}
   {% include_relative {{ include.path }}_naming.md %}
 </section>
 
 <section id="chapter-comments" class="chapter chapter--comments">
+  {% assign current_chapter = 'comments' %}
   {% include_relative {{ include.path }}_comments.md %}
 </section>
 
 <section id="chapter-architecture" class="chapter chapter--architecture">
+  {% assign current_chapter = 'architecture' %}
   {% include_relative {{ include.path }}_architecture.md %}
 </section>
 
 <section id="chapter-rwd" class="chapter chapter--rwd">
+  {% assign current_chapter = 'rwd' %}
   {% include_relative {{ include.path }}_rwd.md %}
 </section>
 
@@ -46,36 +56,44 @@
 {% include donate.html %}
 
 <section id="chapter-variables" class="chapter chapter--variables">
+  {% assign current_chapter = 'variables' %}
   {% include_relative {{ include.path }}_variables.md %}
 </section>
 
 <section id="chapter-extend" class="chapter chapter--extend">
+  {% assign current_chapter = 'extend' %}
   {% include_relative {{ include.path }}_extend.md %}
 </section>
 
 <section id="chapter-mixins" class="chapter chapter--mixins">
+  {% assign current_chapter = 'mixins' %}
   {% include_relative {{ include.path }}_mixins.md %}
 </section>
 
 <section id="chapter-conditions" class="chapter chapter--conditions">
+  {% assign current_chapter = 'conditions' %}
   {% include_relative {{ include.path }}_conditions.md %}
 </section>
 
 {% include donate.html %}
 
 <section id="chapter-loops" class="chapter chapter--loops">
+  {% assign current_chapter = 'loops' %}
   {% include_relative {{ include.path }}_loops.md %}
 </section>
 
 <section id="chapter-errors" class="chapter chapter--errors">
+  {% assign current_chapter = 'errors' %}
   {% include_relative {{ include.path }}_errors.md %}
 </section>
 
 <section id="chapter-tools" class="chapter chapter--tools">
+  {% assign current_chapter = 'tools' %}
   {% include_relative {{ include.path }}_tools.md %}
 </section>
 
 <section id="chapter-tldr" class="chapter chapter--tldr">
+  {% assign current_chapter = 'tldr' %}
   {% include_relative {{ include.path }}_tldr.md %}
 </section>
 

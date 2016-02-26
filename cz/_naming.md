@@ -1,6 +1,8 @@
 
 # Jmenné konvence
 
+{% include chapter-buttons.html %}
+
 V této sekci se nebudeme zabývat nejlepšími jmennými CSS konvencemi pro udržovatelnost a rozsah. Nejen že je to jen a jen na vás, ale je to také mimo oblast Sass manuálu. Navrhuji však ty, které jsou doporučeny v [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Je tu však pár věcí, které můžete v Sassu pojmenovat a je důležité je pojmenovat dobře, takže celý codebase bude vypadat konzistentní a bude snadno čitelný:

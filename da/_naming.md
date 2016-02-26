@@ -1,6 +1,8 @@
 
 # Konventioner for navngivelse
 
+{% include chapter-buttons.html %}
+
 I denne sektion vil vi ikke behandle hvad de bedste CSS navgivningskonventioner er for vedligeholdelse og skalering; det er ikke alene op til dig, det er også uden for rammerne af en Sass styleguide. Jeg foreslår disse, anbefalet af [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Der er få ting du kan navngive i Sass, og det er vigtigt at navngive dem ordentligt så hele kodebasen både ser konsistent ud og er let at læse:

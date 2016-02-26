@@ -1,6 +1,8 @@
 
 # TL;DR
 
+{% include chapter-buttons.html %}
+
 Abych to shrnul, chceme:
 
 * Dvě (2) mezery pro odsazení, ne taby;

@@ -1,6 +1,8 @@
 
 # Responsivt Web Design og breakpoints
 
+{% include chapter-buttons.html %}
+
 Jeg tror ikke at vi stadig behøver at introducere Responsivt Web Design, nu hvor det er overalt. Dog spørger du muligvis dig selv *hvorfor er der en sektion omkring RWD i en Sass styleguide?* Rent faktisk er der en del ting som kan gøres, for at gøre arbejdet med breakpoints nemmere, så jeg tænkte at det ikke ville være en dårlig idé at liste dem her.
 
 ## Navngivelse af breakpoints

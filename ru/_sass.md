@@ -1,6 +1,8 @@
 
 # О Sass
 
+{% include chapter-buttons.html %}
+
 Вот так [Sass](http://sass-lang.com) описывает сам себя в своей [документации](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass — это расширение CSS, которое добавляет силу и элигантность к основному языку.

@@ -1,6 +1,8 @@
 
 # À propos de Sass
 
+{% include chapter-buttons.html %}
+
 Voici comment [Sass](http://sass-lang.com) est décrit dans la [documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)&nbsp;:
 
 > Sass est une extension de CSS qui ajoute puissance et élégance au langage de base.

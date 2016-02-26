@@ -1,6 +1,8 @@
 
 # Syntaks & formatering
 
+{% include chapter-buttons.html %}
+
 Hvis du spørger mig, så er noget af det allerførste en styleguide bør gøre, er at beskrive måden hvordan vi vil have vores kode til at se ud.
 
 Når flere udviklere er involveret i at skrive CSS på de(t) samme projekt(er), så er det kun et spørgsmål om tid før en af dem begynder at gøre tingene på deres egen måde. Retningslinjer for kode, der fremmer konsistens, er ikke blot med til at undgå dette, men hjælper også når det kommer til at læse og opdatere koden.

@@ -1,6 +1,8 @@
 
 # Too long; Didn’t read
 
+{% include chapter-buttons.html %}
+
 Przewodnik ten jest dosyć długi i czasami dobrze jest mieć dostęp do pewnego rodzaju podsumowania. Poniżej znajduje się właśnie takie podsumowanie.
 
 ## Kluczowe zasady

@@ -1,6 +1,8 @@
 
 # Extendy
 
+{% include chapter-buttons.html %}
+
 Dyrektywa `@extend` należy do potężnych funkcjonalności Sassa, lecz jest ona często źle rozumiana. Co do zasady, dyrektywa ta pozwala na przekazanie Sassowi, żeby zaaplikował określone style selektorowi A tak, jakby pasował on także do selektora B. Nie ulega wątpliwości, że może to być pomocne przy pisaniu modułowego CSSa.
 
 Niemniej jednak, prawdziwym przeznaczeniem dyrektywy `@extend` jest utrzymywanie powiązania (ograniczeń) pomiędzy regułami, w ramach rozwijanych selektorów. Co to konkretnie oznacza?

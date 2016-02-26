@@ -1,6 +1,8 @@
 
 # Bucles
 
+{% include chapter-buttons.html %}
+
 Puesto que Sass proporciona estructuras de datos complejas, como por ejemplo [listas](#listas) y [mapas](#mapas), no es de extrañar que también proporcione una forma para que los autores puedan iterar sobre dichas entidades.
 
 Sin embargo, la presencia de bucles generalmente implica una lógica moderadamente compleja que propablemente no pertenece a Sass. Antes de utilizar un bucle, asegúrate de que tiene sentido y que de hecho resuelve un problema.

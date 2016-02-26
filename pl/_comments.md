@@ -1,6 +1,8 @@
 
 # Komentarze
 
+{% include chapter-buttons.html %}
+
 CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli zachodzi przypuszczenie, że ktoś będzie czytał i aktualizował ten kod w przyszłości. Warto zapobiec sytuacji, w której czytelnik znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko-dlaczego*.
 
 Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto używać komentarzy. Mogą one objaśniać takie rzeczy, jak:

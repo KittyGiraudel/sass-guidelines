@@ -1,6 +1,8 @@
 
 # Too Long; Didn't read
 
+{% include chapter-buttons.html %}
+
 Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst in einer kürzeren Version zu haben. Weiter unten ist diese Zusammenfassung.
 
 ## Grundprinzipien

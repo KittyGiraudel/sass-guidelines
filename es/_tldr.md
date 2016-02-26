@@ -1,6 +1,8 @@
 
 # Too Long; Didn't read
 
+{% include chapter-buttons.html %}
+
 En resumen, queremos:
 
 * Dos (2) espacios en blanco, no tabulaciones;

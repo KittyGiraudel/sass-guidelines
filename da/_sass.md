@@ -1,6 +1,8 @@
 
 # Om Sass
 
+{% include chapter-buttons.html %}
+
 Sådan beskriver [Sass](http://sass-lang.com) sig selv i dets [dokumentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass er en forlængelse af CSS, der tilføjer kraft og elegance til det basale sprog.

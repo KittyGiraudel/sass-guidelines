@@ -1,6 +1,8 @@
 
 # Wprowadzenie
 
+{% include chapter-buttons.html %}
+
 ## Czemu służy ten przewodnik
 
 Przewodnik stylu nie stanowi tylko przyjemności do czytania, prezentującej idealny stan kodu. Jest to przede wszystkim kluczowy dokument w życiu danego projektu, opisujący jak i dlaczego powinniśmy pisać określony kod. Może się wydawać, że jest to przesada dla małych projektów, pomaga on jednak w utrzymywaniu kodu czystego, skalowalnego w zależności od rozmiaru projektu i łatwego w utrzymaniu.

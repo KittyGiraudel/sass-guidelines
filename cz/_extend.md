@@ -1,6 +1,8 @@
 
 # Extend
 
+{% include chapter-buttons.html %}
+
 Direktiva `@extend` je právě jedna z funkcí Sassu, co jej udělalo tak populárním již několik let zpátky. Jen připomenu, že to umožňuje říci Sassu, aby nastyloval element A tak, aby to odpovídalo selektoru B. Netřeba asi dodávat, že tato funkce může ztratit svou hodnotu, pokud píšete modulární CSS.
 
 Každopádně mám pocit, že vás musím před touto funkcí varovat. Stejně tak, jak je to chytré, tak je `@extend` stále ošemetný koncept, který by mohl udělat více škody, než-li užitku, zvláště když se špatně použije. Věc se má tak, že když extendujete selektor, nemůžete zodpovědět následující otázky bez toho, aniž byste měli nějakou hlubokou znalost celé codebase:

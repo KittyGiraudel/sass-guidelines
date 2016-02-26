@@ -1,6 +1,8 @@
 
 # Podmíněné příkazy
 
+{% include chapter-buttons.html %}
+
 Pravděpodobně již víte, že Sass poskytuje podmíněné příkazy pomocí `@if` a `@else` direktiv. V běžných stylech nejsou podmíněné příkazy potřeba, ledaže máte střední až velmi komplexní řešení. Ve skutečnosti existují hlavně pro knihovny a frameworky.
 
 Každopádně, pokud se někdy ocitnete v situaci, kdy je budete využívat, respektujte, prosím, následující zásady:
