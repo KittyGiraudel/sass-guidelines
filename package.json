@@ -15,11 +15,12 @@
     "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --output _includes/critical.css && cleancss _includes/critical.css --output _includes/critical.css"
   },
   "dependencies": {
+    "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
     "accessible-modal-dialog": "^1.0.1",
     "blingdotjs": "gist:7d867cda127e64d38f28",
     "fg-loadcss": "^0.2.4",
-    "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
     "picturefill": "^3.0.2",
+    "svg4everybody": "^2.0.3",
     "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
