@@ -7,7 +7,6 @@
   color: rgb(255, 255, 255);
   overflow: hidden;
   padding: 1.5rem 0;
-  margin-bottom: 4.5rem;
   border-bottom: 0.5em solid darken($secondary-color, 5%);
 }
 
@@ -36,7 +35,8 @@
  */
 .baseline {
   @include container;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   font-size: 2em;
   text-transform: initial;
   color: $main-color;

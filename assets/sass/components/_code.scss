@@ -20,13 +20,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $code-background;
   color: rgb(255, 255, 255);
+}
 
-  /**
-   * <pre> element direct child of `.highlight` modules
-   */
-  > pre {
-    margin: 0;
-  }
+/**
+ * <pre> element direct child of `.highlight` modules
+ */
+.highlight > pre {
+  margin: 0;
 }
 
 .highlight code,
