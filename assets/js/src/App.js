@@ -1,6 +1,6 @@
 /* globals $ */
 
-export default (function () {
+module.exports (function () {
   'use strict';
 
   // DOM queries
@@ -56,12 +56,17 @@ export default (function () {
     window.location.href = this.value;
   };
 
-  // Binding events
+  // Bind events
   window.on('hashchange', fixSkipLinks, false);
   languagePicker.on('change', redirectUrl, false);
   syntaxToggle.on('click', function (event) {
     var fn = this.value === 'sass' ? 'add' : 'remove';
     document.body.classList[fn]('sass');
+  });
+
+  // Initialise side panel
+  document.addEventListener('DOMContentLoaded', function (event) {
+    new Modal(document.getElementById('options-panel')); // eslint-disable-line
   });
 
   // Add chapter buttons

@@ -23,17 +23,12 @@ export default (function () {
     if (isLargerThanMobile) {
       // Loop over all headings offsets & compare scrollTop if already passed a value.
       for (var i = 0, offsets = headingsOffset.length; i < offsets; i++) {
-        if (
-          scrollTop >= headingsOffset[i][1] &&
-          headingsOffset[i + 1] &&
-          scrollTop < headingsOffset[i + 1][1]
-        ) {
+        var headingPassed = scrollTop >= headingsOffset[i][1] && headingsOffset[i + 1] && scrollTop < headingsOffset[i + 1][1];
+        var lastHeading = headingsOffset[i] === headingsOffset[offsets - 1] && scrollTop >= headingsOffset[i][1];
+
+        if (headingPassed) {
           highlightTableOfContents(headingsOffset[i]);
-        // Last element reached.
-        } else if (
-          headingsOffset[i] === headingsOffset[offsets - 1] &&
-          scrollTop >= headingsOffset[i][1]
-        ) {
+        } else if (lastHeading) {
           highlightTableOfContents(headingsOffset[offsets - 1]);
         }
       }
