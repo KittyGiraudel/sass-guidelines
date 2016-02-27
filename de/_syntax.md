@@ -83,7 +83,7 @@ Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, 
 {% include snippets/syntax/07/index.html %}
 
 <div class="note">
-	<p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code> 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
+	<p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code>\ 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
 </div>
 
 ### Einheiten
