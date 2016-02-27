@@ -19,7 +19,7 @@ Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features 
 
 ## Ruby Sass oder LibSass
 
-[Sass' erster Commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) war Ende 2006, mittlerweile über 8 Jahre zurück. Unnötig zu erwähnen das es seither einen langen Weg gegangen ist. Ursprünglich in Ruby entwickelt, wurde es bereits mehrmals in andere Sprachen übertragen; die erfolgreichste davon ist [LibSass](https://github.com/sass/libsass) (geschrieben in C), welches nun nah dran ist vollständig Kompatibel mit der originalen Ruby version zu sein.
+[Sass' erster Commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) war Ende 2006, mittlerweile über 8 Jahre zurück. Unnötig zu erwähnen das es seither einen langen Weg gegangen ist. Ursprünglich in Ruby entwickelt, wurde es bereits mehrmals in andere Sprachen übertragen; die erfolgreichste davon ist [LibSass](https://github.com/sass/libsass) (geschrieben in C/C++), welches nun nah dran ist vollständig Kompatibel mit der originalen Ruby version zu sein.
 
 2014 haben sich die Teams von [Ruby Sass und LibSass dazu entschieden, zu warten, bis beide auf demselben Stand sind bevor es mit der Entwicklung weitergeht](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Seither veröffentlicht LibSass regelmäßig neue Release Versionen. Die noch ausstehenden Features sind von mir unter durch das [Sass-Compatibility](http://sass-compatibility.github.io) Projekt gesammelt und aufgelistet. Falls dir noch Ungleichheiten auffallen, die ich nicht aufgelistet habe, sei doch so nett und teil es mir mit.
 

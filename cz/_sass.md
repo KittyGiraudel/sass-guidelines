@@ -20,7 +20,7 @@ Jak již bylo řečeno, existuje mnoho způsobů využití těchto funkcí. Něk
 
 ## Ruby Sass nebo LibSass
 
-[První commit Sassu](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se datuje na konec roku 2006, tedy skoro před 8 lety. Netřeba snad ani dodávat, že od té doby uplynula dlouhá doba. Při počátečním vývoji v Ruby se tu a tam objevil nějaký ten port. Nejúspěšnější z nich, [LibSass](https://github.com/sass/libsass) (napsaný v C) je nyní blízko k plné kompatibilitě s původní Ruby verzí.
+[První commit Sassu](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se datuje na konec roku 2006, tedy skoro před 8 lety. Netřeba snad ani dodávat, že od té doby uplynula dlouhá doba. Při počátečním vývoji v Ruby se tu a tam objevil nějaký ten port. Nejúspěšnější z nich, [LibSass](https://github.com/sass/libsass) (napsaný v C/C++) je nyní blízko k plné kompatibilitě s původní Ruby verzí.
 
 V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě verze před dalším postupem](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od té doby LibSass aktivně uvolňuje verze kompatibilní s jeho starším bratrem. Poslední zbývající nesrovnalosti jsem osobně zaznamenal ve svém projektu [Sass-Compatibility](http://sass-compatibility.github.io). Pokud víte o nějakém rozdílu mezi verzemi, který v seznamu není uvedený, budu vám vděčný za otevření příslušné issue.
 
