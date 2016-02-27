@@ -3,14 +3,10 @@
  */
 .donate {
   margin-bottom: $vertical-rhythm-baseline;
-  padding: 1rem;
+  padding: $vertical-rhythm-baseline;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $donate-background;
   text-align: center;
-
-  @include respond-to('medium') {
-    padding: 1rem;
-  }
 }
 
 /**
@@ -18,6 +14,14 @@
  */
 .donate__content {
   @include container;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }
 
 /**

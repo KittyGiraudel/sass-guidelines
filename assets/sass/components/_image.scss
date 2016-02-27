@@ -4,7 +4,7 @@
 figure {
   background-color: $figure-background;
   margin: 0;
-  padding: 1rem;
+  padding: $vertical-rhythm-baseline;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
