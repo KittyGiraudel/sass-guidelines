@@ -18,7 +18,7 @@ We will not tackle the question of file organization in this section. It is the 
 
 ## Strings
 
-Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or strings (usually unquoted), so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
+Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or identifiers, so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
 
 ### Encoding
 
@@ -47,7 +47,7 @@ That being said, languages that do not require strings to be quoted are definite
 
 ### Strings as CSS values
 
-Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+Specific CSS values (identifiers) such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -57,7 +57,7 @@ We don't quote the former, but we do wrap the latter in single quotes.
 
 ### Strings containing quotes
 
-If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping characters within the string.
 
 {% include snippets/syntax/05/index.html %}
 

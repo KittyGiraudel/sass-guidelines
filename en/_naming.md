@@ -29,7 +29,7 @@ If you really want to play with the ideas of constants in Sass, you should read 
 
 If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+For instance, if you work on a *Sassy Unicorn* project that is meant to be distributed, you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
 
 {% include snippets/naming/03/index.html %}
 
