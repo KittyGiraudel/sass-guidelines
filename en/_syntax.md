@@ -14,8 +14,6 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 
 {% include snippets/syntax/01/index.html %}
 
-We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
-
 ## Strings
 
 Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or identifiers, so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
@@ -336,13 +334,5 @@ Also, when using component-agnostic state classes such as `.is-active`, it is pe
 Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
 
 {% include snippets/syntax/35/index.html %}
-
-When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
-
-{% include snippets/syntax/36/index.html %}
-
-Rewriting our previous example, it would look like this:
-
-{% include snippets/syntax/37/index.html %}
 
 As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
