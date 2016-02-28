@@ -1,7 +1,7 @@
 /**
  * The Table of Contents is absolutely position/fixed only on large screens
  */
-@include respond-to('large') {
+@include media('>large') {
   /**
    * ToC container
    * 1. Absolutely positioned on the top left corner of main container

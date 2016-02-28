@@ -27,7 +27,7 @@
   /**
    * Inlined buttons on large screens
    */
-  @include respond-to('medium') {
+  @include media('>medium') {
     display: inline-block;
   }
 }

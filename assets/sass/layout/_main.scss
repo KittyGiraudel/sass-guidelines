@@ -9,7 +9,7 @@
   max-width: $main-width;
   margin: 0 auto;
 
-  @include respond-to('large') {
+  @include media('>large') {
     padding-left: $sidebar-width; /* 2 */
   }
 }

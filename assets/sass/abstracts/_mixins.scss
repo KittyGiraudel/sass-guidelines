@@ -28,16 +28,3 @@
     }
   }
 }
-
-/// Small screens helper
-/// @author Hugo Giraudel
-/// @param {String} $breakpoint - Breakpoint name
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) == false {
-    @error 'Invalid breakpoint #{$breakpoint}.';
-  }
-
-  @media all and (min-width: #{map-get($breakpoints, $breakpoint)}) {
-    @content;
-  }
-}

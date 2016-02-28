@@ -9,7 +9,7 @@
 }
 
 .chapter__buttons {
-  @media (min-width: 601px) {
+  @include media('>small') {
     position: absolute;
     top: 0;
     right: 0;
@@ -29,7 +29,7 @@
   margin-left: 10px;
 }
 
-@media (max-width: 600px) {
+@include media('<=small') {
   .chapter > h1 {
     text-align: center;
   }

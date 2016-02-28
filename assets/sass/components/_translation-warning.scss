@@ -8,7 +8,7 @@
   background-color: $quote-background;
   font-size: 1.2em; /* 1 */
 
-  @include respond-to('medium') {
+  @include media('>medium') {
     padding: 1rem;
   }
 }
@@ -16,7 +16,7 @@
 .translation-warning__inner {
   @include container;
 
-  @include respond-to('large') {
+  @include media('>large') {
     max-width: $main-width;
   }
 }
