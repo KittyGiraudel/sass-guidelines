@@ -6,10 +6,11 @@ export default (function () {
   'use strict';
 
   // DOM queries
-  var headings = $('.chapter:not(.toc) > h1[id]');
+  var headings = $('.chapter > h1[id]');
+
   // Internal variables
   var offset = 50;
-  var headingsOffset = headings.map(function(el) {
+  var headingsOffset = headings.map(function (el) {
     return [h.getOffset(el), el.id];
   });
 
