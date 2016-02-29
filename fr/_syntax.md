@@ -83,7 +83,7 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
 {% include snippets/syntax/07/index.html %}
 
 <div class="note">
-  <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code> 0.$1</code>. N’oubliez pas l’espace précédantg le <code>0</code> par contre.</p>
+  <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code>\ 0.$1</code>. N’oubliez pas l’espace précédantg le <code>0</code> par contre.</p>
 </div>
 
 ### Unités

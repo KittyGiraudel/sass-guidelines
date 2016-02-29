@@ -83,7 +83,7 @@ Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość 
 {% include snippets/syntax/07/index.html %}
 
 <div class="note">
-  <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code> 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
+  <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code>\ 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
 </div>
 
 ### Jednostki

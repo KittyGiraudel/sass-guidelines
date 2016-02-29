@@ -20,7 +20,7 @@ Sass는 이런 상황에서, 초언어로서, 추가 기능과 유용한 도구�
 
 ## Ruby Sass 혹은 LibSass
 
-[Sass의 첫 번째 커밋](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)은 8년 이상이 지난, 2006년 후반까지 거슬러 올라갑니다. 말할 것도 없이 그 이후로 아주 먼 길을 왔습니다. Ruby로 처음에 개발되었고, 여기저기서 다양한 포트들이 튀어나왔죠. 가장 성공적인, (C로 쓰인) [LibSass](https://github.com/sass/libsass)는 현재 원래의 Ruby 버전과의 완전한 호환에 근접해 있습니다.
+[Sass의 첫 번째 커밋](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)은 8년 이상이 지난, 2006년 후반까지 거슬러 올라갑니다. 말할 것도 없이 그 이후로 아주 먼 길을 왔습니다. Ruby로 처음에 개발되었고, 여기저기서 다양한 포트들이 튀어나왔죠. 가장 성공적인, (C/C++로 쓰인) [LibSass](https://github.com/sass/libsass)는 현재 원래의 Ruby 버전과의 완전한 호환에 근접해 있습니다.
 
 2014년, [Ruby 사스와 LibSass 팀은 더 나아가기 전에 두 가지 버전의 동기화를 기다리기로 결정했습니다](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). 그 이후로, LibSass는 형과의 기능 동기화를 위해 활발하게 버전들을 출시하고 있습니다. 남아있는 불일치들은 제가 [Sass-Compatibility](http://sass-compatibility.github.io) 프로젝트로 한데 모아 정리해두었습니다. 열거되지 않은 불일치를 알고 계시다면, 이슈를 여는 친절을 베풀어주시기 바랍니다.
 
@@ -45,7 +45,7 @@ Sass는 처음에 들여쓰기의 감지를 그 핵심 특성으로 갖는 구�
 
 Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다른 구두점 기호들을 없애기 위해 들여쓰기에 의존하며, 이는 간결하고 짧은 구문으로 이어집니다. 한편, SCSS는 주로 CSS에 올려진 작은 추가사항들이므로 배우기에 더 쉽습니다.
 
-<p>저 자신은 CSS와 더 비슷하고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 그런 이유로, SCSS가 이 가이드라인의 기본 구문입니다. <button type="button" data-modal-show="options-panel" class="link-like">옵션 패널</button>에서 Sass의 들여쓰기 구문으로 바꾸실 수 있습니다.</p>
+저 자신은 CSS와 더 비슷하고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 그런 이유로, SCSS가 이 가이드라인의 기본 구문입니다. <button type="button" data-modal-show="options-panel" class="link-like">옵션 패널</button>에서 Sass의 들여쓰기 구문으로 바꾸실 수 있습니다.
 
 ###### 참고
 

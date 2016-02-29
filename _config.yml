@@ -21,7 +21,8 @@ languages:
 
 # Build settings
 safe: true
-exclude: 
+data_dir: ./_locales
+exclude:
   - node_modules
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
@@ -33,11 +34,10 @@ exclude:
   - Gemfile.lock
   - CNAME
   - vendor
-  - .tmp
-  - bin
-  - assets/js/vendor/loadFont.js
+  - _bin
+  - assets/js/vendor
   - assets/js/src
-  - assets/js/bundle.js
+  - assets/images/icons
 
 markdown: kramdown
 kramdown:

@@ -84,6 +84,7 @@ $content-width: 650px;
 /// Breakpoints
 /// @type Map
 $breakpoints: (
+  'small': 600px,
   'medium': 801px,
   'large': $main-width
 );

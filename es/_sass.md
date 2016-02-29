@@ -20,7 +20,7 @@ Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algun
 
 ## Ruby Sass o LibSass
 
-El [primer commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se remonta a hace más de 8 años, a finales de 2006. Sobra decir que se ha recorrido un largo camino desde entonces. Desarrollado inicialmente en Ruby, le sucedieron distintas variaciones; la más popular, [LibSass](https://github.com/sass/libsass) (Escrita en C) y que está cerca de ser totalmente compatible con la versión original escrita en Ruby.
+El [primer commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se remonta a hace más de 8 años, a finales de 2006. Sobra decir que se ha recorrido un largo camino desde entonces. Desarrollado inicialmente en Ruby, le sucedieron distintas variaciones; la más popular, [LibSass](https://github.com/sass/libsass) (Escrita en C/C++) y que está cerca de ser totalmente compatible con la versión original escrita en Ruby.
 
 En 2014, [los equipos de Ruby Sass y LibSass decidieron esperar para sincronizar ambas versiones antes de seguir adelante](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Desde entonces, LibSass ha continuado publicando nuevas versiones para igualar sus características con las de su hermano mayor. Las últimas inconsistencias entre ambas versiones han sido reunidas y listadas por mi mismo en el proyecto [Sass-Compatibility](http://sass-compatibility.github.io). Si conoces otras incompatibilidades entre estas dos versiones y no aparecen aquí listadas, por favor, hazlo saber abriendo un ticket.
 
@@ -45,7 +45,7 @@ Desde entonces, Sass (el preprocesador) ha estado proporcionando dos sintaxis di
 
 La sintaxis sensible a los espacios en blanco de Sass se basa en las tabulaciones para eliminar las llaves, los punto y coma y otros signos de puntuación, dando como resultado una sintaxis más corta y ligera. Mientras tanto, SCSS es más fácil de aprender, ya que en conjunto, se trata de añadir unos cuantos elementos adicionales a CSS.
 
-<p>Personalmente, prefiero SCSS a Sass ya que es mucho más parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <button type="button" data-modal-show="options-panel" class="link-like">panel de opciones</button>.</p>
+Personalmente, prefiero SCSS a Sass ya que es mucho más parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <button type="button" data-modal-show="options-panel" class="link-like">panel de opciones</button>.
 
 ###### Más información
 

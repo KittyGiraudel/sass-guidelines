@@ -19,7 +19,7 @@ Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features 
 
 ## Ruby Sass oder LibSass
 
-[Sass' erster Commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) war Ende 2006, mittlerweile über 8 Jahre zurück. Unnötig zu erwähnen das es seither einen langen Weg gegangen ist. Ursprünglich in Ruby entwickelt, wurde es bereits mehrmals in andere Sprachen übertragen; die erfolgreichste davon ist [LibSass](https://github.com/sass/libsass) (geschrieben in C), welches nun nah dran ist vollständig Kompatibel mit der originalen Ruby version zu sein.
+[Sass' erster Commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) war Ende 2006, mittlerweile über 8 Jahre zurück. Unnötig zu erwähnen das es seither einen langen Weg gegangen ist. Ursprünglich in Ruby entwickelt, wurde es bereits mehrmals in andere Sprachen übertragen; die erfolgreichste davon ist [LibSass](https://github.com/sass/libsass) (geschrieben in C/C++), welches nun nah dran ist vollständig Kompatibel mit der originalen Ruby version zu sein.
 
 2014 haben sich die Teams von [Ruby Sass und LibSass dazu entschieden, zu warten, bis beide auf demselben Stand sind bevor es mit der Entwicklung weitergeht](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Seither veröffentlicht LibSass regelmäßig neue Release Versionen. Die noch ausstehenden Features sind von mir unter durch das [Sass-Compatibility](http://sass-compatibility.github.io) Projekt gesammelt und aufgelistet. Falls dir noch Ungleichheiten auffallen, die ich nicht aufgelistet habe, sei doch so nett und teil es mir mit.
 
@@ -42,7 +42,7 @@ Seitdem bietet Sass (der Präprozessor) zwei verschiedene Syntaxen an: Sass ([ni
 
 Sass' Leerzeichenempfindliche Syntax beruht auf Einrückung um geschweifte Klammern, Semikolons und andere Zeichensetzung entfernen zu können. Das führt zu einer schlankeren und kürzeren Syntax. Währenddessen ist SCSS einfacher zu erlernen, da es überwiegend nur Kleinigkeiten zu CSS hinzufügt.
 
-<p>Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freundlicher für die meisten Entwickler ist. Von daher wird SCSS auch der Standard in den gesamten Guidelines sein. Du kannst jedoch zur Sass Syntax in den <button type="button" data-modal-show="options-panel" class="link-like">Optionen</button> wechseln.</p>
+Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freundlicher für die meisten Entwickler ist. Von daher wird SCSS auch der Standard in den gesamten Guidelines sein. Du kannst jedoch zur Sass Syntax in den <button type="button" data-modal-show="options-panel" class="link-like">Optionen</button> wechseln.
 
 ###### Weitere Informationen
 

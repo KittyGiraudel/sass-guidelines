@@ -2,7 +2,7 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-/// 반응형 매니저.
+/// 반응형 매니저
 /// @access public
 /// @param {String} $breakpoint - 브레이크포인트
 /// @requires $breakpoints
@@ -10,7 +10,11 @@
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if $raw-query {
-    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
 
     @media #{$query} {
       @content;
@@ -24,7 +28,7 @@
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-/// 반응형 매니저.
+/// 반응형 매니저
 /// @access public
 /// @param {String} $breakpoint - 브레이크포인트
 /// @requires $breakpoints

@@ -20,7 +20,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 ## Ruby Sass or LibSass
 
-[Sass 的第一次提交](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)还要追溯到距今八年之久的 2006 年底——可见它已经走过了一段漫长的道路。最开始是基于 Ruby，随后便各种版本滋生。其中最成功的要属[LibSass](https://github.com/sass/libsass)（使用 C 语言编写），它与 Ruby 原生版本具有最佳兼容性。
+[Sass 的第一次提交](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)还要追溯到距今八年之久的 2006 年底——可见它已经走过了一段漫长的道路。最开始是基于 Ruby，随后便各种版本滋生。其中最成功的要属[LibSass](https://github.com/sass/libsass)（使用 C/C++ 语言编写），它与 Ruby 原生版本具有最佳兼容性。
 
 在 2014 年， [Ruby Sass 和 LibSass 团队决定同步推出下一个版本](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan)。从那时起，LibSass 开始积极释放版本以校验与 Ruby Sass 的不同，最后剩下的不一致之处被汇总在[Sass-Compatibility](http://sass-compatibility.github.io) 项目中。如果你知道两个版本中尚未被发现的不一致之处，请提交一个 issue 使更多开发者了解。
 
@@ -43,7 +43,7 @@ Sass 存在的关键不是将 CSS 变成一种全功能编程语言，它只是�
 
 Sass 的空白敏感语法通过缩进以摆脱大括号、分号和其他符号，从而实现了简洁凝练的语法格式。与之相比，SCSS 则更容易学习，因为它只是在 CSS 上添加了一点点额外的功能。
 
-<p>我自己更喜欢 SCSS，因为它更接近 CSS 的原生面貌，对开发者来说具有友好性。因此，样式指南全文将使用 SCSS 而不是 Sass 语法格式来演示。你可以通过<button type="button" data-modal-show="options-panel" class="link-like">左侧的可选面板</button>切换到 Sass 的缩进语法</p>
+我自己更喜欢 SCSS，因为它更接近 CSS 的原生面貌，对开发者来说具有友好性。因此，样式指南全文将使用 SCSS 而不是 Sass 语法格式来演示。你可以通过<button type="button" data-modal-show="options-panel" class="link-like">左侧的可选面板</button>切换到 Sass 的缩进语法。
 
 ###### 扩展阅读
 

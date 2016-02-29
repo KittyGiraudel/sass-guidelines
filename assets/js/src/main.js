@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import App from './App';
 import Sidebar from './Sidebar';
 import UrlManager from './UrlManager';
@@ -20,3 +21,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const aside = new Modal(document.getElementById('options-panel'));
   const url = new UrlManager({ offset, updateOn: headings });
 });
+=======
+/* globals Modal */
+
+import '../vendor/bling';
+import '../vendor/accessible-modal-dialog';
+import './sidebar';
+import './app';
+>>>>>>> f996f5576cd40d474a6dbfbdf900cf2b1c8bfa2a

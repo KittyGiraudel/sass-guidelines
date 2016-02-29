@@ -20,7 +20,7 @@ Når det er sagt, så er der mange måde at bruge disse funktionaliteter på. No
 
 ## Ruby Sass eller LibSass
 
-[Sass’s første commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) går helt tilbage til sen-2006, over 8 år siden. Det er derfor overflødigt at sige, at det er kommet ret langt siden da. Originalt udviklet i Ruby, så poppede variationer op her og der. Den mest succesfulde, [LibSass](https://github.com/sass/libsass) (skrevet i C), er nu tæt på at være fuldt kompatibel med den originale Ruby-version.
+[Sass’s første commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) går helt tilbage til sen-2006, over 8 år siden. Det er derfor overflødigt at sige, at det er kommet ret langt siden da. Originalt udviklet i Ruby, så poppede variationer op her og der. Den mest succesfulde, [LibSass](https://github.com/sass/libsass) (skrevet i C/C++), er nu tæt på at være fuldt kompatibel med den originale Ruby-version.
 
 I 2014 [besluttede holdene bag Ruby Sass og LibSass at vente på at begge versioner kunne synkronisere, før de bevægede sig videre fremad](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Siden da har LibSass været meget aktiv i at udgive versioner, der har funktionalitets-paritet med dets storebror. De sidste tilbageblivende inkonsistenser har jeg samlet og listet under projektet [Sass-Compatibility](http://sass-compatibility.github.io). Hvis du er blevet opmærksom på en inkompatibilitet mellem de to versioner, så vær rar at åbne et issue.
 
@@ -45,7 +45,7 @@ Siden da har Sass (preprocessoren) tilbudt to forskellige syntakser: Sass (uden 
 
 Sass' whitespace-sensitive syntaks afhænger af indentering for at fjerne klammer, semi-kolonner og andre tegnsætningssymboler, hvilket leder til en slankere og kortere syntaks. Samtidig, så er SCSS nemmere at lære da det egentlig bare er CSS med lidt ekstra ovenpå.
 
-<p>Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarere for de fleste udviklere. På grund af det, så er SCSS standard-syntaksen for disse retningslinjer. Du kan skifte til indenteret Sass syntaks via <button type="button" data-modal-show="options-panel" class="link-like">indstillingspanelet</button>.</p>
+Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarere for de fleste udviklere. På grund af det, så er SCSS standard-syntaksen for disse retningslinjer. Du kan skifte til indenteret Sass syntaks via <button type="button" data-modal-show="options-panel" class="link-like">indstillingspanelet</button>.
 
 ###### Videre læsning
 

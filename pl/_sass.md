@@ -19,7 +19,7 @@ Tym samym, istnieje wiele sposobów na korzystanie z tych dodatkowych rozwiąza�
 
 ## Ruby Sass czy LibSass
 
-[Pierwszy commit Sassa](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) pochodzi z końca 2006 roku, a więc było to ponad 8 lat temu. Nie trzeba więc dodawać, że Sass przebył dość długą drogę. Choć początkowo rozwijany w Ruby, od tego czasu pojawił się szereg różnych portów. Ten najbardziej kompletny, [LibSass](https://github.com/sass/libsass) (napisany w C), jest bliski do pełnej kompatybilności z oryginalną wersją, napisaną w Ruby.
+[Pierwszy commit Sassa](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) pochodzi z końca 2006 roku, a więc było to ponad 8 lat temu. Nie trzeba więc dodawać, że Sass przebył dość długą drogę. Choć początkowo rozwijany w Ruby, od tego czasu pojawił się szereg różnych portów. Ten najbardziej kompletny, [LibSass](https://github.com/sass/libsass) (napisany w C/C++), jest bliski do pełnej kompatybilności z oryginalną wersją, napisaną w Ruby.
 
 W 2014 roku, [zespoły pracujące nad Ruby Sass i LibSass postanowiły poczekać aby obie wersje się zrównały pod względem kompletności, zanim zaczną pracować nad nowymi udoskonaleniami](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od tego czasu, LibSass aktywnie wydaje nowe wersje swojego projektu i dąży do wyrównania ze swoim starszym bratem. Ostatnie pozostałe nieścisłości zostały zebrane i skategoryzowane przeze mnie w projekcie [Sass-Compatibility](http://sass-compatibility.github.io). W przypadku znania jakichś innych nieścisłości pomiędzy tymi obiema wersjami kompilatorów Sassa, które nie zostały tam podane – bardzo proszę o utworzenie nowego issue.
 
@@ -42,7 +42,7 @@ Od tego czasu, Sass (preprocesor) obsługuje dwie różne składnie: Sass (tylko
 
 Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast nawiasach klamrowych, średników czy innych znaków interpunkcyjnych, prowadząc do czystszej i krótszej składni. SCSS tymczasem jest łatwiejszy do nauki, bowiem składa się on tylko z niewielu drobnych dodatków do samego CSSa.
 
-<p>Osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia go sobie dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Można jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <button type="button" data-modal-show="options-panel" class="link-like">panelu opcji</button>.</p>
+Osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia go sobie dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Można jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <button type="button" data-modal-show="options-panel" class="link-like">panelu opcji</button>.
 
 ###### Dalsze informacje
 

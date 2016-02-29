@@ -3,7 +3,7 @@
  */
 blockquote {
   margin: 0 0 $vertical-rhythm-baseline;
-  padding: 1rem;
+  padding: $vertical-rhythm-baseline;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   background-color: $quote-background;

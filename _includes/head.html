@@ -19,6 +19,10 @@
   <meta name="og:description" content="{{ site.data[page.language].translations.baseline.content }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
 
+  <!-- Author -->
+  {% capture authors %}Hugo Giraudel{% for author in site.data[page.language].configuration.translators %}, {{ author.name }}{% endfor %}{% endcapture %}
+  <meta name="author" content="{{ authors }}" />
+
   <!-- Site URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta name="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
@@ -43,7 +47,7 @@
   </noscript>
 
   <!-- Responsive images setup -->  
-  <script src="{{ '/assets/js/vendor/picturefill.min.js' | prepend: site.baseurl }}" async></script>
+  <script src="{{ '/assets/js/picturefill.min.js' | prepend: site.baseurl }}" async></script>
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />

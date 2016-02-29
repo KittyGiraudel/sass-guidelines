@@ -1,5 +1,12 @@
+---
+---
+
 CACHE MANIFEST
+<<<<<<< HEAD
 # 2016-02-23
+=======
+# 2016-02-27
+>>>>>>> f996f5576cd40d474a6dbfbdf900cf2b1c8bfa2a
 
 CACHE:
 
@@ -7,17 +14,9 @@ CACHE:
 index.html
 
 # Translations
-cz/index.html
-da/index.html
-de/index.html
-es/index.html
-el/index.html
-fr/index.html
-ko/index.html
-pl/index.html
-pt/index.html
-ru/index.html
-zh/index.html
+{% for language in site.languages %}{% if language != 'en' %}
+{{ language }}/index.html
+{% endif %}{% endfor %}
 
 # CSS Files
 assets/css/main.css
@@ -25,8 +24,8 @@ assets/css/fonts/data-woff.css
 assets/css/fonts/data-woff2.css
 
 # JS Files
-assets/js/main.min.js
-assets/js/vendor/picturefill.min.js
+assets/js/bundle.min.js
+assets/js/picturefill.min.js
 
 # Images
 assets/images/css-order-chart.png

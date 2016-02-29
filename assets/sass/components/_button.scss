@@ -27,21 +27,21 @@
   /**
    * Inlined buttons on large screens
    */
-  @include respond-to('medium') {
+  @include media('>medium') {
     display: inline-block;
   }
+}
 
-  /**
-   * Icons within buttons
-   * 1. Make them same color as text
-   * 2. Adjust vertical align
-   */
-  svg {
-    fill: currentcolor; /* 1 */
-    -webkit-transform: translateY(1px); /* 2 */
-    -ms-transform: translateY(1px); /* 2 */
-    transform: translateY(1px); /* 2 */
-  }
+/**
+ * Icons within buttons
+ * 1. Make them same color as text
+ * 2. Adjust vertical align
+ */
+.button svg {
+  fill: currentcolor; /* 1 */
+  -webkit-transform: translateY(1px); /* 2 */
+  -ms-transform: translateY(1px); /* 2 */
+  transform: translateY(1px); /* 2 */
 }
 
 /**
@@ -63,18 +63,18 @@
   font-size: 0.8em;
   z-index: 5;
 
-  /**
-   * Icon inside UI button
-   */
-  svg {
-    display: block;
-    margin: 0 auto;
-    fill: currentcolor;
-  }
-
   @include on-event {
     color: $secondary-color;
   }
+}
+
+/**
+ * Icon inside UI button
+ */
+.button-ui svg {
+  display: block;
+  margin: 0 auto;
+  fill: currentcolor;
 }
 
 .button-ui--back,
