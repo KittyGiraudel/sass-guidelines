@@ -21,7 +21,7 @@ Runs Jekyll in development mode (local environment, file watcher, dev config, in
 
 ### `build`
 
-Runs the [`icons`](#icons), [`css:critical`](#csscritical), [`js:build`](#jsbuild)  tasks.
+Runs the [`icons`](#icons), [`js:build`](#jsbuild)  tasks.
 
 npm automatically executes the `postbuild` task after the `build` task. The `postbuild` task runs the `bin/testbuild` Bash script. This script makes sure the build happened correctly.
 
