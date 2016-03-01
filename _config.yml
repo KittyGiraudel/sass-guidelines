@@ -5,6 +5,7 @@ keywords: CSS, Sass, SCSS, styleguide, guidelines
 baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
+google_analytics: UA-58205987-1
 languages:
   - cz
   - da
