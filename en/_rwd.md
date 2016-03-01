@@ -11,17 +11,13 @@ For the same reasons, breakpoints should not be named after devices but somethin
 
 {% include snippets/rwd/01/index.html %}
 
-At this point, any naming convention that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+At this point, [any naming convention](http://css-tricks.com/naming-media-queries/) that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
-
-###### Further reading
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Breakpoint manager
 
@@ -31,12 +27,8 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 <div class="note">
   <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p>
 </div>
-
-###### Further reading
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## Media Queries Usage
 
@@ -51,12 +43,6 @@ Leading to the following CSS output:
 You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
+> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
 Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.
-
-###### Further reading
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

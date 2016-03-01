@@ -15,10 +15,6 @@ Regarding variables, functions and mixins, we stick to something very *CSS-y*: *
 
 {% include snippets/naming/01/index.html %}
 
-###### Further reading
-
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
 ## Constants
 
 If you happen to be a framework developer or library writer, you might find yourself dealing with variables that are not meant to be updated in any circumstances: constants. Unfortunately (or fortunately?), Sass does not provide any way to define such entities, so we have to stick to strict naming conventions to make our point.
@@ -27,22 +23,18 @@ As for many languages, I suggest all-caps snakerized variables when they are con
 
 {% include snippets/naming/02/index.html %}
 
-###### Further reading
-
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+If you really want to play with the ideas of constants in Sass, you should read [this dedicated article](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespace
 
 If you intend to distribute your Sass code, in the case of a library, a framework, a grid system or whatever, you might want to consider namespacing all your variables, functions, mixins and placeholders so it does not conflict with anyone else’s code.
 
-For instance, if you work on a *Sassy Unicorn* project that is meant to be used by developers all over the world (who wouldn’t, right?), you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
+For instance, if you work on a *Sassy Unicorn* project that is meant to be distributed, you could consider using `su-` as a namespace. It is specific enough to prevent any naming collisions and short enough not to be a pain to write.
 
 {% include snippets/naming/03/index.html %}
+
+[Kaelig](http://kaelig.fr) has [a very insightful article about the global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), in case this topic is of any interest to you.
 
 <div class="note">
   <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
 </div>
-
-###### Further reading
-
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

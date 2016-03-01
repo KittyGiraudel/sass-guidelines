@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.3.0 ([March 1st, 2016](https://github.com/HugoGiraudel/sass-guidelines/pull/292))
+
+### Additions
+
+* Added “About Globbing” section ([58cf6b4](https://github.com/HugoGiraudel/sass-guidelines/commit/58cf6b4))
+* Added “Component structure” section ([03af79d](https://github.com/HugoGiraudel/sass-guidelines/commit/03af79d))
+
+### Updates
+
+* Renamed the `utils` folder into `abstracts` ([6bed6f2](https://github.com/HugoGiraudel/sass-guidelines/commit/6bed6f2))
+* Improved “Other Preprocessors” section ([7df1809](https://github.com/HugoGiraudel/sass-guidelines/commit/7df1809) and [2149eaa](https://github.com/HugoGiraudel/sass-guidelines/commit/2149eaa))
+* Improved introduction in “Maps” section ([f239621](https://github.com/HugoGiraudel/sass-guidelines/commit/f239621))
+* Improved wording here and there ([ddb46ab](https://github.com/HugoGiraudel/sass-guidelines/commit/ddb46ab))
+* Updated wording that could be considered insensitive ([67e7395](https://github.com/HugoGiraudel/sass-guidelines/commit/67e7395))
+* Updated author’s age ([c021429](https://github.com/HugoGiraudel/sass-guidelines/commit/c021429))
+
+### Deletions
+
+* Removed a lot of further readings and moved most of them inside the content ([01f138f](https://github.com/HugoGiraudel/sass-guidelines/commit/01f138f))
+* Removed some superfluous content from “Syntax & Formatting” section ([55fe6e5](https://github.com/HugoGiraudel/sass-guidelines/commit/55fe6e5))
+
 ## 1.2.0 ([September 1st, 2015](https://github.com/HugoGiraudel/sass-guidelines/pull/223))
 
 ### Additions

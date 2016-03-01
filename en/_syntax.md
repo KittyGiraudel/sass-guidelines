@@ -14,11 +14,9 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](http://cssguidelin.es
 
 {% include snippets/syntax/01/index.html %}
 
-We will not tackle the question of file organization in this section. It is the object of [another section](#architecture).
-
 ## Strings
 
-Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or strings (usually unquoted), so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
+Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or identifiers, so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
 
 ### Encoding
 
@@ -47,7 +45,7 @@ That being said, languages that do not require strings to be quoted are definite
 
 ### Strings as CSS values
 
-Specific CSS values such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
+Specific CSS values (identifiers) such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -57,7 +55,7 @@ We don't quote the former, but we do wrap the latter in single quotes.
 
 ### Strings containing quotes
 
-If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping too many characters within the string.
+If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping characters within the string.
 
 {% include snippets/syntax/05/index.html %}
 
@@ -66,11 +64,6 @@ If a string contains one or several single quotes, one might consider wrapping t
 URLs should be quoted as well, for the same reasons as above:
 
 {% include snippets/syntax/06/index.html %}
-
-###### Further reading
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Numbers
 
@@ -102,7 +95,7 @@ To add a unit to a number, you have to multiply this number by *1 unit*.
 
 {% include snippets/syntax/09/index.html %}
 
-Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick.
+Note that adding *0 member of that unit* also works, but I would rather recommend the aforementioned method since adding *0 unit* can be a bit confusing. Indeed, when trying to convert a number to another compatible unit, adding 0 will not do the trick. More on that [in this article](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -112,7 +105,7 @@ To remove the unit of a value, you have to divide it by *one unit of its kind*.
 
 {% include snippets/syntax/11/index.html %}
 
-Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want.
+Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want. [Use lengths, not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Calculations
 
@@ -128,16 +121,17 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 
 {% include snippets/syntax/13/index.html %}
 
-###### Further reading
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+On topic, CSS-Tricks has a [terrific article](http://css-tricks.com/magic-numbers-in-css/) about magic numbers in CSS that I encourage you to read.
 
 ## Colors
 
 Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+Sass is so useful when it comes to manipulating colors that articles have flourished all over the internet about this very topic. May I recommend a few reads:
+
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Color formats
 
@@ -171,7 +165,7 @@ Now you are free to use this variable wherever you want. However, if your usage 
 
 {% include snippets/syntax/17/index.html %}
 
-Doing this would prevent a theme change leading to something like `$sass-pink: blue`.
+Doing this would prevent a theme change leading to something like `$sass-pink: blue`. [This article](http://davidwalsh.name/sass-color-variables-dont-suck) does a good job at explaining why thinking your color variables through is important.
 
 ### Lightening and darkening colors
 
@@ -191,14 +185,6 @@ If you don’t want to write the `mix` function every time, you can create two e
   <p>The <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
 </div>
 
-###### Further reading
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
 ## Lists
 
 Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
@@ -217,14 +203,11 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 
 {% include snippets/syntax/20/index.html %}
 
-###### Further reading
-
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+In [this article](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), I go through a lot of tricks and tips to handle and manipulate lists correctly in Sass.
 
 ## Maps
 
-Since Sass 3.3, stylesheet authors can define maps &mdash; the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure mapping keys (that can be any data type, including maps although I wouldn’t recommend it) to values of any type.
+With Sass, stylesheet authors can define maps — the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure associating keys to values. Both keys and values can be of any data type, including maps although I would not recommend using complex data types as map keys, if only for the sake of sanity.
 
 Maps should be written as follows:
 
@@ -241,17 +224,7 @@ Illustration:
 
 {% include snippets/syntax/21/index.html %}
 
-###### Further reading
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+Write-ups about Sass maps are many given how longed-for this feature was. Here are 3 that I recommend: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## CSS Ruleset
 
@@ -281,10 +254,6 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Further reading
-
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
 ## Declaration Sorting
 
 I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
@@ -313,11 +282,6 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
 <div class="note">
   <p>A <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
 </div>
-
-###### Further reading
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Selector Nesting
 
@@ -351,7 +315,9 @@ The problem with selector nesting is that it ultimately makes code more difficul
 
 This statement becomes truer as selectors get longer and references to the current selector (`&`) more frequent. At some point, the risk of losing track and not being able to understand what’s going on anymore is so high that it is not worth it.
 
-To prevent such a situation, we **avoid selector nesting as much as possible**. However, there are obviously a few exceptions to this rule.
+To prevent such situations, we talked a lot about [the Inception rule](http://thesassway.com/beginner/the-inception-rule) a few years back. It advised against nesting more than 3 levels deep, as a reference to the movie Inception from Christopher Nolan. I would be more drastic and recommend to **avoid selector nesting as much as possible**. 
+
+While there are obviously a few exceptions to this rule as we’ll see in the next section, this opinion seems to be quite populer. You can read about it more in details in [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) and [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### Exceptions
 
@@ -369,18 +335,4 @@ Last but not least, when styling an element because it happens to be contained w
 
 {% include snippets/syntax/35/index.html %}
 
-When working with unexperienced developers, a selector such as `.no-opacity &` might look a little weird. To prevent any confusion, you can build a very short mixin that transform this odd syntax into an explicit API.
-
-{% include snippets/syntax/36/index.html %}
-
-Rewriting our previous example, it would look like this:
-
-{% include snippets/syntax/37/index.html %}
-
 As with everything, the specifics are somewhat irrelevant, consistency is key. If you feel fully confident with selector nesting, then use selector nesting. Just make sure your whole team is okay with that.
-
-###### Further reading
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

@@ -26,9 +26,7 @@ When commenting a Sass-specific section, use Sass inline comments instead of a C
 
 {% include snippets/comments/02/index.html %}
 
-###### Further reading
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+Note that this way of doing things is also supported by CSS Guidelines in its [Commenting](http://cssguidelin.es/#commenting) section.
 
 ## Documentation
 
@@ -51,6 +49,3 @@ Here is an example of a mixin extensively documented with SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Further reading
-
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
