@@ -7,4 +7,4 @@ Je travaille avec Sass depuis maintenant plusieurs années et suis l’auteur de
 
 Je suis également l’auteur d’un livre français sur CSS intitulé [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (publié aux éditions *Eyrolles*), ainsi qu’un livre sur Sass (en Anglais) intitulé [Jump Start Sass](https://learnable.com/books/jump-start-sass) (publié aux éditions *Learnable*).
 
-{% include twitter.html %}
+{% include partials/twitter.html %}

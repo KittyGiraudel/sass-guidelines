@@ -7,4 +7,4 @@ Se quiserem contribuir, lembrem-se que tweetar, espalhar a palavra ou corrigir p
 
 Por último, antes de começarmos: se gostaram deste documento ou se o consideraram com valor pessoal ou para a vossa equipa, por favor considerem apoiá-lo!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

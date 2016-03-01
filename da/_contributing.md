@@ -7,4 +7,4 @@ Hvis du føler for at kontribuere, så skal du vide at bare det at tweete om det
 
 Sidst, men ikke mindst, før vi går i gang: hvis du har nydt dokumentet, eller hvis det er brugbart for dig eller dit team, så overvej venligst at støtte det!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

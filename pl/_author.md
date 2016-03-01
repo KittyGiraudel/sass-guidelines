@@ -7,4 +7,4 @@ Piszę w Sassie już od kilku lat i jestem autorem wielu projektów związanych 
 
 Napisałem ponadto książkę o CSSie (w jęz. francuskim) zatytułowaną [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (wyd. *Eyrolles*), a także książkę o Sassie (w jęz. angielskim) pod tytułem [Jump Start Sass](https://learnable.com/books/jump-start-sass) (wyd. *Learnable*).
 
-{% include twitter.html %}
+{% include partials/twitter.html %}

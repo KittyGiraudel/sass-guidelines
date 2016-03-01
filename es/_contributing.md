@@ -7,4 +7,4 @@ Si te apetece contribuir a este proyecto, puedes escribir un Tweet al respecto, 
 
 Por último, pero no por ello menos importante antes de empezar: si te ha gustado este documento, o si ha sido útil para ti o tu equipo, por favor, ¡considera hacer una donación!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

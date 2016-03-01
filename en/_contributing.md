@@ -7,4 +7,4 @@ Now if you feel like contributing, please know that tweeting about it, spreading
 
 Last but not least before we start: if you enjoyed this document, or if it is useful for you or your team, please consider supporting it so I can keep working on it!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

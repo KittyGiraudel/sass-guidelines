@@ -7,4 +7,4 @@ Jeśli chcesz uczestniczyć w jego współtworzeniu, możesz tweetnąć o nim al
 
 I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik, albo jeśli uznasz go jako przydatny dla Twojego zespołu, proszę rozważ jego wsparcie, tak bym mógł nadal nad nim pracować!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

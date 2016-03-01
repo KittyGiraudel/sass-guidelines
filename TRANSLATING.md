@@ -14,7 +14,7 @@
   direction: ltr
   ---
 
-  {% include chapters.html %}
+  {% include layout/chapters.html %}
   ``` 
 
 ## Translating
@@ -83,15 +83,15 @@ translations:
 
 All code snippets from Sass Guidelines are externalized from the Markdown files to prevent getting in the way of translators and reduce the amount of moving parts. They are stored in `_includes/snippets`, then divided in sub-folders by chapters (e.g. `architecture/`), then finally numbered (e.g. `01/`). Inside these numbered folders, there is always an `index.html` file. This file is the one that is imported in the Markdown documents.
 
-Some code snippets contain comments that should be translated, some don't. When a code snippet should be translated, its numbered folder contains a file per translation named after the language shortcode (e.g. `pt.html`) along with the `index.html` file. In this case, the `index.html` includes the appropriate file for the current translation. If a code snippet has no point in being translated, the `index.html` file is the only one in the folder, and it contains the HTML code directly.
+Some code snippets contain comments that should be translated, some don’t. When a code snippet should be translated, its numbered folder contains a file per translation named after the language shortcode (e.g. `pt.html`) along with the `index.html` file. In this case, the `index.html` includes the appropriate file for the current translation. If a code snippet has no point in being translated, the `index.html` file is the only one in the folder, and it contains the HTML code directly.
 
-To translate a (to be translated) code snippet, simply copy the `en.html` file from the snippet into a sibling file named after your language shortcode (e.g. `de.html`). In there, translate what needs to be translated; that's it.
+To translate a (to be translated) code snippet, simply copy the `en.html` file from the snippet into a sibling file named after your language shortcode (e.g. `de.html`). In there, translate what needs to be translated; that’s it.
 
 ## What should I know?
 
 ### Liquid file imports
 
-Code snippets and images are externalized so they don't get in your way when working in the Markdown files. Therefore, you will notice Liquid (the templating language in use here) file includes such as:
+Code snippets, images and some partials (like the Twitter button and the contributing buttons) are externalized so they don’t get in your way when working in the Markdown files. Therefore, you will notice Liquid (the templating language in use here) file includes such as:
 
 ```
 {% include snippets/architecture/01/index.html %}
@@ -101,7 +101,7 @@ Do not update those includes. They are language-agnostic and should not be modif
 
 ### Yep / Nope
 
-A lot of code snippets contain only `// Yep` and `// Nope` as comments. These terms should not be translated. Not only would it be tedious to maintain snippet translations only for such minimalistic comments, but these also are clear and broad enough terms so that it's fine keeping them.
+A lot of code snippets contain only `// Yep` and `// Nope` as comments. These terms should not be translated. Not only would it be tedious to maintain snippet translations only for such minimalistic comments, but these also are clear and broad enough terms so that it’s fine keeping them.
 
 ### Empty lines
 

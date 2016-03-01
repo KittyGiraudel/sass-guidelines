@@ -5,7 +5,7 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ page.language }}" dir="{{ page.direction|lower }}" {% if jekyll.environment != 'LOCAL' %}manifest="/offline.appcache"{% endif %}>
 
-  {% include head.html %}
+  {% include layout/head.html %}
 
   <body id="top">
     <!-- SVG sprite -->
@@ -18,14 +18,14 @@ layout: compress
     <main aria-label="Content" id="main">
 
       <!-- Site header -->
-      {% include header.html %}
+      {% include layout/header.html %}
 
       <!-- Translation banner -->
-      {% include translation-warning.html %}
+      {% include partials/translation-warning.html %}
 
       <!-- Button to toggle the options panel -->
       <button type="button" data-modal-show="options-panel" class="button-ui  button-ui--toggle">
-        {% include icon.html icon="settings" title="Toggle the options panel" %}
+        {% include partials/icon.html icon="settings" title="Toggle the options panel" %}
       </button>
 
       <!-- Main container -->
@@ -37,18 +37,18 @@ layout: compress
 
       <!-- Link to get back to top -->
       <a href="#top" class="button-ui  button-ui--back">
-        {% include icon.html icon="up" title="Get back to top" %}
+        {% include partials/icon.html icon="up" title="Get back to top" %}
       </a>
 
       <!-- Site footer -->
-      {% include footer.html %}
+      {% include layout/footer.html %}
     </main>
 
     <!-- Options panel -->
-    {% include aside.html %}
+    {% include layout/aside.html %}
 
     <!-- Scripts -->
-    {% include scripts.html %}
+    {% include layout/scripts.html %}
   </body>
 
 </html>
