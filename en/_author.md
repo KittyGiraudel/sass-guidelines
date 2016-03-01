@@ -7,4 +7,4 @@ I have been writing Sass for several years now and am the author of many Sass-re
 
 I also happen to be the author of a book about CSS (in French) entitled [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions), as well as a book about Sass (in English) entitled [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
 
-{% include twitter.html %}
+{% include partials/twitter.html %}

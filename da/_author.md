@@ -5,4 +5,4 @@ Mit navn er [Hugo Giraudel](http://hugogiraudel.com), jeg er en fransk front-end
 
 Jeg har også skrevet en række Sass-biblioteker, egentlig mest bare fordi: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) og [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
 
-{% include twitter.html %}
+{% include partials/twitter.html %}

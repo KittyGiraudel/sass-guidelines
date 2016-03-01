@@ -7,4 +7,4 @@ Pokud byste rádi chtěli přispět, budu rád za jakýkoliv tweet, či jinou me
 
 V neposlední řadě, než začneme: pokud se vám tento dokument líbil, nebo pro vás byl užitečný, zvažte, prosím, jeho podporu!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

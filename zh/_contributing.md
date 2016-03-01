@@ -7,4 +7,4 @@ Sass指南是我利用空暇时间维持的一个免费项目。不用多说,相
 
 在开始之前最后但不是最终的一句话：如果你喜欢这份样式指南，如果它对你或你的团队大有裨益，请考虑支持它，从而鼓励我持续迭代不断改进本文！
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

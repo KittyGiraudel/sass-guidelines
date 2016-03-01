@@ -7,4 +7,4 @@ Falls du also Lust hast mitzuwirken, ist selbst ein Tweet, es weiterzusagen oder
 
 Doch bevor wir starten: falls dir die Guidelines gefallen, sie nützlich für dich oder dein Team sind, würde ich mich wirklich freuen wenn du es unterstützt, sodass ich auch weiterhin daran arbeiten kann!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}

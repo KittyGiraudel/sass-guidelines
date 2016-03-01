@@ -7,4 +7,4 @@ Sass Guidelines는 여가시간에 유지하는 무료 프로젝트입니다. �
 
 시작에 앞서 마지막으로: 이 문서를 즐기셨다면, 혹은 이 문서가 여러분이나 여러분의 팀에 유용하다면, 후원을 고려해주시기 바랍니다!
 
-{% include contributing.html %}
+{% include partials/contributing.html %}
