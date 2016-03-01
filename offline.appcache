@@ -24,7 +24,6 @@ assets/js/bundle.min.js
 assets/js/picturefill.min.js
 
 # Images
-assets/images/sprite.svg
 assets/images/css-order-chart.png
 assets/images/lighten-darken-mix_huge.png
 assets/images/lighten-darken-mix_large.png
