@@ -2,7 +2,7 @@
 ---
 
 CACHE MANIFEST
-# 2016-02-27
+# 2016-03-01
 
 CACHE:
 
@@ -24,6 +24,7 @@ assets/js/bundle.min.js
 assets/js/picturefill.min.js
 
 # Images
+assets/images/sprite.svg
 assets/images/css-order-chart.png
 assets/images/lighten-darken-mix_huge.png
 assets/images/lighten-darken-mix_large.png
