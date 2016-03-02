@@ -35,29 +35,13 @@
   font-family: $code-font-stack;
 }
 
-.highlight .hll {
-  background-color: rgb(34, 34, 34);
-}
-
-.highlight .c {
-  color: rgb(127, 159, 127);
-}
-
 .highlight .err {
   color: rgb(227, 113, 112);
   background-color: rgb(61, 53, 53);
 }
 
-.highlight .g {
-  color: rgb(127, 159, 127);
-}
-
 .highlight .k {
   color: rgb(240, 223, 175);
-}
-
-.highlight .l {
-  color: rgb(204, 204, 204);
 }
 
 .highlight .n {
@@ -65,10 +49,6 @@
 }
 
 .highlight .o {
-  color: rgb(240, 239, 208);
-}
-
-.highlight .x {
   color: rgb(240, 239, 208);
 }
 
@@ -81,91 +61,8 @@
   color: rgb(127, 159, 127);
 }
 
-.highlight .cp {
-  color: rgb(127, 159, 127);
-}
-
 .highlight .c1 {
   color: rgb(127, 159, 127);
-}
-
-.highlight .cs {
-  color: rgb(205, 0, 0);
-  font-weight: bold;
-}
-
-.highlight .gd {
-  color: rgb(205, 0, 0);
-}
-
-.highlight .ge {
-  color: rgb(204, 204, 204);
-  font-style: italic;
-}
-
-.highlight .gr {
-  color: rgb(255, 0, 0);
-}
-
-.highlight .gh {
-  color: rgb(220, 220, 204);
-  font-weight: bold;
-}
-
-.highlight .gi {
-  color: rgb(0, 205, 0);
-}
-
-.highlight .go {
-  color: rgb(128, 128, 128);
-}
-
-.highlight .gp {
-  color: rgb(220, 220, 204);
-  font-weight: bold;
-}
-
-.highlight .gs {
-  color: rgb(204, 204, 204);
-  font-weight: bold;
-}
-
-.highlight .gu {
-  color: rgb(128, 0, 128);
-  font-weight: bold;
-}
-
-.highlight .gt {
-  color: rgb(0, 64, 208);
-}
-
-.highlight .kc {
-  color: rgb(220, 163, 163);
-}
-
-.highlight .kd {
-  color: rgb(255, 255, 134);
-}
-
-.highlight .kn {
-  color: rgb(223, 175, 143);
-  font-weight: bold;
-}
-
-.highlight .kp {
-  color: rgb(205, 207, 153);
-}
-
-.highlight .kr {
-  color: rgb(205, 205, 0);
-}
-
-.highlight .kt {
-  color: rgb(0, 205, 0);
-}
-
-.highlight .ld {
-  color: rgb(204, 147, 147);
 }
 
 .highlight .m {
@@ -196,32 +93,11 @@
   color: rgb(204, 204, 204);
 }
 
-.highlight .ni {
-  color: rgb(194, 129, 130);
-}
-
-.highlight .ne {
-  color: rgb(195, 191, 159);
-  font-weight: bold;
-}
-
 .highlight .nf {
   color: rgb(239, 239, 143);
 }
 
 .highlight .nl {
-  color: rgb(204, 204, 204);
-}
-
-.highlight .nn {
-  color: rgb(143, 190, 222);
-}
-
-.highlight .nx {
-  color: rgb(204, 204, 204);
-}
-
-.highlight .py {
   color: rgb(204, 204, 204);
 }
 
@@ -237,14 +113,6 @@
   color: rgb(240, 239, 208);
 }
 
-.highlight .w {
-  color: rgb(204, 204, 204);
-}
-
-.highlight .mf {
-  color: rgb(140, 208, 211);
-}
-
 .highlight .mh {
   color: rgb(140, 208, 211);
 }
@@ -253,31 +121,7 @@
   color: rgb(140, 208, 211);
 }
 
-.highlight .mo {
-  color: rgb(140, 208, 211);
-}
-
-.highlight .sb {
-  color: rgb(204, 147, 147);
-}
-
-.highlight .sc {
-  color: rgb(204, 147, 147);
-}
-
-.highlight .sd {
-  color: rgb(204, 147, 147);
-}
-
 .highlight .s2 {
-  color: rgb(204, 147, 147);
-}
-
-.highlight .se {
-  color: rgb(204, 147, 147);
-}
-
-.highlight .sh {
   color: rgb(204, 147, 147);
 }
 
@@ -289,34 +133,10 @@
   color: rgb(204, 147, 147);
 }
 
-.highlight .sr {
-  color: rgb(204, 147, 147);
-}
-
 .highlight .s1 {
-  color: rgb(204, 147, 147);
-}
-
-.highlight .ss {
   color: rgb(204, 147, 147);
 }
 
 .highlight .bp {
   color: rgb(239, 239, 143);
-}
-
-.highlight .vc {
-  color: rgb(239, 239, 143);
-}
-
-.highlight .vg {
-  color: rgb(220, 220, 204);
-}
-
-.highlight .vi {
-  color: rgb(255, 255, 199);
-}
-
-.highlight .il {
-  color: rgb(140, 208, 211);
 }

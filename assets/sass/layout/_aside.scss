@@ -71,13 +71,6 @@
 }
 
 /**
- * Remove top margin from first heading
- */
-.aside__title + .aside__heading {
-  margin-top: 0;
-}
-
-/**
  * Close button from options panel
  * 1. Vertical alignment inside aside header
  * 2. Enlarging without positioning issues

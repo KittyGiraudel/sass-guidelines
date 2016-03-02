@@ -2,7 +2,7 @@
  * Poor man's vertical rhythm
  */
 .chapter {
-  h1, h2, h3, h4, h6, p, ul, ol, pre, img {
+  h1, h2, h3, h6, p, ul, ol {
     margin-bottom: $vertical-rhythm-baseline;
   }
 }
