@@ -66,7 +66,7 @@ export default (function () {
 
   // Initialise side panel
   document.addEventListener('DOMContentLoaded', function (event) {
-    new Modal(document.getElementById('options-panel')); // eslint-disable-line
+    new A11yDialog(document.getElementById('options-panel')); // eslint-disable-line
   });
 
   // Add chapter buttons
