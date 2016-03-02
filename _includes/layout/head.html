@@ -56,6 +56,7 @@
   <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title="Edit this chapter on GitHub" %}' />
 
   <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ site_title|strip }}" />
   <meta property="og:description" content="{{ site.data[page.language].translations.baseline.content }}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
