@@ -25,8 +25,8 @@
   <link rel="author" href="humans.txt" />
 
   <!-- Site URL -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-  <meta name="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+  <meta name="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
 
   <!-- Critical CSS -->
   <style>
@@ -44,11 +44,11 @@
   loadFont('sg', '/assets/css/fonts/data-woff.css', '/assets/css/fonts/data-woff2.css');
   </script>
   <noscript>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" media="screen" />
+    <link rel="stylesheet" href="/assets/css/main.css" media="screen" />
   </noscript>
 
   <!-- Responsive images setup -->  
-  <script src="{{ '/assets/js/picturefill.min.js' | prepend: site.baseurl }}" async></script>
+  <script src="/assets/js/picturefill.min.js" async></script>
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
