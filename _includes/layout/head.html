@@ -22,6 +22,7 @@
   <!-- Author -->
   {% capture authors %}Hugo Giraudel{% for author in site.data[page.language].configuration.translators %}, {{ author.name }}{% endfor %}{% endcapture %}
   <meta name="author" content="{{ authors }}" />
+  <link rel="author" href="humans.txt" />
 
   <!-- Site URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
