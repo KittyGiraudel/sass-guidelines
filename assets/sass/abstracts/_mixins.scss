@@ -7,15 +7,3 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self (false) - Whether or not to include current selector
-/// @see https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event {
-  &:hover,
-  &:active,
-  &:focus {
-    @content;
-  }
-}

@@ -20,7 +20,9 @@
   margin: 0 1rem $vertical-rhythm-baseline;
   padding: 1rem;
 
-  @include on-event {
+  &:hover,
+  &:active,
+  &:focus {
     color: $main-color;
   }
 
@@ -63,7 +65,9 @@
   padding: 0.5rem;
   z-index: 5;
 
-  @include on-event {
+  &:hover,
+  &:active,
+  &:focus {
     color: $secondary-color;
   }
 }

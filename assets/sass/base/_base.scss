@@ -35,7 +35,9 @@ a,
   text-decoration: underline;
   transition: 0.15s;
 
-  @include on-event {
+  &:hover,
+  &:active,
+  &:focus {
     color: $main-color;
   }
 }
