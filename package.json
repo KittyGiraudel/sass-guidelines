@@ -27,7 +27,7 @@
     "criticalcss": "^1.0.1",
     "rollup": "^0.25.4",
     "semistandard": "^7.0.5",
-    "spritesh": "^1.0.8",
+    "spritesh": "^1.0.10",
     "svgo": "^0.6.1",
     "uglify-js": "^2.4.15"
   }
