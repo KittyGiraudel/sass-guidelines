@@ -12,19 +12,10 @@
 /// @author Harry Roberts
 /// @param {Bool} $self (false) - Whether or not to include current selector
 /// @see https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
+@mixin on-event {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
   }
 }
