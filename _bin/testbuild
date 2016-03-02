@@ -26,5 +26,8 @@ test_file ()
 
 test_file ${CRITICAL_CSS_FILE}
 test_file ${UTILITIES_JS_FILE}
-test_file ${DIST_CSS_FILE}
-test_file ${DIST_JS_FILE}
+
+if [ -d "_site" ]; then
+  test_file ${DIST_CSS_FILE}
+  test_file ${DIST_JS_FILE}
+fi
