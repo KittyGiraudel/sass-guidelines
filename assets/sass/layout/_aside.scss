@@ -89,6 +89,8 @@
   position: absolute;
   right: 0.5em;
   top: 0.4em; /* 1 */
+  -webkit-transform: scale(1.25); /* 2 */
+  -moz-transform: scale(1.25); /* 2 */
   transform: scale(1.25); /* 2 */
 }
 
