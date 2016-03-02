@@ -16,8 +16,8 @@ html {
  * Basic typography styles
  */
 body {
-  font: 1.125em / 1.45 $text-font-stack;
   color: $dark-grey;
+  font: 1.125em / 1.45 $text-font-stack;
 }
 
 
@@ -27,12 +27,12 @@ body {
  */
 a,
 .link-like {
-  border: 0; /* 1 */
-  padding: 0; /* 1 */
   background: 0; /* 1 */
-  text-decoration: underline;
-  cursor: pointer;
+  border: 0; /* 1 */
   color: inherit;
+  cursor: pointer;
+  padding: 0; /* 1 */
+  text-decoration: underline;
   transition: 0.15s;
 
   @include on-event {
@@ -45,10 +45,10 @@ a,
  * 1. Make the text slightly smaller as the font looks bigger
  */
 :not(pre) > code {
-  vertical-align: middle;
   color: $dark-pink;
   font-family: $code-font-stack;
   font-size: 0.8em; /* 1 */
+  vertical-align: middle;
 }
 
 /**

@@ -24,10 +24,10 @@ li {
  * 1. Position context for absolutely positioned anchor
  */
 h1, h2, h3, h6 {
-  position: relative; /* 1 */
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+  position: relative; /* 1 */
   text-transform: capitalize;
 
   /**
@@ -42,26 +42,26 @@ h1, h2, h3, h6 {
  * Chapter titles
  */
 h1 {
-  margin-top: 6rem;
   font-weight: 700;
+  margin-top: 6rem;
 }
 
 /**
  * Section headings
  */
 h2 {
-  margin-top: 3rem;
   color: $secondary-color;
+  margin-top: 3rem;
 }
 
 /**
  * Sub-headings and “Further readings” headings
  */
 h3, h6 {
-  margin-top: 1.5rem;
   color: rgb(107, 120, 133);
-  text-transform: uppercase;
   font-size: 1em;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
 }
 
 /**

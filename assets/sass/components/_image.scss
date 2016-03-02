@@ -3,9 +3,9 @@
  */
 figure {
   background-color: $figure-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: $vertical-rhythm-baseline;
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /**
@@ -14,13 +14,13 @@ figure {
 figure img {
   display: block;
   height: auto;
-  max-width: 100%;
-  max-height: 80vh; /* 1 */
   margin-bottom: 1rem;
+  max-height: 80vh; /* 1 */
+  max-width: 100%;
 }
 
 figcaption {
-  text-align: center;
   font-size: 0.8em;
   font-style: italic;
+  text-align: center;
 }

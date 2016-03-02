@@ -4,21 +4,21 @@
  */
 .button,
 .button-ui {
-  display: block; /* 1 */
   border: 3px solid;
   border-radius: 1337px;
+  cursor: pointer;
+  display: block; /* 1 */
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /**
  * Regular buttons
  */
 .button {
+  color: $secondary-color;
   margin: 0 1rem $vertical-rhythm-baseline;
   padding: 1rem;
-  color: $secondary-color;
 
   @include on-event {
     color: $main-color;
@@ -56,11 +56,11 @@
  * UI specific buttons
  */
 .button-ui {
-  margin: 1rem;
-  padding: 0.5rem;
   background-color: rgb(255, 255, 255);
   color: rgb(204, 204, 204);
   font-size: 0.8em;
+  margin: 1rem;
+  padding: 0.5rem;
   z-index: 5;
 
   @include on-event {
@@ -73,15 +73,15 @@
  */
 .button-ui svg {
   display: block;
-  margin: 0 auto;
   fill: currentcolor;
+  margin: 0 auto;
 }
 
 .button-ui--back,
 .button-ui--toggle {
+  left: auto;
   position: fixed;
   right: 0;
-  left: auto;
 }
 
 .button-ui--back {

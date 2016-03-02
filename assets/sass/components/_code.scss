@@ -16,10 +16,10 @@
  * Code blocks
  */
 .highlight {
-  margin: 0 0 $vertical-rhythm-baseline;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: $code-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   color: rgb(255, 255, 255);
+  margin: 0 0 $vertical-rhythm-baseline;
 }
 
 /**

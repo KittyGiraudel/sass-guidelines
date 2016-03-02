@@ -5,9 +5,9 @@
  * 2. Leave some room for table of contents on large screens
  */
 .main {
-  position: relative; /* 1 */
-  max-width: $main-width;
   margin: 0 auto;
+  max-width: $main-width;
+  position: relative; /* 1 */
 
   @include media('>large') {
     padding-left: $sidebar-width; /* 2 */

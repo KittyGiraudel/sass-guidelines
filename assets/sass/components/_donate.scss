@@ -2,10 +2,10 @@
  * Donate blocks
  */
 .donate {
+  background-color: $donate-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: $vertical-rhythm-baseline;
   padding: $vertical-rhythm-baseline;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: $donate-background;
   text-align: center;
 }
 
