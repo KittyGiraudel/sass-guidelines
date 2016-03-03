@@ -29,6 +29,7 @@ exclude:
   - CONTRIBUTING.md
   - TRANSLATING.md
   - README.md
+  - LICENSE
   - package.json
   - Gemfile
   - Gemfile.lock
