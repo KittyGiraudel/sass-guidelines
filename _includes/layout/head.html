@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if site.github.environment %}
-  <meta name="environment" content="{{ site.github.environment }}" />
+  <meta name="environment" content="{{ site.github.environment }}">
   {% endif %}
 
   <!-- Site title -->
@@ -14,16 +14,16 @@
   <title>{{ site_title|strip }}</title>
 
   <!-- Site description & keywords -->
-  <meta name="description" content="{{ site.data[page.language].translations.baseline.content }}" />
-  <meta name="keywords" content="{{ site.keywords }}" />
+  <meta name="description" content="{{ site.data[page.language].translations.baseline.content }}">
+  <meta name="keywords" content="{{ site.keywords }}">
 
   <!-- Author -->
   {% capture authors %}Hugo Giraudel{% for author in site.data[page.language].configuration.translators %}, {{ author.name }}{% endfor %}{% endcapture %}
-  <meta name="author" content="{{ authors }}" />
-  <link rel="author" href="humans.txt" data-proofer-ignore />
+  <meta name="author" content="{{ authors }}">
+  <link rel="author" href="humans.txt" data-proofer-ignore>
 
   <!-- Site URL -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
   <!-- Critical CSS -->
   <style>
@@ -41,31 +41,31 @@
   loadFont('sg', '/assets/css/fonts/data-woff.css', '/assets/css/fonts/data-woff2.css');
   </script>
   <noscript>
-    <link rel="stylesheet" href="/assets/css/main.css" media="screen" />
+    <link rel="stylesheet" href="/assets/css/main.css" media="screen">
   </noscript>
 
   <!-- Responsive images setup -->  
   <script src="/assets/js/picturefill.min.js" async></script>
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="icon" href="assets/images/favicon.ico">
   <!--[if IE]><link rel="shortcut icon" href="assets/images/favicon.ico"><![endif]-->
 
   <!-- SVG for JavaScript usage -->
-  <meta name="svg-link-icon" content='{% include partials/icon.html icon="pin" title="Link to this section" %}' />
-  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title="Edit this chapter on GitHub" %}' />
+  <meta name="svg-link-icon" content='{% include partials/icon.html icon="pin" title="Link to this section" %}'>
+  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title="Edit this chapter on GitHub" %}'>
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ site_title|strip }}" />
-  <meta property="og:description" content="{{ site.data[page.language].translations.baseline.content }}" />
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
-  <meta property="og:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site_title|strip }}">
+  <meta property="og:description" content="{{ site.data[page.language].translations.baseline.content }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta property="og:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
-  <meta name="twitter:title" content="{{ site_title|strip }}" />
-  <meta name="twitter:description" content="{{ site.data[page.language].translations.baseline.content }}" />
-  <meta name="twitter:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ site_title|strip }}">
+  <meta name="twitter:description" content="{{ site.data[page.language].translations.baseline.content }}">
+  <meta name="twitter:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
 </head>
