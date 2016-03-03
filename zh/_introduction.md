@@ -1,4 +1,3 @@
-
 # 简介
 
 ## 为什么需要一个样式指南
@@ -48,4 +47,4 @@
 
 点击这里可以查看位于 [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) 上的一个 Styleguide 扩展：
 
-> [这](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) 是一个由 Felix Geisendörfer 开发的 [Node Styleguide](https://github.com/felixge/node-style-guide) 扩展。这份文档全面覆盖了 Node Styleguide 的内容。
+> 这是一个由 Felix Geisendörfer 开发的 [Node Styleguide](https://github.com/felixge/node-style-guide) 扩展。这份文档全面覆盖了 Node Styleguide 的内容。

@@ -43,7 +43,7 @@
 
 {% include snippets/tools/01/index.html %}
 
-如果你不确信 SCSS-lint 的必要性，建议阅读以下文章：[Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) 和 [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/).
+如果你不确信 SCSS-lint 的必要性，建议阅读以下文章：[《使用 SCSS-lint 审查你的 Sass 代码》](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [《通过 theguardian.com 改善你的 Sass 代码质量》](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) 和 [《一份强制实施的 SCSS 代码规范》](http://davidtheclark.com/scss-lint-styleguide/).
 
 <div class="note">
   <p>如果你想将 SCSS-lint 插入到 Grunt 构建过程中，那么 Grunt 插件 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a> 一定会对你有所帮助。</p>

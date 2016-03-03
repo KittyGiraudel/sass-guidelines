@@ -23,7 +23,7 @@
 
 {% include snippets/naming/02/index.html %}
 
-如果你在 Sass 中使用常量，请参考这篇文章：[dealing constants sass](http://www.sitepoint.com/dealing-constants-sass/).
+如果你在 Sass 中使用常量，请参考这篇文章：[如何在 Sass 中使用常量](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## 命名空间
 

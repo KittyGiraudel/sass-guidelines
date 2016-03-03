@@ -313,7 +313,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 为了防止此类情况，我们今年就 [the Inception rule](http://thesassway.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的一件比较激进，**建议尽量避免使用嵌套**。 
 
-虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) 和 [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[《小心嵌套陷阱》](http://www.sitepoint.com/beware-selector-nesting-sass/) 和 [《避免选择器的过渡嵌套》](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### 例外
 

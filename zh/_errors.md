@@ -27,4 +27,4 @@
 
 {% include snippets/errors/02/index.html %}
 
-更多有关如何高效使用 `@error` 的信息可以点击这一链接：[this introduction about error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)。
+更多有关如何高效使用 `@error` 的信息可以点击查看这篇文章：[an introduction to error handling in-sass](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)。
