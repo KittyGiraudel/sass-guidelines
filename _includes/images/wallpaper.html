@@ -1,13 +1,13 @@
 {::options parse_block_html="false" /}
 
 <figure role="group">
-  <img alt="{{ site.data[page.language].translations.images.wallpaper | markdownify | strip_html }}"
-     sizes="100vw"
-     srcset="/assets/images/sass-wallpaper_small.jpg  540w,
-             /assets/images/sass-wallpaper_medium.jpg 900w,
-             /assets/images/sass-wallpaper_large.jpg 1200w,
-             /assets/images/sass-wallpaper_huge.jpg  1590w"
-      data-proofer-ignore />
+  <img data-proofer-ignore
+    alt="{{ site.data[page.language].translations.images.wallpaper | markdownify | strip_html }}"
+    sizes="100vw"
+    srcset="/assets/images/sass-wallpaper_small.jpg  540w,
+            /assets/images/sass-wallpaper_medium.jpg 900w,
+            /assets/images/sass-wallpaper_large.jpg 1200w,
+            /assets/images/sass-wallpaper_huge.jpg  1590w">
   <figcaption>{{ site.data[page.language].translations.images.wallpaper | markdownify | replace:"<p>","" | replace:"</p>","" }}</figcaption>
 </figure>
 
