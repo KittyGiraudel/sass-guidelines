@@ -6,5 +6,3 @@ Sass Guidelines jest darmowym projektem, którym zajmuję się w swoim wolnym cz
 Jeśli chcesz uczestniczyć w jego współtworzeniu, możesz tweetnąć o nim albo w dowolny inny sposób komuś o nim powiedzieć. Jeśli zauważysz jakiś błąd, choćby literówkę – byłoby świetnie, jeśli otworzysz issue, czy zrobisz pull request na [repozytorium projektu na Githubie](https://github.com/HugoGiraudel/sass-guidelines)!
 
 I ostatnia rzecz, choć nie mniej ważna: jeśli spodoba Ci się ten przewodnik, albo jeśli uznasz go jako przydatny dla Twojego zespołu, proszę rozważ jego wsparcie, tak bym mógł nadal nad nim pracować!
-
-{% include partials/contributing.html %}

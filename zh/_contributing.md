@@ -6,5 +6,3 @@ Sass指南是我利用空暇时间维持的一个免费项目。不用多说,相
 现在，如果你想要为它做些贡献，一个很好的建议是：使用社交网络分享它，也可以在 [GitHub repository](https://github.com/HugoGiraudel/sass-guidelines) 上提交修正错误的 issue 或者 pull-request。
 
 在开始之前最后但不是最终的一句话：如果你喜欢这份样式指南，如果它对你或你的团队大有裨益，请考虑支持它，从而鼓励我持续迭代不断改进本文！
-
-{% include partials/contributing.html %}
