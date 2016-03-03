@@ -31,7 +31,7 @@
 
 ## 组件结构
 
-理想情况下，每个组件都应该拥有自己的文件夹（存在于 `components` 文件之下，详见[7-1 模式](#7-1模式)），比如 `components/_button.scss`。每个组件的样式应该包含以下内容：
+理想情况下，每个组件都应该拥有自己的文件夹（存在于 `components` 文件之下，详见[7-1 模式](#section-36)），比如 `components/_button.scss`。每个组件的样式应该包含以下内容：
 
 * 组件本身的样式
 * 和组件样式有关的变量、修饰器以及状态
@@ -54,12 +54,12 @@
 
 回到结构这个话题上来，好吗？通常我使用自称为 **7-1 模式**的结构：7 个文件夹，1 个文件。基本上，你需要将所有的部件放进 7 个不同的文件夹和一个位于根目录的文件（通常命名为 `main.scss`）中——这个文件编译时会引用所有文件夹而形成一个 CSS 样式表。
 
+- `abstracts/`
 - `base/`
 - `components/`
 - `layout/`
 - `pages/`
 - `themes/`
-- `abstracts/`
 - `vendors/`
 
 当然还有它:
@@ -139,7 +139,7 @@
 
 ### Abstracts 文件夹
 
-`Abstracts/` 文件夹包含了整个项目中使用到的 Sass 辅助工具，这里存放着每一个全局变量、函数、混合宏和占位符。
+`abstracts/` 文件夹包含了整个项目中使用到的 Sass 辅助工具，这里存放着每一个全局变量、函数、混合宏和占位符。
 
 该文件夹的经验法则是，编译后这里不应该输出任何 CSS，单纯的只是一些 Sass 辅助工具。
 
@@ -151,7 +151,7 @@
 当项目体量庞大工具复杂时，通过主题而不是类型分类整理可能更有帮助，比如排版（`_typography.scss`）、主题（`_theming.scss`）等。每一个文件都包含所有的相关信息：变量、函数、混合宏和占位符。这样做可以让维护更加单，特别针对于文件较长的情况。
 
 <div class="note">
-  <p><code>Abstracts/</code> 文件夹也会被称为 <code>helpers/</code> 或 <code>utilities</code>，具体使用情况取决于个人喜好。</p>
+  <p><code>abstracts/</code> 文件夹也会被称为 <code>helpers/</code> 或 <code>utilities</code>，具体使用情况取决于个人喜好。</p>
 </div>
 
 ### Vendors文件夹

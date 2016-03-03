@@ -48,7 +48,3 @@ SassDoc 主要有两个作用：
 这里有一个深入整合 SassDoc 生成文档的例子：
 
 {% include snippets/comments/04/index.html %}
-
-###### 扩展阅读
-
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
