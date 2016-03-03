@@ -4,4 +4,4 @@ language: en
 direction: ltr
 ---
 
-{% include layout/chapters.html path = "/en/" %}
+{% include layout/chapters.html path="/en/" %}

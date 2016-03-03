@@ -11,7 +11,7 @@
   {% capture site_title %}
   {% if page.title %}{{ page.title }}{% elsif page.language != 'en' %}{{ site.title }} — {{ site.data[page.language].configuration.label }} translation{% else %}{{ site.title }}{% endif %}
   {% endcapture %}
-  <title>{{ site_title|strip }}</title>
+  <title>{{ site_title | strip }}</title>
 
   <!-- Site description & keywords -->
   <meta name="description" content="{{ site.data[page.language].translations.baseline.content }}">
@@ -57,7 +57,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site_title|strip }}">
+  <meta property="og:title" content="{{ site_title | strip }}">
   <meta property="og:description" content="{{ site.data[page.language].translations.baseline.content }}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <meta property="og:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
@@ -65,7 +65,7 @@
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
-  <meta name="twitter:title" content="{{ site_title|strip }}">
+  <meta name="twitter:title" content="{{ site_title | strip }}">
   <meta name="twitter:description" content="{{ site.data[page.language].translations.baseline.content }}">
   <meta name="twitter:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
 </head>
