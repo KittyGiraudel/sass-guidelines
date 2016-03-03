@@ -45,7 +45,7 @@ Translate all chapters (files starting with an underscore) in your translation f
 
 ### The meta-data
 
-In the `_data` folder, duplicate the `en.yml` file and rename it after your translation shortcode before filling it. This contains 2 significant parts: the configuration for your translation, and the static translations for UI elements.
+In the `_locales` folder, duplicate the `en.yml` file and rename it after your translation shortcode before filling it. This contains 2 significant parts: the configuration for your translation, and the static translations for UI elements.
 
 For instance, here is the object for the Polish translation:
 
