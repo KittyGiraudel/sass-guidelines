@@ -11,12 +11,6 @@
 
 现在，在一个 Sass 项目中往往存在大量的错误和提醒。基本上任何混合宏和函数出错都会发生特定类型或参数的错误，或者显示假设的提醒。
 
-###### 扩展阅读
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## 警告
 
 使用 [Sass-MQ](https://github.com/sass-mq/sass-mq) 中的这个函数可以转换 `px` 为 `em`，展示如下：
@@ -32,3 +26,5 @@
 举个例子，假设你创建了一个 getter 函数来从特定 map 中获取值。如果想要获取的值并不在 map 中，就可能会抛出错误。
 
 {% include snippets/errors/02/index.html %}
+
+更多有关如何高效使用 `@error` 的信息可以点击这一链接：[this introduction about error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)。

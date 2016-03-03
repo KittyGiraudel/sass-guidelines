@@ -7,18 +7,13 @@
 
 最重要的是，我无法形容我是多么需要设置大量的文件夹——即使是小项目中。这就像是在家里，你不会将所有的纸片放在同一个盒子中。你可以使用文件夹：一个为房产，一个为银行，一个为账单，等等。没有理由在构架 CSS 项目时不这么做。拆分代码库到多个有意义的文件夹，当你回头来找东西的时候就会发现是那么容易。
 
-有很多受欢迎的构建 CSS 项目的体系结构：[OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/) 式, [Foundation](http://foundation.zurb.com/) 式...它们各有优劣，难分伯仲。
+有很多[受欢迎的构建 CSS 项目的体系结构]((http://www.sitepoint.com/look-different-sass-architectures/) )：[OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/) 式, [Foundation](http://foundation.zurb.com/) 式...它们各有优劣，难分伯仲。
 
 我自己使用的方式，与 [Jonathan Snook](http://snook.ca/) 的 [SMACSS](https://smacss.com/) 非常相似，其致力于保持代码简洁易见。
 
 <div class="note">
   <p>我认为，项目之间的结构是极其具体的。你完全可以随意摒弃或调整建议方案，拥有最适合自己需求的体系系统。</p>
 </div>
-
-###### 扩展阅读
-
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 
 ## 组件
 
@@ -34,6 +29,27 @@
 
 几乎所有的接口都可以被视为小组件，而且强烈建议坚持这种模式。这不仅仅会精简整个项目中 CSS 的代码量，而且也会比维护一个到处无逻辑的烂摊子容易得多。
 
+## 组件结构
+
+理想情况下，每个组件都应该拥有自己的文件夹（存在于 `components` 文件之下，详见[7-1 模式](#7-1模式)），比如 `components/_button.scss`。每个组件的样式应该包含以下内容：
+
+* 组件本身的样式
+* 和组件样式有关的变量、修饰器以及状态
+* 如有需要，设置组件的子级样式
+
+如果你希望可以定制组件的主题（主题文件置于 `themes/` 文件夹之内），可以限制样式中可以被修改的种类，比如尺寸、内间距、外间距以及对齐方式等等，可以开放颜色、阴影、字体、背景等方面的样式。
+
+一个组件文件内可以存在与该组件密切相关的变量、占位符、混合宏甚至是函数，但是要牢记，应该避免对其他组件样式的引用，否则将会让项目整体的依赖关系变得难以维护。
+
+下面是一个 Button 组件的示例：
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>感谢 <a href="https://twitter.com/davidkpiano">David Khourshid</a> 对本节做出的技术支持。</p>
+</div>
+
+
 ## 7-1模式
 
 回到结构这个话题上来，好吗？通常我使用自称为 **7-1 模式**的结构：7 个文件夹，1 个文件。基本上，你需要将所有的部件放进 7 个不同的文件夹和一个位于根目录的文件（通常命名为 `main.scss`）中——这个文件编译时会引用所有文件夹而形成一个 CSS 样式表。
@@ -43,7 +59,7 @@
 - `layout/`
 - `pages/`
 - `themes/`
-- `utils/`
+- `abstracts/`
 - `vendors/`
 
 当然还有它:
@@ -69,7 +85,7 @@
 * `_typography.scss`
 
 <div class="note">
-  <p>如果你的项目中使用了<em>大量的</em> CSS 动画, 那么你有必要考虑添加一个 <code>_animations.scss</code> 文件来统一管理这些动画。如果只是偶尔使用一些动画，也可以将这些动画融入到调用它们的文件中。</p>
+  <p>如果你的项目中使用了<em>大量的</em> CSS 动画, 那么你有必要考虑添加一个 <code>\_animations.scss</code> 文件来统一管理这些动画。如果只是偶尔使用一些动画，也可以将这些动画融入到调用它们的文件中。</p>
 </div>
 
 ### Layout文件夹
@@ -121,9 +137,9 @@
   <p>这个文件夹与项目的具体实现有密切关系，并且在许多项目中是并不存在的。</p>
 </div>
 
-### Utils文件夹
+### Abstracts 文件夹
 
-`utils/` 文件夹包含了整个项目中使用到的 Sass 辅助工具，这里存放着每一个全局变量、函数、混合宏和占位符。
+`Abstracts/` 文件夹包含了整个项目中使用到的 Sass 辅助工具，这里存放着每一个全局变量、函数、混合宏和占位符。
 
 该文件夹的经验法则是，编译后这里不应该输出任何 CSS，单纯的只是一些 Sass 辅助工具。
 
@@ -135,7 +151,7 @@
 当项目体量庞大工具复杂时，通过主题而不是类型分类整理可能更有帮助，比如排版（`_typography.scss`）、主题（`_theming.scss`）等。每一个文件都包含所有的相关信息：变量、函数、混合宏和占位符。这样做可以让维护更加单，特别针对于文件较长的情况。
 
 <div class="note">
-  <p><code>utils/</code> 文件夹也会被称为 <code>helpers/</code> 或 <code>utilities</code>，具体使用情况取决于个人喜好。</p>
+  <p><code>Abstracts/</code> 文件夹也会被称为 <code>helpers/</code> 或 <code>utilities</code>，具体使用情况取决于个人喜好。</p>
 </div>
 
 ### Vendors文件夹
@@ -157,7 +173,7 @@
 
 文件应该按照存在的位置顺序依次被引用进来：
 
-1. `utils/`
+1. `abstracts/`
 1. `vendors/`
 1. `base/`
 1. `layout/`
@@ -185,17 +201,20 @@
 
 {% include snippets/architecture/03/index.html %}
 
-<div class="note">
-  <p>为了不用亲自引入每一个文件，有一个叫做 <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a> 的 Ruby Sass 扩展程序，使在 Sass 的 <code>@import</code> 中,使其做为 glob 模式，就像这样：<code>@import "components/*"</code></p>
-  <p>话虽如此，却不推荐它，因为它按照字母顺序引入文件，这往往并不是想要的，特别是处理一个对源文件顺序有所依赖的编程语言的时候。</p>
-</div>
+## 关于 Golobbing
+
+在计算机编程中，通配符扩展模式通常使用通配符来匹配多个文件名，比如 `*.scss`，其工作机制是通过表达式而不是文件名列表来匹配文件组。在 Sass 中，可以在入口文件中通过通配符扩展的形式导入其他文件，导入后的入口文件类似如下所示：
+
+{% include snippets/architecture/05/index.html %}
+
+Sass 并不直接支持通配符扩展的机制，这是因为 CSS 样式是对声明顺序非常敏感的，当我们使用通配符扩展的形式导入文件时，文件通常按照字典序导入，这种方式无法控制文件的导入顺序，继而会引起样式的错乱。
+
+也就是说，在一个严格基于组件构成的架构中，必须十分注意组件之间的样式顺序，避免遗漏和错误覆盖任何样式。所以必须保证文件顺序对样式没有影响，方能使用通配符扩展模式。使用通配符扩展模式最大的好处就是无需再花费时间处理入口文件中文件的增加和删除。
+
+在 Ruby Sass 中有一个 [sass-globbing](https://github.com/chriseppstein/sass-globbing) 包可以用于解析通配符扩展机制。如果使用的是 node-sass，可以使用 Node.js 或者构建工具（Gulp，Grunt等 等）来解析通配符扩展机制。
 
 ## Shame 文件
 
-另一个有意思的方面，由业内已流行的 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) 和 [Chris Coyier](http://css-tricks.com) 引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个 *shame file*。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
+另一个有意思的方面，由业内已流行的 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) 和 [Chris Coyier](http://css-tricks.com) 引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个 [shame file](http://csswizardry.com/2013/04/shame-css-full-net-interview/)。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
 
 {% include snippets/architecture/04/index.html %}
-
-###### 扩展阅读
-
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

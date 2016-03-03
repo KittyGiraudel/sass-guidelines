@@ -27,7 +27,7 @@
 <div class="note">
     <p>通常来说，<code>@extend</code> 有助于减少文件体积大小，因为它的操作本质上是合并选择器而不是赋值样式。话虽如此，当你使用 <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> 压缩文件时，<code>@extend</code> 对于文件压缩的好处几乎是可以忽略的。</p>
     <p>这也就是说，如果你不能使用类似 Gzip 的工具，那么就可以考虑使用 <code>@extend</code> 来减少不必要的重复，特别是当样式文件的大小成为性能瓶颈的时候，这种方式尤为有效。</p>
-+</div>
+</div>
 
 ### 继承和媒体查询
 
@@ -35,15 +35,33 @@
 
 {% include snippets/extend/02/index.html %}
 
-简而言之，建议将 `@extend` 只用于维持选择器之间的关系。如果两个选择器的内容具有典型的相似性和结构性，那么这就是使用 `@extend` 的最佳场景了。如果它们之间没有关联，只是某些样式相似，那么使用 `@mixin` 更合适。
-
-<div class="note">
-    <p>非常感谢 <a href="https://twitter.com/davidkpiano">David Khourshid</a> 为本节提供的帮助和经验。</p>
-</div>
-
-###### 扩展阅读
+有关 `@extend` 的好与坏，开发者们之间的观点大有不同，你可以阅读以下文章了解其中的利弊：
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+
+总而言之，我建议只将 `@extend` 用于维护选择器之间的关系。如果两个选择器是类似的，那么最好使用 `@extend`；如果它们之间没有关系，只是具有相同的样式，那么使用 `@mixin` 会更好。更多有关两者的用法，请看这篇文章：[When to use extend and when to use a mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+
+<div class="note">
+  <p>感谢 <a href="https://twitter.com/davidkpiano">David Khourshid</a> 对本节提供的技术支持。</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

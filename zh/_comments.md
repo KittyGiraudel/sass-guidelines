@@ -26,9 +26,7 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 
 {% include snippets/comments/02/index.html %}
 
-###### 扩展阅读
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+在 CSS 编程指南中的[注释](http://cssguidelin.es/#commenting)一节中也提到，支持这种方式的注释。
 
 ## 文档
 

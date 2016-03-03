@@ -17,10 +17,7 @@
 
 {% include snippets/mixins/02/index.html %}
 
-###### 扩展阅读
-
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+更多复杂示例可以参考：[this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) 和 [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)。
 
 ## Argument-less mixins
 
@@ -40,10 +37,8 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 
 {% include snippets/mixins/04/index.html %}
 
-###### 扩展阅读
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
+更多有关多参数、列表参数的信息请参考这篇文章：[SitePoint has a nice piece on the topic](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)。
+  
 ## 混合宏和浏览器前缀
 
 通过使用自定义混合宏来处理 CSS 中未被支持或部分支持的浏览器前缀，是非常有吸引力的一种做法。但我们不希望这么做。首先，如果你可以使用 [Autoprefixer](https://github.com/postcss/autoprefixer)，那就使用它。它会从你的项目中移除Sass代码，会一直更新并一定会进行比你手动添加前缀更棒的处理。
@@ -63,7 +58,3 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 {% include snippets/mixins/07/index.html %}
 
 请记住，这是一个糟糕的解决方案。例如，他不能处理那些需要复杂的前缀，比如 `flexbox`。在这个意义上说，使用 Autoprefixer 是一个更好地选择。
-
-###### 扩展阅读
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
