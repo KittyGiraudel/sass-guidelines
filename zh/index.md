@@ -1,7 +1,6 @@
 ---
 layout: default
 language: zh
-direction: ltr
 ---
 
-{% include layout/chapters.html %}
+{% include chapters.html %}
