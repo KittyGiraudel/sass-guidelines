@@ -154,7 +154,7 @@ The rule of thumb for this folder is that it should not output a single line of 
 When working on a very large project with a lot of abstract utilities, it might be interesting to group them by topic rather than type, for instance typography (`_typography.scss`), theming (`_theming.scss`), etc. Each file contains all the related helpers: variables, functions, mixins and placeholders. Doing so can make the code easier to browse and maintain, especially when files are getting very long.
 
 <div class="note">
-  <p>The <code>abstracts/</code> folder might also be called <code>utilities</code> or <code>helpers/</code>, depending on what you prefer.</p>
+  <p>The <code>abstracts/</code> folder might also be called <code>utilities/</code> or <code>helpers/</code>, depending on what you prefer.</p>
 </div>
 
 ### Vendors folder
