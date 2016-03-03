@@ -22,23 +22,13 @@ languages:
 # Build settings
 safe: true
 data_dir: ./_locales
-exclude:
-  - node_modules
-  - CHANGELOG.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - TRANSLATING.md
-  - README.md
-  - LICENSE
-  - package.json
-  - Gemfile
-  - Gemfile.lock
-  - CNAME
-  - vendor
-  - _bin
-  - assets/js/vendor
-  - assets/js/src
-  - assets/images/icons
+exclude: [
+  "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "TRANSLATING.md",
+  "assets/js/vendor", "assets/js/src", "assets/images/icons",
+  "package.json", "Gemfile", "Gemfile.lock",
+  "**/README.md", "LICENSE", "CNAME",
+  "node_modules", "vendor", "_bin"
+]
 
 markdown: kramdown
 kramdown:
