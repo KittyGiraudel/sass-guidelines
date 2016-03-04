@@ -16,7 +16,7 @@ Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines]
 
 ## Chaînes de caractères
 
-Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
+Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des identifiants, il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
 
 ### Encodage
 
@@ -45,7 +45,7 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
 
 ### Chaînes comme valeurs CSS
 
-Certaines valeurs spécifiques de CSS, telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
+Certaines valeurs spécifiques de CSS (identifiants), telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
 
 {% include snippets/syntax/04/index.html %}
 

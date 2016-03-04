@@ -35,7 +35,7 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
 
 Si vous avez l’intention de distribuer votre code Sass, sous forme de bibliothèque, de framework, de système de grille ou autre, il peut s’avérer intéressant de donner un *namespace* à vos variables, fonctions, mixins et placeholders de façon à ce qu’ils n’entrent pas en conflit avec le code d’une autre personne.
 
-Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné à être utilisé par les développeurs du monde entier (qui ne le ferait pas&nbsp;?) il est important d’utiliser un namespace, tel que `su-`, suffisamment spécifique pour éviter toute collision de noms et suffisamment court pour ne pas devenir pénible à écrire.
+Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné à être distribué, il est important d’utiliser un namespace, tel que `su-`, suffisamment spécifique pour éviter toute collision de noms et suffisamment court pour ne pas devenir pénible à écrire.
 
 {% include snippets/naming/03/index.html %}
 
