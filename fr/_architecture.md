@@ -38,12 +38,12 @@ La plupart des éléments constituant une interface peuvent être pensés comme 
 
 Revenons à l’architecture. J’utilise habituellement ce que j’appelle le *pattern 7-1*&nbsp;: 7&nbsp;dossiers, 1&nbsp;fichier. Tous vos partiels regroupés dans 7&nbsp;dossiers différents et un fichier simple à la racine (généralement appelé `main.scss`) qui les importe tous pour les compiler dans une feuille de style CSS.
 
+* `abstracts/`
 * `base/`
 * `components/`
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
 * `vendors/`
 
 Et bien sûr&nbsp;:
@@ -125,9 +125,9 @@ Dans des sites ou applications de grande envergure, il n’est pas rare d’avoi
   <p>On est ici dans des considérations très spécifiques aux projets, et il est probable que ce dossier n’existera pas dans bien des cas.</p>
 </div>
 
-### Dossier utilitaires
+### Dossier d’Abstractions
 
-Le dossier `utils/` regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
+Le dossier `abstracts/` regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
 
 La règle générale concernant ce dossier est qu’il ne devrait pas retourner une seule ligne de CSS s’il était compilé seul. Ce ne sont ici que des helpers Sass.
 
@@ -137,7 +137,7 @@ La règle générale concernant ce dossier est qu’il ne devrait pas retourner 
 * `_placeholders.scss`
 
 <div class="note">
-  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
+  <p>Le dossier <code>abstracts/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
 </div>
 
 ### Dossier vendors
@@ -159,7 +159,7 @@ Le fichier principal (généralement appelé `main.scss`) devrait être le seul 
 
 Les fichiers doivent être importés en fonction du dossier dans lequel ils sont rangés, l’un après l’autre dans l’ordre suivant&nbsp;:
 
-1. `utils/`
+1. `abstracts/`
 1. `vendors/`
 1. `base/`
 1. `layout/`
