@@ -222,7 +222,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 
 ## Maps
 
-Depuis Sass 3.3, les auteurs de feuilles de styles peuvent définir des *maps*, qui sont l’équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d’association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) —&nbsp;lesquelles peuvent être de n’importe quel type, y compris des maps, ce que toutefois je ne recommanderais pas&nbsp;— et des valeurs (values) de tout type.
+Avec Sass, les auteurs de feuilles de styles peuvent définir des *maps*, qui sont l’équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d’association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) à des valeurs. Les clés comme les valeurs peuvent être de tout type, y compris de type `map` même si je ne recommanderais pas l’utilisation de types complexes comme clés, ne serait-ce que dans un souci de simplicité.
 
 Les maps doivent être écrites comme suit&nbsp;:
 
