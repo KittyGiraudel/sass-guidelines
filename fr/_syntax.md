@@ -14,8 +14,6 @@ Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines]
 
 {% include snippets/syntax/01/index.html %}
 
-Nous n’aborderons pas la question de l’organisation des fichiers dans cette section. C’est l’objet d’une [autre section](#architecture).
-
 ## Chaînes de caractères
 
 Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des chaînes de caractères (habituellement sans guillemets), il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
@@ -368,14 +366,6 @@ De plus, lorsqu’on utilise des classes décrivant un état indépendant du com
 *Last but not least*, lorsqu’on applique un style à un élément parce qu’il se trouve être contenu dans un autre élément spécifique, il est également logique de l’imbriquer afin que tout ce qui concerne cet élément soit réuni au même endroit.
 
 {% include snippets/syntax/35/index.html %}
-
-Quand on travaille avec des développeurs peu expérimentés, un sélecteur comme `.no-opacity &` peut paraître étrange. Pour éviter toute confusion, vous pouvez créer un petit mixin qui transforme cette syntaxe bizarre en une API explicite.
-
-{% include snippets/syntax/36/index.html %}
-
-Nous pouvons réécrire notre exemple précédent ainsi&nbsp;:
-
-{% include snippets/syntax/37/index.html %}
 
 Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l’imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l’équipe soit d’accord avec cette façon de faire.
 
