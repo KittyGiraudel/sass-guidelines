@@ -10,10 +10,10 @@ configuration:
       link: http://pinggod.com
 
 translations:
-  twitter: "Catch me on Twitter"
+  twitter: "关注我的 Twitter"
   contributing:
-    support_button: "Support Sass Guidelines"
-    tweet_button: "Spread the word"
+    support_button: "支持 Sass 编程规范"
+    tweet_button: "分享到社交圈"
   donate:
     content: "如果你喜欢 Sass Guidelines，请支持它"
     button: "支持 Sass Guidelines"
