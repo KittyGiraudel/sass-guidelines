@@ -192,6 +192,18 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
   <p>Ceci dit, je ne la recommande pas car elle importe les fichiers par ordre alphabétique ce qui n’est pas souhaitable en général, surtout s’agissant d’un langage dans lequel l’ordre des sources est essentiel.</p>
 </div>
 
+## À propos du “globbing”
+
+En informatique, les “glob patterns” déterminent des collections de noms de fichiers contenant des caractères dits “joker”, tels que `*.scss`. De manière générale, globbing signifie déterminer un ensemble de fichiers à partir d’une expression plutôt que via une liste de noms de fichier. Quand il s’agit de Sass, cela signifie importer des fichiers individuels dans le [fichier principal](#ficher-principal) avec un pattern plutôt qu’en les listant un par un. Cela donnerait un fichier principal comme celui-ci :
+
+{% include snippets/architecture/05/index.html %}
+
+Sass ne supporte pas le globbing par défaut car cela peut s’avérer dangereux dans la mesure où l’ordre de la source est important en CSS. En important les fichiers de manière dynamique (généralement par order alphabétique), on ne peut s’assurer de l’ordre de la source, ce qui peut engendrer des bugs difficiles à analyser.
+
+Ceci étant dit, dans une architecture strictement basée sur les composants où un soin tout particulier est apporté à l’encapsulation des styles, l’ordre ne devrait pas vraiment importer, ce qui rend le globbing possible. Cela permettrait de faciliter l’ajout et le retrait des fichiers sans avoir à maintenir le fichier principal à la main.
+
+Avec Ruby Sass, il existe une Gem Ruby appelée [sass-globbing](https://github.com/chriseppstein/sass-globbing) qui autorise ce comportement. Avec node-sass, on peut s’appuyer sur Node.js ou l’outil gérant la compilation des feuilles de styles (Gulp, Grunt, etc.).
+
 ## Fichier de la honte
 
 Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) et [Chris Coyier](http://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un *fichier de la honte*. Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
