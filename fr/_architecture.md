@@ -29,6 +29,26 @@ Par exemple, un formulaire de recherche devrait être traité comme un composant
 
 La plupart des éléments constituant une interface peuvent être pensés comme des composants et je recommande de se tenir à ce paradigme. Non seulement cela réduira le CSS nécessaire à un projet, mais encore ce sera bien plus facile à maintenir qu’un code chaotique et confus.
 
+## Anatomie d’un Composant
+
+Idéalement, composants devraient exister dans leur propre fichier (dans le dossier `components/`, comme décrit dans la section dédiée [au pattern 7-1](#le-pattern-7-1)), par exemple `components/_button.scss`). Les styles décrits dans chaque composant devraient uniquement traiter :
+
+* du composant lui-même ;
+* des variantes du composant ainsi que de ses états ;
+* des descendants du composants (enfants) si nécessaire.
+
+Si vous souhaitez rendre vos composants personnalisables de façon externe (via un thème provenant du dossier `themes/` par exemple), limitez les déclarations aux styles structurels comme les dimensions (`width`, `height`), marges (`padding`, `margin`), alignements, etc. Évitez les styles graphiques comme les couleurs, ombres, fonds, règles de typographie, etc.
+
+Un fichier de composant peut inclurer des variables, placeholders et mêmes mixins et fonctions du moment que ceux-ci sont spécifiques au dit component. Gardez à l’esprit cependant qu’il faut éviter de référencer (`@import`-er) un composant depuis un autre composant car cela peut rendre le projet extrêmement chaotique.
+
+Voilà un example de composant bouton :
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Merci à <a href="https://twitter.com/davidkpiano">David Khourshid</a> pour son aide et son expertise dans cette section.</p>
+</div>
+
 ## Le pattern 7-1
 
 Revenons à l’architecture. J’utilise habituellement ce que j’appelle le *pattern 7-1*&nbsp;: 7&nbsp;dossiers, 1&nbsp;fichier. Tous vos partiels regroupés dans 7&nbsp;dossiers différents et un fichier simple à la racine (généralement appelé `main.scss`) qui les importe tous pour les compiler dans une feuille de style CSS.
@@ -189,7 +209,7 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
 
 ## À propos du “globbing”
 
-En informatique, les “glob patterns” déterminent des collections de noms de fichiers contenant des caractères dits “joker”, tels que `*.scss`. De manière générale, globbing signifie déterminer un ensemble de fichiers à partir d’une expression plutôt que via une liste de noms de fichier. Quand il s’agit de Sass, cela signifie importer des fichiers individuels dans le [fichier principal](#ficher-principal) avec un pattern plutôt qu’en les listant un par un. Cela donnerait un fichier principal comme celui-ci :
+En informatique, les “glob patterns” déterminent des collections de noms de fichiers contenant des caractères dits “joker”, tels que `*.scss`. De manière générale, globbing signifie déterminer un ensemble de fichiers à partir d’une expression plutôt que via une liste de noms de fichier. Quand il s’agit de Sass, cela signifie importer des fichiers individuels dans le [fichier principal](#fichier-principal) avec un pattern plutôt qu’en les listant un par un. Cela donnerait un fichier principal comme celui-ci :
 
 {% include snippets/architecture/05/index.html %}
 
