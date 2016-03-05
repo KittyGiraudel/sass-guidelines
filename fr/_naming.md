@@ -15,10 +15,6 @@ En ce qui concerne les variables, les fonctions et les mixins, nous allons nous 
 
 {% include snippets/naming/01/index.html %}
 
-###### Lectures complémentaires
-
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
 ## Constantes
 
 Si vous êtes un développeur de frameworks ou si vous écrivez des bibliothèques, vous pouvez avoir besoin de variables qui ne sont pas supposées être mises à jour, en aucune circonstance&nbsp;: en d’autres termes des constantes. Malheureusement (ou heureusement&nbsp;?), Sass ne permet pas de définir de telles entités, c’est pourquoi nous devons nous tenir à des conventions strictes si nous voulons que les choses soient claires.
@@ -27,9 +23,7 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
 
 {% include snippets/naming/02/index.html %}
 
-###### Lectures complémentaires
-
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+Si vous désirez vraiment utiliser des constantes en Sass, vous devriez lire [cet article dédié à ce sujet](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespaces
 
@@ -39,10 +33,8 @@ Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné �
 
 {% include snippets/naming/03/index.html %}
 
+[Kaelig](http://kaelig.fr) a [un super article à propos du namespace global de CSS](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), si jamais le sujet vous passione !
+
 <div class="note">
   <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d’&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>
 </div>
-
-###### Lectures complémentaires
-
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

@@ -65,11 +65,6 @@ Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-d
 
 {% include snippets/syntax/06/index.html %}
 
-###### Lectures complémentaires
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
-
 ## Nombres
 
 Dans Sass, un nombre est une donnée qui peut avoir une unité ou pas et qui décrit une longueur, une durée, une fréquence, un angle, etc. Cela permet d’effectuer des calculs sur les mesures.
@@ -100,11 +95,11 @@ Pour ajouter une unité à un nombre, vous devez multiplier ce nombre par *1 uni
 
 {% include snippets/syntax/09/index.html %}
 
-Remarquez qu’en ajoutant *0 membre de cette unité* on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l’ajout de *0 unité* peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas&nbsp;:
+Remarquez qu’en ajoutant *0 membre de cette unité* on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l’ajout de *0 unité* peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas. Davantage d’information à ce sujet dans [cet article sur CSS-Tricks](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
-En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode.
+En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode. [Utilisez des longueurs, pas des chaînes de caractères.](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 
 Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois son unité*.
 
@@ -126,16 +121,17 @@ Est-il utile de préciser que **les nombres magiques sont une plaie et doivent �
 
 {% include snippets/syntax/13/index.html %}
 
-###### Lectures complémentaires
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+À ce sujet, CSS-Tricks a [un superbe article](http://css-tricks.com/magic-numbers-in-css/) à propos des nombres magiques en CSS, que je vous recommande de lire.
 
 ## Couleurs
 
 Les couleurs occupent une place importante dans le langage CSS. Naturellement, Sass devient un excellent allié lorsqu’il s’agit de manipuler les couleurs, essentiellement à l’aide de quelques [fonctions puissantes](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+Sass est si utile quand il s’agit de manipuler les couleurs que des articles sont apparus de toute part pour en parler. Permettez-moi de vous recommander quelques lectures :
+
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Formats de couleurs
 
@@ -169,7 +165,7 @@ Vous pouvez maintenant utiliser cette variable où vous voulez. Cependant, si so
 
 {% include snippets/syntax/17/index.html %}
 
-De cette façon vous éviterez qu’une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`.
+De cette façon vous éviterez qu’une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`. [Cet article](http://davidwalsh.name/sass-color-variables-dont-suck) explique bien pourquoi il est important de bien nommer ses variables.
 
 ### Éclaircir et obscurcir les couleurs
 
@@ -189,14 +185,6 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
   <p>La fonction <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> échelonne les propriétés de manière plus fluide en prenant en compte leur degré de luminosité actuelle. Elle donne des résultats aussi beaux que <code>mix</code> mais avec des conventions d’utilisation plus claires. Le facteur d’échelonnage n’est cependant pas le même.</p>
 </div>
 
-###### Lectures complémentaires
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
 ## Listes
 
 Les listes sont l’équivalent des arrays (tables) dans Sass. Une liste est une structure de données plate (contrairement à [maps](#maps)) dont le but est de stocker des valeurs de tout type (y compris des listes, ce qui autorise l’imbrication de listes).
@@ -215,10 +203,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 
 {% include snippets/syntax/20/index.html %}
 
-###### Lectures complémentaires
-
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+Dans [cet article](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), je parcours un certain nombre de trucs et astuces pour comprendre et manipuler les listes en Sass.
 
 ## Maps
 
@@ -239,17 +224,7 @@ Illustration :
 
 {% include snippets/syntax/21/index.html %}
 
-###### Lectures complémentaires
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+Les écrits à propos des maps sont légions tant cette fonctionnalité était attendue. En voilà 3 que je recommande : [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Ensemble de règles CSS
 
@@ -279,10 +254,6 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Lectures complémentaires
-
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
 ## Ordre des déclarations
 
 Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en ce qui concerne l’ordre des déclarations CSS. Concrètement, deux opinions s’opposent&nbsp;:
@@ -311,11 +282,6 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
 <div class="note">
   <p>Une <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
 </div>
-
-###### Lectures complémentaires
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Imbrication des sélecteurs
 
@@ -351,6 +317,10 @@ C’est d’autant plus vrai à mesure que les sélecteurs s’allongent et que 
 
 Pour éviter de telles situations, nous **évitons l’imbrication des sélecteurs autant que possible**. Il y a cependant quelques exceptions à cette règle.
 
+Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
+
+Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+
 ### Exceptions
 
 Pour commencer, il est permis —&nbsp;et même recommandé&nbsp;— d’imbriquer les pseudo-classes et les pseudo-éléments à l’intérieur du sélecteur initial.
@@ -368,9 +338,3 @@ De plus, lorsqu’on utilise des classes décrivant un état indépendant du com
 {% include snippets/syntax/35/index.html %}
 
 Comme pour toute chose, ce qui compte ce ne sont pas les détails mais la cohérence globale. Si vous vous sentez en confiance avec l’imbrication des sélecteurs, utilisez-la. Assurez-vous que toute l’équipe soit d’accord avec cette façon de faire.
-
-###### Lectures complémentaires
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
