@@ -36,5 +36,5 @@ For instance, if you work on a *Sassy Unicorn* project that is meant to be distr
 [Kaelig](http://kaelig.fr) has [a very insightful article about the global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), in case this topic is of any interest to you.
 
 <div class="note">
-  <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually-namespaced libraries may actually be harder to use.</p>
+  <p>Note that automatic namespacing is definitely a design goal for the upcoming <code>@import</code> revamp from Sass 4.0. As that comes closer to fruition, it will become less and less useful to do manual namespacing; eventually, manually namespaced libraries may actually be harder to use.</p>
 </div>
