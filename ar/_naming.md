@@ -46,3 +46,21 @@ For instance, if you work on a *Sassy Unicorn* project that is meant to be used 
 ###### Further reading
 
 * [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
+
+
+
+في Sass، هنالك ثلاثة أشياء يمكن لك تسميتها، ومن المهم أن تقوم بتسميتها بشكل صحيح حتى تسهل عليك العمل في بقية المشروع:
+* variables;
+* functions;
+* mixins.
+
+فيما يتعلق بهذه الثلاث، من الأفضل أن نكتبها كما نكتب أسماء الـ Classes في CSS العادية، حيث تكون بأحرف صغيرة، بين الكلمة والأخرى مسافة كهذه - ، والأهم من ذلك أن يكون لها معنى
+
+{% include snippets/naming/01/index.html %}
+
+Constants الثوابت
+الثوابت لا تختلف عن المتغيرات سوى بأن قيمتها لا تتغير أينما وجدت! ولذلك يُفضل تمييزها عن المتغيرات العادية من خلال كتابتها بأحرف كبيرة 
+
+{% include snippets/naming/02/index.html %}
+
+# مش كامل!
