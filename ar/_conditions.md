@@ -24,3 +24,27 @@ Always put the variable part on the left side of the statement, and the (un)expe
 When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a `@return` statement outside of any conditional block.
 
 {% include snippets/conditions/04/index.html %}
+
+
+
+لا بد وأنك تعرف أن Sass تعطيك ميزة الجملة الشرطية @if و @else ، إذا لم يكن لديك مشروع متوسط ومعقد ليس هناك حاجة لاستخدام هذه الجمل الشرطية، ولكن على أية حال إذا وجدت نفسك في حاجة لاستخدامها حبذا لو كتبتها بهذه الطريقة:
+* لا تستخدم الأقواس إلا اذا كانت مهمة
+* أضف سطر فارغاً قبل if
+* أضف سطراً فارغاً بعد الأفواق
+* كتابة else على نفس سطر الأقواس
+
+{% include snippets/conditions/01/index.html %}
+
+عند اختبار قيمة خاطئة، دائما استخدام كلمة not بدل أن تختبر من خلال وضع كلمة خاطئة أو null
+
+{% include snippets/conditions/02/index.html %}
+
+دائما ضع المتغير في اليسار، والقيمة غير المتوقعة ضعها في اليمين. على عكس ذلك سيكون من الصعوبة أن يقرأها المطور الذي لا يملك الخبرة الكافية
+{% include snippets/conditions/03/index.html %}
+
+When using conditional statements within a function to return a different result based on some condition, always make sure the function still has a @return statement outside of any conditional block.
+
+{% include snippets/conditions/04/index.html %}
+
+
+
