@@ -1,6 +1,6 @@
 <footer role="contentinfo" class="footer">
   <div class="container">
-    <p class="footer__metadata">&copy;&nbsp;{{ site.time | date: '%Y' }}&nbsp;&mdash;&nbsp;v{{ site.data[page.language].configuration.version }}</p>
+    <p class="footer__metadata">&copy;&nbsp;{{ site.time | date: '%Y' }}&nbsp;&mdash;&nbsp;v{{ site.data[page.language].configuration.version }} — <a href="https://creativecommons.org/licenses/by/4.0/deed.{{ page.language }}">CC BY 4.0</a></p>
     <div class="footer__authors">{{ site.data[page.language].translations.footer.content | markdownify }}</div>
   </div>
 </footer>
