@@ -7,18 +7,13 @@ Heureusement, l’un des principaux bénéfices de l’utilisation de préproces
 
 On n’insistera jamais assez sur la nécessité d’utiliser des dossiers, même sur des projets de dimension modeste. À la maison, vous ne rangez pas tous vos papiers dans la même boîte. Vous utilisez des dossiers&nbsp;: un pour les papiers de la maison, un pour la banque, un pour les factures, etc. Il en va de même lorsqu’on structure un projet CSS. Éclatez votre code en plusieurs dossiers qui font sens, de façon à retrouver ce que vous cherchez quand vous devez revenir sur le code.
 
-Il existe plusieurs architectures populaires pour les projets CSS&nbsp;: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](http://getbootstrap.com/) ou de [Foundation](http://foundation.zurb.com/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
+Il existe [plusieurs architectures populaires](http://www.sitepoint.com/look-different-sass-architectures/) pour les projets CSS&nbsp;: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](http://getbootstrap.com/) ou de [Foundation](http://foundation.zurb.com/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
 
 Personnellement j’utilise une approche assez similaire à [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
 
 <div class="note">
   <p>L’expérience m’a appris que l’architecture était la plupart du temps très spécifique au projet. Sentez-vous libre de rejeter complètement ou d’adapter la solution proposée —&nbsp;votre système doit répondre à vos besoins spécifiques.</p>
 </div>
-
-###### Lectures complémentaires
-
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 
 ## Composants
 
@@ -34,16 +29,36 @@ Par exemple, un formulaire de recherche devrait être traité comme un composant
 
 La plupart des éléments constituant une interface peuvent être pensés comme des composants et je recommande de se tenir à ce paradigme. Non seulement cela réduira le CSS nécessaire à un projet, mais encore ce sera bien plus facile à maintenir qu’un code chaotique et confus.
 
+## Anatomie d’un Composant
+
+Idéalement, les composants devraient exister dans leur propre fichier (dans le dossier `components/`, comme décrit dans la section dédiée [au pattern 7-1](#le-pattern-7-1)), par exemple `components/_button.scss`). Les styles décrits dans chaque composant devraient uniquement traiter :
+
+* du composant lui-même ;
+* des variantes du composant ainsi que de ses états ;
+* des descendants du composant (enfants) si nécessaire.
+
+Si vous souhaitez rendre vos composants personnalisables de façon externe (via un thème provenant du dossier `themes/` par exemple), limitez les déclarations aux styles structurels comme les dimensions (`width`, `height`), marges (`padding`, `margin`), alignements, etc. Évitez les styles graphiques comme les couleurs, ombres, fonds, règles de typographie, etc.
+
+Un fichier de composant peut inclurer des variables, placeholders et mêmes mixins et fonctions du moment que ceux-ci sont spécifiques au dit composant. Gardez à l’esprit cependant qu’il faut éviter de référencer (`@import`-er) un composant depuis un autre composant car cela peut rendre le projet extrêmement chaotique.
+
+Voilà un example de composant bouton :
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Merci à <a href="https://twitter.com/davidkpiano">David Khourshid</a> pour son aide et son expertise dans cette section.</p>
+</div>
+
 ## Le pattern 7-1
 
 Revenons à l’architecture. J’utilise habituellement ce que j’appelle le *pattern 7-1*&nbsp;: 7&nbsp;dossiers, 1&nbsp;fichier. Tous vos partiels regroupés dans 7&nbsp;dossiers différents et un fichier simple à la racine (généralement appelé `main.scss`) qui les importe tous pour les compiler dans une feuille de style CSS.
 
+* `abstracts/`
 * `base/`
 * `components/`
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
 * `vendors/`
 
 Et bien sûr&nbsp;:
@@ -125,9 +140,9 @@ Dans des sites ou applications de grande envergure, il n’est pas rare d’avoi
   <p>On est ici dans des considérations très spécifiques aux projets, et il est probable que ce dossier n’existera pas dans bien des cas.</p>
 </div>
 
-### Dossier utilitaires
+### Dossier d’Abstractions
 
-Le dossier `utils/` regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
+Le dossier `abstracts/` regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
 
 La règle générale concernant ce dossier est qu’il ne devrait pas retourner une seule ligne de CSS s’il était compilé seul. Ce ne sont ici que des helpers Sass.
 
@@ -137,7 +152,7 @@ La règle générale concernant ce dossier est qu’il ne devrait pas retourner 
 * `_placeholders.scss`
 
 <div class="note">
-  <p>Le dossier <code>utils/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
+  <p>Le dossier <code>abstracts/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
 </div>
 
 ### Dossier vendors
@@ -159,7 +174,7 @@ Le fichier principal (généralement appelé `main.scss`) devrait être le seul 
 
 Les fichiers doivent être importés en fonction du dossier dans lequel ils sont rangés, l’un après l’autre dans l’ordre suivant&nbsp;:
 
-1. `utils/`
+1. `abstracts/`
 1. `vendors/`
 1. `base/`
 1. `layout/`
@@ -192,12 +207,20 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
   <p>Ceci dit, je ne la recommande pas car elle importe les fichiers par ordre alphabétique ce qui n’est pas souhaitable en général, surtout s’agissant d’un langage dans lequel l’ordre des sources est essentiel.</p>
 </div>
 
+## À propos du “globbing”
+
+En informatique, les “glob patterns” spécifient des collections de noms de fichiers contenant des caractères dits “joker”, tels que `*.scss`. De manière générale, globbing signifie déterminer un ensemble de fichiers à partir d’une expression plutôt que via une liste de noms de fichier. Quand il s’agit de Sass, cela signifie importer des fichiers individuels dans le [fichier principal](#fichier-principal) avec un pattern plutôt qu’en les listant un par un. Cela donnerait un fichier principal comme celui-ci :
+
+{% include snippets/architecture/05/index.html %}
+
+Sass ne supporte pas le globbing par défaut car cela peut s’avérer dangereux dans la mesure où l’ordre de la source est important en CSS. En important les fichiers de manière dynamique (généralement par ordre alphabétique), on ne peut s’assurer de l’ordre de la source, ce qui peut engendrer des bugs difficiles à analyser.
+
+Ceci étant dit, dans une architecture strictement basée sur les composants où un soin tout particulier est apporté à l’encapsulation des styles, l’ordre ne devrait pas vraiment importer, ce qui rend le globbing possible. Cela permettrait de faciliter l’ajout et le retrait des fichiers sans avoir à maintenir le fichier principal à la main.
+
+Avec Ruby Sass, il existe une Gem Ruby appelée [sass-globbing](https://github.com/chriseppstein/sass-globbing) qui autorise ce comportement. Avec node-sass, on peut s’appuyer sur Node.js ou l’outil gérant la compilation des feuilles de styles (Gulp, Grunt, etc.).
+
 ## Fichier de la honte
 
-Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) et [Chris Coyier](http://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un *fichier de la honte*. Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
+Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) et [Chris Coyier](http://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un [fichier de la honte](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
 
 {% include snippets/architecture/04/index.html %}
-
-###### Lectures complémentaires
-
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
