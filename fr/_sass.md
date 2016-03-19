@@ -33,7 +33,7 @@ Depuis lors, Sass (le préprocesseur) propose [deux syntaxes](http://www.sitepoi
 
 La syntaxe de Sass repose sur l’indentation pour se débarrasser des accolades, des points-virgules et autres symboles de ponctuation, ce qui produit une syntaxe allégée et raccourcie. De son côté, SCSS est plus facile à apprendre puisqu’il repose sur la syntaxe CSS à laquelle il ne fait qu’ajouter quelques fonctionnalités.
 
-Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus accessible aux développeurs. C’est pourquoi SCSS est la syntaxe par défaut tout au long de ce document. Si vous préférez la syntaxe Sass indentée, vous pouvez choisir cette option dans le <button type="button" data-modal-show="options-panel" class="link-like">panneau des options</button>.
+Personnellement, je préfère SCSS parce qu’il est plus proche de CSS et plus accessible aux développeurs. C’est pourquoi SCSS est la syntaxe par défaut tout au long de ce document. Si vous préférez la syntaxe Sass indentée, vous pouvez choisir cette option dans le <button type="button" data-a11y-dialog-show="options-panel" class="link-like">panneau des options</button>.
 
 ## Autres préprocesseurs
 

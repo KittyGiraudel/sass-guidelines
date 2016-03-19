@@ -42,7 +42,7 @@ Seitdem bietet Sass (der Präprozessor) zwei verschiedene Syntaxen an: Sass ([ni
 
 Sass' Leerzeichenempfindliche Syntax beruht auf Einrückung um geschweifte Klammern, Semikolons und andere Zeichensetzung entfernen zu können. Das führt zu einer schlankeren und kürzeren Syntax. Währenddessen ist SCSS einfacher zu erlernen, da es überwiegend nur Kleinigkeiten zu CSS hinzufügt.
 
-Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freundlicher für die meisten Entwickler ist. Von daher wird SCSS auch der Standard in den gesamten Guidelines sein. Du kannst jedoch zur Sass Syntax in den <button type="button" data-modal-show="options-panel" class="link-like">Optionen</button> wechseln.
+Ich selber ziehe SCSS gegenüber Sass vor, weil es näher an CSS liegt und freundlicher für die meisten Entwickler ist. Von daher wird SCSS auch der Standard in den gesamten Guidelines sein. Du kannst jedoch zur Sass Syntax in den <button type="button" data-a11y-dialog-show="options-panel" class="link-like">Optionen</button> wechseln.
 
 ###### Weitere Informationen
 
