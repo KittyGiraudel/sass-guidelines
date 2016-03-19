@@ -27,7 +27,7 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
 
 <div class="note">
   <p>Évidemment, c’est un gestionnaire de points de rupture assez simpliste, si vous avez besoin d’un gestionnaire plus permissif, et si vous ne voulez pas réinventer la roue, je vous recommande <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a> qui ont fait leurs preuves.</p>
-  <p>Si vous souhaitez lire davantage sur les façons d’aborder les Media Queries en Sass, <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (via votre serviteur) et <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> ont de très beaux articles.</p>
+  <p>Si vous souhaitez en savoir davantage sur les façons d’aborder les Media Queries en Sass, <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (via votre serviteur) et <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> proposent de très beaux articles.</p>
 </div>
 
 ## Utilisation des Media Queries

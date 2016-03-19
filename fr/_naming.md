@@ -33,7 +33,7 @@ Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné �
 
 {% include snippets/naming/03/index.html %}
 
-[Kaelig](http://kaelig.fr) a [un super article à propos du namespace global de CSS](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), si jamais le sujet vous passione !
+[Kaelig](http://kaelig.fr) a [un super article à propos du namespace global de CSS](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), si jamais le sujet vous passionne !
 
 <div class="note">
   <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d’&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>

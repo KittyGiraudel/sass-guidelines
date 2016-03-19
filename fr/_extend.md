@@ -32,13 +32,11 @@ Vous ne devez étendre que des sélecteurs faisant partie du même cadre de méd
 
 {% include snippets/extend/02/index.html %}
 
-Les opinions semblent très divisées vis à vis des avantages et inconvénients de `@extend`, au point où de nombreux développers (moi y compris) préconisent de ne pas l’utiliser, comme vous pouvez le lire dans ces articles :
+Les opinions semblent très divisées vis à vis des avantages et inconvénients de `@extend`, et de nombreux développeurs (moi y compris) préconisent de ne pas l’utiliser, comme vous pouvez le lire dans ces articles :
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-
-That being said and to sum up, I would advise to use `@extend` only for maintaining relationships within selectors. If two selectors are characteristically similar, that is the perfect use-case for `@extend`. If they are unrelated but share some rules, a `@mixin` might suit you better. More on how to choose between the two in this [write-up](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 Ceci étant dit et pour résumer, il est recommandé d’utiliser `@extend` exclusivement pour maintenir des relations entre les sélecteurs. Si deux sélecteurs ont des caractéristiques similaires, il y a là un cas d’utilisation typique pour `@extend`. S’ils n’ont rien à voir mais partagent quelques déclarations, un `@mixin` est probablement plus approprié. Davantage d’information sur leurs différences dans [cet article](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 

@@ -224,7 +224,7 @@ Illustration :
 
 {% include snippets/syntax/21/index.html %}
 
-Les écrits à propos des maps sont légions tant cette fonctionnalité était attendue. En voilà 3 que je recommande : [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
+Les écrits à propos des maps sont légions tant cette fonctionnalité était attendue. En voici 3 que je recommande : [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Ensemble de règles CSS
 
