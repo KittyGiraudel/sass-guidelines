@@ -44,4 +44,5 @@ compress_html:
   comments: ["<!-- ", " -->"]
   endings: []
   blanklines: false
+  profile: false
   startings: []
