@@ -23,12 +23,12 @@
     "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "clean-css": "^3.4.9",
+    "clean-css": "^3.4.10",
     "criticalcss": "^1.0.1",
     "rollup": "^0.25.4",
     "semistandard": "^7.0.5",
     "spritesh": "^1.0.10",
-    "svgo": "^0.6.1",
-    "uglify-js": "^2.4.15"
+    "svgo": "^0.6.3",
+    "uglify-js": "^2.6.2"
   }
 }
