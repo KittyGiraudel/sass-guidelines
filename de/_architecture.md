@@ -31,7 +31,7 @@ Die meisten Interfaces können als Set aus kleinen Komponenten gesehen werden. I
 
 ## Komponentenstruktur
 
-Idealerweise sollten Komponenten in einem eigenen Sass Partial (innerhalb des `components/` Ordner, wie beschrieben in dem [7-1 Muster](#the-7-1-pattern)) wie `components/_button.scss` existieren. Die Styles innerhalb einer Komponente sollten sich lediglich um folgendes kümmern:
+Idealerweise sollten Komponenten in einem eigenen Sass Partial (innerhalb des `components/` Ordner, wie beschrieben in dem [7-1 Muster](#das-7-1-muster)) wie `components/_button.scss` existieren. Die Styles innerhalb einer Komponente sollten sich lediglich um folgendes kümmern:
 
 * die Styles der Komponente selbst;
 * die Styles der Varianten, Modifizierungen und/oder Zustände der Komponente;
@@ -206,7 +206,7 @@ Es gibt noch einen weiteren Weg um die Datei zu strukturieren, welchen ich ebenf
 
 ## Über Globbing
 
-In der Computerprogrammierung spezifizieren sogenannte Glob-Muster ein Set von Dateinamen, wie z.B. `*.scss`, mit Wildcard-Zeichen. Allgemein gesagt bedeutet es, dass Globbing ein Set nach einem Ausdruck anstatt einer Liste von Dateinnamen umfasst. Wenn das ganze auf Sass angewandt wird, bedeutet es dass Partials nach einem Glob-Muster in die [Main Datei](#main-file) importiert und nicht individuell aufgelistet werden. Das führt zu folgender Main Datei:
+In der Computerprogrammierung spezifizieren sogenannte Glob-Muster ein Set von Dateinamen, wie z.B. `*.scss`, mit Wildcard-Zeichen. Allgemein gesagt bedeutet es, dass Globbing ein Set nach einem Ausdruck anstatt einer Liste von Dateinnamen umfasst. Wenn das ganze auf Sass angewandt wird, bedeutet es dass Partials nach einem Glob-Muster in die [Main Datei](#main-datei) importiert und nicht individuell aufgelistet werden. Das führt zu folgender Main Datei:
 
 {% include snippets/architecture/05/index.html %}
 
