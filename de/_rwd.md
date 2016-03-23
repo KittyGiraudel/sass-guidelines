@@ -1,4 +1,4 @@
- 
+
 # Responsive Webdesign und Breakpoints
 
 Ich denke nicht das wir groß über Responsive Webdesign sprechen müssen, wo es mittlerweile überall zu finden ist. Dennoch fragst du dich bestimmt, *warum gibt es eine RWD Sektion in einem Sass Styleguide*? Eigentlich gibt es ein paar Dinge die getan werden können um die Benutzung von Breakpoints einfach zu machen, deshalb dachte ich es wäre garkeine schlechte Idee sie hier aufzulisten.
@@ -11,17 +11,13 @@ Aus demselben Grund sollten Breakpoints nicht nach einem Endgerät, sondern allg
 
 {% include snippets/rwd/01/index.html %}
 
-An diesem Punkt wird jede Namenskonvention, die klar macht dass ein Design nicht auf einen bestimmten Gerätetyp zugeschnitten ist, den Zweck erfüllen. Solange sie die Größenordnung erraten lässt.
+An diesem Punkt wird [jede Namenskonvention](http://css-tricks.com/naming-media-queries/), die klar macht dass ein Design nicht auf einen bestimmten Gerätetyp zugeschnitten ist, den Zweck erfüllen. Solange sie die Größenordnung erraten lässt.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>Das vorige Beispiel verwendet verschachtelte Maps um Breakpoints zu definieren, wie auch immer, das hängt ganz davon ab was für eine Art von Breakpointmanager du verwendest. Du könntest für eine bessere Flexibilität genauso gut Strings (z.B. <code>'(min-width: 800px)'</code>) anstatt Maps verwenden.</p>
 </div>
-
-###### Weitere Informationen
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Breakpoint-Manager
 
@@ -31,12 +27,8 @@ Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg
 
 <div class="note">
   <p>Das ist natürlich ein ziemlich einfacher Breakpoint-Manager. Falls du einen etwas toleranteren brauchst, kann ich dir nur empfehlen das Rad nicht neu zu erfinden und dir <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> oder <a href="https://github.com/eduardoboucas/include-media">include-media</a> anzuschauen.</p>
+  <p>Falls du mehr über Media-Queries in Sass erfahren möchtest, haben <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> und <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> gute Artikel dazu.</p>
 </div>
-
-###### Weitere Informationen
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## Media Queries verwenden
 
@@ -51,12 +43,6 @@ Führt zu folgenden CSS:
 Du hast vielleicht schon gehört dass diese Konvention duplizierte Media Queries im CSS generiert. Das ist auf jedenfall richtig. Dennoch, [es wurde getestet](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) und das Ergebnis ist dass es keinen Unterschied macht sobald Gzip (oder ähnliches) seine Arbeit leistet:
 
 > … wir haben den Test gemacht ob es Konsequenzen bei der Performance gibt, wenn Media Queries kombiniert oder zerstreut werden und sind zu dem Ergebnis gekommen dass der Unterschied, wenn auch hässlich, im schlimmsten Fall nur minimal und im besten Fall nicht existent ist.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), bezüglich [Breakpoint](http://breakpoint-sass.com/)
+> &mdash; [Sam Richards, bezüglich Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
 Falls du also wirklich besorgt um duplizierte Media Queries bist, kannst du immer noch [ein Tool](https://github.com/aaronjensen/sass-media_query_combiner) zum zusammenfügen verwenden. Dennoch hab ich das Gefühl, ich muss dich vor möglichen Nebeneffekten wie verschobenes CSS warnen. Denn auch die Reihenfolge in CSS ist wichtig.
-
-###### Weitere Informationen
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

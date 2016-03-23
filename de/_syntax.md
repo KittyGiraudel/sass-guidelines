@@ -14,12 +14,10 @@ Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](http://cssguid
 
 {% include snippets/syntax/01/index.html %}
 
-Wir werden uns hier noch nicht der Dateiorganisation widmen, das ist Thema in einer [anderen Kategorie](#architektur).
-
 ## Strings
 
-Ob du es glaubst oder nicht, Strings spielen eine große Rolle in CSS und Sass. Die meisten Werte in CSS sind entweder Zahlen oder Strings (meist ohne Anführungszeichen). Deshalb ist es wichtig sich an gewisse Guidelines zu halten, wenn Strings in Sass verwendet werden.
- 
+Ob du es glaubst oder nicht, Strings spielen eine große Rolle in CSS und Sass. Die meisten Werte in CSS sind entweder Zahlen oder Identifikatoren. Deshalb ist es wichtig sich an gewisse Guidelines zu halten, wenn Strings in Sass verwendet werden.
+
 ### Encoding
 
 Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-8](http://de.wikipedia.org/wiki/UTF-8) durch die `@charset` Regel im [Main Stylesheet](#main-datei) zu erzwingen. Versicher dich, dass es die allererste Regel in deinem Stylesheet ist, und nichts davor kommt.
@@ -47,7 +45,7 @@ Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen z
 
 ### Strings als CSS Werte
 
-Bestimmte CSS Werte wie `initial` oder `sans-serif` müssen nicht in Anführungszeichen stehen. Tatsächlich wird CSS unbemerkt versagen, wenn `font-family: 'sans-serif'` benutzt wird, da es einen Identifier erwartet und keinen String. Deshalb setzen wir diese Werte nicht in Anführungszeichen.
+Bestimmte CSS Werte (Identifikatoren) wie `initial` oder `sans-serif` müssen nicht in Anführungszeichen stehen. Tatsächlich wird CSS unbemerkt versagen, wenn `font-family: 'sans-serif'` benutzt wird, da es einen Identifier erwartet und keinen String. Deshalb setzen wir diese Werte nicht in Anführungszeichen.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -57,7 +55,7 @@ Wir setzen ersteres nicht in Anführungszeichen, aber letzteres in einfache.
 
 ### Strings die Anführungszeichen beinhalten
 
-Wenn ein String mehrere einfache Anführungszeichen beinhaltet, mag man drüber nachdenken diese in doppelte (`"`) zu setzen, um zu vermeiden zu viele Zeichen escapen zu müssen.
+Wenn ein String mehrere einfache Anführungszeichen beinhaltet, mag man drüber nachdenken diese in doppelte (`"`) zu setzen, um zu vermeiden Zeichen escapen zu müssen.
 
 {% include snippets/syntax/05/index.html %}
 
@@ -66,11 +64,6 @@ Wenn ein String mehrere einfache Anführungszeichen beinhaltet, mag man drüber 
 URLs sollten aus denselben Gründen wie oben in Anführungszeichen gesetzt werden:
 
 {% include snippets/syntax/06/index.html %}
-
-###### Weitere Informationen
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Zahlen
 
@@ -102,7 +95,7 @@ Um eine Einheit zu einer Zahl hinzuzufügen, musst du diese Zahl mit *einer Einh
 
 {% include snippets/syntax/09/index.html %}
 
-Einen *0 Wert der Einheit* hinzuzufügen funktioniert ebenfalls, aber ich empfehle eher die obrige Methode da es sonst etwas verwirrend ist. Wenn du versuchst eine Zahl in eine andere kompatible Einheit zu konvertieren, wird 0 hinzuzufügen nicht klappen.
+Einen *0 Wert der Einheit* hinzuzufügen funktioniert ebenfalls, aber ich empfehle eher die obrige Methode da es sonst etwas verwirrend ist. Wenn du versuchst eine Zahl in eine andere kompatible Einheit zu konvertieren, wird 0 hinzuzufügen nicht klappen. Mehr dazu [in diesem Artikel](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -112,7 +105,7 @@ Um die Einheit von einem Wert zu entfernen, musst du es um *eine Einheit seiner 
 
 {% include snippets/syntax/11/index.html %}
 
-Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst.
+Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst. [Benutze Längen, keine Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Berechnungen
 
@@ -128,16 +121,17 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 {% include snippets/syntax/13/index.html %}
 
-###### Weitere Informationen
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+Zu dem Thema hat CSS-Tricks einen [hervoragenden Artikel](http://css-tricks.com/magic-numbers-in-css/) über magische Zahlen in CSS den ich dir nur empfehlen kann.
 
 ## Farben
 
 Farben nehmen einen wichtigen Platz in der CSS Sprache ein. Normalerweise ist Sass ein wertvoller Verbündeter wenn es darum geht Farben zu manipulieren. Meistens dadurch [mächtige Funktionen](http://sass-lang.com/documentation/Sass/Script/Functions.html) bereit zu stellen.
+
+Sass ist so nützlich Farben zu manipulieren dass das Internet voller Artikel über das Thema aufblüht. Lass mich ein paar Artikel empfehlen:
+
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Farbformate
 
@@ -151,7 +145,7 @@ CSS Farbkeywords sollten nur für schnelles Prototyping verwendet werden. Es sin
 
 Der HSL-Farbraum ist nicht nur am einfachsten für das menschliche Gehirn zu verstehen<sup>[Zitat benötigt]</sup>, sondern er macht es außerdem ziemlich leicht für Stylesheet-Autoren Farben durchs anpassen des Farbton, der Sättigung und Helligkeit zu optimieren.
 
-RGB hingegen hat immernoch den Vorteil direkt zu zeigen ob eine Farbe mehr in Richtung Blau, Grün oder Rot geht. Es ist jedoch nicht einfach eine Farbe aus den drei Komponenten zu erstellen. 
+RGB hingegen hat immernoch den Vorteil direkt zu zeigen ob eine Farbe mehr in Richtung Blau, Grün oder Rot geht. Es ist jedoch nicht einfach eine Farbe aus den drei Komponenten zu erstellen.
 
 Zuletzt, Hexadezimale Darstellung ist schwer lesbar für das menschliche Gedächtnis.
 
@@ -171,7 +165,7 @@ Nun kannst du die Variable überall verwenden wo du willst. Wenn du aber stark a
 
 {% include snippets/syntax/17/index.html %}
 
-Dadurch verhinderst du auch bei einem Themewechsel etwas wie `$sass-pink: blue` machen zu müssen.
+Dadurch verhinderst du auch bei einem Themewechsel etwas wie `$sass-pink: blue` machen zu müssen. [Dieser Artikel](http://davidwalsh.name/sass-color-variables-dont-suck) erledigt einen guten Job darin zu erklären weshalb es wichtig ist deine Farbvariablen durchzudenken.
 
 ### Farben aufhellen und verdunkeln
 
@@ -190,14 +184,6 @@ Wenn du nicht jedesmal die `mix` Funktion schreiben möchtest, kannst du dir auc
 <div class="note">
   <p>Die <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> Funktion ist entworfen worden, um Werte flüssiger zu skalieren indem sie berücksichtigt wie hell oder dunkel sie bereits sind. Sie sollte Ergebnisse liefern, die genauso gut wie <code>mix</code> sind, aber mit einer eindeutigeren Aufrufkonvention. Der Skalierfaktor ist dennoch nicht derselbe.</p>
 </div>
-
-###### Weitere Informationen
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## Listen
 
@@ -219,12 +205,11 @@ Wenn neue Inhalte zu einer Liste hinzugefügt werden sollen, dann verwende immer
 
 ###### Weitere Informationen
 
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
++In [diesem Artikel](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/) gehe ich durch eine Menge Tipps und Tricks wie man Listen in Sass korrekt benutzt und manipuliert.
 
 ## Maps
 
-Seit Sass 3.3, können Stylesheet Autoren sogenannte Maps definieren &mdash; der Sass Term für assoziative Arrays, Hashes oder sogar JavaScript Objects. Eine Map ist eine Datenstruktur zugeordneter Keys (das kann jeder Typ, einschließlich Maps sein, was ich aber nicht empfehle) mit Werten von jedem Typ. 
+Mit Sass können Stylesheet Autoren sogenannte Maps definieren — der Sass Term für assoziative Arrays, Hashes oder sogar JavaScript Objects. Eine Map ist eine Datenstruktur welche Keys mit Werten vereinigt. Keys und Werte können von jedem Typ, einschließlich Maps, sein. Ich empfehle aber nicht solch komplexe Datentypen als Map-Keys zu verwenden, nur weil es möglich ist.
 
 Maps sollten folgendermaßen geschrieben werden:
 
@@ -241,17 +226,7 @@ Illustration:
 
 {% include snippets/syntax/21/index.html %}
 
-###### Weitere Informationen
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+Artikel über Sass Maps zeigen wie lang ersehnt dieses Feature war. Ich kann diese 3 Artikel empfehlen: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## CSS Regelwerk
 
@@ -281,10 +256,6 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Weitere Informationen
-
-* [Anatomy of a Regelwerk](http://cssguidelin.es/#anatomy-of-a-Regelwerk)
-
 ## Anordnung der Deklarationen
 
 Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander gehen als bei der Anordnung von Deklarationen in CSS. Konkret gibt es zwei Fraktionen:
@@ -313,11 +284,6 @@ Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was 
 <div class="note">
   <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
-
-###### Weitere Informationen
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Verschachtelung von Selektoren
 
@@ -351,7 +317,9 @@ Das Problem mit dem Verschachteln von Selektoren ist, dass es den Code unheimlic
 
 Die Aussage gewinnt an Relevanz, sobald Selektoren immer länger werden und die Verwendung von (`&`) häufiger. Ab einem gewissen Punkt, ist das Risiko nicht mehr zu verstehen was passiert zu hoch und es nicht wert.
 
-Um dem ganzen also Vorzubeugen, **vermeiden wir Selektoren zu verschachteln so viel wie möglich**. Natürlich gibt es aber auch hier ein paar Ausnahmen.
+Um dem ganzen also Vorzubeugen, haben wir ein paar Jahre zurück viel über [die Inception-Regel](http://thesassway.com/beginner/the-inception-rule) gesprochen. Es wird nicht empfohlen mehr als 3 Ebenen tief zu verschachteln, als Referenz zu dem Film Inception von Christopher Nolan. Ich würde drastischer sein und es **vermeiden so viel wie möglich Selektoren zu verschachteln**.
+
+Es gibt selbsverständlich ein paar Ausnahmen zu dieser Regel wie wir in der nächsten Sektion sehen werden. Diese Meinung scheint ziemlich beliebt zu sein. Du kannst mehr darüber in [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) und [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css) lesen.
 
 ### Ausnahmen
 
@@ -369,18 +337,4 @@ Zu guter Letzt, wenn ein Element gestaltet werden muss weil es innerhalb eines w
 
 {% include snippets/syntax/35/index.html %}
 
-Wenn man mit unerfahrenden Entwicklern arbeitet, mögen Selektoren wie `.no-opacity &` ein bisschen komisch aussehen. Um jeder Verwirrung vorzubeugen, kannst du ein wirklich kurzes Mixin schreiben welches die Syntax in eine explizite API umwandelt.
-
-{% include snippets/syntax/36/index.html %}
-
-Wenn wir also unser voriges Beispiel umschreiben, würde es wie folgt aussehen:
-
-{% include snippets/syntax/37/index.html %}
-
 Wie mit allem, ist dieser spezifische Fall irgendwie irrelevant, denn wichtig ist Konsistenz. Wenn du dich also absolut okay mit Verschachtelung von Selektoren fühlst, dann mach es so. Versicher dich nur das auch dein ganzes Team damit einverstanden ist.
-
-###### Weitere Informationen
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

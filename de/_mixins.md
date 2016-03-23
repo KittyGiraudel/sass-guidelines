@@ -17,10 +17,7 @@ Ein weiteres Beispiel ist ein Mixin welches die Maße `width` und `height` für 
 
 {% include snippets/mixins/02/index.html %}
 
-###### Weitere Informationen
-
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+Für weitere komplexe Beispiele von Mixing, werf einen Blick auf [dieses Mixin um CSS Dreiecke zu generieren]((http://www.sitepoint.com/sass-mixin-css-triangles/), [dieses Mixin für lange Schatten](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) oder um [CSS Verläufe für alte Browser zu polyfillen](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Parameterlose Mixins
 
@@ -42,9 +39,7 @@ Sass ist sogar ziemlich Clever bei Mixin- und Funktionsdeklarationen. So sehr da
 
 {% include snippets/mixins/04/index.html %}
 
-###### Weitere Informationen
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+Für weitere Informationen ob es besser ist mehrere Argumente, eine Liste oder eine Arguementenliste zu werdenen, [hat SitePoint einen netten Artikel zu dem Thema](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins und Vendor-Prefixe
 
@@ -65,7 +60,3 @@ Das Mixin zu verwenden sollte ziemlich unkompliziert sein:
 {% include snippets/mixins/07/index.html %}
 
 Bitte merk dir dass das eine wirklich schlechte Umsetzung ist. Zum Beispiel kann es nicht mit komplexen Polyfills, wie für Flexbox nötig, umgehen. In dem Fall ist Autoprefixer die bessere Wahl.
-
-###### Weitere Informationen
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

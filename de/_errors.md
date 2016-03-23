@@ -11,12 +11,6 @@ Lasst uns `@debug` mal zur Seite stellen, da es dazu vorgesehen ist SassScript z
 
 Es gibt eine Menge Spielraum für Warnungen und Fehler in einem Sass Projekt. Grundsätzlich kann jedes Mixin oder Funktion, welche einen bestimmten Typ von Parameter akzeptiert, einen Fehler anzeigen sobald etwas schief geht oder eine Warnung wenn eine Vermutung angestellt wird.
 
-###### Weitere Informationen
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## Warnungen
 
 Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche versucht einen `px`-Wert in `em` umzuwandeln, als Beispiel:
@@ -32,3 +26,5 @@ Fehler, im Gegenteil zu Warnungen, hindern den Compiler dabei weiter zu machen. 
 Lass uns als Beispiel annehmen dass du eine Getter-Funktion hast um Werte aus einer bestimmten Map zu erreichen. Du könntest einen Fehler anzeigen wenn der angeforderte Key in der Map nicht existiert.
 
 {% include snippets/errors/02/index.html %}
+
+Für weitere Informationen wie `@error` effizient zu verwenden ist, sollte [diese Einführung über Error-Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) weiterhelfen.

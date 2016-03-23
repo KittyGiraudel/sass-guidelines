@@ -29,7 +29,7 @@ Wenn eine Library, ein Framework, ein Gridsystem oder irgendwas anders in Sass v
 
 {% include snippets/variables/02/index.html %}
 
-Dadurch ist es einem Entwicker möglich, seine eigene `$baseline` Variable *vor* dem importieren deiner Library zu defineren, ohne dass sie überschrieben wird.
+Dadurch ist es einem Entwicker möglich, eigene `$baseline` Variable *vor* dem importieren deiner Library zu defineren, ohne dass sie überschrieben wird.
 
 {% include snippets/variables/03/index.html %}
 
