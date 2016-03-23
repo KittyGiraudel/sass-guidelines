@@ -7,7 +7,7 @@ Zum Glück ist einer der Hauptvorteile eines CSS Präprozessor der, eine Codebas
 
 Darüber hinaus kann ich nicht oft genug erwähnen, wie wichtig es selbst in kleinen Projekten ist, Ordner zu verwenden. Zu Hause wirfst du schließlich auch nicht jedes Blatt Papier in eine große Kiste. Du ordnest sie; einen Ordner für die Wohnung, einen anderen für die Bank, in den nächsten kommen Rechnungen, und so weiter. Deshalb gibt es auch keinen Grund es mit der Struktur deines CSS anders zu machen. Teile es in verschiedene Ordner auf, sodass du dich später, wenn du zurück in das Projekt kommst, leicht zurecht findest.
 
-Es gibt [viele beliebte Architekturen](http://www.sitepoint.com/look-different-sass-architectures/) für CSS Projekte: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) sowie ein [Bootstrap](http://getbootstrap.com/) und [Foundation](http://foundation.zurb.com/) ähnliches... alle mit ihren Vor- und Nachteilen.
+Es gibt [viele beliebte Architekturen](http://www.sitepoint.com/look-different-sass-architectures/) für CSS Projekte: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) sowie ein [Bootstrap](http://getbootstrap.com/) und [Foundation](http://foundation.zurb.com/) ähnliches… alle mit ihren Vor- und Nachteilen.
 
 Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jonathan Snook](http://snook.ca/), welcher sich darauf fokusiert etwas einfach und offensichtlich zu halten.
 
@@ -53,12 +53,12 @@ Hier ist ein Beispiel eines Button-Komponenten Partial:
 
 Zurück zur Architektur, oder? Ich arbeite normalerweise mit einem Muster was ich *7-1* nenne: 7 Ordner, 1 Datei. Grundsätzlich hast du all deine partials in 7 verschiedenen Ordnern verteilt, und eine Datei auf dem Root-Level (normalerweise `main.scss`) importiert und kompiliert alles zu einem Stylesheet.
 
+* `abstracts/`
 * `base/`
 * `components/`
 * `layout/`
 * `pages/`
 * `themes/`
-* `abstracts/`
 * `vendors/`
 
 Und natürlich:
@@ -66,7 +66,7 @@ Und natürlich:
 * `main.scss`
 
 <div class="note">
-	<p>Wenn du das 7-1 Muster verwenden möchtest, gibt es bereits ein <a href="https://github.com/HugoGiraudel/sass-boilerplate">Boilerplate</a> auf GitHub. Es sollte alles nötige beinhalten um mit der Architektur zu starten.</p>
+  <p>Wenn du das 7-1 Muster verwenden möchtest, gibt es bereits ein <a href="https://github.com/HugoGiraudel/sass-boilerplate">Boilerplate</a> auf GitHub. Es sollte alles nötige beinhalten um mit der Architektur zu starten.</p>
 </div>
 
 {% include images/wallpaper.html %}
@@ -76,7 +76,7 @@ Idealerweise haben wir am Ende etwas wie:
 {% include snippets/architecture/01/index.html %}
 
 <div class="note">
-	<p>Die Dateien sollten einer mit Bindestrich getrennten Namenskonvention folgen.</p>
+  <p>Die Dateien sollten einer mit Bindestrich getrennten Namenskonvention folgen.</p>
 </div>
 
 ### Base Ordner
@@ -88,7 +88,7 @@ Der `base/` Ordner beinhaltet etwas wie das Boilerplate des Projekts. Da wird ei
 * `_typography.scss`
 
 <div class="note">
-	<p>Falls dein Projekt <em>eine Menge</em> CSS Animationen verwendet, kannst du dir überlegen eine <code>\_animations.scss</code> mit allen <code>@keyframes</code> Definitionen von deiner Animationen hinzuzufügen. Falls du sie aber nur sporadisch benutzt, würde ich sie bei den jeweiligen Selektoren behalten.</p>
+  <p>Falls dein Projekt <em>eine Menge</em> CSS Animationen verwendet, kannst du dir überlegen eine <code>\_animations.scss</code> mit allen <code>@keyframes</code> Definitionen von deiner Animationen hinzuzufügen. Falls du sie aber nur sporadisch benutzt, würde ich sie bei den jeweiligen Selektoren behalten.</p>
 </div>
 
 ### Layout Ordner
@@ -103,7 +103,7 @@ Im `layout/` Ordner ist alles was für die Seite oder Applikation als Design def
 * `_navigation.scss`
 
 <div class="note">
-	<p>Der <code>layout/</code> Ordner kann auch <code>partials/</code> genannt werden, je nachdem was du vorziehst.</p>
+  <p>Der <code>layout/</code> Ordner kann auch <code>partials/</code> genannt werden, je nachdem was du vorziehst.</p>
 </div>
 
 ### Components Ordner
@@ -215,7 +215,7 @@ Sass untersützt Datei Globbing nicht von Haus aus, da es aufgrund der Befehlsab
 In einer strikten, komponentenbasierten Architektur mit extra Rücksicht keine Styles von Partial zu Partial entweichen zu lassen, sollte die Reihenfolge nicht mehr wirklich wichtig sein, und erlauben das Glob-Muster zum importieren zu verwenden. Das macht es einfacher Partials hinzuzufügen oder zu entfernen ohne jedesmal sorgfältig die Main Datei aktualisieren zu müssen.
 
 <div class="note">
-   <p>Um nicht jede Datei manuell zu importieren, gibt es die Erweiterung für Ruby Sass namens [sass-globbing](https://github.com/chriseppstein/sass-globbing) welche es ermöglicht das Glob-Muster in Sass zu <code>@import</code>-en wie z.B. <code>@import "components/\*"</code>.</p>
+  <p>Um nicht jede Datei manuell zu importieren, gibt es die Erweiterung für Ruby Sass namens [sass-globbing](https://github.com/chriseppstein/sass-globbing) welche es ermöglicht das Glob-Muster in Sass zu <code>@import</code>-en wie z.B. <code>@import "components/\*"</code>.</p>
    <p>Ich würde es allerdings nicht empfehlen, da es nach alphabetischer Ordnung importiert was in der Regel nicht gewollt ist, besonders wenn man es mit einer Sprache zu tun hat die Abhängig von der Quellreihenfolge ist.</p>
 </div>
 

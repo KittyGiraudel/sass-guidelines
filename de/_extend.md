@@ -25,7 +25,7 @@ Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. T
 * Vermeide es allgemeine Vorfahren eines Selektors (z.B. `.foo .bar`) oder allgemeine Geschwister eines Selektor (z.B. `.foo ~ .bar`) zu erweitern. Genau das erzeugt eine Explosion von Selektoren.
 
 <div class="note">
-	<p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
+  <p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
 	<p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
 </div>
 
@@ -44,5 +44,5 @@ Meinungen scheinen über die Vor- und Nachteile von `@extend` scheinen extrem we
 Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhalb von Selektoren zu pflegen. Wenn zwei Selektoren charakteristisch gleich sind, ist es der perfekte Anwendungsfall für `@extend`. Wenn sie jedoch ohne Beziehung zueinander stehen, aber gleiche Regeln teilen dann passt ein `@mixin` besser. Mehr dazu wie man sich zwischen diesen beiden entscheidet findest du in dieser [Ausarbeitung](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
-	<p>Danke an <a href="https://twitter.com/davidkpiano">David Khourshid</a> für die Hilfe und Expertise in diesem Bereich.</p>
+  <p>Danke an <a href="https://twitter.com/davidkpiano">David Khourshid</a> für die Hilfe und Expertise in diesem Bereich.</p>
 </div>

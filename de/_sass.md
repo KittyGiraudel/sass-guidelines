@@ -54,5 +54,5 @@ Das ist unglaublich mächtig und großartig um Libraries, die mit irgendeinen Pr
 Um es um kurz zu halten, Sass ist einigermaßen einfach und wird die meisten deiner Probleme lösen. Auf der anderen Seiten kann PostCSS schwierig sein (falls du nicht all zu gut in JavaScript bist), sich aber als extrem mächtig herausstellen. Es gibt keinen Grund weshalb du beides nicht nutzen solltest oder könntest. Tatsächlich bietet PostCSS sogar einen offiziellen SCSS-Parser genau dafür an.
 
 <div class="note">
-   <p>Danke an <a href="https://github.com/corysimmons">Cory Simmons</a> für seine Erfahrung und Hilfe zu dieser Sektion.</p>
+  <p>Danke an <a href="https://github.com/corysimmons">Cory Simmons</a> für seine Erfahrung und Hilfe zu dieser Sektion.</p>
 </div>
