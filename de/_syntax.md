@@ -40,7 +40,7 @@ Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen z
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-	<p>Laut CSS Spezifikation, muss die <code>@charset</code> Regel mit doppelten Anführungszeichen deklariert werden um <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">valide</a> zu sein. Wie auch immer, Sass kümmert sich bereits darum wenn es CSS kompiliert, deswegen wird es kaum eine Auswirkung auf das Endergebnis haben. Deshalb kannst du ohne Probleme bei einfachen Anführungszeichen bleiben, selbst bei <code>@charset</code>.</p>
+  <p>Laut CSS Spezifikation, muss die <code>@charset</code> Regel mit doppelten Anführungszeichen deklariert werden um <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">valide</a> zu sein. Wie auch immer, Sass kümmert sich bereits darum wenn es CSS kompiliert, deswegen wird es kaum eine Auswirkung auf das Endergebnis haben. Deshalb kannst du ohne Probleme bei einfachen Anführungszeichen bleiben, selbst bei <code>@charset</code>.</p>
 </div>
 
 ### Strings als CSS Werte
@@ -76,7 +76,7 @@ Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, 
 {% include snippets/syntax/07/index.html %}
 
 <div class="note">
-	<p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code>\ 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
+  <p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code>\ 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
 </div>
 
 ### Einheiten
@@ -86,7 +86,7 @@ Wenn es um Längen geht, sollte eine `0` niemals eine weitere Einheit besitzen.
 {% include snippets/syntax/08/index.html %}
 
 <div class="note">
-	<p>Diese Praktik sollte nur bei Längen angewandt werden. Eine einheitenlose Null für Zeiteneinheiten wie <code>transition-delay</code> ist nicht erlaubt. Falls eine einheitenlose Null für eine Zeitdauer spezifiziert ist, sollte die Deklaration theoretischerweise als invalide erachtet und verworfen werden. Nicht alle Browser sind so strikt, aber manche. Langer Rede kurzer Sinn: Einheiten nur bei Längen weglassen.</p>
+  <p>Diese Praktik sollte nur bei Längen angewandt werden. Eine einheitenlose Null für Zeiteneinheiten wie <code>transition-delay</code> ist nicht erlaubt. Falls eine einheitenlose Null für eine Zeitdauer spezifiziert ist, sollte die Deklaration theoretischerweise als invalide erachtet und verworfen werden. Nicht alle Browser sind so strikt, aber manche. Langer Rede kurzer Sinn: Einheiten nur bei Längen weglassen.</p>
 </div>
 
 Der häufigste Fehler den ich mir bei Zahlen in Sass vorstellen kann, ist der Gedanke dass Einheiten einfach nur ein String sind, die man sicher zu jeder Zahl hinzufügen kann. Das klingt zwar richtig, ist aber nicht wie Einheiten funktionieren. Stell dir eine Einheit als ein algebraisches Symbol vor. Zum Beispiel in der echten Welt, ist 5 Zoll multipliziert mit 5 Zoll gleich 25 Quadratzoll. Nach derselben Logik geht Sass.

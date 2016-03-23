@@ -26,7 +26,7 @@ Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. T
 
 <div class="note">
   <p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
-	<p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
+  <p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
 </div>
 
 ## Extend und Media Queries

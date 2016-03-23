@@ -12,9 +12,9 @@ Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind
 <blockquote>
   <p>Ein Code Styleguide (kein visueller) ist ein wertvolles Werkzeug für Teams die:</p>
   <ul>
-  	 <li>ein Produkt über eine gewisse Zeit lang bauen und warten;</li>
-  	 <li>Entwickler mit unterschiedlichen Fähigkeiten und Spezialisierungen haben;</li>
-  	 <li>eine gewisse Anzahl von unterschiedlichen Entwicklern auf einem Produkt arbeiten haben;</li>
+    <li>ein Produkt über eine gewisse Zeit lang bauen und warten;</li>
+    <li>Entwickler mit unterschiedlichen Fähigkeiten und Spezialisierungen haben;</li>
+    <li>eine gewisse Anzahl von unterschiedlichen Entwicklern auf einem Produkt arbeiten haben;</li>
     <li>regelmäßig neue Mitarbeiter onboarden;</li>
     <li>mehrere Codebasen haben, indem Entwickler hin und herspringen;</li>
   </ul>
