@@ -1,5 +1,5 @@
 
-# About Sass
+# A proposito di Sass
 
 Questo è come [Sass](http://sass-lang.com) descrive se stesso e la propria[documentazione](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 

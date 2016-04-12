@@ -1,3 +1,4 @@
+
 # Iteratori
 
 Dato che Sass mette a disposizione strutture di dati complesse come [liste](#lists) e [mappe](#maps), non c'è da sorprendersi che ci siano strumenti per iterare all'interno di queste entità.
