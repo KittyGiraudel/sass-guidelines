@@ -35,16 +35,14 @@ Dovreste estendere i selettori solo all’interno della stessa _mediaquery_ (la 
 
 {% include snippets/extend/02/index.html %}
 
+Ci sono diverse opinioni riguardo i benefici e i problemi di `@extend` al punto che molti sviluppatori, incluso me, raccomandano di non usarla affatto. Puoi leggerne in questi articoli:
+
+* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+
 Per riassumere, consiglio di usare `@extend` solo per mantenere le relazioni tra selettori. Se due selettori hanno funzionalità simili, è il caso perfetto per usare `@extend`. Se invece condividono delle regole non correlate tra loro, un `@mixin` potrebbe fare al caso vostro.
 
 <div class="note">
   <p>Un grazie a <a href="https://twitter.com/davidkpiano">David Khourshid</a> per il suo aiuto ed esperienza in questa parte.</p>
 </div>
-
-###### Approfondimenti
-
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
-* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
