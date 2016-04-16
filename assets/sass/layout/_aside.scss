@@ -11,29 +11,23 @@
  * 2. Full width on small screens
  */
 .aside__content {
-  position: fixed; /* 1 */
-  top: 0; /* 1 */
-  right: 0; /* 1 */
-  bottom: 0; /* 1 */
-  z-index: 30;
-  width: 100%; /* 2 */
   background-color: rgb(255, 255, 255);
-
-  /**
-   * Fixed width on large screens
-   */
-  @include respond-to('medium') {
-    width: $sidebar-width;
-  }
+  bottom: 0; /* 1 */
+  max-width: 100%; /* 2 */
+  position: fixed; /* 1 */
+  right: 0; /* 1 */
+  top: 0; /* 1 */
+  width: $sidebar-width;
+  z-index: 30;
 }
 
 .aside__overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
+  background: rgba(0, 0, 0, 0.7);
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  right: 0;
+  top: 0;
   z-index: 20;
 }
 
@@ -50,37 +44,30 @@
  * Sub-sections from options panel
  */
 .aside__section {
-  padding: 1rem;
   border-bottom: 1px solid $light-grey;
+  padding: 1rem;
 }
 
 /**
  * Main title from options panel
  */
 .aside__title {
-  margin: 0;
-  padding: 0.75rem 1rem;
   background-color: $light-pink;
   color: rgb(255, 255, 255);
   font-size: 1em;
+  margin: 0;
+  padding: 0.75rem 1rem;
 }
 
 /**
  * Headings from options panel
  */
 .aside__heading {
+  color: $dark-grey;
+  font-size: 0.9em;
   margin: 0 0 0.5em;
   padding: 0.5rem 0;
   text-transform: capitalize;
-  font-size: 0.9em;
-  color: $dark-grey;
-}
-
-/**
- * Remove top margin from first heading
- */
-.aside__title + .aside__heading {
-  margin-top: 0;
 }
 
 /**
@@ -89,12 +76,14 @@
  * 2. Enlarging without positioning issues
  */
 .aside__close {
-  position: absolute;
-  top: 0.4em; /* 1 */
-  right: 0.5em;
-  color: rgb(255, 255, 255);
-  border: 0;
   background-color: transparent;
+  border: 0;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0.5em;
+  top: 0.4em; /* 1 */
+  -webkit-transform: scale(1.25); /* 2 */
+  -moz-transform: scale(1.25); /* 2 */
   transform: scale(1.25); /* 2 */
 }
 
@@ -106,13 +95,13 @@
  */
 .aside__radio-list {
   list-style: none; /* 1 */
-  padding: 0; /* 1 */
   margin: -0.5rem; /* 2 */
   overflow: hidden; /* 3 */
+  padding: 0; /* 1 */
 
   label {
-    display: inline-block;
     cursor: pointer;
+    display: inline-block;
   }
 
   /**
@@ -128,9 +117,9 @@
    * Items are positioned on the same line, half width each
    */
   li {
-    margin: 0;
     float: left;
-    width: 50%;
+    margin: 0;
     padding: 0 0.5rem;
+    width: 50%;
   }
 }

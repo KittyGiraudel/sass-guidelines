@@ -4,4 +4,4 @@ language: es
 direction: ltr
 ---
 
-{% include chapters.html %}
+{% include layout/chapters.html %}

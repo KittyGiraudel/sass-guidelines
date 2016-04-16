@@ -11,12 +11,6 @@ Mettons `@debug` de côté puisqu’il est clairement prévu pour déboguer Sass
 
 Il y a bien des possibilités d’avertissements et d’erreurs dans Sass, n’importe quel mixin ou fonction qui attend un argument ou un type spécifique pourrait envoyer une erreur si quelque chose n’allait pas ou afficher un avertissement lorsque vous faites une hypothèse.
 
-###### Lectures complémentaires
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## Avertissements
 
 Prenez par exemple cette fonction de [Sass-MQ](https://github.com/sass-mq/sass-mq) qui essaie de convertir une valeur de `px` à `em`&nbsp;:
@@ -32,3 +26,5 @@ Contrairement aux avertissements, les erreurs empêchent le compilateur d’alle
 Par exemple, admettons que vous construisez une fonction *getter* pour accéder à des valeurs à partir d’une map spécifique. Vous pourriez envoyer une erreur si la clé requise n’existe pas dans la map.
 
 {% include snippets/errors/02/index.html %}
+
+Pour plus d’information sur une utilisation efficace de `@error`, cette [introduction à la gestion des erreurs](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) devrait vous aider.

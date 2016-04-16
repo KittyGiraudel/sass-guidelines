@@ -26,9 +26,7 @@ Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommen
 
 {% include snippets/comments/02/index.html %}
 
-###### Weitere Informationen
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+Beachte dass dieser Weg ebenfalls von den CSS Guidelines in der [Kommentier-Sektion](http://cssguidelin.es/#commenting) unterstützt ist.
 
 ## Dokumentation
 

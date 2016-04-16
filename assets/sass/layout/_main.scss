@@ -1,0 +1,19 @@
+
+/**
+ * Main container
+ * 1. Position context for absolutely positioned .toc
+ * 2. Leave some room for table of contents on large screens
+ */
+.main {
+  margin: 0 auto;
+  max-width: $main-width;
+  position: relative; /* 1 */
+
+  @include media('>large') {
+    padding-left: $sidebar-width; /* 2 */
+  }
+}
+
+.container {
+  @include container;
+}

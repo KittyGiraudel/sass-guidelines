@@ -2,7 +2,7 @@ configuration:
   version: 1.3
   label: Italian
   prefix: /it/
-  available: true
+  available: false
   translators:
     - name: Matteo Cavucci
       link: https://github.com/mattcav

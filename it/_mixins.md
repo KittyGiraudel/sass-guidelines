@@ -1,11 +1,11 @@
 
 # I Mixin
 
-I _Mixin_ sono una delle caratterstiche più usate dell'intero linguaggio Sass. Sono la chiave per ottenere componenti riusabili e fedeli al _DRY_. Per una buona ragione: i _Mixin_ danno l'opportunità all'autore di definire stili che possono essere riusati all'interno del foglio di stile senza aver bisogno di classi non semantiche come `.float-left`.
+I _Mixin_ sono una delle caratterstiche più usate dell’intero linguaggio Sass. Sono la chiave per ottenere componenti riusabili e fedeli al _DRY_. Per una buona ragione: i _Mixin_ danno l’opportunità all’autore di definire stili che possono essere riusati all’interno del foglio di stile senza aver bisogno di classi non semantiche come `.float-left`.
 
 Possono contenere una serie di regole CSS e grosso modo tutto ciò che è lecito dovunque in un documento Sass. Possono anche accettare argomenti, proprio come le funzioni. Inutile dire che le possibilità sono infinite.
 
-Devo però fare un avviso contro l'abuso del potere dei _Mixin_. Una volta ancora, la chiave qui è la *semplicità*. Costruire un _Mixin_ estremamente potente con un sacco di logica dentro potrebbe sembrare una buona idea, ma saremmo di fronte ad un caso di sovra-ingegnerizzazione, una malattia di cui molti sviluppatori soffrono. Se un _Mixin_ finisce per avere più di venti righe di codice, allora dovrebbe essere diviso in pezzetti più piccoli, o completamente rivisto.
+Devo però fare un avviso contro l’abuso del potere dei _Mixin_. Una volta ancora, la chiave qui è la *semplicità*. Costruire un _Mixin_ estremamente potente con un sacco di logica dentro potrebbe sembrare una buona idea, ma saremmo di fronte ad un caso di sovra-ingegnerizzazione, una malattia di cui molti sviluppatori soffrono. Se un _Mixin_ finisce per avere più di venti righe di codice, allora dovrebbe essere diviso in pezzetti più piccoli, o completamente rivisto.
 
 ## Le basi
 
@@ -26,13 +26,13 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 Ci sono casi in cui i _Mixin_ sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte e, o non hanno bisogno di nessun parametro, o hanno dei valori di default che non necessitano alcun passaggio di argomenti.
 
-In questi casi, possiamo tranquillamente omettere le parentesi quando li richiamiamo. L'istruzione `@include` (o il simbolo `+` nella sintassi indentata) bastano a indicare che quella linea è la chiamata di un _Mixin_; non c'è bisogno di parentesi extra.
+In questi casi, possiamo tranquillamente omettere le parentesi quando li richiamiamo. L’istruzione `@include` (o il simbolo `+` nella sintassi indentata) bastano a indicare che quella linea è la chiamata di un _Mixin_; non c’è bisogno di parentesi extra.
 
 {% include snippets/mixins/08/index.html %}
 
 ## Lista di argomenti
 
-Quando c'è da aver a che fare con un numero sconosciuto di argomenti in un _Mixin_, meglio usare un `arglist` piuttosto che una _Lista_. Pensate ad `arglist` come l'ottavo tipo di dati in Sass, nascosto e non documentato, che è implicitamente usato quando passiamo un numero arbitrario di argomenti ad un _Mixin_ o ad una funzione la cui firma contiene `...`.
+Quando c’è da aver a che fare con un numero sconosciuto di argomenti in un _Mixin_, meglio usare un `arglist` piuttosto che una _Lista_. Pensate ad `arglist` come l’ottavo tipo di dati in Sass, nascosto e non documentato, che è implicitamente usato quando passiamo un numero arbitrario di argomenti ad un _Mixin_ o ad una funzione la cui firma contiene `...`.
 
 {% include snippets/mixins/03/index.html %}
 
@@ -64,7 +64,7 @@ Usare questo Mixin ora è facilissimo:
 
 {% include snippets/mixins/07/index.html %}
 
-Tenete a mente che questa è una soluzione molto semplice. Per esempio, non può interagire con polyfill complessi come quelli richiesti per Flexbox. In questo senso, Autoprefixer rimane l'opzione ideale.
+Tenete a mente che questa è una soluzione molto semplice. Per esempio, non può interagire con polyfill complessi come quelli richiesti per Flexbox. In questo senso, Autoprefixer rimane l’opzione ideale.
 
 ###### Approfondimenti
 

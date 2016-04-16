@@ -12,9 +12,9 @@ Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind
 <blockquote>
   <p>Ein Code Styleguide (kein visueller) ist ein wertvolles Werkzeug für Teams die:</p>
   <ul>
-  	 <li>ein Produkt über eine gewisse Zeit lang bauen und warten;</li>
-  	 <li>Entwickler mit unterschiedlichen Fähigkeiten und Spezialisierungen haben;</li>
-  	 <li>eine gewisse Anzahl von unterschiedlichen Entwicklern auf einem Produkt arbeiten haben;</li>
+    <li>ein Produkt über eine gewisse Zeit lang bauen und warten;</li>
+    <li>Entwickler mit unterschiedlichen Fähigkeiten und Spezialisierungen haben;</li>
+    <li>eine gewisse Anzahl von unterschiedlichen Entwicklern auf einem Produkt arbeiten haben;</li>
     <li>regelmäßig neue Mitarbeiter onboarden;</li>
     <li>mehrere Codebasen haben, indem Entwickler hin und herspringen;</li>
   </ul>
@@ -30,7 +30,7 @@ Natürlich ist das hier nicht der einzige Weg das Thema anzugehen und es mag auc
 
 ## Grundprinzipien
 
-Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass **Sass so einfach wie möglich gehalten werden sollte**.
+Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass [**Sass so einfach wie möglich gehalten werden sollte**](http://www.sitepoint.com/keep-sass-simple/).
 
 Dank meiner dummen Experimente wie [Binäre Operatoren](https://github.com/HugoGiraudel/SassyBitwise), [Iteratoren und Generatoren](https://github.com/HugoGiraudel/SassyIteratorsGenerators) sowie [einem JSON Parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, können wir gut sehen was Sass als Präprozessor alles drauf hat.
 
@@ -49,7 +49,3 @@ Dennoch glaube Ich dass dieser Styleguide dazu gemacht ist erweitert zu werden. 
 Ein Beispiel einer Erweiterung der Styleguide kann in dem [SassDoc Repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) gefunden werden:
 
 > Dies ist einer Erweiterung zu den [Node Styleguides](https://github.com/felixge/node-style-guide) von Felix Geisendörfer. Alles aus diesem Dokument überschreibt was in den Node Styleguides definiert sein könnte.
-
-###### Weitere Informationen
-
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

@@ -25,26 +25,24 @@ Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. T
 * Vermeide es allgemeine Vorfahren eines Selektors (z.B. `.foo .bar`) oder allgemeine Geschwister eines Selektor (z.B. `.foo ~ .bar`) zu erweitern. Genau das erzeugt eine Explosion von Selektoren.
 
 <div class="note">
-	<p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
-	<p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
+  <p>Es wird oft gesagt dass <code>@extend</code> bei der Dateigröße mithilft, da es Selektoren kombiniert anstatt Werte zu duplizieren. Das ist zwar korrekt, dennoch ist der Unterschied geringfügig sobald <a href="http://de.wikipedia.org/wiki/Gzip">Gzip</a> seine arbeit getan hat.</p>
+  <p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
 </div>
 
-### Extend und Media Queries
+## Extend und Media Queries
 
 Du solltest Selektoren nur innerhalb desselben Media Scopes (`@media` Regel) erweitern. Stell dir ein Media Query als weitere Beschränkung vor.
 
 {% include snippets/extend/02/index.html %}
 
-Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhalb von Selektoren zu pflegen. Wenn zwei Selektoren charakteristisch gleich sind, ist es der perfekte Anwendungsfall für `@extend`. Wenn sie jedoch ohne Beziehung zueinander stehen, aber gleiche Regeln teilen dann passt ein `@mixin` besser.
-
-<div class="note">
-	<p>Danke an <a href="https://twitter.com/davidkpiano">David Khourshid</a> für die Hilfe und Expertise in diesem Bereich.</p>
-</div>
-
-###### Weitere Informationen
+Meinungen scheinen über die Vor- und Nachteile von `@extend` scheinen extrem weit auseinander zu gehen. Bis zu dem Punkt wo viele Entwickler, mich eingeschlossen, dagegen werben es zu verwenden. Mehr dazu kannst du in folgenden Artikeln lesen:
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
-* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
+
+Um abzuschließen, rate Ich, `@extend` nur zu benutzen um die Beziehung innerhalb von Selektoren zu pflegen. Wenn zwei Selektoren charakteristisch gleich sind, ist es der perfekte Anwendungsfall für `@extend`. Wenn sie jedoch ohne Beziehung zueinander stehen, aber gleiche Regeln teilen dann passt ein `@mixin` besser. Mehr dazu wie man sich zwischen diesen beiden entscheidet findest du in dieser [Ausarbeitung](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+
+<div class="note">
+  <p>Danke an <a href="https://twitter.com/davidkpiano">David Khourshid</a> für die Hilfe und Expertise in diesem Bereich.</p>
+</div>

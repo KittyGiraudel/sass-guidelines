@@ -2,7 +2,7 @@
 ---
 
 CACHE MANIFEST
-# 2016-02-27
+# 2016-03-20
 
 CACHE:
 
@@ -37,4 +37,4 @@ assets/images/sassdoc-preview_huge.png
 assets/images/sassdoc-preview_large.png
 assets/images/sassdoc-preview_medium.png
 assets/images/sassdoc-preview_small.png
-favicon.ico
+assets/images/favicon.ico

@@ -30,7 +30,7 @@ Bien sûr, ce n’est pas la seule façon de faire, et cela correspondra ou pas 
 
 ## Principes fondamentaux
 
-Au bout du compte, s’il est une chose que je souhaite que vous reteniez de ce guide c’est que **Sass devrait toujours rester aussi simple que possible**.
+Au bout du compte, s’il est une chose que je souhaite que vous reteniez de ce guide c’est que **[Sass devrait toujours rester aussi simple que possible](http://www.sitepoint.com/keep-sass-simple/)**.
 
 Mes petites expériences stupides avec Sass, comme [les opérateurs *bitwise*](https://github.com/HugoGiraudel/SassyBitwise), [les itérateurs et générateurs](https://github.com/HugoGiraudel/SassyIteratorsGenerators) ou encore [un parser JSON](https://github.com/HugoGiraudel/SassyJSON) ont montré tout ce qu’on peut faire avec ce préprocesseur.
 
@@ -49,7 +49,3 @@ C’est pourquoi je pense qu’un guide de style est fait pour être étendu. S�
 Un exemple d’extension de guide de style peut être trouvé dans le [dépôt SassDoc](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) (traduit):
 
 > Ceci est une extension de [Node Styleguide](https://github.com/felixge/node-style-guide) par Felix Geisendörfer. Toute chose stipulée dans ce document prévaut sur une indication contraire mentionnée dans Node Styleguide.
-
-###### Lectures complémentaires
-
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

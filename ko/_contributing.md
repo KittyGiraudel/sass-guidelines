@@ -6,5 +6,3 @@ Sass Guidelines는 여가시간에 유지하는 무료 프로젝트입니다. �
 혹시 이 프로젝트에 기여하고 싶으시다면, 스타일가이드에 대해 트윗하고, 말을 퍼뜨리거나 [GitHub 저장소](https://github.com/HugoGiraudel/sass-guidelines)에서 이슈나 풀-리퀘스트를 통해 작은 오타를 수정해주시면 정말 좋을 거예요!
 
 시작에 앞서 마지막으로: 이 문서를 즐기셨다면, 혹은 이 문서가 여러분이나 여러분의 팀에 유용하다면, 후원을 고려해주시기 바랍니다!
-
-{% include contributing.html %}

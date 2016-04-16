@@ -45,7 +45,7 @@ Sass는 처음에 들여쓰기의 감지를 그 핵심 특성으로 갖는 구�
 
 Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다른 구두점 기호들을 없애기 위해 들여쓰기에 의존하며, 이는 간결하고 짧은 구문으로 이어집니다. 한편, SCSS는 주로 CSS에 올려진 작은 추가사항들이므로 배우기에 더 쉽습니다.
 
-저 자신은 CSS와 더 비슷하고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 그런 이유로, SCSS가 이 가이드라인의 기본 구문입니다. <button type="button" data-modal-show="options-panel" class="link-like">옵션 패널</button>에서 Sass의 들여쓰기 구문으로 바꾸실 수 있습니다.
+저 자신은 CSS와 더 비슷하고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 그런 이유로, SCSS가 이 가이드라인의 기본 구문입니다. <button type="button" data-a11y-dialog-show="options-panel" class="link-like">옵션 패널</button>에서 Sass의 들여쓰기 구문으로 바꾸실 수 있습니다.
 
 ###### 참고
 

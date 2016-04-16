@@ -6,5 +6,3 @@ My name is [Hugo Giraudel](http://hugogiraudel.com), I am a 24 year-old French f
 I have been writing Sass for several years now and am the author of many Sass-related projects such as [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) and [Sass-Compatibility](http://sass-compatibility.github.io). If you are interested in more of my contributions to the Sass community, have a look at [that list](http://github.com/HugoGiraudel/awesome-sass).
 
 I also happen to be the author of a book about CSS (in French) entitled [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions), as well as a book about Sass (in English) entitled [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
-
-{% include twitter.html %}

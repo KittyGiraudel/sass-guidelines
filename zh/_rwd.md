@@ -11,17 +11,13 @@
 
 {% include snippets/rwd/01/index.html %}
 
-就此来说，任何不与特定设备关联而表达清晰的命名约定，都会因其广泛的通用性获得认可。
+就此来说，任何不与特定设备关联而表达清晰的[命名约定](http://css-tricks.com/naming-media-queries/)，都会因其广泛的通用性获得认可。
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>上面的示例使用了嵌套的 map，但这并不是强制或绝对的，你完全可以使用字符串来代替（比如 <code>'(min-width: 800px)'</code>）。</p>
 </div>
-
-###### 扩展阅读
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## 断点管理器
 
@@ -30,13 +26,8 @@
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>显然，这样管理断点相当简单，但当需要自定义或使用多个断点会爱到一定的制约。</p><p>如果你希望能更好管理断点，我可以建议你使用类似 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>、<a href="http://breakpoint-sass.com/">Breakpoint</a> 或 <a href="https://github.com/eduardoboucas/include-media">Include-Media</a>，没有必要自己重新去造轮子。</p>
+  <p>更多有关 Sass 中媒体查询的信息，请参考 <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> 和 <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> 中优秀的实践文章。</p>
 </div>
-
-###### 扩展阅读
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## 媒体查询用法
 
@@ -51,12 +42,6 @@
 可能你已经了解到，这种习惯会导致 CSS 输出文件中出现重复的媒体查询语句。不过[测试了](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)和下面的话认为一旦 Gzip（或者其他相同软件）完成压缩就不会有什么问题：
 
 >……我们反复测试了贴合与分离两种媒体查询方式对性能的影响，结论是即使在最差情况下也没有明显差异，而在最好情况下差异更是少之又少。<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), 关于[Breakpoint](http://breakpoint-sass.com/)的看法
+> &mdash; [Sam Richards 关于Breakpoint 的看法](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
 如果现在你仍担心媒体查询的副本问题，你可以使用工具来合并它们，比如[这个 gem](https://github.com/aaronjensen/sass-media_query_combiner)，但是我有必要警告你移动相关 CSS 代码可能会有副作用。 是否了解资源顺序是非常重要的。
-
-###### 扩展阅读
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

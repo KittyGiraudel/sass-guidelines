@@ -14,15 +14,13 @@
 
 {% include snippets/syntax/01/index.html %}
 
-在本部分中不会涉及有关文件组织的问题，相关讨论在[另一节](#section-50)中。
-
 ## 字符串
 
-无论你是否相信，字符串在 CSS 和 SCSS 中都占有重要地位。大多数的 CSS 值不是数值就是字符串，所以遵循固定的编程规范处理 Sass 中的字符串是非常重要的一项工作。
+无论你是否相信，字符串在 CSS 和 SCSS 中都占有重要地位。大多数的 CSS 值不是长度就是标识符，所以遵循固定的编程规范处理 Sass 中的字符串是非常重要的一项工作。
 
 ### 编码
 
-为了避免潜在的字符编码问题，强力建议在[入口文件](#section-54)中通过 `@charset` 指令使用 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 编码格式。请确保该指令是文件的第一条语句，并排除其他字符编码声明。
+为了避免潜在的字符编码问题，强力建议在[入口文件](#section-37)中通过 `@charset` 指令使用 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 编码格式。请确保该指令是文件的第一条语句，并排除其他字符编码声明。
 
 {% include snippets/syntax/02/index.html %}
 
@@ -47,7 +45,7 @@ CSS 中不要求字符串必须用引号包裹，甚至是字符串中包含空�
 
 ### 作为 CSS 的值
 
-CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事实上，`font-family: 'sans-serif'` 该声明是错误的，因为 CSS 希望获得的是一个标识符，而不是一个字符串。因此，我们无须引用这些值。
+CSS 中类似 `initial` 或 `sans-serif` 的标识符无须引用起来。事实上，`font-family: 'sans-serif'` 该声明是错误的，因为 CSS 希望获得的是一个标识符，而不是一个字符串。因此，我们无须引用这些值。
 
 {% include snippets/syntax/04/index.html %}
 
@@ -57,7 +55,7 @@ CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事
 
 ### 包含引号的字符串
 
-如果字符串内包含了一个或多个单引号，一种解决方案就是使用双引号包裹整个字符串，从而避免使用过多的转义字符。
+如果字符串内包含了一个或多个单引号，一种解决方案就是使用双引号包裹整个字符串，从而避免使用转义字符。
 
 {% include snippets/syntax/05/index.html %}
 
@@ -66,11 +64,6 @@ CSS 中类似 `initial` 或 `sans-serif` 的专用名词无须引用起来。事
 URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/06/index.html %}
-
-###### 扩展阅读
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## 数字
 
@@ -98,7 +91,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/09/index.html %}
 
-需要注意的是加上一个 *`0unit`* 也可以正确解析，但是这种方式在某种程度上会造成一些混乱，所以我更愿意推荐上面的方式。事实上，将一个数字转换为其他兼容单位时，加 `0` 操作并不会造成错误。
+需要注意的是加上一个 *`0unit`* 也可以正确解析，但是这种方式在某种程度上会造成一些混乱，所以我更愿意推荐上面的方式。事实上，将一个数字转换为其他兼容单位时，加 `0` 操作并不会造成错误。更多信息请参考[这篇文章](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -108,7 +101,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/11/index.html %}
 
-给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。
+给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。更多信息请参考这篇文章：[Use lengths, not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)。
 
 ### 计算
 
@@ -124,16 +117,17 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/13/index.html %}
 
-###### 扩展阅读
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+CSS-Tricks 上有一篇[文章](http://css-tricks.com/magic-numbers-in-css/) 讨论了 CSS 中的 magic numbers，建议你阅读一下。
 
 ## 颜色
 
 颜色在 CSS 中占有重要地位。当涉及到操纵色彩时，Sass 通过提供少数的[函数功能](http://sass-lang.com/documentation/Sass/Script/Functions.html)，最终成为了极具价值的助手。
+
+Sass 非常善于操纵颜色，以下文章都讨论了在 Sass 中对颜色的操作，建议阅读：
+
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### 颜色格式
 
@@ -167,7 +161,7 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 {% include snippets/syntax/17/index.html %}
 
-这样做可以防止一个主题变化而出现此类结果 `$sass-pink: blue`。
+这样做可以防止一个主题变化而出现此类结果 `$sass-pink: blue`。[这篇文章](http://davidwalsh.name/sass-color-variables-dont-suck) 介绍了为什么妥善处理颜色问题如此重要。
 
 ### 变亮和变暗颜色
 
@@ -187,14 +181,6 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
   <p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 函数的设计初衷是为了更流畅地调试属性——以实际的高低为调试基础。它如同<code>mix</code>一样好用，并且提供了更清晰地调用约定。比例因子并不完全相同。</p>
 </div>
 
-###### 扩展阅读
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
 ## 列表
 
 列表就是 Sass 的数组。列表是一个一维的数据结构（不同于 [maps](#maps)），用于保存任意类型的数值（包括列表，从而产生嵌套列表）。
@@ -213,20 +199,17 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 {% include snippets/syntax/20/index.html %}
 
-###### 扩展阅读
-
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+在[这篇文章](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)中介绍了许多合理使用列表的技巧和注意事项。
 
 ## Maps
 
-从 Sass3.3 开始，样式表作者可以使用 map 这种数据结构—— Sass 团队使 map 可以映射关联数组、哈希表甚至是 Javascript 对象。map 是一种映射任何类型键值对（可以是任何类型，包括内嵌 maps，不过不推荐这种内嵌方式）的数据结构。
+在 Sass 中，样式开发者可以使用 map 这种数据结构 —— Sass 团队使 map 可以映射关联数组、哈希表甚至是 Javascript 对象。map 是一种映射任何类型的键值对，包括内嵌类型的 map，但是我不建议使用 map 存储复杂数据类型。
 
 map 的使用应该遵循下述规范：
 
 - 冒号(`:`)之后添加空格；
 - 左开括号(`(`)要和冒号 (`:`)写在同一行；
-- 如果键是字符串（99% 都是字符串），则**使用引号包裹起来**。
+- 如果键是字符串（99% 都是字符串），则**使用括号包裹起来**。
 - 每一个键值对单独一行；
 - 每一个键值对以逗号(`,`)结尾；
 - 为最后一个键值对添加**尾部逗号** (`,`)，方便添加新键值对、删除和重排已有键值对；
@@ -237,17 +220,7 @@ map 的使用应该遵循下述规范：
 
 {% include snippets/syntax/21/index.html %}
 
-###### 扩展阅读
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+自从 Sass 支持 map 依赖具有很多关于它的文章，我建议你阅读以下三篇：[Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## CSS规则集
 
@@ -277,16 +250,12 @@ map 的使用应该遵循下述规范：
 
 {% include snippets/syntax/25/index.html %}
 
-###### 扩展阅读
-
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
 ## 声明顺序
 
 难以想象竟有这么多关于划分 CSS 声明顺序的讨论。具体而言，有如下两派：
 
 - 坚持以字母顺序排列；
-- 以类型（`position`, `display`, `colors`, `font`, miscellaneous…）顺序排列；
+- 以类型（`position`, `display`, `colors`, `font`, miscellaneous...）顺序排列；
 
 这两种方式各有利弊。一方面，字母排序方式通俗易懂（至少对于语言中使用拉丁字母的人来说），所以排序的过程完全没有争议。但是，这种排序的结果却十分奇怪，如 `bottom` 和 `top` 竟然彼此不相邻。为什么 `animations` 属性出现在 `display` 属性之前？字母排序方式有太多诸如此类的怪相了。
 
@@ -310,11 +279,6 @@ map 的使用应该遵循下述规范：
   <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对 CSS 进行排序，按类型顺序声明，Gzip 压缩文件大小平均达到 2.7%,而按字母顺序排序压缩的文件大小平均达到 1.3%。</p>
 </div>
 
-###### 扩展阅读
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-
 ## 选择器嵌套
 
 Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套**。选择器嵌套为样式表作者提供了一个通过局部选择器的相互嵌套实现全局选择的方法。
@@ -324,7 +288,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 比如下述Sass选择器的嵌套：
 
 {% include snippets/syntax/29/index.html %}
-
+ 
 生成的 CSS:
 
 {% include snippets/syntax/30/index.html %}
@@ -347,7 +311,9 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 选择器越具体则声明语句越冗长，而且对最近选择器的引用(`&`)也越频繁。在某些时候，出现混淆选择器路径和探索下一级选择器的错误率很高，这非常不值得。
 
-为了防止此类情况，我们**应该尽可能避免选择器嵌套**。然而，显然只有少数情况适应这一措施。
+为了防止此类情况，我们今年就 [the Inception rule](http://thesassway.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的一件比较激进，**建议尽量避免使用嵌套**。 
+
+虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[《小心嵌套陷阱》](http://www.sitepoint.com/beware-selector-nesting-sass/) 和 [《避免选择器的过渡嵌套》](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### 例外
 
@@ -365,18 +331,4 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 {% include snippets/syntax/35/index.html %}
 
-当一个没太多经验的开发者，不对类似于 `.no-opacity &` 这样的选择器造成混淆。可能创建一个 `mixin` 来处理。
-
-{% include snippets/syntax/36/index.html %}
-
-重写刚才的示例，他看起来像这样：
-
-{% include snippets/syntax/37/index.html %}
-
 这所有的一切，有些是无关紧要的细节，关键是要保持一致性。如果你觉得完全有信心搞定选择器嵌套，然后你就使用了选择器嵌套。可你还要确保你的整个团队也能搞定选择器的嵌套。
-
-###### 扩展阅读
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

@@ -29,7 +29,7 @@
   <p>Κατόπιν αυτού, αν δε μπορείς να χρησιμοποιήσεις Gzip (ή κάτι παρόμοιο) τότε η προσέγγιση με το <code>@extend</code> μπορεί να φανεί πολύτιμη, ειδικά αν το βάρος του stylesheet επιβαρύνει το performance.</p>
 </div>
 
-### Επέκταση και media queries
+## Επέκταση και media queries
 
 Να επεκτείνεις selectors μόνο μέσα στο ίδιο media scope (`@media` directive). Σκέψου το media query ως άλλο ένα εμπόδιο.
 

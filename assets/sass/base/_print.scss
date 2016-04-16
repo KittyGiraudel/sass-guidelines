@@ -12,9 +12,9 @@
    * Move everything back to black and removed any superfluous shadow
    */
   *, ::before, ::after {
+    box-shadow: none !important;
     color: rgb(0, 0, 0) !important;
     text-shadow: none !important;
-    box-shadow: none !important;
   }
 
   /**
@@ -22,11 +22,11 @@
    */
   a[href^='http']::after {
     content: ' (' attr(href) ')';
-    text-decoration: none;
     font-style: italic;
-    opacity: 0.7;
     hyphens: auto;
+    opacity: 0.7;
     overflow-wrap: break-word;
+    text-decoration: none;
     word-wrap: break-word;
   }
 
@@ -49,8 +49,10 @@
    * Non-overflowing black and white images
    */
   img {
-    max-width: 100%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
     filter: grayscale(100%);
+    max-width: 100%;
   }
 
   /**

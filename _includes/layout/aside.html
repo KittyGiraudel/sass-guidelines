@@ -1,5 +1,5 @@
-<div class="aside" aria-hidden="true" id="options-panel">
-  <div class="aside__overlay" tabindex="-1" data-modal-hide></div>
+<aside class="aside" aria-hidden="true" id="options-panel">
+  <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
   <div class="aside__content" role="dialog">
     <div role="document">
       <h1 class="aside__title">Options</h1>
@@ -18,14 +18,14 @@
           <ul class="aside__radio-list">
             <li>
               <div class="button">
-                <input type="radio" name="syntax" id="sass" value="sass" />
-                <label for="sass">Sass</label>
+                <input type="radio" name="syntax" id="syntax-toggle-sass" value="sass" />
+                <label for="syntax-toggle-sass">Sass</label>
               </div>
             </li>
             <li>
               <div class="button">
-                <input type="radio" name="syntax" id="scss" value="scss" checked />
-                <label for="scss">SCSS</label>
+                <input type="radio" name="syntax" id="syntax-toggle-scss" value="scss" checked />
+                <label for="syntax-toggle-scss">SCSS</label>
               </div>
             </li>
           </ul>
@@ -59,7 +59,7 @@
         </noscript>
       </section>
 
-      <button data-modal-hide type="button" title="Close the options panel" class="aside__close">&times;</button>
+      <button data-a11y-dialog-hide type="button" title="Close the options panel" class="aside__close">&times;</button>
     </div>
   </div>
-</div>
+</aside>

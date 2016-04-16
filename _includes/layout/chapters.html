@@ -2,10 +2,12 @@
 
 <section id="chapter-author" class="chapter chapter--author">
   {% include_relative {{ include.path }}_author.md %}
+  {% include partials/twitter.html %}
 </section>
 
 <section id="chapter-contributing" class="chapter chapter--contributing">
   {% include_relative {{ include.path }}_contributing.md %}
+  {% include partials/contributing.html %}
 </section>
 
 <nav class="chapter toc" aria-label="Document" id="chapter-toc chapter--toc">
@@ -24,7 +26,7 @@
   {% include_relative {{ include.path }}_syntax.md %}
 </section>
 
-{% include donate.html %}
+{% include partials/donate.html %}
 
 <section id="chapter-naming" class="chapter chapter--naming">
   {% include_relative {{ include.path }}_naming.md %}
@@ -43,7 +45,7 @@
 </section>
 
 
-{% include donate.html %}
+{% include partials/donate.html %}
 
 <section id="chapter-variables" class="chapter chapter--variables">
   {% include_relative {{ include.path }}_variables.md %}
@@ -61,7 +63,7 @@
   {% include_relative {{ include.path }}_conditions.md %}
 </section>
 
-{% include donate.html %}
+{% include partials/donate.html %}
 
 <section id="chapter-loops" class="chapter chapter--loops">
   {% include_relative {{ include.path }}_loops.md %}
@@ -79,6 +81,6 @@
   {% include_relative {{ include.path }}_tldr.md %}
 </section>
 
-{% include donate.html %}
+{% include partials/donate.html %}
 
 {::options parse_block_html="false" /}
