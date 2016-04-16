@@ -9,7 +9,7 @@ Sass’ ultimate objective is to fix CSS’ flaws. CSS, as we all know, is not t
 
 This is where Sass comes in, as a meta-language, to improve CSS’ syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding the CSS language.
 
-The point is not to turn CSS into a fully-featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of [extra features](http://sitepoint.com/sass-reference/) on top of it.
+The point is not to turn CSS into a fully featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of [extra features](http://sitepoint.com/sass-reference/) on top of it.
 
 That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
 
@@ -33,7 +33,7 @@ Since then, Sass (the preprocessor) has been providing [two different syntaxes](
 
 Sass’ whitespace-sensitive syntax relies on indentation to get rid of braces, semi-colons and other punctuation symbols, leading to a leaner and shorter syntax. Meanwhile, SCSS is easier to learn since it’s mostly some tiny extra bits on top of CSS.
 
-I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <button type="button" data-modal-show="options-panel" class="link-like">side panel</button>.
+I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <button type="button" data-a11y-dialog-show="options-panel" class="link-like">side panel</button>.
 
 ## Other preprocessors
 

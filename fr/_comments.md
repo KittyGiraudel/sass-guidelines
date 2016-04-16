@@ -26,9 +26,7 @@ Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass
 
 {% include snippets/comments/02/index.html %}
 
-###### Lectures complémentaires
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+Cette façon de faire est également encouragée dans CSS Guidelines dans la section [Commenting](http://cssguidelin.es/#commenting).
 
 ## Documentation
 
@@ -52,7 +50,3 @@ SassDoc a deux rôles principaux&nbsp;:
 Voici un exemple de mixin extensivement documenté avec SassDoc&nbsp;:
 
 {% include snippets/comments/04/index.html %}
-
-###### Lectures complémentaires
-
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

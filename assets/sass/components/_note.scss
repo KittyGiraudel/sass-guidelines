@@ -2,10 +2,10 @@
  * Notes
  */
 .note {
-  margin-bottom: $vertical-rhythm-baseline;
   background-color: $note-background;
-  padding: $vertical-rhythm-baseline;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: $vertical-rhythm-baseline;
+  padding: $vertical-rhythm-baseline;
 
   /**
    * Prevent any odd gap from nested elements' margin

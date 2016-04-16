@@ -1,7 +1,7 @@
 
 # Responsive Web Design e i breakpoint
 
-Non penso che ci sia bisogno di introdurre il _Responsive Web Design_ ora che lo si trova dappertutto. Ma potreste comunque domandarvi *perché c'è una sezione sul _RWD_ in questa guida di stile?* In realtà ci sono un po' di cose che rendono più facile lavorare con i _breakpoint_, così ho pensato che non sarebbe stata una cattiva idea elencarle qui.
+Non penso che ci sia bisogno di introdurre il _Responsive Web Design_ ora che lo si trova dappertutto. Ma potreste comunque domandarvi *perché c’è una sezione sul RWD in questa guida di stile?* In realtà ci sono un po’ di cose che rendono più facile lavorare con i _breakpoint_, così ho pensato che non sarebbe stata una cattiva idea elencarle qui.
 
 ## Dare un nome ai breakpoint
 
@@ -13,12 +13,12 @@ Per le stesse ragioni, i _breakpoint_ non dovrebbero avere i nomi di device, ma 
 {% include snippets/rwd/01/index.html %}
 
 A questo punto, qualsiasi convenzione di nomenclatura che renda chiaro e cristallino che un design non è mutualmente legato ad uno specifico dispositivo
-farà al caso nostro, l'importante è che parli di grandezze.
+farà al caso nostro, l’importante è che parli di grandezze.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
-  <p>L'esempio precedente usa mappe innestate per definire i <em>breakpoint</em>, tuttavia dipende molto dal gestore di <em>breakpoint</em> che utilizzate. Potreste optare per stringhe intere invece che mappe interne per una flessibilità maggiore (es_: <code>'(min-width: 800px)'</code>).</p>
+  <p>L’esempio precedente usa mappe innestate per definire i <em>breakpoint</em>, tuttavia dipende molto dal gestore di <em>breakpoint</em> che utilizzate. Potreste optare per stringhe intere invece che mappe interne per una flessibilità maggiore (es_: <code>’(min-width: 800px)’</code>).</p>
 </div>
 
 ###### Approfondimenti
@@ -27,7 +27,7 @@ farà al caso nostro, l'importante è che parli di grandezze.
 
 ## Gestire i Breakpoint
 
-Una volta che avrete dato il nome che preferite ai vostri _breakpoint_, avrete bisogno di utilizzarli all'interno di _mediaquery_ reali. Ci sono molti modi per farlo e devo ammettere che sono un grande fan delle mappe di breakpoint lette da una funzione _getter_. Questo sistema è sia semplice che efficiente.
+Una volta che avrete dato il nome che preferite ai vostri _breakpoint_, avrete bisogno di utilizzarli all’interno di _mediaquery_ reali. Ci sono molti modi per farlo e devo ammettere che sono un grande fan delle mappe di breakpoint lette da una funzione _getter_. Questo sistema è sia semplice che efficiente.
 
 {% include snippets/rwd/03/index.html %}
 
@@ -42,7 +42,7 @@ Una volta che avrete dato il nome che preferite ai vostri _breakpoint_, avrete b
 
 ## Utilizzo delle Mediaquery
 
-Non molto tempo fa, c'era un dibattito molto caldo riguardo dove le _mediaquery_ dovrebbero essere scritte: devono essere incluse nei selettori (Sass permette di farlo) o totalmente a parte? Devo ammettere di essere un sostenitore delle *mediaquery-dentro-i-selettori*, visto che penso si sposino molto bene con l'idea dei *componenti*.
+Non molto tempo fa, c’era un dibattito molto caldo riguardo dove le _mediaquery_ dovrebbero essere scritte: devono essere incluse nei selettori (Sass permette di farlo) o totalmente a parte? Devo ammettere di essere un sostenitore delle *mediaquery-dentro-i-selettori*, visto che penso si sposino molto bene con l’idea dei *componenti*.
 
 {% include snippets/rwd/04/index.html %}
 
@@ -50,12 +50,12 @@ Che ci porta al seguente codice CSS:
 
 {% include snippets/rwd/05/index.html %}
 
-Potreste aver sentito che questa convenzione porta all'avere _mediaquery_ duplicate nel CSS generato. Totalmente vero. Tuttavia, [sono stati fatti dei test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e il risultato finale è che non importa una volta che Gzip (o qualcosa di simile) fa il suo lavoro:
+Potreste aver sentito che questa convenzione porta all’avere _mediaquery_ duplicate nel CSS generato. Totalmente vero. Tuttavia, [sono stati fatti dei test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e il risultato finale è che non importa una volta che Gzip (o qualcosa di simile) fa il suo lavoro:
 
 > … abbiamo discusso molto sulle implicazioni delle prestazioni delle _mediaquery_ combinate contro quelle sparpagliate e siamo giunti alla conclusione che le differenze, seppur brutte, sono minime nel caso peggiore e non esistenti nel migliore dei casi.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), riguardo [Breakpoint](http://breakpoint-sass.com/)
 
-Ora, se siete veramente preoccupati delle _mediaquery_ duplicate, potete usare un tool per combinale insieme, qualcosa tipo [questa gemma](https://github.com/aaronjensen/sass-media_query_combiner), però mi sento di avvisarvi di possibili effetti collaterali di spostare il CSS qua e là. Sapete bene quanto è importante l'ordine del codice.
+Ora, se siete veramente preoccupati delle _mediaquery_ duplicate, potete usare un tool per combinale insieme, qualcosa tipo [questa gemma](https://github.com/aaronjensen/sass-media_query_combiner), però mi sento di avvisarvi di possibili effetti collaterali di spostare il CSS qua e là. Sapete bene quanto è importante l’ordine del codice.
 
 ###### Further reading
 

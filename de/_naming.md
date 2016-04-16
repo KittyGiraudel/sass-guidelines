@@ -15,34 +15,26 @@ Bezüglich Variablen, Funktionen und Mixins werden wir uns an etwas sehr *CSS-m�
 
 {% include snippets/naming/01/index.html %}
 
-###### Weitere Informationen
+## Konstanten
 
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
+Falls du ein Framework- oder Library-Entwickler sein solltest, magst du wahrscheinlich schon Erfahrung mit Variablen gemacht haben, die unter keinen Umständen aktualisiert werden dürfen: Konstanten. Unglücklicherweise (oder zum Glück?) bietet Sass keinen Weg um solche Instanzen zu defineren, deshalb müssen wir auf eine strikte Namenskonvention zurückfallen um klar zu machen was wir meinen.
 
-## Constants
-
-Falls du ein Framework- oder Library-Entwickler sein solltest, magst du wahrscheinlich schon Erfahrung mit Variablen gemacht haben, die unter keinen Umständen aktualisiert werden dürfen: Constants. Unglücklicherweise (oder zum Glück?) bietet Sass keinen Weg um solche Instanzen zu defineren, deshalb müssen wir auf eine strikte Namenskonvention zurückfallen um klar zu machen was wir meinen.
-
-Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben und Snake Case zu schreiben, wenn sie Constants sein sollen. Es ist nicht nur eine sehr alte Konvention, sondern stellt auch einen guten Kontrast zu in Kleinbuchstaben und mit Bindestrich getrennten Variablen.
+Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben und Snake Case zu schreiben, wenn sie Konstanten sein sollen. Es ist nicht nur eine sehr alte Konvention, sondern stellt auch einen guten Kontrast zu in Kleinbuchstaben und mit Bindestrich getrennten Variablen.
 
 {% include snippets/naming/02/index.html %}
 
-###### Weitere Informationen
-
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+Wenn du wirklich mit der Idee von Konstanten in Sass herumspielen möchtest, solltest du [diesen Artikel](http://www.sitepoint.com/dealing-constants-sass/) lesen.
 
 ## Namespace
 
 Falls du deinen Sass Code in Form einer Library, Framework, Gridsystem oder was auch immer verbreiten möchtest, solltest du überlegen all deine Variablen, Funktionen, Mixins und Platzhalter mit einem Namespace zu versehen damit sie nicht mit jemand anderem Code in Konflikt geraten.
 
-Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches von Entwicklern auf der ganzen Welt (wieso auch nicht, oder?) verwendet wird, könntest du den Namespace `su-` benutzen. Er ist spezifisch genug um nicht mit anderen Namespaces in Konflikt zu geraten, und kurz genug um dir auf die Dauer beim schreiben nicht auf die Nerven zu gehen.
+Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches veröffentlicht werden soll, könntest du den Namespace `su-` benutzen. Er ist spezifisch genug um nicht mit anderen Namespaces in Konflikt zu geraten, und kurz genug um dir auf die Dauer beim schreiben nicht auf die Nerven zu gehen.
 
 {% include snippets/naming/03/index.html %}
+
+[Kaelig](http://kaelig.fr) hat [einen sehr aufschlussreichen Artikel über globale CSS Namespaces](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace) geschrieben, falls dich das Thema interessiert.
 
 <div class="note">
   <p>Beachte das automatisches Namespacing ein Designziel für die zukünftige Umgestaltung von <code>@import</code> in Sass 4.0 ist. Je näher wir vor der Verwirklichung stehen, desto weniger von nutzen ist es manuell Namespaces zu vergeben; eventuell werden Libraries deren Namespace manuell gepflegt wurde, sogar schwieriger zu benutzen sein.</p>
 </div>
-
-###### Weitere Informationen
-
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

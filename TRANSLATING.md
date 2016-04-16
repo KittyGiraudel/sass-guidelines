@@ -1,5 +1,7 @@
 # Translating the guidelines
 
+If you have to update a translation, refer to [the relevant section](#updating-a-translation).
+
 ## Getting started
 
 1. Be sure to read the [contributing guidelines](CONTRIBUTING.md) to know how to deal with branching and Git.
@@ -14,7 +16,7 @@
   direction: ltr
   ---
 
-  {% include chapters.html %}
+  {% include layout/chapters.html %}
   ``` 
 
 ## Translating
@@ -43,7 +45,7 @@ Translate all chapters (files starting with an underscore) in your translation f
 
 ### The meta-data
 
-In the `_data` folder, duplicate the `en.yml` file and rename it after your translation shortcode before filling it. This contains 2 significant parts: the configuration for your translation, and the static translations for UI elements.
+In the `_locales` folder, duplicate the `en.yml` file and rename it after your translation shortcode before filling it. This contains 2 significant parts: the configuration for your translation, and the static translations for UI elements.
 
 For instance, here is the object for the Polish translation:
 
@@ -83,15 +85,15 @@ translations:
 
 All code snippets from Sass Guidelines are externalized from the Markdown files to prevent getting in the way of translators and reduce the amount of moving parts. They are stored in `_includes/snippets`, then divided in sub-folders by chapters (e.g. `architecture/`), then finally numbered (e.g. `01/`). Inside these numbered folders, there is always an `index.html` file. This file is the one that is imported in the Markdown documents.
 
-Some code snippets contain comments that should be translated, some don't. When a code snippet should be translated, its numbered folder contains a file per translation named after the language shortcode (e.g. `pt.html`) along with the `index.html` file. In this case, the `index.html` includes the appropriate file for the current translation. If a code snippet has no point in being translated, the `index.html` file is the only one in the folder, and it contains the HTML code directly.
+Some code snippets contain comments that should be translated, some don’t. When a code snippet should be translated, its numbered folder contains a file per translation named after the language shortcode (e.g. `pt.html`) along with the `index.html` file. In this case, the `index.html` includes the appropriate file for the current translation. If a code snippet has no point in being translated, the `index.html` file is the only one in the folder, and it contains the HTML code directly.
 
-To translate a (to be translated) code snippet, simply copy the `en.html` file from the snippet into a sibling file named after your language shortcode (e.g. `de.html`). In there, translate what needs to be translated; that's it.
+To translate a (to be translated) code snippet, simply copy the `en.html` file from the snippet into a sibling file named after your language shortcode (e.g. `de.html`). In there, translate what needs to be translated; that’s it.
 
 ## What should I know?
 
 ### Liquid file imports
 
-Code snippets and images are externalized so they don't get in your way when working in the Markdown files. Therefore, you will notice Liquid (the templating language in use here) file includes such as:
+Code snippets, images and some partials (like the Twitter button and the contributing buttons) are externalized so they don’t get in your way when working in the Markdown files. Therefore, you will notice Liquid (the templating language in use here) file includes such as:
 
 ```
 {% include snippets/architecture/01/index.html %}
@@ -101,7 +103,7 @@ Do not update those includes. They are language-agnostic and should not be modif
 
 ### Yep / Nope
 
-A lot of code snippets contain only `// Yep` and `// Nope` as comments. These terms should not be translated. Not only would it be tedious to maintain snippet translations only for such minimalistic comments, but these also are clear and broad enough terms so that it's fine keeping them.
+A lot of code snippets contain only `// Yep` and `// Nope` as comments. These terms should not be translated. Not only would it be tedious to maintain snippet translations only for such minimalistic comments, but these also are clear and broad enough terms so that it’s fine keeping them.
 
 ### Empty lines
 
@@ -114,3 +116,9 @@ The project title, “Sass Guidelines”, is not translated.
 ### Wikipedia links
 
 There are a few links to Wikipedia articles in the document. When possible, try to link to the version of your language rather than the English one. Most Wikipedia articles are translated in several languages, so chances are high that you can link to your own.
+
+## Updating a translation
+
+If your translation is lagging behind the English version, you will have to update it. The easiest way to do it to use the [changelog](https://github.com/HugoGiraudel/sass-guidelines/blob/gh-pages/CHANGELOG.md) and reproduce commits one by one.
+
+First create a new branch named after your language and your version (e.g. `ru-1.3`). Then check the first commit from the changelog, reproduce it in your version, and commit it. Repeat this process for each commit missing from your translation. Once you’re done (or before), submit a pull-request to the `gh-pages` branch.

@@ -16,8 +16,8 @@ html {
  * Basic typography styles
  */
 body {
-  font: 1.125em / 1.45 $text-font-stack;
   color: $dark-grey;
+  font: 1.125em / 1.45 $text-font-stack;
 }
 
 
@@ -27,15 +27,17 @@ body {
  */
 a,
 .link-like {
-  border: 0; /* 1 */
-  padding: 0; /* 1 */
   background: 0; /* 1 */
-  text-decoration: underline;
-  cursor: pointer;
+  border: 0; /* 1 */
   color: inherit;
+  cursor: pointer;
+  padding: 0; /* 1 */
+  text-decoration: underline;
   transition: 0.15s;
 
-  @include on-event {
+  &:hover,
+  &:active,
+  &:focus {
     color: $main-color;
   }
 }
@@ -45,10 +47,10 @@ a,
  * 1. Make the text slightly smaller as the font looks bigger
  */
 :not(pre) > code {
-  vertical-align: middle;
   color: $dark-pink;
   font-family: $code-font-stack;
   font-size: 0.8em; /* 1 */
+  vertical-align: middle;
 }
 
 /**
@@ -58,23 +60,4 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
-}
-
-/**
- * Main container
- * 1. Position context for absolutely positioned .toc
- * 2. Leave some room for table of contents on large screens
- */
-.main {
-  position: relative; /* 1 */
-  max-width: $main-width;
-  margin: 0 auto;
-
-  @include respond-to('large') {
-    padding-left: $sidebar-width; /* 2 */
-  }
-}
-
-.container {
-  @include container;
 }

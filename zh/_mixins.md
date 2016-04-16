@@ -9,7 +9,7 @@
 
 ## 基础
 
-话虽如此，混合宏确实非常有用，你应该学习使用它。经验告诉我们，如果你发现有一组 CSS 属性经常因同一个原因一起出现（非巧合），那么你就可以使用混合宏来代替。比如[Nicolas Gallagher的清除浮动](http://nicolasgallagher.com/micro-clearfix-hack/)应当放入一个混合宏的实例。
+话虽如此，混合宏确实非常有用，你应该学习使用它。经验告诉我们，如果你发现有一组 CSS 属性经常因同一个原因一起出现（非巧合），那么你就可以使用混合宏来代替。比如[Nicolas Gallagher 的清除浮动](http://nicolasgallagher.com/micro-clearfix-hack/)应当放入一个混合宏的实例。
 
 {% include snippets/mixins/01/index.html %}
 
@@ -17,12 +17,9 @@
 
 {% include snippets/mixins/02/index.html %}
 
-###### 扩展阅读
+更多复杂示例可以参考：[《使用 Sass 混合宏创建三角形》](http://www.sitepoint.com/sass-mixin-css-triangles/), [《使用混合宏创建长阴影》](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) 以及 [《使用混合宏为低版本浏览器创建线性渐变》](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)。
 
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-
-## Argument-less mixins
+## 无参混合宏
 
 有时候我们使用混合宏只是为了避免重复声明相同的样式，这种情况下，往往不需要传递参数。所以，为了简洁起见，我们可以删除圆括号，使用 `@include` 关键字来表示当前行调用了混合宏。
 
@@ -40,10 +37,8 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 
 {% include snippets/mixins/04/index.html %}
 
-###### 扩展阅读
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
+更多有关多参数、列表参数的信息请参考这篇文章：[Sass 中的不定参数和参数列表](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)。
+  
 ## 混合宏和浏览器前缀
 
 通过使用自定义混合宏来处理 CSS 中未被支持或部分支持的浏览器前缀，是非常有吸引力的一种做法。但我们不希望这么做。首先，如果你可以使用 [Autoprefixer](https://github.com/postcss/autoprefixer)，那就使用它。它会从你的项目中移除Sass代码，会一直更新并一定会进行比你手动添加前缀更棒的处理。
@@ -63,7 +58,3 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 {% include snippets/mixins/07/index.html %}
 
 请记住，这是一个糟糕的解决方案。例如，他不能处理那些需要复杂的前缀，比如 `flexbox`。在这个意义上说，使用 Autoprefixer 是一个更好地选择。
-
-###### 扩展阅读
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

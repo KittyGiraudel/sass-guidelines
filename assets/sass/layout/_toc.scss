@@ -1,36 +1,36 @@
 /**
  * The Table of Contents is absolutely position/fixed only on large screens
  */
-@include respond-to('large') {
+@include media('>large') {
   /**
    * ToC container
    * 1. Absolutely positioned on the top left corner of main container
    */
   .toc {
-    position: absolute; /* 1 */
-    top: 0; /* 1 */
-    left: 0; /* 1 */
+    background-color: rgb(255, 255, 255);
     bottom: 0; /* 1 */
-    width: $sidebar-width;
-    z-index: 10;
+    color: $dark-grey;
+    font-size: 0.8em;
+    left: 0; /* 1 */
     overflow-x: hidden;
     overflow-y: auto;
-    font-size: 0.8em;
-    color: $dark-grey;
-    background-color: rgb(255, 255, 255);
+    position: absolute; /* 1 */
+    top: 0; /* 1 */
+    width: $sidebar-width;
+    z-index: 10;
   }
 
   /**
    * Direct list when ToC is sticky
    */
   .toc.sticky ul {
+    overflow-x: hidden;
+    overflow-y: auto;
     position: fixed;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
-    overflow-x: hidden;
-    overflow-y: auto;
   }
 
   /**
@@ -44,15 +44,15 @@
   }
 
   .toc ul {
+    list-style: none;
     margin: 0;
     padding: 12px 10px;
-    list-style: none;
   }
 
   .toc li {
     border-bottom: 1px solid $light-grey;
-    padding: 8px 0;
     margin-bottom: 0;
+    padding: 8px 0;
   }
 
   /**

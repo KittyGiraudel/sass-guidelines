@@ -2,9 +2,9 @@
 title: Sass Guidelines
 description: "An opinionated styleguide for writing sane, maintainable and scalable Sass"
 keywords: CSS, Sass, SCSS, styleguide, guidelines
-baseurl: ""
 url: "http://sass-guidelin.es"
 twitter_username: HugoGiraudel
+google_analytics: UA-58205987-1
 languages:
   - cz
   - da
@@ -22,22 +22,13 @@ languages:
 # Build settings
 safe: true
 data_dir: ./_locales
-exclude:
-  - node_modules
-  - CHANGELOG.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - TRANSLATING.md
-  - README.md
-  - package.json
-  - Gemfile
-  - Gemfile.lock
-  - CNAME
-  - vendor
-  - _bin
-  - assets/js/vendor
-  - assets/js/src
-  - assets/images/icons
+exclude: [
+  "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "TRANSLATING.md",
+  "assets/js/vendor", "assets/js/src", "assets/images/icons",
+  "package.json", "Gemfile", "Gemfile.lock",
+  "**/README.md", "LICENSE", "CNAME",
+  "node_modules", "vendor", "_bin"
+]
 
 markdown: kramdown
 kramdown:
@@ -53,4 +44,5 @@ compress_html:
   comments: ["<!-- ", " -->"]
   endings: []
   blanklines: false
+  profile: false
   startings: []

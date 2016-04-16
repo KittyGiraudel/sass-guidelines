@@ -7,7 +7,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  {% for language in site.data.languages %}
+  {% for language in site.languages %}
   <url>
     <loc>{{ site.url }}{{ site.data[language].configuration.prefix }}</loc>
     <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod>

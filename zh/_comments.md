@@ -26,9 +26,7 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 
 {% include snippets/comments/02/index.html %}
 
-###### 扩展阅读
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+在 CSS 编程指南中的[注释](http://cssguidelin.es/#commenting)一节中也提到，支持这种方式的注释。
 
 ## 文档
 
@@ -43,14 +41,10 @@ CSS 的实现很简单，但我们需要为此付出巨大的注释量。解释�
 SassDoc 主要有两个作用：
 
 - 作为公有或私有 API 的一部分，在所有的地方使用一个注释系统强制标准化注释。
-- 通过使用任意的 SassDoc 终端(CLI tool, Grunt, Gulp, Broccoli, Node…)，能够生成 API 文档的 HTML 版本。
+- 通过使用任意的 SassDoc 终端(CLI tool, Grunt, Gulp, Broccoli, Node...)，能够生成 API 文档的 HTML 版本。
 
 {% include images/sassdoc.html %}
 
 这里有一个深入整合 SassDoc 生成文档的例子：
 
 {% include snippets/comments/04/index.html %}
-
-###### 扩展阅读
-
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

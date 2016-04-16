@@ -30,7 +30,7 @@
 
 ## 核心原则
 
-最后，如果有一件事是我想从整个样式指南中传授的，那就是：**Sass 以简为美，简约至上**。
+最后，如果有一件事是我想从整个样式指南中传授的，那就是：**[Sass 以简为美，简约至上](http://www.sitepoint.com/keep-sass-simple/)**。
 
 感谢我过去使用 Sass 时傻傻的尝试，比如 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise)、[iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) 和 [a JSON parser](https://github.com/HugoGiraudel/SassyJSON)，从而认识到了可以用预处理器来做什么。
 
@@ -48,8 +48,4 @@
 
 点击这里可以查看位于 [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) 上的一个 Styleguide 扩展：
 
-> 这 是一个由 Felix Geisendörfer 开发的 [Node Styleguide](https://github.com/felixge/node-style-guide) 扩展。这份文档全面覆盖了 Node Styleguide 的内容。
-
-###### 扩展阅读
-
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
+> 这是一个由 Felix Geisendörfer 开发的 [Node Styleguide](https://github.com/felixge/node-style-guide) 扩展。这份文档全面覆盖了 Node Styleguide 的内容。

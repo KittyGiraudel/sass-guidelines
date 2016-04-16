@@ -1,11 +1,11 @@
 configuration:
-  version: 1.2
+  version: 1.3
   label: French
   prefix: /fr/
   available: true
   translators:
     - name: Pierre Choffé
-      link: http://la-cascade.ghost.io
+      link: https://la-cascade.io/
 
 translations:
   twitter: "Suivez-moi sur Twitter"
