@@ -3,7 +3,7 @@
 
 Una cosa carina di un preprocessore CSS popolare come Sass è che si porta dietro un intero ecosistema di framework, plugin, librerie e strumenti. Dopo otto anni di esistenza, siamo sempre più ficini al punto in cui [qualsiasi cosa possa essere scritta in Sass è già stata scritta in Sass](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-Tuttavia il mio consiglio è quello di tenere al minimo indispensabile il numero di dipendenze. Gestire dipendenze è un tipo di inferno di cui non velete fare parte. In più non c'è molto bisogno di dipendenze esterne quando parliamo di Sass.
+Tuttavia il mio consiglio è quello di tenere al minimo indispensabile il numero di dipendenze. Gestire dipendenze è un tipo di inferno di cui non velete fare parte. In più non c’è molto bisogno di dipendenze esterne quando parliamo di Sass.
 
 ## Compass
 
@@ -11,11 +11,11 @@ Tuttavia il mio consiglio è quello di tenere al minimo indispensabile il numero
 
 Tuttavia, non uso più Compass. Il motivo principale è che rallenta molto Sass. Ruby Sass è già lento di suo, quindi aggiungere ancora più Ruby e ancora più Sass non è di molto aiuto.
 
-La questione è che usiamo molto poco di tutto il framework. Compass è enorme. La compatibilità Cross-browser è solo la cima dell'iceberg. Le funzioni matematice, gli _helper_ per immagini, lo _spriting_... So può fare davvero molto con questo gran software.
+La questione è che usiamo molto poco di tutto il framework. Compass è enorme. La compatibilità Cross-browser è solo la cima dell’iceberg. Le funzioni matematice, gli _helper_ per immagini, lo _spriting_... So può fare davvero molto con questo gran software.
 
-È tutto molto bello ma, sfortunatamente, non c'è nessuna caratteristica indispensabile. Un'eccezione potrebbe essere il generatore di _sprite_ che è *davvero grandioso*, ma [Grunticon](https://github.com/filamentgroup/grunticon) e [Grumpicon](http://grumpicon.com/) fanno la stessa cosa e hanno il beneficio di poter essere collegati facilmenta al vostro processo di _build_.
+È tutto molto bello ma, sfortunatamente, non c’è nessuna caratteristica indispensabile. Un’eccezione potrebbe essere il generatore di _sprite_ che è *davvero grandioso*, ma [Grunticon](https://github.com/filamentgroup/grunticon) e [Grumpicon](http://grumpicon.com/) fanno la stessa cosa e hanno il beneficio di poter essere collegati facilmenta al vostro processo di _build_.
 
-Comunque, non proibisco l'uso di Compass ma non lo raccomando nemmeno, sopratutto finché non sarà compatibile con LibSass (anche se sono stati fatti molti sforzi a riguardo). Se vi sentite meglio nell'usarlo, giustissimo, ma non penso che ne ricaverete molto alla fin fine.
+Comunque, non proibisco l’uso di Compass ma non lo raccomando nemmeno, sopratutto finché non sarà compatibile con LibSass (anche se sono stati fatti molti sforzi a riguardo). Se vi sentite meglio nell’usarlo, giustissimo, ma non penso che ne ricaverete molto alla fin fine.
 
 <div class="note">
   <p>Ruby Sass sta subendo alcune ottimizzazioni, specificamente rivolte a stili con molta logica, funzioni e <em>mixin</em>_. Queste modifiche dovrebbero migliorare sensibilmente le prestazioni fino al punto in cui Compass ed altri <em>framework</em> potrebbero non rallentare più di tanto Sass.</p>
@@ -24,20 +24,20 @@ Comunque, non proibisco l'uso di Compass ma non lo raccomando nemmeno, sopratutt
 ###### Approfondimenti
 
 * [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
-* [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
+* [Why I don’t use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
 ## Sistemi di griglie
 
-Non usare un sistema di griglie non è più un'opzione ora che il _Responsive Web Design_ è ovunque. Per rendere il design consistente e uniforme a tutte le dimensioni, usiamo una specie di griglia per impaginare gli elementi. Per evitare di riscrivere griglie costantemente, alcune menti brillanti hanno reso riutilizzabile il loro sistema di griglie.
+Non usare un sistema di griglie non è più un’opzione ora che il _Responsive Web Design_ è ovunque. Per rendere il design consistente e uniforme a tutte le dimensioni, usiamo una specie di griglia per impaginare gli elementi. Per evitare di riscrivere griglie costantemente, alcune menti brillanti hanno reso riutilizzabile il loro sistema di griglie.
 
-Mettiamo le cose in chiaro: non sono un grande fan dei sistema di griglie. Certo ne vedo il potenziale, ma penso che molte di loro sono davvero eccessive e sono usate per lo più per disegnare colonne rosse su sfondi bianci durante le conferenze di designer un po' nerd. Quand'è l'ultima volta che avete pensato: *grazie-a-Dio-ho-questo-strumento-per-costruire-questo-2-5-3.1-π-grid*? Esatto, mai. Questo perché nella maggiorparte dei casi, volete semplicemente una griglia a dodici colonne, nulla di strano.
+Mettiamo le cose in chiaro: non sono un grande fan dei sistema di griglie. Certo ne vedo il potenziale, ma penso che molte di loro sono davvero eccessive e sono usate per lo più per disegnare colonne rosse su sfondi bianci durante le conferenze di designer un po’ nerd. Quand’è l’ultima volta che avete pensato: *grazie-a-Dio-ho-questo-strumento-per-costruire-questo-2-5-3.1-π-grid*? Esatto, mai. Questo perché nella maggiorparte dei casi, volete semplicemente una griglia a dodici colonne, nulla di strano.
 
-Se per i vostri progetti state usando un framework CSS come [Bootstrap](http://getbootstrap.com/) o [Foundation](http://foundation.zurb.com/), avete molte chance che includa già un grid system. In questo caso vi raccomando di usare quello ed evitare di dover gestire un'altra dipendenza.
+Se per i vostri progetti state usando un framework CSS come [Bootstrap](http://getbootstrap.com/) o [Foundation](http://foundation.zurb.com/), avete molte chance che includa già un grid system. In questo caso vi raccomando di usare quello ed evitare di dover gestire un’altra dipendenza.
 
 Se non siete legati ad uno specifico sistema di griglie, sarete contenti di sapere che ci sono due motori di prima qualità sviluppati in Sass: [Susy](http://susy.oddbird.net/) e [Singularity](http://singularity.gs/). Entrambi fanno molto di più di quanto avrete mai bisogno e potete scegliere quello che preferite tra i due ed essere sicuri che tutti i vostri casi&mdash;anche quelli limite&mdash; saranno gestiti. Se chiedete a me, Susy ha una comunità leggermente migliore, ma è solo la mia opinione.
 
-Oppure si può andare verso qualcosa di un po' più informale, tipo [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Tutto sommati, la scelta non avrà molto impatto sul vostro modo di scrivere codice, quindi sta a voi scegliere a questo punto.
+Oppure si può andare verso qualcosa di un po’ più informale, tipo [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Tutto sommati, la scelta non avrà molto impatto sul vostro modo di scrivere codice, quindi sta a voi scegliere a questo punto.
 
 ###### Approfondimenti
 

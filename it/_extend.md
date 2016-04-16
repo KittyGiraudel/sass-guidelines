@@ -1,9 +1,9 @@
 
 # Extend
 
-La direttiva `@extend` è una funzione spesso mal interpretata. Giusto per ricordarlo, con questa direttiva possiamo dire a Sass di stilare un elemento A esattamente come se corrispondesse ad un selettore B. Inutile dire che rappresenta un ottimo alleato quando c'è da scrivere del CSS modulare.
+La direttiva `@extend` è una funzione spesso mal interpretata. Giusto per ricordarlo, con questa direttiva possiamo dire a Sass di stilare un elemento A esattamente come se corrispondesse ad un selettore B. Inutile dire che rappresenta un ottimo alleato quando c’è da scrivere del CSS modulare.
 
-Tuttavia il vero scopo di `@extend` è quello di mantenere le relazioni (i vincoli) tra set di regole all'interno di selettori estesi. Cosa vuol dire tutto ciò esattamente?
+Tuttavia il vero scopo di `@extend` è quello di mantenere le relazioni (i vincoli) tra set di regole all’interno di selettori estesi. Cosa vuol dire tutto ciò esattamente?
 
 - I selettori hanno *vincoli* (`.bar` in `.foo > .bar` deve avere un padre `.foo`)
 - Questi vincoli sono *trasportati* al selettore estendente (`.baz { @extend .bar; }` produrrà `.foo > .bar, .foo > .baz`);
@@ -17,12 +17,12 @@ Per ereditare gli stili, usate `@extend` solo se la `.class` o il `%placeholder`
 
 {% include snippets/extend/01/index.html %}
 
-Ci sono condizioni dove estenere un selettore può essere d'aiuto e può valerne la pena. C'è da tenere in mente queste regole, così da evitare qualche guaio:
+Ci sono condizioni dove estenere un selettore può essere d’aiuto e può valerne la pena. C’è da tenere in mente queste regole, così da evitare qualche guaio:
 
 * Estendi un `%placeholder` non un selettore reale, quando possibile.
 * Se estendi una classe, estendi un selettore di classe solo con un altro selettore di classe, non farlo _mai_ con un [selettore complesso](http://www.w3.org/TR/selectors4/#syntax).
 * Estendi direttamente un `%placeholder` il meno possibile.
-* Evitate di estendere selettori discendenti generici (`.foo .bar`) selettori adiacenti generici (e.g. `.foo ~ .bar`). Questo è quello che provoca l'esplosione del selettore.
+* Evitate di estendere selettori discendenti generici (`.foo .bar`) selettori adiacenti generici (e.g. `.foo ~ .bar`). Questo è quello che provoca l’esplosione del selettore.
 
 <div class="note">
   <p>Spesso si dice che <code>@extend</code> aiuta a tenere piccola la grandezza dei file css, in quanto combina diversi selettori piuttosto che duplicare le proprietà. Questo è vero, ma la differenza è davvero minima quando si attiva la compressione <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a>.</p>
@@ -31,7 +31,7 @@ Ci sono condizioni dove estenere un selettore può essere d'aiuto e può valerne
 
 ### Extend e media query
 
-Dovreste estendere i selettori solo all'interno della stessa _mediaquery_ (la direttiva `@media`). Pensate alla _mediaquery_ come ad un altro vincolo.
+Dovreste estendere i selettori solo all’interno della stessa _mediaquery_ (la direttiva `@media`). Pensate alla _mediaquery_ come ad un altro vincolo.
 
 {% include snippets/extend/02/index.html %}
 
@@ -41,10 +41,10 @@ Per riassumere, consiglio di usare `@extend` solo per mantenere le relazioni tra
   <p>Un grazie a <a href="https://twitter.com/davidkpiano">David Khourshid</a> per il suo aiuto ed esperienza in questa parte.</p>
 </div>
 
-###### FApprofondimenti
+###### Approfondimenti
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
 * [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
