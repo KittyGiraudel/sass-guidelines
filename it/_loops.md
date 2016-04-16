@@ -1,3 +1,4 @@
+
 # Iteratori
 
 Dato che Sass mette a disposizione strutture di dati complesse come [liste](#lists) e [mappe](#maps), non c'è da sorprendersi che ci siano strumenti per iterare all'interno di queste entità.
@@ -21,13 +22,13 @@ C'è poi bisogno di rispettare queste linee guida per mantenere la leggibilità:
 
 ## For
 
-L'iteratore `@for` può essere utile quando viene combinato con la pseudo-classe CSS `:nth-*`. Tranne per questo scenario, si preferisce usare un iteratore `@each` se c'è da iterare all'interno di qualcosa.
+L'iteratore `@for` può essere utile quando viene combinato con la pseudo-classe CSS `:nth-*`. Tranne per questo scenario, è preferibile usare un iteratore `@each` se c'è da iterare all'interno di qualcosa.
 
 {% include snippets/loops/03/index.html %}
 
-C'è sempre da usare `$i` come nome per la variabile di iterazione, in modo da rafforzare la convenzione, e, a meno che non ci sia un valido motivo, meglio non usare la parola-chiave `to`: sempre meglio `through`. Molti sviluppatori non sanno che Sass offre questa variante; usarla può portare a generare confusione.
+`$i` andrebbe sempre usato come nome per la variabile di iterazione, in modo da rafforzare la convenzione, e, a meno che non ci sia un valido motivo, meglio non usare la parola-chiave `to`: sempre meglio `through`. Molti sviluppatori non sanno che Sass offre questa variante; usarla può portare a generare confusione.
 
-Anche qui c'è da rispettare una serie di linee guida per preservare la leggibilità:
+Anche qui assicuratevi di rispettare una serie di linee guida per preservare la leggibilità:
 
 * Sempre una riga vuota prima di `@for`;
 * Sempre una riga vuota dopo la chiusura della parentesi graffa (`}`) a meno che la linea seguente non sia un'altra chiusura di parentesi graffa (`}`).
@@ -35,4 +36,4 @@ Anche qui c'è da rispettare una serie di linee guida per preservare la leggibil
 
 ## While
 
-L'iteratore `@while` non ha nessun caso d'uso in un vero progetto Sass, specialmente per il fatto che non c'è nessun modo per fermare l'iteratore dall'interno. **Non usarlo**.
+L'iteratore `@while` non ha nessun caso d'uso in un vero progetto Sass, specialmente per il fatto che non c'è nessun modo per fermare l'iteratore dall'interno. **Non usatelo**.

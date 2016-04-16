@@ -7,22 +7,13 @@ Fortunatamente, uno dei benefici principali dell'usare un preprocessore CSS è q
 
 Detto questo, non mi stancherò mai di sottolineare quanto sia importante dividere questi file in cartelle, anche per progetti piccoli. A casa non mettiamo tutti i nostri fogli di carta in una scatola. Li dividiamo in cartelle: una per i documenti della casa, una per la banca, una per le bollette e così via. Non c'è ragione per non far così anche quando si struttura un progetto CSS. Dividere la codebase dentro cartelle separate, ognuna con il proprio ruolo, ci aiuterà a trovare le cose quando torneremo sul codice in un secondo momento.
 
-Ci sono un sacco di modi per organizzare i file di un progetto CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), simil-[Bootstrap](http://getbootstrap.com/),simil-[Foundation](http://foundation.zurb.com/)... Tutti loro hanno i propri meriti, i vantaggi e gli svantaggi.
+Ci sono[un sacco di modi](http://www.sitepoint.com/look-different-sass-architectures/) per organizzare i file di un progetto CSS: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), simil-[Bootstrap](http://getbootstrap.com/),simil-[Foundation](http://foundation.zurb.com/)... Tutti loro hanno i propri meriti, i vantaggi e gli svantaggi.
 
-Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) di [Jonathan Snook], che mantiene le cose semplici e facili da capire.
+Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) di [Jonathan Snook](http://snook.ca/), che mantiene le cose semplici e facili da capire.
 
 <div class="note">
   <p>Ho imparato che l'architettura il più delle volte è differente da progetto a progetto. Sentitevi liberi di adattare o modificare completamente la soluzione proposta, in modo da poter ottenere un sistema che fa al caso vostro.</p>
 </div>
-
-###### Approfondimenti
-
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Componenti
 
@@ -38,6 +29,27 @@ Ad esempio, una form di ricerca potrebbe essere considerata come un componente. 
 
 La maggioranza delle interfacce può essere pensata come un'insieme di piccoli componenti. Io suggerisco di tener sempre presente questo paradigma. Questo non solo ridurrà la quantità di CSS di cui il progetto avrà bisogno, ma anche ci porterà ad avere un codice più semplice da manutenere rispetto a un caos dove tutto è mischiato.
 
+## La struttura dei componenti
+
+Idealmente, i componenti dovrebbero essere descritti ciascuno nel loro parziale file .sass all'interno della cartella `components/`, come descritto nel  [7-1 pattern](#the-7-1-pattern)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere :
+
+* lo stile del componente;
+* lo stile delle variazioni del componente;
+* lo stile dei discendenti del componente (ad esempio, gli elementi figli), se necessario.
+
+Se si vuol fare in modo che il proprio componente possa essere _temizzato_ (ad esempio, in un tema contenuto nella cartella `themes/`), bisogna limitarsi solo alle dichiarazioni della struttura, come ad esempio le dimensioni (width/height), il padding, i margini, l'allineamento etc. Bisogna escludere gli stili come ad esempio i colori, le ombre, le dichiarazioni del font, il background etc.
+
+Un parziale dedicato al componente può includere variabili specifice per il comeponente, _placeholders_ e anche funzioni e _mixins_. C'è da ricordare che bisognerebbe evitare di riferirsi a file (ad esempio, usando `@import`) che provengono da altri componenti. L'alternativa è creare una serie di dipendenze che renderanno il progetto un macello inmanutenibile.
+
+
+Ecco un esempio del parziale di un componente:
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Grazie a  <a href="https://twitter.com/davidkpiano">David Khourshid</a> per aver dato una mano in questa sezione.</p>
+</div>
+
 ## Il pattern 7-1 
 
 Torniamo all'architettura, che ne dite? Io di solito utilizzo ciò che chiamo il *pattern 7-1*: 7 cartelle, 1 file. In pratica, si hanno tutti i file parziali dentro sette cartelle differenti, e un singolo file al livello root (di solito chiamato `main.scss`) che importa il resto dei file. Questo viene compilato in un singolo foglio CSS.
@@ -47,7 +59,7 @@ Torniamo all'architettura, che ne dite? Io di solito utilizzo ciò che chiamo il
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
+* `abstracts/`
 * `vendors/`
 
 E naturalmente:
@@ -71,6 +83,10 @@ La cartella `base/` folder contiene ciò che potremmo chiamare il codice boilerp
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>Se il progetto usa <em>molto</em> le animazioni CSS, si potrebbe pensare di aggiungere un file <code>_animations.scss</code> che contiene le definizioni dei <code>@keyframes</code> per le animazioni. Se si usano solo sporadicamente, meglio farle vivere nei selettori che le usano. </p>
+</div>
 
 ### La cartella Layout
 
@@ -121,9 +137,9 @@ In grossi siti o applicazioni, non è strano avere bisogno di differenti temi. C
   <p>Il bisogno di questa cartella dipende dal progetto. In molti progetti potrebbe non essercene la necessità.</p>
 </div>
 
-### La cartella Utils
+### La cartella Abstracts
 
-La cartella `utils/` raccoglie tutti gli strumenti e gli helper usati nel progetto. Tutte le variabili globali, le funzioni, i mixin e i placeholder dovrebbero essere messi qui dentro.
+La cartella `abstracts/` raccoglie tutti gli strumenti e gli helper usati nel progetto. Tutte le variabili globali, le funzioni, i mixin e i placeholder dovrebbero essere messi qui dentro.
 
 La regola vuole che questa cartella non produca una singola linea di CSS quando compilata. Qui ci sono solo Sass helper.
 
@@ -132,9 +148,10 @@ La regola vuole che questa cartella non produca una singola linea di CSS quando 
 * `_functions.scss`
 * `_placeholders.scss` (spesso chiamata `_helpers.scss`)
 
+Quando si lavora in un progetto grande, con molte _utility_ astratte, sarebbe buono raggrupparle per argomento piuttosto che per tipo. Ad esempio:  tipografia (`_typography.scss`), temi (`_theming.scss`), etc. Ogni file contiene tutti gli helper come variabili, funzioni, mixin e placeholder. Facendo così si può ottenere un codice più facile da capire e mantenere, specialmente quando i file diventano parecchio lunghi.
+
 <div class="note">
-  <p>La cartella <code>utils/</code> può anche essere chiamanta <code>helpers</code>, <code>sass-helpers</code> or <code>sass-utils</code>, depending on what you prefer</p>
-  <p>The <code>utils/</code> folder might also be called <code>helpers/</code>, <code>sass-helpers/</code> or <code>sass-utils/</code>, dipende da ciò che si preferisce.</p>
+  <p>La cartella <code>abstracts/</code> può anche essere chiamanta <code>utilities</code>, <code>helpers</code>.</p>
 </div>
 
 ### La cartella Vendors
@@ -157,7 +174,7 @@ Il file principale (Main, spesso chiamato `main.scss`) dovrebbe essere l'unico f
 I file dovrebbero essere importati secondo la cartella dove risiedono, una dopo l'altra in quest'ordine:
 
 1. `vendors/`
-1. `utils/`
+1. `abstracts/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -184,11 +201,15 @@ C'è un altro modo per importare i file parziali che ritengo valido. Da un lato,
 
 {% include snippets/architecture/03/index.html %}
 
-<div class="note">
-  <p>Per non dover importare manualmente ogni file, c'è un estensione di Ruby Sass chiamanta <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, che rende possibile utilizzare il pattern "glob" con gli <code>@import</code> di Sass; ad esempio <code>@import "components/*"</code></p>.
-  <p>Detto ciò, non lo raccomanderei. Questa estensione importa i file in ordine alfabetico, che di solito non è l'ideale, specialmente quando abbiamo a che fare con un linguaggio basato sull'ordine delle fonti.</p>
-</div>
+## Riguardo al globbing
+In informatica, i panttern detti _glob_ si riferiscono all'uso di asterischi (wildcard) per accedere ad un set di file, come ad esempio `*.scss`. Partendo da qui, _globbing_ significa riferirsi ad un set di file basandosi su un'espressione pouttosto che una lista di nomi di file. Quando è applicato a Sass, significa che importare i parziali dentro il [main file](#main-file) può essere fatto usando un pattern _globbing_ invece che aggiungendo i file uno ad uno. Il risultato è una cosa così:
 
+{% include snippets/architecture/05/index.html %}
+
+Sass non supporta il file globbing di natura, perchè può essere una caratteristica pericolosa: il CSS dopotutto è dipendente dall'ordine delle dichiarazioni. Quando si importano i file dinamicamente, non si controlla più l'ordine della sorgente, e questo può creare qualche problema quando si fa debug.
+
+Detto ciò, in un'architettura strettamente basata sui componenti, con parecchia attenzione a non contaminare un parziale con l'altro, l'ordine non dovrebbe essere un problema. È dunque più semplice aggiungere e rimuovere i parziali nel main file.
+ 
 ## Il file Shame
 
 C'è un'idea interessante, diffusa da [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) che consiste nel mettere tutto il CSS, gli hack e tutte le cose di cui non andremmo fieri in un *file vergogna (Shame)*. Questo file, platealmente chiamato `_shame.scss`, verrebbe importato dopo tutti i file, alla fine del foglio di stile.
@@ -197,5 +218,4 @@ C'è un'idea interessante, diffusa da [Harry Roberts](http://csswizardry.com), [
 
 ###### Approfondimenti
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
+* [shame.css - l'intervista su .net (inglese)](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

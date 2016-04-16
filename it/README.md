@@ -17,16 +17,22 @@ L'obiettivo di questo file è quello di definire alcune linee guida comuni utili
 
 ## Parole non traducibili, da mantenere in inglese
 
-* codebase
-* hack
-* mixin
-* extend
-* placeholder
 * API
-* endpoint
-* map
-* getter
-* media query
-* each
+* codebase
 * DRY
+* each
+* endpoint
+* extend
+* getter
+* hack
+* map
+* media query
+* mixin
 * namespace
+* placeholder
+* scope
+* flag
+* linting
+* responsive
+* breakpoint
+* preprocessor

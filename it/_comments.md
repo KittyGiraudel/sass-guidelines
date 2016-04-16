@@ -26,9 +26,7 @@ Quando commenti parti specifiche in Sass, usa commenti inline piuttosto che il b
 
 {% include snippets/comments/02/index.html %}
 
-###### Approfondimenti
-
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+Questo approccio è consiglato anche da CSS guidelines nella sezione [Commenting](http://cssguidelin.es/#commenting).
 
 ## Documentazione
 
@@ -51,8 +49,3 @@ Questo è un esempio di un mixin commentato
 Here is an example of a mixin ampiamente documentato con SassDoc:
 
 {% include snippets/comments/04/index.html %}
-
-###### Approfondimenti
-
-* [SassDoc](http://sassdoc.com)
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
