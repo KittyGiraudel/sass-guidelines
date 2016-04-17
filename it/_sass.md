@@ -1,7 +1,7 @@
 
 # A proposito di Sass
 
-Questo è come [Sass](http://sass-lang.com) descrive se stesso e la propria[documentazione](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+Questo è come [Sass](http://sass-lang.com) descrive se stesso e la propria [documentazione](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass è un'estensione di CSS che aggiunge potenzialità ed eleganza al linguaggio base.
 
@@ -19,8 +19,7 @@ Detto questo, per usare queste funzionalità, ci sono molti modi. Alcuni buoni, 
 
 ## Ruby Sass o LibSass
 
-[La prima commit di Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) è del lontano 2006, più di otto anni fa. Inutile dire che è passato molto tempo. Inizialmente è stato sviluppato in Ruby e sono apparsi qua e là vari _porting_. Quello che ha avuto più
-successo è [LibSass](https://github.com/sass/libsass) (scritto in C), che è quasi pronto ad essere pienamente compatibile con la versione originale scritta in Ruby.
+[La prima commit di Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) è del lontano 2006, più di otto anni fa. Inutile dire che è passato molto tempo. Inizialmente è stato sviluppato in Ruby e sono apparsi qua e là vari _porting_. Quello che ha avuto più successo è [LibSass](https://github.com/sass/libsass) (scritto in C), che è quasi pronto ad essere pienamente compatibile con la versione originale scritta in Ruby.
 
 Nel 2014, [i team di Ruby Sass e LibSass hanno deciso di aspettare che entrambe le versioni fossero sincronizzate prima di andare avanti](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Da allora LibSass ha rilasciato attivamente molte versioni ed ha oramai le stesse funzioni del suo fratello maggiore. Le ultime inconsistenze sono raccolte ed elencate da me sul progetto [Sass-Compatibility](http://sass-compatibility.github.io). Se siete a conoscenza di un'incompatibilità non elencata tra le due versioni, per piacere siate così gentili da aprire un _issue_.
 
