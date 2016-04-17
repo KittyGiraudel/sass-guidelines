@@ -32,7 +32,7 @@ Per questo motivo, Sass non *richiederebbe* di usare gli apici per le stringe. M
 
 Detto questo però, i linguaggi che non richiedono gli apici per le stringhe sono una minoranza, quindi in Sass **le stringhe dovrebbero sempre essere comunque messe dentro singoli apici** (`'`). È preferibile usare gli apici singoli rispetto ai doppi perchè più facili da digitare in una tastiera *qwerty*. Ci sono inoltre diverse ragioni per questa scelta, oltre alla coerenza con altri linguaggi, incluso il cugino JavaScript:
 
-* i nomi dei colori sono considerati colori quando non hanno gli apici, il che può portare diversi problemi;
+* i nomi dei colori sono considerati colori solo quando non hanno gli apici, il che può portare diversi problemi;
 * molti degli strumenti di evidenziazione della sintassi non funzionano su stringhe senza apici;
 * aiuta la leggibilità;
 * non c'è nessuna ragione per non aggiungere gli apici alle stringhe.
@@ -45,7 +45,7 @@ Detto questo però, i linguaggi che non richiedono gli apici per le stringhe son
 
 ### Stringhe come valori CSS
 
-Valori specifici CSS (gli identificatori CSS) come `initial` o `sans-serif` non hanno bisogno di apici. Dichiarazioni come `font-family: 'sans-serif'` non verranno applicate, in quanto CSS si aspetta un identificatore, non una stringa tra apici. Per questo motivo, meglio non usare gli apici in questi casi.
+Valori specifici CSS come `initial` o `sans-serif` (alias: identificatori CSS) non hanno bisogno di apici. Dichiarazioni come `font-family: 'sans-serif'` non verranno applicate, in quanto CSS si aspetta un identificatore e non una stringa tra apici. Per questo motivo, meglio non usare gli apici in questi casi.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -71,7 +71,7 @@ In Sass, i numeri sono un tipo di dato che include cifre senza unità, lunghezze
 
 ### Zero
 
-I numeri dovrebbero avere lo zero prima di un valore decimale inferiore a uno. Non scrivere mai zero alla fine del valore.
+I numeri dovrebbero avere lo zero prima di un valore decimale inferiore a uno. Non scrivete mai zero alla fine del valore.
 
 {% include snippets/syntax/07/index.html %}
 
@@ -109,7 +109,7 @@ Aggiungere un'unità di misura come stringa ad un numero genera una stringa, imp
 
 ### Calcoli
 
-**I calcoli numerici dovrebbero essere sempre contenuti all'interno di parentesi**. Non solo così aumenterete di molto la leggibilità, ma eviterete alcuni casi limite, forzando Sass a valutare il contenuto delle parentesi prima di procedere con altri calcoli.
+**I calcoli numerici dovrebbero essere sempre contenuti all'interno di parentesi tonde**. Non solo così aumenterete di molto la leggibilità, ma eviterete alcuni casi limite, forzando Sass a valutare il contenuto delle parentesi prima di procedere con altri calcoli.
 
 {% include snippets/syntax/12/index.html %}
 
@@ -117,7 +117,7 @@ Aggiungere un'unità di misura come stringa ad un numero genera una stringa, imp
 
 Il "Numero magico" è un [termine da vecchia scuola della programmazione ](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) utilizzato per descrivere *costanti numeriche senza nome*. In pratica si tratta di un numero casuale che semplicemente *funziona* anche senza nessuna logica dietro.
 
-Non ci sarebbe bisogno di dirlo ma: **i numeri magici sono una piaga e dovrebbero essere evitati a qualsiasi costo**. Quando non riuscite a capire perchè un numero funziona, aggiungete almeno un bel commento esaustivo, che spiega per bene come siete arrivati ad utilizzare questo numero e come mai pensate che funzioni. Ammettere che non sapete precisamente come funziona è comunque un aiuto per il prossimo programmatore che metterà mano al vostro codice.
+Non ci sarebbe bisogno di dirlo ma: **i numeri magici sono una piaga e dovrebbero essere evitati a qualsiasi costo**. Quando non riuscite a capire perchè un numero funziona, aggiungete almeno un bel commento esaustivo, che spiega per bene come siete arrivati ad utilizzare questo numero e come mai pensate che funzioni. Ammettere che non sapete precisamente come funziona è comunque un aiuto per il prossimo sviluppatore che metterà mano al vostro codice.
 
 {% include snippets/syntax/13/index.html %}
 
@@ -125,10 +125,9 @@ Su questo argomento c'è questo [magnifico articolo](http://css-tricks.com/magic
 
 ## Colori
 
-
 I colori occupano un importante posto nel mondo CSS. Ovviamente Sass è un nostro grande alleato quando si tratta di manipolare i colori, per lo più fornendoci una serie di [potenti funzioni](http://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-Sass è così utile quando si tratta di manipolare colori che sono spuntati ovunque su internet articoli su questo argomento. Posso raccomandarvi alcuni di questi da leggere:
+Sass è così utile quando si tratta di manipolare colori, che sono spuntati ovunque su internet articoli su questo argomento. Posso raccomandarvene alcuni da leggere:
 
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
 * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
@@ -144,11 +143,11 @@ Per creare colori nel modo più semplice possibile, il mio consiglo è quello di
 
 Le parole chiave CSS non dovrebbero essere utilizzate, tranne che per prototipazione fatta al volo. Inoltre sono parole in inglese e alcune di loro non descrivono perfettamente il colore che rappresentano, soprattutto per chi non è madrelingua. Oltre a questo, le parole chiave CSS non sono perfettamente semantiche; per esempio `grey` (grigio), è più scuro di `darkgrey` (grigio scuro), inoltre si può generare confusione tra `grey` (grigio in inglese) e `gray` (grigio in americano), introducendo inconsistenza nell'uso di questo colore.
 
- La rappresentazione HSL del colore non solo è la più facile da comprendere per il cervello umano <sup>[citazione necessaria]</sup>, ma rende anche più facile sistemare i colori, manipolando separatamente la tonalità, la saturazione e la luminosità.
+La rappresentazione HSL del colore non solo è la più facile da comprendere per il cervello umano <sup>[citazione necessaria]</sup>, ma rende anche più facile sistemare i colori, manipolando separatamente la tonalità, la saturazione e la luminosità.
 
 RGB ha il beneficio di mostrare chiaramente se il colore è più rosso, verde o blu. Per questo motivo delle volte risulta migliore dell'HSL, specialmente quando si tratta di descrivere colori primari puri. Tuttavia non rende molto semplice creare un colore mescolando le tre parti.
 
-Infine poniamo l'esadecimale, praticamente indecifrabile per la mente umana. Utilizzatelo solo come ultima risorsa, se proprio dovete.
+Infine, poniamo l'esadecimale, praticamente indecifrabile per la mente umana. Utilizzatelo solo come ultima risorsa, se proprio dovete.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -162,24 +161,24 @@ Quando usate un colore più di una volta, abbinatelo ad una variabile con un nom
 
 {% include snippets/syntax/16/index.html %}
 
-Ora potete usare questa variabile ovunque vogliate. Tuttavia se il vostro utilizzo è fortemente legato ad un tema mi sento di sconsigliare l'uso di questa variabile così com'è. Abbinatela ad un'altra variabile che descriva come questo colore dovrebbe essere usato.
+Ora potete usare questa variabile ovunque vogliate. Se il vostro utilizzo è fortemente legato ad un tema mi sento di sconsigliare l'uso di questa variabile così com'è. Associatela ad un'altra variabile che descriva come questo colore dovrebbe essere usato.
 
 {% include snippets/syntax/17/index.html %}
 
-Fare così vi eviterà di avere un cambiamento al tema con qualcosa del genere: `$rosa-sass: blue`. [Questo articolo](http://davidwalsh.name/sass-color-variables-dont-suck) fa un ottimo lavoro nello spiegare perché è importante pensare bene al nome da dare alle vostre variabili di colore.
+Fare così vi eviterà di dover cambiare domani il tema con qualcosa del genere: `$rosa-sass: blue`. [Questo articolo](http://davidwalsh.name/sass-color-variables-dont-suck) fa un ottimo lavoro nello spiegare perché è importante pensare bene al nome da dare alle vostre variabili di colore.
 
 ### Schiarire e scurire i colori
 
 Entrambe le funzioni [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) (schiarisci) e [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) (scurisci) manipolano la luminosità di un colore nello spazio HSL, aggiungendo o sottraendo luminosità allo spazio colore. In pratica non sono altro che alias che si riferiscono al parametro `$lightness` (luminosità) della funzione
 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) (regola colore).
 
-In pratica, queste funzioni non danno spesso il risultato sperato. D'altra parte la funzione [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) è un ottimo modo per schiarire o scurire un colore mischiandolo con il `white` (bianco) o `black` (nero).
+In pratica, queste funzioni non danno spesso il risultato sperato. D'altra parte la funzione [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) è un ottimo modo per schiarire o scurire un colore, mischiandolo con il `white` (bianco) o `black` (nero).
 
-Il beneficio di usare `mix` al posto di una delle due funzioni di cui sopra è che `mix` è più graduale, consentendovi di andare verso il nero (o il bianco) diminuendo la proporzione del colore, mentre `darken` e `lighten`  hanno la tendenza a rendere il risultato nero o bianco molto velocemente.
+Il beneficio di usare `mix` al posto di una delle due funzioni di cui sopra è che `mix` è più graduale e vi consente di andare verso il nero (o il bianco) diminuendo la proporzione del colore, mentre `darken` e `lighten` hanno la tendenza a rendere il risultato direttamente nero o bianco molto velocemente.
 
 {% include images/color-functions.html %}
 
-Se non vi và di scrivere la funzione `mix` tutte le volte, potete creare due funzioni pronte all'uso `tint` and `shade` (che fanno giò parte di [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) che fanno in pratica la stessa cosa:
+Se non vi và di scrivere la funzione `mix` tutte le volte, potete creare due funzioni pronte all'uso: `tint` and `shade` (già incluse in [Compass](http://compass-style.org/reference/compass/helpers/colors/#shade)) che fanno in pratica la stessa cosa:
 
 {% include snippets/syntax/18/index.html %}
 
@@ -189,7 +188,7 @@ Se non vi và di scrivere la funzione `mix` tutte le volte, potete creare due fu
 
 ## Liste
 
-Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#maps), è una struttura piatta creata per contenere valori di ogni tipo (incluse liste, creando così liste annidate)
+Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#maps), è una struttura piatta creata per contenere valori di ogni tipo (incluse altre liste, creando così liste annidate)
 
 Le liste dovrebbero rispettare le seguenti linee guida:
 
@@ -197,7 +196,7 @@ Le liste dovrebbero rispettare le seguenti linee guida:
 * vanno obbligatoriamente su più linee nel caso siano troppo lunghe per stare in una riga di 80 caratteri;
 * a meno che non siano usati per CSS, hanno sempre una virgola come separatore;
 * sono sempre incluse in parentesi tonde;
-* una virgola di chiusura se su più righe, ma non se su una riga sola.
+* una virgola di chiusura solo se su più righe.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -205,11 +204,11 @@ Quando si aggiunge un nuovo elemento ad una lista, bisogna sempre utilizzare la 
 
 {% include snippets/syntax/20/index.html %}
 
-In [questo articolo](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), parlo di un sacco di consigli e trucchi per gestire e manipolare correttamente le liste in Sass.
+In [questo articolo](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), mostro un sacco di consigli e trucchi per gestire e manipolare correttamente le liste in Sass.
 
 ## Mappe
 
-Gli autori di fogli di stile possono definire con Sass delle mappe — il termine Sass per definire array associativi, hash o addirittura oggetti JavaScript. Una mappa è una struttura dati associativa di chiavi e valori. Entrambe le chiavi e i valori di una mappa possono essere di differenti tipo di dato, incluso il tipo mappa. Tuttavia sconsiglio di utilizzare tipi di dato complessi come chiavi di una mappa, anche solo per amore della sanità mentale.
+Gli autori di fogli di stile possono definire con Sass delle mappe — il termine Sass per definire array associativi, hash o addirittura oggetti JavaScript. Una mappa è una struttura dati associativa composta da chiavi e valori. Entrambe le chiavi e i valori di una mappa possono essere di differenti tipi di dato, incluso il tipo mappa. Tuttavia sconsiglio di utilizzare tipi di dato complessi come chiavi di una mappa, anche solo per amore della sanità mentale.
 
 Le mappe dovrebbero essere così scritte:
 
@@ -230,7 +229,7 @@ Questa funzionalità è stata a lungo desiderata e gli articoli a riguardo sono 
 
 ## Set di regole CSS
 
-A questo punto non ci rimane che ripassare qualcosa che tutti sappiamo, ma ecco qui come un set di regole CSS andrebbe scritto (almeno secondo la maggior parte delle linee guida, inclusa [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+A questo punto non ci rimane che ripassare qualcosa che tutti sappiamo, ovvero come andrebbe scritto un set di regole CSS (almeno secondo la maggior parte delle linee guida, inclusa [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * selettori correlati sulla stessa riga; non correlati su una nuova riga;
 * la graffa di apertura (`{`) deve essere separata dall'ultimo selettora da uno spazio;
@@ -246,9 +245,9 @@ Esempio:
 
 In aggiunta a queste linee guida correlate al CSS, facciamo attenzione ai seguenti punti:
 
-* le variabili locali devono essere dichiarate prima di ogni dichiarazione e devono essere separate dalle dichiarazioni da una nuova riga bianca;
+* le variabili locali devono essere dichiarate prima di ogni dichiarazione e devono essere separate dalle dichiarazioni da una nuova riga vuota;
 * i mixin senza alcun `@content` devono essere inseriti prima delle dichiarazioni;
-* selettori annidati vanno sempre preceduti da una riga bianca;
+* selettori annidati vanno sempre preceduti da una riga vuota;
 * mixin con un `@content` vanno dopo i selettori annidati;
 * nessuna nuova riga prima della graffa di chiusura (`}`).
 
@@ -258,7 +257,7 @@ Esempio:
 
 ## Ordine delle dichiarazioni
 
-Non posso pensare a molti argomenti che abbiano più opinioni divergenti di quello riguardo l'ordine da dare alle dichiarazioni CSS, ci sono due fazioni principali:
+Non credo ci siano molti altri argomenti oltre a come ordinare dichiarazioni CSS, che abbiano opinioni così divergenti. Ci sono due fazioni principali:
 
 * ordine alfabetico;
 * ordine di dichiarazioni in base al tipo di dichiarazione (position, display, colori, font, eccetera…).
@@ -267,7 +266,7 @@ Ci sono pro e contro per entrambi i modi. Da una parte, l'ordine alfabetico è (
 
 {% include snippets/syntax/26/index.html %}
 
-D'altro canto, ordinare le proprietà per tipo ha perfettamente senso. Tutte le dichiarazioni correlate ai font sono riunite, `top` e `bottom` sono vicine tra loro a leggere un set di regole sembra come leggere una piccola storia. Ma a meno che non vi affidiate a qualche convenzione come: [Idiomatic CSS](https://github.com/necolas/idiomatic-css), ci sarà fin troppo spazio per l'interpretazione di come fare le cose. Dove va a finire `white-space`: font o display? A quale punto `overflow` appartiene precisamente? In che modo le proprietà di un gruppo devono essere ordinate (alfabeticamente, sarebbe ironico)?
+D'altro canto, ordinare le proprietà per tipo ha perfettamente senso. Tutte le dichiarazioni correlate ai font sono riunite, `top` e `bottom` sono vicine tra loro a leggere un set di regole sembra come leggere un riassunto. Ma a meno che non vi affidiate a qualche convenzione come: [Idiomatic CSS](https://github.com/necolas/idiomatic-css), ci sarà fin troppo spazio per l'interpretazione sul come fare le cose. Dove va a finire `white-space`: font o display? A quale gruppo appartiene precisamente `overflow`? In che modo le proprietà di un gruppo devono essere ordinate (alfabeticamente, sarebbe ironico)?
 
 {% include snippets/syntax/27/index.html %}
 
@@ -279,7 +278,7 @@ Io posso dirvi che non riesco a decidermi. Un [sondaggio recente su CSS-Tricks](
 
 {% include images/order-poll.html %}
 
-Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi non il metoro *random*)
+Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo *random* non vale)
 
 <div class="note">
   <p>Uno <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
@@ -287,7 +286,7 @@ Proprio per questo, non voglio imporre una scelta in queste linee guida. Sceglie
 
 ## Selettori annidati
 
-Una particolare funzionalità, che Sass fornisce e di cui molti sviuppatori stanno abbusando, è quella dei *selettori annidati*. Annidare i selettori offre un modo agli autori di fogli di stile per generare lunghi selettori annidando selettori più corti uno dentro l'altro.
+Una particolare funzionalità, che Sass fornisce e di cui molti sviuppatori stanno abusando, è quella dei *selettori annidati*. Annidare i selettori offre agli autori di fogli di stile un modo per generare lunghi selettori annidando selettori più corti uno dentro l'altro.
 
 ### Regola generale
 
@@ -299,7 +298,7 @@ Per esempio, il seguente codice Sass:
 
 {% include snippets/syntax/30/index.html %}
 
-Sulla stessa linea, a partire da Sass 3.3 è possibile utilizzare il riferimento al selettore corrente (`&`) per generare selettori avanzati. Ad esempio:
+Allo stesso modo, a partire da Sass 3.3 è possibile utilizzare il riferimento al selettore corrente (`&`) per generare selettori avanzati. Ad esempio:
 
 {% include snippets/syntax/31/index.html %}
 
@@ -307,28 +306,28 @@ Sulla stessa linea, a partire da Sass 3.3 è possibile utilizzare il riferimento
 
 {% include snippets/syntax/32/index.html %}
 
-Questo approccio è molto utilizzato con la  [convenzione BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) per generare  selettori `.blocco__elemento` e `.block--modificatore` basati sul selettore originale (`.blocco` in questo caso).
+Questo approccio è molto utilizzato con la [convenzione BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) per generare  selettori `.blocco__elemento` e `.block--modificatore` basati sul selettore originale (`.blocco` in questo caso).
 
 <div class="note">
-  <p>Questa nota potrebbe essere aneddotica, ma generare un nuovo selettore partendo dal riferimento al selettore corrente (<code>&</code>) rende questi selettori inricercabili nella codebase in quanto non esistono come entità singole.</p>
+  <p>Questa nota potrebbe essere aneddotica, ma segnalo comunque che generare un nuovo selettore partendo dal riferimento al selettore corrente (<code>&</code>) rende questi selettori non ricercabili nella codebase, in quanto non esistono come entità singole.</p>
 </div>
 
 Il problema con i selettori annidati è che rendono definitivamente il codice molto più difficile da leggere. Chi legge deve mentalmente calcolare il selettore risultante a seconda dei livelli di indentazione; non è quindi sempre ovvio quale sarà il CSS generato.
 
-Questo diventa sempre più vero man mano che i selettori diventano più lunghi e i riferimenti al selettore corrente (`&`) diventano più frequenti. Ad un certo punto, il rischo di perdere traccia e di non capire più cosa sta accadendo siventa sempre più grande, tanto che annidare non vale la pena.
+Questo diventa sempre più vero man mano che i selettori diventano più lunghi e i riferimenti al selettore corrente (`&`) diventano più frequenti. Ad un certo punto, il rischo di perdere traccia e di non capire più cosa sta accadendo diventa sempre più grande, tanto che annidare non vale più la pena.
 
-Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](http://thesassway.com/beginner/the-inception-rule). Il suggerimento è semplice quello di evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io vorrei essere più drastico e raccomando di  **evitare i selettori annidati il più possibile**.
+Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](http://thesassway.com/beginner/the-inception-rule). Il suggerimento è semplice, ovvero evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io sarei più drastico e raccomando di  **evitare i selettori annidati il più possibile**.
 
-Per quanto ci siano alcune eccezioni a queste regole, come vedremo nella prossima sezione, questa opinione pare essere molto popolare. Potete leggere a riguardo qualcosa su questi articoli:
+Per quanto ci siano alcune eccezioni a questa regola, come vedremo nella prossima sezione, questa opinione pare essere molto popolare. Potete leggere a riguardo qualcosa su questi articoli:
 [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### Eccezioni
 
-Per iniziare, è consentito ed anche raccomandato di annidare pseudo-classi e pseudo-elementi al selettore iniziale.
+Per iniziare: è consentito ed anche raccomandato annidare pseudo-classi e pseudo-elementi al selettore iniziale.
 
 {% include snippets/syntax/33/index.html %}
 
-Utilizzare selettori annidati per le pseudo-classi e gli pseudo-elementi non solo ha senso (perchè riguardano da vicino il selettore correlato), ma aiuta anche ad avere tutto riguardo un componente allo stesso punto
+Utilizzare selettori annidati per le pseudo-classi e gli pseudo-elementi non solo ha senso (perchè riguardano da vicino il selettore correlato), ma aiuta anche ad avere tutto quel che riguarda un componente nello stesso punto
 
 Inoltre, quando si utilizza uno stato di classe agnostico, come `is-active`, è totalmente corretto annidarlo sotto il selettore del componente per tenere le cose compatte.
 
@@ -338,5 +337,5 @@ Infine, quando si stila un elemento perchè contenuto da un altro specifico elem
 
 {% include snippets/syntax/35/index.html %}
 
-Come per tutto, le specifiche sono poco rilevanti, la consistenza è la chiave.
+Come per tutto, le specifiche sono sì rilevanti, ma è la consistenza la chiave.
 Se vi sentite pienamente fiduciosi di un selettore annidato, allora utilizzatelo. Solo siate sicuri che tutto il team sia d'accordo con voi.
