@@ -1,9 +1,9 @@
 
 # Commentare
 
-CSS è un linguaggio complicato, pieno di hack e stranezze. Per questo motivo, dovrebbe essere sempre ben commentato, specialmente se tu o qualcun altro ha bisogno di leggere e aggiornare il codice tra sei mesi o un anno. Fa’ in modo che non debba pensare *non-l’ho-segnato-dio-mio-perchè*.
+CSS è un linguaggio complicato, pieno di hack e stranezze. Per questo motivo, dovrebbe essere sempre ben commentato, specialmente se tu o qualcun altro ha bisogno di leggere e aggiornare il codice tra sei mesi o un anno. Fa’ in modo che nessuno possa mai pensare *non-l’ho-segnato-dio-mio-perchè*.
 
-Più il CSS è semplice, più c’è bisogno di commenti. Saranno lì per spiegare:
+Per quanto il CSS possa essere semplice, c’è comunque un sacco di spazio per i commenti. Saranno lì per spiegare:
 
 * la struttura o il ruolo di un file;
 * l’obiettivo di un set di regole (ruleset);
@@ -30,7 +30,7 @@ Questo approccio è consiglato anche da CSS guidelines nella sezione [Commenting
 
 ## Documentazione
 
-Ogni variabile, funzione, mixin e placeholder che viene riusato all’interno della codebase è da documentare come parte dell’API globale, usando [SassDoc](http://sassdoc.com).
+Ogni variabile, funzione, mixin e placeholder che viene riusata all’interno della codebase è da documentare come parte dell’API globale, usando [SassDoc](http://sassdoc.com).
 
 {% include snippets/comments/03/index.html %}
 
@@ -45,7 +45,6 @@ SassDoc ha due regole principali:
 
 {% include images/sassdoc.html %}
 
-Questo è un esempio di un mixin commentato 
-Here is an example of a mixin ampiamente documentato con SassDoc:
+Questo è un esempio di un mixin commentato con SassDoc:
 
 {% include snippets/comments/04/index.html %}
