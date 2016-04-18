@@ -1,7 +1,7 @@
 
 # Variables
 
-Le variabili sono l’essenza di ogni linguaggio di programmazione. Ci permettono di riutilizzare un valore senza doverlo copiare e incollare ogni volta. Ancora più importante, le variabili ci permettono di aggiornare un valore molto facilmente. Addio al cerca e sostituisci o alla sostituzione manuale.
+Le variabili sono l’essenza di ogni linguaggio di programmazione. Ci permettono di riutilizzare un valore senza doverlo copiare e incollare ogni volta. Ancora più importante, le variabili ci permettono di aggiornare un valore molto facilmente. Ci permettono di dire addio al cerca e sostituisci o alla sostituzione manuale.
 
 Tuttavia CSS non è altro che un enorme cestino che contiene tutte le nostre uova. A differenza di altri linguaggi, CSS non implementa uno _scope_. Per questo motivo, dobbiamo fare attenzione ai possibili conflitti quando aggiungiamo variabili.
 
@@ -11,7 +11,7 @@ Il mio consiglio è di creare variabili solo quando ha senso farlo. Non iniziali
 * il valore ha la possibilità di essere aggiornato almeno una volta:
 * tutte le occorrenze del valore sono legate a una variabile; (es: non per coincidenza).
 
-In pratica, non c’è nessun motivo di dicharare una variabile che non verrà mai aggiornata o che verrà usata solo in un posto.
+In pratica, non c’è nessun motivo di dichiarare una variabile che non verrà mai aggiornata o che verrà usata solo in un posto.
 
 ## Scoping
 
@@ -19,13 +19,13 @@ Lo _Scoping_ in Sass è cambiato molto durante gli anni. Fino a poco tempo fa, l
 
 La documentazione parla di *oscuramento della variabile globale*. In pratica quando si dichiara in uno _scope_ interno (selettori, funzioni, mixin...) una variabile che esiste già nello scope globale, la variabile locale *oscura* quella globale. Fondamentalmente la sovrascrive momentaneamente solo per lo _scope_ locale.
 
-Il seguente frammento di codice spiega il concetto di *oscuramento variabili* .
+Il seguente frammento di codice spiega il concetto di *oscuramento di variabili* .
 
 {% include snippets/variables/01/index.html %}
 
 ## `!default` flag
 
-Quando si costruisce una libreria, un framework, un sistema di griglie o un qualsiasi pezzo in Sass che si vuole distribuire e che sarà utilizzato da altri sviluppatori, tutte le variabili di configurazione devono essere contrassegnate con il _flag_ `!default`, in modo da poter essere sovrascritte.
+Quando si costruisce una libreria, un framework, un sistema di griglie o un qualsiasi pezzo in Sass che si vuole poi distribuire e che sarà utilizzato da altri sviluppatori, tutte le variabili di configurazione devono essere contrassegnate con il _flag_ `!default`, in modo da poter essere sovrascritte.
 
 {% include snippets/variables/02/index.html %}
 
