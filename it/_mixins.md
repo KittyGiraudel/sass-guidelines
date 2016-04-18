@@ -13,7 +13,7 @@ Detto questo, i _Mixin_ sono estremamente utili e vi capiterà di usarne qualcun
 
 {% include snippets/mixins/01/index.html %}
 
-Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di un elemento, definendo `width` e `height` nello stesso tempo. Non solo renderà il codice più veloce da scrivere, ma anche più facile da leggere.
+Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di un elemento, definendo `width` e `height` allo stesso tempo. Non solo si renderà il codice più veloce da scrivere, ma anche più facile da leggere.
 
 {% include snippets/mixins/02/index.html %}
 
@@ -24,21 +24,21 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 ## Mixin senza argomenti
 
-Ci sono casi in cui i _Mixin_ sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte e, o non hanno bisogno di nessun parametro, o hanno dei valori di default che non necessitano alcun passaggio di argomenti.
+Ci sono casi in cui i _Mixin_ sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte. Non hanno quindi bisogno di alcun parametro o hanno dei valori di default che non necessitano alcun passaggio di argomenti.
 
-In questi casi, possiamo tranquillamente omettere le parentesi quando li richiamiamo. L’istruzione `@include` (o il simbolo `+` nella sintassi indentata) bastano a indicare che quella linea è la chiamata di un _Mixin_; non c’è bisogno di parentesi extra.
+In questi casi, possiamo tranquillamente omettere le parentesi quando li richiamiamo. L’istruzione `@include` (o il simbolo `+` nella sintassi indentata) bastano a indicare che quella linea è la chiamata di un _Mixin_. Non c’è bisogno di parentesi extra.
 
 {% include snippets/mixins/08/index.html %}
 
 ## Lista di argomenti
 
-Quando c’è da aver a che fare con un numero sconosciuto di argomenti in un _Mixin_, meglio usare un `arglist` piuttosto che una _Lista_. Pensate ad `arglist` come l’ottavo tipo di dati in Sass, nascosto e non documentato, che è implicitamente usato quando passiamo un numero arbitrario di argomenti ad un _Mixin_ o ad una funzione la cui firma contiene `...`.
+Quando c’è da aver a che fare con un numero sconosciuto di argomenti in un _Mixin_ è meglio utilizzare un `arglist` piuttosto che una _Lista_. Pensate ad `arglist` come l’ottavo tipo di dati in Sass, nascosto e non documentato, che è implicitamente usato quando passiamo un numero arbitrario di argomenti ad un _Mixin_ o ad una funzione la cui firma contiene `...`.
 
 {% include snippets/mixins/03/index.html %}
 
 Ora, quando si costruisce un _Mixin_ che accetta una manciata di argomenti (diciamo 3 o più), pensiamoci due volte prima di unirli in una lista o in una mappa: potrebbe essere più semplice passarli uno per uno.
 
-Sass è piuttosto intelligente con la dichiarazione di _Mixin_ e funzioni, così tanto che si può passare una lista o una mappa coe una _arglist_ ad una funzione/mixin in modo che sia interpretata come una serie di argomenti.
+Sass è piuttosto intelligente con la dichiarazione di _Mixin_ e funzioni, così tanto che si può passare ad una funzione/mixin una lista o una mappa come una _arglist_ in modo che sia interpretata come una serie di argomenti.
 
 {% include snippets/mixins/04/index.html %}
 
@@ -52,7 +52,7 @@ Si potrebbe essere tentati di definire un mixin personalizzato per avere i prefi
 
 Sfortunatamente, non è sempre possibile avere a disposizione Autoprefixer. Se però usate [Bourbon](http://bourbon.io/) o [Compass](http://compass-style.org/) scoprirete che entrambi mettono a disposizione una collezione di Mixin per applicare i prefissi vendor. Usateli.
 
-Se non si può usare Autoprefixer, e nemmeno Bourbon o Compass, allora, e solo allora, si può creare un mixin per applicare i prefissi alle proprietà CSS. Ma per favore, non create un mixin per ogni proprietà, che stampa manualmente ogni prefisso.
+Se non si può usare Autoprefixer e nemmeno Bourbon o Compass, allora, e solo allora, si può creare un mixin per applicare i prefissi alle proprietà CSS. Ma per favore, non create un mixin per ogni proprietà, che stampa manualmente ogni prefisso.
 
 {% include snippets/mixins/05/index.html %}
 
