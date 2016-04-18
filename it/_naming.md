@@ -1,7 +1,7 @@
 
 # Convenzione sui nomi
 
-In questa parte, non andremo a parlare di qual è il miglior modo per creare nomi nel CSS in modo da assicurare manutenibilità e scalabilità. Non solo sta a te scegliere, ma è anche fuori dalla portata di queste linee guida Sass. Io suggerisco le convenzioni raccomandate da [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+In questa parte non andremo a parlare di qual è il miglior modo per creare nomi nel CSS in modo da assicurare manutenibilità e scalabilità. Non solo sta a te scegliere, ma è anche fuori dalla portata di queste linee guida Sass. Io suggerisco le convenzioni raccomandate da [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
 
 Ci sono alcune cose a cui si possono dare nomi in Sass, ed è importante scegliere bene, in modo che l’intera codebase sia coerente e facile da leggere:
 
@@ -9,9 +9,9 @@ Ci sono alcune cose a cui si possono dare nomi in Sass, ed è importante sceglie
 * funzioni;
 * *mixin*;
 
-I placeholder di Sass sono omessi deliberatamente da questa lista, dato che possono esser considerati come dei normali selettori CSS, che seguono dunque la stessa convenzione sui nomi delle classi.
+I placeholder di Sass sono stati omessi deliberatamente da questa lista, dato che possono esser considerati come dei normali selettori CSS, che seguono dunque la stessa convenzione dei nomi delle classi.
 
-Riguardo variabili, funzioni e *Mixin*, rimaniamo con qualcosa di molto *CSS*: **minuscolo separato da trattino**, e accertiamoci che abbiano un senso.
+Riguardo variabili, funzioni e *Mixin*, rimaniamo con qualcosa di molto *CSS*: **minuscolo separato da trattino** e accertiamoci che abbiano un senso.
 
 {% include snippets/naming/01/index.html %}
 
@@ -21,7 +21,7 @@ Riguardo variabili, funzioni e *Mixin*, rimaniamo con qualcosa di molto *CSS*: *
 
 ## Costanti
 
-Se ti capita di essere uno sviluppatore di *framework*, o di scrivere una libreria, può capitare di trovarsi di fronte a variabili che non sono intese come qualcosa da poter aggiornare in ogni circostanza: sono delle costanti. Sfortunatamente (o fortunatamente?), Sass non offre nessuna maniera per definire queste entità. Dobbiamo così far leva su una stretta convenzione per i nomi in modo da raggiungere il nostro obiettivo.
+Se ti capita di essere uno sviluppatore di *framework*, o di scrivere una libreria, può capitare di trovarsi di fronte a variabili che non sono intese come qualcosa da poter aggiornare in ogni circostanza: sono delle costanti. Sfortunatamente (o fortunatamente?) Sass non offre nessuna maniera per definire queste entità. Dobbiamo così far leva su una stretta convenzione per i nomi in modo da raggiungere il nostro obiettivo.
 
 Come per molti linguaggi, suggerisco di nominare le variabili costanti completamente in maiuscolo e divise da trattino basso nel caso formato da più parole. Non solo questa è una convenzione piuttosto vecchia, ma rende anche evidente la differenza con le variabili minuscole-trattino.
 
