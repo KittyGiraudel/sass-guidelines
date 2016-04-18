@@ -17,7 +17,7 @@ Quando si controlla se un valore è falso, usa sempre la parola chiave `not` piu
 
 {% include snippets/conditions/02/index.html %}
 
-Metti sempre la parte variabile a sinistra dell’istruzione, e il risultato (in)aspettato a destra. Le istruzioni condizionali ribaltate spesso sono più difficili da leggere, specialmente per gli sviluppatori di primo pelo.
+Metti sempre la parte variabile a sinistra dell’istruzione e il risultato (in)aspettato a destra. Le istruzioni condizionali ribaltate spesso sono più difficili da leggere, specialmente per gli sviluppatori di primo pelo.
 
 {% include snippets/conditions/03/index.html %}
 
