@@ -350,7 +350,7 @@ $value: str-slice($length + unquote(''), 1, 2)
 
 Для того, чтобы сделать цвета простыми, насколько возможно, советую соблюдать следующий порядок предпочтения цветовых форматов:
 
-1. [Ключеые слова CSS](http://www.w3.org/TR/css3-color/#svg-color);
+1. [Ключевые слова CSS](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Обозначение HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Обозначение RGB](http://en.wikipedia.org/wiki/RGB_color_model);
 1. Шестнадцатеричная нотация. Предпочтительно в нижнем регистре и по возможности укороченная.
