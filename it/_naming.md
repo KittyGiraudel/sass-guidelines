@@ -15,10 +15,6 @@ Riguardo variabili, funzioni e *Mixin*, rimaniamo con qualcosa di molto *CSS*: *
 
 {% include snippets/naming/01/index.html %}
 
-###### Approfondimenti
-
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
 ## Costanti
 
 Se ti capita di essere uno sviluppatore di *framework*, o di scrivere una libreria, può capitare di trovarsi di fronte a variabili che non sono intese come qualcosa da poter aggiornare in ogni circostanza: sono delle costanti. Sfortunatamente (o fortunatamente?) Sass non offre nessuna maniera per definire queste entità. Dobbiamo così far leva su una stretta convenzione per i nomi in modo da raggiungere il nostro obiettivo.
@@ -27,9 +23,7 @@ Come per molti linguaggi, suggerisco di nominare le variabili costanti completam
 
 {% include snippets/naming/02/index.html %}
 
-###### Approfondimenti
-
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+If you really want to play with the ideas of constants in Sass, you should read [this dedicated article](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespace
 
@@ -42,7 +36,3 @@ Ad esempio, se si lavora su un progetto *Sassy Unicorn* che sarà adottato da sv
 <div class="note">
   <p>Notare che il namespace automatico è un obiettivo del progetto della prossima ristrutturazione di <code>@import</code> prevista per Sass 4.0. Quando sarà disponibile, diventerà sempre meno utile inserire un namespace a mano; librerie che contengono namespace manuali saranno addirittura più difficili da usare.</p>
 </div>
-
-###### Approfondimenti
-
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

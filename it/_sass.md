@@ -35,10 +35,6 @@ La sintassi indentata si basa sull’indentazione e sugli spazi bianchi per elim
 
 <p>Personalmente preferisco SCSS a Sass perchè è più vicino al CSS ed è più facile da comprendere per la maggiorparte degli sviluppatori. Proprio per questo, SCSS è la sintassi standard di queste linee guida. Potete passare alla sintassi Sass tramite il <button type="button" data-modal-show="options-panel" class="link-like">pannello delle opzioni</button>.</p>
 
-
-
-
-
 <div class="note">
   <p>Thanks to <a href="https://github.com/corysimmons">Cory Simmons</a> for his help and expertise on this section.</p>
 </div>
@@ -60,6 +56,6 @@ PostCSS è spesso chiamato (in maniera scorretta) “postprocessor”. Il presup
 
 Con PostCSS è facile accedere a dei “token” del proprio foglio di stile (come selettori, proprietà e valori), processare questi con JavaScript per realizzare qualsiasi operazione e poi compilare il risultato in CSS. Ad esempio, la libreria [Autoprefixer](https://github.com/postcss/autoprefixer) è realizzata proprio con PostCSS. Analizza ogni regola per vedere se ci sono da aggiungere o rimuovere dei _vendor prefix_, facendo riferimento a [CanIUse](http://caniuse.com) per il supporto dei browser.
 
-PostCSS è potentissimo e ottimo per costruire librerie che possono lavorare insieme con altri _preprocessor_, ma certamente non è ancora facile da usare. C’è da conoscere un po’ di JavaScript per fare qualsiasi cosa e la sua API può essere un po’ complicata. Mentre Sass offre solo un set di funzioni che sono utili a scrivere CSS, PostCSS offre un accesso diretto al CSS AST (*abstra syntax tree*) e JavaScript
+PostCSS è potentissimo e ottimo per costruire librerie che possono lavorare insieme con altri _preprocessor_, ma certamente non è ancora facile da usare. C’è da conoscere un po’ di JavaScript per fare qualsiasi cosa e la sua API può essere un po’ complicata. Mentre Sass offre solo un set di funzioni che sono utili a scrivere CSS, PostCSS offre un accesso diretto al CSS AST (*abstra syntax tree*) e JavaScript.
 
 In breve Sass è facile e risolve molti dei nostri problemi. Dall’altro lato, PostCSS può essere difficile da maneggiare, se non si è bravi con JavaScript, ma certamente è uno strumento potentissimo. Non c’è motivo per cui uno non dovrebbe usare entrambi. Addrittura, PostCSS offre un _parser_ ufficiale proprio per SCSS.

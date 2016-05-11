@@ -40,7 +40,7 @@ Detto questo però, i linguaggi che non richiedono gli apici per le stringhe son
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-  <p>Per le specifiche CSS, la direttiva  <code>@charset</code> deve essere dichiarata con doppi apici per <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">poter essere valida</a></p>. Naturalmente, Sass si prende cura di compilare il CSS in maniera corretta. Si può tranquillamente usare il singolo apice, anche per <code>@charset</code>.
+  <p>Per le specifiche CSS, la direttiva  <code>@charset</code> deve essere dichiarata con doppi apici per <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">poter essere valida</a>. Naturalmente, Sass si prende cura di compilare il CSS in maniera corretta. Si può tranquillamente usare il singolo apice, anche per <code>@charset</code>.
 </div>
 
 ### Stringhe come valori CSS
@@ -91,7 +91,7 @@ Quando si hanno a che fare con le lunghezze, un valore `0` non dovrebbe mai aver
 
 L'errore più comune che si può immaginare riguardo i numeri e Sass è pensare che le unità di misura sono solo stringhe che si possono aggiungere ai numeri. Se delle volte è vero, non è così che le unità di misura funzionano in Sass. Le unità di misura dovrebbero essere immaginate come simboli algebrici. Ad esempio, moltiplicare 5 pollici per 5 pollici ci dà 25 pollici quadrati. La stessa logica va applicata a Sass.
 
-Per aggiungere l'unità di misura ad un numero, basta moltiplicare il numero per *1 unità*
+Per aggiungere l'unità di misura ad un numero, basta moltiplicare il numero per *1 unità*.
 
 {% include snippets/syntax/09/index.html %}
 
@@ -101,7 +101,7 @@ Funziona anche aggiungere *0 di quella unità di misura*, ma consiglierei il met
 
 Dipende quindi da cosa si sta cercando di ottenere. C'è da ricordare che aggiungere l'unità come una stringa non è una buona maniera di procedere.
 
-Per rimuovere l'unità di misura di un valore, basta dividere di *una unità del suo genere*
+Per rimuovere l'unità di misura di un valore, basta dividere di *una unità del suo genere*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -135,7 +135,7 @@ Sass è così utile quando si tratta di manipolare colori, che sono spuntati ovu
 
 ### Formati di colore
 
-Per creare colori nel modo più semplice possibile, il mio consiglo è quello di seguire questo ordine di preferenze per il formato colore
+Per creare colori nel modo più semplice possibile, il mio consiglo è quello di seguire questo ordine di preferenze per il formato colore:
 
 1. [Notazione HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Notazione RGB](http://en.wikipedia.org/wiki/RGB_color_model);
@@ -183,12 +183,12 @@ Se non vi và di scrivere la funzione `mix` tutte le volte, potete creare due fu
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>La funzione <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (gamma colore) è stata creata per scalare le proprietà in modo più fluido, prendendo in conto quanto già il colore di partenza sia chiaro o scuro. Questo può darci risultati buoni come quelli di <code>mix</code>, ma con un nome di funzione più chiaro. Tuttavia il fattore di scala del colore non è esattamente lo stesso </p>
+  <p>La funzione <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (gamma colore) è stata creata per scalare le proprietà in modo più fluido, prendendo in conto quanto già il colore di partenza sia chiaro o scuro. Questo può darci risultati buoni come quelli di <code>mix</code>, ma con un nome di funzione più chiaro. Tuttavia il fattore di scala del colore non è esattamente lo stesso.</p>
 </div>
 
 ## Liste
 
-Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#maps), è una struttura piatta creata per contenere valori di ogni tipo (incluse altre liste, creando così liste annidate)
+Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#maps), è una struttura piatta creata per contenere valori di ogni tipo (incluse altre liste, creando così liste annidate).
 
 Le liste dovrebbero rispettare le seguenti linee guida:
 
@@ -278,7 +278,7 @@ Io posso dirvi che non riesco a decidermi. Un [sondaggio recente su CSS-Tricks](
 
 {% include images/order-poll.html %}
 
-Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo *random* non vale)
+Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo *random* non vale).
 
 <div class="note">
   <p>Uno <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
