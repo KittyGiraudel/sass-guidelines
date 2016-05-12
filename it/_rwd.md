@@ -11,17 +11,13 @@ Per le stesse ragioni, i _breakpoint_ non dovrebbero avere i nomi di device, ma 
 
 {% include snippets/rwd/01/index.html %}
 
-A questo punto, qualsiasi convenzione di nomenclatura che renda chiaro e cristallino che un design non è mutualmente legato ad uno specifico dispositivo farà al caso nostro, l’importante è che parli di grandezze.
+A questo punto, [qualsiasi convenzione di nomenclatura](http://css-tricks.com/naming-media-queries/) che renda chiaro e cristallino che un design non è mutualmente legato ad uno specifico dispositivo farà al caso nostro, l’importante è che parli di grandezze.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>L’esempio precedente usa mappe innestate per definire i <em>breakpoint</em>, tuttavia dipende molto dal gestore di <em>breakpoint</em> che utilizzate. Potreste optare per stringhe intere invece che mappe interne per una flessibilità maggiore (es_: <code>’(min-width: 800px)’</code>).</p>
 </div>
-
-###### Approfondimenti
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Gestire i Breakpoint
 
@@ -31,12 +27,8 @@ Una volta che avrete dato il nome che preferite ai vostri _breakpoint_, avrete b
 
 <div class="note">
   <p>Ovviamente questo è un modo fin troppo semplice di gestire i <em>breakpoint</em>. Se avete bisogno di un metodo più permissivo, vi raccomando di non reinventare la ruota ed utilizzare qualcosa di testato ed efficace come: <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+  <p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p>
 </div>
-
-###### Approfondimenti
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## Utilizzo delle Mediaquery
 
@@ -51,12 +43,6 @@ Che ci porta al seguente codice CSS:
 Potreste aver sentito che questa convenzione porta all’avere _mediaquery_ duplicate nel CSS generato. Totalmente vero. Tuttavia [sono stati fatti dei test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e il risultato finale è che non importa una volta che Gzip (o qualcosa di simile) fa il suo lavoro:
 
 > … abbiamo discusso molto sulle implicazioni delle prestazioni delle _mediaquery_ combinate contro quelle sparpagliate e siamo giunti alla conclusione che le differenze, seppur brutte, sono minime nel caso peggiore e non esistenti nel migliore dei casi.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), riguardo [Breakpoint](http://breakpoint-sass.com/)
+> &mdash; [Sam Richards riguardo Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
 Ora, se siete veramente preoccupati delle _mediaquery_ duplicate, potete usare un tool per combinale insieme, qualcosa tipo [questa gemma](https://github.com/aaronjensen/sass-media_query_combiner), però mi sento di avvisarvi dei possibili effetti collaterali dovuti allo spostare il CSS qua e là. Sapete bene quanto è importante l’ordine del codice CSS.
-
-###### Further reading
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

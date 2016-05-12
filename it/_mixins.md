@@ -17,10 +17,7 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 {% include snippets/mixins/02/index.html %}
 
-###### Approfondimenti
-
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+For more complex examples of mixins, have a look at [this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) or [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixin senza argomenti
 
@@ -42,10 +39,6 @@ Sass è piuttosto intelligente con la dichiarazione di _Mixin_ e funzioni, così
 
 {% include snippets/mixins/04/index.html %}
 
-###### Approfondimenti
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
-
 ## I mixin e i prefissi vendor
 
 Si potrebbe essere tentati di definire un mixin personalizzato per avere i prefissi _vendor_ da applicare a proprietà CSS non ancora supportate o supportate solo parzialmente. Ma non vogliamo certo farlo. Prima di tutto, se si può usare [Autoprefixer](https://github.com/postcss/autoprefixer), che si usi Autoprefixer. Autoprefixer rimuoverà dal vostro progetto del codice Sass superfluo, sarà sempre aggiornato e sarà compilato in una maniera più efficiente di quanto si possa fare da soli.
@@ -65,7 +58,3 @@ Usare questo Mixin ora è facilissimo:
 {% include snippets/mixins/07/index.html %}
 
 Tenete a mente che questa è una soluzione molto semplice. Per esempio, non può interagire con polyfill complessi come quelli richiesti per Flexbox. In questo senso, Autoprefixer rimane l’opzione ideale.
-
-###### Approfondimenti
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

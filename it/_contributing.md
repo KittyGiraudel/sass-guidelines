@@ -7,5 +7,3 @@ Per fortuna, mi aiutano un sacco di _contributors_ specialmente quando si tratta
 Ora, se ti senti di poter contribuire, sappi che già twittare riguardo questo progetto, passar parola o aggiustare qualche errore di battitura aprendo un issue o una pull-request sulla [repository GitHub](https://github.com/HugoGiraudel/sass-guidelines) è già un’ottima cosa!
 
 Aggiungo anche: se t’è piaciuto questo documento, o se è stato utile a te o al tuo team, prendi in considerazione l’idea di supportarlo!
-
-{% include contributing.html %}
