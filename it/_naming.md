@@ -23,7 +23,7 @@ Come per molti linguaggi, suggerisco di nominare le variabili costanti completam
 
 {% include snippets/naming/02/index.html %}
 
-If you really want to play with the ideas of constants in Sass, you should read [this dedicated article](http://www.sitepoint.com/dealing-constants-sass/).
+Se volete davvero giocare con l'idea di costanti in Sass, dovreste leggere [questo articolo sull'argomento](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespace
 
