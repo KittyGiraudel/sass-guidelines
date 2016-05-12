@@ -17,7 +17,7 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 {% include snippets/mixins/02/index.html %}
 
-For more complex examples of mixins, have a look at [this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) or [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Per esempi più complessi di mixin, date un occhio a [questo mixin per generare triangoli CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [questo mixin per generare ombre lunghe](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [questo mixin per aggiungere il codice polyfill necessario per i gradienti su browser datati](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixin senza argomenti
 
