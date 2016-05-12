@@ -43,7 +43,7 @@ Fortunatamente, le raccomandazioni di SCSS-lint sono molto simili a quelle descr
 
 {% include snippets/tools/01/index.html %}
 
-If you are not convinced of the necessity to use SCSS-lint, I recommend reading these great articles: [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) and [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/).
+Se non siete ancora convinti dell'utilità di usare SCSS-lint, vi raccomando di leggere questi ottimi articoli: [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) e [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/).
 
 <div class="note">
   <p>Se si desidera collegare SCSS lint al vostro processo di build di Grunt, sarete felici di sapere che esiste un plugin Grunt chiamato<a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
