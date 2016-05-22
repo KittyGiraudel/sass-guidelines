@@ -43,7 +43,7 @@ Sass 的混合宏和函数声明非常智能，你只需给函数/混合宏一�
 
 通过使用自定义混合宏来处理 CSS 中未被支持或部分支持的浏览器前缀，是非常有吸引力的一种做法。但我们不希望这么做。首先，如果你可以使用 [Autoprefixer](https://github.com/postcss/autoprefixer)，那就使用它。它会从你的项目中移除Sass代码，会一直更新并一定会进行比你手动添加前缀更棒的处理。
 
-不行的是，Autoprefixer 并不是总被支持的。如果你使用 [Bourbon](http://bourbon.io/) 或 [Compass](http://compass-style.org/)，你可能就已经知道它们都提供了一个混合宏的集合，用来为你处理浏览器前缀，那就用它们吧。
+不幸的是，Autoprefixer 并不是总被支持的。如果你使用 [Bourbon](http://bourbon.io/) 或 [Compass](http://compass-style.org/)，你可能就已经知道它们都提供了一个混合宏的集合，用来为你处理浏览器前缀，那就用它们吧。
 
 如果你不能使用 Autoprefixe，甚至也不能使用 Bourbon 和 Compass，那么接下来唯一的方式，就是使用自己的混合宏处理带有前缀的 CSS 属性。但是，请不要为每个属性建立混合宏，更不要无脑输出每个浏览器的前缀（有些根本就不存在）。
 
