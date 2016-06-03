@@ -86,6 +86,7 @@
   left: auto;
   position: fixed;
   right: 0;
+  will-change: transform;
 }
 
 .button-ui--back {
