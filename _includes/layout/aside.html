@@ -52,7 +52,7 @@
             {% for language in site.languages %}
             {% if site.data[language].configuration.available %}
             {% capture _p %}{{ site.data[language].configuration.prefix }}index.html{% endcapture %}
-            <li {% if _p == page.url %}class="is-selected"{% endif %}><a href="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</a></li>
+            <li{% if _p == page.url %} class="is-selected"{% endif %}><a href="{{ site.data[language].configuration.prefix }}">{{ site.data[language].configuration.label }} ({{ site.data[language].configuration.version }})</a></li>
             {% endif %}
             {% endfor %}
           </ul>
