@@ -1,7 +1,7 @@
 
 # Iteratori
 
-Dato che Sass mette a disposizione strutture di dati complesse come [liste](#lists) e [mappe](#maps), non c’è da sorprendersi che ci siano strumenti per iterare all’interno di queste entità.
+Dato che Sass mette a disposizione strutture di dati complesse come [liste](#liste) e [mappe](#mappe), non c’è da sorprendersi che ci siano strumenti per iterare all’interno di queste entità.
 
 La presenza di iteratori implica però la presenza di una logica moderatamente complessa, che probabilmente non appartiene a Sass. Prima di usare un iteratore, bisogna essere sicuri che questo abbia un senso, e che risolva effettivamente un problema.
 

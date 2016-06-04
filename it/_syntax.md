@@ -20,7 +20,7 @@ Che ci crediate o no, le stringhe giocano un ruolo fondamentale in CSS così com
 
 ### Codifica
 
-Per evitare possibili guai con la codifica dei caratteri, è altamente cosigliato forzare l'enconding [UTF-8](http://en.wikipedia.org/wiki/UTF-8) nel [foglio di stile principale](#main-file) usando la direttiva `@charset`. Fate attenzione che sia il primo elemento del foglio di stile e che non ci siano caratteri a precederlo.
+Per evitare possibili guai con la codifica dei caratteri, è altamente cosigliato forzare l'enconding [UTF-8](http://en.wikipedia.org/wiki/UTF-8) nel [foglio di stile principale](#il-file-main) usando la direttiva `@charset`. Fate attenzione che sia il primo elemento del foglio di stile e che non ci siano caratteri a precederlo.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -40,7 +40,7 @@ Detto questo però, i linguaggi che non richiedono gli apici per le stringhe son
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-  <p>Per le specifiche CSS, la direttiva  <code>@charset</code> deve essere dichiarata con doppi apici per <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">poter essere valida</a>. Naturalmente, Sass si prende cura di compilare il CSS in maniera corretta. Si può tranquillamente usare il singolo apice, anche per <code>@charset</code>.
+  <p>Per le specifiche CSS, la direttiva <code>@charset</code> deve essere dichiarata con doppi apici per <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">poter essere valida</a>. Naturalmente, Sass si prende cura di compilare il CSS in maniera corretta. Si può tranquillamente usare il singolo apice, anche per <code>@charset</code>.</p>
 </div>
 
 ### Stringhe come valori CSS
@@ -188,7 +188,7 @@ Se non vi và di scrivere la funzione `mix` tutte le volte, potete creare due fu
 
 ## Liste
 
-Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#maps), è una struttura piatta creata per contenere valori di ogni tipo (incluse altre liste, creando così liste annidate).
+Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [mappa](#mappe), è una struttura piatta creata per contenere valori di ogni tipo (incluse altre liste, creando così liste annidate).
 
 Le liste dovrebbero rispettare le seguenti linee guida:
 

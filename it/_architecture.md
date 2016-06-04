@@ -31,7 +31,7 @@ La maggior prte delle interfacce può essere pensata come un’insieme di piccol
 
 ## La struttura dei componenti
 
-I componenti dovrebbero essere idealmente descritti ciascuno nel loro file .sass parziale. Dobrebbero essere poi contenuti all’interno della cartella `components/`, come descritto nel  [7-1 pattern](#the-7-1-pattern)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere:
+I componenti dovrebbero essere idealmente descritti ciascuno nel loro file .sass parziale. Dobrebbero essere poi contenuti all’interno della cartella `components/`, come descritto nel  [7-1 pattern](#il-pattern-7-1)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere:
 
 * lo stile del componente;
 * lo stile delle variazioni del componente;
@@ -201,7 +201,7 @@ C’è un altro modo per importare i file parziali che ritengo valido. Da un lat
 {% include snippets/architecture/03/index.html %}
 
 ## Riguardo al globbing
-In informatica, i pattern detti _glob_ si riferiscono all'uso di asterischi (wildcard) per accedere ad un set di file, come ad esempio `*.scss`. Partendo da qui, _globbing_ significa riferirsi ad un set di file basandosi su un'espressione piuttosto che una lista di nomi di file. Quando è applicato a Sass, significa che importare i parziali dentro il [main file](#main-file) può essere fatto usando un pattern _globbing_ invece che aggiungendo i file uno ad uno. Il risultato è una cosa del genere:
+In informatica, i pattern detti _glob_ si riferiscono all'uso di asterischi (wildcard) per accedere ad un set di file, come ad esempio `*.scss`. Partendo da qui, _globbing_ significa riferirsi ad un set di file basandosi su un'espressione piuttosto che una lista di nomi di file. Quando è applicato a Sass, significa che importare i parziali dentro il [main file](#il-file-main) può essere fatto usando un pattern _globbing_ invece che aggiungendo i file uno ad uno. Il risultato è una cosa del genere:
 
 {% include snippets/architecture/05/index.html %}
 
