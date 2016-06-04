@@ -1,0 +1,29 @@
+configuration:
+  version: 1.3
+  label: Italian
+  prefix: /it/
+  available: true
+  translators:
+    - name: Matteo Cavucci
+      link: https://github.com/mattcav
+    - name: Davide di Pumpo
+      link: https://github.com/MakhBeth
+
+translations:
+  twitter: "Trovami su Twitter"
+  contributing:
+    support_button: "Supporta Sass Guidelines"
+    tweet_button: "Passaparola"
+  donate:
+    content: "Se ti piace Sass Guidelines, dai una mano!."
+    button: "Supporta Sass Guidelines"
+  baseline:
+    content: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
+  footer:
+    content: "Fatto con amore da [Hugo Giraudel](http://hugogiraudel.com)"
+  note: "Note"
+  images:
+    color-functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order-poll: "Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS"
+    sassdoc: "La documentazione è creata da SassDoc"
+    wallpaper: "Wallpaper di [Julien He](https://twitter.com/julien_he)"
