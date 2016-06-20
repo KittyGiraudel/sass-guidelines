@@ -43,7 +43,7 @@ Pour plus d’information sur les différences entre des arguments multiples, un
 
 ## Mixins et préfixes constructeurs
 
-Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes constructeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n’allons pas faire cela. D’abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allègera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l’être.
+Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes constructeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n’allons pas faire cela. D’abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allégera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l’être.
 
 Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si vous utilisez [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu’ils proposent tous les deux une collection de mixins qui traitent les préfixes constructeurs pour vous. Utilisez-les.
 

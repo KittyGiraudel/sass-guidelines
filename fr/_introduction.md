@@ -22,7 +22,7 @@ Il va sans dire que plus il y a de développeurs impliqués dans un projet, plus
 
 ## Avertissement
 
-Commençons par le commencement&nbsp;: **ceci n’est pas un guide de style CSS**. Ce document ne parlera pas des conventions de nommage des classes CSS, des patterns modulaires ou de la questions des IDs dans le monde CSS. Ces recommandations ne traitent que de contenus spécifiques à Sass.
+Commençons par le commencement&nbsp;: **ceci n’est pas un guide de style CSS**. Ce document ne parlera pas des conventions de nommage des classes CSS, des patterns modulaires ou de la question des IDs dans le monde CSS. Ces recommandations ne traitent que de contenus spécifiques à Sass.
 
 Par ailleurs, ce guide de style est personnel et par conséquent **très engagé**. Vous pouvez le voir comme un ensemble de méthodologies et de conseils que j’ai polis et donnés pendant des années. Il me donne aussi l’opportunité de faire des liens vers un bon nombre de ressources instructives, n’hésitez pas à vous reporter aux *lectures complémentaires*.
 

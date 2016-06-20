@@ -16,13 +16,13 @@ Je pourrais certainement citer encore bien d’autres raisons. Les commentaires 
 
 ## Écrire des commentaires
 
-Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est à dire `/* … */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
+Idéalement, tout jeu de règles CSS devrait être précédé d’un commentaire (de style C, c’est-à-dire `/* … */`) expliquant l’objectif de ce bloc CSS. Ce commentaire peut contenir des explications numérotées pour expliquer certains aspects spécifiques du jeu de règles. Par exemple&nbsp;:
 
 {% include snippets/comments/01/index.html %}
 
 De manière générale, tout ce qui n’est pas évident à première vue devrait être commenté. La documentation n’est *jamais* superflue. Rappelez-vous qu’on ne commente jamais trop, n’hésitez pas à écrire des commentaires sur tout ce qui le mérite.
 
-Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass (c’est à dire `//`) à la place des blocs de commentaires de style C. Les commentaires seront invisibles dans le CSS résultant de la compilation, même en mode étendu pendant le développement.
+Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass (c’est-à-dire `//`) à la place des blocs de commentaires de style C. Les commentaires seront invisibles dans le CSS résultant de la compilation, même en mode étendu pendant le développement.
 
 {% include snippets/comments/02/index.html %}
 

@@ -7,11 +7,11 @@ Voici comment [Sass](http://sass-lang.com) est décrit dans la [documentation](h
 
 L’objectif ultime de Sass est de combler les lacunes de CSS. Nous le savons, CSS n’est pas le meilleur langage du monde <sup>[citation needed]</sup>. Même s’il est très simple d’apprentissage, il peut rapidement devenir confus, en particulier dans les projets à grande échelle.
 
-Sass intervient ici comme un méta-langage, pour améliorer la syntaxe CSS afin d’offir des fonctionnalités supplémentaires et des outils pratiques. Dans le même temps, Sass entend rester proche du langage CSS.
+Sass intervient ici comme un méta-langage, pour améliorer la syntaxe CSS afin d’offrir des fonctionnalités supplémentaires et des outils pratiques. Dans le même temps, Sass entend rester proche du langage CSS.
 
 Il ne s’agit pas de transformer CSS en langage de programmation. L’intention de Sass est simplement d’intervenir là où CSS montre ses limites. C’est pour cela qu’il est si simple de se lancer dans Sass&nbsp;: il ne fait qu’ajouter [quelques fonctionnalités](http://sitepoint.com/sass-reference/) à CSS.
 
-Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommendations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
+Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommandations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
 
 ## Ruby Sass ou LibSass
 
@@ -45,7 +45,7 @@ Ce que j’aime avec Sass c’est son approche conservatrice de CSS. La concepti
 
 À côté des préprocesseurs, nous devons aussi mentionner d’autres outils dont on a beaucoup parlé dernièrement tels que [PostCSS](https://github.com/postcss/postcss) et [cssnext](https://cssnext.github.io/).
 
-PostCSS est souvent (et de manière incorrecte) baptisé “postprocesseur”. Cette supposition, au delà du nom trompeur, vient de l’idée que PostCSS analyserait du code CSS déjà processé par un préprocesseur. Bien que cela puisse fonctionner ainsi, ce n’est pas un prérequis, si bien que PostCSS est désormais rangé simplement dans la catégorie “processeur“.
+PostCSS est souvent (et de manière incorrecte) baptisé “postprocesseur”. Cette supposition, au-delà du nom trompeur, vient de l’idée que PostCSS analyserait du code CSS déjà processé par un préprocesseur. Bien que cela puisse fonctionner ainsi, ce n’est pas un pré-requis, si bien que PostCSS est désormais rangé simplement dans la catégorie “processeur“.
 
 On parle souvent de “postprocesseurs” dans la mesure où ils compilent de la syntaxe propriétaire ou non-standardisée en CSS actuel. Ceci étant dit, ils sont assez proches des préprocesseurs, à ceci près qu’ils ne font qu’ajouter la syntaxe future de CSS.
 
