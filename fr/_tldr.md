@@ -36,7 +36,7 @@ Ces règles de conduite sont assez longues, par conséquent il est de bon ton d�
 
 ### Listes
 
-* À moins d’être utilisées comme associations directes avec des valeurs CSS utilisant des listes séparées par des espaces, les listes Sass doivent être séparées par des virgues. [↩](#listes)
+* À moins d’être utilisées comme associations directes avec des valeurs CSS utilisant des listes séparées par des espaces, les listes Sass doivent être séparées par des virgules. [↩](#listes)
 * Entourer les listes avec des parenthèses doit être considéré pour faciliter la lecture. [↩](#listes)
 * Les listes mises sur une ligne unique n’ont pas de virgule finale, mais les listes s’étendant sur plusieurs lignes en ont. [↩](#listes)
 

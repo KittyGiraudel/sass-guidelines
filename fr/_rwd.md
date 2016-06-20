@@ -45,4 +45,4 @@ On vous dira que cette convention a pour effet la duplication de media queries e
 > … nous avons étudié les implications en termes de performance de la combinaison ou de la dissociation des media queries et nous sommes arrivés à la conclusion que la différence est, au pire, minimale, au mieux inexistante.
 > &mdash; [Sam Richards, au sujet de Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
-Maintenant, si vous êtes vraiment soucieux d’éviter toute duplication, vous pouvez utiliser un outil pour merger les media queries, comme [cette gem](https://github.com/aaronjensen/sass-media_query_combiner), cependant je dois vous avertir de possibles effets collatéraux liés au déplacement de code —&nbsp;n’oubliez pas que l’ordre des sources est important en CSS.
+Maintenant, si vous êtes vraiment soucieux d’éviter toute duplication, vous pouvez utiliser un outil pour merger les media queries, comme [cette Gem](https://github.com/aaronjensen/sass-media_query_combiner), cependant je dois vous avertir de possibles effets collatéraux liés au déplacement de code —&nbsp;n’oubliez pas que l’ordre des sources est important en CSS.

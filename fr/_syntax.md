@@ -76,7 +76,7 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
 {% include snippets/syntax/07/index.html %}
 
 <div class="note">
-  <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code>\ 0.$1</code>. N’oubliez pas l’espace précédantg le <code>0</code> par contre.</p>
+  <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code>\ 0.$1</code>. N’oubliez pas l’espace précédant le <code>0</code> par contre.</p>
 </div>
 
 ### Unités
@@ -141,13 +141,13 @@ Pour simplifier les couleurs autant que possible, mon conseil est de respecter l
 2. [Notation RGB](http://fr.wikipedia.org/wiki/Rouge_vert_bleu);
 3. Notation hexadécimale (en minuscules et en version raccourcie lorsque c’est possible).
 
-Les mots-clés de couleur ne devrait pas être utilisés, sauf quand il s’agit de prototypage rapide. En effet, ils sont en anglais et certains d’entre eux font un bien piêtre travail quand il s’agit d’exprimer la couleur qu’ils représentent, surtout pour des personnes dont l’anglais n’est pas la langue maternelle. De plus, les mots-clés n’ont pas vraiment de valeur sémantique. Par exemple, `grey` se trouve être plus foncé que `darkgrey`, et la confusion entre `grey` et `gray` peut engendrer une utilisation incohérente de cette couleur.
+Les mots-clés de couleur ne devraient pas être utilisés, sauf quand il s’agit de prototypage rapide. En effet, ils sont en anglais et certains d’entre eux font un bien piètre travail quand il s’agit d’exprimer la couleur qu’ils représentent, surtout pour des personnes dont l’anglais n’est pas la langue maternelle. De plus, les mots-clés n’ont pas vraiment de valeur sémantique. Par exemple, `grey` se trouve être plus foncé que `darkgrey`, et la confusion entre `grey` et `gray` peut engendrer une utilisation incohérente de cette couleur.
 
 La représentation HSL n’est pas seulement la plus facile à appréhender pour le cerveau humain <sup>[citation requise]</sup>, elle rend aussi les modifications de couleurs plus simples en permettant d’ajuster la teinte, la saturation et la valeur de manière individuelle.
 
 Le format RGB a également l’avantage d’indiquer du premier coup d’oeil si la couleur est plutôt bleue, verte ou rouge. C’est pourquoi il peut être plus approprié que le format HSL dans certains cas, surtout quand il s’agit de décrire un pur rouge, vert ou bleu. Cependant, ce format rend la construction d’une couleur via ses trois composantes difficile.
 
-Enfin, héxadédimal est presque indéchiffrable pour le cerveau humain. Ne l’utilisez qu’en dernier recours, si vous en avez besoin.
+Enfin, l'hexadécimal est presque indéchiffrable pour le cerveau humain. Ne l’utilisez qu’en dernier recours, si vous en avez besoin.
 
 {% include snippets/syntax/14/index.html %}
 
@@ -317,7 +317,7 @@ C’est d’autant plus vrai à mesure que les sélecteurs s’allongent et que 
 
 Pour éviter de telles situations, nous **évitons l’imbrication des sélecteurs autant que possible**. Il y a cependant quelques exceptions à cette règle.
 
-Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
+Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au-delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
 
 Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 

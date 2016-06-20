@@ -39,9 +39,9 @@ Idéalement, les composants devraient exister dans leur propre fichier (dans le 
 
 Si vous souhaitez rendre vos composants personnalisables de façon externe (via un thème provenant du dossier `themes/` par exemple), limitez les déclarations aux styles structurels comme les dimensions (`width`, `height`), marges (`padding`, `margin`), alignements, etc. Évitez les styles graphiques comme les couleurs, ombres, fonds, règles de typographie, etc.
 
-Un fichier de composant peut inclurer des variables, placeholders et mêmes mixins et fonctions du moment que ceux-ci sont spécifiques au dit composant. Gardez à l’esprit cependant qu’il faut éviter de référencer (`@import`-er) un composant depuis un autre composant car cela peut rendre le projet extrêmement chaotique.
+Un fichier de composant peut inclure des variables, placeholders et mêmes mixins et fonctions du moment que ceux-ci sont spécifiques au dit composant. Gardez à l’esprit cependant qu’il faut éviter de référencer (`@import`-er) un composant depuis un autre composant car cela peut rendre le projet extrêmement chaotique.
 
-Voilà un example de composant bouton :
+Voilà un exemple de composant bouton :
 
 {% include snippets/architecture/06/index.html %}
 
@@ -108,7 +108,7 @@ Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de
 
 ### Dossier composants
 
-Pour les plus petits composants, il y a le dossier `components/`. Alors que `layout/` est *macro* (c’est à dire qu’il définit l’*armature* globale), `components/` est plus centré sur les widgets.  Il contient toutes sortes de modules spécifiques tels qu’un slider, un loader, un widget et toutes ces sortes de choses. Il y a en général de nombreux fichiers dans `components/` car l’application tout entière devrait être essentiellement constituée de petits modules.
+Pour les plus petits composants, il y a le dossier `components/`. Alors que `layout/` est *macro* (c’est-à-dire qu’il définit l’*armature* globale), `components/` est plus centré sur les widgets.  Il contient toutes sortes de modules spécifiques tels qu’un slider, un loader, un widget et toutes ces sortes de choses. Il y a en général de nombreux fichiers dans `components/` car l’application tout entière devrait être essentiellement constituée de petits modules.
 
 * `_media.scss`
 * `_carousel.scss`
