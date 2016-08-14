@@ -1,8 +1,6 @@
 /* globals $ */
 
-import h from './helpers';
-
-export default (function () {
+(function (scope) {
   'use strict';
 
   // DOM queries
@@ -12,13 +10,13 @@ export default (function () {
 
   // Internal variables
   var addOffsetView = 50;
-  var isLargerThanMobile = h.evalClientResolution(975);
+  var isLargerThanMobile = scope.evalClientResolution(975);
   var headingsOffset = headings.map(function (heading) {
-    return [ heading, h.getOffset(heading) ];
+    return [ heading, scope.getOffset(heading) ];
   });
 
   var evalHeadingsPosition = function () {
-    var scrollTop = h.getDocumentScrollTop() + addOffsetView;
+    var scrollTop = scope.getDocumentScrollTop() + addOffsetView;
 
     if (isLargerThanMobile) {
       // Loop over all headings offsets & compare scrollTop if already passed a value.
@@ -36,11 +34,11 @@ export default (function () {
   };
 
   var adjustTableOfContents = function () {
-    var top = h.getOffset(tableOfContents);
-    var bottom = h.getOffset(footer);
-    var current = h.getDocumentScrollTop();
+    var top = scope.getOffset(tableOfContents);
+    var bottom = scope.getOffset(footer);
+    var current = scope.getDocumentScrollTop();
     var topFn = current > top ? 'add' : 'remove';
-    var bottomFn = (current + h.getDocumentHeight()) > bottom ? 'add' : 'remove';
+    var bottomFn = (current + scope.getDocumentHeight()) > bottom ? 'add' : 'remove';
 
     tableOfContents.classList[topFn]('sticky');
     tableOfContents.classList[bottomFn]('sticky-bottom');
@@ -59,9 +57,9 @@ export default (function () {
   // Bind listeners
   document.addEventListener('scroll', adjustTableOfContents, false);
   window.addEventListener('scroll', evalHeadingsPosition, false);
-  window.addEventListener('resize', h.evalClientResolution.bind(975), false);
+  window.addEventListener('resize', scope.evalClientResolution.bind(975), false);
 
   // Initial test
   evalHeadingsPosition();
   adjustTableOfContents();
-}());
+}(window));

@@ -9,9 +9,8 @@
     "watch": "JEKYLL_ENV=LOCAL bundle exec jekyll s --incremental --config _config.yml,_config.dev.yml",
     "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/a11y-dialog/a11y-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
     "js:utilities": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
-    "js:main": "rollup --format iife assets/js/src/main.js > assets/js/bundle.js",
     "js:lint": "semistandard assets/js/src",
-    "js:build": "npm run js:lint && npm run js:vendors && npm run js:main && npm run js:utilities",
+    "js:build": "npm run js:lint && npm run js:vendors && npm run js:utilities",
     "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --output _includes/critical.css && cleancss _includes/critical.css --output _includes/critical.css"
   },
   "dependencies": {
@@ -25,7 +24,6 @@
   "devDependencies": {
     "clean-css": "^3.4.10",
     "criticalcss": "^1.0.1",
-    "rollup": "^0.25.4",
     "semistandard": "^7.0.5",
     "spritesh": "^1.0.10",
     "svgo": "^0.6.3",

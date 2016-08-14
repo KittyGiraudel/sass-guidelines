@@ -1,6 +1,6 @@
 /* globals $ */
 
-export default (function () {
+(function () {
   'use strict';
 
   // DOM queries

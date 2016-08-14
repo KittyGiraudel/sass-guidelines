@@ -26,7 +26,7 @@ gems:
 data_dir: ./_locales
 exclude: [
   "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "TRANSLATING.md",
-  "assets/js/vendor", "assets/js/src", "assets/images/icons",
+  "assets/images/icons",
   "package.json", "Gemfile", "Gemfile.lock",
   "**/README.md", "LICENSE", "CNAME",
   "node_modules", "vendor", "_bin"
