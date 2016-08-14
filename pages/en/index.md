@@ -2,6 +2,7 @@
 layout: default
 language: en
 direction: ltr
+permalink: /
 ---
 
-{% include layout/chapters.html path="/en/" %}
+{% include layout/chapters.html %}
