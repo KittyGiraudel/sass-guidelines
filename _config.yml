@@ -21,6 +21,7 @@ languages:
   - zh
 
 # Build settings
+environment: production
 gems:
   - jekyll-sitemap
 data_dir: ./_locales

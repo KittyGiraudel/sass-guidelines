@@ -6,7 +6,7 @@
     "preicons": "svgo assets/images/icons",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
     "start": "npm run build && npm run watch",
-    "watch": "JEKYLL_ENV=LOCAL bundle exec jekyll s --incremental --config _config.yml,_config.dev.yml",
+    "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
     "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/a11y-dialog/a11y-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
     "js:utilities": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
     "js:lint": "semistandard assets/js/src",
