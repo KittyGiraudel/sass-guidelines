@@ -30,4 +30,4 @@
     Last update: {{ site.time | date_to_long_string }}
     Languages: HTML, CSS (Sass), JavaScript
     Components: Jekyll
-    Hosting: GitHub Pages
+    Hosting: Netlify
