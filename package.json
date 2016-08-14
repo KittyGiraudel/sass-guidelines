@@ -8,7 +8,7 @@
     "start": "npm run build && npm run watch",
     "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
     "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/a11y-dialog/a11y-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
-    "js:utilities": "cat node_modules/fg-loadcss/loadCSS.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
+    "js:utilities": "cat node_modules/fg-loadcss/src/loadCSS.js node_modules/fg-loadcss/src/cssrelpreload.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
     "js:lint": "semistandard assets/js/src",
     "js:build": "npm run js:lint && npm run js:vendors && npm run js:utilities",
     "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --output _includes/critical.css && cleancss _includes/critical.css --output _includes/critical.css"
@@ -16,7 +16,7 @@
   "dependencies": {
     "a11y-dialog": "^2.0.3",
     "blingdotjs": "gist:7d867cda127e64d38f28",
-    "fg-loadcss": "^0.2.4",
+    "fg-loadcss": "^1.2.0",
     "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
     "picturefill": "^3.0.2",
     "woff2-feature-test": "^1.0.2"
