@@ -21,7 +21,8 @@ languages:
   - zh
 
 # Build settings
-safe: true
+gems:
+  - jekyll-sitemap
 data_dir: ./_locales
 exclude: [
   "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "TRANSLATING.md",

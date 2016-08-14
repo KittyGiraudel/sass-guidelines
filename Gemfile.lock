@@ -138,3 +138,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   html-proofer
+  jekyll-sitemap
+
+BUNDLED WITH
+   1.12.5
