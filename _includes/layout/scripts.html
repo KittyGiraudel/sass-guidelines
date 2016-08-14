@@ -1,8 +1,5 @@
 <!-- Main JavaScript file -->
-{% capture js_file %}
-/assets/js/bundle.{% if jekyll.environment != 'LOCAL' %}min.{% endif %}js
-{% endcapture %}
-<script defer src="{{ js_file | strip | prepend: site.url }}"></script>
+<script defer src="{{ "/assets/js/bundle.js" | strip | prepend: site.url }}"></script>
 
 {% if jekyll.environment != 'LOCAL' %}
 <!-- Google Analytics tracking -->

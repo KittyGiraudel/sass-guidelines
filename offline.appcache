@@ -20,7 +20,7 @@ assets/css/fonts/data-woff.css
 assets/css/fonts/data-woff2.css
 
 # JS Files
-assets/js/bundle.min.js
+assets/js/bundle.js
 assets/js/picturefill.min.js
 
 # Images
