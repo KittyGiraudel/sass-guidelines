@@ -1,7 +1,8 @@
 ---
 layout: default
-language: el
+language: it
 direction: ltr
+permalink: /it/
 ---
 
 {% include layout/chapters.html %}

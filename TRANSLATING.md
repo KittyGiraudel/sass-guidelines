@@ -6,14 +6,15 @@ If you have to update a translation, refer to [the relevant section](#updating-a
 
 1. Be sure to read the [contributing guidelines](CONTRIBUTING.md) to know how to deal with branching and Git.
 
-2. Copy the `en/` folder and rename it after your language shortcode (e.g. `fr/` for French).
+2. Copy the `en/` folder in `pages/` and rename it after your language shortcode (e.g. `fr/` for French).
 
-3. Add an `index.md` file in your folder containing strictly the following (replace `<language_shortcode>` with your language shortcode of course; if your language is right-to-left, replace `ltr` with `rtl`):
+3. Update the `index.md` file in your folder (replace `<language_shortcode>` with your language shortcode of course; if your language is right-to-left, replace `ltr` with `rtl`):
   ```
   ---
   layout: default
   language: <language_shortcode>
   direction: ltr
+  permalink: /<language_shortcode>/
   ---
 
   {% include layout/chapters.html %}
