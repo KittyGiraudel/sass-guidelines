@@ -23,7 +23,7 @@
   var getEditLink = function (chapter) {
     var id = chapter.id.split('chapter-')[1];
     var link = document.createElement('a');
-    link.href = 'https://github.com/HugoGiraudel/sass-guidelines/blob/gh-pages/' + language + '/_' + id + '.md';
+    link.href = 'https://github.com/HugoGiraudel/sass-guidelines/blob/master/pages/' + language + '/_' + id + '.md';
     link.innerHTML = sanitizeSVG(editSvg);
     link.setAttribute('class', 'chapter__edit button-ui');
     link.setAttribute('target', '_blank');
