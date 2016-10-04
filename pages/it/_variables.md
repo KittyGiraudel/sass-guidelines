@@ -29,7 +29,7 @@ Quando si costruisce una libreria, un framework, un sistema di griglie o un qual
 
 {% include snippets/variables/02/index.html %}
 
-Grazie a questo, uno sviluppatore può definire la propria variabile `$baseline` *prima* di importare la vostra libreria senza dover vedere il proprio valore ridefinito.
+Grazie a questo, uno sviluppatore può definire la propria variabile `$baseline` *prima* di importare la propria libreria senza dover vedere il proprio valore ridefinito.
 
 {% include snippets/variables/03/index.html %}
 
