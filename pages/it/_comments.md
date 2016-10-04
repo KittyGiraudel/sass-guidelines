@@ -20,7 +20,7 @@ Idealmente, *ogni* set di regole CSS dovrebbe essere preceduto da un commento st
 
 {% include snippets/comments/01/index.html %}
 
-Praticamente tutto ciò che non è ovvio al primo sguardo dovrebbe essere inserito nei commenti. Non esiste la troppa documentazione. Ricorda che non puoi *commentare troppo*, perciò dacci dentro e scrivi commenti per tutto ciò per cui val la pena.
+Praticamente tutto ciò che non è ovvio al primo sguardo dovrebbe essere inserito nei commenti. Non esiste la troppa documentazione. Ricorda che non puoi *commentare troppo*, perciò dacci dentro e scrivi commenti per tutto ciò per cui vale la pena.
 
 Quando commenti parti specifiche in Sass, usa commenti inline piuttosto che il blocco stile C. Questo rende il commento invisibile nell’output, anche nella maniera estesa che si usa durante lo sviluppo.
 
