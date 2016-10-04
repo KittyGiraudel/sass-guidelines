@@ -81,7 +81,7 @@ I numeri dovrebbero avere lo zero prima di un valore decimale inferiore a uno. N
 
 ### Unità di misura
 
-Quando si hanno a che fare con le lunghezze, un valore `0` non dovrebbe mai avere l'unità di misura.
+Quando si ha a che fare con le lunghezze, un valore `0` non dovrebbe mai avere l'unità di misura.
 
 {% include snippets/syntax/08/index.html %}
 
@@ -89,7 +89,7 @@ Quando si hanno a che fare con le lunghezze, un valore `0` non dovrebbe mai aver
   <p>Attenzione: questa pratica è limitata solo alle lunghezze. Uno zero senza unità di misura per proprietà come <code>transition-delay</code> non è ammesso. In teoria non sarebbe valido e verrebbe scartato. Non tutti i browser però si comportano così. In pratica: omettete le unità di misura solo per le lunghezze.</p>
 </div>
 
-L'errore più comune che si può immaginare riguardo i numeri e Sass è pensare che le unità di misura sono solo stringhe che si possono aggiungere ai numeri. Se delle volte è vero, non è così che le unità di misura funzionano in Sass. Le unità di misura dovrebbero essere immaginate come simboli algebrici. Ad esempio, moltiplicare 5 pollici per 5 pollici ci dà 25 pollici quadrati. La stessa logica va applicata a Sass.
+L'errore più comune che si può immaginare riguardo i numeri e Sass è pensare che le unità di misura siano solo stringhe che si possono aggiungere ai numeri. Se delle volte è vero, non è così che le unità di misura funzionano in Sass. Le unità di misura dovrebbero essere immaginate come simboli algebrici. Ad esempio, moltiplicare 5 pollici per 5 pollici ci dà 25 pollici quadrati. La stessa logica va applicata a Sass.
 
 Per aggiungere l'unità di misura ad un numero, basta moltiplicare il numero per *1 unità*.
 
@@ -105,7 +105,7 @@ Per rimuovere l'unità di misura di un valore, basta dividere di *una unità del
 
 {% include snippets/syntax/11/index.html %}
 
-Aggiungere un'unità di misura come stringa ad un numero genera una stringa, impendendo qualsiasi altra operazione sul valore. Anche fare uno `str-slice` (ovvero tagliare una parte della stringa), prendendo solo la parte numerica, genererà comunque una nuova stringa. Non è certo quel che volgiamo. [Usiamo lunghezze, non stringhe](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Aggiungere un'unità di misura come stringa ad un numero genera una stringa, impendendo qualsiasi altra operazione sul valore. Anche fare uno `str-slice` (ovvero tagliare una parte della stringa), prendendo solo la parte numerica, genererà comunque una nuova stringa. Non è certo quel che vogliamo. [Usiamo lunghezze, non stringhe](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Calcoli
 
@@ -237,7 +237,7 @@ A questo punto non ci rimane che ripassare qualcosa che tutti sappiamo, ovvero c
 * uno spazio dopo i due punti (`:`);
 * un punto e virgola di chiusura (`;`) alla fine di tutte le dichiarazioni;
 * la graffa di chiusura (`}`) deve avere una proria riga;
-* una nuova riga dopo la graffa di cchiusura `}`.
+* una nuova riga dopo la graffa di chiusura `}`.
 
 Esempio:
 
@@ -262,7 +262,7 @@ Non credo ci siano molti altri argomenti oltre a come ordinare dichiarazioni CSS
 * ordine alfabetico;
 * ordine di dichiarazioni in base al tipo di dichiarazione (position, display, colori, font, eccetera…).
 
-Ci sono pro e contro per entrambi i modi. Da una parte, l'ordine alfabetico è (almeno per chi usa l'alfabeto latino) universale, quindi non ci possono essere discussioni su come ordinare una proprietà rispetto ad un altra. Tuttavia è davvero strano per me vedere proprietà come `bottom` e `top` non una affianco all'altra. Perchè le animazioni devono essere prima delle proprietà di posizionamento? Ci sono un sacco di stranezze nell'ordinare alfabeticamente.
+Ci sono pro e contro per entrambi i modi. Da una parte, l'ordine alfabetico è (almeno per chi usa l'alfabeto latino) universale, quindi non ci possono essere discussioni su come ordinare una proprietà rispetto ad un'altra. Tuttavia è davvero strano per me vedere proprietà come `bottom` e `top` non una affianco all'altra. Perchè le animazioni devono essere prima delle proprietà di posizionamento? Ci sono un sacco di stranezze nell'ordinare alfabeticamente.
 
 {% include snippets/syntax/26/index.html %}
 
@@ -327,7 +327,7 @@ Per iniziare: è consentito ed anche raccomandato annidare pseudo-classi e pseud
 
 {% include snippets/syntax/33/index.html %}
 
-Utilizzare selettori annidati per le pseudo-classi e gli pseudo-elementi non solo ha senso (perchè riguardano da vicino il selettore correlato), ma aiuta anche ad avere tutto quel che riguarda un componente nello stesso punto
+Utilizzare selettori annidati per le pseudo-classi e gli pseudo-elementi non solo ha senso (perchè riguardano da vicino il selettore correlato), ma aiuta anche ad avere tutto quel che riguarda un componente nello stesso punto.
 
 Inoltre, quando si utilizza uno stato di classe agnostico, come `is-active`, è totalmente corretto annidarlo sotto il selettore del componente per tenere le cose compatte.
 
