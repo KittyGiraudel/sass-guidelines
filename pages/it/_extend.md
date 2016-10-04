@@ -11,7 +11,7 @@ Tuttavia il vero scopo di `@extend` è quello di mantenere le relazioni (i vinco
 
 Detto questo, è chiaro che estendere selettori con vincoli blandi possa portare a risultati non voluti. Se `.baz .qux` estende `.foo .bar`, il risultato sarà `.foo .baz .qux` e `.baz .foo .qux` ed entrambi `.foo` e `.baz` sono _ancestor selector_ generici. Potrebbero essere padri, nonni, ecc...
 
-Bisogna sempre cercare di definire le relazioni per mezzo dei [placeholder](http://www.sitepoint.com/sass-reference/placeholders/) e non attraverso i selettori reali. Questo vi darà la libertà di usare (e cambiare) qualsiasi convenzione dei nomi abbiate per i vostri selettori e, visto che le relazioni sono definite solo una volta e dentro i _placolder_, sarete in grado di evitare selettori inintenzionali.
+Bisogna sempre cercare di definire le relazioni per mezzo dei [placeholder](http://www.sitepoint.com/sass-reference/placeholders/) e non attraverso i selettori reali. Questo vi darà la libertà di usare (e cambiare) qualsiasi convenzione dei nomi abbiate per i vostri selettori e, visto che le relazioni sono definite solo una volta e dentro i _placeholder_, sarete in grado di evitare selettori inintenzionali.
 
 Per ereditare gli stili, usate `@extend` solo se la `.class` o il `%placeholder` che estende  _è dello stesso tipo_ del selettore esteso. Per esempio: un `.error` è un tipo di `.warning`, quindi `.error` può fare `@extend .warning`.
 
