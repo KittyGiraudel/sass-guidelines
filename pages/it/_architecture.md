@@ -17,7 +17,7 @@ Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) 
 
 ## Componenti
 
-C’è una differenza sostanziale tra il *far funzionare qualcosa* e il farlo funzionare *bene*. Anche qui CSS si rivela un bel casino <sup>[necessaria citazione]</sup>. Meno CSS abbiamo, meglio è. Non vogliamo aver a che fare con megabyte di codice CSS. Per mantenere i fogli di stile piccoli ed efficienti &mdash;è non c’è da sorprendersi&mdash; è una buona idea pensare all’interfaccia come ad un’insieme di componenti.
+C’è una differenza sostanziale tra il *far funzionare qualcosa* e il farlo funzionare *bene*. Anche qui CSS si rivela un bel casino <sup>[necessaria citazione]</sup>. Meno CSS abbiamo, meglio è. Non vogliamo aver a che fare con megabyte di codice CSS. Per mantenere i fogli di stile piccoli ed efficienti &mdash;è non c’è da sorprendersi&mdash; è una buona idea pensare all’interfaccia come ad un insieme di componenti.
 
 Qualsiasi cosa può essere un componente, purchè:
 
@@ -27,11 +27,11 @@ Qualsiasi cosa può essere un componente, purchè:
 
 Ad esempio, una form di ricerca potrebbe essere considerata come un componente. Potrebbe essere riutilizzabile in diverse posizioni, in diverse pagine, in diverse situazioni. Il componente non dovrebbe dipendere dalla sua posizione nel DOM (footer, sidebar, contenuto principale...).
 
-La maggior prte delle interfacce può essere pensata come un’insieme di piccoli componenti. Suggerisco di tener sempre presente questo paradigma. Questo non solo ridurrà la quantità di CSS di cui il progetto avrà bisogno, ma ci porterà anche ad avere un codice più semplice da manutenere rispetto a un caos dove tutto è mischiato.
+La maggior prte delle interfacce può essere pensata come un insieme di piccoli componenti. Suggerisco di tener sempre presente questo paradigma. Questo non solo ridurrà la quantità di CSS di cui il progetto avrà bisogno, ma ci porterà anche ad avere un codice più semplice da manutenere rispetto a un caos dove tutto è mischiato.
 
 ## La struttura dei componenti
 
-I componenti dovrebbero essere idealmente descritti ciascuno nel loro file .sass parziale. Dobrebbero essere poi contenuti all’interno della cartella `components/`, come descritto nel  [7-1 pattern](#il-pattern-7-1)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere:
+I componenti dovrebbero essere idealmente descritti ciascuno nel loro file .sass parziale. Dovrebbero essere poi contenuti all’interno della cartella `components/`, come descritto nel  [7-1 pattern](#il-pattern-7-1)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere:
 
 * lo stile del componente;
 * lo stile delle variazioni del componente;
@@ -77,7 +77,7 @@ Idealmente, avremo qualcosa simile a questo:
 
 ### La cartella Base
 
-La cartella `base/` folder contiene ciò che potremmo chiamare il codice boilerplate per il progetto. Qui troveremo il file di reset, qualche regola tipografica, e probabilmente un foglio di stile (che di solito chiamo `_base.scss`), il quale definisce alcuni stili standard per elementi HTML comunemente usati.
+La cartella `base/` contiene ciò che potremmo chiamare il codice boilerplate per il progetto. Qui troveremo il file di reset, qualche regola tipografica, e probabilmente un foglio di stile (che di solito chiamo `_base.scss`), il quale definisce alcuni stili standard per elementi HTML comunemente usati.
 
 * `_base.scss`
 * `_reset.scss`
@@ -99,7 +99,7 @@ La cartella `layout/` contiene tutto ciò che si occupa di creare i layout del s
 * `_navigation.scss`
 
 <div class="note">
-  La cartella <code>layout/</code> può anche esser chiamata <code>partials/</code>; dipende da ciò che preferite.
+  La cartella <code>layout/</code> può anche essere chiamata <code>partials/</code>; dipende da ciò che preferite.
 </div>
 
 ### La cartella Components

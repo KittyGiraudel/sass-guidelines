@@ -21,7 +21,7 @@ Se il valore è senza unità di misura, la fuzione parte dal presupposto che sia
 
 ## Errori
 
-Gli errori, diversamente dagli avvisi, fanno in modo che il compiler vada avanti nel suo lavoro. Praticamente fermano la compilazione e mostrano un messaggio nell’output e nello stack trace, utile per il debug. Per questo motivo, gli errori dovrebbero essere chiamati quando non c’è altra maniera per il programmatore di tenere il programma in funzione. Quando possibile, meglio provare un workaround sul problema e mostrare un’avviso.
+Gli errori, diversamente dagli avvisi, fanno in modo che il compiler vada avanti nel suo lavoro. Praticamente fermano la compilazione e mostrano un messaggio nell’output e nello stack trace, utile per il debug. Per questo motivo, gli errori dovrebbero essere chiamati quando non c’è altra maniera per il programmatore di tenere il programma in funzione. Quando possibile, meglio provare un workaround sul problema e mostrare un avviso.
 
 Ad esempio, diciamo che si vuol costruire una fuzione _getter_ per accedere ai valori di una _map_ specifica. Si può chiamare un errore se la chiave richiesta non esiste nella _map_.
 
