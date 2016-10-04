@@ -26,7 +26,7 @@ Queste linee guida sono abbastanza lunghe e a volte è meglio avere accesso ad u
 * Sass non fa distinzione tra i numeri, gli interi e i numeri con la virgola. Quindi gli zero (0) non significativi dopo la virgola possono essere omessi. Invece gli zero (0) prima della virgola andrebbero aggiunti per aumentare la leggibilità. [↩](#zero)
 * Un valore a zero (0) non andrebbe scritto con l'unità di misura. [↩](#unit-di-misura)
 * Le unità di misura andrebbero manipolate solo attraverso operazioni matematiche, non attraverso manipolazioni di stringhe. [↩](#unit-di-misura)
-* È consigliabile inserire tra parentesi tonde le operazioni matematiche, per migliorarne la leggibilità. Inoltre le operazioni matematiche complesse dobrebbero essere divise in pezzi più piccoli. [↩](#calcoli)
+* È consigliabile inserire tra parentesi tonde le operazioni matematiche, per migliorarne la leggibilità. Inoltre le operazioni matematiche complesse dovrebbero essere divise in pezzi più piccoli. [↩](#calcoli)
 * I 'numeri magici' riducono drasticamente la manutenibilità del codice e per questo dovrebbero essere evitati a tutti i costi. Se avete dei dubbi, commentate spiegando estensivamente il perchè di quel valore. [↩](#numeri-magici)
 
 ### Colori
@@ -52,7 +52,7 @@ Queste linee guida sono abbastanza lunghe e a volte è meglio avere accesso ad u
 
 ### Annidamento dei selettori
 
-* Evitate l'annidamento dei selettori se non è necessario (ovvero la maggiorparte delle volte). [↩](#selettori-annidati)
+* Evitate l'annidamento dei selettori se non è necessario (ovvero la maggior parte delle volte). [↩](#selettori-annidati)
 * Utilizzate selettori annidati per pseudo-classi e pseudo-elementi. [↩](#selettori-annidati)
 * Le media query possono essere tranquillamente innestate all'interno del selettore di appartenenza. [↩](#selettori-annidati)
 
@@ -63,7 +63,7 @@ Queste linee guida sono abbastanza lunghe e a volte è meglio avere accesso ad u
 ## Commenti
 
 * CSS è un linguaggio ingannevole. Non esitate mai a scrivere commenti dettagliati su cose che possono sembrare (o essere) equivoche. [↩](#commentare)
-* Per variabili, funzioni, mixin e placeholder stabilite una API publica e usate il sistema di commenti di SassDoc. [↩](#documentazione)
+* Per variabili, funzioni, mixin e placeholder stabilite una API pubblica e usate il sistema di commenti di SassDoc. [↩](#documentazione)
 
 ## Variabili
 
