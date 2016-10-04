@@ -5,13 +5,13 @@ Questo è come [Sass](http://sass-lang.com) descrive se stesso e la propria [doc
 
 > Sass è un’estensione di CSS che aggiunge potenzialità ed eleganza al linguaggio base.
 
-L’obiettivo finale di Sass è di sistemare i difetti di CSS. CSS, come molti sappiamo, non è il miglior linguaggio di programmazione nel mondo <sup>[citazione necessaria]</sup>. È molto semplice da imparare, ma può diventare presto un casino, specialmente nei progetti grandi.
+L’obiettivo finale di Sass è di sistemare i difetti di CSS. CSS, come tutti sappiamo, non è il miglior linguaggio di programmazione nel mondo <sup>[citazione necessaria]</sup>. È molto semplice da imparare, ma può diventare presto un casino, specialmente nei progetti grandi.
 
 Ed è qui che arriva Sass, che come meta linguaggio migliora la sintassi di CSS in modo da fornire funzionalità in più e strumenti di supporto extra. Inoltre Sass vuole rimanere conservativo riguardo la sintassi CSS.
 
 Il punto non è rendere CSS un linguaggio di programmazione pieno di funzionalità: Sass vuole solo aiutare dove CSS fallisce. Proprio per questo, iniziare con Sass non è più difficile che imparare CSS: vengono semplicemente aggiunte un [paio di funzionalità](http://sitepoint.com/sass-reference/).
 
-Detto questo, per usare queste funzionalità, ci sono molti modi. Alcuni buoni, altri cattivi, altri inusuali. Queste linee guida intendono fornire un’approccio consistente e documentato per scrivere codice in Sass.
+Detto questo, per usare queste funzionalità, ci sono molti modi. Alcuni buoni, altri cattivi, altri inusuali. Queste linee guida intendono fornire un approccio consistente e documentato per scrivere codice in Sass.
 
 ## Ruby Sass o LibSass
 
@@ -41,7 +41,7 @@ La sintassi indentata si basa sull’indentazione e sugli spazi bianchi per elim
 
 ## Altri preprocessor
 
-Sass è un _preprocessor_ come un altro. Il suo maggior concorrente è [LESS](http://lesscss.org/), un _preprocessor_ basato su Node.js, che ha avuto molta popolarità grazie al famoso _framework_ CSS [Bootstrap](http://getbootstrap.com/) che lo utilizza. C’è anche [Stylus](http://learnboost.github.io/stylus/), molto capace e flessibile; un po' più difficile da usare e con una communità più piccola.
+Sass è un _preprocessor_ come un altro. Il suo maggior concorrente è [LESS](http://lesscss.org/), un _preprocessor_ basato su Node.js, che ha avuto molta popolarità grazie al famoso _framework_ CSS [Bootstrap](http://getbootstrap.com/) che lo utilizza. C’è anche [Stylus](http://learnboost.github.io/stylus/), molto capace e flessibile; un po' più difficile da usare e con una comunità più piccola.
 
 *Perchè scegliere Sass piuttosto che un altro _preprocessor_?* è ancora un’ottima domanda. Non molto tempo fa eravamo soliti raccomandare Sass per progetti basati su Ruby, visto che era sviluppato in Ruby e si comportava egregiamente con _Ruby on Rails_. Ora che Libsass è praticamente identico (o quasi) alla libreria originale, tutto ciò non è più una raccomandazione rilevante.
 
@@ -56,6 +56,6 @@ PostCSS è spesso chiamato (in maniera scorretta) “postprocessor”. Il presup
 
 Con PostCSS è facile accedere a dei “token” del proprio foglio di stile (come selettori, proprietà e valori), processare questi con JavaScript per realizzare qualsiasi operazione e poi compilare il risultato in CSS. Ad esempio, la libreria [Autoprefixer](https://github.com/postcss/autoprefixer) è realizzata proprio con PostCSS. Analizza ogni regola per vedere se ci sono da aggiungere o rimuovere dei _vendor prefix_, facendo riferimento a [CanIUse](http://caniuse.com) per il supporto dei browser.
 
-PostCSS è potentissimo e ottimo per costruire librerie che possono lavorare insieme con altri _preprocessor_, ma certamente non è ancora facile da usare. C’è da conoscere un po’ di JavaScript per fare qualsiasi cosa e la sua API può essere un po’ complicata. Mentre Sass offre solo un set di funzioni che sono utili a scrivere CSS, PostCSS offre un accesso diretto al CSS AST (*abstra syntax tree*) e JavaScript.
+PostCSS è potentissimo e ottimo per costruire librerie che possono lavorare insieme con altri _preprocessor_, ma certamente non è ancora facile da usare. C’è da conoscere un po’ di JavaScript per fare qualsiasi cosa e la sua API può essere un po’ complicata. Mentre Sass offre solo un set di funzioni che sono utili a scrivere CSS, PostCSS offre un accesso diretto al CSS AST (*abstract syntax tree*) e JavaScript.
 
 In breve Sass è facile e risolve molti dei nostri problemi. Dall’altro lato, PostCSS può essere difficile da maneggiare, se non si è bravi con JavaScript, ma certamente è uno strumento potentissimo. Non c’è motivo per cui uno non dovrebbe usare entrambi. Addrittura, PostCSS offre un _parser_ ufficiale proprio per SCSS.
