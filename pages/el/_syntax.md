@@ -65,11 +65,6 @@
 
 {% include snippets/syntax/06/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
-
 ## Αριθμοί
 
 Στη Sass, ο αριθμός (number) είναι ένας τύπος δεδομένων που περιλαμβάνει τα πάντα, από αριθμούς χωρίς μονάδες μέχρι μήκη, διάρκειες, συχνότητες, γωνίες κτλ. Αυτό επιτρέπει να γίνονται υπολογισμοί σε αυτά τα μέτρα.
@@ -100,7 +95,7 @@
 
 {% include snippets/syntax/09/index.html %}
 
-Σημείωσε ότι το να προσθέσουμε *0 μέλη αυτής της μονάδας* επίσης λειτουργεί, αλλά θα προτιμούσα να προτείνω την προαναφερθείσα μέθοδο επειδή η πρόσθεση *0 μονάδων* μπορεί να μας μπερδέψει. Πράγματι, όταν προσπαθούμε να μετατρέψουμε έναν αριθμό σε μία άλλη συμβατή μονάδα, το να προσθέσουμε το 0 δεν έχει το αναμενόμενο αποτέλεσμα.
+Σημείωσε ότι το να προσθέσουμε *0 μέλη αυτής της μονάδας* επίσης λειτουργεί, αλλά θα προτιμούσα να προτείνω την προαναφερθείσα μέθοδο επειδή η πρόσθεση *0 μονάδων* μπορεί να μας μπερδέψει. Πράγματι, όταν προσπαθούμε να μετατρέψουμε έναν αριθμό σε μία άλλη συμβατή μονάδα, το να προσθέσουμε το 0 δεν έχει το αναμενόμενο αποτέλεσμα. Μπορείτε να διαβάσετε περισσότερα για αυτό το θέμα σε [αυτό το άρθρο](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -110,7 +105,7 @@
 
 {% include snippets/syntax/11/index.html %}
 
-Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις.
+Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις. [Use lengths, not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Υπολογισμοί
 
@@ -126,16 +121,17 @@
 
 {% include snippets/syntax/13/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+Πάνω στο θέμα, το CSS-Tricks έχει ένα [καταπληκτικό άρθρο](http://css-tricks.com/magic-numbers-in-css/) σχετικά με τα magic numbers στη CSS το οποίο σας ενθαρρύνω να διαβάσετε.
 
 ## Χρώματα
 
 Τα χρώματα έχουν σημαντική θέση στη CSS. Φυσικά, η Sass καταλήγει να είναι ένας πολύτιμος σύμμαχος όσον αφορά τη χρήση χρωμάτων, κυρίως προσφέροντας πολλές [δυνατές συναρτήσεις](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+Η Sass είναι τόσο χρήσιμη σε ότι έχει να κάνει με την διαμόρφωση χρωμάτων που άρθρα έχουν εμφανιστεί σε όλο το internet σχετικά με αυτό ακριβώς το θέμα. Επιτρέψτε μου να σας συστήσω μερικά:
+
+ * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+ * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+ * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Τύποι χρωμάτων
 
@@ -169,7 +165,7 @@
 
 {% include snippets/syntax/17/index.html %}
 
-Με αυτό τον τρόπο προλαμβάνουμε μια αλλαγή θέματος που να οδηγεί σε κάτι σαν το `$sass-pink: blue`.
+Με αυτό τον τρόπο προλαμβάνουμε μια αλλαγή θέματος που να οδηγεί σε κάτι σαν το `$sass-pink: blue`. [Αυτό το άρθρο](http://davidwalsh.name/sass-color-variables-dont-suck) κάνει πολύ καλή δουλειά στο να εξηγήσει το πόσο σημαντικό είναι να δώσετε προσοχή στις μεταβλητές χρωμάτων.
 
 ### Κάνοντας τα χρώματα πιο φωτεινά και πιο σκόυρα
 
@@ -189,14 +185,6 @@
   <p>Η συνάρτηση <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> είναι σχεδιασμένη έτσι ώστε να αυξομειώνει πιο ομαλά τα properties λαμβάνοντας υπόψη πόσο υψηλά η χαμηλά είναι ήδη. Παράγει αποτελέσματα που είναι το ίδιο όμορφα με τα αποτελέσματα της <code>mix</code> αλλά με πιο καθαρές κλήσεις. Ωστόσο ο συντελεστής προσαύξησης δεν είναι ακριβώς ο ίδιος.</p>
 </div>
 
-###### Περαιτέρω ανάγνωση
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
 ## Λίστες
 
 Οι λίστες είναι οι πίνακες της Sass. Μια λίστα είναι μια επίπεδη δομή δεδομένων (σε αντίθεση με τα [maps](#maps)) που έχει σαν σκοπό να αποθηκεύει τιμές οποιουδήποτε τύπου (ακόμη και λίστες, που μας οδηγεί σε εμφωλευμένες λίστες).
@@ -215,10 +203,7 @@
 
 {% include snippets/syntax/20/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+Σε [αυτό το άρθρο](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), σας προσφέρω αρκετές συμβουλές και κόλπα για το πώς να διαχειριστείτε σωστά lists στη Sass.
 
 ## Maps
 
@@ -239,17 +224,7 @@
 
 {% include snippets/syntax/21/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+Τα αρθρα σχετικά με τα Sass maps είναι πολλά και προδίδουν πόσο πολυπόθετο ήταν αυτό το χαρακτηριστικό. Εδώ είναι 3 άρθρα που σας συστήνω να διαβάσετε: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Σετ κανόνων CSS
 
@@ -279,10 +254,6 @@
 
 {% include snippets/syntax/25/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
 ## Ταξινόμηση των δηλώσεων
 
 Δεν μπορώ να σκεφτώ πολλά θέματα όπου οι απόψεις διίστανται τόσο όσο αυτές που αφορούν την ταξινόμηση των δηλώσεων στη CSS. Συγκεκριμένα, υπάρχουν δύο παρατάξεις εδώ:
@@ -311,11 +282,6 @@
 <div class="note">
   <p>Μια <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">πρόσφατη έρευνα</a> έδειξε ότι η χρήση του <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (το οποίο χρησιμοποιεί <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ταξινόμηση κατά τύπο</a>) για την ταξινόμηση των δηλώσεων CSS, καταλήγει στη μείωση του μέσου μεγέθους του αρχείου με συμπίεση Gzip κατά 2.7%, έναντι του 1.3% της ταξινόμησης με αλφαβητική σειρά.</p>
 </div>
-
-###### Περαιτέρω ανάγνωση
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Εμφώλευση Selectors
 
@@ -351,6 +317,10 @@
 
 Για να αποφύγουμε μια τέτοια κατάσταση, **αποφεύγουμε την εμφώλευση των selectors όσο το δυνατόν περισσότερο**. Παρόλα αυτά, προφανώς υπάρχουν μερικές εξαιρέσεις σε αυτόν τον κανόνα.
 
+Για να αποφύγουμε μια τέτοια κατάσταση, συνηθίζαμε να μιλάμε για το [Inception rule](http://thesassway.com/beginner/the-inception-rule) πριν απο μερικά χρόνια. Αυτό συμβούλευε κατά τις εμφώλευσης παραπάνω απο 3 επιπέδων, έχοντας ως σημείο αναφοράς την ταινία Inception του Christopher Nolan. Θα ήθελα να γίνω λίγο πιο δραστικός και να προτείνω την **αποφυγή εμφωλευμένων selectors όσο το δυνατόν περισσότερο**.
+
+ Ενώ υπάρχουν πολλές προφανείς εξαιρέσεις στο κανόνα όπως θα δούμε στο επόμενο τμήμα, αυτή η άποψη φαίνεται να είναι αρκετά δημοφιλής. Μπορείτε να διαβάσετε σχετικά με αυτό με περισσότερες λεπτομέριες στο [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) και το [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+
 ### Εξαιρέσεις
 
 Για αρχή, επιτρέπεται και ακόμη προτείνεται να εμφωλεύεις τα pseudo-classes και pseudo-elements μέσα στον αρχικό selector.
@@ -368,9 +338,3 @@
 {% include snippets/syntax/35/index.html %}
 
 Όπως με όλα, οι λεπτομέρειες είναι κάπως άσχετες, η συνέπεια είναι το κλειδί. Αν αισθάνεσαι εντελώς σίγουρος για την εμφώλευση των selectors, τότε χρησιμοποίησέ την. Απλά σιγουρέψου ότι όλη σου η ομάδα είναι εντάξει με αυτό.
-
-###### Περαιτέρω ανάγνωση
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

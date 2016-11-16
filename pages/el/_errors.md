@@ -11,12 +11,6 @@
 
 Τώρα, υπάρχουν πολλά περιθώρια σε ένα Sass project για προειδοποιήσεις και σφάλματα. Βασικά οποιοδήποτε mixin ή function προσδοκεί ένα συγκεκριμένο τύπο ή argument θα μπορούσε να πετάξει ένα σφάλμα αν κάτι πάει στραβά, ή να εμφανίσει μία προειδοποίηση όταν υποθέτει κάτι.
 
-###### Περαιτέρω ανάγνωση
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## Προειδοποιήσεις
 
 Δείτε αυτό το function του [Sass-MQ](https://github.com/sass-mq/sass-mq) που επιδιώκει να μετατρέψει μια τιμή από `px` σε `em`, για παράδειγμα:
@@ -32,3 +26,5 @@
 Για παράδειγμα, ας πούμε ότι φτιάχνεις μία βελτιωμένη συνάρτηση για να έχεις πρόσβαση σε τιμές από ένα συγκεκριμένο map. Θα μπορούσε να πετάξεις ένα σφάλμα αν το ζητούμενο key δεν υπάρχει στο map.
 
 {% include snippets/errors/02/index.html %}
+
+Για περισσότερες πληροφορίες σχετικά με το πως να χρησιμοποιήσετε το `@error` αποτελεσματικά, [αυτή η εισαγωγή στο error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) θα έπρεπε να σας βοηθήσει.

@@ -30,7 +30,7 @@
 
 ## Βασικές αρχές
 
-Στο τέλος της μέρας, αν μπορείς να συγκρατήσεις ένα πράγμα απ' όλο το styleguide, είναι ότι **η Sass πρέπει να είναι όσο πιο απλή γίνεται**.
+Στο τέλος της μέρας, αν μπορείς να συγκρατήσεις ένα πράγμα απ' όλο το styleguide, είναι ότι **[η Sass πρέπει να είναι όσο πιο απλή γίνεται](http://www.sitepoint.com/keep-sass-simple/)**.
 
 Χάρη στα ανόητα πειράματά μου όπως οι [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), οι [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) και [ένας JSON parser](https://github.com/HugoGiraudel/SassyJSON) σε Sass, ξέρουμε όλοι τι μπορεί να επιτευχθεί με αυτόν τον preprocessor.
 
@@ -49,7 +49,3 @@
 Ένα παράδειγμα απο την επέκταση του styleguide μπορεί να βρεθεί στο [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
 > Είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει τα λεγόμενα του Node Styleguide.
-
-###### Περαιτέρω ανάγνωση
-
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

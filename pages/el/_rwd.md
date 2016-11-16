@@ -11,17 +11,13 @@
 
 {% include snippets/rwd/01/index.html %}
 
-Σ' αυτό το σημείο, αρκεί οποιαδήποτε σύμβαση ξεκαθαρίζει ότι ένας σχεδιασμός δεν είναι στενά δεσμευμένος μια ένα συγκεκριμένο είδος συσκευής, εφόσον προκύπτει κάποια τάξη μεγέθους από το όνομα.
+[Σ' αυτό το σημείο](http://css-tricks.com/naming-media-queries/), αρκεί οποιαδήποτε σύμβαση ξεκαθαρίζει ότι ένας σχεδιασμός δεν είναι στενά δεσμευμένος μια ένα συγκεκριμένο είδος συσκευής, εφόσον προκύπτει κάποια τάξη μεγέθους από το όνομα.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>Τα προηγούμενα παραδείγματα χρησιμοποιούν nested maps για να καθορίσουν breakpoints, παρ' όλ' αυτά εξαρτάται από το είδος διαχειριστή των breakpoints που χρησιμοποιείς. Μπορείς να προτιμήσεις strings αντί για inner maps για μεγαλύτερη ευελιξία (π.χ. <code>'(min-width: 800px)'</code>).</p>
 </div>
-
-###### Περαιτέρω ανάγνωση
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Διαχειριστής των breakpoints
 
@@ -31,12 +27,8 @@
 
 <div class="note">
   <p>Προφανώς, πρόκειται για έναν απλουστευμένο διαχειριστή των breakpoints. Αν χρειάζεσαι κάτι πιο ευέλικτο, προτείνω να μην ανακαλύψεις ξανά τον τροχό και να χρησιμοποιήσεις κάτι που έχει αποδειχτεί αποτελεσματικό όπως το <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, το <a href="http://breakpoint-sass.com/">Breakpoint</a> ή το <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
+   <p>Αν ψάχνετε να περισσότερο υλικό για διάβασμα στο πώς να προσεγγίσετε Media Queries στη Sass, τόσο το <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (από τον υποφαινόμενο) όσο και το <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> έχουν ωραία άρθρα σχετικά με το θέμα αυτό.</p>
 </div>
-
-###### Περαιτέρω ανάγνωση
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## Χρήση των media Queries
 
@@ -51,12 +43,6 @@
 Μπορεί να έχετε ακούσει ότι αυτή η σύμβαση οδηγεί σε επαναλαμβανόμενα media queries στη CSS. Πράγμα που ισχύει. Πάραυτα, [έχουν γίνει δοκιμές](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) και το πόρισμα είναι ότι δεν έχει σημασία εφόσον το Gzip (ή κάτι ανάλογο) έχει κάνει ό,τι κάνει:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), σχετικά με το [Breakpoint](http://breakpoint-sass.com/)
+> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 
 Οπότε, αν πραγματικά σ' απασχολούν τα επαναλαμβανόμενα media queries, μπορείς να χρησιμοποιήσεις ένα εργαλείο για να τα συγχωνεύσεις όπως [αυτό το gem](https://github.com/aaronjensen/sass-media_query_combiner), αν και πρέπει να προειδοποιήσω ότι μπορεί να έχει παρενέργειες το να μετακινείς CSS πάνω-κάτω. Γνωρίζεις πολύ καλά ότι η σειρά του πηγαίου κώδικα είναι σημαντική.
-
-###### Περαιτέρω ανάγνωση
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

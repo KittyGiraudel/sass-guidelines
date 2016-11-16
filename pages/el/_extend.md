@@ -35,16 +35,18 @@
 
 {% include snippets/extend/02/index.html %}
 
-Για να συνοψίσουμε, προτείνω την χρήση του `@extend` μόνο για την διατήρηση των σχέσεων εντός κάποιων selectors. Αν δύο selectors έχουν παρόμοια χαρακτηριστικά, τότε είναι η ιδανική περίπτωση για το `@extend`. Αν δεν έχουν κάποια σχέση αλλά μοιράζονται μερικά rules, ένα `@mixin` θα ταίριαζε καλύτερα.
+Οι απόψεις φαίνεται να είναι άκρως αντιφατικές σχετικά με το `@extend` σε σημείο που πολλοί developers συμπεριλαμβανομένου και του εαυτού μου δεν υποστηρίζουν την χρήση του, όπως μπορείτε να διαβάσετε στα παρακάτω άρθρα:
+
+* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+
+
+Κατόπιν αυτού για να συνοψίσουμε, προτείνω την χρήση του `@extend` μόνο για την διατήρηση των σχέσεων εντός κάποιων selectors. Αν δύο selectors έχουν παρόμοια χαρακτηριστικά, τότε είναι η ιδανική περίπτωση για το `@extend`. Αν δεν έχουν κάποια σχέση αλλά μοιράζονται μερικά rules, ένα `@mixin` θα ταίριαζε καλύτερα. Μπορείτε να διαβάσετε περισσότερα σχετικά με το ποιό από τα 2 να διαλέξετε θα βρείτε σε αυτό το [άρθρο](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
   <p>Ευχαριστώ τον <a href="https://twitter.com/davidkpiano">David Khourshid</a> για τη βοήθεια και την πείρα σ' αυτή την ενότητα.</p>
 </div>
 
-###### Περαιτέρω ανάγνωση
-
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 * [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
 * [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)

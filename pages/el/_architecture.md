@@ -7,18 +7,13 @@
 
 Πέρα από αυτό, Δεν μπορώ να τονίσω αρκετά την ανάγκη για χρήση φακέλων, ακόμα και σε μικρά projects. Στο σπίτι, δεν πετάς όλα χαρτιά στο ίδιο κουτί. Χρησιμοποιείς φακέλους, ενα για το σπίτι/διαμέρισμα, ένα για την τράπεζα, ένα για τους λογαριασμούς και τα λοιπά. Δεν υπάρχει λόγος να γίνει διαφορετικά και για την δόμηση του CSS project σας. Διαχωρίστε τον κώδικα σε διαφορετικούς φακέλους, ονομασμένους λογικά, ετσι ώστε αργότερα να σας είναι εύκολο να βρίσκετε αυτό που ψάχνετε εύκολα και γρήγορα.
 
-Υπάρχουν πολλές αρχιτεκτονικές/τρόποι δόμησης CSS project όπως: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](http://getbootstrap.com/) ή σε [Foundation](http://foundation.zurb.com/)… Τα οποία έχουν πλεονεκτήματα και μειωνεκτήματα.
+Υπάρχουν πολλές δημοφιλείς [αρχιτεκτονικές](http://www.sitepoint.com/look-different-sass-architectures/) για CSS project όπως: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](http://getbootstrap.com/) ή σε [Foundation](http://foundation.zurb.com/)… Τα οποία έχουν πλεονεκτήματα και μειωνεκτήματα.
 
 Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](https://smacss.com/) του [Jonathan Snook](http://snook.ca/),το οποίο επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
 
 <div class="note">
   <p>Έχω μάθει πως η δόμηση του κώδικα τις περισσότερες φορές αλλάζει ανάλογα με το project. Μη διστάσετε να απορρίψετε εντελώς ή να προσαρμόσετε την προτεινόμενη λύση έτσι ώστε να φτάσετε σε ένα αποτέλεσμα που θα ταιριάζει στις ανάγκες σας.</p>
 </div>
-
-###### Περαιτέρω ανάγνωση
-
-* [Μια ματιά στις διάφορες αρχιτεκτονικές Sass](http://www.sitepoint.com/look-different-sass-architectures/)
-* [Εισαγωγή στο OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 
 ## Components
 
@@ -189,17 +184,12 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 
 {% include snippets/architecture/03/index.html %}
 
-<div class="note">
-  <p>Προκειμένου να μην χρειάζεται να κάνεις import κάθε αρχείο χειροκίνητα, υπάρχει ένα extension για την Ruby Sass το οποίο ονομάζεται <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, καθιστώντας δυνατή την χρήση glob patterns στην Sass <code>@import</code> όπως <code>@import "components/\*"</code>.</p>
-  <p>Κατόπιν αυτού, δεν θα το συνιστούσα επειδή κάνει imports αρχεία ακολουθώντας αλφαβητική σειρά το οποίο συνήθως δεν είναι αυτό που θέλετε, ειδικά όταν έχεις να κάνεις με γλώσσες που βασίζονται στην σειρά του κώδικα.</p>
-</div>
+
+
+
 
 ## Το αρχείο Shame
 
-Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλή απο τους [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) και [Chris Coyier](http://css-tricks.com) that το οποίο συνηστά να βάζεις όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο αρχείο *shame*. Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
+Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλή απο τους [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) και [Chris Coyier](http://css-tricks.com) that το οποίο συνηστά να βάζεις όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο [αρχείο *shame*](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
 
 {% include snippets/architecture/04/index.html %}
-
-###### Περαιτέρω ανάγνωση
-
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

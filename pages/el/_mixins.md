@@ -17,10 +17,7 @@
 
 {% include snippets/mixins/02/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+Για πιο περίπλοκα παραδείγματα των mixins, ρίξτε μια ματιά στα [this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) και [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixins χωρίς arguments
 
@@ -42,9 +39,7 @@
 
 {% include snippets/mixins/04/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+Σχετικά με το αν είναι βέλτιστο το να χρησιμοποιείτε πολλαπλά arguments, μια list ή ένα argument list, [SitePoint has a nice piece on the topic](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins και vendor prefixes
 
@@ -65,7 +60,3 @@
 {% include snippets/mixins/07/index.html %}
 
 Μην ξεχνάς ότι αυτή είναι μία Please keep in mind this is a κακή λύση. Για παράδειγμα, δε μπορεί να διαχειριστεί σύνθετα polyfills όπως αυτά που χρειάζονται για το Flexbox. Μ' αυτή τη λογική, η χρήση του Autoprefixer είναι πολύ καλύτερη λύση.
-
-###### Περαιτέρω ανάγνωση
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

@@ -26,9 +26,7 @@
 
 {% include snippets/comments/02/index.html %}
 
-###### Περαιτέρω ανάγνωση
-
-* [Τμήμα σχολίων του CSS Guidelines](http://cssguidelin.es/#commenting)
+ Σημείωση ότι αυτός ο τρόπος αντιμετώπισης των πραγμάτων υποστηρίζεται επίσης απο τα CSS Guidelines στο [Commenting](http://cssguidelin.es/#commenting) κεφάλαιο.
 
 ## Documentation
 
@@ -50,7 +48,3 @@
 Παρακάτω μπορείτε να δείτε ένα παράδειγμα ενός mixin το οποίο είναι εκτενώς documented με το SassDoc:
 
 {% include snippets/comments/04/index.html %}
-
-###### Περαιτέρω ανάγνωση
-
-* [SassDoc: ένα Documentation Tool για την Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
