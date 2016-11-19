@@ -29,6 +29,26 @@
 
 Σχεδόν όλα τα interface μπορούμε να τα θεωρήσουμε ως components και είναι αυτό που σας συνιστώ. Αυτό θα μικρήνει κατα πολύ την ποσότητα CSS κώδικα που χρειάζεται το project, αλλά τυγχάνει επίσης να είναι και ευκολότερο στην συντήρηση απο ένα χάος όπου όλα είναι ακατάστατα.
 
+## Δομη Component
+
+Ιδανικά, τα components πρέπει να βρίσκονται μέσα σε δικά τους Sass partial (μέσα στον φάκελο `components/`, όπως περιγράφεται στο [7-1 pattern](#the-7-1-pattern)), π.χ. `components/_button.scss`. Τα styles που περιγράφονται μέσα σε κάθε αρχείο component πρέπει να έχουν να κάνουν μόνο με:
+
+* Το style του ίδιου του component·
+* Το style παραλλαγών, τροποποιητών ή/και καταστάσεων του component·
+* Τα styles των απόγωνων του component (λ.χ. children), εάν είναι απαραίτητο.
+
+Αν θέλετε τα components σας να παίρνουν το θέμα τους απο εξωτερικούς παράγοντες (π.χ. απο ένα θέμα μέσα στο φάκελο `themes/`), περιορίστε τις δηλώσεις σας σε δομικά styles, όπως είναι οι διαστάσεις (width/height), padding, margins, alignment, και τα λοιπά. Αποκλείστε styles όπως τα χρώματα, οι σκιές, font rules, background rules, και τα λοιπά.
+
+Ένα component partial μπορεί να περιέχει παραλλαγών σχετικές με το component, placeholders, ακόμα και mixins ή functions. Κρατήστε στο μυαλό σας, όμως, οτι πρέπει να αποφύγεται το referencing (π.χ. να κάνετε `@import`) component αρχεία μέσα απο άλλα αρχεία component, γιατί αυτό μπορεί να κάνει το dependency graph του project σας αδύνατο να συντηρηθεί.
+
+Εδώ είναι ένα παράδειγμα component partial ενός button:
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Ευχαριστώ τον<a href="https://twitter.com/davidkpiano">David Khourshid</a>για τη βοήθεια και την εμπειρογνωμοσύνη που πρόσφερε σε αυτό το τμήμα.</p>
+</div>
+
 ## Το 7-1 pattern
 
 Επιστρέφουμε στην αρχιτεκτονική. Συνηθίζω να ακολουθώ το *7-1 pattern*: 7 φακέλους, 1 αρχείο. Ουσιαστικά, έχεις όλα τα partials μέσα σε 7 διαφορετικούς φακέλους, και ένα αρχείο στο πρώτο επίπεδο (συνήθως με την ονομασία `main.scss`) το οποίο κάνει import όλα τα άλλα για να τα κάνει compile σε ένα CSS stylesheet.
