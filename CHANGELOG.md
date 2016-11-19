@@ -15,6 +15,7 @@
 * Improved wording here and there ([ddb46ab](https://github.com/HugoGiraudel/sass-guidelines/commit/ddb46ab))
 * Updated wording that could be considered insensitive ([67e7395](https://github.com/HugoGiraudel/sass-guidelines/commit/67e7395))
 * Updated author’s age ([c021429](https://github.com/HugoGiraudel/sass-guidelines/commit/c021429))
+* Rewrote the section about PostCSS ([7df1809](https://github.com/HugoGiraudel/sass-guidelines/commit/7df1809c7a771e82202d7b910c542b3fd687d3f3))
 
 ### Deletions
 
