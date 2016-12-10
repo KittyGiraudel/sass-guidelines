@@ -48,4 +48,4 @@
 
 Ένα παράδειγμα απο την επέκταση του styleguide μπορεί να βρεθεί στο [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> Είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει τα λεγόμενα του Node Styleguide.
+> Είναι μια επέκταση του [Node Styleguide](https://github.com/felixge/node-style-guide) από τον Felix Geisendörfer. Οτιδήποτε από αυτό το έγγραφο υπερισχύει των λεγομένων του Node Styleguide.

@@ -27,4 +27,4 @@
 
 {% include snippets/errors/02/index.html %}
 
-Για περισσότερες πληροφορίες σχετικά με το πως να χρησιμοποιήσετε το `@error` αποτελεσματικά, [αυτή η εισαγωγή στο error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) θα έπρεπε να σας βοηθήσει.
+Για περισσότερες πληροφορίες σχετικά με το πώς να χρησιμοποιήσετε το `@error` αποτελεσματικά, [αυτή η εισαγωγή στο error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) θα βοηθούσε.

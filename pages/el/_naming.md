@@ -37,8 +37,8 @@
 
 {% include snippets/naming/03/index.html %}
 
-[Kaelig](http://kaelig.fr) έχει [ένα πολύ διορατικό άρθρο σχετικά με το global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), σε περίπτωση που αυτό το θέμα σας ενδιαφέρει.
+Το [Kaelig](http://kaelig.fr) έχει [ένα πολύ διορατικό άρθρο σχετικά με το global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), σε περίπτωση που αυτό το θέμα σας ενδιαφέρει.
 
 <div class="note">
-  <p>Σημείωσε ότι το αυτόματο namespacing είναι οπωσδήποτε ένας σχεδιαστικός στόχος για την ανερχόμενη ανανέωση του <code>@import</code> στη Sass 4.0. Δεδομένου ότι πλησιάζουμε στην κυκλοφορία, θα γίνεται όλο και λιγότερο χρήσιμο το χειροκίνητο namespacing· ενδεχομένως οι βιβλιοθήκες με μη αυτόματο namespacing θα είναι δυσκολότερες στη χρήση.</p>
+  <p>Σημείωσε ότι το αυτόματο namespacing είναι οπωσδήποτε ένας σχεδιαστικός στόχος για την ανερχόμενη ανανέωση του <code>@import</code> στη Sass 4.0. Δεδομένου ότι πλησιάζουμε στην κυκλοφορία, θα γίνεται όλο και λιγότερο χρήσιμο το χειροκίνητο namespacing· ενδεχομένως οι βιβλιοθήκες με μη αυτόματο namespacing να είναι δυσκολότερες στη χρήση.</p>
 </div>

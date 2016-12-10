@@ -39,7 +39,7 @@
 
 {% include snippets/mixins/04/index.html %}
 
-Σχετικά με το αν είναι βέλτιστο το να χρησιμοποιείτε πολλαπλά arguments, μια list ή ένα argument list, [SitePoint has a nice piece on the topic](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Σχετικά με το αν είναι βέλτιστο να χρησιμοποιείτε πολλαπλά arguments, μια list ή ένα argument list, [το SitePoint έχει ένα καλό άρθρο πάνω στο θέμα](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins και vendor prefixes
 
@@ -59,4 +59,4 @@
 
 {% include snippets/mixins/07/index.html %}
 
-Μην ξεχνάς ότι αυτή είναι μία Please keep in mind this is a κακή λύση. Για παράδειγμα, δε μπορεί να διαχειριστεί σύνθετα polyfills όπως αυτά που χρειάζονται για το Flexbox. Μ' αυτή τη λογική, η χρήση του Autoprefixer είναι πολύ καλύτερη λύση.
+Μην ξεχνάς ότι αυτή είναι μία κακή λύση. Για παράδειγμα, δε μπορεί να διαχειριστεί σύνθετα polyfills όπως αυτά που χρειάζονται για το Flexbox. Μ' αυτή τη λογική, η χρήση του Autoprefixer είναι πολύ καλύτερη λύση.
