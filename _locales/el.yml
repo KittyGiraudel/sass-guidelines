@@ -1,5 +1,5 @@
 configuration:
-  version: 1.2
+  version: 1.3
   label: Greek
   prefix: /el/
   available: true

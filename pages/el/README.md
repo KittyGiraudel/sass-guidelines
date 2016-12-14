@@ -15,8 +15,10 @@
 ## Non-translatable words and expressions
 
 * attribute
+* button
 * block
 * carousel
+* component
 * compiler
 * conditional statement
 * cover
@@ -37,7 +39,9 @@
 * local
 * magic number
 * map
+* margin
 * mixin
+* padding
 * polyfill
 * postprocessor
 * preprocessor
@@ -51,6 +55,7 @@
 * selector
 * sidebar
 * slash
+* styles
 * stylesheet
 * theme
 * UI
