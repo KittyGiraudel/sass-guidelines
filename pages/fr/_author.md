@@ -1,7 +1,7 @@
 
 # Sur l’auteur
 
-Je m’appelle [Hugo Giraudel](http://hugogiraudel.com), je suis un développeur front-end français de 24 ans, actuellement en poste à [N26](https://n26.com) à Berlin (Allemagne) et ce depuis 2015.
+Je m’appelle [Hugo Giraudel](http://hugogiraudel.com), je suis un développeur front-end français de 25 ans, actuellement en poste à [N26](https://n26.com) à Berlin (Allemagne) et ce depuis 2015.
 
 Je travaille avec Sass depuis maintenant plusieurs années et suis l’auteur de nombreux projets tournant autour de ce langage, tels que [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) et [Sass-Compatibility](http://sass-compatibility.github.io). Si vous désirez en savoir plus sur mes contributions envers la communauté Sass, jetez un oeil à [cette liste](http://github.com/HugoGiraudel/awesome-sass).
 

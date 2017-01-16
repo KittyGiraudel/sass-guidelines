@@ -1,7 +1,7 @@
 
 # Über den Autor
 
-Mein Name ist Hugo, ich bin ein 24-jähriger Front-End Entwickler aus Frankreich, lebe seit 2015 in Berlin (Deutschland) und arbeite derzeit bei [N26](https://n26.com).
+Mein Name ist Hugo, ich bin ein 25-jähriger Front-End Entwickler aus Frankreich, lebe seit 2015 in Berlin (Deutschland) und arbeite derzeit bei [N26](https://n26.com).
 
 Seit mehreren Jahren entwickle ich nun in Sass und bin Autor vieler Sass bezogener Projekte wie [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) und [Sass-Compatibility](http://sass-compatibility.github.io). Falls du an weiteren Beiträgen zur Sass Community meinerseits interessiert bist, werf doch einen Blick auf [diese Liste](http://github.com/HugoGiraudel/awesome-sass).
 
