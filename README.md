@@ -1,5 +1,7 @@
 # Sass Guidelines
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/HugoGiraudel/sass-guidelines.svg)](https://greenkeeper.io/)
+
 An opinionated styleguide for writing sane, maintainable and scalable Sass.
 
 ## Code of Conduct

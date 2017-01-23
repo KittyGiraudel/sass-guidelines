@@ -7,6 +7,7 @@ script: ./_bin/cibuild
 branches:
   only:
   - gh-pages
+  - /^greenkeeper/.*$/
 
 env:
   global:
