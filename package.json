@@ -22,7 +22,7 @@
     "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "clean-css": "^3.4.10",
+    "clean-css": "^4.0.1",
     "criticalcss": "^2.1.0",
     "semistandard": "^9.2.1",
     "spritesh": "^1.0.10",
