@@ -1,4 +1,9 @@
 {
+  "name": "sass-guidelines",
+  "version": "1.3.0",
+  "description": "An opinionated styleguide for writing sane, maintainable and scalable Sass.",
+  "repository": "hugogiraudel/sass-guidelines",
+  "license": "MIT",
   "scripts": {
     "postinstall": "npm run js:vendors",
     "build": "npm run icons && npm run js:build",
