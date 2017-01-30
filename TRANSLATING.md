@@ -63,6 +63,19 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  aside:
+    title: "Options" # Title of options panel
+    report: "Report an issue" # Link to GitHub issues
+    support: "Support the project" # Link to give Gumroad to back the project
+    tweet: "Tweet it" # Link to tweet about the project
+    syntax: "Code syntax" # Label for code syntax (Sass or SCSS)
+    language: "Language" # Label for language picker
+    close: "Close the options panel" # Alt text for icon-link to close options panel
+    open: "Open the options panel" # Alt text for icon-link to open options panel
+  back_to_top: "Get back to top" # Alt text for icon-link to top of page
+  skip_to_content: "Skip to main content" # Text for invisible accessible skip link
+  link_to_chapter: "Link to this chapter:" # Alt text for icon-link to chapter anchor
+  edit_chapter: "Edit this chapter on GitHub:" # Alt text for icon-link to GitHub edit mode
   contributing: # Buttons for the contributing section
     support_button: "Wesprzyj Sass Guidelines"
     tweet_button: "Tweetnij o Sass Guidelines"
