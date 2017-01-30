@@ -7,14 +7,14 @@
       </h1>
 
       <section class="aside__section  aside__section--extras">
-        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">
+        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues" rel="noopener noreferrer">
           {{ site.data[page.language].translations.aside.report }}
         </a>
-        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">
+        <a class="button" target="_blank" href="https://gum.co/sass-guidelines" rel="noopener noreferrer">
           {{ site.data[page.language].translations.aside.support }}
         </a>
         {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">
+        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" rel="noopener noreferrer">
           {{ site.data[page.language].translations.aside.tweet }}
         </a>
       </section>
