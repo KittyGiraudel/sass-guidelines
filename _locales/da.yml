@@ -8,6 +8,7 @@ configuration:
       link: http://codepen.io/andersschmidt/
 
 translations:
+  back_to_top: "Tilbage til toppen"
   skip_to_content: "Gå til hovedindhold"
   link_to_chapter: "Link til dette kapitel:"
   edit_chapter: "Rediger denne kapitel om GitHub:"

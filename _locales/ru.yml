@@ -10,6 +10,7 @@ configuration:
       link: https://github.com/PavelDemyanenko
 
 translations:
+  back_to_top: "Вернуться к началу"
   skip_to_content: "Перейти к основному содержанию"
   link_to_chapter: "Ссылка на эту главу:"
   edit_chapter: "Редактировать эту главу на GitHub:"

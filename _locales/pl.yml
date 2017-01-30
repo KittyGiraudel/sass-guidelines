@@ -10,6 +10,7 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  back_to_top: "Powrót do góry"
   skip_to_content: "Przejdź do głównej zawartości"
   link_to_chapter: "Link do tego rozdziału:"
   edit_chapter: "Edytuj ten rozdział na GitHub:"

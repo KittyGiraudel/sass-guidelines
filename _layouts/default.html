@@ -39,7 +39,8 @@ layout: compress
 
       <!-- Link to get back to top -->
       <a href="#top" class="button-ui  button-ui--back">
-        {% include partials/icon.html icon="up" title="Get back to top" %}
+        {% capture back_to_top %}{{ site.data[page.language].translations.back_to_top }}{% endcapture %}
+        {% include partials/icon.html icon="up" title=back_to_top %}
       </a>
 
       <!-- Site footer -->

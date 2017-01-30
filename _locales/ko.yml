@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/kimdhoe
 
 translations:
+  back_to_top: "맨 위로"
   skip_to_content: "주요 내용으로 건너 뛰기"
   link_to_chapter: "이 장에 링크 :"
   edit_chapter: "GitHub에서이 장을 편집하십시오 :"

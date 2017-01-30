@@ -14,6 +14,7 @@ configuration:
       link: https://github.com/eduardoboucas
 
 translations:
+  back_to_top: "De volta ao topo"
   skip_to_content: "Ir para o conteúdo principal"
   link_to_chapter: "Link para este capítulo:"
   edit_chapter: "Edite este capítulo no GitHub:"
