@@ -19,7 +19,7 @@ That being said, there are many ways to use these features. Some good, some bad,
 
 In 2014, [Ruby Sass and LibSass teams decided to wait for both versions to sync up before moving forward](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Since then, LibSass has been actively releasing versions to have feature-parity with its older sibling. The last remaining inconsistencies are gathered and listed by myself under the [Sass-Compatibility](http://sass-compatibility.github.io) project. If you are aware of an incompatibility between the two versions that is not listed, please be kind enough to open an issue.
 
-Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features. And if you are looking to switch from Ruby Sass to LibSass, [this article](http://www.sitepoint.com/switching-ruby-sass-libsass/) is for you.
+Coming back to choosing your compiler. Actually, it all depends on your project. If it is a Ruby on Rails project, you better use Ruby Sass, which is perfectly suited for such a case. Also, be aware that Ruby Sass will always be the reference implementation and will always lead LibSass in features. And if you are looking to [switch from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/), this article is for you.
 
 On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let’s say Node.js, [node-sass](https://github.com/sass/node-sass) is all chosen.
 
