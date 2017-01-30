@@ -10,6 +10,7 @@ configuration:
 translations:
   skip_to_content: "Direkt zum Inhalt"
   link_to_chapter: "Link zu diesem Kapitel:"
+  edit_chapter: "Kapitel auf GitHub beabeiten:"
   twitter: "Folg mir auf Twitter"
   contributing:
     support_button: "Sass Guidelines unterstützen"

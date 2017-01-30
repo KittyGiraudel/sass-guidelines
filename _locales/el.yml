@@ -16,6 +16,7 @@ configuration:
 translations:
   skip_to_content: "Μετάβαση στο κύριο περιεχόμενο"
   link_to_chapter: "Συνδέουν σε αυτό το κεφάλαιο:"
+  edit_chapter: "Επεξεργαστείτε το συγκεκριμένο κεφάλαιο για GitHub:"
   twitter: "Επισκεφθείτε με στο Twitter"
   contributing:
     support_button: "Υποστηρίξτε το Sass Guidelines"

@@ -12,6 +12,7 @@ configuration:
 translations:
   skip_to_content: "Vai al contenuto principale"
   link_to_chapter: "Un collegamento a questo capitolo:"
+  edit_chapter: "Modifica questo capitolo su GitHub:"
   twitter: "Trovami su Twitter"
   contributing:
     support_button: "Supporta Sass Guidelines"

@@ -12,6 +12,7 @@ configuration:
 translations:
   skip_to_content: "跳到主要内容"
   link_to_chapter: "本章链接："
+  edit_chapter: "在GitHub上编辑本章："
   twitter: "关注我的 Twitter"
   contributing:
     support_button: "支持 Sass 编程规范"
