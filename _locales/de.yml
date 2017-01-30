@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/morkro
 
 translations:
+  toggle_panel: "Wechseln Sie in das Optionsfeld"
   back_to_top: "Zurück nach oben"
   skip_to_content: "Direkt zum Inhalt"
   link_to_chapter: "Link zu diesem Kapitel:"

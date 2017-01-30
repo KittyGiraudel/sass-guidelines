@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/kimdhoe
 
 translations:
+  toggle_panel: "옵션 패널 토글"
   back_to_top: "맨 위로"
   skip_to_content: "주요 내용으로 건너 뛰기"
   link_to_chapter: "이 장에 링크 :"

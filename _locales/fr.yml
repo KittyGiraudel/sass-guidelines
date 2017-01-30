@@ -8,6 +8,7 @@ configuration:
       link: https://la-cascade.io/
 
 translations:
+  toggle_panel: "Activer le panneau d’options"
   back_to_top: "Retour en haut de page"
   skip_to_content: "Allez au contenu principal"
   link_to_chapter: "Lien vers ce chapitre :"

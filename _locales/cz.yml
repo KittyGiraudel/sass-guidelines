@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/HoBi
 
 translations:
+  toggle_panel: "Přepínat panel nastavení"
   back_to_top: "Zpět na začátek"
   skip_to_content: "Přejít k hlavnímu obsahu"
   link_to_chapter: "Odkaz k této kapitole:"

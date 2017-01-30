@@ -6,6 +6,7 @@ configuration:
   translators: []
 
 translations:
+  toggle_panel: "Toggle the options panel"
   back_to_top: "Get back to top"
   skip_to_content: "Skip to main content"
   link_to_chapter: "Link to this chapter:"

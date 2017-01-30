@@ -10,6 +10,7 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  toggle_panel: "Włącza panel opcji"
   back_to_top: "Powrót do góry"
   skip_to_content: "Przejdź do głównej zawartości"
   link_to_chapter: "Link do tego rozdziału:"

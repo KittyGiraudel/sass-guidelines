@@ -10,6 +10,7 @@ configuration:
       link: http://pinggod.com
 
 translations:
+  toggle_panel: "切换选项面板"
   back_to_top: "回到顶部"
   skip_to_content: "跳到主要内容"
   link_to_chapter: "本章链接："
