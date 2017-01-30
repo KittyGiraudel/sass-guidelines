@@ -12,7 +12,9 @@ layout: compress
     {% include sprite.svg %}
 
     <!-- Accessibility skip link -->
-    <a id="skip" href="#main-content">Skip to main content</a>
+    <a id="skip" href="#main-content">
+      {{ site.data[page.language].translations.skip_to_content }}
+    </a>
 
     <!-- Main container -->
     <main aria-label="Content" id="main-content">

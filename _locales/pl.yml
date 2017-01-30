@@ -10,6 +10,7 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  skip_to_content: "Przejdź do głównej zawartości"
   link_to_chapter: "Link do tego rozdziału:"
   twitter: "Napisz do mnie na Twitterze"
   contributing:

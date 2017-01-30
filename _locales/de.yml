@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/morkro
 
 translations:
+  skip_to_content: "Direkt zum Inhalt"
   link_to_chapter: "Link zu diesem Kapitel:"
   twitter: "Folg mir auf Twitter"
   contributing:

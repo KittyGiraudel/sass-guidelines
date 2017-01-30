@@ -8,6 +8,7 @@ configuration:
       link: https://la-cascade.io/
 
 translations:
+  skip_to_content: "Allez au contenu principal"
   link_to_chapter: "Lien vers ce chapitre :"
   twitter: "Suivez-moi sur Twitter"
   contributing:

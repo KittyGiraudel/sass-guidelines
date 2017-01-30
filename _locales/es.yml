@@ -10,6 +10,7 @@ configuration:
       link: https://github.com/davidkpiano
 
 translations:
+  skip_to_content: "Saltar al contenido principal"
   link_to_chapter: "Enlace a este capítulo:"
   twitter: "Sígueme en Twitter"
   contributing:
