@@ -14,6 +14,7 @@ configuration:
       link: https://github.com/eduardoboucas
 
 translations:
+  link_to_chapter: "Link para este capítulo:"
   twitter: "Encontra-me no Twitter"
   contributing:
     support_button: "Apoiar Sass Guidelines"
