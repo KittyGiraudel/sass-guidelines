@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/HoBi
 
 translations:
+  skip_to_content: "Přejít k hlavnímu obsahu"
   link_to_chapter: "Odkaz k této kapitole:"
   twitter: "Sledujte mě na Twitteru"
   contributing:

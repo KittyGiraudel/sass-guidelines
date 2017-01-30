@@ -10,6 +10,7 @@ configuration:
       link: https://github.com/MakhBeth
 
 translations:
+  skip_to_content: "Vai al contenuto principale"
   link_to_chapter: "Un collegamento a questo capitolo:"
   twitter: "Trovami su Twitter"
   contributing:

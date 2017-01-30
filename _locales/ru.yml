@@ -10,6 +10,7 @@ configuration:
       link: https://github.com/PavelDemyanenko
 
 translations:
+  skip_to_content: "Перейти к основному содержанию"
   link_to_chapter: "Ссылка на эту главу:"
   twitter: "Найди меня на Твиттере"
   contributing:

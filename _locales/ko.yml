@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/kimdhoe
 
 translations:
+  skip_to_content: "주요 내용으로 건너 뛰기"
   link_to_chapter: "이 장에 링크 :"
   twitter: "Catch me on Twitter"
   contributing:
