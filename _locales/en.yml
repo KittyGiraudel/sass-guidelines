@@ -6,6 +6,7 @@ configuration:
   translators: []
 
 translations:
+  link_to_chapter: "Link to this chapter:"
   twitter: "Catch me on Twitter"
   contributing:
     support_button: "Support Sass Guidelines"
