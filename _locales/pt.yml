@@ -15,6 +15,7 @@ configuration:
 
 translations:
   link_to_chapter: "Link para este capítulo:"
+  edit_chapter: "Edite este capítulo no GitHub:"
   twitter: "Encontra-me no Twitter"
   contributing:
     support_button: "Apoiar Sass Guidelines"

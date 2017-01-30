@@ -9,6 +9,7 @@ configuration:
 
 translations:
   link_to_chapter: "이 장에 링크 :"
+  edit_chapter: "GitHub에서이 장을 편집하십시오 :"
   twitter: "Catch me on Twitter"
   contributing:
     support_button: "Support Sass Guidelines"

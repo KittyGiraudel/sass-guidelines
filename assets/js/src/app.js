@@ -21,10 +21,12 @@
   };
 
   var getEditLink = function (chapter) {
+    var heading = chapter.querySelector('h1[id]');
+    var title = (heading.innerText || heading.textContent);
     var id = chapter.id.split('chapter-')[1];
     var link = document.createElement('a');
     link.href = 'https://github.com/HugoGiraudel/sass-guidelines/blob/master/pages/' + language + '/_' + id + '.md';
-    link.innerHTML = sanitizeSVG(editSvg);
+    link.innerHTML = sanitizeSVG(editSvg).replace('</title>', ' “' + title + '”</title>');
     link.setAttribute('class', 'chapter__edit button-ui');
     link.setAttribute('target', '_blank');
 

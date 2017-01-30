@@ -9,6 +9,7 @@ configuration:
 
 translations:
   link_to_chapter: "Odkaz k této kapitole:"
+  edit_chapter: "Upravit tuto kapitolu o GitHub:"
   twitter: "Sledujte mě na Twitteru"
   contributing:
     support_button: "Podpořit Sass Guidelines"

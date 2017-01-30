@@ -50,9 +50,10 @@
 
   <!-- SVG for JavaScript usage -->
   {% capture link_to_chapter %}{{ site.data[page.language].translations.link_to_chapter | default: site.data.en.translations.link_to_chapter }}{% endcapture %}
+  {% capture edit_chapter %}{{ site.data[page.language].translations.edit_chapter | default: site.data.en.translations.edit_chapter }}{% endcapture %}
 
   <meta name="svg-link-icon" content='{% include partials/icon.html icon="pin" title=link_to_chapter %}'>
-  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title="Edit this chapter on GitHub" %}'>
+  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title=edit_chapter %}'>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
