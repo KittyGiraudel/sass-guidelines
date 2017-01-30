@@ -40,7 +40,7 @@ translations:
     content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Σημείωση"
   images:
-    color-functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
+    color_functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
     sassdoc: "Το documentation δημιουργήθηκε με SassDoc"
     wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"

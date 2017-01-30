@@ -34,7 +34,7 @@ translations:
     content: "Fait avec amour par [Hugo Giraudel](http://hugogiraudel.com), traduit par [Pierre Choffé](http://la-cascade.ghost.io)"
   note: "Note"
   images:
-    color-functions: "Illustration de la différence entre `lighten`/`darken` et `mix` par [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Tableau montrant comment les développeurs ordonnent leurs déclarations CSS"
+    color_functions: "Illustration de la différence entre `lighten`/`darken` et `mix` par [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Tableau montrant comment les développeurs ordonnent leurs déclarations CSS"
     sassdoc: "Documentation générée par SassDoc"
     wallpaper: "Fond d’écran par [Julien He](https://twitter.com/julien_he)"

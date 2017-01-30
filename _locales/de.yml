@@ -34,7 +34,7 @@ translations:
     content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."
   note: "Notiz"
   images:
-    color-functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
+    color_functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
     sassdoc: "Dokumentation von SassDoc generiert"
     wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"

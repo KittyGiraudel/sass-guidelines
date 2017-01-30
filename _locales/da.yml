@@ -34,7 +34,7 @@ translations:
     content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"
   note: "Note"
   images:
-    color-functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
+    color_functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
     sassdoc: "Dokumentation genereret af SassDoc"
     wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"

@@ -34,7 +34,7 @@ translations:
     content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"
   note: "Poznámka"
   images:
-    color-functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
+    color_functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
     sassdoc: "Dokumentace generována ze SassDoc"
     wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"

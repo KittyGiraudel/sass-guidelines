@@ -76,8 +76,8 @@ translations:
     content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
   note: "Uwaga" # The “note” word that is being prepended to all notes in the document
   images: # The “alt” tag of all images
-    color-functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order-poll: "Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie"
+    color_functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+    order_poll: "Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie"
     sassdoc: "Dokumentacja wygenerowana przez SassDoc"
     wallpaper: "Tapeta stworzona przez [Julien He](https://twitter.com/julien_he)"
 ```
