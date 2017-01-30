@@ -10,7 +10,15 @@ configuration:
       link: https://github.com/PavelDemyanenko
 
 translations:
-  toggle_panel: "Переключить панель опций"
+  aside:
+    title: "Опции"
+    report: "Сообщить о проблеме"
+    support: "Поддержать проект"
+    tweet: "Сообщи об этом"
+    syntax: "синтаксис кода"
+    language: "язык"
+    close: "Закройте панель опций"
+    open: "Откройте панель опций"
   back_to_top: "Вернуться к началу"
   skip_to_content: "Перейти к основному содержанию"
   link_to_chapter: "Ссылка на эту главу:"

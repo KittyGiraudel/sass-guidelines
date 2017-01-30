@@ -10,7 +10,15 @@ configuration:
       link: https://github.com/MakhBeth
 
 translations:
-  toggle_panel: "Alterna il pannello delle opzioni"
+  aside:
+    title: "Opzioni"
+    report: "Segnala un problema"
+    support: "Sostieni il progetto"
+    tweet: "Tweet it"
+    syntax: "Sintassi del codice"
+    language: "Lingua"
+    close: "Chiudere il pannello delle opzioni"
+    open: "Aprire il pannello delle opzioni"
   back_to_top: "Torna in cima"
   skip_to_content: "Vai al contenuto principale"
   link_to_chapter: "Un collegamento a questo capitolo:"

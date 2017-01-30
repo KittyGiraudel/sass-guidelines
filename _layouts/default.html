@@ -27,8 +27,8 @@ layout: compress
 
       <!-- Button to toggle the options panel -->
       <button type="button" data-a11y-dialog-show="options-panel" class="button-ui  button-ui--toggle">
-        {% capture toggle_panel %}{{ site.data[page.language].translations.toggle_panel }}{% endcapture %}
-        {% include partials/icon.html icon="settings" title=toggle_panel %}
+        {% capture open_panel %}{{ site.data[page.language].translations.aside.open }}{% endcapture %}
+        {% include partials/icon.html icon="settings" title=open_panel %}
       </button>
 
       <!-- Main container -->

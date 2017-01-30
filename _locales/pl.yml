@@ -10,7 +10,15 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
-  toggle_panel: "Włącza panel opcji"
+  aside:
+    title: "Opcje"
+    report: "Zgłoś problem"
+    support: "Wesprzeć projekt"
+    tweet: "Tweet it"
+    syntax: "Składnia Kod"
+    language: "Język"
+    close: "Zamknij panel opcji"
+    open: "Otwórz panel opcji"
   back_to_top: "Powrót do góry"
   skip_to_content: "Przejdź do głównej zawartości"
   link_to_chapter: "Link do tego rozdziału:"

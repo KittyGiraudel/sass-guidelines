@@ -8,7 +8,15 @@ configuration:
       link: https://la-cascade.io/
 
 translations:
-  toggle_panel: "Activer le panneau d’options"
+  aside:
+    title: "Options"
+    report: "Signaler un problème"
+    support: "Supporter le projet"
+    tweet: "Tweeter"
+    syntax: "Syntaxe du code"
+    language: "Langue"
+    close: "Fermer le panneau d’options"
+    open: "Ouvrir le panneau d’option"
   back_to_top: "Retour en haut de page"
   skip_to_content: "Allez au contenu principal"
   link_to_chapter: "Lien vers ce chapitre :"

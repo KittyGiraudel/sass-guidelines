@@ -10,7 +10,15 @@ configuration:
       link: https://github.com/davidkpiano
 
 translations:
-  toggle_panel: "Alternar el panel de opciones"
+  aside:
+    title: "Opciones"
+    report: "Reportar un problema"
+    support: "Apoyar el proyecto"
+    tweet: "Hazlo"
+    syntax: "Sintaxis de código"
+    language: "Idioma"
+    close: "Cierre el panel de opciones"
+    open: "Abrir el panel de opciones"
   back_to_top: "Volver arriba"
   skip_to_content: "Saltar al contenido principal"
   link_to_chapter: "Enlace a este capítulo:"

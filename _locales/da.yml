@@ -8,7 +8,15 @@ configuration:
       link: http://codepen.io/andersschmidt/
 
 translations:
-  toggle_panel: "Slå panelet muligheder"
+  aside:
+    title: "Muligheder"
+    report: "Rapporter et problem"
+    support: "Støt projektet"
+    tweet: "Tweet det"
+    syntax: "Kode syntaks"
+    language: "Sprog"
+    close: "Luk panelet muligheder"
+    open: "Åbn panelet muligheder"
   back_to_top: "Tilbage til toppen"
   skip_to_content: "Gå til hovedindhold"
   link_to_chapter: "Link til dette kapitel:"

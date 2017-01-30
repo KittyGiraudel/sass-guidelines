@@ -14,7 +14,15 @@ configuration:
       link: https://github.com/eduardoboucas
 
 translations:
-  toggle_panel: "Alternar o painel de opções"
+  aside:
+    title: "Opcje"
+    report: "Comunicar um problema"
+    support: "Apoie o projeto"
+    tweet: "Tweet isso"
+    syntax: "Sintaxe de código"
+    language: "Língua"
+    close: "Feche o painel de opções"
+    open: "Abra o painel de opções"
   back_to_top: "De volta ao topo"
   skip_to_content: "Ir para o conteúdo principal"
   link_to_chapter: "Link para este capítulo:"

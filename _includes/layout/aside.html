@@ -2,17 +2,27 @@
   <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
   <div class="aside__content" role="dialog">
     <div role="document">
-      <h1 class="aside__title">Options</h1>
+      <h1 class="aside__title">
+        {{ site.data[page.language].translations.aside.title }}
+      </h1>
 
       <section class="aside__section  aside__section--extras">
-        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">Report an issue</a>
-        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">Support the project</a>
+        <a class="button" target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues">
+          {{ site.data[page.language].translations.aside.report }}
+        </a>
+        <a class="button" target="_blank" href="https://gum.co/sass-guidelines">
+          {{ site.data[page.language].translations.aside.support }}
+        </a>
         {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">Tweet it</a>
+        <a class="button" target="_blank" href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}">
+          {{ site.data[page.language].translations.aside.tweet }}
+        </a>
       </section>
 
       <section class="aside__section  aside__section--syntax">
-        <h2 class="aside__heading">Code syntax</h2>
+        <h2 class="aside__heading">
+          {{ site.data[page.language].translations.aside.syntax }}
+        </h2>
 
         <fieldset>
           <ul class="aside__radio-list">
@@ -34,7 +44,9 @@
 
       <section class="aside__section  aside__section--language">
         <h2 class="aside__heading">
-          <label for="language-picker">Language</label>
+          <label for="language-picker">
+            {{ site.data[page.language].translations.aside.language }}
+          </label>
         </h2>
 
         <div class="custom-select language-picker">
@@ -59,7 +71,7 @@
         </noscript>
       </section>
 
-      <button data-a11y-dialog-hide type="button" title="Close the options panel" class="aside__close">&times;</button>
+      <button data-a11y-dialog-hide type="button" title="{{ site.data[page.language].translations.aside.close }}" class="aside__close">&times;</button>
     </div>
   </div>
 </aside>

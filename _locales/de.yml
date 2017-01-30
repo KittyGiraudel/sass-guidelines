@@ -8,7 +8,15 @@ configuration:
       link: https://github.com/morkro
 
 translations:
-  toggle_panel: "Optionen anzeigen/ausblenden"
+  aside:
+    title: "Optionen"
+    report: "Ein Problem melden"
+    support: "Unterstützen Sie das Projekt"
+    tweet: "Teilen auf Twitter"
+    syntax: "Code-Syntax"
+    language: "Sprache"
+    close: "Schließen Sie das Optionsfenster"
+    open: "Öffnen Sie das Optionsfenster"
   back_to_top: "Zurück nach oben"
   skip_to_content: "Direkt zum Inhalt"
   link_to_chapter: "Link zu diesem Kapitel:"

@@ -14,7 +14,15 @@ configuration:
       link: https://github.com/sebdesign
 
 translations:
-  toggle_panel: "Εναλλαγή ο πίνακας επιλογών"
+  aside:
+    title: "επιλογές"
+    report: "Αναφορά προβλήματος"
+    support: "Υποστηρίξτε το έργο"
+    tweet: "Διαδόστε το"
+    syntax: "Κωδικός σύνταξη"
+    language: "Γλώσσα"
+    close: "Κλείστε τον πίνακα επιλογών"
+    open: "Ανοίξτε τον πίνακα επιλογών"
   back_to_top: "Επιστροφή στην κορυφή"
   skip_to_content: "Μετάβαση στο κύριο περιεχόμενο"
   link_to_chapter: "Συνδέουν σε αυτό το κεφάλαιο:"

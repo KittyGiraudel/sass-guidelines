@@ -8,7 +8,15 @@ configuration:
       link: https://github.com/HoBi
 
 translations:
-  toggle_panel: "Přepínat panel nastavení"
+  aside:
+    title: "Možnosti"
+    report: "Nahlásit problém"
+    support: "Podpořte projekt"
+    tweet: "Tweet ji"
+    syntax: "Syntaxe kód"
+    language: "Jazyk"
+    close: "Zavřete panel nastavení"
+    open: "Otevřete panel nastavení"
   back_to_top: "Zpět na začátek"
   skip_to_content: "Přejít k hlavnímu obsahu"
   link_to_chapter: "Odkaz k této kapitole:"

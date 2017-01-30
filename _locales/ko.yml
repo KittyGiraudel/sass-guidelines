@@ -8,7 +8,15 @@ configuration:
       link: https://github.com/kimdhoe
 
 translations:
-  toggle_panel: "옵션 패널 토글"
+  aside:
+    title: "옵션"
+    report: "문제 신고"
+    support: "프로젝트 지원"
+    tweet: "그것을 짹짹"
+    syntax: "코드 구문"
+    language: "언어"
+    close: "옵션 패널 닫기"
+    open: "옵션 패널 열기"
   back_to_top: "맨 위로"
   skip_to_content: "주요 내용으로 건너 뛰기"
   link_to_chapter: "이 장에 링크 :"

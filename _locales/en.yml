@@ -6,7 +6,15 @@ configuration:
   translators: []
 
 translations:
-  toggle_panel: "Toggle the options panel"
+  aside:
+    title: "Options"
+    report: "Report an issue"
+    support: "Support the project"
+    tweet: "Tweet it"
+    syntax: "Code syntax"
+    language: "Language"
+    close: "Close the options panel"
+    open: "Open the options panel"
   back_to_top: "Get back to top"
   skip_to_content: "Skip to main content"
   link_to_chapter: "Link to this chapter:"
