@@ -33,9 +33,10 @@
 
   var getAnchorLink = function (chapter) {
     var heading = chapter.querySelector('h1[id]');
+    var title = (heading.innerText || heading.textContent);
     var link = document.createElement('a');
     link.href = '#' + heading.id;
-    link.innerHTML = sanitizeSVG(linkSvg);
+    link.innerHTML = sanitizeSVG(linkSvg).replace('</title>', ' “' + title + '”</title>');
     link.setAttribute('class', 'chapter__link button-ui');
 
     return link;

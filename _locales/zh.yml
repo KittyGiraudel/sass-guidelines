@@ -10,6 +10,7 @@ configuration:
       link: http://pinggod.com
 
 translations:
+  link_to_chapter: "本章链接："
   twitter: "关注我的 Twitter"
   contributing:
     support_button: "支持 Sass 编程规范"

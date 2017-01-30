@@ -8,6 +8,7 @@ configuration:
       link: https://github.com/HoBi
 
 translations:
+  link_to_chapter: "Odkaz k této kapitole:"
   twitter: "Sledujte mě na Twitteru"
   contributing:
     support_button: "Podpořit Sass Guidelines"

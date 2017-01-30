@@ -10,6 +10,7 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
+  link_to_chapter: "Link do tego rozdziału:"
   twitter: "Napisz do mnie na Twitterze"
   contributing:
     support_button: "Wesprzyj Sass Guidelines"
