@@ -11,18 +11,18 @@ configuration:
 
 translations:
   aside:
-    title: "选项"
+    title: "设置"
     report: "报告问题"
     support: "支持项目"
     tweet: "谢谢"
     syntax: "代码语法"
     language: "语言"
-    close: "关闭选项面板"
-    open: "打开选项面板"
+    close: "关闭设置面板"
+    open: "打开设置面板"
   back_to_top: "回到顶部"
-  skip_to_content: "跳到主要内容"
-  link_to_chapter: "本章链接："
-  edit_chapter: "在GitHub上编辑本章："
+  skip_to_content: "跳跃到主要内容"
+  link_to_chapter: "这章网址："
+  edit_chapter: "在GitHub上改写这章："
   twitter: "关注我的 Twitter"
   contributing:
     support_button: "支持 Sass 编程规范"
