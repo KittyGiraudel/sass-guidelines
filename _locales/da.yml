@@ -8,33 +8,33 @@ configuration:
       link: http://codepen.io/andersschmidt/
 
 translations:
-  aside:
-    title: "Muligheder"
-    report: "Rapporter et problem"
-    support: "Støt projektet"
-    tweet: "Tweet det"
-    syntax: "Kode syntaks"
-    language: "Sprog"
-    close: "Luk panelet muligheder"
-    open: "Åbn panelet muligheder"
-  back_to_top: "Tilbage til toppen"
-  skip_to_content: "Gå til hovedindhold"
+  baseline: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
+  footer_content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"
+
+  aside_title: "Muligheder"
+  aside_report: "Rapporter et problem"
+  aside_support: "Støt projektet"
+  aside_tweet: "Tweet det"
+  aside_syntax: "Kode syntaks"
+  aside_language: "Sprog"
+  aside_close: "Luk panelet muligheder"
+  aside_open: "Åbn panelet muligheder"
+
+  link_to_top: "Tilbage til toppen"
+  link_to_skip: "Gå til hovedindhold"
   link_to_chapter: "Link til dette kapitel:"
-  edit_chapter: "Rediger denne kapitel om GitHub:"
-  twitter: "Fang mig på Twitter"
-  contributing:
-    support_button: "Støt Sass Guidelines"
-    tweet_button: "Spred ordet"
-  donate:
-    content: "Hvis du nød Sass Guidelines, overvej venligst at støtte dem."
-    button: "Støt Sass Guidelines"
-  baseline:
-    content: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
-  footer:
-    content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"
+  link_to_edit_chapter: "Rediger denne kapitel om GitHub:"
+  link_to_twitter: "Fang mig på Twitter"
+
+  contributing_support_button: "Støt Sass Guidelines"
+  contributing_tweet_button: "Spred ordet"
+
+  donate_content: "Hvis du nød Sass Guidelines, overvej venligst at støtte dem."
+  donate_button: "Støt Sass Guidelines"
+
   note: "Note"
-  images:
-    color_functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
-    sassdoc: "Dokumentation genereret af SassDoc"
-    wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
+  image_sassdoc: "Dokumentation genereret af SassDoc"
+  image_wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"

@@ -14,33 +14,33 @@ configuration:
       link: https://github.com/eduardoboucas
 
 translations:
-  aside:
-    title: "Opcje"
-    report: "Comunicar um problema"
-    support: "Apoie o projeto"
-    tweet: "Tweet isso"
-    syntax: "Sintaxe de código"
-    language: "Língua"
-    close: "Feche o painel de opções"
-    open: "Abra o painel de opções"
-  back_to_top: "De volta ao topo"
-  skip_to_content: "Ir para o conteúdo principal"
+  baseline: "Um guia de estilo opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
+  footer_content: "Escrito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
+
+  aside_title: "Opcje"
+  aside_report: "Comunicar um problema"
+  aside_support: "Apoie o projeto"
+  aside_tweet: "Tweet isso"
+  aside_syntax: "Sintaxe de código"
+  aside_language: "Língua"
+  aside_close: "Feche o painel de opções"
+  aside_open: "Abra o painel de opções"
+
+  link_to_top: "De volta ao topo"
+  link_to_skip: "Ir para o conteúdo principal"
   link_to_chapter: "Link para este capítulo:"
-  edit_chapter: "Edite este capítulo no GitHub:"
-  twitter: "Encontra-me no Twitter"
-  contributing:
-    support_button: "Apoiar Sass Guidelines"
-    tweet_button: "Espalhar a palavra"
-  donate:
-    content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
-    button: "Apoie o Guia de Sass"
-  baseline:
-    content: "Um guia de estilo opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
-  footer:
-    content: "Escrito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
+  link_to_edit_chapter: "Edite este capítulo no GitHub:"
+  link_to_twitter: "Encontra-me no Twitter"
+
+  contributing_support_button: "Apoiar Sass Guidelines"
+  contributing_tweet_button: "Espalhar a palavra"
+
+  donate_content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
+  donate_button: "Apoie o Guia de Sass"
+
   note: "Nota"
-  images:
-    color_functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Gráfico demonstrativo de como os programadores ordenam as suas declarações de CSS"
-    sassdoc: "Documentação gerada por SassDoc"
-    wallpaper: "Fundo de parede por [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Gráfico demonstrativo de como os programadores ordenam as suas declarações de CSS"
+  image_sassdoc: "Documentação gerada por SassDoc"
+  image_wallpaper: "Fundo de parede por [Julien He](https://twitter.com/julien_he)"
