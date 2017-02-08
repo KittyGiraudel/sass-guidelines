@@ -21,3 +21,5 @@ npm install
 npm start
 # http://localhost:4000
 ```
+
+To run a specific task from [package-scripts.js](https://github.com/HugoGiraudel/sass-guidelines/blob/master/package-scripts.js), prepend `npm start`, like: `npm start js.vendors`.
