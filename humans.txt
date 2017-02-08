@@ -3,8 +3,7 @@
 
 /* TEAM */
 
-
-    Front-end developer: Hugo Giraudel
+    Author: Hugo Giraudel
     Contact: @HugoGiraudel
     From: Berlin, Germany
 
@@ -12,10 +11,13 @@
     Contact: @HugoGiraudel
     From: Berlin, Germany
 
-    Author: Hugo Giraudel
+    Front-end developer: Hugo Giraudel
     Contact: @HugoGiraudel
     From: Berlin, Germany
 
+    Front-end developer: Moritz Kröger
+    Contact: @morkro
+    From: Berlin, Germany
 
 /* THANKS */
 
