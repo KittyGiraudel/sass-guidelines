@@ -19,7 +19,7 @@
         </a>
       </section>
 
-      <section class="aside__section  aside__section--syntax">
+      <section class="aside__section  aside__section--syntax js-powered">
         <h2 class="aside__heading">
           {{ site.data[page.language].translations.aside.syntax }}
         </h2>
@@ -49,7 +49,7 @@
           </label>
         </h2>
 
-        <div class="custom-select language-picker">
+        <div class="custom-select language-picker js-powered">
           <select id="language-picker" data-current-page="{{ page.url }}">
             {% for language in site.languages %}
             {% if site.data[language].configuration.available %}
@@ -77,7 +77,7 @@
         </a>
       </noscript>
 
-      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close" hidden>&times;</button>
+      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close js-powered">&times;</button>
     </div>
   </div>
 </aside>

@@ -11,7 +11,6 @@
   var chapters = $('.chapter:not(.toc)')
   var syntaxToggle = $('input[name="syntax"]')
   var sidebarOpeners = $('a[href="#options-panel"]')
-  var sidebarClosers = $('[data-a11y-dialog-hide]')
   var sidebar = $('#options-panel')[0]
 
   // Internal variables
@@ -91,12 +90,6 @@
     button.innerHTML = toggle.innerHTML
 
     toggle.parentNode.replaceChild(button, toggle)
-  })
-
-  // Closer is hidden by default as it is displayed side by side with a link
-  // in a noscript tag.
-  sidebarClosers.forEach(function (closer) {
-    closer.removeAttribute('hidden')
   })
 
   // Add chapter buttons
