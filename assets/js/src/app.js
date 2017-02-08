@@ -3,50 +3,92 @@
 (function () {
   'use strict'
 
-  // DOM queries
-  var language = document.documentElement.getAttribute('lang')
-  var languagePicker = $('#language-picker')[0]
-  var editSvg = $('meta[name="svg-pencil-icon"]')[0].getAttribute('content')
-  var linkSvg = $('meta[name="svg-link-icon"]')[0].getAttribute('content')
-  var chapters = $('.chapter:not(.toc)')
-  var syntaxToggle = $('input[name="syntax"]')
-  var sidebarOpeners = $('a[href="#options-panel"]')
-  var sidebar = $('#options-panel')[0]
+  var sanitizeSvg = (function ensureSvgId () {
+    var id = 100
 
-  // Internal variables
-  var idIndex = 100
+    return function (svg) {
+      id++
+      return svg
+        .replace(/title\-\d+/g, ('title-' + id))
+        .replace(/desc\-\d+/g, ('desc-' + id))
+    }
+  }())
 
-  var sanitizeSVG = function (svg) {
-    return svg
-      .replace(/title\-\d+/g, ('title-' + idIndex++))
-      .replace(/desc\-\d+/g, ('desc-' + idIndex++))
+  function getMetaContent (name) {
+    return document.querySelector('meta[name="' + name + '"]').getAttribute('content')
   }
 
-  var getEditLink = function (chapter) {
-    var heading = chapter.querySelector('h1[id]')
-    var title = (heading.innerText || heading.textContent)
-    var id = chapter.id.split('chapter-')[1]
+  function getChapterHeading (chapter) {
+    return chapter.querySelector('h1[id]')
+  }
+
+  function getChapterTitle (chapter) {
+    var heading = getChapterHeading(chapter)
+    return (heading.innerText || heading.textContent)
+  }
+
+  function getChapterName (chapter) {
+    return chapter.id.split('chapter-')[1]
+  }
+
+  function getCurrentLocale () {
+    return document.documentElement.getAttribute('lang')
+  }
+
+  function getChapterEditUrl (chapter) {
+    var BASE_URL = 'https://github.com/HugoGiraudel/sass-guidelines/blob/master/pages'
+    var locale = getCurrentLocale()
+    var fileName = '_' + getChapterName(chapter) + '.md'
+
+    return [ BASE_URL, locale, fileName ].join('/')
+  }
+
+  function translateSvgTitle (svg, title) {
+    return svg.replace('</title>', ' “' + title + '”</title>')
+  }
+
+  function getLinkSvgContent (svg, chapter) {
+    return translateSvgTitle(
+      sanitizeSvg(svg),
+      getChapterTitle(chapter)
+    )
+  }
+
+  function createChapterEditLink (chapter, svg) {
+    var title = getChapterTitle(chapter)
     var link = document.createElement('a')
-    link.href = 'https://github.com/HugoGiraudel/sass-guidelines/blob/master/pages/' + language + '/_' + id + '.md'
-    link.innerHTML = sanitizeSVG(editSvg).replace('</title>', ' “' + title + '”</title>')
-    link.setAttribute('class', 'chapter__edit button-ui')
+
+    link.href = getChapterEditUrl(chapter)
+    link.classList.add('chapter__edit', 'button-ui')
     link.setAttribute('target', '_blank')
+    link.setAttribute('rel', 'noreferrer noopener')
+    link.innerHTML = getLinkSvgContent(svg, chapter)
 
     return link
   }
 
-  var getAnchorLink = function (chapter) {
-    var heading = chapter.querySelector('h1[id]')
-    var title = (heading.innerText || heading.textContent)
+  function createChapterAnchorLink (chapter, svg) {
     var link = document.createElement('a')
+    var heading = getChapterHeading(chapter)
+
     link.href = '#' + heading.id
-    link.innerHTML = sanitizeSVG(linkSvg).replace('</title>', ' “' + title + '”</title>')
-    link.setAttribute('class', 'chapter__link button-ui')
+    link.classList.add('chapter__link', 'button-ui')
+    link.innerHTML = getLinkSvgContent(svg, chapter)
 
     return link
   }
 
-  var fixSkipLinks = function () {
+  function createChapterLinks (chapter, editSvg, linkSvg) {
+    var wrapper = document.createElement('div')
+
+    wrapper.classList.add('button-wrapper', 'chapter__buttons')
+    wrapper.appendChild(createChapterAnchorLink(chapter, linkSvg))
+    wrapper.appendChild(createChapterEditLink(chapter, editSvg))
+
+    return wrapper
+  }
+
+  function fixSkipLinks () {
     var element = document.getElementById(window.location.hash.substring(1))
 
     if (element) {
@@ -57,48 +99,69 @@
     }
   }
 
-  var redirectUrl = function (event) {
+  function redirectUrl (event) {
     window.location.href = this.value
   }
 
-  // Bind events
-  window.on('hashchange', fixSkipLinks, false)
-  languagePicker.on('change', redirectUrl, false)
-  syntaxToggle.on('click', function (event) {
-    var fn = this.value === 'sass' ? 'add' : 'remove'
-    document.body.classList[fn]('sass')
-  })
+  function initialiseLanguagePicker () {
+    var languagePicker = document.querySelector('#language-picker')
 
-  var onDialogShow = function () { sidebar.classList.add('is-open') }
-  var onDialogHide = function () { sidebar.classList.remove('is-open') }
+    languagePicker.on('change', redirectUrl, false)
+  }
 
-  // Initialise side panel
-  document.addEventListener('DOMContentLoaded', function (event) {
-    var dialog = new A11yDialog(sidebar, document.getElementById('main-content'))
+  function initialiseSyntaxToggle () {
+    var syntaxToggle = $('input[name="syntax"]')
 
-    dialog
-      .on('show', onDialogShow)
-      .on('hide', onDialogHide)
-  })
+    syntaxToggle.on('click', function (event) {
+      var fn = this.value === 'sass' ? 'add' : 'remove'
+      document.body.classList[fn]('sass')
+    })
+  }
 
-  // Replace options panel toggles with proper a11y-dialog openers
-  sidebarOpeners.forEach(function (toggle) {
+  function replaceSidebarOpener (link) {
     var button = document.createElement('button')
+
     button.setAttribute('type', 'button')
     button.setAttribute('data-a11y-dialog-show', 'options-panel')
-    button.setAttribute('class', toggle.getAttribute('class'))
-    button.innerHTML = toggle.innerHTML
+    button.setAttribute('class', link.getAttribute('class'))
+    button.innerHTML = link.innerHTML
 
-    toggle.parentNode.replaceChild(button, toggle)
-  })
+    link.parentNode.replaceChild(button, link)
+  }
 
-  // Add chapter buttons
-  chapters.forEach(function (chapter) {
-    var wrapper = document.createElement('div')
-    wrapper.setAttribute('class', 'button-wrapper chapter__buttons')
-    wrapper.appendChild(getAnchorLink(chapter))
-    wrapper.appendChild(getEditLink(chapter))
-    var heading = chapter.querySelector('h1[id]')
-    heading.parentNode.insertBefore(wrapper, heading.nextSibling)
+  function initialiseOptionsPanel () {
+    $('a[href="#options-panel"]').forEach(replaceSidebarOpener)
+
+    var dialog = new A11yDialog(
+      document.querySelector('#options-panel'),
+      document.querySelector('#main-content')
+    )
+
+    dialog
+      .on('show', function (el) { el.classList.add('is-open') })
+      .on('hide', function (el) { el.classList.remove('is-open') })
+  }
+
+  function initialiseChapters () {
+    var chapters = $('.chapter:not(.toc)')
+    var editSvg = getMetaContent('svg-pencil-icon')
+    var linkSvg = getMetaContent('svg-link-icon')
+
+    chapters.forEach(function (chapter) {
+      var heading = getChapterHeading(chapter)
+
+      heading.parentNode.insertBefore(
+        createChapterLinks(chapter, editSvg, linkSvg),
+        heading.nextSibling
+      )
+    })
+  }
+
+  window.on('hashchange', fixSkipLinks, false)
+  document.addEventListener('DOMContentLoaded', function (event) {
+    initialiseLanguagePicker()
+    initialiseSyntaxToggle()
+    initialiseOptionsPanel()
+    initialiseChapters()
   })
 }())
