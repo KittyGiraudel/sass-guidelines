@@ -1,8 +1,10 @@
-/**
- * Aside options panel accessibility wrapper
- */
-.aside[aria-hidden='true'] {
+.aside {
   display: none;
+}
+
+.js .aside.is-open,
+.no-js .aside:target {
+  display: block;
 }
 
 /**
@@ -85,6 +87,12 @@
   -webkit-transform: scale(1.25); /* 2 */
   -moz-transform: scale(1.25); /* 2 */
   transform: scale(1.25); /* 2 */
+  text-decoration: none;
+}
+
+.aside__close:hover,
+.aside__close:active {
+  color: inherit;
 }
 
 /**

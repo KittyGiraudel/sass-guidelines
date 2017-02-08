@@ -1,4 +1,4 @@
-<aside class="aside" aria-hidden="true" id="options-panel">
+<aside class="aside" id="options-panel">
   <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
   <div class="aside__content" role="dialog">
     <div role="document">
@@ -71,7 +71,13 @@
         </noscript>
       </section>
 
-      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close">&times;</button>
+      <noscript>
+        <a href="#" class="aside__close" aria-label="{{ site.data[page.language].translations.aside.close }}">
+          &times;
+        </a>
+      </noscript>
+
+      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close" hidden>&times;</button>
     </div>
   </div>
 </aside>

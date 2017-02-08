@@ -10,6 +10,9 @@
   var linkSvg = $('meta[name="svg-link-icon"]')[0].getAttribute('content')
   var chapters = $('.chapter:not(.toc)')
   var syntaxToggle = $('input[name="syntax"]')
+  var sidebarOpeners = $('a[href="#options-panel"]')
+  var sidebarClosers = $('[data-a11y-dialog-hide]')
+  var sidebar = $('#options-panel')[0]
 
   // Internal variables
   var idIndex = 100
@@ -67,9 +70,33 @@
     document.body.classList[fn]('sass')
   })
 
+  var onDialogShow = function () { sidebar.classList.add('is-open') }
+  var onDialogHide = function () { sidebar.classList.remove('is-open') }
+
   // Initialise side panel
   document.addEventListener('DOMContentLoaded', function (event) {
-    new A11yDialog(document.getElementById('options-panel'), document.getElementById('main-content')) // eslint-disable-line
+    var dialog = new A11yDialog(sidebar, document.getElementById('main-content'))
+
+    dialog
+      .on('show', onDialogShow)
+      .on('hide', onDialogHide)
+  })
+
+  // Replace options panel toggles with proper a11y-dialog openers
+  sidebarOpeners.forEach(function (toggle) {
+    var button = document.createElement('button')
+    button.setAttribute('type', 'button')
+    button.setAttribute('data-a11y-dialog-show', 'options-panel')
+    button.setAttribute('class', toggle.getAttribute('class'))
+    button.innerHTML = toggle.innerHTML
+
+    toggle.parentNode.replaceChild(button, toggle)
+  })
+
+  // Closer is hidden by default as it is displayed side by side with a link
+  // in a noscript tag.
+  sidebarClosers.forEach(function (closer) {
+    closer.removeAttribute('hidden')
   })
 
   // Add chapter buttons

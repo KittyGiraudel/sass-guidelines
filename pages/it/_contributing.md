@@ -2,7 +2,7 @@
 # Contributi
 
 "Le linee guida di Sass" è un progetto libero di cui mi prendo cura nel mio tempo libero. Inutile a dirsi, c’è un bel po’ di lavoro da fare per tenere tutto aggiornato, documentato e rilevante. 
-Per fortuna, mi aiutano un sacco di _contributors_ specialmente quando si tratta di mantenere  <button type="button" data-a11y-dialog-show="options-panel" class="link-like">traduzioni</button>. Ringraziamoli!
+Per fortuna, mi aiutano un sacco di _contributors_ specialmente quando si tratta di mantenere <a href="#options-panel" class="link-like">traduzioni</a>. Ringraziamoli!
 
 Ora, se ti senti di poter contribuire, sappi che già twittare riguardo questo progetto, passar parola o aggiustare qualche errore di battitura aprendo un issue o una pull-request sulla [repository GitHub](https://github.com/HugoGiraudel/sass-guidelines) è già un’ottima cosa!
 
