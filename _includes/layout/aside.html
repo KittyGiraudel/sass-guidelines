@@ -1,4 +1,4 @@
-<aside class="aside" aria-hidden="true" id="options-panel">
+<aside class="aside" id="options-panel">
   <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
   <div class="aside__content" role="dialog">
     <div role="document">
@@ -19,7 +19,7 @@
         </a>
       </section>
 
-      <section class="aside__section  aside__section--syntax">
+      <section class="aside__section  aside__section--syntax js-powered">
         <h2 class="aside__heading">
           {{ site.data[page.language].translations.aside.syntax }}
         </h2>
@@ -49,7 +49,7 @@
           </label>
         </h2>
 
-        <div class="custom-select language-picker">
+        <div class="custom-select language-picker js-powered">
           <select id="language-picker" data-current-page="{{ page.url }}">
             {% for language in site.languages %}
             {% if site.data[language].configuration.available %}
@@ -71,7 +71,13 @@
         </noscript>
       </section>
 
-      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close">&times;</button>
+      <noscript>
+        <a href="#" class="aside__close" aria-label="{{ site.data[page.language].translations.aside.close }}">
+          &times;
+        </a>
+      </noscript>
+
+      <button data-a11y-dialog-hide type="button" aria-label="{{ site.data[page.language].translations.aside.close }}" class="aside__close js-powered">&times;</button>
     </div>
   </div>
 </aside>

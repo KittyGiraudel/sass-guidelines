@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.language }}" dir="{{ page.direction|lower }}">
+<html lang="{{ page.language }}" dir="{{ page.direction|lower }}" class="no-js">
 
   {% include layout/head.html %}
 
@@ -25,11 +25,12 @@ layout: compress
       <!-- Translation banner -->
       {% include partials/translation-warning.html %}
 
-      <!-- Button to toggle the options panel -->
-      <button type="button" data-a11y-dialog-show="options-panel" class="button-ui  button-ui--toggle">
+      <!-- Button to toggle the options panel; replaced with JavaScript with a
+           proper button when JavaScript is enabled -->
+      <a href="#options-panel" class="button-ui  button-ui--toggle">
         {% capture open_panel %}{{ site.data[page.language].translations.aside.open }}{% endcapture %}
         {% include partials/icon.html icon="settings" title=open_panel %}
-      </button>
+      </a>
 
       <!-- Main container -->
       <div class="main">
