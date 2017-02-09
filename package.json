@@ -5,18 +5,8 @@
   "repository": "hugogiraudel/sass-guidelines",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run js:vendors",
-    "build": "npm run icons && npm run js:build",
-    "postbuild": "_bin/testbuild",
-    "preicons": "svgo assets/images/icons",
-    "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
-    "start": "npm run build && npm run watch",
-    "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
-    "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/a11y-dialog/a11y-dialog.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor && cp node_modules/picturefill/dist/picturefill.min.js assets/js",
-    "js:utilities": "cat node_modules/fg-loadcss/src/loadCSS.js node_modules/fg-loadcss/src/cssrelpreload.js node_modules/woff2-feature-test/woff2.js node_modules/OptimizedWebfontLoading/loadFont.js | uglifyjs > _includes/utilities.js",
-    "js:lint": "standard assets/js/src/*",
-    "js:build": "npm run js:lint && npm run js:vendors && npm run js:utilities",
-    "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --output _includes/critical.css && cleancss _includes/critical.css --output _includes/critical.css"
+    "postinstall": "npm start js.vendors",
+    "start": "nps"
   },
   "dependencies": {
     "a11y-dialog": "^3.0.0",
@@ -29,6 +19,7 @@
   "devDependencies": {
     "clean-css": "^3.4.10",
     "criticalcss": "^2.1.0",
+    "p-s": "^3.1.0",
     "spritesh": "^1.0.10",
     "standard": "^8.6.0",
     "svgo": "^0.7.1",
