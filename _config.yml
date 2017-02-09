@@ -29,7 +29,7 @@ exclude: [
   "CHANGELOG.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "TRANSLATING.md",
   "assets/images/icons",
   "package.json", "Gemfile", "Gemfile.lock",
-  "**/README.md", "LICENSE", "CNAME",
+  "README.md", "pages/**/README.md", "LICENSE", "CNAME",
   "node_modules", "vendor", "_bin"
 ]
 
