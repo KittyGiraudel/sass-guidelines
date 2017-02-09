@@ -20,7 +20,7 @@ module.exports = {
     test: 'npm start js.lint',
 
     // Build the project
-    build: 'npm start icons && npm start js && _bin/testbuild',
+    build: 'npm start js && jekyll build && _bin/testbuild',
 
     js: {
       default: 'npm start js.build',
