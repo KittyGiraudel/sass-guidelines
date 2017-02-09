@@ -1,0 +1,10 @@
+{% assign class = "button " | append: include.class %}
+{% assign href = "https://gum.co/sass-guidelines" %}
+{% assign text = include.text | default: site.data[page.language].translations.contributing_support_button %}
+
+{% include partials/button.html
+  icon = "euro"
+  content = text
+  href = href
+  target = "_blank"
+%}

@@ -1,12 +1,12 @@
+{% assign class = "donate " | append: include.class %}
+{% assign text = site.data[page.language].translations.donate_content %}
+
 {::options parse_block_html="false" /}
 
-<div class="donate">
+<div class="{{ class }}">
   <div class="donate__content">
-    <p>{{ site.data[page.language].translations.donate_content }}</p>
-    <a href="https://gum.co/sass-guidelines" target="_blank" class="button" rel="noopener noreferrer">
-      {% include partials/icon.html icon="euro" %}
-      {{ site.data[page.language].translations.donate_button }}
-    </a>
+    <p>{{ text }}</p>
+    {% include partials/button_donate.html %}
   </div>
 </div>
 

@@ -1,10 +1,9 @@
+{% assign class = "button-wrapper " | append: include.class %}
+
 {::options parse_block_html="false" /}
 
-<div class="button-wrapper">
-  <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="button" rel="noopener noreferrer">
-    {% include partials/icon.html icon="twitter" %}
-    {{ site.data[page.language].translations.link_to_twitter }}
-  </a>
+<div class="{{ class }}">
+  {% include partials/button_twitter.html %}
 </div>
 
 {::options parse_block_html="true" /}
