@@ -7,6 +7,8 @@ configuration:
     - name: Anders Schmidt Hansen
       link: http://codepen.io/andersschmidt/
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
   footer_content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"

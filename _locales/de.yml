@@ -7,6 +7,8 @@ configuration:
     - name: Moritz Kröger
       link: https://github.com/morkro
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
   footer_content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."

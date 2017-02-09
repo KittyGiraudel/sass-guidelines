@@ -7,6 +7,8 @@ configuration:
     - name: Honza Bittner
       link: https://github.com/HoBi
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
   footer_content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"

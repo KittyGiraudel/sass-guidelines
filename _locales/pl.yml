@@ -9,6 +9,8 @@ configuration:
     - name: Mateusz Chabros
       link: http://github.com/matchabros
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
   footer_content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
@@ -22,7 +24,7 @@ translations:
   aside_close: "Zamknij panel opcji"
   aside_open: "Otwórz panel opcji"
 
-  link_to__top: "Powrót do góry"
+  link_to_top: "Powrót do góry"
   link_to_skip: "Przejdź do głównej zawartości"
   link_to_chapter: "Link do tego rozdziału:"
   link_to_edit_chapter: "Edytuj ten rozdział na GitHub:"

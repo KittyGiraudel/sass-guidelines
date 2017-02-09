@@ -9,6 +9,8 @@ configuration:
     - name: Davide di Pumpo
       link: https://github.com/MakhBeth
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
   footer_content: "Fatto con amore da [Hugo Giraudel](http://hugogiraudel.com)"

@@ -7,6 +7,8 @@ configuration:
     - name: Donghee Kim
       link: https://github.com/kimdhoe
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
   footer_content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"

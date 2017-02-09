@@ -13,6 +13,8 @@ configuration:
     - name: Sébastien Nikolaou
       link: https://github.com/sebdesign
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
   footer_content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"

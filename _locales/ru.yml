@@ -9,6 +9,8 @@ configuration:
     - name: Pavel Demyanenko
       link: https://github.com/PavelDemyanenko
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
   footer_content: "Сделал с любовью [Хьюго Гираудел](http://hugogiraudel.com), перевели [Даниил Пронин](http://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"

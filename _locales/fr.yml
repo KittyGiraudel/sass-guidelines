@@ -7,6 +7,8 @@ configuration:
     - name: Pierre Choffé
       link: https://la-cascade.io/
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Un guide de style engagé pour du code Sass sain, maintenable et extensible."
   footer_content: "Fait avec amour par [Hugo Giraudel](http://hugogiraudel.com), traduit par [Pierre Choffé](http://la-cascade.ghost.io)"

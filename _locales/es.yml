@@ -9,6 +9,8 @@ configuration:
     - name: David Khourshid
       link: https://github.com/davidkpiano
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
   baseline: "Una guía de estilo comprometida en desarrollar Sass sano, sostenible y escalable."
   footer_content: "Hecho con amor por [Hugo Giraudel](http://hugogiraudel.com)"
