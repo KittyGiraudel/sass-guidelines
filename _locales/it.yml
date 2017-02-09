@@ -9,34 +9,36 @@ configuration:
     - name: Davide di Pumpo
       link: https://github.com/MakhBeth
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
-  aside:
-    title: "Opzioni"
-    report: "Segnala un problema"
-    support: "Sostieni il progetto"
-    tweet: "Tweet it"
-    syntax: "Sintassi del codice"
-    language: "Lingua"
-    close: "Chiudi il pannello delle opzioni"
-    open: "Apri il pannello delle opzioni"
-  back_to_top: "Torna in cima"
-  skip_to_content: "Vai al contenuto principale"
+  baseline: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
+  footer_content: "Fatto con amore da [Hugo Giraudel](http://hugogiraudel.com)"
+
+  aside_title: "Opzioni"
+  aside_report: "Segnala un problema"
+  aside_support: "Sostieni il progetto"
+  aside_tweet: "Tweet it"
+  aside_syntax: "Sintassi del codice"
+  aside_language: "Lingua"
+  aside_close: "Chiudi il pannello delle opzioni"
+  aside_open: "Apri il pannello delle opzioni"
+
+  link_to_top: "Torna in cima"
+  link_to_skip: "Vai al contenuto principale"
   link_to_chapter: "Un collegamento a questo capitolo:"
-  edit_chapter: "Modifica questo capitolo su GitHub:"
-  twitter: "Trovami su Twitter"
-  contributing:
-    support_button: "Supporta Sass Guidelines"
-    tweet_button: "Passaparola"
-  donate:
-    content: "Se ti piace Sass Guidelines, dai una mano!."
-    button: "Supporta Sass Guidelines"
-  baseline:
-    content: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
-  footer:
-    content: "Fatto con amore da [Hugo Giraudel](http://hugogiraudel.com)"
+  link_to_edit_chapter: "Modifica questo capitolo su GitHub:"
+  link_to_twitter: "Trovami su Twitter"
+
+  contributing_support_button: "Supporta Sass Guidelines"
+  contributing_tweet_button: "Passaparola"
+
+  donate_content: "Se ti piace Sass Guidelines, dai una mano!."
+  donate_button: "Supporta Sass Guidelines"
+
   note: "Note"
-  images:
-    color_functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS"
-    sassdoc: "La documentazione è creata da SassDoc"
-    wallpaper: "Wallpaper di [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS"
+  image_sassdoc: "La documentazione è creata da SassDoc"
+  image_wallpaper: "Wallpaper di [Julien He](https://twitter.com/julien_he)"

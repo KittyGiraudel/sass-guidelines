@@ -9,34 +9,36 @@ configuration:
     - name: Sean Sun
       link: http://pinggod.com
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
-  aside:
-    title: "设置"
-    report: "报告问题"
-    support: "支持项目"
-    tweet: "谢谢"
-    syntax: "代码语法"
-    language: "语言"
-    close: "关闭设置面板"
-    open: "打开设置面板"
-  back_to_top: "回到顶部"
-  skip_to_content: "跳跃到主要内容"
+  baseline: "编写稳健、可维护和可扩展的 Sass"
+  footer_content: "本文由 [Hugo Giraudel](http://hugogiraudel.com) 编写和维护，经 [Sean Sun](https://github.com/pinggod) 和 [大漠](http://www.w3cplus.com/) 翻译整理为中文。"
+
+  aside_title: "设置"
+  aside_report: "报告问题"
+  aside_support: "支持项目"
+  aside_tweet: "谢谢"
+  aside_syntax: "代码语法"
+  aside_language: "语言"
+  aside_close: "关闭设置面板"
+  aside_open: "打开设置面板"
+
+  link_to_top: "回到顶部"
+  link_to_skip: "跳跃到主要内容"
   link_to_chapter: "这章网址："
-  edit_chapter: "在GitHub上改写这章："
-  twitter: "关注我的 Twitter"
-  contributing:
-    support_button: "支持 Sass 编程规范"
-    tweet_button: "分享到社交圈"
-  donate:
-    content: "如果你喜欢 Sass Guidelines，请支持它"
-    button: "支持 Sass Guidelines"
-  baseline:
-    content: "编写稳健、可维护和可扩展的 Sass"
-  footer:
-    content: "本文由 [Hugo Giraudel](http://hugogiraudel.com) 编写和维护，经 [Sean Sun](https://github.com/pinggod) 和 [大漠](http://www.w3cplus.com/) 翻译整理为中文。"
+  link_to_edit_chapter: "在GitHub上改写这章："
+  link_to_twitter: "关注我的 Twitter"
+
+  contributing_support_button: "支持 Sass 编程规范"
+  contributing_tweet_button: "分享到社交圈"
+
+  donate_content: "如果你喜欢 Sass Guidelines，请支持它"
+  donate_button: "支持 Sass Guidelines"
+  
   note: "Note"
-  images:
-    color_functions: "有关 `lighten`/`darken` 和 `mix` 之间差异的示例来源于 [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "图表展示了开发者排列 CSS 声明顺序的方式"
-    sassdoc: "本文档由 SassDoc 生成"
-    wallpaper: "壁纸来源自 [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "有关 `lighten`/`darken` 和 `mix` 之间差异的示例来源于 [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "图表展示了开发者排列 CSS 声明顺序的方式"
+  image_sassdoc: "本文档由 SassDoc 生成"
+  image_wallpaper: "壁纸来源自 [Julien He](https://twitter.com/julien_he)"

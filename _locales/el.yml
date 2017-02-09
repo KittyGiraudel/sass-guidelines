@@ -13,34 +13,36 @@ configuration:
     - name: Sébastien Nikolaou
       link: https://github.com/sebdesign
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
-  aside:
-    title: "επιλογές"
-    report: "Αναφορά προβλήματος"
-    support: "Υποστηρίξτε το έργο"
-    tweet: "Διαδόστε το"
-    syntax: "Κωδικός σύνταξη"
-    language: "Γλώσσα"
-    close: "Κλείστε τον πίνακα επιλογών"
-    open: "Ανοίξτε τον πίνακα επιλογών"
-  back_to_top: "Επιστροφή στην κορυφή"
-  skip_to_content: "Μετάβαση στο κύριο περιεχόμενο"
+  baseline: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
+  footer_content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"
+
+  aside_title: "επιλογές"
+  aside_report: "Αναφορά προβλήματος"
+  aside_support: "Υποστηρίξτε το έργο"
+  aside_tweet: "Διαδόστε το"
+  aside_syntax: "Κωδικός σύνταξη"
+  aside_language: "Γλώσσα"
+  aside_close: "Κλείστε τον πίνακα επιλογών"
+  aside_open: "Ανοίξτε τον πίνακα επιλογών"
+
+  link_to_top: "Επιστροφή στην κορυφή"
+  link_to_skip: "Μετάβαση στο κύριο περιεχόμενο"
   link_to_chapter: "Συνδέουν σε αυτό το κεφάλαιο:"
-  edit_chapter: "Επεξεργαστείτε το συγκεκριμένο κεφάλαιο για GitHub:"
-  twitter: "Επισκεφθείτε με στο Twitter"
-  contributing:
-    support_button: "Υποστηρίξτε το Sass Guidelines"
-    tweet_button: "Διαδώστε το"
-  donate:
-    content: "Αν εκτίμησες τα Sass Guidelines, στήριξε την προσπάθεια."
-    button: "Στήριξε τα Sass Guidelines"
-  baseline:
-    content: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
-  footer:
-    content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"
+  link_to_edit_chapter: "Επεξεργαστείτε το συγκεκριμένο κεφάλαιο για GitHub:"
+  link_to_twitter: "Επισκεφθείτε με στο Twitter"
+
+  contributing_support_button: "Υποστηρίξτε το Sass Guidelines"
+  contributing_tweet_button: "Διαδώστε το"
+
+  donate_content: "Αν εκτίμησες τα Sass Guidelines, στήριξε την προσπάθεια."
+  donate_button: "Στήριξε τα Sass Guidelines"
+
   note: "Σημείωση"
-  images:
-    color_functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
-    sassdoc: "Το documentation δημιουργήθηκε με SassDoc"
-    wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
+  image_sassdoc: "Το documentation δημιουργήθηκε με SassDoc"
+  image_wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"

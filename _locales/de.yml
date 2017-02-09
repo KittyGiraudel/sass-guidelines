@@ -7,34 +7,36 @@ configuration:
     - name: Moritz Kröger
       link: https://github.com/morkro
 
+# For more information about the context around these translations, refer to
+# _locales/en.yml
 translations:
-  aside:
-    title: "Optionen"
-    report: "Ein Problem melden"
-    support: "Unterstütze das Projekt"
-    tweet: "Auf Twitter teilen"
-    syntax: "Code-Syntax"
-    language: "Sprache"
-    close: "Optionen ausblenden"
-    open: "Optionen anzeigen"
-  back_to_top: "Zurück nach oben"
-  skip_to_content: "Direkt zum Inhalt"
+  baseline: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
+  footer_content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."
+
+  aside_title: "Optionen"
+  aside_report: "Ein Problem melden"
+  aside_support: "Unterstütze das Projekt"
+  aside_tweet: "Auf Twitter teilen"
+  aside_syntax: "Code-Syntax"
+  aside_language: "Sprache"
+  aside_close: "Optionen ausblenden"
+  aside_open: "Optionen anzeigen"
+
+  link_to_top: "Zurück nach oben"
+  link_to_skip: "Direkt zum Inhalt"
   link_to_chapter: "Link zu diesem Kapitel:"
-  edit_chapter: "Kapitel auf GitHub bearbeiten:"
-  twitter: "Folg mir auf Twitter"
-  contributing:
-    support_button: "Sass Guidelines unterstützen"
-    tweet_button: "Weitersagen"
-  donate:
-    content: "Wenn dir Sass Guidelines gefallen, denke doch bitte über eine Unterstützung nach."
-    button: "Unterstütze Sass Guidelines"
-  baseline:
-    content: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
-  footer:
-    content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."
+  link_to_edit_chapter: "Kapitel auf GitHub bearbeiten:"
+  link_to_twitter: "Folg mir auf Twitter"
+
+  contributing_support_button: "Sass Guidelines unterstützen"
+  contributing_tweet_button: "Weitersagen"
+
+  donate_content: "Wenn dir Sass Guidelines gefallen, denke doch bitte über eine Unterstützung nach."
+  donate_button: "Unterstütze Sass Guidelines"
+
   note: "Notiz"
-  images:
-    color_functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
-    sassdoc: "Dokumentation von SassDoc generiert"
-    wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"
+
+  image_color_functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
+  image_sassdoc: "Dokumentation von SassDoc generiert"
+  image_wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"

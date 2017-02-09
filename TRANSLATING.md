@@ -63,36 +63,36 @@ configuration:
       link: http://github.com/matchabros
 
 translations:
-  aside:
-    title: "Options" # Title of options panel
-    report: "Report an issue" # Link to GitHub issues
-    support: "Support the project" # Link to give Gumroad to back the project
-    tweet: "Tweet it" # Link to tweet about the project
-    syntax: "Code syntax" # Label for code syntax (Sass or SCSS)
-    language: "Language" # Label for language picker
-    close: "Close the options panel" # Alt text for icon-link to close options panel
-    open: "Open the options panel" # Alt text for icon-link to open options panel
-  back_to_top: "Get back to top" # Alt text for icon-link to top of page
-  skip_to_content: "Skip to main content" # Text for invisible accessible skip link
-  link_to_chapter: "Link to this chapter:" # Alt text for icon-link to chapter anchor
-  edit_chapter: "Edit this chapter on GitHub:" # Alt text for icon-link to GitHub edit mode
-  contributing: # Buttons for the contributing section
-    support_button: "Wesprzyj Sass Guidelines"
-    tweet_button: "Tweetnij o Sass Guidelines"
-  donate: # Content for the donate sections
-    content: "Jeśli spodobał Ci się Sass Guidelines, proszę byś rozważył jego wsparcie."
-    button: "Wesprzyj Sass Guidelines"section
-  baseline:  # The baseline of the project
-    content: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
-  footer:  # The content of the footer
-    # Please, add your name in there in order to form a sentence (in your language) such as: “Made with love by [Hugo Giraudel](http://hugogiraudel.com, translated by [Your name](http://link.com))”
-    content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
-  note: "Uwaga" # The “note” word that is being prepended to all notes in the document
-  images: # The “alt” tag of all images
-    color_functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
-    order_poll: "Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie"
-    sassdoc: "Dokumentacja wygenerowana przez SassDoc"
-    wallpaper: "Tapeta stworzona przez [Julien He](https://twitter.com/julien_he)"
+  baseline: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
+  footer_content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
+
+  aside_title: "Opcje"
+  aside_report: "Zgłoś problem"
+  aside_support: "Wesprzeć projekt"
+  aside_tweet: "Tweet it"
+  aside_syntax: "Składnia Kod"
+  aside_language: "Język"
+  aside_close: "Zamknij panel opcji"
+  aside_open: "Otwórz panel opcji"
+
+  link_to_top: "Powrót do góry"
+  link_to_skip: "Przejdź do głównej zawartości"
+  link_to_chapter: "Link do tego rozdziału:"
+  link_to_edit_chapter: "Edytuj ten rozdział na GitHub:"
+  link_to_twitter: "Napisz do mnie na Twitterze"
+
+  contributing_support_button: "Wesprzyj Sass Guidelines"
+  contributing_tweet_button: "Tweetnij o Sass Guidelines"
+
+  donate_content: "Jeśli spodobał Ci się Sass Guidelines, proszę byś rozważył jego wsparcie."
+  donate_button: "Wesprzyj Sass Guidelines"
+
+  note: "Uwaga"
+
+  image_color_functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie"
+  image_sassdoc: "Dokumentacja wygenerowana przez SassDoc"
+  image_wallpaper: "Tapeta stworzona przez [Julien He](https://twitter.com/julien_he)"
 ```
 
 ### The code snippets
