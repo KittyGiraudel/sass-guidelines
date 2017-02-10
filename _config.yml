@@ -31,6 +31,7 @@ exclude: [
   "package.json", "Gemfile", "Gemfile.lock",
   "README.md", "pages/**/README.md", "LICENSE", "CNAME",
   "node_modules", "vendor", "_bin"
+  "sw-precache-config.js"
 ]
 
 markdown: kramdown
