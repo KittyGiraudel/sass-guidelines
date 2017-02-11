@@ -1,8 +1,8 @@
 module.exports = {
   runtimeCaching: [
     {
-      urlPattern: /^https?:\/\/(.*?).cloudfront.net\/bundles\/(.*?).js$/,
-      handler: 'networkFirst'
+      urlPattern: /^https?:\/\/\w+.cloudfront.net\/bundles\/\w+.js$/,
+      handler: 'cacheFirst'
     }
   ]
 }
