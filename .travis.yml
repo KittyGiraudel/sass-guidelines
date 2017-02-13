@@ -1,13 +1,19 @@
-language: ruby
-rvm:
-- 2.1
+language: node_js
 
-script: ./_bin/cibuild
+node_js:
+  - "stable"
 
 branches:
   only:
   - master
   - /^greenkeeper/.*$/
+  
+install:
+  - rvm install 2.3.0
+  - bundle install
+  - npm install
+ 
+script: ./_bin/cibuild
 
 env:
   global:
