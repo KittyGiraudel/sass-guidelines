@@ -30,7 +30,7 @@ exclude: [
   "assets/images/icons",
   "package.json", "Gemfile", "Gemfile.lock",
   "README.md", "pages/**/README.md", "LICENSE", "CNAME",
-  "node_modules", "vendor", "_bin"
+  "node_modules", "vendor", "_bin",
   "sw-precache-config.js"
 ]
 
