@@ -1,7 +1,7 @@
 
 # Introducción
 
-## ¿Por Qué Una Guía De Estilo?
+## Por Qué Una Guía De Estilo
 
 Una guía de estilo no es sólo un documento agradable de leer mientras te imaginas tu código perfecto. Se trata de un documento clave en la vida de un proyecto, describe cómo y por qué debe escribirse el código. Puede parecer una exageración para pequeños proyectos, pero es de gran ayuda para mantener el código limpio, escalable y fácil de mantener.
 

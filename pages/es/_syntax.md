@@ -43,7 +43,7 @@ Dicho esto, los lenguajes que no requieren que las cadenas estén entre comillas
   <p>Según las especificaciones CSS, la directiva <code>@charset</code> debe estar declarada con comillas dobles <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">para ser considerada válida</a>. Sin embargo, Sass se preocupa de esto cuando compila el CSS para que su creación no tenga ningún impacto con el resultado final. Puedes usar sin ningún problema las comillas simples, incluso para <code>@charset</code>.</p>
 </div>
 
-### Cadenas como valores CSS
+### Cadenas Como Valores CSS
 
 Los valores CSS específicos (identificadores) como `initial` o `sans-serif` no necesitan llevar comillas. De hecho, la declaración `font-family: 'sans-serif'` fallará porque CSS está esperando un identificador, no una cadena entre comillas. Por ello, no pondremos nunca estos valores con comillas.
 
