@@ -3,11 +3,11 @@
 
 Establecer la arquitectura CSS es probablemente una de las cosas más difíciles que tendrás que hacer en la vida de un proyecto. Mantener esa arquitectura consistente y significativa es aún más difícil.
 
-Afortunadamente, uno de los principales beneficios de utilizar un preprocesador CSS es tener la capacidad de dividir el código en varios archivos sin afectar al rendimiento (como haría la directiva `@import` en CSS). Gracias a la directiva `@import` de Sass, es perfectamente seguro (y de hecho recomendable) usar tantos archivos como sean necesarios en desarrollo, compilándolo todo en una sola hoja de estilo cuando vaya a producción.
+Afortunadamente, uno de los principales beneficios de utilizar un preprocesador CSS es tener la capacidad de dividir el código en varios archivos sin afectar al rendimiento (como haría la directiva `@import` en CSS). Gracias a la directiva `@import` de Sass, es perfectamente seguro (y de hecho recomendable) usar tantos archivos como sean necesarios en el desarrollo, compilándolo todo en una sola hoja de estilo cuando vaya a producción.
 
-Además, también quiero hacer hincapié en la necesidad de utilizar carpetas, incluso para los proyectos a pequeña escala. En casa, no dejas caer todos tus documentos en el mismo cajón. Utilizas carpetas; una para la casa/apartamento, otra para el banco, otra para las facturas y así sucesivamente. No hay razón para hacer lo contrario cuando se estructura un proyecto CSS. Divide el código en carpetas significativas para que sea sencillo encontrar las cosas más tarde cuando tengas que volver al código de nuevo.
+Además, también quiero hacer hincapié en la necesidad de utilizar carpetas, incluso para los proyectos a pequeña escala. En casa, no guardas todos tus documentos en el mismo cajón sin más. Utilizas carpetas; una para la casa/apartamento, otra para el banco, otra para las facturas y así sucesivamente. No hay razón para hacer lo contrario cuando se estructura un proyecto CSS. Divide el código en carpetas significativas para que sea sencillo encontrar las cosas más tarde cuando tengas que volver al código de nuevo.
 
-Hay una gran cantidad de [arquitecturas populares - En inglés](http://www.sitepoint.com/look-different-sass-architectures/) para los proyectos CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), o las similares a [Bootstrap](http://getbootstrap.com/) y [Foundation](http://foundation.zurb.com/). Todas ellas tienen sus méritos, pros y contras.
+Hay una gran cantidad de [arquitecturas populares - En inglés](http://www.sitepoint.com/look-different-sass-architectures/) para los proyectos CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/) o similare. Todas ellas tienen sus méritos, pros y contras.
 
 Yo utilizo un método que resulta ser bastante similar a [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), que se centra en mantener las cosas simples y evidentes.
 
@@ -17,7 +17,7 @@ Yo utilizo un método que resulta ser bastante similar a [SMACSS](https://smacss
 
 ## Componentes
 
-Hay una gran diferencia entre hacer que algo *funcione* y hacerlo *bien*. De nuevo, CSS es un lenguaje bastante desordenado <sup>[cita requerida]</sup>. Cuánto menos CSS tengamos, mejor. No queremos tener que trabajar con megabytes de código CSS. Para mantener las hojas de estilo cortas y eficientes &mdash;y esto no será ninguna sorpresa para tí&mdash; es en general una buena idea pensar en una interfaz como en una colección de componentes.
+Hay una gran diferencia entre hacer que algo *funcione* y hacerlo *bien*. De nuevo, CSS es un lenguaje bastante desordenado <sup>[cita requerida]</sup>. Cuánto menos CSS tengamos, mejor. No queremos tener que trabajar con megabytes de código CSS. Para mantener las hojas de estilo cortas y eficientes &mdash;y esto no será ninguna sorpresa para tí&mdash; es una buena idea pensar en una interfaz como en una colección de componentes.
 
 Los componentes pueden ser cualquier cosa, siempre y cuando:
 
@@ -39,7 +39,7 @@ Idealmente, los componentes deberían existir dentro de su propia partición Sas
 
 Si quieres que tus componentes puedan ser personalizados externamente (por ejemplo, desde un tema de la carpeta `themes/`), limita las declaraciones a estilos estructurales, como dimensiones (width/height), padding, margins, alignment, entre otros. Evita los estilos del tipo color, sombra, tipografía, fondo, etc.
 
-Un componente puede incluir variables específicas de componentes, *placeholders* e incluso *mixins* y funciones. Ten en cuenta, sin embargo, que debes evitar referenciar (es decir, `@import`-ar) archivos de componentes de otros archivos de componentes, ya que esto puede hacer que el gráfico de dependencia de tu proyecto sea un completo lío.
+Un componente puede incluir variables específicas de componentes, *placeholders* e incluso *mixins* y funciones. Ten en cuenta, sin embargo, que debes evitar referenciar (es decir, `@import`-ar) archivos de componentes de otros archivos de componentes, ya que esto puede hacer que la dependencia dentro de tu proyecto sea un completo lío.
 
 Este es un ejemplo del componente de un botón:
 
@@ -63,7 +63,7 @@ Y por supuesto:
 * `main.scss`
 
 <div class="note">
-  <p>Si quieres usar el patrón 7-1, aquí hay una <a href="https://github.com/HugoGiraudel/sass-boilerplate">plantilla de código reutilizable</a> en GitHub. Debería contener todo lo que necesitas para empezar con esta arquitectura.</p>
+  <p>Si quieres usar el patrón 7-1, aquí hay una <a href="https://github.com/HugoGiraudel/sass-boilerplate">plantilla reutilizable</a> en GitHub. Debería contener todo lo que necesitas para empezar con esta arquitectura.</p>
 </div>
 
 {% include images/wallpaper.html %}
@@ -163,7 +163,7 @@ Y por último, pero no menos importante, la mayoría de los proyectos tienen una
 * `_jquery-ui.scss`
 * `_select2.scss`
 
-Si tienes que sobrescribir una sección de cualquier proveedor (*vendor*), te recomiendo que tengas una octava carpeta llamada `vendors-extensions/` en la que puedes poner estos archivos usando el mismo nombre que les ha dado el proveedor.
+Si tienes que sobrescribir una sección de cualquier *vendor*, te recomiendo que tengas una octava carpeta llamada `vendors-extensions/` en la que puedes poner estos archivos usando el mismo nombre que le ha dado el desarrollador.
 
 Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar con respecto al CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
 
@@ -203,13 +203,13 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 
 ## Acerca de globbing
 
-En programación, los patrones glob especifican un conjunto de nombres de fichero con caracteres comodín, como `*.scss`. En general, *globbing* busca hacer coincidir un conjunto de archivos basado en una expresión, en lugar de en una lista de nombres de archivo. Cuando esto se aplica a Sass, significa importar *partials* en el [archivo main](#main-file) con un patrón glob en lugar de enumerarlos individualmente. Esto hará que el archivo principal tenga este aspecto:
+En programación, los patrones glob especifican un conjunto de nombres de fichero con caracteres comodín, como `*.scss`. En general, *globbing* busca hacer coincidir un conjunto de archivos basado en una expresión, en lugar de en una lista de nombres de archivo. Cuando esto se aplica a Sass, significa importar *partials* en el [archivo main](#archivo-principal) con un patrón glob en lugar de enumerarlos individualmente. Esto hará que el archivo principal tenga este aspecto:
 
 {% include snippets/architecture/05/index.html %}
 
-Sass no soporta el uso de patrones glob porque puede ser una característica peligrosa ya que es sabido que en CSS es importante el orden. Al importar los archivos de manera dinámica (que suele ser en orden alfabético), ya no se controla el orden de los ficheros, lo que puede provocar efectos secundarios muy difíciles de depurar.
+Sass no soporta el uso de patrones *glob* porque puede ser una característica peligrosa ya que sabes que en CSS es importante el orden. Al importar los archivos de manera dinámica (que suele ser en orden alfabético), no se controla el orden de los ficheros, lo que puede provocar efectos secundarios muy difíciles de depurar.
 
-Dicho esto, en una estricta arquitectura basada en componentes, en la que se tiene especial cuidado de no filtrar ningún estilo de un *partial* a otro, el orden no debería ser importante, lo cual permitiría el uso del patrón glob de importanción. Esto significaría que es más fácil agregar o quitar *partials*, ya que actualizar el archivo *main* no sería necesario.
+Dicho esto, en una estricta arquitectura basada en componentes, en la que se tiene especial cuidado de no filtrar ningún estilo de un *partial* a otro, el orden no debería ser importante, lo que permitiría el uso del patrón *glob* de importación. Esto significaría que es más fácil agregar o quitar *partials*, puesto que actualizar el archivo *main* no sería necesario.
 
 Cuando se usa Ruby Sass, hay una gema de Ruby llamada [sass-globbing](https://github.com/chriseppstein/sass-globbing) que permite tener este mismo comportamiento. Si se utiliza node-sass, se puede confiar en Node.js o en cualquier herramienta que se use para realizar la compilación (Gulp, Grunt, etc.).
 

@@ -9,11 +9,11 @@ Si hay una característica que a menudo es pasada por alto por los desarrollador
 
 Dejemos `@debug` de lado, ya que claramente está pensado para depurar SassScript, lo que no es nuestro propósito aquí. Entonces nos quedamos con `@warn` y `@error` los cuales son notablemente idénticos, salvo porque uno detiene el compilador, mientras que el otro no. Te voy a dejar advinar cuál hace qué.
 
-Ahora, hay mucho espacio en un proyecto Sass para advertencias y errores. Básicamente cualquier mixin o función que espera un tipo o argumento específico podría lanzar un error si algo sale mal, o mostrar una advertencia cuando se hace una suposición.
+Ahora, siempre hay sitio en cualquer proyecto Sass para advertencias y errores. Básicamente cualquier mixin o función que espera un tipo o argumento específico podría lanzar un error si algo sale mal, o mostrar una advertencia cuando se hace una suposición.
 
 ## Advertencias
 
-Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor en `px` a `em`:
+Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor de `px` a `em`:
 
 {% include snippets/errors/01/index.html %}
 
@@ -27,5 +27,5 @@ Como ejemplo, digamos que construyes una función *getter* para acceder a los va
 
 {% include snippets/errors/02/index.html %}
 
-Para más información sobre cómo usar `@error` de manera eficiente, [ésta introducción acerca del manejo de errores](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) puede serte de ayuda.
+Para más información sobre cómo usar `@error` de manera eficiente, [ésta introducción acerca del manejo de errores -En inglés](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) puede serte de ayuda.
 
