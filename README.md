@@ -23,3 +23,5 @@ npm start
 ```
 
 To run a specific task from [package-scripts.js](https://github.com/HugoGiraudel/sass-guidelines/blob/master/package-scripts.js), prepend `npm start`, like: `npm start js.vendors`.
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
