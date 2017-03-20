@@ -1,7 +1,7 @@
 
 # Bucles
 
-Puesto que Sass proporciona estructuras de datos complejas, como por ejemplo [listas](#listas) y [mapas](#mapas), no es de extrañar que también proporcione una forma para que los autores puedan iterar sobre dichas entidades.
+Puesto que Sass proporciona estructuras de datos complejas como por ejemplo [listas](#listas) y [mapas](#mapas), no es de extrañar que también proporcione una forma para que los autores puedan iterar sobre dichas entidades.
 
 Sin embargo, la presencia de bucles generalmente implica una lógica moderadamente compleja que propablemente no pertenece a Sass. Antes de utilizar un bucle, asegúrate de que tiene sentido y que de hecho resuelve un problema.
 
@@ -17,12 +17,12 @@ Cuando se itera sobre un mapa utiliza siempre `$key` y `$value` como nombres de 
 
 También asegúrate de respetar estas pautas para preservar la legibilidad:
 
-* Deja siempre una línea en blanco antes de `@each`;
+* Deja siempre una línea en blanco antes del `@each`;
 * Deja siempre una línea en blanco después de la llave de cierre (`}`) a no ser que la siguiente línea sea otra llave de cierre (`}`).
 
 ## For
 
-El ciclo `@for` puede ser útil cuando se combina con las pseudo-clases CSS `:nth-*`. A excepción de estos escenarios, es preferible usar un bucle `@each` si *tienes que* iterar sobre algo.
+El bucle `@for` puede ser útil cuando se combina con las pseudo-clases CSS `:nth-*`. A excepción de estos escenarios, es preferible usar un bucle `@each` si *tienes que* iterar sobre algo.
 
 {% include snippets/loops/03/index.html %}
 
@@ -30,9 +30,10 @@ Utiliza siempre `$i` como nombre de variable para mantener la convención habitu
 
 También asegúrate de respetar estas directrices para preservar la legibilidad:
 
-* Deja siempre una línea en blanco antes de `@each`;
-* DEja siempre una línea en blanco después de la llave de cierre (`}`) a no ser que la siguiente línea sea otra llave de cierre (`}`).
+* Deja siempre una línea en blanco antes del `@for`;
+* Deja siempre una línea en blanco después de la llave de cierre (`}`) a no ser que la siguiente línea sea otra llave de cierre (`}`).
 
 ## While
 
 El ciclo `@while` no tiene ningún caso de uso en ningún proyecto real de Sass, puesto que no hay ninguna manera de romper un bucle desde el interior. **No lo utilices**.
+

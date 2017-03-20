@@ -3,75 +3,56 @@
 
 Así se describe [Sass](http://sass-lang.com) en su [documentación](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
-> Sass (acrónimo de Syntactically Awesome StyleSheets) es una extensión de CSS que añade características muy potentes y elegantes a este lenguaje de estilos.
+> Sass es una extensión de CSS que añade potencia y elegancia al lenguaje básico.
 
-El objetivo principal de Sass es el de corregir los defectos de CSS. Como todos sabemos, CSS no es el mejor lenguaje del mundo <sup>[cita requerida]</sup> y aunque es sencillo de aprender, puede generar rápidamente un conjunto de código muy desordenado, especialmente en proyectos grandes.
+El objetivo principal de Sass es el de corregir los defectos de CSS. Como todos sabemos, CSS no es el mejor lenguaje del mundo <sup>[cita requerida]</sup> y aunque es sencillo de aprender, puede convertirse en un auténtico desorden, especialmente en proyectos grandes.
 
-Es aquí donde Sass tiene sentido, ya que actúa como un meta-lenguaje para mejorar la sintaxis de CSS con el fin de proporcionar características extra y herramientas útiles. Por su parte, Sass quiere mostrarse conservador en lo que respecta al lenguaje CSS.
+Es aquí donde Sass cobra sentido, ya que actúa como un meta-lenguaje para mejorar la sintaxis de CSS con el fin de proporcionar características extra y herramientas útiles. Entretanto, Sass quiere ser conservador con respecto al lenguaje CSS.
 
-La idea no es convertir a CSS en un lenguaje de programación totalmente funcional; Sass solo quiere mejorar los puntos donde CSS falla. Por tanto, empezar con Sass no es más difícil que aprender CSS: Sass simplemente agrega un par de características adicionales.
+La idea no es convertir CSS en un lenguaje de programación totalmente funcional; Sass solo quiere mejorar aspectos donde CSS falla. Por ello, empezar con Sass no es más difícil que aprender CSS: Sass simplemente agrega un par de [características adicionales](http://sitepoint.com/sass-reference/).
 
-Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras que son poco comunes. Esta guía tiene como finalidad darte un enfoque coherente y documentado para escribir código Sass.
-
-###### Más información
-
-* [Sass - En inglés](http://sass-lang.com)
-* [Documentación de Sass - En inglés](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+Dicho esto, hay muchas formas de utilizar estas funciones. Algunas buenas, algunas malas y otras, poco comunes. Esta guía tiene como finalidad darte un enfoque coherente y documentado para escribir Sass.
 
 ## Ruby Sass o LibSass
 
-El [primer commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se remonta a hace más de 8 años, a finales de 2006. Sobra decir que se ha recorrido un largo camino desde entonces. Desarrollado inicialmente en Ruby, le sucedieron distintas variaciones; la más popular, [LibSass](https://github.com/sass/libsass) (Escrita en C/C++) y que está cerca de ser totalmente compatible con la versión original escrita en Ruby.
+El primer [commit de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se remonta a finales de 2006, hace más de 10 años. Obviamente se ha recorrido un largo camino desde entonces. A la primera versión desarrollado en Ruby, le sucedieron distintas variaciones; la más popular, [LibSass](https://github.com/sass/libsass) (Escrita en C/C++) está ahora muy cerca de ser totalmente compatible con la versión original en Ruby.
 
-En 2014, [los equipos de Ruby Sass y LibSass decidieron esperar para sincronizar ambas versiones antes de seguir adelante](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Desde entonces, LibSass ha continuado publicando nuevas versiones para igualar sus características con las de su hermano mayor. Las últimas inconsistencias entre ambas versiones han sido reunidas y listadas por mi mismo en el proyecto [Sass-Compatibility](http://sass-compatibility.github.io). Si conoces otras incompatibilidades entre estas dos versiones y no aparecen aquí listadas, por favor, hazlo saber abriendo un ticket.
+En 2014, [los equipos de Ruby Sass y LibSass decidieron esperar a que ambas versiones se sicronozaran antes de seguir adelante](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Desde entonces, LibSass ha continuado publicando nuevas versiones para igualar sus características con las de su hermano mayor. Así que he reunido y listado las últimas inconsistencias entre ambas, en el proyecto [Sass-Compatibility](http://sass-compatibility.github.io). Si conoces otras incompatibilidades entre estas dos versiones y no aparecen listadas, por favor, házmelo saber abriendo un *issue*.
 
-Volviendo al tema, la tarea de elegir un compilador, en realidad, dependerá de tu proyecto. Si está basado en ruby on Rails, es mejor utilizar Ruby Sass, que es perfectamente adecuado para este caso. Además, ten en cuenta que Ruby Sass siempre será la implementación de referencia y siempre llevará las características de LibSass.
+Volviendo a la tarea de elegir un compilador; en realidad, dependerá de tu proyecto. Si es un proyecto basado en ruby on Rails, es mejor utilizar Ruby Sass que es perfectamente adecuado para este caso. Además, ten en cuenta que Ruby Sass siempre será la implementación de referencia y por tanto liderará las funciones de LibSass. Pero si lo que estás buscando es [cambiar de Ruby Sass a LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/), este artículo es para tí.
 
-En los proyectos que no están en Ruby, pero que necesitan una integración en tu flujo de trabajo, LibSass es probablemente una mejor idea, ya que se dedica a poner dicho código en un contenedor específico para cada lenguaje. Así que si quieres utilizar, por ejemplo, Node.js,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
-
-###### Más información
-
-* [LibSass - En inglés](https://github.com/sass/libsass)
-* [Conociendo LibSass -En inglés](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Compatibiladad Sass - En inglés](http://sass-compatibility.github.io)
-* [Cambiar de Ruby Sass a LibSass - En inglés](http://www.sitepoint.com/switching-ruby-sass-libsass/)
+Para proyectos que no están en Ruby que necesitan una integración de flujo de trabajo, LibSass es probablemente una mejor idea, ya que está dedicado principalmente a ser envuelto por cada lenguaje. Así que si quieres utilizar, por ejemplo, Node.js,  [node-sass](https://github.com/sass/node-sass) sería tu solución.
 
 ## Sass o SCSS
 
 Hay una gran confusión con respecto a la semántica del nombre *Sass*, y por una buena razón: Sass nombra tanto al preprocesador como a su propia sintaxis. No muy adecuado ¿verdad?
 
-Verás, inicialmente Sass describe una sintaxis en la que su característica principal era la de ser sensible a espacios en blanco y tabulaciones. Rápidamente, quienes mantienen Sass decidieron cerrar la brecha entre Sass y CSS, proporcionando una sintaxis CSS amigable llamada *SCSS* también conocida como *Sassy CSS*. Su lema es: si es CSS válido, es SCSS válido.
+Verás, inicialmente Sass describe una sintaxis en la que su característica principal era la de ser sensible a las tabulaciones. Rápidamente, quienes mantienen Sass decidieron cerrar la brecha entre Sass y CSS, proporcionando una sintaxis amigable con CSS  llamada *SCSS* también conocida como *Sassy CSS*. Su lema es: si es CSS válido, es SCSS válido.
 
-Desde entonces, Sass (el preprocesador) ha estado proporcionando dos sintaxis diferentes: Sass (no todas en mayúsculas, [por favor](http://sassnotsass.com)), también conocida como *sintaxis con sangría*, y SCSS. La elección entre cuál usar, depende mucho de tus preferencias, ya que ambas tienen características totalmente equivalentes. Llegados a este punto, es simplemente una cuestión de estética.
+Desde entonces, Sass (el preprocesador) ha estado proporcionando  [dos sintaxis diferentes](http://www.sitepoint.com/whats-difference-sass-scss/): Sass (no todas en mayúsculas, [por favor](http://sassnotsass.com)), también conocida como *sintaxis con tabulación*, y SCSS. La elección de cuál usar, depende mucho de tus preferencias, ya que ambas tienen características totalmente equivalentes. Llegados a este punto, es simplemente una cuestión de estética.
 
 La sintaxis sensible a los espacios en blanco de Sass se basa en las tabulaciones para eliminar las llaves, los punto y coma y otros signos de puntuación, dando como resultado una sintaxis más corta y ligera. Mientras tanto, SCSS es más fácil de aprender, ya que en conjunto, se trata de añadir unos cuantos elementos adicionales a CSS.
 
-Personalmente, prefiero SCSS a Sass ya que es mucho más parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, usaré SCSS como sintaxis por defecto a lo largo de esta guía. Puedes ver la sintaxis con sangría de Sass pulsando en el <button type="button" data-a11y-dialog-show="options-panel" class="link-like">panel de opciones</button>.
-
-###### Más información
-
-* [¿Cuál es la diferencia entre Sass y SCSS? - En inglés](http://www.sitepoint.com/whats-difference-sass-scss/)
+Personalmente, prefiero SCSS a Sass ya que es mucho más parecido a CSS y más amigable para la mayoría de desarrolladores. Debido a esto, la usaré como sintaxis por defecto a lo largo de esta guía. Puedes cambiar a la sintaxis con tabulaciones de Sass pulsando en el <button type="button" data-a11y-dialog-show="options-panel" class="link-like">panel de opciones</button>.
 
 ## Otros Preprocesadores
 
-Sass es un preprocesador como cualquier otro. Su competidor más serio tiene que ser [LESS](http://lesscss.org/), un preprocesador basado en Node.js que se ha hecho muy popular gracias a que el famoso *framework* CSS [Bootstrap](http://getbootstrap.com/) lo utiliza. También está [Stylus](http://learnboost.github.io/stylus/) - El cual es una especie de versión nerd y sin restricciones de LESS - en el que se puede hacer casi todo lo que quieras, es como si convirtiese a CSS en un lenguaje de programación.
+Sass es un preprocesador entre otros tantos. Su competidor más serio tiene que ser [LESS](http://lesscss.org/), un preprocesador basado en Node.js que se ha hecho muy popular gracias a que el famoso *framework* CSS [Bootstrap](http://getbootstrap.com/) lo utilizaba hasta la versión 4. También está [Stylus](http://learnboost.github.io/stylus/), un preprocesador muy permisivo y flexible que si embargo es un poco más complicado de aprender y tiene una comunidad más pequeña.
 
-*¿Por qué preferir Sass antes que LESS o cualquier otro preprocesador?* Esta sigue siendo una pregunta válida hoy en día. No hace mucho tiempo, se solía recomendar el uso de Sass para los proyectos basados en Ruby, puesto que originalmente se desarrolló teniendo como base Ruby y funcionaba bien con Ruby on Rails. Ahora que LibSass se ha puesto al día (en su mayoría) con el Sass original, ya no es un consejo demasiado acertado.
+*¿Por qué preferir Sass a cualquier otro preprocesador?* Esta sigue siendo una pregunta válida hoy en día. No hace mucho tiempo, soliamos recomendar el uso de Sass para los proyectos basados en Ruby, puesto que se desarrolló inicialmente en Ruby y por tanto funcionaba bien con Ruby on Rails. Ahora que LibSass se ha puesto al día (en su mayoría) con el Sass original, ya no es un consejo demasiado relevante.
 
-Lo que me gusta de Sass es su enfoque conservador con CSS. El diseño de Sass se basa en fuertes principios: gran parte del enfoque del diseño viene como algo natural a los equipos desarrolladores principales, quienes creían que: a) añadir características adicionales tiene un coste de complejidad que debe ser justificado por su utilidad y b) que debe ser fácil comprender lo que un bloque determinado de estilos está haciendo con solo observar dicho bloque. Por otra parte, Sass se centra con mucho más cuidado en los detalles, a diferencia de otros preprocesadores. Por mi parte, puedo decir que los desarrolladores principales se preocupan profundamente por mantener todos los pequeños detalles y casos de compatibilidad de CSS, asegurándose que cada comportamiento general sea consistente.
+Lo que me gusta de Sass es su enfoque conservador respecto a CSS. El diseño de Sass se basa en fuertes principios: gran parte del enfoque del diseño resultaba natural a los equipos desarrolladores principales, quienes creían que: a) añadir características adicionales tiene un coste de complejidad que debe ser justificado por su utilidad y b) debe ser fácil comprender lo que un bloque determinado de estilos está haciendo con solo observar dicho bloque. Por otra parte, Sass se centra con mucho más cuidado en los detalles que otros preprocesadores. Por mi parte, puedo decir que los desarrolladores principales se preocupan profundamente por mantener todos los pequeños detalles y casos de compatibilidad con CSS, asegurándose que cada comportamiento general sea consistente. En otras palabras, Sass es un software orientado a solucionar problemas reales; ayudando a proporcionar funcionalidades útiles para CSS, justo donde CSS se queda corto.
 
-En otras palabras, Sass no es un preprocesador enfocado a complacer empollones que quieren-ser-programadores como yo, añadiendo características extraordinarias sobre un lenguaje que no está destinado a soportar ninguna lógica en sus casos de uso. Es un software orientado a la solución de problemas reales; ayudando a proporcionar funcionalidades útiles para CSS, justo donde CSS se queda corto.
+Preprocesadores aparte, también debemos mencionar herramientas como [PostCSS](https://github.com/postcss/postcss) y [cssnext](https://cssnext.github.io/) que han recibido una exposición significativas en los últimos meses.
 
-Preprocesadores aparte, es necesario mencionar también a los post-procesadores, los cuales han recibido mucha atención en los últimos meses, gracias especialmente a [PostCSS](https://github.com/postcss/postcss) y [cssnext](https://cssnext.github.io/). Los post-procesadores son más o menos el equivalente a los preprocesadores, excepto porque estos no proporcionan ninguna otra cosa que no sea la inminente sintaxis CSS.
+PostCSS es comunmente (e incorrectamente) referido como un “post-procesador”. La suposición, combinada con el desafortunado nombre, es que PostCSS analiza sobre CSS lo que ya ha sido procesado por un preprocesador. Si bien puede funcionar de esta manera, no es un requisito para PostCSS, lo que lo convierte en realidad en sólo un “procesador”.
 
-Piensa en un post-procesador como un *polyfill* para características no soportadas por CSS. Por ejemplo, podrías escribir variables tal y como se describen en las [especificaciones de CSS](http://dev.w3.org/csswg/css-variables/), y luego, compilar tus hojas de estilo con un post-procesador solo para darte cuenta que cada vez que aparece la variable, ésta es reemplazada con su valor, tal y como haría Sass.
+Te permite acceder a “tokens” de tus hojas de estilo (como selectores, propiedades y valores), los procesa con JavaScript para realizar operaciones de cualquier tipo y compila los resultados a CSS. Por ejemplo, la popular librería de prefijos [Autoprefixer](https://github.com/postcss/autoprefixer) está creada con PostCss. Analiza todas las reglas para comprobar si estas necesitan algún prefijo específico de proveedor (*vendor prefixes*) haciendo referencia a la herramienta de soporte de navegadores [CanIUse](http://caniuse.com) y, a continuación, elimina o añade los prefijos necesarios.
 
-La idea detrás de los post-procesadores es que una vez los navegadores soportan nuevas características (por ejemplo, variables CSS), el post-procesador, no las volverá a compilar y dejará que los navegadores se encarguen de ellas.
+Esto es increíblemente potente y genial para la construcción de librerías que funcionan con cualquier preprocesador (así como vanilla CSS), pero PostCSS no es particularmente fácil de usar todavía. Tienes que saber un poco de JavaScript para construir cualquier cosa con él, y su API puede ser confusa algunas veces. Mientras que Sass sólo proporciona un conjunto de características que son útiles para escribir CSS, PostCSS proporciona acceso directo al AST de CSS (*árbol de sintaxis abstracto*) y a JavaScript.
 
-Aunque proporcionar la sintaxis del mañana parezca una idea noble, tengo que decir, que aún así prefiero usar Sass para la mayoría de las tareas. Sin embargo, hay algunas ocasiones en las que creo que los post-procesadores son más adecuados que Sass y similares - por ejemplo, con los prefijos CSS - pero ya volveremos a ello más adelante.
+En resumen, Sass algo fácil y resolverá la mayoría de tus problemas. Por otra parte, PostCSS puede ser un poco complicado (si no se te da bien JavaScript), pero resulta ser increíblemente potente. No hay ninguna razón por la que no puedas usar ambos. De echo, PostCSS ofrece un analizador oficial de SCSS solo para esto.
 
-###### Más información
-
-* [LESS - En inglés](http://lesscss.org/)
-* [Stylus - En inglés](http://learnboost.github.io/stylus/)
-* [cssnext - En inglés](https://cssnext.github.io/)
-* [PostCSS - En inglés](https://github.com/postcss/postcss)
+<div class="note">
+  <p>Gracias a <a href="https://github.com/corysimmons">Cory Simmons</a> por su ayuda experta en esta sección.</p>
+</div>

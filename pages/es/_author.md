@@ -1,7 +1,8 @@
 
-# Acerca Del Autor
+# Sobre el Autor
 
-Mi nombre es [Hugo Giraudel](http://hugogiraudel.com), soy un desarrollador front-end nacido en Francia y actualmente basado en Berlín, Alemania. Llevo desarrollando en Sass desde hace casi dos años y soy el autor de algunos proyectos relacionados con Sass como, [SassDoc](http://sassdoc.com) y [Sass-Compatibility](http://sass-compatibility.github.io). También he escrito un libro sobre CSS (en francés) titulado [CSS3 Pratique du Design Web](http://www.amazon.fr/dp/2212140231).
+Mi nombre es [Hugo Giraudel](http://hugogiraudel.com), soy un desarrollador front-end nacido en Francia hace 25 años y que vive Berlín (Alemania) desde 2015, actualmente trabajo en [N26](https://n26.com).
 
-También he escrito algunas librerías Sass como las que aparecen a continuación, solo por el placer de hacerlo (En inglés):
- [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) y [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
+Llevo usando Sass desde hace varios años y soy el autor de muchos proyectos relacionados con Sass como por ejemplo [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) y [Sass-Compatibility](http://sass-compatibility.github.io). Si sientes más curiosidad acerca de mis aportaciones a esta comunidad, echa un vistazo a [esta lista](http://github.com/HugoGiraudel/awesome-sass).
+ 
+También soy el autor de un libro sobre CSS (en francés) titulado [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions), al igual que de otro sobre Sass (en inglés) llamado [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
