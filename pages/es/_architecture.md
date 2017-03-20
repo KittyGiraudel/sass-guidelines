@@ -31,7 +31,7 @@ La mayor parte de cualquier interfaz puede concebirse en forma de pequeños comp
 
 ## Estructura de un componente
 
-Idealmente, los componentes deberían existir dentro de su propia partición Sass (en la carpeta `components/`, como se describe en el patrón [7-1](#el-patron-7-1)), como por ejemplo `components/_button.scss`. Los estilos descritos en cada archivo de componentes sólo deben estar relacionados con:
+Idealmente, los componentes deberían existir dentro de su propia partición Sass (en la carpeta `components/`, como se describe en el patrón [7-1](#el-patron-7-1)), por ejemplo `components/_button.scss`. Los estilos descritos en cada archivo de componentes sólo deben estar relacionados con:
 
 * el propio estilo del componente en sí;
 * el estilo de las variantes, modificadores, y/o estados del componente;
@@ -45,10 +45,13 @@ Este es un ejemplo del componente de un botón:
 
 {% include snippets/architecture/06/index.html %}
 
+<div class="note">
+  <p>Gracias a <a href="https://twitter.com/davidkpiano">David Khourshid</a> por su ayuda y experiencia en esta sección.</p>
+</div>
 
 ## El Patron 7-1
 
-Volvamos a la arquitectura, ¿de acuerdo? Normalmente trabajo con lo que yo llamo el *patrón 7-1*: 7 carpetas, 1 archivo. Basicamente, tienes todas las partes almacenadas en 7 carpetas diferentes, y un único archivo en el directorio raíz (normalmente llamado `main.scss`) que importa todas estas partes para ser compiladas en una hoja de estilo CSS.
+Volvamos a la arquitectura, ¿de acuerdo? Normalmente suelo trabajar con lo que yo llamo el *patrón 7-1*: 7 carpetas, 1 archivo. Basicamente, tienes todas las partes almacenadas en 7 carpetas diferentes, y un único archivo en el directorio raíz (normalmente llamado `main.scss`) y que importa todas estas partes para luego compilarlas en una hoja de estilo CSS.
 
 * `base/`
 * `components/`
@@ -141,7 +144,7 @@ En sitios y aplicaciones grandes, no es raro tener diferentes temas. Es cierto q
 
 La carpeta `abstracts/` reúne todas las herramientas y *helpers* de Sass utilizados en todo el proyecto. Cada variable global, función, *mixin* y *placeholder* debería estar en esta carpeta.
 
-La regla de oro para esta carpeta es que no debe generar ni una sola línea de CSS cuando se compila por si sola. Solo hay *helpers* de Sass.
+La regla de oro para esta carpeta es que no debe generar ni una sola línea de CSS cuando se compila por si sola. Solo hay *helpers* de Sass. 
 
 * `_variables.scss`
 * `_mixins.scss`

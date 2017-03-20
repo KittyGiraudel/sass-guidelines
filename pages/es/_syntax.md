@@ -75,6 +75,10 @@ Siempre se deben mostrar los ceros a la izquierda antes de un valor decimal meno
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>Sublime Text y otros editores proporcionan una búsqueda que te permite reemplazar este valor usando una expresión regular, es muy fácil añadir un cero a la izquierda a (casi todos) los número flotantes. Solamente reemplaza <code>\s+\.(\d+)</code> con <code>\ 0.$1</code>. No olvides el espacio antes del <code>0</code>.</p>
+</div>
+
 ### Unidades
 
 Cuando se trata de longitudes, el `0` nunca debe llevar el nombre de la unidad.
