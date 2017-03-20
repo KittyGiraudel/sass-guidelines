@@ -73,6 +73,7 @@ module.exports = {
         'criticalcss run',
         '--url http://localhost:4000',
         '--file _site/assets/css/main.css',
+        '--forceInclude .chapter__buttons',
         '--output _includes/critical.css'
       ].join(' '),
     }
