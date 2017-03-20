@@ -18,7 +18,7 @@
     "woff2-feature-test": "^1.0.2"
   },
   "devDependencies": {
-    "clean-css": "^3.4.10",
+    "clean-css-cli": "^4.0.9",
     "criticalcss": "^2.1.0",
     "p-s": "^4.1.0",
     "spritesh": "^1.0.10",
