@@ -1,14 +1,10 @@
+{% assign class = "button-wrapper " | append: include.class %}
+
 {::options parse_block_html="false" /}
 
-<div class="button-wrapper">
-  {% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
-  <a href="https://gum.co/sass-guidelines" target="_blank" class="button" rel="noopener noreferrer">
-    {% include partials/icon.html icon="euro" %}
-    {{ site.data[page.language].translations.contributing_support_button }}
-  </a><a href="https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}" target="_blank" class="button" rel="noopener noreferrer">
-    {% include partials/icon.html icon="twitter" %}
-    {{ site.data[page.language].translations.contributing_tweet_button }}
-  </a>
+<div class="{{ class }}">
+  {% include partials/button_donate.html %}
+  {% include partials/button_tweet.html %}
 </div>
 
 {::options parse_block_html="true" /}

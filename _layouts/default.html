@@ -12,25 +12,19 @@ layout: compress
     {% include sprite.svg %}
 
     <!-- Accessibility skip link -->
-    <a id="skip" href="#main-content">
-      {{ site.data[page.language].translations.link_to_skip }}
-    </a>
+    {% include partials/skip_link.html id = "skip" %}
 
     <!-- Main container -->
     <main aria-label="Content" id="main-content">
 
       <!-- Site header -->
-      {% include layout/header.html %}
+      {% include partials/header.html %}
 
       <!-- Translation banner -->
-      {% include partials/translation-warning.html %}
+      {% include partials/translation_warning.html %}
 
-      <!-- Button to toggle the options panel; replaced with JavaScript with a
-           proper button when JavaScript is enabled -->
-      <a href="#options-panel" class="button-ui  button-ui--toggle">
-        {% capture open_panel %}{{ site.data[page.language].translations.aside_open }}{% endcapture %}
-        {% include partials/icon.html icon="settings" title=open_panel %}
-      </a>
+      <!-- Button to toggle the options panel -->
+      {% include partials/aside_opener.html %}
 
       <!-- Main container -->
       <div class="main">
@@ -40,17 +34,14 @@ layout: compress
       </div>
 
       <!-- Link to get back to top -->
-      <a href="#top" class="button-ui  button-ui--back">
-        {% capture back_to_top %}{{ site.data[page.language].translations.link_to_top }}{% endcapture %}
-        {% include partials/icon.html icon="up" title=back_to_top %}
-      </a>
+      {% include partials/top_link.html %}
 
       <!-- Site footer -->
-      {% include layout/footer.html %}
+      {% include partials/footer.html %}
     </main>
 
     <!-- Options panel -->
-    {% include layout/aside.html %}
+    {% include partials/aside.html %}
 
     <!-- Scripts -->
     {% include layout/scripts.html %}

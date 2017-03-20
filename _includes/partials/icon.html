@@ -1,5 +1,9 @@
+{% assign viewBox = include.viewBox | default: "0 0 16 16" %}
+{% assign class = "icon " | append: include.class %}
+{% capture label %}{% if include.title %}title-{{ id }}{% endif %}{% if include.desc %} desc-{{ id }}{% endif %}{% endcapture %}
 {% capture id %}{% increment uniqueid %}{% endcapture %}
-<svg viewBox="0 0 16 16" role="img" class="icon icon-{{ include.icon }}" aria-labelledby="{% if include.title %}title-{{ id }}{% endif %}{% if include.desc %} desc-{{ id }}{% endif %}">
+
+<svg viewBox="{{ viewBox }}" class="{{ class }}" aria-labelledby="{{ label }}" role="img">
   {% if include.title %}
   <title id="title-{{ id }}">{{ include.title }}</title>
   {% endif %}

@@ -1,0 +1,13 @@
+{% assign class = "aside__close " | append: include.class %}
+{% assign label = site.data[page.language].translations.aside_close %}
+{% assign content = "&times;" %}
+
+<noscript>
+  <a href="#" class="{{ class }}" aria-label="{{ label }}">
+    {{ content }}
+  </a>
+</noscript>
+
+<button data-a11y-dialog-hide type="button" aria-label="{{ label }}" class="{{ class }} js-powered">
+  {{ content }}
+</button>

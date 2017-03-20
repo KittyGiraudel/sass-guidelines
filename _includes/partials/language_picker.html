@@ -1,0 +1,33 @@
+{% assign class = "language-picker " | append: "custom-select " | append: "js-powered " | append: include.class %}
+{% assign id = include.id | default: "language-picker" %}
+
+<div class="{{ class }}">
+  <select id="{{ id }}" data-current-page="{{ page.url }}">
+    {% for language in site.languages %}
+      {% assign l = site.data[language].configuration %}
+
+      {% if l.available %}
+        <option value="{{ l.prefix }}" {% if l.prefix == page.url %}selected{% endif %}>
+          {{ l.label }} ({{ l.version }})
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+</div>
+
+<noscript>
+  <ul>
+    {% for language in site.languages %}
+      {% assign l = site.data[language].configuration %}
+
+      {% if l.available %}
+        {% assign _page = l.prefix | append: "index.html" %}
+        <li{% if _page == page.url %} class="is-selected"{% endif %}>
+          <a href="{{ l.prefix }}">
+            {{ l.label }} ({{ l.version }})
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</noscript>
