@@ -5,7 +5,7 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 
 ## Principios fundamentales
 
-* Tener una guía de estilo es sobre todo tener **consistencia**. Si no estás de acuerdo con algunas reglas de Sass Guidelines, me parece justo, siempre y cuando seas consistente. [↩](#por-que-una-guia-de-estilo)
+* Tener una guía de estilo es sobre todo tener **consistencia**. Si no estás de acuerdo con algunas reglas de Sass Guidelines, me parece justo, siempre y cuando seas consistente. [↩](#por-qu-una-gua-de-estilo)
 * Sass debe permanecer siempre tan simple como se pueda. Evita utilizar sistemas complejos a no ser que sea absolutamente necesario. [↩](#principios-fundamentales)
 * Recuerda que algunas veces *KISS* (Keep It Simple, Stupid) es mejor que *DRY* (Don’t Repeat Yourself). [↩](#principios-fundamentales)
 
@@ -18,7 +18,7 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 
 ### Cadenas
 
-* Declarar la directiva `@charset` al inicio de tu hoja de estilo es altamente recomendable. [↩](#codificacion)
+* Declarar la directiva `@charset` al inicio de tu hoja de estilo es altamente recomendable. [↩](#codificacin)
 * A menos que se apliquen como identificadores CSS, las cadenas deben ir entre comillas simples. Las URL también deben estar entre comillas. [↩](#cadenas-como-valores-css)
 
 ### Números
@@ -26,8 +26,8 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 * Sass no tiene distinciones entre números, números enteros o decimales, por lo que los ceros finales (0) deben omitirse. Sin embargo, los ceros principales (0) ayudan a la lectura y deben agregarse. [↩](#ceros)
 * Una longitud cero (0) no debe llevar su unidad. [↩](#unidades)
 * La manipulación de unidades debe ser pensada como operaciones aritméticas, no como operaciones entre cadenas. [↩](#unidades)
-* Para mejorar la legibilidad, los cálculos de nivel superior se deben incluir entre paréntesis. Además, las operaciones matemáticas complejas podrían dividirse en trozos más pequeños. [↩](#calculos)
-* Los números mágicos resultan dramáticamente dañinos para la mantenibilidad del código y deben evitarse en todo momento. En caso de duda, explicar ampliamente el valor en cuestión. [↩](#numeros-magicos)
+* Para mejorar la legibilidad, los cálculos de nivel superior se deben incluir entre paréntesis. Además, las operaciones matemáticas complejas podrían dividirse en trozos más pequeños. [↩](#clculos)
+* Los números mágicos resultan dramáticamente dañinos para la mantenibilidad del código y deben evitarse en todo momento. En caso de duda, explicar ampliamente el valor en cuestión. [↩](#nmeros-mgicos)
 
 ### Colores
 
@@ -48,7 +48,7 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 
 ### Clasificación De Declaraciones
 
-* El sistema usado para clasificar las declaraciones (alfabético, por tipo, etc.) no importa, siempre y cuando sea coherente. [↩](#clasificacion-de-declaraciones)
+* El sistema usado para clasificar las declaraciones (alfabético, por tipo, etc.) no importa, siempre y cuando sea coherente. [↩](#clasificacin-de-declaraciones)
 
 ### Anidamiento de selectores
 
@@ -63,7 +63,7 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 ## Comentarios
 
 * CSS es un lenguaje complicado; no dudes en escribir extensos comentarios sobre las cosas que parecen (o son) complejas. [↩](#comentarios)
-* Para variables, funciones, *mixins* y *placeholders* que establecen una API pública, usa los comentarios de SassDoc. [↩](#documentacion)
+* Para variables, funciones, *mixins* y *placeholders* que establecen una API pública, usa los comentarios de SassDoc. [↩](#documentacin)
 
 ## Variables
 
