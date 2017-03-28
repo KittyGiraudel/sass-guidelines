@@ -9,13 +9,7 @@
     $ git clone https://github.com/<USERNAME>/sass-guidelines
     ```
 
-3. Put yourself on the `gh-pages` branch
-
-    ```
-    $ git checkout gh-pages
-    ```
-
-4. Create a new branch named after your language short code (e.g. `de` for German)
+3. Create a new branch named after your language short code (e.g. `de` for German)
 
     ```
     $ git checkout -b <LANGUAGE>
@@ -27,11 +21,11 @@ Read [TRANSLATING.md](TRANSLATING.md) to know more about this.
 
 ## Submitting your work
 
-Once you are done with the translation, make sure your branch is up-to-date with the `gh-pages` branch
+Once you are done with the translation, make sure your branch is up-to-date with the `master` branch.
 
 ```
 $ git fetch
-$ git rebase origin/gh-pages
+$ git rebase origin/master
 ```
 
 If there is a conflict (which is unlikely but we never know), resolve it, add the file (`git add <FILE(S)>`) and continue the rebase (`git rebase --continue`) until there is no more conflict.
@@ -42,4 +36,4 @@ Then it is time to push your branch to your fork
 $ git push origin <LANGUAGE>
 ```
 
-Last but not least, go on GitHub, and submit a pull-request from your branch against the `gh-pages` of the original repository.
+Last but not least, go on GitHub, and submit a pull-request from your branch against the `master` of the original repository.
