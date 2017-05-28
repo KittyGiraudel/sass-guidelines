@@ -20,7 +20,7 @@
   "devDependencies": {
     "clean-css-cli": "^4.0.9",
     "criticalcss": "^2.1.0",
-    "p-s": "^4.1.0",
+    "nps": "^5.3.1",
     "spritesh": "^1.0.10",
     "standard": "^10.0.0-beta.0",
     "svgo": "^0.7.1",
