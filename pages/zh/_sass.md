@@ -37,7 +37,7 @@ Sass 的空白敏感语法通过缩进以摆脱大括号、分号和其他符号
 
 ## 其他预编译器
 
-忽略其他特性，Sass 对自己的定位首先是一个预处理器。其最主要的竞争对手包括 [Less](http://lesscss.org/)，一个基于 NodeJS 的预处理器，因著名 CSS 框架 [Bootstrap](http://getbootstrap.com/)（从 v4 版本开始）的使用而声名鹊起。此外还有 [Stylus](http://learnboost.github.io/stylus/)，该预处理器对编写形式无所限制，学习难度稍高。
+忽略其他特性，Sass 对自己的定位首先是一个预处理器。其最主要的竞争对手包括 [Less](http://lesscss.org/)，一个基于 NodeJS 的预处理器，因著名 CSS 框架 [Bootstrap](http://getbootstrap.com/)（在 v4 版本之前）的使用而声名鹊起。此外还有 [Stylus](http://learnboost.github.io/stylus/)，该预处理器对编写形式无所限制，学习难度稍高。
 
 *为什么选择 Sass 胜过其他预处理器？*，这始终是一个待解决的问题。就在刚刚，我们还建议在 Ruby 项目中使用 Sass，因为 Sass 初创于 Ruby 并且在 Ruby on Rails 中运行良好。现在随着 LibSass 与 Sass 的逐步接近，上述建议显然已经不再绝对和必须。
 
