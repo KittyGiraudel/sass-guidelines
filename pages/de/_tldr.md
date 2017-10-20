@@ -6,8 +6,8 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 ## Grundprinzipien
 
 * Einen Styleguide zu haben bedeutet **Konsistenz**. Falls du mit gewissen Regeln von Sass Guidelines nicht übereinstimmst, ist das kein Problem solange du konsistent damit bleibst. [↩](#warum-ein-styleguide)
-* Sass sollte so einfach wie möglich gehalten werden. Vermeide es unnötig komploexe Systeme zu bauen, solange es nicht absolut notwendig ist. [↩](#grundprinzipien)
-* Vergiss nicht dass *KISS* (Keep It Simple, Stupid) manchmal besser ist als *DRY* (Don't Repeat Yourself). [↩](#grundprinzipien)
+* Sass sollte so einfach wie möglich gehalten werden. Vermeide es unnötig komplexe Systeme zu bauen, solange es nicht absolut notwendig ist. [↩](#grundprinzipien)
+* Vergiss nicht das *KISS* (Keep It Simple, Stupid) manchmal besser ist als *DRY* (Don't Repeat Yourself). [↩](#grundprinzipien)
 
 ## Syntax & Formatierung
 
@@ -19,7 +19,7 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 ## Strings
 
 * Die `@charset` Regel zu Anfang eines Stylesheets zu deklarieren wird empfohlen. [↩](#encoding)
-* Solange nicht als CSS Bezeichner verwendet, sollten Strings immer in einfachen Anführungszeichen geschrieben werden. URLs sollten auch in Anführungszeichen gesetzt werden. [↩](#strings-als-css-werte)
+* Solange nicht als CSS-Bezeichner verwendet, sollten Strings immer in einfachen Anführungszeichen geschrieben werden. URLs sollten auch in Anführungszeichen gesetzt werden. [↩](#strings-als-css-werte)
 
 ## Zahlen
 
@@ -36,13 +36,13 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 
 ## Listen
 
-* Listen sollten mit Komma getrennt werden, solange sie nicht als direktes Mapping zu mit leerzeichen getrennten CSS Werten verwendet. [↩](#listen)
-* Klammern sollte auch als verbesserung der Lesbarkeit gesehen werden. [↩](#listen)
+* Listen sollten mit Komma getrennt werden, solange sie nicht als direktes Mapping zu mit leerzeichen getrennten CSS-Werten verwendet. [↩](#listen)
+* Klammern sollten auch als Verbesserung der Lesbarkeit gesehen werden. [↩](#listen)
 * Einzeilige Listen sollten kein angehängtes Komma haben, mehrzeilige Listen schon. [↩](#listen)
 
 ## Maps
 
-* Maps mit mehr als einem Wert sollten auf mehreren Zeilen geschrieben werden. [↩](#maps)
+* Maps mit mehr als einem Wert sollten auf mehreren Zeilen aufgeteilt werden. [↩](#maps)
 * Um der Wartbarkeit zu helfen, sollte das letzte Paar einer Map ein angehängtes Komma haben. [↩](#maps)
 * Map Keys die Strings sind, sollten wie jeder andere Strings angeführt werden. [↩](#maps)
 
@@ -58,11 +58,11 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 
 ## Namenskonventionen
 
-* Es ist am besten sich an eine CSS Namenskonvention zu halten die komplett Kleinbuchstaben und mit Bindestrich getrennt sind. [↩](#namenskonventionen)
+* Es ist am besten sich an eine CSS-Namenskonvention zu halten, die komplett in Kleinbuchstaben geschrieben und mit Bindestrich getrennt sind. [↩](#namenskonventionen)
 
 ## Kommentieren
 
-* CSS ist eine knifflige Sprache; deshalb halt dich nicht zurück sehr ausführliche Kommentare über Dinge die Zweifelhaft aussehen (oder sind) zu schreiben. [↩](#kommentieren)
+* CSS ist eine knifflige Sprache; deshalb halte dich nicht zurück sehr ausführliche Kommentare über Dinge die Zweifelhaft aussehen (oder sind) zu schreiben. [↩](#kommentieren)
 * Für Variablen, Funktionen, Mixins und Platzhalter führe eine globale API ein. Verwende SassDoc Kommentare. [↩](#dokumentation)
 
 ## Variablen
@@ -72,5 +72,5 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 
 ## Erweitern
 
-* Bleib dabei Platzhalter zu erweitern, keine bereits existierenden CSS Selektoren. [↩](#extend)
+* Bleib dabei Platzhalter zu erweitern, keine bereits existierenden CSS-Selektoren. [↩](#extend)
 * Erweiter einen Platzhalter so wenig wie möglich um Seiteneffekte zu vermeiden. [↩](#extend)
