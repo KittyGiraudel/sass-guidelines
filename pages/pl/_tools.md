@@ -35,7 +35,7 @@ Powiedzmy sobie jednak szczerze: nie jestem wielkim fanem systemów gridów. Ocz
 
 Korzystając z frameworków, takich jak [Bootstrap](http://getbootstrap.com/) czy [Foundation](http://foundation.zurb.com/), taki system gridów jest najprawdopodobniej już dołączony i to z tego rozwiązania polecam korzystać, zamiast dołączać do projektu jakąś kolejną zależność.
 
-Jeśli nie jesteśmy przywiązani do określonego frameworku, mam dobrą wiadomość – dostępne są obecnie naprawdę dobre, oparte na Sassie, systemy gridów: [Susy](http://susy.oddbird.net/) i [Singularity](http://singularity.gs/). Oba zapewniają funkcjonalność znacznie wykraczającą poza popularne potrzeby, więc wybierając jeden z nich można mieć pewność, że spełni on swoje zadanie we wszelkich możliwych, nawet tych najbardziej egzotycznych, sytuacjach. Moim zdaniem Susy ma trochę lepszą społeczność wokół siebie, ale to tylko moje zdanie.
+Jeśli nie jesteśmy przywiązani do określonego frameworku, mam dobrą wiadomość – dostępne są obecnie naprawdę dobre, oparte na Sassie, systemy gridów: [Susy](http://susy.oddbird.net/) i [Singularity](https://github.com/at-import/Singularity). Oba zapewniają funkcjonalność znacznie wykraczającą poza popularne potrzeby, więc wybierając jeden z nich można mieć pewność, że spełni on swoje zadanie we wszelkich możliwych, nawet tych najbardziej egzotycznych, sytuacjach. Moim zdaniem Susy ma trochę lepszą społeczność wokół siebie, ale to tylko moje zdanie.
 
 Można też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). W każdym bądź razie, wybór nie będzie miał olbrzymiego wpływu na styl kodu, więc swoboda decyzji należy tylko i wyłącznie do autora kodu.
 

@@ -36,13 +36,13 @@ Lad mig gøre det helt klart: Jeg er ikke den store fan af gitter-systemer. Selv
 
 Hvis du anvender et CSS framework til dit projekt, såsom [Bootstrap](http://getbootstrap.com/) eller [Foundation](http://foundation.zurb.com/), så er der stor sandsynlighed for at det allerede inkluderer et gitter-system, som jeg i det tilfælde vil anbefale at du bruger så du undgår at skulle håndtere endnu en dependency.
 
-Hvis du ikke er tilknyttet til et specifikt gitter-system, så vil det nok glæde dig at vide at der findes to top-kvalitets gitter-motorer baseret på Sass derude: [Susy](http://susy.oddbird.net/) og [Singularity](http://singularity.gs/). Begge gør meget mere end du nogensinde vil få brug for, så du kan vælge den af dem du foretrækker og være sikker på at alle dine særtilfælde &mdash;selv de mest specielle af slagsen&mdash; vil være dækket. Hvis du spørger mig, så har Susy en anelse bedre community, men det er min holdning.
+Hvis du ikke er tilknyttet til et specifikt gitter-system, så vil det nok glæde dig at vide at der findes to top-kvalitets gitter-motorer baseret på Sass derude: [Susy](http://susy.oddbird.net/) og [Singularity](https://github.com/at-import/Singularity). Begge gør meget mere end du nogensinde vil få brug for, så du kan vælge den af dem du foretrækker og være sikker på at alle dine særtilfælde &mdash;selv de mest specielle af slagsen&mdash; vil være dækket. Hvis du spørger mig, så har Susy en anelse bedre community, men det er min holdning.
 
 Alternativt kan du gå over til noget mere nede på jorden, såsom [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Når alt kommer til alt, vil dit valg ikke have den store indvirkning på din kodestil, så det er faktisk mest op til dig.
 
 ###### Videre læsning
 
-* [Singularity](http://singularity.gs/)
+* [Singularity](https://github.com/at-import/Singularity)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
 * [Susy](http://susy.oddbird.net/)

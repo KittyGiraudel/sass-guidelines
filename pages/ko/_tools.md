@@ -36,13 +36,13 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 프로젝트에 [Bootstrap](http://getbootstrap.com/)이나 [Foundation](http://foundation.zurb.com/) 같은 CSS 프레임워크를 사용한다면 이미 그리드 시스템을 포함하고 있을 확률이 높습니다. 이 경우에는 또다른 의존성을 피하기 위해 그것을 사용할 것을 추천합니다.
 
-만약 여러분이 특정 그리드 시스템에 묶여 있지 않다면, 두 개의 아주 뛰어난 Sass 그리드 엔진이 있다는 사실에 기뻐하실 겁니다: [Susy](http://susy.oddbird.net/), [Singularity](http://singularity.gs/). 둘 모두 여러분에게 필요한 것 이상을 제공하니 이 둘 중 맘에 드는 것을 고르시고 에지 케이스에도 잘 대응하는지 확인하세요. 제게 묻는다면, Susy가 좀 더 좋은 커뮤니티를 갖고 있습니다. 하지만 제 의견일 뿐입니다.
+만약 여러분이 특정 그리드 시스템에 묶여 있지 않다면, 두 개의 아주 뛰어난 Sass 그리드 엔진이 있다는 사실에 기뻐하실 겁니다: [Susy](http://susy.oddbird.net/), [Singularity](https://github.com/at-import/Singularity). 둘 모두 여러분에게 필요한 것 이상을 제공하니 이 둘 중 맘에 드는 것을 고르시고 에지 케이스에도 잘 대응하는지 확인하세요. 제게 묻는다면, Susy가 좀 더 좋은 커뮤니티를 갖고 있습니다. 하지만 제 의견일 뿐입니다.
 
 혹은 [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) 같이 좀 더 가벼운 걸로 갈 수도 있습니다. 대부분의 경우, 뭘 선택하든 여러분의 코딩 스타일에 큰 영향을 미치진 않을 것이므로, 선택은 여러분에게 달렸습니다.
 
 ###### 참고
 
-* [Singularity](http://singularity.gs/)
+* [Singularity](https://github.com/at-import/Singularity)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
 * [Susy](http://susy.oddbird.net/)

@@ -29,7 +29,7 @@ Mettiamo le cose in chiaro: non sono un grande fan dei sistema di griglie. Certo
 
 Se per i vostri progetti state usando un framework CSS come [Bootstrap](http://getbootstrap.com/) o [Foundation](http://foundation.zurb.com/), avete molte chance che includa già un grid system. In questo caso vi raccomando di usare quello ed evitare di dover gestire un’altra dipendenza.
 
-Se non siete legati ad uno specifico sistema di griglie, sarete contenti di sapere che ci sono due motori di prima qualità sviluppati in Sass: [Susy](http://susy.oddbird.net/) e [Singularity](http://singularity.gs/). Entrambi fanno molto di più di quanto avrete mai bisogno e potete scegliere quello che preferite tra i due ed essere sicuri che tutti i vostri casi &mdash;anche quelli limite&mdash; saranno gestiti. Se chiedete a me, Susy ha una comunità leggermente migliore, ma è solo la mia opinione.
+Se non siete legati ad uno specifico sistema di griglie, sarete contenti di sapere che ci sono due motori di prima qualità sviluppati in Sass: [Susy](http://susy.oddbird.net/) e [Singularity](https://github.com/at-import/Singularity). Entrambi fanno molto di più di quanto avrete mai bisogno e potete scegliere quello che preferite tra i due ed essere sicuri che tutti i vostri casi &mdash;anche quelli limite&mdash; saranno gestiti. Se chiedete a me, Susy ha una comunità leggermente migliore, ma è solo la mia opinione.
 
 Oppure si può andare verso qualcosa di un po’ più informale, tipo [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Tutto sommato, la scelta non avrà molto impatto sul vostro modo di scrivere codice, quindi sta a voi scegliere a questo punto.
 

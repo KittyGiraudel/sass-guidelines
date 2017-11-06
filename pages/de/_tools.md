@@ -29,7 +29,7 @@ Lass mich vorher klarstellen: ich bin kein großer Fan von Gridsystemen. Natürl
 
 Falls du ein CSS Framework wie [Bootstrap](http://getbootstrap.com/) oder [Foundation](http://foundation.zurb.com/) für dein Projekt benutzt, sind die Chancen groß das es bereits ein eigenes Gridsystem beinhaltet. In diesem Fall schlage ich vor auch dieses zu benutzen, anstatt noch eine weitere Dependency dazu zu holen.
 
-Wenn du an ein bestimmtes Gridsystem gebunden bist, wirst du dich freuen zu hören dass es zwei erstklassige Sass betriebene Grid-Maschinen gibt: [Susy](http://susy.oddbird.net/) und [Singularity](http://singularity.gs/). Beide machen mehr als du jemals brauchst. Deshalb kannst du dir einfach das heraussuchen was du bevorzugst, und sicher sein das alle Anwendungsfälle&mdash;selbst die raffinierten&mdash; abgedeckt sind. Wenn du mich fragst, hat Susy eine leicht bessere Community, aber das ist lediglich meine Meinung.
+Wenn du an ein bestimmtes Gridsystem gebunden bist, wirst du dich freuen zu hören dass es zwei erstklassige Sass betriebene Grid-Maschinen gibt: [Susy](http://susy.oddbird.net/) und [Singularity](https://github.com/at-import/Singularity). Beide machen mehr als du jemals brauchst. Deshalb kannst du dir einfach das heraussuchen was du bevorzugst, und sicher sein das alle Anwendungsfälle&mdash;selbst die raffinierten&mdash; abgedeckt sind. Wenn du mich fragst, hat Susy eine leicht bessere Community, aber das ist lediglich meine Meinung.
 
 Oder du schaust dir eine lässigere Variante wie [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) an. Alles in allem, die Wahl wird keine große Auswirkung auf deinen Codingstyle haben, deshalb liegt es absolut bei dir.
 

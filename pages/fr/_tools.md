@@ -29,7 +29,7 @@ Soyons clairs pour commencer&nbsp;: je ne suis pas un grand fan des systèmes de
 
 Si vous utilisez un framework CSS pour votre projet, comme [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), il y a des chances qu’ils comprennent déjà un système de grilles, auquel cas je vous recommande de l’utiliser pour éviter d’avoir à gérer une dépendance supplémentaire.
 
-Dans le cas contraire, vous serez content de savoir qu’il existe deux gestionnaires de grilles de premier ordre, basé sur Sass&nbsp;: [Susy](http://susy.oddbird.net/) et [Singularity](http://singularity.gs/). Tous deux font bien plus que ce dont vous aurez jamais besoin, vous pouvez donc choisir celui que vous préférez et être sûr qu’il répondra à vos besoins même les plus complexes. À mon avis, Susy a une communauté plus importante, mais ce n’est jamais que mon opinion.
+Dans le cas contraire, vous serez content de savoir qu’il existe deux gestionnaires de grilles de premier ordre, basé sur Sass&nbsp;: [Susy](http://susy.oddbird.net/) et [Singularity](https://github.com/at-import/Singularity). Tous deux font bien plus que ce dont vous aurez jamais besoin, vous pouvez donc choisir celui que vous préférez et être sûr qu’il répondra à vos besoins même les plus complexes. À mon avis, Susy a une communauté plus importante, mais ce n’est jamais que mon opinion.
 
 Vous pouvez également choisir quelque chose de plus simple comme [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Au bout du compte, votre choix n’aura pas beaucoup d’impact sur votre style de code, donc c’est vraiment selon vos goûts et besoins.
 

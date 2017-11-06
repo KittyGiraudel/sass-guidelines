@@ -29,7 +29,7 @@
 
 如果你正在项目中使用类似 [Bootstrap](http://getbootstrap.com/) 和 [Foundation](http://foundation.zurb.com/) 的 CSS 框架，我建议善用它们来避免额外的依赖，因为此时它们很有可能就包含了一套栅格系统，。
 
-如果你尚未依赖于特定的栅格系统，那么也许会乐意了解这里介绍的两个由 Sass 支持的栅格引擎：[Susy](http://susy.oddbird.net/) 和 [Singularity](http://singularity.gs/)。它们都可以满足你的需求，所以只需从中挑选喜欢的一个来用即可并且可以放心即使是你的苛刻需求&mdash;哪怕是最多变的&mdash;也可以被实现。
+如果你尚未依赖于特定的栅格系统，那么也许会乐意了解这里介绍的两个由 Sass 支持的栅格引擎：[Susy](http://susy.oddbird.net/) 和 [Singularity](https://github.com/at-import/Singularity)。它们都可以满足你的需求，所以只需从中挑选喜欢的一个来用即可并且可以放心即使是你的苛刻需求&mdash;哪怕是最多变的&mdash;也可以被实现。
 
 或者你可以处理地更轻松些，就像使用 [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids) 的感觉。总而言之，任何选择都不会对你的代码风格有过多影响，所以这一点上一切取决于你。
 

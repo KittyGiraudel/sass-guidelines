@@ -29,7 +29,7 @@ Déjame ser directo: no soy muy fan de los sistemas de retícula. Por supuesto q
 
 Si estás usando un *framework* CSS para tu proyecto, como [Bootstrap](http://getbootstrap.com/) o [Foundation](http://foundation.zurb.com/), hay muchas probabilidades de que ya incluya un sistema de retícula, en cuyo caso te recomendaría que usaras estos para evitar tener otra dependencia.
 
-Si no trabajas con un sistema de retícula específico, te sentirás complacido al saber que hay dos motores de retícula de primera categoría para Sass: [Susy](http://susy.oddbird.net/) y [Singularity](http://singularity.gs/). Ambos hacen mucho más de lo que necesitas, así que puedes seleccionar el que prefieras entre estos dos y estar seguro/a de que todos los casos límite &mdash;incluso los más extremos&mdash; serán cubiertos. Si me preguntas, Susy tiene una comunidad ligeramente mejor, pero esa es mi opinión.
+Si no trabajas con un sistema de retícula específico, te sentirás complacido al saber que hay dos motores de retícula de primera categoría para Sass: [Susy](http://susy.oddbird.net/) y [Singularity](https://github.com/at-import/Singularity). Ambos hacen mucho más de lo que necesitas, así que puedes seleccionar el que prefieras entre estos dos y estar seguro/a de que todos los casos límite &mdash;incluso los más extremos&mdash; serán cubiertos. Si me preguntas, Susy tiene una comunidad ligeramente mejor, pero esa es mi opinión.
 
 O puedes trabajar con algo más casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Con todo, la elección no tendrá mucho impacto en el estilo de tu código, así que todo depende de ti llegados a este punto.
 

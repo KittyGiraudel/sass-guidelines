@@ -36,13 +36,13 @@ Deixem-me ser direto: não sou grande fã de sistemas de grelhas. Claro que vejo
 
 Se estão a usar uma _framework_ de CSS para o vosso projecto como [Bootstrap](http://getbootstrap.com/) ou [Foundation](http://foundation.zurb.com/), é provável que já incluam um sistema de grelhas que eu recomendo que usem de forma a evitar ter que lidar com mais uma dependência.
 
-Se não estiverem presos a um sistema de grelhas específico, gostarão de saber que há dois sistemas de grelhas topo de gama: [Susy](http://susy.oddbird.net/) e [Singularity](http://singularity.gs/). Ambos fazem muito mais do que alguma vez irão precisar, por isso podem escolher o que preferirem de entre os dois e terão a certeza que todos os vossos casos extremos&mdash;mesmo os mais rebuscados&mdash;estarão cobertos. Se me perguntarem, Susy possui uma comunidade ligeiramente melhor, mas é apenas a minha opinião.
+Se não estiverem presos a um sistema de grelhas específico, gostarão de saber que há dois sistemas de grelhas topo de gama: [Susy](http://susy.oddbird.net/) e [Singularity](https://github.com/at-import/Singularity). Ambos fazem muito mais do que alguma vez irão precisar, por isso podem escolher o que preferirem de entre os dois e terão a certeza que todos os vossos casos extremos&mdash;mesmo os mais rebuscados&mdash;estarão cobertos. Se me perguntarem, Susy possui uma comunidade ligeiramente melhor, mas é apenas a minha opinião.
 
 Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). No final de contas, a escolha não terá muito impacto no vosso guia de estilo, por isso fica ao vosso critério.
 
 ###### Leitura adicional
 
-* [Singularity](http://singularity.gs/)
+* [Singularity](https://github.com/at-import/Singularity)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
 * [Susy](http://susy.oddbird.net/)

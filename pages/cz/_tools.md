@@ -36,13 +36,13 @@ Nechte mě to ujasnit: nejsem velký fanoušek grid systémů. Samozřejmě vid�
 
 Pokud ve svém projektu používáte CSS framework jako [Bootstrap](http://getbootstrap.com/) nebo [Foundation](http://foundation.zurb.com/), pak jsou šance, že již obsahují grid systém opravdu vysoké. V tomto případě bych vám doporučil, abyste jej využili, abyste se zbavili další závislosti.
 
-Pokud nejste vázáni na konkrétní grid systém, budete rádi, že tu jsou dva prvotřídní Sass grid enginy: [Susy](http://susy.oddbird.net/) a [Singularity](http://singularity.gs/). Oba dělají trochu více, než budete kdy potřebovat, takže si můžete vybrat ten, který preferujete více a buďte si jisti, že všechny vaše krajní případy &mdash; dokonce i ty nejzáludnější &mdash; budou pokryty. Pokud se ptáte mě, Susy má o něco lepší komunitu, ale to je jen můj názor.
+Pokud nejste vázáni na konkrétní grid systém, budete rádi, že tu jsou dva prvotřídní Sass grid enginy: [Susy](http://susy.oddbird.net/) a [Singularity](https://github.com/at-import/Singularity). Oba dělají trochu více, než budete kdy potřebovat, takže si můžete vybrat ten, který preferujete více a buďte si jisti, že všechny vaše krajní případy &mdash; dokonce i ty nejzáludnější &mdash; budou pokryty. Pokud se ptáte mě, Susy má o něco lepší komunitu, ale to je jen můj názor.
 
 Nebo můžete jít do něčeho trochu více formálního, jako [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Ať už si vyberete jak si vyberete, volba nebude mít na váš styl kódování téměř žádný dopad, takže je to jen na vás.
 
 ###### Další četba
 
-* [Singularity](http://singularity.gs/)
+* [Singularity](https://github.com/at-import/Singularity)
 * [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
 * [Susy](http://susy.oddbird.net/)
