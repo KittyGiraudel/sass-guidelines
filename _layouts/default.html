@@ -5,46 +5,42 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ page.language }}" dir="{{ page.direction|lower }}" class="no-js">
 
-  {% include layout/head.html %}
+{% include layout/head.html %}
 
-  <body id="top">
-    <!-- SVG sprite -->
-    {% include sprite.svg %}
+<body id="top">
+  <!-- SVG sprite -->
+  {% include sprite.svg %}
 
-    <!-- Accessibility skip link -->
-    {% include partials/skip_link.html id = "skip" %}
+  <!-- Accessibility skip link -->
+  {% include partials/skip_link.html id = "skip" %}
 
-    <!-- Main container -->
-    <main aria-label="Content" id="main-content">
+  <!-- Site header -->
+  {% include partials/header.html %}
 
-      <!-- Site header -->
-      {% include partials/header.html %}
+  <!-- Translation banner -->
+  {% include partials/translation_warning.html %}
 
-      <!-- Translation banner -->
-      {% include partials/translation_warning.html %}
+  <!-- Button to toggle the options panel -->
+  {% include partials/aside_opener.html %}
 
-      <!-- Button to toggle the options panel -->
-      {% include partials/aside_opener.html %}
+  <!-- Main container -->
+  <main class="main" aria-label="Content" id="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
 
-      <!-- Main container -->
-      <div class="main">
-        <div class="container">
-          {{ content }}
-        </div>
-      </div>
+  <!-- Link to get back to top -->
+  {% include partials/top_link.html %}
 
-      <!-- Link to get back to top -->
-      {% include partials/top_link.html %}
+  <!-- Site footer -->
+  {% include partials/footer.html %}
 
-      <!-- Site footer -->
-      {% include partials/footer.html %}
-    </main>
+  <!-- Options panel -->
+  {% include partials/aside.html %}
 
-    <!-- Options panel -->
-    {% include partials/aside.html %}
-
-    <!-- Scripts -->
-    {% include layout/scripts.html %}
-  </body>
+  <!-- Scripts -->
+  {% include layout/scripts.html %}
+</body>
 
 </html>
