@@ -42,6 +42,4 @@ Permitam-me ainda citar novamente o [Harry Roberts](https://csswizardry.com), **
 
 ###### Leitura adicional
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 * [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)

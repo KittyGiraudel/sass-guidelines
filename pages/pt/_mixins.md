@@ -24,7 +24,6 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 ## Lista de argumentos
 
@@ -63,5 +62,4 @@ Por favor não se esqueçam que isto não é uma solução feliz. Por exemplo, e
 
 ###### Leitura Adicional
 
-* [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
