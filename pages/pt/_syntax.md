@@ -224,16 +224,6 @@ Ilustração:
 
 {% include snippets/syntax/21/index.html %}
 
-### Debugging num mapa Sass
-
-Se alguma vez estiveres perdido e a pensar que diabo de magia negra está a acontecer num mapa Sass, não te preocupes porque existe caminho para a salvação.
-
-{% include snippets/syntax/22/index.html %}
-
-Se quiseres saber a profundidade do mapa, adiciona a seguinte função. O mixin vai mostrá-la automaticamente.
-
-{% include snippets/syntax/23/index.html %}
-
 ###### Leitura adicional
 
 * [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
