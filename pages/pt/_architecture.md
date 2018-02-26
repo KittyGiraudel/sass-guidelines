@@ -156,8 +156,8 @@ O ficheiro principal (normalmente chamado `main.scss`) deverá ser o único fich
 
 Os ficheiros devem ser importados de acordo com a pasta onde estão, uma depois da outra na seguinte ordem:
 
-1. `vendors/`
 1. `utils/`
+1. `vendors/`
 1. `base/`
 1. `layout/`
 1. `components/`
