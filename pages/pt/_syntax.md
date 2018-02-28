@@ -14,8 +14,6 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
 
 {% include snippets/syntax/01/index.html %}
 
-Não vamos entrar na discussão de organização de ficheiros nesta secção, mas discutiremos esse tópico na [secção de arquitetura](#arquitetura).
-
 ## Strings
 
 Acreditem ou não, strings desempenham um papel muito importante tanto em ecosistemas CSS e Sass. A maior parte dos valores de CSS são medidas ou strings (geralmente sem aspas), por isso é bastante crucial seguir algumas regras.
@@ -368,14 +366,6 @@ Além disso, quando se usam classes de estado independentes de um componente, co
 Por fim, quando se estiliza um elemento só porque ele está dentro de outro elemento específico, é também aceitável aninhá-lo, de modo a manter tudo sobre um determinado componente no mesmo sítio.
 
 {% include snippets/syntax/35/index.html %}
-
-Quando se trabalha com programadores inexperientes, um seletor como `.no-opacity &` pode parecer um pouco estranho. Para evitar confusões, pode-se construir um pequeno mixin que transforma esta sintaxe estranha numa API explícita.
-
-{% include snippets/syntax/36/index.html %}
-
-Reescrevendo o nosso exemplo anterior, ficaria então assim:
-
-{% include snippets/syntax/37/index.html %}
 
 Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com seletores aninhados, então usa seletores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
 
