@@ -131,12 +131,17 @@ Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se t
 
 De maneira a tornar cores em Sass o mais simples possível, o meu conselho é que respeitem a seguinte ordem de preferência para formatação de cores:
 
-1. [Chaves de cores CSS](http://www.w3.org/TR/css3-color/#svg-color);
 1. [Anotação HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
 1. [Anotação RGB](http://en.wikipedia.org/wiki/RGB_color_model);
-1. Anotação hexadecimal, preferencialmente em minúsculas.
+1. Anotação hexadecimal (minúsculas e encurtadas).
 
-Para começar, os nomes das chaves de cor normalmente falam por si só. A representação HSL é não só a mais fácil para o cérebro humano compreender <sup>carece de fontes</sup>, como também facilita aos autores das folhas de estilo a manipulação das cores, ajustando apenas os valores individuais de matiz, saturação e luminosidade. RGB ainda tem como vantagem o facto de mostrar imediatamente se a cor tem um tom mais azulado, esverdejado ou avermelhado, mas não facilita nada a construção de uma nova com com as três partes. Por último, hexadecimal é quase indecifrável para o nosso cérebro.
+Keywords de cores CSS não devem ser usadas, a não ser para uma rápida prototipagem. De fato, elas são palavras inglesas (reais), mas algumas fazem um trabalho péssimo em descrever a cor que representam, especialmente para falantes não nativos. Desse modo, keywords não são perfeitamente semânticas. Por exemplo: `grey` é, na verdade, mais escura que `darkgrey`. Além disso, a confusão entre `grey` e `gray`, pode levar a usos inconsistentes desta cor.
+
+A representação HSL não é somente a mais fácil para o cérebro humano compreender<sup>[citation needed]</sup>, ela também facilita que autores das folhas de estilos troquem a cor ajustando matiz (hue), saturação e luminosidade (lightness), individualmente.
+
+RGB tem a vantagem de mostrar de cara se uma cor é mais vermelha, verde ou azul. Portanto, isso pode ser melhor que HSL em algumas situações, especialmente quando é necessário um vermelho, verde ou azul puro. Contudo, isso não facilita a criação de uma cor à partir das três partes.
+
+Finalmente, a notação hexadecimal é próxima do indecifrável para a mente humana. Use isso como um último recurso, se você precisar.
 
 {% include snippets/syntax/14/index.html %}
 
