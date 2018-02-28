@@ -15,10 +15,6 @@ Em relação às variáveis, funções e *mixins*, mantemos algo bastante semelh
 
 {% include snippets/naming/01/index.html %}
 
-###### Leitura adicional
-
-* [CSS Guidelines' Naming Conventions](http://cssguidelin.es/#naming-conventions)
-
 ## Constantes
 
 Se por acaso são programadores de *frameworks* ou bibliotecas, poderão encontrar-se a lidar com variáveis que não é suposto serem alteradas em qualquer circunstância: constantes. Infelizmente (ou felizmente?), Sass não fornece nenhuma forma de definir tais entidades, por isso temos que ficar pelas rigorosas convenções de nomenclatura de forma a nos darmos a entender.
@@ -27,9 +23,7 @@ Tal como para várias linguagens, eu sugiro variáveis em maiúsculas e delimita
 
 {% include snippets/naming/02/index.html %}
 
-###### Leitura adicional
-
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+Se você realmente quer brincar com essas ideias de constantes no Sass, deverias ler [esse artigo dedicado](http://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespace
 
@@ -39,10 +33,8 @@ Por exemplo, se trabalharem num projecto chamado *Sassy Unicorn* que se destina 
 
 {% include snippets/naming/03/index.html %}
 
+[Kaelig](http://kaelig.fr) tem [um artigo muito perpicaz sobre namespace CSS global](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), no caso deste tópico seja de interesse para você.
+
 <div class="note">
   <p>De notar que *namespacing* automático é definitivamente um objectivo de design para a próxima reformulação do <code>@import</code> de Sass 4.0. À medida que tal se aproxima da sua concretização, será cada vez menos útil fazer *namespacing* manual; eventualmente, bibliotecas manualmente *namespaced* poderão realmente ser mais difíceis de usar.</p>
 </div>
-
-###### Leitura adicional
-
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

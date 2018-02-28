@@ -9,28 +9,19 @@ O objectivo final de Sass é corrigir as falhas de CSS. CSS, como todos sabemos,
 
 É aqui que Sass entra em cena, como meta-linguagem, para melhorar a sintaxe original de CSS de maneira a oferecer novas funcionalidades e ferramentas úteis. No entanto, Sass pretende manter-se algo conservadora no que diz respeito à linguagem de CSS.
 
-A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass pretende apenas oferecer ajuda onde CSS demonstra falhas. Graças a esta abordagem, começar a aprender Sass não é mais difícil que aprender CSS: simplesmente adiciona funcionalidades em cima da linguagem.
+A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass pretende apenas oferecer ajuda onde CSS demonstra falhas. Graças a esta abordagem, começar a aprender Sass não é mais difícil que aprender CSS: simplesmente adiciona [funcionalidades](http://sitepoint.com/sass-reference/) em cima da linguagem.
 
 Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas são boas, outras más, outras pouco usuais. Este guia pretende providenciar uma forma documentada e consistente de escrever código em Sass.
 
-###### Leitura adicional
-
-* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
-
 ## Ruby Sass ou LibSass
 
-[O primeiro _commit_ de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) foi feito em 2006, já há mais de 8 anos. Escusado será dizer que evoluiu imenso desde então. Inicialmente desenvolvido utilizando Ruby, diversas adaptações foram surgindo. A mais bem sucedida, [LibSass](https://github.com/sass/libsass) (written in C/C++) está hoje muito perto de ser totalmente compatível com a versão original.
+[O primeiro _commit_ de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) foi feito em 2006, já há mais de 8 anos. Escusado será dizer que evoluiu imenso desde então. Inicialmente desenvolvido utilizando Ruby, diversas adaptações foram surgindo. A mais bem sucedida, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) está hoje muito perto de ser totalmente compatível com a versão original.
 
 Em 2014, [ambas as equipas de Ruby Sass e LibSass decidiram esperar até que as versões se sincronizassem antes de continuar o desenvolvimento](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Desde então, LibSass tem ativamente vindo a lançar versões com paridade de funcionalidades com a sua irmã mais velha. As últimas inconsistências estão a ser reunidas e listadas por mim no projeto [Sass-Compatibility](http://sass-compatibility.github.io). Se estiverem a par de alguma incompatibilidade entre as duas versões que não esteja listada, por favor abram um _issue_ no repositório.
 
-Voltando à questão de escolher o compilador. Na verdade, tudo depende do vosso projeto. Se se tratar de um projecto em Ruby on Rails, será preferível utilizar Ruby Sass, já que é perfeitamente adequado para o caso. Convém manter em mente que Ruby Sass vai sempre ser a implementação de referência e por isso estará sempre um passo à frente no que diz respeito a funcionalidades.
+Voltando à questão de escolher o compilador. Na verdade, tudo depende do vosso projeto. Se se tratar de um projecto em Ruby on Rails, será preferível utilizar Ruby Sass, já que é perfeitamente adequado para o caso. Convém manter em mente que Ruby Sass vai sempre ser a implementação de referência e por isso estará sempre um passo à frente no que diz respeito a funcionalidades. Além disso, se você está procurando trocar do Ruby Sass por o LibSass, [este artigo](http://www.sitepoint.com/switching-ruby-sass-libsass/) é para você.
 
 Em projetos que não sejam em Ruby que precisem de integração no método de trabalho, LibSass será provavelmente uma melhor opção, uma vez que esta é praticamente dedicada a adaptações externas. Por exemplo, se quiserem utilizar NodeJS, [node-sass](https://github.com/sass/node-sass), a escolha já está feita.
-
-###### Leitura adicional
-
-* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass ou SCSS
 
@@ -38,15 +29,11 @@ Existe alguma confusão no que diz respeito à semântica do nome *Sass*, e just
 
 Inicialmente, Sass descrevia a sintaxe cuja característica que a definia era a sua sensibilidade à indentação. Rapidamente, os escritores de Sass decidiram encurtar a distância entre Sass e CSS providenciando uma sintaxe mais próxima de CSS original chamada *SCSS* para *Sassy CSS*. O lema é: se é CSS válido, é valido SCSS também.
 
-Desde então, Sass (enquanto pré-processador) oferece duas sintaxes diferentes: Sass (que não é escrito em maiúsculas, [por favor](http://sassnotsass.com)), também conhecido como *a sintaxe indentada*, e SCSS. Qual delas utilizar é uma questão de preferência pessoal, uma vez que ambas são equivalentes a nível de funcionalidades. Até aqui, é tudo uma questão de estética.
+Desde então, Sass (enquanto pré-processador) oferece [duas sintaxes diferentes](http://www.sitepoint.com/whats-difference-sass-scss/): Sass (que não é escrito em maiúsculas, [por favor](http://sassnotsass.com)), também conhecido como *a sintaxe indentada*, e SCSS. Qual delas utilizar é uma questão de preferência pessoal, uma vez que ambas são equivalentes a nível de funcionalidades. Até aqui, é tudo uma questão de estética.
 
 A sensibilidade aos espaços em Sass depende na indentação para se ver livre de chavetas, pontos e vírgula e outros símbolos de pontuação, o que leva a uma sintaxe mais curta e mais limpa. Por outro lado, SCSS é mais fácil de aprender já que consiste maioritariamente em pedaços extra que sao escritos adicionalmente ao CSS habitual.
 
 Pessoalmente, prefiro SCSS a Sass apenas porque é mais aproximada de CSS e mais amigável para os programadores. Por isso, vou utilizar SCSS em vez de Sass ao longo deste guia de estilo. Podem sempre alterar para a sintaxe indentada de Sass no painel de <button type="button" data-a11y-dialog-show="options-panel" class="link-like">opções</button>.
-
-###### Leitura adicional
-
-* [What's the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
 
 ## Outros pré-processadores
 

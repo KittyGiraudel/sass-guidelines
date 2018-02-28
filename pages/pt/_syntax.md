@@ -65,11 +65,6 @@ URLs devem ser envolvidos em aspas:
 
 {% include snippets/syntax/06/index.html %}
 
-###### Leitura adicional
-
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
-
 ## Números
 
 Em Sass, um número representa um tipo de dados que inclui tudo desde números sem unidades a medidas, a frequências, ângulos, e outros. Isto permite que cálculos sejam efetuados nestas medidas.
@@ -100,7 +95,7 @@ Para adicionar uma unidade a um número, devemos multiplicar este número por *1
 
 {% include snippets/syntax/09/index.html %}
 
-Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar.
+Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar. Mais sobre isso, [nesse artigo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -110,7 +105,7 @@ Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu 
 
 {% include snippets/syntax/11/index.html %}
 
-Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado.
+Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado. [Use cumprimentos, não strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Cálculos
 
@@ -126,16 +121,17 @@ Escusado será dizer que **números mágicos são uma praga e devem ser evitados
 
 {% include snippets/syntax/13/index.html %}
 
-###### Leitura adicional
-
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+Sobre o tema, CSS-Tricks tem um [artigo maravilhoso](http://css-tricks.com/magic-numbers-in-css/) sobre números mágicos em CSS que eu te encorajo a ler.
 
 ## Cores
 
 Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se tornar um aliado poderoso no que toca à manipulação de cores, especialmente porque providencia um punhado de [funções úteis para tal](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+
+Sass é tão bom na hora de manipular cores que artigos tem florescidos por toda parte da internet, exatamente sobre este tema. Por isso, posso recomendar algumas leituras:
+
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Formatos de cores
 
@@ -169,7 +165,7 @@ Assim podemos usar esta variável onde for necessário. No entanto, se o seu uso
 
 {% include snippets/syntax/17/index.html %}
 
-Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`.
+Assim previne-se que a mudança de um tema leve a algo como `$sass-pink: blue`. [Este artigo](http://davidwalsh.name/sass-color-variables-dont-suck) faz um bom trabalho ao explicar por que o pensamento de suas variáveis ​​de cores é importante.
 
 ### Clarear e Escurecer cores
 
@@ -189,14 +185,6 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
   <p>A função <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> permite efetuar um escalamento das propriedades mais fluído tendo em conta o quão alto ou baixo o seu valor já é. Deverá oferecer resultados que são tão agradáveis como o `mix` mas com uma convenção mais clara. O fator de escala não é exactamente o mesmo, no entanto.</p>
 </div>
 
-###### Leitura adicional
-
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don't Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
-
 ## Listas
 
 Listas são o equivalente de arrays. Uma lista é uma estrutura de dados *"flat"* (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
@@ -215,10 +203,7 @@ Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar 
 
 {% include snippets/syntax/20/index.html %}
 
-###### Leitura adicional
-
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+[Neste artigo](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), eu vou a fundo de vários truques e dicas para lidar e manipular listas corretamente, no Sass.
 
 ## Mapas
 
@@ -239,17 +224,7 @@ Ilustração:
 
 {% include snippets/syntax/21/index.html %}
 
-###### Leitura adicional
-
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+Textos sobre mapas Sass são muitos, dado o quão esperada essa feature foi esperada. Aqui vai três, dos quais eu recomendo: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Conjunto de regras para CSS
 
@@ -279,10 +254,6 @@ Ilustração:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Leitura adicional
-
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
-
 ## Ordenar as declarações
 
 Não me ocorrem muitos tópicos em que as opiniões sejam tão divididas como são em relação a ordenar declarações em CSS. Na verdade, existem duas facções:
@@ -311,11 +282,6 @@ Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolha
 <div class="note">
   <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
 </div>
-
-###### Leitura adicional
-
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Seletores aninhados
 
@@ -349,7 +315,9 @@ O problema com aninhar seletores é que, em última instância, torna o código 
 
 Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor atual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
 
-Para evitar essa situação, evitamos **aninhar seletores tanto quanto possível**. No entanto, há exceções óbvias a esta regra.
+Para evitar tais situações, nós falamos muito sobre a [Inception rule](http://thesassway.com/beginner/the-inception-rule) alguns anos atrás, aconselhando contra aninhamento de mais de três leveis a fundo, usando como referência o filme "Inception" de Christopher Nolan. Além do mais, eu seria mais dramático e recomendaria **evitar aninhamento de seletores, o máximo possível**.
+
+Enquanto há, obviamente, algumas exceções para esta regra (como nós vamos ver na próxima seção), esta opinião parece ser a mais popular. Você pode ler sobre isso mais em detelhes no [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### Exceções
 
@@ -368,9 +336,3 @@ Por fim, quando se estiliza um elemento só porque ele está dentro de outro ele
 {% include snippets/syntax/35/index.html %}
 
 Como tudo, as especificidades são de certa forma irrelevantes, o importante é a consistência. Se te sentes perfeitamente confiante com seletores aninhados, então usa seletores aninhados. Certifica-te apenas que toda a tua equipa está confortável com isso.
-
-###### Leitura adicional
-
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
