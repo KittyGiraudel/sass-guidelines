@@ -16,7 +16,7 @@ Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](h
 
 ## Strings
 
-Acreditem ou não, strings desempenham um papel muito importante tanto em ecosistemas CSS e Sass. A maior parte dos valores de CSS são medidas ou strings (geralmente sem aspas), por isso é bastante crucial seguir algumas regras.
+Acreditem ou não, strings desempenham um papel muito importante tanto em ecosistemas CSS e Sass. A maior parte dos valores de CSS são medidas ou identificadores, por isso é bastante crucial seguir algumas regras.
 
 ### Codificação
 
@@ -45,7 +45,7 @@ Dito isto, linguagens que não necessitam de aspas à volta de strings são uma 
 
 ### Strings como valores CSS
 
-Valores específicos de CSS, tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
+Valores específicos de CSS (identificadores), tais como `initial` ou `sans-serif` não necessitam de aspas. É verdade que a declaração `font-family: sans-serif` vai falhar silenciosamente porque o CSS está à espera de encontrar um indentificador, não uma string envolta em aspas. Deste modo, não utilizamos aspas nestes valores.
 
 {% include snippets/syntax/04/index.html %}
 
@@ -55,7 +55,7 @@ Não utilizamos aspas no primeiro, mas no segundo exemplo utilizamos aspas simpl
 
 ### Strings com aspas
 
-Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de demasiados carateres dentro da string.
+Se uma string contém uma ou várias aspas, vale a pena considerar envolver a string com aspas duplas (`"`), de modo a evitar fazer o `escaping` de carateres dentro da string.
 
 {% include snippets/syntax/05/index.html %}
 

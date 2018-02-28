@@ -29,7 +29,7 @@ Se você realmente quer brincar com essas ideias de constantes no Sass, deverias
 
 Se tencionam distribuir o vosso código Sass, no caso de uma biblioteca, uma *framework*, um sistema de grelhas ou o que seja, talvez queiram considerar colocar todas as vossas variáveis, funções, *mixins* e *placeholders* no seu próprio *namespace*, para que não entrem em conflito com o código de alguém.
 
-Por exemplo, se trabalharem num projecto chamado *Sassy Unicorn* que se destina a ser usado por programadores de todo o mundo (quem não o faria, não é?), poderiam considerar usar `su-` como *namespace*. É específico o suficiente para prevenir colisões de nomes e curto o suficiente para não ser maçador a escrever.
+Por exemplo, se trabalharem num projecto chamado *Sassy Unicorn* que se destina a ser distribuído, poderiam considerar usar `su-` como *namespace*. É específico o suficiente para prevenir colisões de nomes e curto o suficiente para não ser maçador a escrever.
 
 {% include snippets/naming/03/index.html %}
 

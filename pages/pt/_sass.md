@@ -15,7 +15,7 @@ Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas sã
 
 ## Ruby Sass ou LibSass
 
-[O primeiro _commit_ de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) foi feito em 2006, já há mais de 8 anos. Escusado será dizer que evoluiu imenso desde então. Inicialmente desenvolvido utilizando Ruby, diversas adaptações foram surgindo. A mais bem sucedida, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) está hoje muito perto de ser totalmente compatível com a versão original.
+[O primeiro _commit_ de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) foi feito em 2006, já há mais de 10 anos. Escusado será dizer que evoluiu imenso desde então. Inicialmente desenvolvido utilizando Ruby, diversas adaptações foram surgindo. A mais bem sucedida, [LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) está hoje muito perto de ser totalmente compatível com a versão original.
 
 Em 2014, [ambas as equipas de Ruby Sass e LibSass decidiram esperar até que as versões se sincronizassem antes de continuar o desenvolvimento](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Desde então, LibSass tem ativamente vindo a lançar versões com paridade de funcionalidades com a sua irmã mais velha. As últimas inconsistências estão a ser reunidas e listadas por mim no projeto [Sass-Compatibility](http://sass-compatibility.github.io). Se estiverem a par de alguma incompatibilidade entre as duas versões que não esteja listada, por favor abram um _issue_ no repositório.
 
