@@ -133,6 +133,6 @@ There are a few links to Wikipedia articles in the document. When possible, try 
 
 ## Updating a translation
 
-If your translation is lagging behind the English version, you will have to update it. The easiest way to do it to use the [changelog](https://github.com/HugoGiraudel/sass-guidelines/blob/gh-pages/CHANGELOG.md) and reproduce commits one by one.
+If your translation is lagging behind the English version, you will have to update it. The easiest way to do it to use the [changelog](https://github.com/HugoGiraudel/sass-guidelines/blob/master/CHANGELOG.md) and reproduce commits one by one.
 
-First create a new branch named after your language and your version (e.g. `ru-1.3`). Then check the first commit from the changelog, reproduce it in your version, and commit it. Repeat this process for each commit missing from your translation. Once you’re done (or before), submit a pull-request to the `gh-pages` branch.
+First create a new branch named after your language and your version (e.g. `ru-1.3`). Then check the first commit from the changelog, reproduce it in your version, and commit it. Repeat this process for each commit missing from your translation. Once you’re done (or before), submit a pull-request to the `master` branch.
