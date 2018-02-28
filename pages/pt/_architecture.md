@@ -205,10 +205,17 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 
 {% include snippets/architecture/03/index.html %}
 
-<div class="note">
-  <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/\*"</code>.</p>
-  <p>Tendo isto dito, eu não recomendo o uso desta extensão porque ela importa os ficheiros por ordem alfabética e normalmente não é isto que queremos, principalmente quando lidamos com uma linguagem que se baseia na ordem.</p>
-</div>
+## Sobre globbing
+
+Em programação de computadores, os padrões glob especificam conjuntos de arquivos usando caracteres coringas, como `*.scss`. De modo geral, globbing significa combinar um conjunto de arquivos baseados numa expressão, invés de uma lista de arquivos. Quando aplicado ao Sass, isso significa importar partials no [arquivo principal](#main-file) com o glob pattern, invés de importar cada um deles. Portanto, isso nos levaria a ter um arquivo parecido com esse:
+
+{% include snippets/architecture/05/index.html %}
+
+Sass não suporta globbing, porque isso pode ser uma feature perigosa, já que o CSS é conhecido por funcionar de acordo com a ordem de arquivos e declarações. Quando importando arquivos dinamicamente (que é feito em ordem alfabética, normalmente), não teríamos mais controle da ordem, o que pode levar a um debug muito difícil.
+
+Dado isso, em uma arquitetura estritamente baseada em componentes e com esforço extra para não usar estilo de um partial em outro, a ordem de importação não importaria de fato, o que permitiria importar arquivos usando globbing. Portanto, isso faria ser mais fácil adicionar ou remover partials, já que não seria necessário atualizar o arquivo principal com tanta cautela.
+
+Quando usando Ruby Sass, podemos usar uma gem chamada [sass-globbing](https://github.com/chriseppstein/sass-globbing) que ativa exatamente esse comportamento. Já se estamos executando node-sass, vamos depender do Node.js ou qualquer ferramenta de build usada para compilação (Gulp, Grunt e etc.).
 
 ## Ficheiro Vergonhoso
 
