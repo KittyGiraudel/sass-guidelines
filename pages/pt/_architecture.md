@@ -49,7 +49,7 @@ Aqui tem um exemplo de um componente partial de botão:
   <p>Agradeço o <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
 </div>
 
-## O padrão 7-1 (goool da alemanha)
+## O padrão 7-1
 
 Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrão 7-1*: 7 pastas, 1 ficheiro. Basicamente, tudo o que tens são ficheiros parciais colocados em 7 pastas diferentes, e um único ficheiro na raiz do projeto (normalmente chamado `main.scss`) que importa todos os ficheiros parciais para serem compilados numa única folha de estilo de CSS.
 
@@ -66,7 +66,7 @@ E claro:
 * `main.scss`
 
 <div class="note">
-  <p>Se você está querendo usar o padrão 7-1 <del>(goool da alemanha)</del>, existe um <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> pronto, no Github. Ele deve ter tudo que você precisa para começar essa arquitetura.</p>
+  <p>Se você está querendo usar o padrão 7-1, existe um <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> pronto, no Github. Ele deve ter tudo que você precisa para começar essa arquitetura.</p>
 </div>
 
 {% include images/wallpaper.html %}
