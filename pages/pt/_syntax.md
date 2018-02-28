@@ -82,6 +82,10 @@ Números devem mostrar zeros à esquerda da vírgula em valores abaixo de um (1)
 
 {% include snippets/syntax/07/index.html %}
 
+<div class="note">
+  <p>No Sublime Text e outros editores que permitem busca e substituição de expressões regulares, é muito fácil adicionar um zero à esquerda a quase todos (se não todos) números quebrados. Simplesmente, substitua <code>\s+\.(\d+)</code> por <code> 0.$1</code>. No entanto, não esqueça o espaço antes do <code>0</code>.</p>
+</div>
+
 ### Unidades
 
 Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
