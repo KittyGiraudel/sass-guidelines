@@ -29,7 +29,7 @@ Por exemplo um formulário de pesquisa deve ser tratado como um componente. Deve
 
 A maior parte de qualquer interface pode ser pensada como pequenos componentes e eu recomendo que fique com este paradigma. Isto vai não só diminuir a quantidade de CSS necessário para um projeto completo, mas também acaba por ser muito mais fácil do que manter uma desorganização onde está tudo junto.
 
-## O padrão 7-1
+## O padrão 7-1 (goool da alemanha)
 
 Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrão 7-1*: 7 pastas, 1 ficheiro. Basicamente, tudo o que tens são ficheiros parciais colocados em 7 pastas diferentes, e um único ficheiro na raiz do projeto (normalmente chamado `main.scss`) que importa todos os ficheiros parciais para serem compilados numa única folha de estilo de CSS.
 
@@ -38,7 +38,7 @@ Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrã
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
+* `abstracts/`
 * `vendors/`
 
 E claro:
@@ -66,6 +66,10 @@ A pasta `base/` contém o que nós podemos chamar de código padrão para o proj
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>Se seu projeto usa <em>muitas</em> animações CSS, você deve considerar adicionar um arquivo <code>\_animations.scss</code> nele, contendo as definições dos <code>@keyframes</code> de todas suas animações. No entanto, se você só usa de vez em quando, coloque-as junto dos seletores que usam elas.</p>
+</div>
 
 ### Pasta Layout
 
@@ -117,9 +121,9 @@ Em grandes sites ou aplicações, é comum existirem vários temas. Há certamen
   <p>Isto é algo muito específico a cada projeto e em muitos deles podem nem existir a necessidade.</p>
 </div>
 
-### Pasta Utils
+### Pasta abstracts
 
-A pasta de `/utils` guarda todas as ferramentas e auxiliares de SASS usados por todo o projeto. Todas as funções globais, mixins e placeholders devem ser colocados nesta pasta.
+A pasta `/abstracts` guarda todas as ferramentas e auxiliares de SASS usados por todo o projeto. Todas as funções globais, mixins e placeholders devem ser colocados nesta pasta.
 
 A regra desta pasta é que não deve produzir uma única linha de CSS se for compilada sozinha. Tudo o que está aqui deverá ser nada mais que auxiliares.
 
@@ -128,10 +132,10 @@ A regra desta pasta é que não deve produzir uma única linha de CSS se for com
 * `_functions.scss`
 * `_placeholders.scss`
 
-Quando trabalhamos em um projeto muito grande e com muitos utilitários, pode ser interessante agrupá-los por assunto invés de tipo, por exemplo: tipografia (`_tipografia.scss`), tema (`tema.scss`), etc. Cada arquivo contendo os helpers relacionados ao assunto: variáveis, funções, mixins e placeholders. Fazendo de tal maneira, o código fica mais fácil de ser lido e mantido, especialmente quando os arquivos estão ficando muito grandes.
+Quando trabalhamos em um projeto muito grande e com muitos utilitários abstratos, pode ser interessante agrupá-los por assunto invés de tipo, por exemplo: tipografia (`_tipografia.scss`), tema (`tema.scss`), etc. Cada arquivo contendo os helpers relacionados ao assunto: variáveis, funções, mixins e placeholders. Fazendo de tal maneira, o código fica mais fácil de ser lido e mantido, especialmente quando os arquivos estão ficando muito grandes.
 
 <div class="note">
-  <p>A pasta <code>utils/</code> também pode se chamar <code>utilities</code> ou <code>helpers/</code>, dependendo da sua preferência.</p>
+  <p>A pasta <code>abstracts/</code> também pode se chamar <code>utilities</code> ou <code>helpers/</code>, dependendo da sua preferência.</p>
 </div>
 
 ### Pasta Vendors
@@ -153,7 +157,7 @@ O ficheiro principal (normalmente chamado `main.scss`) deverá ser o único fich
 
 Os ficheiros devem ser importados de acordo com a pasta onde estão, uma depois da outra na seguinte ordem:
 
-1. `utils/`
+1. `abstracts/`
 1. `vendors/`
 1. `base/`
 1. `layout/`
@@ -182,7 +186,7 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/*"</code>.</p>
+  <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/\*"</code>.</p>
   <p>Tendo isto dito, eu não recomendo o uso desta extensão porque ela importa os ficheiros por ordem alfabética e normalmente não é isto que queremos, principalmente quando lidamos com uma linguagem que se baseia na ordem.</p>
 </div>
 
