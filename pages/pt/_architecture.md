@@ -50,6 +50,10 @@ E claro:
 
 * `main.scss`
 
+<div class="note">
+  <p>Se você está querendo usar o padrão 7-1 <del>(goool da alemanha)</del>, existe um <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> pronto, no Github. Ele deve ter tudo que você precisa para começar essa arquitetura.</p>
+</div>
+
 {% include images/wallpaper.html %}
 
 Idealmente, teríamos algo como:
