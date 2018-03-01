@@ -23,11 +23,10 @@ Idealmente, *qualquer* conjunto de regras de CSS deveria ser precedido por um co
 Basicamente, tudo o que não é óbvio à primeira vista deverá ser comentado. Documentação excessiva é algo que não existe. Lembrem-se de que não conseguem *comentar em demasia*, por isso vão em frente e escrevam comentários para tudo que valer a pena.
 
 Ao comentar uma secção específica de Sass, usem comentários *in-line* em vez de blocos ao estilo de C. Isto fará o comentário invisível no *output*, mesmo no modo expandido durante desenvolvimento.
+
 {% include snippets/comments/02/index.html %}
 
-###### Leitura adicional
-
-* [CSS Guidelines' Commenting section](http://cssguidelin.es/#commenting)
+Note que essa maneira de fazer as coisas também é suportada pelo CSS Guidelines, na sua seção [comentários](http://cssguidelin.es/#commenting).
 
 ## Documentação
 
@@ -49,8 +48,3 @@ SassDoc tem duas funções principais:
 Aqui está um exemplo de um _mixin_ documentado extensivamente com SassDoc:
 
 {% include snippets/comments/04/index.html %}
-
-###### Leitura adicional
-
-* [SassDoc](http://sassdoc.com)
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

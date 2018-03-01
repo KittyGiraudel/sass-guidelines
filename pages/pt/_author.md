@@ -1,6 +1,8 @@
 
 # Sobre o autor
 
-O meu nome é [Hugo Giraudel](http://hugogiraudel.com) e sou um Programador Front End francês atualmente em Berlim, Alemanha. Escrevo Sass já há mais de dois anos e sou também autor de vários projetos relacionados com Sass, tais como o [SassDoc](http://sassdoc.com) e [Sass-Compatibility](http://sass-compatibility.github.io). Escrevi também um livro sobre CSS (em francês) intitulado [CSS3 Pratique du Design Web](http://www.amazon.fr/dp/2212140231).
+O meu nome é [Hugo Giraudel](http://hugogiraudel.com) e sou um programador francês Front End de 25 anos, em Berlim (Alemanha), desde 2015. Atualmente, trabalhando na [N26](http://edenspiekermann.com).
 
-Escrevi também algumas bibliotecas de Sass, algumas delas simplesmente por diversão: [SassyJSON](https://github.com/HugoGiraudel/SassyJSON), [SassyLists](http://sassylists.com), [SassySort](https://github.com/HugoGiraudel/SassySort), [SassyCast](https://github.com/HugoGiraudel/SassyCast), [SassyMatrix](https://github.com/HugoGiraudel/SassyMatrix), [SassyBitwise](https://github.com/HugoGiraudel/SassyBitwise), [SassyIteratorsGenerators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [SassyLogger](https://github.com/HugoGiraudel/SassyLogger), [SassyStrings](https://github.com/HugoGiraudel/SassyStrings) e [SassyGradients](https://github.com/HugoGiraudel/SassyGradients).
+Estive escrevendo Sass por vários anos e sou o autor de muitos projetos relacionados ao Sass, como [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) e [Sass-Compatibility](http://sass-compatibility.github.io). Se você tem interesse em saber mais sobre minhas contribuições na comunidade Sass, dê uma olhada [nesta lista](http://github.com/HugoGiraudel/awesome-sass).
+
+Além disso, também sou autor de um livro sobre CSS (em francês), entitulado [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions). Assim como um livro sobre Sass (em inglês), entitulado [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
