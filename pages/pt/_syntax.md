@@ -191,7 +191,7 @@ As listas devem respeitar as seguintes orientações:
 * sejam uma linha ou várias;
 * necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
 * a não ser para fins de CSS, sempre separadas por vírgula;
-* sempre envolvivas em parêntesis;
+* sempre envolvidas em parêntesis;
 * finalizadas com um ponto final em multi-linha.
 
 {% include snippets/syntax/19/index.html %}
