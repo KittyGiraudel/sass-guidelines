@@ -11,12 +11,6 @@ Vamos colocar o `@debug` de lado, uma vez que se destina claramente a fazer *deb
 
 Agora, há muito espaço num projecto de Sass para avisos e erros. Basicamente, qualquer *mixin* ou função à espera de um tipo ou argumento específico poderia lançar um error se algo desse errado, ou mostrar um aviso ao fazer uma suposição.
 
-###### Leitura adicional
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
-
 ## Avisos
 
 Considerem esta função de [Sass-MQ](https://github.com/sass-mq/sass-mq) a tentar converter um valor em `px` para `em`, por exemplo:
@@ -32,3 +26,5 @@ Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicame
 Como exemplo, digamos que querem construir uma função *getter* para aceder a valores de um mapa específico. Poderiam lançar um erro se a chave pedida não existir no mapa.
 
 {% include snippets/errors/02/index.html %}
+
+Para mais informações de como usar a diretiva `@error` eficientemente, [esta introdução sobre controle de erros](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) deve ajudar você.

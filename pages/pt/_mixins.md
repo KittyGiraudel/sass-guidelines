@@ -20,10 +20,7 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 
 {% include snippets/mixins/02/index.html %}
 
-###### Leitura Adicional
-
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+Para mais exemplos complexos de mixins, dê uma olhada [neste mixin para gerar triângulos CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [nesse mixin para criar sombras longas](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou [neste outro mixin de polyfill para gradientes CSS em navegadores antigos](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixins sem argumentos
 
@@ -44,9 +41,7 @@ O Sass é bastante inteligente relativamente aos mixins e a declaração de fun�
 
 {% include snippets/mixins/04/index.html %}
 
-###### Leitura adicional
-
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+Para mais informação, sobre se é melhor usar múltiplos argumentos, lista ou uma lista de argumentos [o SitePoint tem um ótimo tópico sobre isso](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins e prefixos de fabricantes
 
@@ -67,7 +62,3 @@ Usar este mixin deve ser bastante simples:
 {% include snippets/mixins/07/index.html %}
 
 Por favor não se esqueçam que isto não é uma solução feliz. Por exemplo, esta solução não consegue lidar com *polyfills* complexos como os que são necessários para o Flexbox. Neste sentido, usar o Autoprefixer é uma solução muito melhor.
-
-###### Leitura Adicional
-
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)

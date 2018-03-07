@@ -32,15 +32,14 @@ Você deve estender apenas seletores com o mesmo escopo da media (`@media`). Pen
 
 {% include snippets/extend/02/index.html %}
 
-Resumindo, eu aconselharia usar `@extend` apenas para manter relações dentro de seletores. Dessa maneira, se dois seletores são característicamente similares, então, teremos a ocasião perfeita para usar o `@extend`. No entanto, se eles são irrelacionados mas compartilham algumas regras, um `@mixin` pode ser melhor.
-
-<div class="note">
-  <p>Agradeço o <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
-</div>
-
-###### Leitura Adicional
+As opiniões parecem ser extremamente divididas a respeito das vantagens e problemas do `@extend`, ao ponto que muitos desenvolvedores (incluindo eu) tem discutido contra o uso disso, como você pode ver nos seguintes artigos:
 
 * [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
 * [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+
+Dado isso e resumindo, eu gostaria de aconselhar o uso de `@extend` apenas para manter relações entre seletores, se dois seletores são característicamente similares porque, então, teremos uma situação perfeita para uso do `@extend`. No entanto, se eles são irrelacionados mas compartilham algumas regras, um `@mixin` pode ser melhor. Para saber mais, sobre como escolher entre esses dois, leia este [artigo](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+
+<div class="note">
+  <p>Agradeço o <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
+</div>

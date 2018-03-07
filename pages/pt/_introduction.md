@@ -30,7 +30,7 @@ Obviamente, esta não será a única maneira de fazer as coisas e poderá ou nã
 
 ## Princípios-chave
 
-No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **Sass deve ser mantido o mais simples possível**.
+No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **[Sass deve ser mantido o mais simples possível](http://www.sitepoint.com/keep-sass-simple/)**.
 
 Graças às minhas experiências, tais como [operadores  binários](https://github.com/HugoGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um interpretador de JSON](https://github.com/HugoGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
 
@@ -49,7 +49,3 @@ Contudo, acredito que diretrizes são feitas para serem expandidas. Expandindo a
 Um exemplo de uma extensão de guia de estilos pode ser achada no [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
 > [Esta](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md) é uma extensão para [Node Styleguide](https://github.com/felixge/node-style-guide) feita por Felix Geisendörfer. Qualquer coisa deste documento substitui o que poderia ser dito no Node Styleguide.
-
-###### Leitura adicional
-
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
