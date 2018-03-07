@@ -52,5 +52,4 @@ Aqui está um exemplo de um _mixin_ documentado extensivamente com SassDoc:
 
 ###### Leitura adicional
 
-* [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)

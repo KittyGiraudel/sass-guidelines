@@ -17,12 +17,8 @@ Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacs
 
 ###### Leitura Adicional
 
-* [Arquitetura para um projeto de SASS](http://www.sitepoint.com/architecture-sass-project/)
 * [Uma Olhada a diferentes arquiteturas de SASS](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-* [SMACSS](https://smacss.com/)
 * [Uma introdução a OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Componentes
 
@@ -197,5 +193,4 @@ Existe um conceito interessante que foi tornado popular por [Harry Roberts](http
 
 ###### Leitura Adicional
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
 * [shame.css - Entrevista completa .net](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

@@ -309,12 +309,8 @@ Por esse motivo, não vou impor uma escolha neste guia de estilos. Escolham aque
 
 ###### Leitura adicional
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Seletores aninhados
 

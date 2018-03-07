@@ -15,8 +15,7 @@ Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas sã
 
 ###### Leitura adicional
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [SitePoint Sass Reference](http://sitepoint.com/sass-reference/)
 
 ## Ruby Sass ou LibSass
 
@@ -30,9 +29,7 @@ Em projetos que não sejam em Ruby que precisem de integração no método de tr
 
 ###### Leitura adicional
 
-* [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
 * [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass ou SCSS
@@ -68,10 +65,3 @@ Podemos pensar em pré-processadors como um *polyfill* para funcionalidades de C
 A ideia por detrás dos pós-processadores é oferecer este tipo de suporte silencioso para funcionalidades novas ainda não suportadas por alguns browsers (como variáveis em CSS); assim que estes o façam, o pós-processador deixa as folhas de estilo em paz.
 
 Enquanto que oferecer a sintaxe futura é uma ideia bastante nobre, pessoalmente continuo a preferir Sass para a maioria das tarefas. No entanto, existem certas ocasiões onde acredito que os pós-processadores são mais aptos que Sass - adicionar prefixos a CSS, por exemplo - mas lá chegaremos em breve.
-
-###### Leitura adicional
-
-* [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
-* [cssnext](https://cssnext.github.io/)
-* [PostCSS](https://github.com/postcss/postcss)
