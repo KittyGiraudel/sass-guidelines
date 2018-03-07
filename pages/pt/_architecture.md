@@ -127,10 +127,12 @@ A regra desta pasta é que não deve produzir uma única linha de CSS se for com
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (normalmente chamado `_helpers.scss`)
+* `_placeholders.scss`
+
+Quando trabalhamos em um projeto muito grande e com muitos utilitários, pode ser interessante agrupá-los por assunto invés de tipo, por exemplo: tipografia (`_tipografia.scss`), tema (`tema.scss`), etc. Cada arquivo contendo os auxiliares relacionados ao assunto: variáveis, funções, mixins e placeholders. Fazendo de tal maneira, o código fica mais fácil de ser lido e mantido, especialmente quando os arquivos estão ficando muito grandes.
 
 <div class="note">
-  <p>A pasta <code>utils/</code> também pode ser chamada de <code>helpers/</code>, <code>sass-helpers/</code> ou <code>sass-utils/</code>, sendo uma questão de preferência.</p>
+  <p>A pasta <code>utils/</code> também pode ser chamada de <code>utilities/</code> ou <code>helpers/</code>, sendo uma questão de preferência.</p>
 </div>
 
 ### Pasta Vendors
