@@ -30,7 +30,7 @@ Assim que definam os breakpoints da maneira que quiserem, é necessário arranja
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
+  <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
 </div>
 
 ###### Leitura Adicional
