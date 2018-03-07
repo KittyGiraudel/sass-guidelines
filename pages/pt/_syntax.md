@@ -88,6 +88,10 @@ Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
 {% include snippets/syntax/08/index.html %}
 
+<div class="note">
+  <p>Tome cuidado, pois, esta prática é limitada a cumprimentos, apenas. Ter um zero sem unidade de medida para uma propriedade de tempo (como <code>transition-delay</code>) não é permitido. Teoricamente, se um zero sem unidade de medida é especificado para uma duração, a declaração é considerada invalida e será descartada. Contudo, nem todos os navegadores são tão rigorosos, apesar de alguns serem. Resumindo a história: somente omita unidades de cumprimento.</p>
+</div>
+
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
 Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
