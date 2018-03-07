@@ -25,6 +25,14 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 * [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
 * [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
 
+## Mixins sem argumentos
+
+Algumas vezes os mixins são usados apenas para evitar repetição do mesmo grupo de declarações, os quais não precisam de qualquer parâmetro ou já possuem valores padrões o suficiente para não demandar que você passe argumentos.
+
+Em tais casos, nos podemos omitir os parênteses na hora de chamar os mixins. A keyword `@include` (ou o sinal `+` na sintaxe indentada) já age indicando que aquela linha é uma chamada de mixin. Portanto, não há necessidade de parênteses extras.
+
+{% include snippets/mixins/08/index.html %}
+
 ## Lista de argumentos
 
 Quando estão a lidar com um mixin que tem um número desconhecido de argumentos, o Sass suporta "argumentos variáveis". "Argumentos variáveis" são os argumentos que estão no fim de um mixin ou de uma declaração de função e são transformados numa lista, à qual vamos chamar `arglist`. Isto é implicitamente usado quando passamos um número de argumentos para um mixin ou uma função cuja assinatura de uma função contém `...`.
