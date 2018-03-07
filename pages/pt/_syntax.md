@@ -301,7 +301,7 @@ Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CS
 
 {% include images/order-poll.html %}
 
-Por esse motivo, não vou impor uma escolha neste guia de orientações. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção *aleatória*).
+Por esse motivo, não vou impor uma escolha neste guia de estilos. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção *aleatória*).
 
 <div class="note">
   <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
