@@ -29,6 +29,26 @@ Por exemplo um formulário de pesquisa deve ser tratado como um componente. Deve
 
 A maior parte de qualquer interface pode ser pensada como pequenos componentes e eu recomendo que fique com este paradigma. Isto vai não só diminuir a quantidade de CSS necessário para um projeto completo, mas também acaba por ser muito mais fácil do que manter uma desorganização onde está tudo junto.
 
+## Estrutura de componentes
+
+Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#the-7-1-pattern)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
+
+* O estilo do próprio componente;
+* O estilo dos variantes, modificadores e/ou estados do componente;
+* Os estilos dos descendentes (elementos filhos) do componente, se necessário.
+
+Se você quer que seus componentes sejam capazes de serem tematizados externamente (por exemplo: à partir um tema dentro da pasta `themes/`), limite as declaração à apenas estilos estruturais, como dimensões (largura/altura), padding, margin, alignment e etc. Exclua estilos como cores, sombras, fontes, background e etc.
+
+Um partial pode incluir variáveis, placeholder, mixins e funções específicas para componentes. No entanto, mantenha em mente que você deve evitar ficar referenciando (importando) arquivos de componentes de outros arquivos de componentes, já que isso pode fazer o gráfico de dependencia do seu projeto uma bagunça e incapaz de se manter.
+
+Aqui tem um exemplo de um componente partial de botão:
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Agradeço ao <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
+</div>
+
 ## O padrão 7-1
 
 Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrão 7-1*: 7 pastas, 1 ficheiro. Basicamente, tudo o que tens são ficheiros parciais colocados em 7 pastas diferentes, e um único ficheiro na raiz do projeto (normalmente chamado `main.scss`) que importa todos os ficheiros parciais para serem compilados numa única folha de estilo de CSS.
