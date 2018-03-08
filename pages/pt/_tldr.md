@@ -4,20 +4,20 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 
 ## Princípios chaves
 
-* Ter um guia de estilo diz a respeito de ter **consistência**. Se você discorda com algumas de nossas regras, está tudo bem, se você é consistente. [↩](#porquê-um-guia-de-estilo?)
-* O Sass deve ser mantido tão simples quanto ele é. Portanto, evite criar sistemas complexos, a não ser que seja absolutamente necessário. [↩](#princípios-chave)
-* Mantenha em mente que, às vezes, o princípio *KISS* (Keep It Simple, Stupid) é melhor que o *DRY* (Don’t Repeat Yourself). [↩](#princípios-chave)
+* Ter um guia de estilo diz a respeito de ter **consistência**. Se você discorda com algumas de nossas regras, está tudo bem, se você é consistente. [↩](#porqu-um-guia-de-estilo?)
+* O Sass deve ser mantido tão simples quanto ele é. Portanto, evite criar sistemas complexos, a não ser que seja absolutamente necessário. [↩](#princpios-chave)
+* Mantenha em mente que, às vezes, o princípio *KISS* (Keep It Simple, Stupid) é melhor que o *DRY* (Don’t Repeat Yourself). [↩](#princpios-chave)
 
 ## Sintaxe e formatação
 
-* Identação é feita com com dois (2) espaços, sem tabulações. [↩](#formatação-e-sintaxe)
-* Linhas devem ser, tanto quanto possível, menores que 80 caracteres. Sinta-se à vontade para dividi-las em várias linhas, quando necessário. [↩](#formatação-e-sintaxe)
-* O CSS deve ser bem escrito e, possivelmente, seguindo o [CSS Guidelines](http://cssguidelin.es) de Harry Roberts. [↩](#formatação-e-sintaxe)
-* Espaços em branco são de grátis, então, use-o para separar itens, regras e declarações. Portanto, não hesite em deixar linhas em branco, afinal, não machuca ninguém. [↩](#formatação-e-sintaxe)
+* Identação é feita com com dois (2) espaços, sem tabulações. [↩](#formatao-e-sintaxe)
+* Linhas devem ser, tanto quanto possível, menores que 80 caracteres. Sinta-se à vontade para dividi-las em várias linhas, quando necessário. [↩](#formatao-e-sintaxe)
+* O CSS deve ser bem escrito e, possivelmente, seguindo o [CSS Guidelines](http://cssguidelin.es) de Harry Roberts. [↩](#formatao-e-sintaxe)
+* Espaços em branco são de grátis, então, use-o para separar itens, regras e declarações. Portanto, não hesite em deixar linhas em branco, afinal, não machuca ninguém. [↩](#formatao-e-sintaxe)
 
 ### Strings
 
-* Declarar a diretiva `@charset` no topo da folha de estilos é altamente recomendado. [↩](#codificação)
+* Declarar a diretiva `@charset` no topo da folha de estilos é altamente recomendado. [↩](#codificao)
 * A não ser que aplicadas como identificadores CSS, strings devem ser envoltas em aspas simples. Além disso, URLs também devem ser envoltas em aspas. [↩](#strings-como-valores-CSS)
 
 ### Números
@@ -25,8 +25,8 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 * O Sass não faz distinção entre números inteiros e pontos flutuantes, então zeros (0) a direita devem ser omitidos. Contudo, zeros (0) a esquerda ajudam na legibilidade e devem ser adicionados. [↩](#zeros)
 * Valores nulos (0) não devem ter unidades de medidas. [↩](#unidades)
 * Manipulação de unidades devem ser pensadas como operações aritméticas e, não como operações de strings. [↩](#unidades)
-* A fim de melhorar a legibilidade, cálculos complexos devem estar envoltos em parênteses. Além do mais, operações matemáticas complexas devem ser divididas em pedaços menores. [↩](#cálculos)
-* Números mágicos dificultam a manutenção do código e devem ser evitados ao máximo. Se hesitar, extensivamente explique este valor questionável. [↩](#números-mágicos)
+* A fim de melhorar a legibilidade, cálculos complexos devem estar envoltos em parênteses. Além do mais, operações matemáticas complexas devem ser divididas em pedaços menores. [↩](#clculos)
+* Números mágicos dificultam a manutenção do código e devem ser evitados ao máximo. Se hesitar, extensivamente explique este valor questionável. [↩](#nmeros-mgicos)
 
 ### Colors
 
@@ -47,7 +47,7 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 
 ### Classificação de declarações
 
-* O sistema usado para classificar declarações (alfabético, por tipo e etc.) não importa, contanto que seja consistente. [↩](#ordenar-as-declarações)
+* O sistema usado para classificar declarações (alfabético, por tipo e etc.) não importa, contanto que seja consistente. [↩](#ordenar-as-declaraes)
 
 ### Aninhamento de seletores
 
@@ -57,12 +57,12 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 
 ## Convenções de nomeclatura
 
-* É melhor se apegar as convenções de nomeclatura CSS (exceto algumas) que usam letras minúsculas e delimitação com hífen. [↩](#convenções-de-nomenclatura)
+* É melhor se apegar as convenções de nomeclatura CSS (exceto algumas) que usam letras minúsculas e delimitação com hífen. [↩](#convenes-de-nomenclatura)
 
 ## Comentando
 
-* CSS é uma linguagem complicada, então, não hesite em escrever longos comentários sobre coisas que parecem (ou são) esquisitas. [↩](#comentários)
-* Para variáveis, funções, mixins e placeholders usando uma API pública, use comentários do SassDoc. [↩](#documentação)
+* CSS é uma linguagem complicada, então, não hesite em escrever longos comentários sobre coisas que parecem (ou são) esquisitas. [↩](#comentrios)
+* Para variáveis, funções, mixins e placeholders usando uma API pública, use comentários do SassDoc. [↩](#documentao)
 
 ## Variáveis
 
