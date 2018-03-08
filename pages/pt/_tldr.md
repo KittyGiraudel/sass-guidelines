@@ -5,7 +5,7 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 ## Princípios chaves
 
 <<<<<<< HEAD
-* Ter um guia de estilo diz a respeito de ter **consistência**. Se você discorda com algumas de nossas regras, está tudo bem, se você é consistente. [↩](#porque-um-guia-de-estilo?)
+* Ter um guia de estilo diz a respeito de ter **consistência**. Se você discorda com algumas de nossas regras, está tudo bem, se você é consistente. [↩](#porqu-um-guia-de-estilo?)
 * O Sass deve ser mantido tão simples quanto ele é. Portanto, evite criar sistemas complexos, a não ser que seja absolutamente necessário. [↩](#princpios-chave)
 * Mantenha em mente que, às vezes, o princípio *KISS* (Keep It Simple, Stupid) é melhor que o *DRY* (Don’t Repeat Yourself). [↩](#princpios-chave)
 
