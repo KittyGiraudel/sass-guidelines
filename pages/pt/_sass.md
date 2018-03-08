@@ -45,10 +45,16 @@ O que eu mais aprecio em Sass é a sua abordagem conservadora para com CSS. O de
 
 Por outras palavras, Sass não é um pré-processador com a finalidade de agradar a programadores extremamente _nerdy_ como eu, adicionando funcionalidades em cima de uma linguagem que não foi construída para as suportar de origem. É sim, um software com o intuito de resolver problemas reais; oferecendo funcionalidades úteis a CSS onde este geralmente está em falha.
 
-Pré-processadores à parte, devemos também mencionar ferramentas de pós-processamento, que têm recebido exposição significativa nos últimos meses, maioritariamente graças ao [PostCSS](https://github.com/postcss/postcss) e [cssnext](https://cssnext.github.io/). Eles são, frequentemente, referidos como "pós-processadores, já que compilam sintaxe padrão do futuro, nos dias de hoje. No entanto, são mais ou menos equivalentes aos pré-processadores, com a exceção que não oferecem nada mais do que sintaxe CSS que está ainda para chegar.
+Pré-processadores à parte, devemos também mencionar ferramentas como [PostCSS](https://github.com/postcss/postcss) e [cssnext](https://cssnext.github.io/), as quais receberam uma atenção significante, nos últimos meses.
 
-Podemos pensar em pré-processadors como um *polyfill* para funcionalidades de CSS não suportadas. Por exemplo, poderíamos escrever variáveis como estão descritas atualmente nas [especificações de CSS](http://dev.w3.org/csswg/css-variables/), compilar as folhas de estilo com um pós-processador e reparar que todas as ocorrências dessas variáveis foram substituídas pelos seus devidos valores, como Sass faria.
+PostCSS é comumente (e incorretamente) referido como um "pós-processador". A suposição, combinada com o nome infeliz, é que PostCSS analisa CSS que já foi processado por um pré-processador. Enquanto isso pode realmente ocorrer, na verdade, não é obrigatório. Portanto, PostCSS é somente um processador.
 
-A ideia por detrás dos pós-processadores é oferecer este tipo de suporte silencioso para funcionalidades novas ainda não suportadas por alguns browsers (como variáveis em CSS); assim que estes o façam, o pós-processador deixa as folhas de estilo em paz.
+O PostCSS permite que você acesse "tokens" da sua folha de estilos (seletores, propriedades e valores), processe isso com JavaScript (para fazer alguma operação de algum tipo) e compilar os resultados para CSS. Por exemplo, a biblioteca de prefixos [Autoprefixer](https://github.com/postcss/autoprefixer) é construída com PostCSS. Ela analisa cada regra para ver se é necessário usar *vendor prefixes*, usando como referência a ferramenta [CanIUse](http://caniuse.com).
 
-Enquanto que oferecer a sintaxe futura é uma ideia bastante nobre, pessoalmente continuo a preferir Sass para a maioria das tarefas. No entanto, existem certas ocasiões onde acredito que os pós-processadores são mais aptos que Sass - adicionar prefixos a CSS, por exemplo - mas lá chegaremos em breve.
+Isso é incrivelmente poderoso e bom para construir bibliotecas que funcionam com qualquer pré-processador (como vanilla CSS), mas PostCSS não é tão fácil de usar, ainda. Você tem que saber um pouco de JavaScript para construir qualquer coisa e sua API pode ser confusa, às vezes. Enquanto Sass só fornece um conjunto de ferramentas que são úteis para escrever CSS, PostCSS provê acesso direto ao AST CSS (*ávore abstrata de sintaxe CSS*) e JavaScript.
+
+Em resumo, Sass é meio que fácil de usar e vai resolver a maioria dos seus problemas. Por outro lado, PostCSS pode ser difícil de dominar (se você não é bom com JavaScript), mas é incrivelmente poderoso, no final das contas. Além disso, não há razão para que você não possa ou deva usar ambos. Na verdade, PostCSS oferece um SCSS parser oficial, só para isso.
+
+<div class="note">
+    <p>Agradeço ao <a href="https://github.com/corysimmons">Cory Simmons</a> por sua ajuda e expertise, nessa seção.</p>
+</div>
