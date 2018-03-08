@@ -31,7 +31,7 @@ A maior parte de qualquer interface pode ser pensada como pequenos componentes e
 
 ## Estrutura de componentes
 
-Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#o-padrão-7-1)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
+Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#o-padrao-7-1)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
 
 * O estilo do próprio componente;
 * O estilo dos variantes, modificadores e/ou estados do componente;
