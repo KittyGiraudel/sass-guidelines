@@ -28,7 +28,7 @@ Para além disso, este guia de estilo é da minha autoria e consequentemente **m
 
 Obviamente, esta não será a única maneira de fazer as coisas e poderá ou não adequar-se ao vosso projeto. Sintam-se livres de o adaptar às vossas necessidades.
 
-## Princípios-chave
+## Princípios chave
 
 No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **[Sass deve ser mantido o mais simples possível](http://www.sitepoint.com/keep-sass-simple/)**.
 

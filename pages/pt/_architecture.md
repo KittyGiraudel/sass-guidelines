@@ -31,7 +31,7 @@ A maior parte de qualquer interface pode ser pensada como pequenos componentes e
 
 ## Estrutura de componentes
 
-Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#the-7-1-pattern)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
+Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#o-padrão-7-1)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
 
 * O estilo do próprio componente;
 * O estilo dos variantes, modificadores e/ou estados do componente;
@@ -212,7 +212,7 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 
 ## Sobre globbing
 
-Em programação de computadores, os padrões glob especificam conjuntos de arquivos usando caracteres coringas, como `*.scss`. De modo geral, globbing significa combinar um conjunto de arquivos baseados numa expressão, invés de uma lista de arquivos. Quando aplicado ao Sass, isso significa importar partials no [arquivo principal](#main-file) com o glob pattern, invés de importar cada um deles. Portanto, isso nos levaria a ter um arquivo parecido com esse:
+Em programação de computadores, os padrões glob especificam conjuntos de arquivos usando caracteres coringas, como `*.scss`. De modo geral, globbing significa combinar um conjunto de arquivos baseados numa expressão, invés de uma lista de arquivos. Quando aplicado ao Sass, isso significa importar partials no [arquivo principal](#ficheiro-principal) com o glob pattern, invés de importar cada um deles. Portanto, isso nos levaria a ter um arquivo parecido com esse:
 
 {% include snippets/architecture/05/index.html %}
 
