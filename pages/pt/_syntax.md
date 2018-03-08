@@ -207,7 +207,7 @@ Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar 
 
 ## Mapas
 
-Desde o Sass 3.3, autores de folhas de estilo podem definir mapas &mdash; o termo do Sass para arrays associativos, mapas de hash ou mesmo objectos em JavaScript. Um mapa é uma estrutura de dados que mapeia chaves (que podem ser de qualquer tipo de dados, incluindo mapas, embora eu não o recomende) em valores de qualquer tipo.
+Com Sass, autores de folhas de estilo podem definir mapas - o termo do Sass para arrays associativos, mapas de hash ou mesmo objectos em JavaScript. Um mapa é uma estrutura de dados que associa chaves a valores. Tanto chaves quanto valores podem ser de qualquer tipo de dados, incluindo mapas, embora eu não o recomende usar tipos de dados complexos como chaves, para que matenhamos a sanidade.
 
 Mapas devem ser escritos da seguinte forma:
 
