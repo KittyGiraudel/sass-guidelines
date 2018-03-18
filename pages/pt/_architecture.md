@@ -7,22 +7,13 @@ Felizmente, um dos benefícios principais de usar um pré-processador de CSS é 
 
 Em cima disso, não posso salientar o suficiente a necessidade de pastas, mesmo em pequenos projetos. Em casa, não deixas todas as folhas de papel na mesma caixa. Tens uma para os papéis da casa, uma para documentos do banco, uma para contas e assim em diante. Não há razão para fazeres de maneira diferente quando estás a estruturar um projeto de CSS. Separa o teu código em pastas com nomes compreensíveis para depois ser fácil encontrar qualquer código quando mais tarde tiveres que voltar ao projeto.
 
-Há muitas arquiteturas populares para projectos de CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), arquitetura usada no [Bootstrap](http://getbootstrap.com/), arquitetura usada no [Foundation](http://foundation.zurb.com/)… Todas têm os seus méritos, prós e contras.
+Há muitas [arquiteturas populares](http://www.sitepoint.com/look-different-sass-architectures/) para projectos de CSS: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), arquitetura usada no [Bootstrap](http://getbootstrap.com/), arquitetura usada no [Foundation](http://foundation.zurb.com/)... Todas têm os seus méritos, prós e contras.
 
 Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), e que se foca em manter as coisas simples e óbvias.
 
 <div class="note">
   <p>Eu aprendi que a arquitetura é muito especifica para o projeto. Estejam à vontade para ignorarem ou adaptarem a solução proposta para lidarem com um sistema que se adapta melhor às vossas necessidades.</p>
 </div>
-
-###### Leitura Adicional
-
-* [Arquitetura para um projeto de SASS](http://www.sitepoint.com/architecture-sass-project/)
-* [Uma Olhada a diferentes arquiteturas de SASS](http://www.sitepoint.com/look-different-sass-architectures/)
-* [FR] [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
-* [SMACSS](https://smacss.com/)
-* [Uma introdução a OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Componentes
 
@@ -38,6 +29,26 @@ Por exemplo um formulário de pesquisa deve ser tratado como um componente. Deve
 
 A maior parte de qualquer interface pode ser pensada como pequenos componentes e eu recomendo que fique com este paradigma. Isto vai não só diminuir a quantidade de CSS necessário para um projeto completo, mas também acaba por ser muito mais fácil do que manter uma desorganização onde está tudo junto.
 
+## Estrutura de componentes
+
+Idealmente, componentes devem existir em seus próprios partials Sass (dentro da pasta `components/`, como descrito no [padrão 7-1](#o-padro-7-1)), por exemplo `components/_button.scss`. Os estilos descritos em cada arquivo de componente devem se preocupar com:
+
+* O estilo do próprio componente;
+* O estilo dos variantes, modificadores e/ou estados do componente;
+* Os estilos dos descendentes (elementos filhos) do componente, se necessário.
+
+Se você quer que seus componentes sejam capazes de serem tematizados externamente (por exemplo: à partir um tema dentro da pasta `themes/`), limite as declaração à apenas estilos estruturais, como dimensões (largura/altura), padding, margin, alignment e etc. Exclua estilos como cores, sombras, fontes, background e etc.
+
+Um partial pode incluir variáveis, placeholder, mixins e funções específicas para componentes. No entanto, mantenha em mente que você deve evitar ficar referenciando (importando) arquivos de componentes de outros arquivos de componentes, já que isso pode fazer o gráfico de dependencia do seu projeto uma bagunça e incapaz de se manter.
+
+Aqui tem um exemplo de um componente partial de botão:
+
+{% include snippets/architecture/06/index.html %}
+
+<div class="note">
+  <p>Agradeço ao <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
+</div>
+
 ## O padrão 7-1
 
 Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrão 7-1*: 7 pastas, 1 ficheiro. Basicamente, tudo o que tens são ficheiros parciais colocados em 7 pastas diferentes, e um único ficheiro na raiz do projeto (normalmente chamado `main.scss`) que importa todos os ficheiros parciais para serem compilados numa única folha de estilo de CSS.
@@ -47,12 +58,16 @@ Vamos então voltar à arquitetura, ok? Eu normalmente uso o que chamo *O padrã
 * `layout/`
 * `pages/`
 * `themes/`
-* `utils/`
+* `abstracts/`
 * `vendors/`
 
 E claro:
 
 * `main.scss`
+
+<div class="note">
+  <p>Se você está querendo usar o padrão 7-1, existe um <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> pronto, no Github. Ele deve ter tudo que você precisa para começar essa arquitetura.</p>
+</div>
 
 {% include images/wallpaper.html %}
 
@@ -66,11 +81,15 @@ Idealmente, teríamos algo como:
 
 ### Pasta Base
 
-A pasta `base/` contém o que nós podemos chamar de código padrão para o projeto. Aqui podemos encontrar um ficheiro de reset, algumas regras tipográficas e provavelmente uma folha de estilo (que estou a chamar `_base.scss`), que define alguns estilos padrão para elementos de HTML mais usados.
+A pasta `base/` contém o que nós podemos chamar de código padrão para o projeto. Aqui podemos encontrar um ficheiro de reset, algumas regras tipográficas e provavelmente uma folha de estilo (gosto de chamar `_base.scss`), que define alguns estilos padrão para elementos de HTML mais usados.
 
 * `_base.scss`
 * `_reset.scss`
 * `_typography.scss`
+
+<div class="note">
+  <p>Se seu projeto usa <em>muitas</em> animações CSS, você deve considerar adicionar um arquivo <code>\_animations.scss</code> nele, contendo as definições dos <code>@keyframes</code> de todas suas animações. No entanto, se você só usa de vez em quando, coloque-as junto dos seletores que usam elas.</p>
+</div>
 
 ### Pasta Layout
 
@@ -122,19 +141,21 @@ Em grandes sites ou aplicações, é comum existirem vários temas. Há certamen
   <p>Isto é algo muito específico a cada projeto e em muitos deles podem nem existir a necessidade.</p>
 </div>
 
-### Pasta Utils
+### Pasta Abstracts
 
-A pasta de `/utils` guarda todas as ferramentas e auxiliares de SASS usados por todo o projeto. Todas as funções globais, mixins e placeholders devem ser colocados nesta pasta.
+A pasta de `/abstracts` guarda todas as ferramentas e auxiliares de SASS usados por todo o projeto. Todas as funções globais, mixins e placeholders devem ser colocados nesta pasta.
 
 A regra desta pasta é que não deve produzir uma única linha de CSS se for compilada sozinha. Tudo o que está aqui deverá ser nada mais que auxiliares.
 
 * `_variables.scss`
 * `_mixins.scss`
 * `_functions.scss`
-* `_placeholders.scss` (normalmente chamado `_helpers.scss`)
+* `_placeholders.scss`
+
+Quando trabalhamos em um projeto muito grande e com muitos utilitários abstratos, pode ser interessante agrupá-los por assunto invés de tipo, por exemplo: tipografia (`_tipografia.scss`), tema (`tema.scss`), etc. Cada arquivo contendo os auxiliares relacionados ao assunto: variáveis, funções, mixins e placeholders. Fazendo de tal maneira, o código fica mais fácil de ser lido e mantido, especialmente quando os arquivos estão ficando muito grandes.
 
 <div class="note">
-  <p>A pasta <code>utils/</code> também pode ser chamada de <code>helpers/</code>, <code>sass-helpers/</code> ou <code>sass-utils/</code>, sendo uma questão de preferência.</p>
+  <p>A pasta <code>abstracts/</code> também pode ser chamada de <code>utilities/</code> ou <code>helpers/</code>, sendo uma questão de preferência.</p>
 </div>
 
 ### Pasta Vendors
@@ -156,8 +177,8 @@ O ficheiro principal (normalmente chamado `main.scss`) deverá ser o único fich
 
 Os ficheiros devem ser importados de acordo com a pasta onde estão, uma depois da outra na seguinte ordem:
 
+1. `abstracts/`
 1. `vendors/`
-1. `utils/`
 1. `base/`
 1. `layout/`
 1. `components/`
@@ -185,17 +206,24 @@ Existe outra maneira de importar parciais que também considero válida. O lado 
 {% include snippets/architecture/03/index.html %}
 
 <div class="note">
-  <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/*"</code>.</p>
+  <p>De maneira a não ter que importar cada ficheiro manualmente, existe uma extensão para o Sass chamada <a href="https://github.com/chriseppstein/sass-globbing">sass-globbing</a>, que torna possivel usar padrões globais no <code>@import</code> como <code>@import "components/\*"</code>.</p>
   <p>Tendo isto dito, eu não recomendo o uso desta extensão porque ela importa os ficheiros por ordem alfabética e normalmente não é isto que queremos, principalmente quando lidamos com uma linguagem que se baseia na ordem.</p>
 </div>
 
+## Sobre globbing
+
+Em programação de computadores, os padrões glob especificam conjuntos de arquivos usando caracteres coringas, como `*.scss`. De modo geral, globbing significa combinar um conjunto de arquivos baseados numa expressão, invés de uma lista de arquivos. Quando aplicado ao Sass, isso significa importar partials no [arquivo principal](#ficheiro-principal) com o glob pattern, invés de importar cada um deles. Portanto, isso nos levaria a ter um arquivo parecido com esse:
+
+{% include snippets/architecture/05/index.html %}
+
+Sass não suporta globbing, porque isso pode ser uma feature perigosa, já que o CSS é conhecido por funcionar de acordo com a ordem de arquivos e declarações. Quando importando arquivos dinamicamente (que é feito em ordem alfabética, normalmente), não teríamos controle da ordem, o que pode levar a um debug muito difícil.
+
+Dado isso, em uma arquitetura estritamente baseada em componentes e com esforço extra para não usar estilo de um partial em outro, a ordem de importação não importaria de fato, o que permitiria importar arquivos usando globbing. Portanto, isso faria ser mais fácil adicionar ou remover partials, já que não seria necessário atualizar o arquivo principal com tanta cautela.
+
+Quando usando Ruby Sass, podemos usar uma gem chamada [sass-globbing](https://github.com/chriseppstein/sass-globbing) que ativa exatamente esse comportamento. Já se estamos executando node-sass, vamos depender do Node.js ou qualquer ferramenta de build usada para compilação (Gulp, Grunt e etc.).
+
 ## Ficheiro Vergonhoso
 
-Existe um conceito interessante que foi tornado popular por [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) que consiste em colocar todas as declarações, hacks e coisas das quais não estamos propriamente orgulhosos num *ficheiro vergonhoso*. Este ficheiro dramaticamente chamado `_shame.css`, seria importado depois de todos os outros mesmo no fim da folha de estilo.
+Existe um conceito interessante que foi tornado popular por [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) que consiste em colocar todas as declarações, hacks e coisas das quais não estamos propriamente orgulhosos num [ficheiro vergonhoso](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Este ficheiro dramaticamente chamado `_shame.css`, seria importado depois de todos os outros mesmo no fim da folha de estilo.
 
 {% include snippets/architecture/04/index.html %}
-
-###### Leitura Adicional
-
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
-* [shame.css - Entrevista completa .net](http://csswizardry.com/2013/04/shame-css-full-net-interview/)

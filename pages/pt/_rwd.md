@@ -11,17 +11,13 @@ Pelos mesmos motivos, breakpoints não devem ter nomes de dispositivos, mas sim 
 
 {% include snippets/rwd/01/index.html %}
 
-Por esta altura, qualquer convenção serve, desde que ajude a clarificar que o design não está intimamente agarrado a um tipo de dispositivo especifíco e que dê uma ideia da escala de magnitudes.
+Por esta altura, qualquer [convenção de nomeclatura](http://css-tricks.com/naming-media-queries/) serve, desde que ajude a clarificar que o design não está intimamente agarrado a um tipo de dispositivo especifíco e que dê uma ideia da escala de magnitudes.
 
 {% include snippets/rwd/02/index.html %}
 
 <div class="note">
   <p>Os exemplos anteriores utilizam mapas aninhados para definir breakpoints; no entanto isto depende bastante no tipo de gestor de breakpoints que seja utilizado. Podem optar por strings em vez de usar mapas, para maior flexibilidade (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
-
-###### Leitura Adicional
-
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
 
 ## Gestor de Breakpoints
 
@@ -30,13 +26,9 @@ Assim que definam os breakpoints da maneira que quiserem, é necessário arranja
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
+  <p>Obviamente, este é um gestor de breakpoints bastante simplista. Se precisarem de algo mais permissivo,recomendo que não reinventem a roda e utilizem algo que já provou ser eficaz, tal como <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> ou <a href="https://github.com/eduardoboucas/include-media">include-media</a>..</p>
+  <p>Se você está procurando ler mais sobre como abordar media queries no Sass, ambos <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> e <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> possuem bons artigos sobre.</p>
 </div>
-
-###### Leitura Adicional
-
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
 
 ## Media Queries
 
@@ -52,12 +44,6 @@ Que gera o seguinte resultado em CSS:
 Podem ter ouvido que esta convenção resulta na duplicação das *media queries* no resultado de CSS. Isto é definitivamente verdade. No entanto, [foram feitos testes](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e o resultado final é que não interessa assim que Gzip (ou algo equivalente) fizer o seu trabalho:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards](https://twitter.com/snugug), regarding [Breakpoint](http://breakpoint-sass.com/)
+> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries).
 
 Agora, se realmente tiverem preocupados com a duplicação das *media queries*, podem usar uma ferramenta para as juntar, tal como [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) no entanto, sinto que vos devo avisar na possibilidade de efeitos secundários de alteram a ordem do código, uma vez que já sabem que a ordem do código-fonte é importante.
-
-###### Leitura Adicional
-
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
-* [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

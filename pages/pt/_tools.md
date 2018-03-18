@@ -7,9 +7,9 @@ No entanto, o meu conselho seria para reduzir o número de dependências ao estr
 
 ## Compass
 
-[Compass](http://compass-style.org/) é a _framework_ principal de Sass por aí. Desenvolvida por [Chris Eppstein](https://twitter.com/chriseppstein), um dos designers principais do Sass, não a vejo a perder popularidade drasticamente durante uns tempos, se querem a minha opinião.
+[Compass](http://compass-style.org/) é a [_framework_](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) principal de Sass por aí. Desenvolvida por [Chris Eppstein](https://twitter.com/chriseppstein), um dos designers principais do Sass, não a vejo a perder popularidade drasticamente durante uns tempos, se querem a minha opinião.
 
-Mesmo assim, já não uso Compass, a razão principal sendo que abranda muito processamento de Sass. Sass em Ruby é bastante lento por si só, então adicionar mais Ruby e Sass por cima não ajuda de verdade.
+Mesmo assim, [já não uso Compass](http://www.sitepoint.com/dont-use-compass-anymore/), a razão principal sendo que abranda muito processamento de Sass. Sass em Ruby é bastante lento por si só, então adicionar mais Ruby e Sass por cima não ajuda de verdade.
 
 De verdade, usamos muito pouco de toda a _framework_. Compass é enorme. _Mixins_ de compatibilidade inter-browser é apenas a ponta do icebergue. Funções matemáticas, auxiliares de images, _spriting_… Há muito que pode ser feito com esta grande peça de software.
 
@@ -20,13 +20,6 @@ De qualquer forma, eu não proíbo o uso de Compass embora também não o recome
 <div class="note">
   <p>Sass em Ruby está de momento a sofrer otimizações notáveis que são especificamente orientadas a estilos altamente baseados em lógica, com muitas funções e _mixins_. Estas mudanças deverão melhorar dramaticamente o seu desempenho, até ao ponto onde Compass e outras _frameworks_ já não abrandarão Sass.</p>
 </div>
-
-###### Leitura adicional
-
-* [Compass](http://compass-style.org/)
-* [Sass Frameworks: Compass or Bourbon](http://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
-* [Why I don't use Compass anymore](http://www.sitepoint.com/dont-use-compass-anymore/)
-* [Is Compass to Sass with jQuery is to JavaScript?](http://www.sitepoint.com/compass-sass-jquery-javascript/)
 
 ## Sistemas de grelhas
 
@@ -40,19 +33,6 @@ Se não estiverem presos a um sistema de grelhas específico, gostarão de saber
 
 Ou podem preferir algo mais casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). No final de contas, a escolha não terá muito impacto no vosso guia de estilo, por isso fica ao vosso critério.
 
-###### Leitura adicional
-
-* [Singularity](https://github.com/at-import/Singularity)
-* [Singularity: Grids Without Limits](http://fourword.fourkitchens.com/article/singularity-grids-without-limits)
-* [Singularity Grid System](http://www.mediacurrent.com/blog/singularity-grid-system)
-* [Susy](http://susy.oddbird.net/)
-* [Build Web Layouts Easily with Susy](http://css-tricks.com/build-web-layouts-easily-susy/)
-* [A Complete Tutorial to Susy 2](http://www.zell-weekeat.com/susy2-tutorial/)
-* [Sass Grids: From Neat to Susy](http://www.sitepoint.com/sass-grids-neat-susy/)
-* [Bootstrap's Grid System vs Susy: a Comparison](http://www.sitepoint.com/bootstraps-grid-system-vs-susy-comparison/)
-* [How to Use Susy: Superpowered Sass Grids](http://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
-* [A Creative Grid System with Sass and calc()](http://www.sitepoint.com/creative-grid-system-sass-calc/)
-
 ## SCSS-lint
 
 Analisar código é muito importante. Normalmente, seguir as diretrizes de um guia de estilo ajuda a reduzir a quantidade de erros de qualidade de código, mas ninguém é perfeito e há sempre algo a melhorar. Por isso pode-se dizer que fazer _linting_ a código é tão importante quanto documentá-lo.
@@ -63,15 +43,9 @@ Felizmente, as recomendações de SCSS-lint são bastante parecidas com as descr
 
 {% include snippets/tools/01/index.html %}
 
+Se você não está convencido da necessidade de uso do SCSS-lint, recomendo ler estes ótimos artigos: [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) e [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/).
+
 <div class="note">
   <p>Se pretendem ligar o SCSS-lint no _build process_ de Grunt, gostarão de saber que há um _plugin_ de Grunt para tal chamado <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Além disso, se estão à procura de uma aplicação boa que funcione com SCSS-lint e afins, o pessoal da <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) estão a trabalhar na <a href="https://houndci.com/">Hound</a>.</p>
 </div>
-
-###### Leitura adicional
-
-* [SCSS-lint](https://github.com/causes/scss-lint)
-* [Clean Up your Sass with SCSS-lint](http://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
-* [Improving Sass code quality on theguardian.com](http://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)
-* [grunt-scss-lint](https://github.com/ahmednuaman/grunt-scss-lint)
-* [An Auto-Enforceable SCSS Styleguide](http://davidtheclark.com/scss-lint-styleguide/)
