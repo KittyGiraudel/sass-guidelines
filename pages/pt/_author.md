@@ -1,3 +1,4 @@
+
 # Sobre o autor
 
 O meu nome é [Hugo Giraudel](http://hugogiraudel.com), sou um front-end francês de 25 anos, morando em Berlim (Alemanha) desde 2015 e, atualmente, trabalhando na [N26](https://n26.com).
