@@ -1,5 +1,5 @@
 
-# Přispivání
+# Přispívání
 
 Sass Guidelines je můj volnočasový projekt. Snad ani není potřeba dodávat, že udržovat všechno aktuální, zdokumentované a relevantní dá docela dost práce. Samozřejmě už jen toho, že je pro vás tento manuál přínosem, si velice cením!
 
