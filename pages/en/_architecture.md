@@ -206,7 +206,7 @@ There is another way of importing partials that I deem valid as well. On the bri
 
 ## About globbing
 
-In computer programming, glob patterns specify sets of filenames with wildcard characters, such as `*.scss`. To a general extend, globbing means matching a set of files based on an expression instead of a list of filenames. When applied to Sass, it means importing partials into the [main file](#main-file) with a glob pattern rather than by listing them individually. This would lead to a main file looking like this:
+In computer programming, glob patterns specify sets of filenames with wildcard characters, such as `*.scss`. To a general extent, globbing means matching a set of files based on an expression instead of a list of filenames. When applied to Sass, it means importing partials into the [main file](#main-file) with a glob pattern rather than by listing them individually. This would lead to a main file looking like this:
 
 {% include snippets/architecture/05/index.html %}
 
