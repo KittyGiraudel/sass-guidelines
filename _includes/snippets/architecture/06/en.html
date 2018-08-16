@@ -1,0 +1,87 @@
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Button-specific variables
+$button-color: $secondary-color;
+
+// … include any button-specific:
+// - mixins
+// - placeholders
+// - functions
+
+/**
+ * Buttons
+ */
+.button {
+  @include vertical-rhythm;
+  display: block;
+  padding: 1rem;
+  color: $button-color;
+  // … etc.
+
+  /**
+   * Inlined buttons on large screens
+   */
+  @include respond-to('medium') {
+    display: inline-block;
+  }
+}
+
+/**
+ * Icons within buttons
+ */
+.button > svg {
+  fill: currentcolor;
+  // … etc.
+}
+
+/**
+ * Inline button
+ */
+.button--inline {
+  display: inline-block;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Button-specific variables
+$button-color: $secondary-color
+
+// ... include any button-specific:
+// - mixins
+// - placeholders
+// - functions
+
+/**
+ * Buttons
+ */
+.button
+  +vertical-rhythm
+  display: block
+  padding: 1rem
+  color: $button-color
+  // ... etc.
+
+  /**
+   * Inlined buttons on large screens
+   */
+  +respond-to('medium')
+    display: inline-block
+}
+
+/**
+ * Icons within buttons
+ */
+.button > svg
+  fill: currentcolor
+  // ... etc.
+
+/**
+ * Inline button
+ */
+.button--inline
+  display: inline-block
+{% endhighlight %}
+  </div>
+</div>

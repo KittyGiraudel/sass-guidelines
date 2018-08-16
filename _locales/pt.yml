@@ -1,0 +1,50 @@
+configuration:
+  version: 1.3
+  label: Portuguese
+  prefix: /pt/
+  available: true
+  translators:
+    - name: Ricardo Magalhães
+      link: https://github.com/magalhini
+    - name: Gonçalo Morais
+      link: https://github.com/gnclmorais
+    - name: Sara Vieira
+      link: https://github.com/saravieira
+    - name: Eduardo Bouças
+      link: https://github.com/eduardoboucas
+    - name: João Lucas
+      link: https://github.com/JLammeer
+
+# For more information about the context around these translations, refer to
+# _locales/en.yml
+translations:
+  baseline: "Um guia de estilo opinado para escrever Sass com pés e cabeça, escalável e de fácil manutenção."
+  footer_content: "Escrito com amor por [Hugo Giraudel](http://hugogiraudel.com)"
+
+  aside_title: "Opcje"
+  aside_report: "Comunicar um problema"
+  aside_support: "Apoie o projeto"
+  aside_tweet: "Tweet isso"
+  aside_syntax: "Sintaxe de código"
+  aside_language: "Língua"
+  aside_close: "Feche o painel de opções"
+  aside_open: "Abra o painel de opções"
+
+  link_to_top: "De volta ao topo"
+  link_to_skip: "Ir para o conteúdo principal"
+  link_to_chapter: "Link para este capítulo:"
+  link_to_edit_chapter: "Edite este capítulo no GitHub:"
+  link_to_twitter: "Encontra-me no Twitter"
+
+  contributing_support_button: "Apoiar Sass Guidelines"
+  contributing_tweet_button: "Espalhar a palavra"
+
+  donate_content: "Se achou este Guia de Sass útil, por favor considere apoiá-lo."
+  donate_button: "Apoie o Guia de Sass"
+
+  note: "Nota"
+
+  image_color_functions: "Ilustração da diferença entre `lighten`/`darken` e `mix` por [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Gráfico demonstrativo de como os programadores ordenam as suas declarações de CSS"
+  image_sassdoc: "Documentação gerada por SassDoc"
+  image_wallpaper: "Fundo de parede por [Julien He](https://twitter.com/julien_he)"

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+CRITICAL_CSS_FILE=_includes/critical.css
+UTILITIES_JS_FILE=_includes/utilities.js
+DIST_CSS_FILE=_site/assets/css/main.css
+
+test_file ()
+{
+  FILE=$1
+  echo ""
+  echo "Testing file ${FILE}."
+  if [ -f ${FILE} ]; then
+    if [ ! -s ${FILE} ]; then
+      echo "File ${FILE} is empty. Aborting."
+      exit 1
+    fi
+  else
+    echo "File ${FILE} does not exist. Aborting."
+    exit 1
+  fi
+  echo "File ${FILE} appears to be correct."
+}
+
+test_file ${CRITICAL_CSS_FILE}
+
+if [ -d "_site" ]; then
+  test_file ${DIST_CSS_FILE}
+  test_file ${UTILITIES_JS_FILE}
+fi

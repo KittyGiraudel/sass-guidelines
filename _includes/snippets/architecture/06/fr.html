@@ -1,0 +1,87 @@
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Variables spécifiques aux boutons
+$button-color: $secondary-color;
+
+// … inclusion d’éléments spécifiques aux boutons :
+// - mixins
+// - placeholders
+// - fonctions
+
+/**
+ * Boutons
+ */
+.button {
+  @include vertical-rhythm;
+  display: block;
+  padding: 1rem;
+  color: $button-color;
+  // … etc.
+
+  /**
+   * Boutons en ligne sur larges écrans
+   */
+  @include respond-to('medium') {
+    display: inline-block;
+  }
+}
+
+/**
+ * Icônes à l’intérieur des boutons
+ */
+.button > svg {
+  fill: currentcolor;
+  // … etc.
+}
+
+/**
+ * Boutons en ligne
+ */
+.button--inline {
+  display: inline-block;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Variables spécifiques aux boutons
+$button-color: $secondary-color
+
+// … inclusion d’éléments spécifiques aux boutons :
+// - mixins
+// - placeholders
+// - fonctions
+
+/**
+ * Boutons
+ */
+.button
+  +vertical-rhythm
+  display: block
+  padding: 1rem
+  color: $button-color
+  // … etc.
+
+  /**
+   * Boutons en ligne sur larges écrans
+   */
+  +respond-to('medium')
+    display: inline-block
+}
+
+/**
+ * Icônes à l’intérieur des boutons
+ */
+.button > svg
+  fill: currentcolor
+  // … etc.
+
+/**
+ * Boutons en ligne
+ */
+.button--inline
+  display: inline-block
+{% endhighlight %}
+  </div>
+</div>

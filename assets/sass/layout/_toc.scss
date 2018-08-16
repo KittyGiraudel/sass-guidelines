@@ -1,0 +1,88 @@
+/**
+ * The Table of Contents is absolutely position/fixed only on large screens
+ */
+@include media('>large') {
+  /**
+   * ToC container
+   * 1. Absolutely positioned on the top left corner of main container
+   */
+  .toc {
+    background-color: rgb(255, 255, 255);
+    bottom: 0; /* 1 */
+    color: $dark-grey;
+    font-size: 0.8em;
+    left: 0; /* 1 */
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute; /* 1 */
+    top: 0; /* 1 */
+    width: $sidebar-width;
+    z-index: 10;
+  }
+
+  /**
+   * Direct list when ToC is sticky
+   */
+  .toc.sticky ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  /**
+   * Prevent the list from disappearing beneath the footer when at the bottom
+   * of the page
+   */
+  .toc.sticky-bottom ul {
+    bottom: 140px;
+    top: 0;
+    transform: none;
+  }
+
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px 10px;
+  }
+
+  .toc li {
+    border-bottom: 1px solid $light-grey;
+    margin-bottom: 0;
+    padding: 8px 0;
+  }
+
+  /**
+   * Remove bottom border from last item from ToC
+   */
+  .toc li:last-of-type {
+    border-bottom: 0;
+  }
+
+  /**
+   * Remove underline from links in ToC
+   */
+  .toc a {
+    text-decoration: none;
+  }
+
+  /**
+   * Highlight current section in ToC
+   */
+  .toc .in-viewport {
+    color: $light-pink;
+    font-weight: bold;
+  }
+
+  /**
+   * Hide link to ToC
+   * Hide ToC title on large screens, only displayed on small screens
+   */
+  .toc li:nth-of-type(3),
+  .toc h1 {
+    display: none;
+  }
+}

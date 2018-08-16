@@ -1,0 +1,67 @@
+/**
+ * Make all elements inherit from `html` box-sizing
+ */
+* {
+  box-sizing: inherit;
+}
+
+/**
+ * Redefine box-sizing on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Basic typography styles
+ */
+body {
+  color: $dark-grey;
+  font: 1.125em / 1.45 $text-font-stack;
+}
+
+
+/**
+ * Links
+ * 1. Reset styles from <button>
+ */
+a,
+.link-like {
+  background: 0; /* 1 */
+  border: 0; /* 1 */
+  color: inherit;
+  cursor: pointer;
+  padding: 0; /* 1 */
+  text-decoration: underline;
+  transition: 0.15s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $main-color;
+  }
+}
+
+/**
+ * Inline code
+ * 1. Make the text slightly smaller as the font looks bigger
+ */
+:not(pre) > code {
+  color: $dark-pink;
+  font-family: $code-font-stack;
+  font-size: 0.8em; /* 1 */
+  vertical-align: middle;
+}
+
+/**
+ * Reset fieldset styles to make it invisible
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.no-js .js-powered {
+  display: none;
+}

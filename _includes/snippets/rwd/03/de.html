@@ -1,0 +1,49 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Responsive-Manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Responsive-Manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
+      @content
+
+  @else
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.'
+{% endhighlight %}
+  </div>
+</div>

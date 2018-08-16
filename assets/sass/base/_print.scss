@@ -1,0 +1,103 @@
+
+@media print {
+  /**
+   * Page layout
+   */
+  @page {
+    margin: 1cm;
+    size: A4 portrait;
+  }
+
+  /**
+   * Move everything back to black and removed any superfluous shadow
+   */
+  *, ::before, ::after {
+    box-shadow: none !important;
+    color: rgb(0, 0, 0) !important;
+    text-shadow: none !important;
+  }
+
+  /**
+   * Show URLs after links
+   */
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-style: italic;
+    hyphens: auto;
+    opacity: 0.7;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+
+  /**
+   * Emphase code and quotes
+   */
+  .highlight,
+  blockquote {
+    border: 1px solid #999;
+    margin: 0;
+    padding: 0 0.5cm;
+    page-break-inside: avoid;
+  }
+
+  .highlight {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  /**
+   * Non-overflowing black and white images
+   */
+  img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    max-width: 100%;
+  }
+
+  /**
+   * Hide any superfluous element
+   * S1. Further reading links
+   * S2. Buttons
+   * S3. Option panel
+   * S4. Button to go back to top
+   * S5. Anchor links in headings
+   * S6. Content about translation on top
+   * S7. Table of contents
+   * S8. Sass-syntax code blocks
+   * S9. SVG icons
+   */
+  h6, h6 + ul,
+  .donate,
+  .button,
+  .aside,
+  .button-ui--back,
+  .anchor-link,
+  .translation-warning,
+  .toc,
+  [data-syntax='sass'],
+  svg {
+    display: none;
+  }
+
+  /**
+   * Remove border from bottom applied by critical styles
+   */
+  .header {
+    border-bottom: 0;
+  }
+
+  /**
+   * Avoid too large gaps before each new chapter
+   */
+  h1 {
+    margin-top: 3rem;
+  }
+
+  /**
+   * Avoid breaking page right after a title
+   */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}

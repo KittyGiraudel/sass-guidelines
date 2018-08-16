@@ -1,0 +1,34 @@
+/**
+ * Donate blocks
+ */
+.donate {
+  background-color: $donate-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: $vertical-rhythm-baseline;
+  padding: $vertical-rhythm-baseline;
+  text-align: center;
+}
+
+/**
+ * Donate module inner wrapper
+ */
+.donate__content {
+  @include container;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Button from donate module
+ */
+.donate .button {
+  background-color: rgb(255, 255, 255);
+  margin-left: 0;
+  margin-right: 0;
+}

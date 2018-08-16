@@ -1,0 +1,50 @@
+/**
+ * Header
+ */
+.header {
+  background: $main-color;
+  border-bottom: 0.5em solid darken($secondary-color, 5%);
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/**
+ * Main title
+ */
+.title {
+  $shadows: ();
+  @for $i from 1 through 120 {
+    $shadows: append($shadows, ($i * 1px) ($i * 1px) darken($secondary-color, 5%), comma);
+  }
+
+  font-size: 6em;
+  margin: 0;
+  max-width: none;
+  text-shadow: $shadows;
+
+  @include media('<small') {
+    font-size: 3em;
+  }
+}
+
+/**
+ * Site Baseline
+ */
+.baseline {
+  @include container;
+  color: $main-color;
+  font-size: 2em;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-transform: initial;
+
+  @include media('>medium') {
+    font-size: 2.5em;
+  }
+
+  @include media('>large') {
+    max-width: $main-width;
+  }
+}

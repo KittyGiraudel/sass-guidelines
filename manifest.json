@@ -1,0 +1,15 @@
+{
+  "short_name": "Sass Guide",
+  "name": "Sass Guidelines",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#cc6699",
+  "theme_color": "#cc6699"
+}

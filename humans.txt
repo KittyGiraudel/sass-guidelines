@@ -1,0 +1,35 @@
+---
+---
+
+/* TEAM */
+
+    Author: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+    Designer: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+    Front-end developer: Hugo Giraudel
+    Contact: @HugoGiraudel
+    From: Berlin, Germany
+
+    Front-end developer: Moritz Kröger
+    Contact: @morkro
+    From: Berlin, Germany
+
+/* THANKS */
+
+    {% for language in site.languages %}{% for translator in site.data[language].configuration.translators %}
+    {{ site.data[language].configuration.label }} translator: {{ translator.name }}
+    Contact: {{ translator.link }}
+    {% endfor %}{% endfor %}
+
+/* SITE */
+
+
+    Last update: {{ site.time | date_to_long_string }}
+    Languages: HTML, CSS (Sass), JavaScript
+    Components: Jekyll
+    Hosting: Netlify

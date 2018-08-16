@@ -1,0 +1,42 @@
+configuration:
+  version: 1.1
+  label: Czech
+  prefix: /cz/
+  available: true
+  translators:
+    - name: Honza Bittner
+      link: https://github.com/HoBi
+
+# For more information about the context around these translations, refer to
+# _locales/en.yml
+translations:
+  baseline: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
+  footer_content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"
+
+  aside_title: "Možnosti"
+  aside_report: "Nahlásit problém"
+  aside_support: "Podpořit projekt"
+  aside_tweet: "Tweetněte o tom"
+  aside_syntax: "Syntaxe kódu"
+  aside_language: "Jazyk"
+  aside_close: "Zavřít nastavení"
+  aside_open: "Otevřít nastavení"
+
+  link_to_top: "Zpět na začátek"
+  link_to_skip: "Přejít k hlavnímu obsahu"
+  link_to_chapter: "Odkaz k této kapitole:"
+  link_to_edit_chapter: "Upravit tuto kapitolu o GitHub:"
+  link_to_twitter: "Sledujte mě na Twitteru"
+
+  contributing_support_button: "Podpořit Sass Guidelines"
+  contributing_tweet_button: "Sdílet"
+
+  donate_button: "Podpořit Sass Guidelines"
+  donate_content: "Pokud se vám Sass Guidelines líbí, zvažte, prosím, jeho podporu."
+
+  note: "Poznámka"
+
+  image_color_functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
+  image_sassdoc: "Dokumentace generována ze SassDoc"
+  image_wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"

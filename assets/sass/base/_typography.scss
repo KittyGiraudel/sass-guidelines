@@ -1,0 +1,76 @@
+/**
+ * Poor man's vertical rhythm
+ */
+.chapter {
+  h1, h2, h3, h6, p, ul, ol {
+    margin-bottom: $vertical-rhythm-baseline;
+  }
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  list-style-position: inside;
+  padding-left: 3px;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/**
+ * Headings
+ * 1. Position context for absolutely positioned anchor
+ */
+h1, h2, h3, h6 {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  position: relative; /* 1 */
+  text-transform: capitalize;
+
+  /**
+   * Prevent code inside headings from being capitalized
+   */
+  code {
+    text-transform: initial;
+  }
+}
+
+/**
+ * Chapter titles
+ */
+h1 {
+  font-weight: 700;
+  margin-top: 6rem;
+}
+
+/**
+ * Section headings
+ */
+h2 {
+  color: $secondary-color;
+  margin-top: 3rem;
+}
+
+/**
+ * Sub-headings and “Further readings” headings
+ */
+h3, h6 {
+  color: rgb(107, 120, 133);
+  font-size: 1em;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+/**
+ * Russian and German do not capitalize every word in a header
+ * See https://github.com/HugoGiraudel/sass-guidelines/issues/163
+ */
+:lang(de),
+:lang(ru) {
+  h1, h2, h3, h6 {
+    text-transform: initial;
+  }
+}

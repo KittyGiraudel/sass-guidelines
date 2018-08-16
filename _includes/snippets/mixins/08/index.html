@@ -1,0 +1,27 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+.foo {
+  @include center;
+}
+
+// Nope
+.foo {
+  @include center();
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+.foo
+  +center
+
+// Nope
+.foo
+  +center()
+{% endhighlight %}
+  </div>
+</div>

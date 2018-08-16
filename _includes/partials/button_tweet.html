@@ -1,0 +1,11 @@
+{% assign class = "button " | append: include.class %}
+{% assign text = include.text | default: site.data[page.language].translations.contributing_tweet_button %}
+{% capture tweet %}{{ site.title }}, {{ site.description }} by @{{ site.twitter_username }} –{% endcapture %}
+{% capture href %}https://twitter.com/share?text={{ tweet | cgi_escape }}&url={{ site.url }}{% endcapture %}
+
+{% include partials/button.html
+  icon = "twitter"
+  content = text
+  href = href
+  target = "_blank"
+%}

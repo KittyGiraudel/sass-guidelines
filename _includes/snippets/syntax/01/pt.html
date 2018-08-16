@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+.foo {
+  display: block;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+// Nope
+.foo {
+    display: block; overflow: hidden;
+
+    padding: 0 1em;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Uma vez que Sass força estes padrões de indentação,
+// Não há como errar aqui.
+.foo
+  display: block
+  overflow: hidden
+  padding: 0 1em
+{% endhighlight %}
+  </div>
+</div>

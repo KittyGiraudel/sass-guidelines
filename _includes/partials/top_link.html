@@ -1,0 +1,10 @@
+{% assign class = "button-ui " | append: "button-ui--back " | append: include.class %}
+{% assign href = include.href | default: "#top" %}
+{% assign text = site.data[page.language].translations.link_to_top %}
+
+<a href="{{ href }}" class="{{ class }}">
+  {% include partials/icon.html
+    icon = "up"
+    title = text
+  %}
+</a>
