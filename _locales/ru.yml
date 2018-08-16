@@ -1,0 +1,44 @@
+configuration:
+  version: 1.0
+  label: Russian
+  prefix: /ru/
+  available: true
+  translators:
+    - name: Даниил Пронин
+      link: https://github.com/grawl
+    - name: Pavel Demyanenko
+      link: https://github.com/PavelDemyanenko
+
+# For more information about the context around these translations, refer to
+# _locales/en.yml
+translations:
+  baseline: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
+  footer_content: "Сделал с любовью [Хьюго Гираудел](http://hugogiraudel.com), перевели [Даниил Пронин](http://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
+
+  aside_title: "Опции"
+  aside_report: "Сообщить о проблеме"
+  aside_support: "Поддержать проект"
+  aside_tweet: "Сообщи об этом"
+  aside_syntax: "синтаксис кода"
+  aside_language: "язык"
+  aside_close: "Закройте панель опций"
+  aside_open: "Откройте панель опций"
+
+  link_to_top: "Вернуться к началу"
+  link_to_skip: "Перейти к основному содержанию"
+  link_to_chapter: "Ссылка на эту главу:"
+  link_to_edit_chapter: "Редактировать эту главу на GitHub:"
+  link_to_twitter: "Найди меня на Твиттере"
+
+  contributing_support_button: "Поддержите руководство Sass"
+  contributing_tweet_button: "Расскажите о руководстве Sass"
+
+  donate_content: "Если вам понравилось Sass руководство, пожалуйста, поддержите его."
+  donate_button: "Поддержите Sass руководство"
+
+  note: "Заметка"
+
+  image_color_functions: "Иллюстрация разницы между функциями `lighten`/`darken` и `mix` в Sass от [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "График, показывающий, как разработчики упорядочивают свой CSS"
+  image_sassdoc: "Документация, сгенерированная в SassDoc"
+  image_wallpaper: "Обои от [Julien He](https://twitter.com/julien_he)"

@@ -1,0 +1,17 @@
+{% assign class = "footer " | append: include.class %}
+{% assign content = site.data[page.language].translations.footer_content | markdownify %}
+{% assign year = site.time | date: "%Y" %}
+{% assign version = "v" | append: site.data[page.language].configuration.version %}
+{% assign license = "CC BY 4.0" %}
+{% assign license_href = "https://creativecommons.org/licenses/by/4.0/deed." | append: page.language %}
+
+<footer class="{{ class }}" role="contentinfo">
+  <div class="container">
+    <p class="footer__metadata">
+      © {{ year }} — {{ version }} — <a href="{{ license_href }}">{{ license }}</a>
+    </p>
+    <div class="footer__authors">
+      {{ content }}
+    </div>
+  </div>
+</footer>

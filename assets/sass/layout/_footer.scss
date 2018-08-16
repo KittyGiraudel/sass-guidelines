@@ -1,0 +1,17 @@
+/**
+ * Footer
+ */
+.footer {
+  background-color: $note-background;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer__metadata {
+  margin-bottom: 0 !important;
+}
+
+.footer__authors {
+  font-size: 0.9em;
+}

@@ -1,0 +1,72 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Mixin το οποίο βοηθάει στον ορισμό του `width` και του `height` ταυτόχρονα.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - Element’s `width`
+/// @param {Length} $height [$width] - Element’s `height`
+///
+/// @example scss - Usage
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///     @include size(100%, 10em);
+///   }
+///
+/// @example css - CSS output
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Mixin το οποίο βοηθάει στον ορισμό του `width` και του `height` ταυτόχρονα.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - Element's `width`
+/// @param {Length} $height ($width) - Element's `height`
+///
+/// @example scss - Usage
+///   .foo
+///     +size(10em)
+///
+///   .bar
+///     +size(100%, 10em)
+///
+/// @example css - CSS output
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+=size($width, $height: $width)
+  width: $width
+  height: $height
+{% endhighlight %}
+  </div>
+</div>

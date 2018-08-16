@@ -1,0 +1,90 @@
+/// Vertical rhythm baseline
+/// @type Length
+$vertical-rhythm-baseline: 1.5rem;
+
+/// Regular font stack
+/// @type List
+$text-font-stack: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+/// Code font stack
+/// @type List
+$code-font-stack: 'Source Code Pro', 'Courier New', monospace;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(238, 238, 238);
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68);
+
+/// Light pink
+/// @type Color
+$light-pink: rgb(204, 102, 153);
+
+/// Dark pink
+/// @type Color
+$dark-pink: rgb(179, 115, 153);
+
+/// Light yellow
+/// @type Color
+$light-yellow: rgb(242, 236, 228);
+
+/// Light green
+/// @type Color
+$light-green: rgb(210, 225, 221);
+
+/// Main color
+/// @type Color
+/// @require $light-pink
+$main-color: $light-pink;
+
+/// Secondary color
+/// @type Color
+/// @require $dark-pink
+$secondary-color: $dark-pink;
+
+/// Note background
+/// @type Color
+/// @require $light-grey
+$note-background: $light-grey;
+
+/// Quote background
+/// @type Color
+/// @require $light-green
+$quote-background: $light-green;
+
+/// Code background
+/// @type Color
+/// @require $dark-grey
+$code-background: $dark-grey;
+
+/// Donate background
+/// @type Color
+/// @require $light-yellow
+$donate-background: $light-yellow;
+
+/// Figure background
+/// @type Color
+/// @require $light-yellow
+$figure-background: $light-grey;
+
+/// ToC width
+/// @type Length
+$sidebar-width: 300px;
+
+/// Main container width
+/// @type Length
+$main-width: 975px;
+
+/// Container width
+/// @type Length
+$content-width: 650px;
+
+/// Breakpoints
+/// @type Map
+$breakpoints: (
+  'small': 600px,
+  'medium': 801px,
+  'large': $main-width
+);

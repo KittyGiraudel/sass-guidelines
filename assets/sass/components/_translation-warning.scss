@@ -1,0 +1,22 @@
+/**
+ * Translation warning block
+ * 1. Make it proheminent
+ */
+.translation-warning {
+  background-color: $quote-background;
+  font-size: 1.2em; /* 1 */
+  margin: 0 0 $vertical-rhythm-baseline;
+  padding: 1rem 0;
+
+  @include media('>medium') {
+    padding: 1rem;
+  }
+}
+
+.translation-warning__inner {
+  @include container;
+
+  @include media('>large') {
+    max-width: $main-width;
+  }
+}

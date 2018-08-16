@@ -1,0 +1,133 @@
+.aside {
+  display: none;
+}
+
+.js .aside.is-open,
+.no-js .aside:target {
+  display: block;
+}
+
+/**
+ * Aside options panel
+ * 1. Fixed offscreen
+ * 2. Full width on small screens
+ */
+.aside__content {
+  background-color: rgb(255, 255, 255);
+  bottom: 0; /* 1 */
+  max-width: 100%; /* 2 */
+  position: fixed; /* 1 */
+  right: 0; /* 1 */
+  top: 0; /* 1 */
+  width: $sidebar-width;
+  z-index: 30;
+}
+
+.aside__overlay {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+/**
+ * Buttons from options panel
+ */
+.aside .button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+/**
+ * Sub-sections from options panel
+ */
+.aside__section {
+  border-bottom: 1px solid $light-grey;
+  padding: 1rem;
+}
+
+/**
+ * Main title from options panel
+ */
+.aside__title {
+  background-color: $light-pink;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+/**
+ * Headings from options panel
+ */
+.aside__heading {
+  color: $dark-grey;
+  font-size: 0.9em;
+  margin: 0 0 0.5em;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+/**
+ * Close button from options panel
+ * 1. Vertical alignment inside aside header
+ * 2. Enlarging without positioning issues
+ */
+.aside__close {
+  background-color: transparent;
+  border: 0;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0.5em;
+  top: 0.4em; /* 1 */
+  -webkit-transform: scale(1.25); /* 2 */
+  -moz-transform: scale(1.25); /* 2 */
+  transform: scale(1.25); /* 2 */
+  text-decoration: none;
+}
+
+.aside__close:hover,
+.aside__close:active {
+  color: inherit;
+}
+
+/**
+ * Sass/SCSS radio list
+ * 1. Reset default list styles
+ * 2. Cancel padding from list items
+ * 3. Clear inner floats
+ */
+.aside__radio-list {
+  list-style: none; /* 1 */
+  margin: -0.5rem; /* 2 */
+  overflow: hidden; /* 3 */
+  padding: 0; /* 1 */
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  /**
+   * Visual fix for input placement
+   */
+  input {
+    -webkit-transform: translate(-1px, -1px);
+    -ms-transform: translate(-1px, -1px);
+    transform: translate(-1px, -1px);
+  }
+
+  /**
+   * Items are positioned on the same line, half width each
+   */
+  li {
+    float: left;
+    margin: 0;
+    padding: 0 0.5rem;
+    width: 50%;
+  }
+}

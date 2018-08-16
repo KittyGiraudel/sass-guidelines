@@ -1,0 +1,9 @@
+{% assign href = "https://twitter.com/" | append: site.twitter_username %}
+{% assign text = site.data[page.language].translations.link_to_twitter %}
+
+{% include partials/button.html
+  icon = "twitter"
+  content = text
+  href = href
+  target = "_blank"
+%}

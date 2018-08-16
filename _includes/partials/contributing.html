@@ -1,0 +1,10 @@
+{% assign class = "button-wrapper " | append: include.class %}
+
+{::options parse_block_html="false" /}
+
+<div class="{{ class }}">
+  {% include partials/button_donate.html %}
+  {% include partials/button_tweet.html %}
+</div>
+
+{::options parse_block_html="true" /}

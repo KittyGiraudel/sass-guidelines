@@ -1,0 +1,72 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Mixin pomagający zdefiniować jednocześnie `width` i `height`.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - `width` elementu
+/// @param {Length} $height [$width] - `height` elementu
+///
+/// @example scss - Przykład użycia
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///     @include size(100%, 10em);
+///   }
+///
+/// @example css - Rezultat w CSSie
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Mixin pomagający zdefiniować jednocześnie `width` i `height`.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - `width` elementu
+/// @param {Length} $height ($width) - `height` elementu
+///
+/// @example scss - Przykład użycia
+///   .foo
+///     +size(10em)
+///
+///   .bar
+///     +size(100%, 10em)
+///
+/// @example css - Rezultat w CSSie
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+=size($width, $height: $width)
+  width: $width
+  height: $height
+{% endhighlight %}
+  </div>
+</div>

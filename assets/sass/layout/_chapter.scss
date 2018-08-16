@@ -1,0 +1,53 @@
+.chapter {
+  position: relative;
+}
+
+.chapter::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.chapter__buttons {
+  @include media('>small') {
+    margin: 0;
+    padding: 8px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90px;
+  }
+}
+
+.chapter__edit,
+.chapter__link {
+  display: inline-block;
+  margin: 0;
+}
+
+.chapter__edit {
+  margin-left: 10px;
+}
+
+@include media('<=small') {
+  .chapter > h1 {
+    text-align: center;
+  }
+
+  .chapter__buttons {
+    position: relative;
+  }
+
+  .chapter__buttons::before {
+    background-color: $light-grey;
+    content: '';
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: -8px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 55px;
+  }
+}

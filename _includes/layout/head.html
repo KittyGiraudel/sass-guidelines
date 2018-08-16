@@ -1,0 +1,74 @@
+<head>
+  <!-- Basic meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Site title -->
+  {% capture site_title %}
+  {% if page.title %}{{ page.title }}{% elsif page.language != 'en' %}{{ site.title }} — {{ site.data[page.language].configuration.label }} translation{% else %}{{ site.title }}{% endif %}
+  {% endcapture %}
+  <title>{{ site_title | strip }}</title>
+
+  <!-- Site description & keywords -->
+  <meta name="description" content="{{ site.data[page.language].translations.baseline }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+
+  <!-- Author -->
+  {% capture authors %}Hugo Giraudel{% for author in site.data[page.language].configuration.translators %}, {{ author.name }}{% endfor %}{% endcapture %}
+  <meta name="author" content="{{ authors }}">
+  <link rel="author" href="/humans.txt">
+
+  <!-- Site URL -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+  <!-- Critical CSS -->
+  <style>
+  {% include critical.css %}{% if site.data[page.language].translations.note != "" %}:lang({{ page.language }}) .note>p:first-child::before{content:"{{ site.data[page.language].translations.note }} — "}{% endif %}
+  </style>
+
+  <!-- JavaScript utilities -->
+  <script>
+  (function(c){c.remove('no-js');c.add('js')})(document.documentElement.classList);
+  {% include utilities.js %}
+  </script>
+
+  <!-- Asynchronous CSS and fonts -->
+  <link rel="preload" href="/assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+  <script>
+  loadFont('sg', '/assets/css/fonts/data-woff.css', '/assets/css/fonts/data-woff2.css');
+  </script>
+  <noscript>
+    <link rel="stylesheet" href="/assets/css/main.css" media="screen">
+  </noscript>
+
+  <!-- Responsive images setup -->
+  <script src="/assets/js/picturefill.min.js" async></script>
+
+    <!-- PWA -->
+  <meta name="theme-color" content="#cc6699">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <!--[if IE]><link rel="shortcut icon" href="/assets/images/favicon.ico"><![endif]-->
+
+  <!-- SVG for JavaScript usage -->
+  {% capture link_to_chapter %}{{ site.data[page.language].translations.link_to_chapter | default: site.data.en.translations.link_to_chapter }}{% endcapture %}
+  {% capture edit_chapter %}{{ site.data[page.language].translations.link_to_edit_chapter | default: site.data.en.translations.link_to_edit_chapter }}{% endcapture %}
+
+  <meta name="svg-link-icon" content='{% include partials/icon.html icon="pin" title=link_to_chapter %}'>
+  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title=edit_chapter %}'>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site_title | strip }}">
+  <meta property="og:description" content="{{ site.data[page.language].translations.baseline }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta property="og:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ site_title | strip }}">
+  <meta name="twitter:description" content="{{ site.data[page.language].translations.baseline }}">
+  <meta name="twitter:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
+</head>

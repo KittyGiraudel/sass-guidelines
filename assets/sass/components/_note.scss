@@ -1,0 +1,27 @@
+/**
+ * Notes
+ */
+.note {
+  background-color: $note-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: $vertical-rhythm-baseline;
+  padding: $vertical-rhythm-baseline;
+
+  /**
+   * Prevent any odd gap from nested elements' margin
+   */
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  /**
+   * Bold the “Note” (or translated equivalent) word
+   */
+  > p:first-child::before {
+    font-weight: 700;
+  }
+}

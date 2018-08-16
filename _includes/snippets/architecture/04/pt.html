@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Arranjar a navegação.
+ *
+ * Alguém usou um ID no código do cabeçalho (`#header a {}`) que
+ * passa por cima dos seletores da navegação (`.site-nav a {}`).
+ * Usar !important para sobrepor estes até ter tempo de refazer
+ * o código do cabeçalho.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Arranjar a navegação.
+ *
+ * Alguém usou um ID no código do cabeçalho (`#header a {}`) que
+ * passa por cima dos seletores da navegação (`.site-nav a {}`).
+ * Usar !important para sobrepor estes até ter tempo de refazer
+ * o código do cabeçalho.
+ */
+.site-nav a
+    color: #BADA55 !important
+{% endhighlight %}
+  </div>
+</div>

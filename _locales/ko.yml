@@ -1,0 +1,42 @@
+configuration:
+  version: 1.1
+  label: Korean
+  prefix: /ko/
+  available: true
+  translators:
+    - name: Donghee Kim
+      link: https://github.com/kimdhoe
+
+# For more information about the context around these translations, refer to
+# _locales/en.yml
+translations:
+  baseline: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
+  footer_content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
+
+  aside_title: "옵션"
+  aside_report: "문제 신고"
+  aside_support: "프로젝트 지원"
+  aside_tweet: "그것을 짹짹"
+  aside_syntax: "코드 구문"
+  aside_language: "언어"
+  aside_close: "옵션 패널 닫기"
+  aside_open: "옵션 패널 열기"
+
+  link_to_top: "맨 위로"
+  link_to_skip: "주요 내용으로 건너뛰기"
+  link_to_chapter: "이 장으로 바로 가기:"
+  link_to_edit_chapter: "GitHub에서 이 장을 편집하기:"
+  link_to_twitter: "트위터에서 만나기"
+
+  contributing_support_button: "Sass Guidelines 후원하기"
+  contributing_tweet_button: "입소문내기"
+
+  donate_content: "Sass Guidelines가 맘에 드신다면 후원을 고려해주시기 바랍니다."
+  donate_button: "Sass Guidelines 후원하기"
+
+  note: "주"
+
+  image_color_functions: "`lighten`/`darken` 과 `mix` 사이의 차이를 보여주는 삽화 by [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "개발자들의 CSS 선언 정렬 방식을 보여주는 도표"
+  image_sassdoc: "SassDoc에 의해 생성된 문서"
+  image_wallpaper: "배경화면 by [Julien He](https://twitter.com/julien_he)"

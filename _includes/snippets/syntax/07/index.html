@@ -1,0 +1,31 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+.foo {
+  padding: 2em;
+  opacity: 0.5;
+}
+
+// Nope
+.foo {
+  padding: 2.0em;
+  opacity: .5;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Yep
+.foo
+  padding: 2em
+  opacity: 0.5
+
+// Nope
+.foo
+  padding: 2.0em
+  opacity: .5
+{% endhighlight %}
+  </div>
+</div>

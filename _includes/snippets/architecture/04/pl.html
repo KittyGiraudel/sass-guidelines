@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Fix dla szczegółowości nawigacji.
+ *
+ * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
+ * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
+ * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Fix dla szczegółowości nawigacji.
+ *
+ * Ktoś raczył użyć ID w kodzie nagłowka (`#header a {}`), który przysłania
+ * selektory nawigacji (`.site-nav a {}`). Użyj !important by go nadpisać
+ * do czasu gdy ktoś naprawi to paskudztwo w nagłówku.
+ */
+.site-nav a
+    color: #BADA55 !important
+{% endhighlight %}
+  </div>
+</div>

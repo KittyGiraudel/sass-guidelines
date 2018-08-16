@@ -1,0 +1,26 @@
+/**
+ * Images
+ */
+figure {
+  background-color: $figure-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: $vertical-rhythm-baseline;
+}
+
+/**
+ * 1. Prevent image from being taller than (or even as tall as) viewport
+ */
+figure img {
+  display: block;
+  height: auto;
+  margin-bottom: 1rem;
+  max-height: 80vh; /* 1 */
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+}

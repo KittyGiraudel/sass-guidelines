@@ -1,0 +1,9 @@
+{% assign class = "button-wrapper " | append: include.class %}
+
+{::options parse_block_html="false" /}
+
+<div class="{{ class }}">
+  {% include partials/button_twitter.html %}
+</div>
+
+{::options parse_block_html="true" /}

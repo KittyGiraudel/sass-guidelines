@@ -1,0 +1,11 @@
+{% assign href = include.href | default: "#options-panel" %}
+{% assign class = "button-ui " | append: "button-ui--toggle " | append: include.class %}
+{% assign text = site.data[page.language].translations.aside_open %}
+
+<!-- Replaced with JavaScript with a proper button when JavaScript is enabled -->
+<a href="{{ href }}" class="{{ class }}">
+  {% include partials/icon.html
+    icon = "settings"
+    title = text
+  %}
+</a>

@@ -1,0 +1,142 @@
+/**
+ * Dual code blocks
+ * SCSS is default, Sass is hidden
+ */
+[data-syntax='scss'],
+.sass [data-syntax='sass'] {
+  display: block;
+}
+
+[data-syntax='sass'],
+.sass [data-syntax='scss'] {
+  display: none;
+}
+
+/**
+ * Code blocks
+ */
+.highlight {
+  background-color: $code-background;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgb(255, 255, 255);
+  margin: 0 0 $vertical-rhythm-baseline;
+}
+
+/**
+ * <pre> element direct child of `.highlight` modules
+ */
+.highlight > pre {
+  margin: 0;
+}
+
+.highlight code,
+.highlight pre {
+  color: rgb(253, 206, 147);
+  font-family: $code-font-stack;
+}
+
+.highlight .err {
+  color: rgb(227, 113, 112);
+  background-color: rgb(61, 53, 53);
+}
+
+.highlight .k {
+  color: rgb(240, 223, 175);
+}
+
+.highlight .n {
+  color: rgb(220, 220, 204);
+}
+
+.highlight .o {
+  color: rgb(240, 239, 208);
+}
+
+.highlight .p {
+  // Slightly enlighten this color which is too dark
+  color: lighten(rgb(65, 112, 111), 15%);
+}
+
+.highlight .cm {
+  color: rgb(127, 159, 127);
+}
+
+.highlight .c1 {
+  color: rgb(127, 159, 127);
+}
+
+.highlight .m {
+  color: rgb(140, 208, 211);
+}
+
+.highlight .s {
+  color: rgb(204, 147, 147);
+}
+
+.highlight .na {
+  color: rgb(154, 195, 159);
+}
+
+.highlight .nb {
+  color: rgb(239, 239, 143);
+}
+
+.highlight .nc {
+  color: rgb(239, 239, 143);
+}
+
+.highlight .no {
+  color: rgb(204, 204, 204);
+}
+
+.highlight .nd {
+  color: rgb(204, 204, 204);
+}
+
+.highlight .nf {
+  color: rgb(239, 239, 143);
+}
+
+.highlight .nl {
+  color: rgb(204, 204, 204);
+}
+
+.highlight .nt {
+  color: rgb(154, 195, 159);
+}
+
+.highlight .nv {
+  color: rgb(220, 220, 204);
+}
+
+.highlight .ow {
+  color: rgb(240, 239, 208);
+}
+
+.highlight .mh {
+  color: rgb(140, 208, 211);
+}
+
+.highlight .mi {
+  color: rgb(140, 208, 211);
+}
+
+.highlight .s2 {
+  color: rgb(204, 147, 147);
+}
+
+.highlight .si {
+  color: rgb(204, 147, 147);
+}
+
+.highlight .sx {
+  color: rgb(204, 147, 147);
+}
+
+.highlight .s1 {
+  color: rgb(204, 147, 147);
+}
+
+.highlight .bp {
+  color: rgb(239, 239, 143);
+}

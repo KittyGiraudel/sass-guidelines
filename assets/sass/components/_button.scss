@@ -1,0 +1,98 @@
+/**
+ * Buttons
+ * 1. Full width buttons on small screens
+ */
+.button,
+.button-ui {
+  border: 3px solid;
+  border-radius: 1337px;
+  cursor: pointer;
+  display: block; /* 1 */
+  text-align: center;
+  text-decoration: none;
+}
+
+/**
+ * Regular buttons
+ */
+.button {
+  color: $secondary-color;
+  margin: 0 1rem $vertical-rhythm-baseline;
+  padding: 1rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $main-color;
+  }
+
+  /**
+   * Inlined buttons on large screens
+   */
+  @include media('>medium') {
+    display: inline-block;
+  }
+}
+
+/**
+ * Icons within buttons
+ * 1. Make them same color as text
+ * 2. Adjust vertical align
+ */
+.button svg {
+  fill: currentcolor; /* 1 */
+  -webkit-transform: translateY(1px); /* 2 */
+  -ms-transform: translateY(1px); /* 2 */
+  transform: translateY(1px); /* 2 */
+}
+
+/**
+ * Button wrapper to horizontally center a button
+ */
+.button-wrapper {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/**
+ * UI specific buttons
+ */
+.button-ui {
+  background-color: rgb(255, 255, 255);
+  color: rgb(170, 170, 170);
+  font-size: 0.8em;
+  margin: 1rem;
+  padding: 0.5rem;
+  z-index: 5;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $secondary-color;
+  }
+}
+
+/**
+ * Icon inside UI button
+ */
+.button-ui svg {
+  display: block;
+  fill: currentcolor;
+  margin: 0 auto;
+}
+
+.button-ui--back,
+.button-ui--toggle {
+  left: auto;
+  position: fixed;
+  right: 0;
+  will-change: transform;
+}
+
+.button-ui--back {
+  bottom: 50px;
+}
+
+.button-ui--toggle {
+  bottom: 0;
+}

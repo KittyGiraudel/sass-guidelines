@@ -1,0 +1,13 @@
+{% assign class = "donate " | append: include.class %}
+{% assign text = site.data[page.language].translations.donate_content %}
+
+{::options parse_block_html="false" /}
+
+<div class="{{ class }}">
+  <div class="donate__content">
+    <p>{{ text }}</p>
+    {% include partials/button_donate.html %}
+  </div>
+</div>
+
+{::options parse_block_html="true" /}

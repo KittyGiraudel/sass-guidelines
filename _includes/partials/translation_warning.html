@@ -1,0 +1,22 @@
+{% assign class = "translation-warning " | append: include.class %}
+
+{% if page.language == "en" %}
+
+<div class="{{ class }}">
+  <div class="translation-warning__inner">
+    <p>The Sass Guidelines project has been translated into several languages by <a target="_blank" href="https://github.com/HugoGiraudel/sass-guidelines/issues/96" rel="noopener noreferrer">generous contributors</a>. Open the <a href="#options-panel" class="link-like">options panel</a> to switch.</p>
+  </div>
+</div>
+
+{% else %}
+
+{% capture translators %}{% for translator in site.data[page.language].configuration.translators %}<a href="{{ translator.link }}" target="_blank" rel="noopener noreferrer">{{ translator.name }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}{% endcapture %}
+
+<div class="{{ class }}">
+  <div class="translation-warning__inner">
+    <p>You are viewing the {{ site.data[page.language].configuration.label }} translation by {{ translators }} of the original <a href="/">Sass Guidelines</a> from <a target="_blank" href="http://hugogiraudel.com" rel="noopener noreferrer">Hugo Giraudel</a>.</p>
+    <p>This version is exclusively maintained by contributors without the review of the main author, therefore might not be completely up-to-date{% if site.data[page.language].configuration.version != site.data.en.configuration.version %}, especially since it is currently in version {{ site.data[page.language].configuration.version }} while the <a href="/">English version</a> is in version {{ site.data.en.configuration.version }}{% endif %}.</p>
+  </div>
+</div>
+
+{% endif %}

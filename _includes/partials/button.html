@@ -1,0 +1,15 @@
+{% assign class = "button " | append: include.class %}
+{% assign href = include.href | default: "#" %}
+{% assign content = include.content %}
+{% assign icon = include.icon %}
+{% assign target = include.target %}
+
+<a href="{{ href }}"
+   class="{{ class }}"
+   target="{{ target }}"
+   {% if target == "_blank" %}rel="noopener noreferrer"{% endif %}>
+{% if icon %}
+{% include partials/icon.html icon = icon %}
+{% endif %}
+{{ content }}
+</a>
