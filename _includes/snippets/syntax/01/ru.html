@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Yep
+.foo {
+  display: block;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+// Nope
+.foo {
+    display: block; overflow: hidden;
+
+    padding: 0 1em;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Так как Sass использует отступозависивый синтаксис,
+// то и не существует неправильного способа форматирования
+.foo
+  display: block
+  overflow: hidden
+  padding: 0 1em
+{% endhighlight %}
+  </div>
+</div>

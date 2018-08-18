@@ -1,0 +1,74 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Примесь позволяет определять `width` и `height` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - `width` элемента
+/// @param {Length} $height ($width) - `height` элемента
+///
+/// @example scss - Использование
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///    @include size(100%, 10em);
+///   }
+///
+/// @example css - Вывод CSS
+///   .foo {
+///    width: 10em;
+///    height: 10em;
+///   }
+///
+///   .bar {
+///    width: 100%;
+///    height: 10em;
+///   }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Примесь позволяет определять `width` и `height` одновременно.
+///
+/// @author Hugo Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - `width` элемента
+/// @param {Length} $height ($width) - `height` элемента
+///
+/// @example scss - Использование
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///    @include size(100%, 10em);
+///   }
+///
+/// @example css - Вывод CSS
+///   .foo {
+///    width: 10em;
+///    height: 10em;
+///   }
+///
+///   .bar {
+///    width: 100%;
+///    height: 10em;
+///   }
+=size($width, $height: $width)
+  width: $width
+  height: $height
+{% endhighlight %}
+  </div>
+</div>

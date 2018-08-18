@@ -1,0 +1,24 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Примесь для предоставления простого API вложенности
+/// @param {String} $selector - Selector
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Примесь для предоставления простого API вложенности
+/// @param {String} $selector - Selector
+=when-inside($selector) {
+  #{$selector} &
+    @content
+}
+{% endhighlight %}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Особое исправление навигации.
+ *
+ * Кто-то использовал ID в коде шапки (`#header a {}`), который перекрывает
+ * селекторы nav (`.site-nav a {}`). Используйте `!important`, чтобы
+ * перекрыть их, до тех пор, пока я не перепишу шапку.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Особое исправление навигации.
+ *
+ * Кто-то использовал ID в коде шапки (`#header a {}`), который перекрывает
+ * селекторы nav (`.site-nav a {}`). Используйте `!important`, чтобы
+ * перекрыть их, до тех пор, пока я не перепишу шапку.
+ */
+.site-nav a
+    color: #BADA55 !important
+{% endhighlight %}
+  </div>
+</div>

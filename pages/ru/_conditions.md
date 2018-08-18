@@ -1,7 +1,7 @@
 
 # Условные операторы
 
-Вы уже, наверное, знаете, что Sass предоставляет условные операторы, такие как `@if` и `@else`.  
+Вы уже, наверное, знаете, что Sass предоставляет условные операторы, такие как `@if` и `@else`. Пока в вашем коде нет сложной логики, нет необходимости и в условных операторах. Фактически, они в основном нужны для библиотек и фреймворков.
 
 Тем не менее, если вам когда-нибудь понадобится использовать их, пожалуйста, следуйте следующим рекоммендациям:
 
@@ -11,110 +11,16 @@
 * `@else` на одной строке с предыдущей закрывающей скобкой (`}`);
 * Всегда новая пустая строка после последней закрывающей скобки (`}`), если на следующей строке не стоит закрывающая скобка (`}`).
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@if $support-legacy {
-  // …
-} @else {
-  // …
-}
-
-// Nope
-@if ($support-legacy == true) {
-  // …
-}
-@else {
-  // …
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@if $support-legacy
-  // …
-@else
-  // …
-
-// Nope
-@if ($support-legacy == true)
-  // …
-@else
-  // …
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/01/index.html %}
 
 При тестировании на отрицающее значение, всегда используйте ключевое слово `not`, а не проверки на `false` или `null`.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@if not index($list, $item) {
-  // …
-}
+{% include snippets/conditions/02/index.html %}
 
-// Nope
-@if index($list, $item) == null {
-  // …
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@if not index($list, $item)
-  // …
+Всегда помещайте переменную часть слевой стороны условия, а (не)ожидаемый результат с правой. Перевёрнутые условия часто более сложно читать, особенно неопытным разработчикам.
 
-// Nope
-@if index($list, $item) == null
-  // …
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/03/index.html %}
 
 При использовании условных операторов внутри функции для возврата другого результата, основанного на некоторых условиях, убедитесь, что `@return` находится вне условных операторов.
 
-<div class="code-block">
-  <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
-// Yep
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  }
-
-  @return false;
-}
-
-// Nope
-@function dummy($condition) {
-  @if $condition {
-    @return true;
-  } @else {
-    @return false;
-  }
-}
-{% endhighlight %}
-  </div>
-  <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
-// Yep
-@function dummy($condition)
-  @if $condition
-    @return true
-
-  @return false;
-
-// Nope
-@function dummy($condition)
-  @if $condition
-    @return true
-  @else
-    @return false
-{% endhighlight %}
-  </div>
-</div>
+{% include snippets/conditions/04/index.html %}
