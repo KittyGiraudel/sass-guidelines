@@ -1,0 +1,87 @@
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Переменные для кнопки
+$button-color: $secondary-color;
+
+// … включите сюда любые правила для кнопки:
+// - миксины
+// - плейсхолдеры
+// - функции
+
+/**
+ * Кнопки
+ */
+.button {
+  @include vertical-rhythm;
+  display: block;
+  padding: 1rem;
+  color: $button-color;
+  // … etc.
+
+  /**
+   * Инлайновая кнопка для больших экранов
+   */
+  @include respond-to('medium') {
+    display: inline-block;
+  }
+}
+
+/**
+ * Иконки внутри кнопок
+ */
+.button > svg {
+  fill: currentcolor;
+  // … etc.
+}
+
+/**
+ * Инлайновая кнопка
+ */
+.button--inline {
+  display: inline-block;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Переменные для кнопки
+$button-color: $secondary-color
+
+// … включите сюда любые правила для кнопки:
+// - миксины
+// - плейсхолдеры
+// - функции
+
+/**
+ * Кнопки
+ */
+.button
+  +vertical-rhythm
+  display: block
+  padding: 1rem
+  color: $button-color
+  // ... etc.
+
+  /**
+   * Инлайновая кнопка для больших экранов
+   */
+  +respond-to('medium')
+    display: inline-block
+}
+
+/**
+ * Иконки внутри кнопок
+ */
+.button > svg
+  fill: currentcolor
+  // ... etc.
+
+/**
+ * Инлайновая кнопка
+ */
+.button--inline
+  display: inline-block
+{% endhighlight %}
+  </div>
+</div>

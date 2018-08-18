@@ -1,0 +1,17 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Добавить текущий модуль в список импортируемых модулей.
+// `!global` флаг требуется для обновления глобальной переменной.
+$imported-modules: append($imported-modules, $module) !global;
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Добавить текущий модуль в список импортируемых модулей.
+// `!global` флаг требуется для обновления глобальной переменной.
+$imported-modules: append($imported-modules, $module) !global
+{% endhighlight %}
+  </div>
+</div>

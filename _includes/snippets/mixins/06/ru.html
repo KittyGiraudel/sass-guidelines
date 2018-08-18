@@ -1,0 +1,35 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Примесь, которая выводит вендорные префиксы
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - свойство CSS без префикса
+/// @param {*} $value - Сырое значение свойства CSS
+/// @param {List} $prefixes - Список префиксов для вывода
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Примесь, которая выводит вендорные префиксы
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - свойство CSS без префикса
+/// @param {*} $value - Сырое значение свойства CSS
+/// @param {List} $prefixes - Список префиксов для вывода
+=prefix($property, $value, $prefixes: ())
+  @each $prefix in $prefixes
+    -#{$prefix}-#{$property}: $value
+
+  #{$property}: $value
+{% endhighlight %}
+  </div>
+</div>

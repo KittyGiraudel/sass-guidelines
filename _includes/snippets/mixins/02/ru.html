@@ -1,0 +1,26 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Помощник для определения размера
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Помощник для определения размера
+/// @author Hugo Giraudel
+/// @param {Length} $width
+/// @param {Length} $height
+=size($width, $height: $width)
+  width: $width
+  height: $height
+{% endhighlight %}
+  </div>
+</div>
