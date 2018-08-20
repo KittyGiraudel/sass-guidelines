@@ -1,0 +1,43 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Немного осветлить цвет
+/// @access public
+/// @param {Color} $color - цвет для осветления
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Немного затемнить цвет
+/// @access public
+/// @param {Color} $color - цвет для затемнения
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Немного осветлить цвет
+/// @access public
+/// @param {Color} $color - цвет для осветления
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix($color, white, $percentage)
+
+/// Немного затемнить цвет
+/// @access public
+/// @param {Color} $color - цвет для затемнения
+/// @param {Number} $percentage - процент от `$color` в возвращаемом цвете
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix($color, black, $percentage)
+{% endhighlight %}
+  </div>
+</div>

@@ -1,0 +1,58 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+// Объявить глобальную переменную на корневом уровне.
+$variable: 'initial value';
+
+// Создать примесь, которая перезаписывает глобальные переменные.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Создать локальную переменную, которая затеняет глобальную.
+  $variable: 'local value';
+
+  // Применить примесь: она перезапишет глобальную переменную.
+  @include global-variable-overriding;
+
+  // Вывести значение переменной.
+  // Здесь значение из **локальной** переменной, так как она глобальную.
+  content: $variable;
+}
+
+// Вывести эту переменную в другом селекторе, который не делает затенения.
+// Здесь значение **глобальное**, как и ожидалось.
+.other-local-scope::before {
+  content: $variable;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+// Объявить глобальную переменную на корневом уровне.
+$variable: 'initial value'
+
+// Создать примесь, которая перезаписывает глобальные переменные.
+@mixin global-variable-overriding
+  $variable: 'mixin value' !global
+
+.local-scope::before
+  // Создать локальную переменную, которая затеняет глобальную.
+  $variable: 'local value'
+
+  // Применить примесь: она перезапишет глобальную переменную.
+  +global-variable-overriding
+
+  // Вывести значение переменной.
+  // Здесь значение из **локальной** переменной, так как она затеняет
+  // глобальную.
+
+// Вывести эту переменную в другом селекторе, который не делает затенения.
+// Здесь значение **глобальное**, как и ожидалось.
+.other-local-scope::before
+  content: $variable
+{% endhighlight %}
+  </div>
+</div>

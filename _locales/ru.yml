@@ -1,5 +1,5 @@
 configuration:
-  version: 1.0
+  version: 1.3
   label: Russian
   prefix: /ru/
   available: true
@@ -8,35 +8,44 @@ configuration:
       link: https://github.com/grawl
     - name: Pavel Demyanenko
       link: https://github.com/PavelDemyanenko
+    - name: Tim Arbaev
+      link: https://github.com/arbaev
 
 # For more information about the context around these translations, refer to
 # _locales/en.yml
 translations:
+  # “Baseline” for the project (main description, used in the header, in tweets, etc.)
   baseline: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
+
+# Content of the footer, parsed as Markdown
   footer_content: "Сделал с любовью [Хьюго Гираудел](http://hugogiraudel.com), перевели [Даниил Пронин](http://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
 
+# Everything related to the options panel
   aside_title: "Опции"
-  aside_report: "Сообщить о проблеме"
+  aside_report: "Сообщить об ошибке"
   aside_support: "Поддержать проект"
-  aside_tweet: "Сообщи об этом"
-  aside_syntax: "синтаксис кода"
-  aside_language: "язык"
-  aside_close: "Закройте панель опций"
-  aside_open: "Откройте панель опций"
+  aside_tweet: "Твитнуть"
+  aside_syntax: "Синтаксис кода"
+  aside_language: "Язык"
+  aside_close: "Закрыть панель опций"
+  aside_open: "Открыть панель опций"
 
+# UI buttons and links
   link_to_top: "Вернуться к началу"
   link_to_skip: "Перейти к основному содержанию"
   link_to_chapter: "Ссылка на эту главу:"
   link_to_edit_chapter: "Редактировать эту главу на GitHub:"
-  link_to_twitter: "Найди меня на Твиттере"
+  link_to_twitter: "Найди меня в Твиттере"
 
-  contributing_support_button: "Поддержите руководство Sass"
-  contributing_tweet_button: "Расскажите о руководстве Sass"
+# Contributing module
+  contributing_support_button: "Поддержите Sass Гайдлайн"
+  contributing_tweet_button: "Расскажите о Sass Гайдлайне"
 
-  donate_content: "Если вам понравилось Sass руководство, пожалуйста, поддержите его."
-  donate_button: "Поддержите Sass руководство"
+# Donate module
+  donate_content: "Если вам понравился Sass Гайдлайн, пожалуйста, поддержите его."
+  donate_button: "Поддержите Sass Гайдлайн"
 
-  note: "Заметка"
+  note: "Замечание"
 
   image_color_functions: "Иллюстрация разницы между функциями `lighten`/`darken` и `mix` в Sass от [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "График, показывающий, как разработчики упорядочивают свой CSS"

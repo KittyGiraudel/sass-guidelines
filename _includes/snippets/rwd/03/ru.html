@@ -1,0 +1,49 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/// Управление отзывчивостью.
+/// @access public
+/// @param {String} $breakpoint - точка останова
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+  @error 'Не указано значение для `#{$breakpoint}`. '
+       + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
+  }
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/// Управление отзывчивостью.
+/// @access public
+/// @param {String} $breakpoint - точка останова
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
+      @content
+
+  @else
+    @error 'Не указано значение для `#{$breakpoint}`. '
+         + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
+{% endhighlight %}
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+{% highlight scss %}
+/**
+ * Вспомогательный класс для усечения и добавления многоточия в слишком длинную строку
+ * на одной строке.
+ * 1. Предотвращает сворачивание содержимого, оставляет его на одной строке.
+ * 2. Добавляет многоточие на конце строки.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+{% endhighlight %}
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+{% highlight sass %}
+/**
+ * Вспомогательный класс для усечения и добавления многоточия в слишком длинную строку
+ * на одной строке.
+ * 1. Предотвращает сворачивание содержимого, оставляет его на одной строке.
+ * 2. Добавляет многоточие на конце строки.
+ */
+.ellipsis
+  white-space: nowrap /* 1 */
+  text-overflow: ellipsis /* 2 */
+  overflow: hidden
+{% endhighlight %}
+  </div>
+</div>
