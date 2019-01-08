@@ -316,7 +316,7 @@ El problema con la anidación de selectores es que en última instancia hace que
 
 Esta afirmación se vuelve más verdadera en cuanto los selectores se hacen más largos y las referencias al selector actual (`&`) más frecuentes. En algún punto, el riesgo de perder la pista y no poder entender lo que está pasando es tan alto que no merece la pena.
 
-Para evitar estas situaciónes, hemos hablado mucho sobre [la regla de Orgien - En inglés](http://thesassway.com/beginner/the-inception-rule) desde hace algunos años. Recomendaba no anidar los selectores más allá de 3 niveles de profundidad, como referencia a la película *Inception* de Christopher Nolan. Yo sería mucho más drástico y recomendaría  **evitar la anidación de selectores tanto como sea posible**. 
+Para evitar estas situaciónes, hemos hablado mucho sobre [la regla de Origen - En inglés](http://thesassway.com/beginner/the-inception-rule) desde hace algunos años. Recomendaba no anidar los selectores más allá de 3 niveles de profundidad, como referencia a la película *Inception* de Christopher Nolan. Yo sería mucho más drástico y recomendaría  **evitar la anidación de selectores tanto como sea posible**. 
 
 Sin embargo, es evidente que hay algunas excepciones a esta regla como se verá en la siguiente sección, esta opinión es bastante popular y puedes leer más sobre ella en [Ten cuidado con la anidación de selectores - En inglés](http://www.sitepoint.com/beware-selector-nesting-sass/) y [Evita la anidación de selectores para obtener un CSS más modular - En inglés](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
