@@ -22,7 +22,7 @@
     "criticalcss": "^2.1.0",
     "nps": "^5.3.1",
     "spritesh": "^1.0.10",
-    "standard": "^10.0.0-beta.0",
+    "standard": "^14.3.2",
     "svgo": "^0.7.1",
     "uglify-js": "^2.6.2"
   }
