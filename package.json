@@ -24,6 +24,6 @@
     "spritesh": "^1.0.10",
     "standard": "^10.0.0-beta.0",
     "svgo": "^0.7.1",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^3.8.0"
   }
 }

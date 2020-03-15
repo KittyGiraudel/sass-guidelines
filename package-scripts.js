@@ -44,12 +44,12 @@ module.exports = {
       // use instead of being bundled in the main JavaScript file (cf. through
       // the `vendors` task)
       utilities: [
-        'cat', [
+        'uglifyjs', [
           'node_modules/fg-loadcss/src/cssrelpreload.js',
           'node_modules/woff2-feature-test/woff2.js',
           'node_modules/OptimizedWebfontLoading/loadFont.js'
         ].join(' '),
-        '| uglifyjs > _includes/utilities.js'
+        '-o _includes/utilities.js'
       ].join(' '),
 
       // Run the `standard` linter on all JavaScript files from the JS folder
