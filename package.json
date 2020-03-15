@@ -12,7 +12,7 @@
     "OptimizedWebfontLoading": "gist:2a65d6a37675412a2463",
     "a11y-dialog": "^3.0.0",
     "blingdotjs": "gist:7d867cda127e64d38f28",
-    "fg-loadcss": "^1.2.0",
+    "fg-loadcss": "^2.1.0",
     "picturefill": "^3.0.2",
     "sw-precache": "^5.1.0",
     "woff2-feature-test": "^1.0.2"
