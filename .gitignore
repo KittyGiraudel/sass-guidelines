@@ -1,11 +1,12 @@
 # Jekyll build
-_site   
+_site
 # Cache file from Jekyll
 .jekyll-metadata
+.jekyll-cache
 # Cache folder from Sass
 .sass-cache
 # npm packages
-node_modules   
+node_modules
 # Mac OS annoying files
 .DS_Store
 # Temporary folder from html-proofer
