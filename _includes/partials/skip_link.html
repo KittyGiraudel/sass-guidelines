@@ -1,6 +1,6 @@
 {% assign class = include.class %}
 {% assign id = include.id %}
-{% assign href = include.href | default: "#main-content" %}
+{% assign href = include.href | default: "#main" %}
 {% assign text = include.text | default: site.data[page.language].translations.link_to_skip %}
 
 <a id="{{ id }}" class="{{ class }}" href="{{ href }}" data-proofer-ignore>

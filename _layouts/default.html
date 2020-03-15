@@ -11,30 +11,32 @@ layout: compress
   <!-- SVG sprite -->
   {% include sprite.svg %}
 
-  <!-- Accessibility skip link -->
-  {% include partials/skip_link.html id = "skip" %}
+  <div id="main-content">
+    <!-- Accessibility skip link -->
+    {% include partials/skip_link.html id = "skip" %}
 
-  <!-- Site header -->
-  {% include partials/header.html %}
+    <!-- Site header -->
+    {% include partials/header.html %}
 
-  <!-- Translation banner -->
-  {% include partials/translation_warning.html %}
+    <!-- Translation banner -->
+    {% include partials/translation_warning.html %}
 
-  <!-- Button to toggle the options panel -->
-  {% include partials/aside_opener.html %}
+    <!-- Button to toggle the options panel -->
+    {% include partials/aside_opener.html %}
 
-  <!-- Main container -->
-  <main class="main" aria-label="Content" id="main-content">
-    <div class="container">
-      {{ content }}
-    </div>
-  </main>
+    <!-- Main container -->
+    <main class="main" aria-label="Content" id="main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
 
-  <!-- Link to get back to top -->
-  {% include partials/top_link.html %}
+    <!-- Link to get back to top -->
+    {% include partials/top_link.html %}
 
-  <!-- Site footer -->
-  {% include partials/footer.html %}
+    <!-- Site footer -->
+    {% include partials/footer.html %}
+  </div>
 
   <!-- Options panel -->
   {% include partials/aside.html %}

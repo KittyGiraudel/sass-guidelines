@@ -3,49 +3,47 @@
 <aside class="aside" id="{{ id }}">
   <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
   <div class="aside__content" role="dialog">
-    <div role="document">
-      <h1 class="aside__title" tabindex="0">
-        {{ site.data[page.language].translations.aside_title }}
-      </h1>
+    <h1 class="aside__title" tabindex="0">
+      {{ site.data[page.language].translations.aside_title }}
+    </h1>
 
-      <section class="aside__section  aside__section--extras">
-        {% assign button_report_text = site.data[page.language].translations.aside_report %}
-        {% include partials/button.html
-          target = "_blank"
-          href = "https://github.com/HugoGiraudel/sass-guidelines/issues"
-          content = button_report_text
-        %}
+    <section class="aside__section  aside__section--extras">
+      {% assign button_report_text = site.data[page.language].translations.aside_report %}
+      {% include partials/button.html
+        target = "_blank"
+        href = "https://github.com/HugoGiraudel/sass-guidelines/issues"
+        content = button_report_text
+      %}
 
-        {% assign button_donate_text = site.data[page.language].translations.aside_donate %}
-        {% include partials/button_donate.html
-          text = button_donate_text
-        %}
+      {% assign button_donate_text = site.data[page.language].translations.aside_donate %}
+      {% include partials/button_donate.html
+        text = button_donate_text
+      %}
 
-        {% assign button_tweet_text = site.data[page.language].translations.aside_tweet %}
-        {% include partials/button_tweet.html
-          text = button_tweet_text
-        %}
-      </section>
+      {% assign button_tweet_text = site.data[page.language].translations.aside_tweet %}
+      {% include partials/button_tweet.html
+        text = button_tweet_text
+      %}
+    </section>
 
-      <section class="aside__section  aside__section--syntax js-powered">
-        <h2 class="aside__heading">
-          {{ site.data[page.language].translations.aside_syntax }}
-        </h2>
+    <section class="aside__section  aside__section--syntax js-powered">
+      <h2 class="aside__heading">
+        {{ site.data[page.language].translations.aside_syntax }}
+      </h2>
 
-        {% include partials/syntax_picker.html %}
-      </section>
+      {% include partials/syntax_picker.html %}
+    </section>
 
-      <section class="aside__section  aside__section--language">
-        <h2 class="aside__heading">
-          <label for="language-picker">
-            {{ site.data[page.language].translations.aside_language }}
-          </label>
-        </h2>
+    <section class="aside__section  aside__section--language">
+      <h2 class="aside__heading">
+        <label for="language-picker">
+          {{ site.data[page.language].translations.aside_language }}
+        </label>
+      </h2>
 
-        {% include partials/language_picker.html id = "language-picker" %}
-      </section>
+      {% include partials/language_picker.html id = "language-picker" %}
+    </section>
 
-      {% include partials/aside_closer.html %}
-    </div>
+    {% include partials/aside_closer.html %}
   </div>
 </aside>
