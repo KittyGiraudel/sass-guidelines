@@ -40,9 +40,9 @@ Leading to the following CSS output:
 
 {% include snippets/rwd/05/index.html %}
 
-You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, [tests have been made](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
+You might hear that this convention results in duplicated media queries in the CSS output. That is definitely true. Although, tests have been made and the final word is that it doesn’t matter once Gzip (or any equivalent) has done its thing:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards, regarding Breakpoint
 
 Now, if you really are concerned about duplicated media queries, you can still use a tool to merge them such as [this gem](https://github.com/aaronjensen/sass-media_query_combiner) however I feel like I have to warn you against possible side-effects of moving CSS code around. You are not without knowing that source order is important.

@@ -48,7 +48,7 @@ Hvilket leder til det følgende CSS output:
 
 {% include snippets/rwd/05/index.html %}
 
-Du har muligvis hørt at denne konvention resulterer i duplikerede media queries i CSS-outputtet. Det er helt klart sandt. Dog, så er [der blevet foretaget tests](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) og det sidste ord i denne diskussion er, at det ikke betyder noget så snart Gzip (eller lignende) har gjort sit arbejde:
+Du har muligvis hørt at denne konvention resulterer i duplikerede media queries i CSS-outputtet. Det er helt klart sandt. Dog, så er der blevet foretaget tests og det sidste ord i denne diskussion er, at det ikke betyder noget så snart Gzip (eller lignende) har gjort sit arbejde:
 
 > … vi undersøgte hvorvidt der var performance-påvirkninger ved kombinering vs spredning af Media Queries, og kom frem til konklusionen at forskellen, selvom den er grim, er minimal når den er værst, og grundlæggende ikke-eksisterende når den er bedst.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), vedrørende [Breakpoint](http://breakpoint-sass.com/)
@@ -57,6 +57,5 @@ Så hvis du virkelig er bekymret for duplikerede media queries, så kan du stadi
 
 ###### Videre læsning
 
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

@@ -41,9 +41,9 @@ Que gera o seguinte resultado em CSS:
 
 {% include snippets/rwd/05/index.html %}
 
-Podem ter ouvido que esta convenção resulta na duplicação das *media queries* no resultado de CSS. Isto é definitivamente verdade. No entanto, [foram feitos testes](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e o resultado final é que não interessa assim que Gzip (ou algo equivalente) fizer o seu trabalho:
+Podem ter ouvido que esta convenção resulta na duplicação das *media queries* no resultado de CSS. Isto é definitivamente verdade. No entanto, foram feitos testes e o resultado final é que não interessa assim que Gzip (ou algo equivalente) fizer o seu trabalho:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries).
+> &mdash; Sam Richards, regarding Breakpoint
 
 Agora, se realmente tiverem preocupados com a duplicação das *media queries*, podem usar uma ferramenta para as juntar, tal como [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) no entanto, sinto que vos devo avisar na possibilidade de efeitos secundários de alteram a ordem do código, uma vez que já sabem que a ordem do código-fonte é importante.

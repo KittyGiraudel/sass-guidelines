@@ -40,9 +40,9 @@ Führt zu folgenden CSS:
 
 {% include snippets/rwd/05/index.html %}
 
-Du hast vielleicht schon gehört dass diese Konvention duplizierte Media Queries im CSS generiert. Das ist auf jedenfall richtig. Dennoch, [es wurde getestet](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) und das Ergebnis ist dass es keinen Unterschied macht sobald Gzip (oder ähnliches) seine Arbeit leistet:
+Du hast vielleicht schon gehört dass diese Konvention duplizierte Media Queries im CSS generiert. Das ist auf jedenfall richtig. Dennoch, es wurde getestet und das Ergebnis ist dass es keinen Unterschied macht sobald Gzip (oder ähnliches) seine Arbeit leistet:
 
 > … wir haben den Test gemacht ob es Konsequenzen bei der Performance gibt, wenn Media Queries kombiniert oder zerstreut werden und sind zu dem Ergebnis gekommen dass der Unterschied, wenn auch hässlich, im schlimmsten Fall nur minimal und im besten Fall nicht existent ist.<br>
-> &mdash; [Sam Richards, bezüglich Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards, bezüglich Breakpoint
 
 Falls du also wirklich besorgt um duplizierte Media Queries bist, kannst du immer noch [ein Tool](https://github.com/aaronjensen/sass-media_query_combiner) zum zusammenfügen verwenden. Dennoch hab ich das Gefühl, ich muss dich vor möglichen Nebeneffekten wie verschobenes CSS warnen. Denn auch die Reihenfolge in CSS ist wichtig.

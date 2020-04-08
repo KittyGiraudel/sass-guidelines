@@ -40,9 +40,9 @@ Che ci porta al seguente codice CSS:
 
 {% include snippets/rwd/05/index.html %}
 
-Potreste aver sentito che questa convenzione porta all’avere _mediaquery_ duplicate nel CSS generato. Totalmente vero. Tuttavia [sono stati fatti dei test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) e il risultato finale è che non importa una volta che Gzip (o qualcosa di simile) fa il suo lavoro:
+Potreste aver sentito che questa convenzione porta all’avere _mediaquery_ duplicate nel CSS generato. Totalmente vero. Tuttavia sono stati fatti dei test e il risultato finale è che non importa una volta che Gzip (o qualcosa di simile) fa il suo lavoro:
 
 > … abbiamo discusso molto sulle implicazioni delle prestazioni delle _mediaquery_ combinate contro quelle sparpagliate e siamo giunti alla conclusione che le differenze, seppur brutte, sono minime nel caso peggiore e non esistenti nel migliore dei casi.<br>
-> &mdash; [Sam Richards riguardo Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards riguardo Breakpoint
 
 Ora, se siete veramente preoccupati delle _mediaquery_ duplicate, potete usare un tool per combinale insieme, qualcosa tipo [questa gemma](https://github.com/aaronjensen/sass-media_query_combiner), però mi sento di avvisarvi dei possibili effetti collaterali dovuti allo spostare il CSS qua e là. Sapete bene quanto è importante l’ordine del codice CSS.

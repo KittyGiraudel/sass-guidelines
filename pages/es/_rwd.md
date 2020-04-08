@@ -40,9 +40,9 @@ Resultaría el siguiente bloque CSS:
 
 {% include snippets/rwd/05/index.html %}
 
-Es posible que escuches que esta convención dará como resultado en CSS bloques duplicados de *media queries*. Esto es definitivamente cierto. Sin embargo, [se han realizado pruebas](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) y la conclusión es que dará igual una vez Gzip (o cualquier equivalente) haya hecho su trabajo:
+Es posible que escuches que esta convención dará como resultado en CSS bloques duplicados de *media queries*. Esto es definitivamente cierto. Sin embargo, se han realizado pruebas y la conclusión es que dará igual una vez Gzip (o cualquier equivalente) haya hecho su trabajo:
 
 > … hemos discutido a fondo si hay consecuencias en el rendimiento, en cuanto a la combinación frente a la dispersión de *Media Queries* y se llegó a la conclusión de que la diferencia, aunque fea, es en el peor de los casos mínima y esencialmente inexistente en el mejor.<br>
-> &mdash; [Sam Richards, en relación a los puntos de ruptura](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards, en relación a los puntos de ruptura
 
 Si realmente te preocupan las *media queries* duplicadas, puedes usar una herramienta para fusionarlas como por ejemplo [esta gema](https://github.com/aaronjensen/sass-media_query_combiner) sin embargo, siento que debo advertirte de los posibles efectos secundarios ocasionados al mover el código de lugar. Ya sabes que el orden del código es importante.

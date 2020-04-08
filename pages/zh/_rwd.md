@@ -39,9 +39,9 @@
 
 {% include snippets/rwd/05/index.html %}
 
-可能你已经了解到，这种习惯会导致 CSS 输出文件中出现重复的媒体查询语句。不过[测试了](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)和下面的话认为一旦 Gzip（或者其他相同软件）完成压缩就不会有什么问题：
+可能你已经了解到，这种习惯会导致 CSS 输出文件中出现重复的媒体查询语句。不过测试了和下面的话认为一旦 Gzip（或者其他相同软件）完成压缩就不会有什么问题：
 
 >……我们反复测试了贴合与分离两种媒体查询方式对性能的影响，结论是即使在最差情况下也没有明显差异，而在最好情况下差异更是少之又少。<br>
-> &mdash; [Sam Richards 关于Breakpoint 的看法](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards 关于Breakpoint 的看法
 
 如果现在你仍担心媒体查询的副本问题，你可以使用工具来合并它们，比如[这个 gem](https://github.com/aaronjensen/sass-media_query_combiner)，但是我有必要警告你移动相关 CSS 代码可能会有副作用。 是否了解资源顺序是非常重要的。

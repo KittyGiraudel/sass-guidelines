@@ -40,9 +40,9 @@
 
 {% include snippets/rwd/05/index.html %}
 
-Μπορεί να έχετε ακούσει ότι αυτή η σύμβαση οδηγεί σε επαναλαμβανόμενα media queries στη CSS. Πράγμα που ισχύει. Παρ' όλα αυτά, [έχουν γίνει δοκιμές](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) και το πόρισμα είναι ότι δεν έχει σημασία εφόσον το Gzip (ή κάτι ανάλογο) έχει κάνει ό,τι κάνει:
+Μπορεί να έχετε ακούσει ότι αυτή η σύμβαση οδηγεί σε επαναλαμβανόμενα media queries στη CSS. Πράγμα που ισχύει. Παρ' όλα αυτά, έχουν γίνει δοκιμές και το πόρισμα είναι ότι δεν έχει σημασία εφόσον το Gzip (ή κάτι ανάλογο) έχει κάνει ό,τι κάνει:
 
 > … we hashed out whether there were performance implications of combining vs scattering Media Queries and came to the conclusion that the difference, while ugly, is minimal at worst, essentially non-existent at best.<br>
-> &mdash; [Sam Richards, regarding Breakpoint](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
+> &mdash; Sam Richards, regarding Breakpoint
 
 Οπότε, αν πραγματικά σας απασχολούν τα επαναλαμβανόμενα media queries, μπορείτε να χρησιμοποιήσετε ένα εργαλείο για να τα συγχωνεύσετε όπως [αυτό το gem](https://github.com/aaronjensen/sass-media_query_combiner), αν και πρέπει να προειδοποιήσω ότι μπορεί να έχετε παρενέργειες με το να μετακινείτε CSS πάνω-κάτω. Γνωρίζετε πολύ καλά ότι η σειρά του πηγαίου κώδικα είναι σημαντική.

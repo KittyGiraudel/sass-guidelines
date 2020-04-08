@@ -48,7 +48,7 @@
 
 {% include snippets/rwd/05/index.html %}
 
-이 방식은 미디어 쿼리의 중복을 야기한다는 말을 들으실지도 모릅니다. 그것은 분명한 사실입니다. 그러나, [실험에 따르면](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) Gzip(혹은 그에 상당하는 것) 이후에는 문제가 되지 않습니다.
+이 방식은 미디어 쿼리의 중복을 야기한다는 말을 들으실지도 모릅니다. 그것은 분명한 사실입니다. 그러나, 실험에 따르면 Gzip(혹은 그에 상당하는 것) 이후에는 문제가 되지 않습니다.
 
 > … 우리는 미디어 쿼리를 한 곳에 몰아넣는 것 혹은 산발적으로 배치하는 것이 성능에 영향을 미치는지에 대한 논의를 이어갔고, 압축 시, 최악의 경우 미세한 차이가 존재하며, 최선의 경우 기본적으로 차이가 존재하지 않는다는 결론에 이르렀다.<br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), [Breakpoint](http://breakpoint-sass.com/)에 관해
@@ -57,6 +57,5 @@
 
 ###### 참고
 
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

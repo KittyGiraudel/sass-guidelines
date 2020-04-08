@@ -48,15 +48,14 @@ Což vede k následujícímu CSS výstupu:
 
 {% include snippets/rwd/05/index.html %}
 
-Mohli jste slyšet, že tato konvence vede k duplikování media queries v CSS výstupu. A je to rozhodně pravda. I když [byl udělán test](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries) a finální verdikt je, že na tom nezáleží jakmile Gzip (nebo něco podobného) dokončí svou věc:
+Mohli jste slyšet, že tato konvence vede k duplikování media queries v CSS výstupu. A je to rozhodně pravda. I když byl udělán test a finální verdikt je, že na tom nezáleží jakmile Gzip (nebo něco podobného) dokončí svou věc:
 
-> … probírali jsme, zda existují problémy s výkonem v porovnání kombinování vs rozházení Media Queries a dospěli jsme k závěru, že v nejhorším případě sice ano, ale v nejlepším případě v podstatě vůbec ne. <br> 
+> … probírali jsme, zda existují problémy s výkonem v porovnání kombinování vs rozházení Media Queries a dospěli jsme k závěru, že v nejhorším případě sice ano, ale v nejlepším případě v podstatě vůbec ne. <br>
 > &mdash; [Sam Richards](https://twitter.com/snugug), ohledně [Breakpoint](http://breakpoint-sass.com/)
 
 Pokud máte obavu ohledně duplicitních media queries, pořád můžete použít nástroj, který je spojí k sobě, jako například [tento gem](https://github.com/aaronjensen/sass-media_query_combiner), každopádně vás musím varovat, že pokud přesunete CSS někam jinam, může to mít negativní účinky. Nikdy nevíte, jestli je pořadí důležité.
 
 ###### Další četba
 
-* [Sass and Media Queries](http://sasscast.tumblr.com/post/38673939456/sass-and-media-queries)
 * [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)
