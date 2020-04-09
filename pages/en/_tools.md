@@ -33,9 +33,11 @@ If you are not tied to a specific grid system, you will be pleased to know there
 
 Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
 
-## SCSS-lint
+## Linters
 
 Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody’s perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+
+### SCSS-lint
 
 [SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
 
@@ -49,3 +51,7 @@ If you are not convinced of the necessity to use SCSS-lint, I recommend reading 
   <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
   <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="http://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) are working on <a href="https://houndci.com/">Hound</a>.</p>
 </div>
+
+### Stylelint
+
+[stylelint](https://stylelint.io/) is a mighty, modern linter that helps you avoid errors and enforce conventions in your styles. It was originally developed to lint CSS but it can also [parses CSS-like syntaxes like SCSS, Sass](https://medium.com/@bjankord/how-to-lint-scss-with-stylelint-dc87809a9878). It has a wide range of [lint rules that can be customized](https://stylelint.io/user-guide/rules/list). There is also a stylelint config that can be used in your project that is based on these guidelines, [stylelint-config-sass-guidelines](https://github.com/bjankord/stylelint-config-sass-guidelines)
