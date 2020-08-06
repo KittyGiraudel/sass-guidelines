@@ -1,3 +1,4 @@
+
 # Formatação e sintaxe
 
 Se me perguntarem, diria que a primeira coisa que um guia de estilo deve ser capaz de nos dizer é descrição do aspecto visual que queremos para o nosso código.
@@ -6,10 +7,10 @@ Quando vários programadores estão responsáveis por escrever CSS simultaneamen
 
 Sucintamente, queremos que (desavergonhadamente inspirado nas [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-- dois (2) espaços de indentação, em vez de tabs;
-- idealmente, linhas de no máximo 80 caráteres
-- regras de CSS multi-linha devidamente escritas
-- uso significativo de espaço em branco
+* dois (2) espaços de indentação, em vez de tabs;
+* idealmente, linhas de no máximo 80 caráteres
+* regras de CSS multi-linha devidamente escritas
+* uso significativo de espaço em branco
 
 {% include snippets/syntax/01/index.html %}
 
@@ -27,14 +28,14 @@ Para evitar algum eventual problema com codificação de carateres, é recomenda
 
 CSS não necessita que strings apareçam entre aspas, nem mesmo as que contêm espaços. Peguemos no exemplo de font-family: não importa se utilizamos aspas no início e no fim.
 
-Graças a isto, Sass _também_ não necessita que as strings sejam entre aspas. Melhor ainda (e _felizmente_), uma string entre aspas é estritamente equivalente à sua irmã gémea sem aspas (por ex., `'abc'` é estritamente igual a `abc`).
+Graças a isto, Sass *também* não necessita que as strings sejam entre aspas. Melhor ainda (e *felizmente*), uma string entre aspas é estritamente equivalente à sua irmã gémea sem aspas (por ex., `'abc'` é estritamente igual a `abc`).
 
-Dito isto, linguagens que não necessitam de aspas à volta de strings são uma minoria e, desta forma, **strings devem sempre ser escritas com aspas curvas simples (também chamadas plicas)** em Sass (as aspas simples `'` são mais fáceis de escrever do que as duplas `"` em teclados _qwerty_). Para além de consistência com outras linguagens, incluindo JavaScript, existem outros motivos para esta escolha:
+Dito isto, linguagens que não necessitam de aspas à volta de strings são uma minoria e, desta forma, **strings devem sempre ser escritas com aspas curvas simples (também chamadas plicas)** em Sass (as aspas simples `'` são mais fáceis de escrever do que as duplas `"` em teclados *qwerty*). Para além de consistência com outras linguagens, incluindo JavaScript, existem outros motivos para esta escolha:
 
-- nomes de cores são tratados como cores quando não possuem aspas, o que pode levar a conflitos;
-- a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
-- ajuda em geral à leitura;
-- não existe uma razão válida para não as usar;
+* nomes de cores são tratados como cores quando não possuem aspas, o que pode levar a conflitos;
+* a maior parte dos _highlighters_ de sintaxe dão problemas com strings sem aspas;
+* ajuda em geral à leitura;
+* não existe uma razão válida para não as usar;
 
 {% include snippets/syntax/03/index.html %}
 
@@ -90,17 +91,17 @@ Quando estamos a lidar com medidas, um valor `0` nunca deve ter unidade.
 
 O erro mais comum que me consigo lembrar no que diz respeito a números em Sass é pensar que as unidades representam `strings` que podem ser adicionadas livremente a um número. Enquanto isto pode parecer correto, não é como as unidades funcionam. Pensem em unidades como símbolos algébricos. Por exemplo, no mundo real, multiplicar 5 centímetros por 5 centímetros resulta em 25 centímetros quadrados. A mesma lógica aplica-se em Sass.
 
-Para adicionar uma unidade a um número, devemos multiplicar este número por _1 unidade_.
+Para adicionar uma unidade a um número, devemos multiplicar este número por *1 unidade*.
 
 {% include snippets/syntax/09/index.html %}
 
-Reparem que adicionar _0 dessa mesma unidade_ também funciona, mas recomendo o primeiro método, uma vez que adicionar _0 unidades_ é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar. Leia mais sobre isso, [neste artigo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Reparem que adicionar *0 dessa mesma unidade* também funciona, mas recomendo o primeiro método, uma vez que adicionar *0 unidades* é algo confuso. Na verdade, quando tentamos converter um número para outra unidade comparável, adicionar 0 não irá funcionar. Leia mais sobre isso, [neste artigo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
 No final de contas, depende tudo do que estivermos a tentar obter. Lembrem-se apenas que adicionar o número-unidade como string não é uma boa prática.
 
-Para remover a unidade de um valor, temos que dividi-lo por _uma unidade do seu tipo_.
+Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu tipo*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -114,7 +115,7 @@ Adicionar uma unidade como string a um número resulta numa string, prevenindo q
 
 ### Números mágicos
 
-"Números mágicos" (_magic numbers_) dizem respeito a um [termo antigo](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) computacional para _constante numérica não definida_. Basicamente, é um número aleatório que simplesmente parece _funcionar por magia_ num caso específico e que não tem qualquer lógica por detrás dele.
+"Números mágicos" (*magic numbers*) dizem respeito a um [termo antigo](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) computacional para *constante numérica não definida*. Basicamente, é um número aleatório que simplesmente parece *funcionar por magia* num caso específico e que não tem qualquer lógica por detrás dele.
 
 Escusado será dizer que **números mágicos são uma praga e devem ser evitados a todo o custo**. Quando não conseguirem encontrar uma explicação para um determinado número funcionar, escrevam pelo menos um comentário que explique como chegaram a ele e porque é que acham que ele funciona. Admitir que não sabemos porque algo funciona é sempre mais útil do que deixar o programador seguinte tentar adivinhar o que se passa, sem qualquer pista.
 
@@ -128,9 +129,9 @@ Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se t
 
 Sass é tão bom na hora de manipular cores que artigos tem florescidos por toda parte da internet, exatamente sobre este tema. Por isso, posso recomendar algumas leituras:
 
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Formatos de cores
 
@@ -186,15 +187,15 @@ Se não quiserem escrever a função `mix` todas as vezes, podem criar duas fun�
 
 ## Listas
 
-Listas são o equivalente de arrays. Uma lista é uma estrutura de dados _"flat"_ (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
+Listas são o equivalente de arrays. Uma lista é uma estrutura de dados *"flat"* (ao contrário de [mapas](#mapas)) usada para guardar valores de qualquer tipo (incluindo listas, dando origem a listas aninhadas).
 
 As listas devem respeitar as seguintes orientações:
 
-- sejam uma linha ou várias;
-- necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
-- a não ser para fins de CSS, sempre separadas por vírgula;
-- sempre envolvidas em parêntesis;
-- finalizadas com um ponto final em multi-linha.
+* sejam uma linha ou várias;
+* necessariamente em várias linhas se forem demasiado longas para caber numa linha de 80 carateres;
+* a não ser para fins de CSS, sempre separadas por vírgula;
+* sempre envolvidas em parêntesis;
+* finalizadas com um ponto final em multi-linha.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -210,14 +211,14 @@ Com Sass, autores de folhas de estilo podem definir mapas - o termo do Sass para
 
 Mapas devem ser escritos da seguinte forma:
 
-- espaços depois dos dois pontos (`:`);
-- parêntesis de abertura (`(`) na mesma linha dos dois pontos (`:`);
-- **chaves com aspas** se forem strings (o que representa 99% dos casos);
-- cada par chave/valor na sua própria linha;
-- vírgula (`,`) após cada par chave/valor;
-- **vírgula final** (`,`) no último item, para que seja mais fácil adicionar, remover ou reordenar items;
-- parêntesis de fecho (`)`) na sua própria linha;
-- não colocar um espaço um um caractér de nova linha entre o parêntesis de fecho (`)`) e o ponto e vírgula (`;`).
+* espaços depois dos dois pontos (`:`);
+* parêntesis de abertura (`(`) na mesma linha dos dois pontos (`:`);
+* **chaves com aspas** se forem strings (o que representa 99% dos casos);
+* cada par chave/valor na sua própria linha;
+* vírgula (`,`) após cada par chave/valor;
+* **vírgula final** (`,`) no último item, para que seja mais fácil adicionar, remover ou reordenar items;
+* parêntesis de fecho (`)`) na sua própria linha;
+* não colocar um espaço um um caractér de nova linha entre o parêntesis de fecho (`)`) e o ponto e vírgula (`;`).
 
 Ilustração:
 
@@ -229,13 +230,13 @@ Textos sobre mapas Sass são muitos, dado o quão esperada essa feature foi espe
 
 A esta altura, isto é essencialmente uma revisão do que toda a gente sabe, mas é assim que um conjunto de regras para CSS deve ser escrito (pelo menos, de acordo com a maioria dos guias de orientação, incluindo [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- seletores relacionados na mesma linha; seletores sem relação numa nova linha;
-- chaveta de abertura (`{`) separada do último seletor por um espaço único;
-- cada declaração na sua própria linha;
-- um espaço a seguir aos dois pontos (`:`);
-- um ponto e vírgula terminal (`;`) no final de cada declaração;
-- chaveta de fecho (`}`) na sua própria linha;
-- uma linha em branco após a chaveta de fecho (`}`).
+* seletores relacionados na mesma linha; seletores sem relação numa nova linha;
+* chaveta de abertura (`{`) separada do último seletor por um espaço único;
+* cada declaração na sua própria linha;
+* um espaço a seguir aos dois pontos (`:`);
+* um ponto e vírgula terminal (`;`) no final de cada declaração;
+* chaveta de fecho (`}`) na sua própria linha;
+* uma linha em branco após a chaveta de fecho (`}`).
 
 Ilustração:
 
@@ -243,11 +244,11 @@ Ilustração:
 
 Acrescentando às regras relacionadas com CSS, queremos prestar atenção a:
 
-- variáveis locais declaradas antes de qualquer outra declaração, separadas de declarações seguintes por uma linha em branco;
-- chamadas de mixins sem `@content` feitas antes de qualquer declaração;
-- seletores aninhados sempre precedidos por uma linha em branco;
-- chamadas de mixins com `@content` feitas depois de qualquer seletor aninhado;
-- não adicionar uma linha em branco depois da chaveta de fecho (`}`).
+* variáveis locais declaradas antes de qualquer outra declaração, separadas de declarações seguintes por uma linha em branco;
+* chamadas de mixins sem `@content` feitas antes de qualquer declaração;
+* seletores aninhados sempre precedidos por uma linha em branco;
+* chamadas de mixins com `@content` feitas depois de qualquer seletor aninhado;
+* não adicionar uma linha em branco depois da chaveta de fecho (`}`).
 
 Ilustração:
 
@@ -257,8 +258,8 @@ Ilustração:
 
 Não me ocorrem muitos tópicos em que as opiniões sejam tão divididas como são em relação a ordenar declarações em CSS. Na verdade, existem duas facções:
 
-- manter a ordem alfabética;
-- ordenar declarações por tipo (position, display, cores, tipo de letra, outros).
+* manter a ordem alfabética;
+* ordenar declarações por tipo (position, display, cores, tipo de letra, outros).
 
 Existem prós e contras em ambas as abordagens. Por um lado, a ordem alfabética é universal (pelo menos em todos os idiomas que usam o alfabeto latino), portanto não existe dúvida quanto a colocar uma propriedade antes de outra. No entanto, parece-me bastante estranho ver propriedades como `bottom` e `top` separadas uma da outra. Por que motivo apareceriam animações antes do tipo `display`? Há imensas peculiaridades na ordenação alfabética.
 
@@ -276,15 +277,15 @@ Devo dizer que pessoalmente não me consigo decidir. Uma [recente sondagem no CS
 
 {% include images/order-poll.html %}
 
-Por esse motivo, não vou impor uma escolha neste guia de estilos. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção _aleatória_).
+Por esse motivo, não vou impor uma escolha neste guia de estilos. Escolham aquele que preferirem, desde que sejam consistentes ao longo das vossas folhas de estilo (isto é, não escolham a opção *aleatória*).
 
 <div class="note">
-  <p>Um <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
+  <p>Um <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudo recente</a> mostra que usar <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que por sua vez usa <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordenação por tipo</a>) para ordenar declarações em CSS acaba por diminuir o tamanho média dos ficheiros comprimidos com Gzip em cerca de 2.7%, comparando com 1.3% quando ordenados alfabeticamente.</p>
 </div>
 
 ## Seletores aninhados
 
-Uma das características do Sass que está a ser extremamente mal usada por muitos programadores são os _seletores aninhados_. Alinhar seletores oferece aos autores de folhas de estilo uma forma de computar seletores longos, aninhando seletores mais pequenos dentro de outros.
+Uma das características do Sass que está a ser extremamente mal usada por muitos programadores são os *seletores aninhados*. Alinhar seletores oferece aos autores de folhas de estilo uma forma de computar seletores longos, aninhando seletores mais pequenos dentro de outros.
 
 ### Regra geral
 

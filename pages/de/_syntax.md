@@ -1,3 +1,4 @@
+
 # Syntax & Formatierung
 
 Wenn du mich fragst, sollte dass erste sein was ein Styleguide definiert, die Art und Weise wie der Code aussehen soll.
@@ -6,10 +7,10 @@ Wenn mehrere Entwickler in einem Projekt CSS schreiben, ist es nur eine Frage de
 
 Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-- zwei (2) Spaces einrücken, keine Tabs;
-- idealerweise 80-Buchstaben lange Zeilen;
-- ordentlich geschriebene, mehrzeilige CSS Regeln;
-- sinnvoller Gebrauch von Leerzeichen.
+* zwei (2) Spaces einrücken, keine Tabs;
+* idealerweise 80-Buchstaben lange Zeilen;
+* ordentlich geschriebene, mehrzeilige CSS Regeln;
+* sinnvoller Gebrauch von Leerzeichen.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -27,14 +28,14 @@ Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-
 
 CSS setzt nicht voraus dass Strings in Anführungszeichen zu setzen sind, nichtmal jene die Leerzeichen beinhalten. Zum Beispiel font-family: für den CSS Parser ist es vollkommen egal ob du die Namen in Anführunsgzeichen setzt oder nicht.
 
-Deshalb ist es in Sass _ebenfalls_ nicht nötig. Noch besser (und _zum Glück_, wie du zugeben musst), ein String in Anführungszeichen ist exakt identisch gegenüber einem String ohne (z.B. `'abc'` ist exakt gleich zu `abc`).
+Deshalb ist es in Sass *ebenfalls* nicht nötig. Noch besser (und *zum Glück*, wie du zugeben musst), ein String in Anführungszeichen ist exakt identisch gegenüber einem String ohne (z.B. `'abc'` ist exakt gleich zu `abc`).
 
-Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen zu setzen eine Minderheit, deshalb **sollten Strings in Sass immer in einfachen Anführungszeichen (`'`) gesetzt werden** (sie sind einfacher zu tippen als die normalen auf einer _QWERTY_ Tastatur). Neben der Einheitlichkeit zu anderen Sprachen, einschließlich CSS' Cousin JavaScript, gibt es mehrere Gründe dafür:
+Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen zu setzen eine Minderheit, deshalb **sollten Strings in Sass immer in einfachen Anführungszeichen (`'`) gesetzt werden** (sie sind einfacher zu tippen als die normalen auf einer *QWERTY* Tastatur). Neben der Einheitlichkeit zu anderen Sprachen, einschließlich CSS' Cousin JavaScript, gibt es mehrere Gründe dafür:
 
-- Farbnamen werden wie Farben interpretiert wenn sie in Anführungszeichen gesetzt sind, was zu ernsthaften Problemen führen kann;
-- die meisten Syntax-Highlighter bekommen Probleme mit Strings die nicht in Anführungszeichen stehen;
-- es unterstützt die generelle Lesbarkeit;
-- es gibt keinen wirklichen Grund es nicht zu tun.
+* Farbnamen werden wie Farben interpretiert wenn sie in Anführungszeichen gesetzt sind, was zu ernsthaften Problemen führen kann;
+* die meisten Syntax-Highlighter bekommen Probleme mit Strings die nicht in Anführungszeichen stehen;
+* es unterstützt die generelle Lesbarkeit;
+* es gibt keinen wirklichen Grund es nicht zu tun.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -90,17 +91,17 @@ Wenn es um Längen geht, sollte eine `0` niemals eine weitere Einheit besitzen.
 
 Der häufigste Fehler den ich mir bei Zahlen in Sass vorstellen kann, ist der Gedanke dass Einheiten einfach nur ein String sind, die man sicher zu jeder Zahl hinzufügen kann. Das klingt zwar richtig, ist aber nicht wie Einheiten funktionieren. Stell dir eine Einheit als ein algebraisches Symbol vor. Zum Beispiel in der echten Welt, ist 5 Zoll multipliziert mit 5 Zoll gleich 25 Quadratzoll. Nach derselben Logik geht Sass.
 
-Um eine Einheit zu einer Zahl hinzuzufügen, musst du diese Zahl mit _einer Einheit_ multiplizieren.
+Um eine Einheit zu einer Zahl hinzuzufügen, musst du diese Zahl mit *einer Einheit* multiplizieren.
 
 {% include snippets/syntax/09/index.html %}
 
-Einen _0 Wert der Einheit_ hinzuzufügen funktioniert ebenfalls, aber ich empfehle eher die obrige Methode da es sonst etwas verwirrend ist. Wenn du versuchst eine Zahl in eine andere kompatible Einheit zu konvertieren, wird 0 hinzuzufügen nicht klappen. Mehr dazu [in diesem Artikel](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Einen *0 Wert der Einheit* hinzuzufügen funktioniert ebenfalls, aber ich empfehle eher die obrige Methode da es sonst etwas verwirrend ist. Wenn du versuchst eine Zahl in eine andere kompatible Einheit zu konvertieren, wird 0 hinzuzufügen nicht klappen. Mehr dazu [in diesem Artikel](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
 Am Ende kommt es wirklich darauf an was du erreichen möchtest. Versuch dich einfach daran zu erinnern, das eine Einheit als String hinzuzufügen kein guter Weg ist fortzufahren.
 
-Um die Einheit von einem Wert zu entfernen, musst du es um _eine Einheit seiner Art_ teilen.
+Um die Einheit von einem Wert zu entfernen, musst du es um *eine Einheit seiner Art* teilen.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -114,7 +115,7 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 ### Magische Zahlen
 
-"Magische Zahlen" sind in der [Old School Programmierung](<http://de.wikipedia.org/wiki/Magische_Zahl_(Informatik)#Magische_Zahlen_in_Code>) ein Term dafür, _Werte direkt im Quellcode zu benutzen_. Grundsätzlich erklärt, ist es eine zufällige Zahl die *einfach funktioniert*™ ohne an irgendeine logische Begründung gebunden zu sein.
+"Magische Zahlen" sind in der [Old School Programmierung](http://de.wikipedia.org/wiki/Magische_Zahl_(Informatik)#Magische_Zahlen_in_Code) ein Term dafür, *Werte direkt im Quellcode zu benutzen*. Grundsätzlich erklärt, ist es eine zufällige Zahl die *einfach funktioniert*™ ohne an irgendeine logische Begründung gebunden zu sein.
 
 **Magische Zahlen sind schlechter Programmierstil und sollten unter allen Umständen vermieden werden**. Falls du mal keine gute Erklärung finden kannst, weshalb eine Zahl funktioniert, dann füg ein ausführlichen Kommentar hinzu der erklärt wie du dahin gekommen bist und weshalb du denkst dass es funktioniert. Zuzugeben dass du nicht weißt weshalb etwas funktioniert, ist manchmal hilfreicher für den nächsten Entwickler als wenn er komplett von Anfang herausfinden muss was passiert.
 
@@ -128,9 +129,9 @@ Farben nehmen einen wichtigen Platz in der CSS Sprache ein. Normalerweise ist Sa
 
 Sass ist so nützlich Farben zu manipulieren dass das Internet voller Artikel über das Thema aufblüht. Lass mich ein paar Artikel empfehlen:
 
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Farbformate
 
@@ -190,11 +191,11 @@ Listen sind Sass' äquivalent zu Arrays. Eine Liste ist eine flache Datenstruktu
 
 Listen sollten folgende Guidelines beachten:
 
-- entweder einzeilig oder mehrzeilig;
-- auf jedenfall mehrzeilig wenn sie mehr als 80 Zeichen beinhalten;
-- es sei denn sie sind für CSS Zwecke verwendet, immer mit einem Komma getrennt;
-- immer in Klammern;
-- ein abschließendes Komma wenn mehrzeilig, keines wenn einzeilig.
+* entweder einzeilig oder mehrzeilig;
+* auf jedenfall mehrzeilig wenn sie mehr als 80 Zeichen beinhalten;
+* es sei denn sie sind für CSS Zwecke verwendet, immer mit einem Komma getrennt;
+* immer in Klammern;
+* ein abschließendes Komma wenn mehrzeilig, keines wenn einzeilig.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -212,14 +213,14 @@ Mit Sass können Stylesheet Autoren sogenannte Maps definieren — der Sass Term
 
 Maps sollten folgendermaßen geschrieben werden:
 
-- Leerzeichen nach Doppelpunkt (`:`);
-- öffnende Klammer (`(`) auf derselben Zeile wie der Doppelpunkt (`:`);
-- **Keys in Anführungszeichen** wenn sie Strings sind (was zu 99% der Fall ist);
-- jedes Key/Value Paar auf eine neue Zeile;
-- Komma (`,`) ans Ende von jedem Key/Value;
-- **abschließendes Komma** (`,`) ans letzte Element um das hinzufügen, entfernen oder neuordnen einfacher zu machen;
-- schließende Klammer (`)`) auf eine neue Zeile;
-- kein Leerzeichen oder neue Zeile zwischen schließender Klammer (`)`) und Semikolon (`;`)
+* Leerzeichen nach Doppelpunkt (`:`);
+* öffnende Klammer (`(`) auf derselben Zeile wie der Doppelpunkt (`:`);
+* **Keys in Anführungszeichen** wenn sie Strings sind (was zu 99% der Fall ist);
+* jedes Key/Value Paar auf eine neue Zeile;
+* Komma (`,`) ans Ende von jedem Key/Value;
+* **abschließendes Komma** (`,`) ans letzte Element um das hinzufügen, entfernen oder neuordnen einfacher zu machen;
+* schließende Klammer (`)`) auf eine neue Zeile;
+* kein Leerzeichen oder neue Zeile zwischen schließender Klammer (`)`) und Semikolon (`;`)
 
 Illustration:
 
@@ -231,13 +232,13 @@ Artikel über Sass Maps zeigen wie lang ersehnt dieses Feature war. Ich kann die
 
 An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS Regelwerke geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-Regelwerk)):
 
-- verwandte Selektoren auf dieselbe Zeile; zusammenhanglose auf eine neue;
-- die öffnende Klammer (`{`) mit einem Leerzeichen zum letzten Selektor;
-- jede Deklaration auf eine neue Zeile;
-- ein Leerzeichen nach dem Doppelpunkt (`:`);
-- ein abschließendes Semikolon (`;`) ans Ende aller Deklarationen;
-- die schließende Klammer (`}`) auf eine neue Zeile;
-- eine neue Zeile nach der schließenden Klammer (`}`).
+* verwandte Selektoren auf dieselbe Zeile; zusammenhanglose auf eine neue;
+* die öffnende Klammer (`{`) mit einem Leerzeichen zum letzten Selektor;
+* jede Deklaration auf eine neue Zeile;
+* ein Leerzeichen nach dem Doppelpunkt (`:`);
+* ein abschließendes Semikolon (`;`) ans Ende aller Deklarationen;
+* die schließende Klammer (`}`) auf eine neue Zeile;
+* eine neue Zeile nach der schließenden Klammer (`}`).
 
 Illustration:
 
@@ -245,11 +246,11 @@ Illustration:
 
 Zusätzlich zu den CSS bezogenen Guidelines, richtet sich unsere Aufmerksamkeit auf:
 
-- lokale Variablen sollen vor allen anderen Deklarationen zugewiesen und durch eine neue Zeile getrennt werden;
-- Mixin Aufrufe die kein `@content` besitzen, kommen vor alle Deklarationen;
-- verschachtelte Selektoren immer in eine neue Zeile;
-- Mixin-Aufrufe mit `@content` kommen nach jedem verschachtelten Selektor;
-- keine neue Zeile nach der schließenden Klammer (`}`).
+* lokale Variablen sollen vor allen anderen Deklarationen zugewiesen und durch eine neue Zeile getrennt werden;
+* Mixin Aufrufe die kein `@content` besitzen, kommen vor alle Deklarationen;
+* verschachtelte Selektoren immer in eine neue Zeile;
+* Mixin-Aufrufe mit `@content` kommen nach jedem verschachtelten Selektor;
+* keine neue Zeile nach der schließenden Klammer (`}`).
 
 Illustration:
 
@@ -259,8 +260,8 @@ Illustration:
 
 Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander gehen als bei der Anordnung von Deklarationen in CSS. Konkret gibt es zwei Fraktionen:
 
-- sich an eine alphabetische Reihenfolge halten;
-- Deklarationen nach Typ (position, display, colors, font, sonstiges...) sortieren.
+* sich an eine alphabetische Reihenfolge halten;
+* Deklarationen nach Typ (position, display, colors, font, sonstiges...) sortieren.
 
 Es gibt bei beidem Vor- und Nachteile. Auf der einen Seite ist die alphabetische Reihenfolge universal (zumindest für Sprachen mit dem lateinischen Alphabet), also gibt es auch keine Diskussion darüber wie Werte sortiert werden sollen. Dennoch kommt es mir ziemlich komisch vor, Werte wie `bottom` und `top` nicht direkt beieinander zu sehen. Warum sollen Animationen vor dem Display-Typ erscheinen? Es gibt eine Menge Ungereimtheiten mit der alphabetischen Reihefolge.
 
@@ -278,15 +279,15 @@ Ich kann mich selber nicht entscheiden. Eine [kürzliche Umfrage auf CSS-Tricks]
 
 {% include images/order-poll.html %}
 
-Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was dir am besten gefällt, solange du konsistent durch alle Stylesheets bleibst (z.B. nicht die _Random_-Option).
+Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was dir am besten gefällt, solange du konsistent durch alle Stylesheets bleibst (z.B. nicht die *Random*-Option).
 
 <div class="note">
-  <p>Eine <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
+  <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
 
 ## Verschachtelung von Selektoren
 
-Ein bestimmtes Feature von Sass, welches von vielen Entwickler übermäßig missbraucht wird, ist die _Verschachtelung von Selektoren_. Sie bietet einen Weg für Stylesheet Autoren, lange Selektoren, durchs ineinander verschachteln von kurzen Selektoren, zu erzeugen.
+Ein bestimmtes Feature von Sass, welches von vielen Entwickler übermäßig missbraucht wird, ist die *Verschachtelung von Selektoren*. Sie bietet einen Weg für Stylesheet Autoren, lange Selektoren, durchs ineinander verschachteln von kurzen Selektoren, zu erzeugen.
 
 ### Generelle Regel
 

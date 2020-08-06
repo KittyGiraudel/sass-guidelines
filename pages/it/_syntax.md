@@ -1,3 +1,4 @@
+
 # Sintassi e formattazione
 
 Se me lo chiedeste, la prima cosa che una guida di stile dovrebbe fare è descrivere il modo in cui vogliamo che il nostro codice sia scritto.
@@ -6,10 +7,10 @@ Quando diversi sviluppatori sono coinvolti nello scrivere CSS sullo stesso proge
 
 Ispirandoci senza vergogna a [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) vogliamo:
 
-- indentare con due (2) spazi, non utilizzando tab;
-- avere righe di 80 caratteri, se possibile;
-- scrivere le regole css su più righe;
-- usare in modo ragionato le righe bianche.
+* indentare con due (2) spazi, non utilizzando tab;
+* avere righe di 80 caratteri, se possibile;
+* scrivere le regole css su più righe;
+* usare in modo ragionato le righe bianche.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -27,14 +28,14 @@ Per evitare possibili guai con la codifica dei caratteri, è altamente cosigliat
 
 CSS non ha bisogni di apici per le stringhe, nemmeno per quelle che contengono spazi. Prendete la dichiarazione font-family: non importa se si usano gli apici per i nomi dei font oppure no.
 
-Per questo motivo, Sass non _richiederebbe_ di usare gli apici per le stringe. Meglio ancora (e per fortuna!) una stringa con gli apici è uguale a una senza (`'abc'` è uguale ad `abc`).
+Per questo motivo, Sass non *richiederebbe* di usare gli apici per le stringe. Meglio ancora (e per fortuna!) una stringa con gli apici è uguale a una senza (`'abc'` è uguale ad `abc`).
 
-Detto questo però, i linguaggi che non richiedono gli apici per le stringhe sono una minoranza, quindi in Sass **le stringhe dovrebbero sempre essere comunque messe dentro singoli apici** (`'`). È preferibile usare gli apici singoli rispetto ai doppi perchè più facili da digitare in una tastiera _qwerty_. Ci sono inoltre diverse ragioni per questa scelta, oltre alla coerenza con altri linguaggi, incluso il cugino JavaScript:
+Detto questo però, i linguaggi che non richiedono gli apici per le stringhe sono una minoranza, quindi in Sass **le stringhe dovrebbero sempre essere comunque messe dentro singoli apici** (`'`). È preferibile usare gli apici singoli rispetto ai doppi perchè più facili da digitare in una tastiera *qwerty*. Ci sono inoltre diverse ragioni per questa scelta, oltre alla coerenza con altri linguaggi, incluso il cugino JavaScript:
 
-- i nomi dei colori sono considerati colori solo quando non hanno gli apici, il che può portare diversi problemi;
-- molti degli strumenti di evidenziazione della sintassi non funzionano su stringhe senza apici;
-- aiuta la leggibilità;
-- non c'è nessuna ragione per non aggiungere gli apici alle stringhe.
+* i nomi dei colori sono considerati colori solo quando non hanno gli apici, il che può portare diversi problemi;
+* molti degli strumenti di evidenziazione della sintassi non funzionano su stringhe senza apici;
+* aiuta la leggibilità;
+* non c'è nessuna ragione per non aggiungere gli apici alle stringhe.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -90,17 +91,17 @@ Quando si ha a che fare con le lunghezze, un valore `0` non dovrebbe mai avere l
 
 L'errore più comune che si può immaginare riguardo i numeri e Sass è pensare che le unità di misura siano solo stringhe che si possono aggiungere ai numeri. Se delle volte è vero, non è così che le unità di misura funzionano in Sass. Le unità di misura dovrebbero essere immaginate come simboli algebrici. Ad esempio, moltiplicare 5 pollici per 5 pollici ci dà 25 pollici quadrati. La stessa logica va applicata a Sass.
 
-Per aggiungere l'unità di misura ad un numero, basta moltiplicare il numero per _1 unità_.
+Per aggiungere l'unità di misura ad un numero, basta moltiplicare il numero per *1 unità*.
 
 {% include snippets/syntax/09/index.html %}
 
-Funziona anche aggiungere _0 di quella unità di misura_, ma consiglierei il metodo precedente, dato che aggiungere _0 unità_ può creare confusione. Quando invece proviamo a convertire un numero in un altra unità di misura compatibile, aggiungere lo zero non serve a nulla. Per saperne di più potete leggere [questo articolo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Funziona anche aggiungere *0 di quella unità di misura*, ma consiglierei il metodo precedente, dato che aggiungere *0 unità* può creare confusione. Quando invece proviamo a convertire un numero in un altra unità di misura compatibile, aggiungere lo zero non serve a nulla. Per saperne di più potete leggere [questo articolo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
 Dipende quindi da cosa si sta cercando di ottenere. C'è da ricordare che aggiungere l'unità come una stringa non è una buona maniera di procedere.
 
-Per rimuovere l'unità di misura di un valore, basta dividere di _una unità del suo genere_.
+Per rimuovere l'unità di misura di un valore, basta dividere di *una unità del suo genere*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -114,7 +115,7 @@ Aggiungere un'unità di misura come stringa ad un numero genera una stringa, imp
 
 ### Numeri magici
 
-Il "Numero magico" è un [termine da vecchia scuola della programmazione ](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) utilizzato per descrivere _costanti numeriche senza nome_. In pratica si tratta di un numero casuale che semplicemente _funziona_ anche senza nessuna logica dietro.
+Il "Numero magico" è un [termine da vecchia scuola della programmazione ](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) utilizzato per descrivere *costanti numeriche senza nome*. In pratica si tratta di un numero casuale che semplicemente *funziona* anche senza nessuna logica dietro.
 
 Non ci sarebbe bisogno di dirlo ma: **i numeri magici sono una piaga e dovrebbero essere evitati a qualsiasi costo**. Quando non riuscite a capire perchè un numero funziona, aggiungete almeno un bel commento esaustivo, che spiega per bene come siete arrivati ad utilizzare questo numero e come mai pensate che funzioni. Ammettere che non sapete precisamente come funziona è comunque un aiuto per il prossimo sviluppatore che metterà mano al vostro codice.
 
@@ -128,9 +129,9 @@ I colori occupano un importante posto nel mondo CSS. Ovviamente Sass è un nostr
 
 Sass è così utile quando si tratta di manipolare colori, che sono spuntati ovunque su internet articoli su questo argomento. Posso raccomandarvene alcuni da leggere:
 
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Formati di colore
 
@@ -191,11 +192,11 @@ Le liste sono l'equivalente Sass degli array. Una lista, a differenza di una [ma
 
 Le liste dovrebbero rispettare le seguenti linee guida:
 
-- possono essere scritte in una o più righe a seconda dei casi;
-- vanno obbligatoriamente su più linee nel caso siano troppo lunghe per stare in una riga di 80 caratteri;
-- a meno che non siano usati per CSS, hanno sempre una virgola come separatore;
-- sono sempre incluse in parentesi tonde;
-- una virgola di chiusura solo se su più righe.
+* possono essere scritte in una o più righe a seconda dei casi;
+* vanno obbligatoriamente su più linee nel caso siano troppo lunghe per stare in una riga di 80 caratteri;
+* a meno che non siano usati per CSS, hanno sempre una virgola come separatore;
+* sono sempre incluse in parentesi tonde;
+* una virgola di chiusura solo se su più righe.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -211,14 +212,14 @@ Gli autori di fogli di stile possono definire con Sass delle mappe — il termin
 
 Le mappe dovrebbero essere così scritte:
 
-- uno spazio dopo i due punti (`:`);
-- parentesi di apertura (`(`) sulla stessa riga dei due punti (`:`);
-- **chiavi all'interno di apici** nel caso siano stringhe (il che rappresenta il 99% dei casi);
-- ogni coppia chiave/valore su una nuova riga;
-- una virgola (`,`) alla fine di ogni coppia chiave/valore;
-- **una virgola di chiusura** (`,`) inserita dopo l'ultimo elemento, in modo da rendere più facile l'aggiunta, la rimozione o il riordino di elementi;
-- la parentesi di chiusura (`)`) deve andare su una nuova riga;
-- nessuno spazio o nuova riga tra la parentesi di chiusura (`)`) e il punto e virgola (`;`).
+* uno spazio dopo i due punti (`:`);
+* parentesi di apertura (`(`) sulla stessa riga dei due punti (`:`);
+* **chiavi all'interno di apici** nel caso siano stringhe (il che rappresenta il 99% dei casi);
+* ogni coppia chiave/valore su una nuova riga;
+* una virgola (`,`) alla fine di ogni coppia chiave/valore;
+* **una virgola di chiusura** (`,`) inserita dopo l'ultimo elemento, in modo da rendere più facile l'aggiunta, la rimozione o il riordino di elementi;
+* la parentesi di chiusura (`)`) deve andare su una nuova riga;
+* nessuno spazio o nuova riga tra la parentesi di chiusura (`)`) e il punto e virgola (`;`).
 
 Esempio:
 
@@ -230,13 +231,13 @@ Questa funzionalità è stata a lungo desiderata e gli articoli a riguardo sono 
 
 A questo punto non ci rimane che ripassare qualcosa che tutti sappiamo, ovvero come andrebbe scritto un set di regole CSS (almeno secondo la maggior parte delle linee guida, inclusa [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- selettori correlati sulla stessa riga; non correlati su una nuova riga;
-- la graffa di apertura (`{`) deve essere separata dall'ultimo selettora da uno spazio;
-- ogni dichiarazione deve avere una propria riga;
-- uno spazio dopo i due punti (`:`);
-- un punto e virgola di chiusura (`;`) alla fine di tutte le dichiarazioni;
-- la graffa di chiusura (`}`) deve avere una proria riga;
-- una nuova riga dopo la graffa di chiusura `}`.
+* selettori correlati sulla stessa riga; non correlati su una nuova riga;
+* la graffa di apertura (`{`) deve essere separata dall'ultimo selettora da uno spazio;
+* ogni dichiarazione deve avere una propria riga;
+* uno spazio dopo i due punti (`:`);
+* un punto e virgola di chiusura (`;`) alla fine di tutte le dichiarazioni;
+* la graffa di chiusura (`}`) deve avere una proria riga;
+* una nuova riga dopo la graffa di chiusura `}`.
 
 Esempio:
 
@@ -244,11 +245,11 @@ Esempio:
 
 In aggiunta a queste linee guida correlate al CSS, facciamo attenzione ai seguenti punti:
 
-- le variabili locali devono essere dichiarate prima di ogni dichiarazione e devono essere separate dalle dichiarazioni da una nuova riga vuota;
-- i mixin senza alcun `@content` devono essere inseriti prima delle dichiarazioni;
-- selettori annidati vanno sempre preceduti da una riga vuota;
-- mixin con un `@content` vanno dopo i selettori annidati;
-- nessuna nuova riga prima della graffa di chiusura (`}`).
+* le variabili locali devono essere dichiarate prima di ogni dichiarazione e devono essere separate dalle dichiarazioni da una nuova riga vuota;
+* i mixin senza alcun `@content` devono essere inseriti prima delle dichiarazioni;
+* selettori annidati vanno sempre preceduti da una riga vuota;
+* mixin con un `@content` vanno dopo i selettori annidati;
+* nessuna nuova riga prima della graffa di chiusura (`}`).
 
 Esempio:
 
@@ -258,8 +259,8 @@ Esempio:
 
 Non credo ci siano molti altri argomenti oltre a come ordinare dichiarazioni CSS, che abbiano opinioni così divergenti. Ci sono due fazioni principali:
 
-- ordine alfabetico;
-- ordine di dichiarazioni in base al tipo di dichiarazione (position, display, colori, font, eccetera…).
+* ordine alfabetico;
+* ordine di dichiarazioni in base al tipo di dichiarazione (position, display, colori, font, eccetera…).
 
 Ci sono pro e contro per entrambi i modi. Da una parte, l'ordine alfabetico è (almeno per chi usa l'alfabeto latino) universale, quindi non ci possono essere discussioni su come ordinare una proprietà rispetto ad un'altra. Tuttavia è davvero strano per me vedere proprietà come `bottom` e `top` non una affianco all'altra. Perchè le animazioni devono essere prima delle proprietà di posizionamento? Ci sono un sacco di stranezze nell'ordinare alfabeticamente.
 
@@ -277,15 +278,15 @@ Io posso dirvi che non riesco a decidermi. Un [sondaggio recente su CSS-Tricks](
 
 {% include images/order-poll.html %}
 
-Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo _random_ non vale).
+Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo *random* non vale).
 
 <div class="note">
-  <p>Uno <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
+  <p>Uno <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
 </div>
 
 ## Selettori annidati
 
-Una particolare funzionalità, che Sass fornisce e di cui molti sviuppatori stanno abusando, è quella dei _selettori annidati_. Annidare i selettori offre agli autori di fogli di stile un modo per generare lunghi selettori annidando selettori più corti uno dentro l'altro.
+Una particolare funzionalità, che Sass fornisce e di cui molti sviuppatori stanno abusando, è quella dei *selettori annidati*. Annidare i selettori offre agli autori di fogli di stile un modo per generare lunghi selettori annidando selettori più corti uno dentro l'altro.
 
 ### Regola generale
 
@@ -305,7 +306,7 @@ Allo stesso modo, a partire da Sass 3.3 è possibile utilizzare il riferimento a
 
 {% include snippets/syntax/32/index.html %}
 
-Questo approccio è molto utilizzato con la [convenzione BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) per generare selettori `.blocco__elemento` e `.block--modificatore` basati sul selettore originale (`.blocco` in questo caso).
+Questo approccio è molto utilizzato con la [convenzione BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) per generare  selettori `.blocco__elemento` e `.block--modificatore` basati sul selettore originale (`.blocco` in questo caso).
 
 <div class="note">
   <p>Questa nota potrebbe essere aneddotica, ma segnalo comunque che generare un nuovo selettore partendo dal riferimento al selettore corrente (<code>&</code>) rende questi selettori non ricercabili nella codebase, in quanto non esistono come entità singole.</p>
@@ -315,7 +316,7 @@ Il problema con i selettori annidati è che rendono definitivamente il codice mo
 
 Questo diventa sempre più vero man mano che i selettori diventano più lunghi e i riferimenti al selettore corrente (`&`) diventano più frequenti. Ad un certo punto, il rischo di perdere traccia e di non capire più cosa sta accadendo diventa sempre più grande, tanto che annidare non vale più la pena.
 
-Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](http://thesassway.com/beginner/the-inception-rule). Il suggerimento è semplice, ovvero evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io sarei più drastico e raccomando di **evitare i selettori annidati il più possibile**.
+Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](http://thesassway.com/beginner/the-inception-rule). Il suggerimento è semplice, ovvero evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io sarei più drastico e raccomando di  **evitare i selettori annidati il più possibile**.
 
 Per quanto ci siano alcune eccezioni a questa regola, come vedremo nella prossima sezione, questa opinione pare essere molto popolare. Potete leggere a riguardo qualcosa su questi articoli:
 [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).

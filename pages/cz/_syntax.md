@@ -1,3 +1,4 @@
+
 # Syntaxe & formátování
 
 Pokud byste se mě zeptali, co je první věc, kterou by každá příručka měla obsahovat, bylo by to jak má kód vypadat.
@@ -6,10 +7,10 @@ Když se několik vývojářů zapojí do psaní CSS ve stejném projektu, je je
 
 Tady je zhruba to, co chceme (beze studu inspirováno [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-- dvě (2) mezery odsazení, žádné tabulátory;
-- ideálně, 80 znaků na řádek;
-- správně psané víceřádkové CSS pravidla;
-- smysluplné použití mezer.
+* dvě (2) mezery odsazení, žádné tabulátory;
+* ideálně, 80 znaků na řádek;
+* správně psané víceřádkové CSS pravidla;
+* smysluplné použití mezer.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -29,14 +30,14 @@ Aby se zabránilo možným problémům s kódováním znaků, je vysoce doporuč
 
 CSS nevyžaduje, aby byly řetězce obaleny uvozovkami, a to ani pokud obsahují mezery. Vezměte si například font-family názvy: CSS parseru nezáleží, jestli je zabalíte do uvozovek.
 
-A právě proto _ani_ Sass nevyžaduje, aby byly řetězce zabaleny uvozovkami. A ještě lépe (a _naštěstí_, což určitě poznáte), řetězec s uvozovkami je striktně rovnocený k dvojčeti bez uvozovek (tedy například `'abc'` je striktně rovnocenný s `abc`).
+A právě proto *ani* Sass nevyžaduje, aby byly řetězce zabaleny uvozovkami. A ještě lépe (a *naštěstí*, což určitě poznáte), řetězec s uvozovkami je striktně rovnocený k dvojčeti bez uvozovek (tedy například `'abc'` je striktně rovnocenný s `abc`).
 
-Jak již bylo řečeno, jazyky, které nevyžadují, aby byly řetězce obaleny uvozovkami jsou jasnou menšinou a proto **by měly být řetězce v Sassu vždy zabaleny v jednoduchých uvozovkách** (`'`) (jednoduché uvozovky bývají snadnější na napsaní než-li dvojité na _qwerty_ klávesnicích). Kromě souladu s ostatními jazyky, včetně CSS bratrance JavaScriptu, je několik důvodů pro tuto volbu:
+Jak již bylo řečeno, jazyky, které nevyžadují, aby byly řetězce obaleny uvozovkami jsou jasnou menšinou a proto **by měly být řetězce v Sassu vždy zabaleny v jednoduchých uvozovkách** (`'`) (jednoduché uvozovky bývají snadnější na napsaní než-li dvojité na *qwerty* klávesnicích). Kromě souladu s ostatními jazyky, včetně CSS bratrance JavaScriptu, je několik důvodů pro tuto volbu:
 
-- jména barev jsou považovány za barvy, pokud jsou bez uvozovek, což může vést k vážným problémům;
-- většina zvýrazňovačů syntaxe bude řetězce bez uvozovek považovat za chybu;
-- napomáhá obecné čitelnosti;
-- není žádný důvod proč řetězce neobalovat uvozovkami.
+* jména barev jsou považovány za barvy, pokud jsou bez uvozovek, což může vést k vážným problémům;
+* většina zvýrazňovačů syntaxe bude řetězce bez uvozovek považovat za chybu;
+* napomáhá obecné čitelnosti;
+* není žádný důvod proč řetězce neobalovat uvozovkami.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -64,8 +65,8 @@ URL by měly být také zabaleny v uvozovkách ze stejných důvodů jako je vý
 
 ###### Další četba
 
-- [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-- [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
+* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Čísla
 
@@ -85,17 +86,17 @@ Pokud se zaměříme na jednotky, `0` by nikdy neměla mít definovanou jednotku
 
 Nejčastější chybou, která mě napadne v souvislosti s čísly v Sassu, je ta, že jednotky jsou jen nějaké textové řetězce, které mohou být bezpečně dosazeny k číslu. I když to je pravda, určitě to není jak jednotky fungují. Představte si jednotky jako algebraické symboly. Například v reálném světě, násobení 5 centimetrů 5 centimetry vám dá 25 centimetrů čtverečních. Stejná logika platí i pro Sass.
 
-Pro přidání jednotky k číslu musíte číslo vynásobit _1 jednotkou_.
+Pro přidání jednotky k číslu musíte číslo vynásobit *1 jednotkou*.
 
 {% include snippets/syntax/09/index.html %}
 
-Všimněte si, že _0 členů té jednotky_ také funguje, ale já bych vám raději doporučoval zmíněnou metodu, jelikož přidáním _0 jednotky_ může být tak trochu matoucí. Avšak pokud se budete snažit převést číslo do jiné kompatibilní jednotky, přidání 0 na to nebude stačit.
+Všimněte si, že *0 členů té jednotky* také funguje, ale já bych vám raději doporučoval zmíněnou metodu, jelikož přidáním *0 jednotky* může být tak trochu matoucí. Avšak pokud se budete snažit převést číslo do jiné kompatibilní jednotky, přidání 0 na to nebude stačit.
 
 {% include snippets/syntax/10/index.html %}
 
 Nakonec to všechny závisí na tom, čeho se snažíte dosáhnout. Jenom mějte na paměti, že přidáním jednotky v řetězci není dobrou cestou jak to dělat.
 
-Pro odstranění jednotky z hodnoty ji musíte vydělit _jednou jednotkou svého druhu_.
+Pro odstranění jednotky z hodnoty ji musíte vydělit *jednou jednotkou svého druhu*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -109,7 +110,7 @@ Připojením jednotky v řetězci k číslu vznikne řetězec, který zamezí ja
 
 ### Magická čísla
 
-"Magická čísla" je [old school programovací](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) termín pro _nepojmenované matematické konstanty_. V podstatě to je jen náhodné číslo, které *prostě funguje*™ a zatím není vázáno na žádné logické vysvětlení.
+"Magická čísla" je [old school programovací](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) termín pro *nepojmenované matematické konstanty*. V podstatě to je jen náhodné číslo, které *prostě funguje*™ a zatím není vázáno na žádné logické vysvětlení.
 
 Netřeba snad ani dodávat, že **magická čísla jsou mor a mělo by se jim vyhýbat za jakoukoli cenu**. Pokud nemůžete najít rozumné vysvětlení, proč číslo funguje, přidejte rozsáhlý komentář vysvětlující jak jste se tam dostali a proč si myslíte, že to funguje. Přiznáním se, že nevíte proč něco funguje je stále více užitečné pro dalšího vývojáře, než aby sám musel přijít na to co se děje on nuly.
 
@@ -117,10 +118,10 @@ Netřeba snad ani dodávat, že **magická čísla jsou mor a mělo by se jim vy
 
 ###### Další četba
 
-- [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-- [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-- [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-- [Sassy-Math](https://github.com/at-import/sassy-math)
+* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
+* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+* [Sassy-Math](https://github.com/at-import/sassy-math)
 
 ## Barvy
 
@@ -175,11 +176,11 @@ Pokud nechcete pokaždé psát `mix` funkci, můžete vytvořit dvě jednoduché
 
 ###### Další četba
 
-- [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## Seznamy
 
@@ -187,11 +188,11 @@ Seznamy jsou Sass verzí polí. Seznam má strukturu jednorozměrného pole (na 
 
 Seznamy by měly být tvořeny podle následujícího manuálu:
 
-- buď je jednořádkový nebo víceřádkový;
-- pokud je příliš dlouhý, aby se vešel na 80 znaků, musí být víceřádkový;
-- pokud není používaný pro účely CSS, vždy se položky rozdělují čárkami;
-- vždy musí být zabalený v závorkách;
-- koncová čárka se přidává pokud je víceřádkový, pokud je jednořádkový, tak ne.
+* buď je jednořádkový nebo víceřádkový;
+* pokud je příliš dlouhý, aby se vešel na 80 znaků, musí být víceřádkový;
+* pokud není používaný pro účely CSS, vždy se položky rozdělují čárkami;
+* vždy musí být zabalený v závorkách;
+* koncová čárka se přidává pokud je víceřádkový, pokud je jednořádkový, tak ne.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -201,8 +202,8 @@ Pokud přidáváte nové položky do seznamu, vždy používejte dodávané API.
 
 ###### Další četba
 
-- [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-- [SassyLists](http://sassylists.com)
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [SassyLists](http://sassylists.com)
 
 ## Mapy
 
@@ -210,14 +211,14 @@ Již od Sassu 3.3 mohou autoři definovat mapy &mdash; což je Sass termín pro 
 
 Mapy by se měly psát tak, jako je popsáno níže:
 
-- mezera za dvojtečkou (`:`);
-- otevírací závorka (`(`) na stejném řádku jako dvojtečka (`:`);
-- pokud je klíč textový řetězec, pak by měl být **v uvozovkách** (což je 99% případů);
-- každý pár klíč/hodnota na svém vlastním řádku;
-- čárka (`,`) na konci každého páru klíč/hodnota;
-- **koncová čárka** (`,`) by měla být i na konci poslední položky, pro snadnější přidávání, odstraňování, nebo změnu pořadí položek;
-- uzavírací závorka (`)`) na novém řádku;
-- žádná mezera nebo nový řádek mezi uzavírací závorkou (`)`) a středníkem (`;`).
+* mezera za dvojtečkou (`:`);
+* otevírací závorka (`(`) na stejném řádku jako dvojtečka (`:`);
+* pokud je klíč textový řetězec, pak by měl být **v uvozovkách** (což je 99% případů);
+* každý pár klíč/hodnota na svém vlastním řádku;
+* čárka (`,`) na konci každého páru klíč/hodnota;
+* **koncová čárka** (`,`) by měla být i na konci poslední položky, pro snadnější přidávání, odstraňování, nebo změnu pořadí položek;
+* uzavírací závorka (`)`) na novém řádku;
+* žádná mezera nebo nový řádek mezi uzavírací závorkou (`)`) a středníkem (`;`).
 
 Ilustrace:
 
@@ -235,27 +236,27 @@ Pokud jste zvědavi, do jaké hloubky vaše mapa sahá, přidejte následující
 
 ###### Další četba
 
-- [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-- [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-- [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-- [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-- [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-- [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-- [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-- [Sassy-Maps](https://github.com/at-import/sassy-maps)
-- [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
+* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
+* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
+* [Sassy-Maps](https://github.com/at-import/sassy-maps)
+* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 ## CSS pravidla
 
 V tuto chvíli zde uvedu, co většina asi ví, jak by měly být CSS pravidla psány (nebo alespoň jak je nejvíce uvedeno v manuálech, včetně [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- související selektory na stejném řádku; nesouvisející na nových řádcích;
-- otevírací závorka (`{`) oddělena jednou mezerou od posledního selektoru;
-- každá deklarace na svém vlastním řádku;
-- mezera za středníkem (`:`);
-- uzavírací středník (`;`) na konci každé deklarace;
-- uzavírací závorka (`}`) na svém vlastním novém řádku;
-- nový řádek po uzavírací závorce `}`.
+* související selektory na stejném řádku; nesouvisející na nových řádcích;
+* otevírací závorka (`{`) oddělena jednou mezerou od posledního selektoru;
+* každá deklarace na svém vlastním řádku;
+* mezera za středníkem (`:`);
+* uzavírací středník (`;`) na konci každé deklarace;
+* uzavírací závorka (`}`) na svém vlastním novém řádku;
+* nový řádek po uzavírací závorce `}`.
 
 Ilustrace:
 
@@ -263,11 +264,11 @@ Ilustrace:
 
 Přidáním těchto pokynů k CSS budeme dávat pozor na toto:
 
-- deklarovat lokální proměnné před jakoukoli deklarací, potom oddělit of deklarace novým řádkem;
-- volání mixinů bez `@content` před jakoukoli deklarací;
-- vnořené selektory vždy po novém řádku;
-- volání mixinů s `@content` po vnořených selektorech;
-- žádný řádek před zavírací závorkou (`}`).
+* deklarovat lokální proměnné před jakoukoli deklarací, potom oddělit of deklarace novým řádkem;
+* volání mixinů bez `@content` před jakoukoli deklarací;
+* vnořené selektory vždy po novém řádku;
+* volání mixinů s `@content` po vnořených selektorech;
+* žádný řádek před zavírací závorkou (`}`).
 
 Ilustrace:
 
@@ -275,14 +276,14 @@ Ilustrace:
 
 ###### Další četba
 
-- [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
 ## Řazení deklarace
 
 Nenapadá mě snad žádné jiné téma, kde jsou názory tak rozdělené jako právě v řazení CSS deklarací. Konkrétně se dělí na dvě frakce:
 
-- držet se abecedního pořadí;
-- řadit deklarace dle typu (pozice, zobrazení, barvy, písmo, a další…).
+* držet se abecedního pořadí;
+* řadit deklarace dle typu (pozice, zobrazení, barvy, písmo, a další…).
 
 V obou případech najdete výhody i nevýhody. Na jednu stranu je abecení pořadí univerzální (alespoň pro jazyky, které používají latinku), takže nemůže nastat situace, kdy se budete muset rozhodnout, jestli toto bude před tím, nebo ne. Každopádně vidět `bottom` a `top` od sebe je tak trochu divné. Proč by měly animace být před typem zobrazení? S abecedním pořadí existuje dost zvláštností.
 
@@ -300,20 +301,20 @@ Musím říci, že se sám nemohu rozhodnout. [Nedávný průzkum na CSS-Tricks]
 
 {% include images/order-poll.html %}
 
-Právě proto nebudu do příručky dávat doporučení na výběr. Vyberte si tu, kterou preferujete vy, jen buďte ve všech stylech konzistentní (tedy žádná _náhodná_ možnost).
+Právě proto nebudu do příručky dávat doporučení na výběr. Vyberte si tu, kterou preferujete vy, jen buďte ve všech stylech konzistentní (tedy žádná *náhodná* možnost).
 
 <div class="note">
-  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Nedávná studie</a> ukazuje, že používání <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (což používá <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">řazení podle typu</a>) pro řazení CSS deklarací končí s zkrácením průměrné velikosti pod Gzip kompresí o 2,7%, v porovnání 1,3% když je řazení podle abecedy.</p>
+  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Nedávná studie</a> ukazuje, že používání <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (což používá <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">řazení podle typu</a>) pro řazení CSS deklarací končí s zkrácením průměrné velikosti pod Gzip kompresí o 2,7%, v porovnání 1,3% když je řazení podle abecedy.</p>
 </div>
 
 ###### Další četba
 
-- [CSS Comb](https://github.com/csscomb/csscomb.js)
-- [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-- [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-- [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-- [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-- [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
+* [CSS Comb](https://github.com/csscomb/csscomb.js)
+* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
+* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Noření selektorů
 
@@ -377,6 +378,6 @@ Jako asi se vším, specifika jsou poněkud nedůležitá, důležitá je konzis
 
 ###### Další četba
 
-- [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-- [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-- [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
+* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
+* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

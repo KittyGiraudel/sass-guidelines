@@ -1,3 +1,4 @@
+
 # 구문 & 서식
 
 제 생각으로는, 스타일가이드가 가장 먼저 해야 할 일은 우리 코드가 어떻게 보이길 원하는지를 묘사하는 것입니다.
@@ -6,10 +7,10 @@
 
 대략, 우리가 원하는 것은 (뻔뻔스럽게도 [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)에서 영감을 얻은) 다음과 같습니다:
 
-- 탭 대신 스페이스 두 칸 (2) 들여쓰기;
-- 이상적인 행의 너비는 80 글자;
-- 적절하게 쓰인 여러 행의 CSS 규칙;
-- 공백의 의미 있는 사용.
+* 탭 대신 스페이스 두 칸 (2) 들여쓰기;
+* 이상적인 행의 너비는 80 글자;
+* 적절하게 쓰인 여러 행의 CSS 규칙;
+* 공백의 의미 있는 사용.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -29,14 +30,14 @@
 
 CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지어 공백을 포함한 경우에도요. 예를 들면 font-family가 있습니다: 따옴표로 감쌌는지 여부는 CSS 파서에게 문제가 되지 않습니다.
 
-이 때문에, Sass _역시_ 문자열이 따옴표로 둘러싸일 것을 요구하지 않습니다. 더 나아가 (그리고 여러분도 인정하듯이, 운이 좋게도) 따옴표로 둘러싸인 문자열은 그렇지 않은 쌍둥이와 정확히 동일합니다(예를 들면 `'abc'`는 `abc`와 정확히 동일합니다).
+이 때문에, Sass *역시* 문자열이 따옴표로 둘러싸일 것을 요구하지 않습니다. 더 나아가 (그리고 여러분도 인정하듯이, 운이 좋게도) 따옴표로 둘러싸인 문자열은 그렇지 않은 쌍둥이와 정확히 동일합니다(예를 들면 `'abc'`는 `abc`와 정확히 동일합니다).
 
-그렇기는 하나, 문자열이 따옴표에 둘러싸일 것을 요구하지 않는 언어들은 분명히 소수이고 따라서, Sass에서 **문자열은 언제나 작은 따옴표(`'`)로 감싸져야 합니다**(_qwerty_ 자판에서 작은 따옴표가 큰 따옴표보다 입력하기 쉬우므로). CSS의 사촌 JavaScript를 포함한 다른 언어와의 일관성 외에도, 이 선택에 대한 몇 가지 이유가 있습니다:
+그렇기는 하나, 문자열이 따옴표에 둘러싸일 것을 요구하지 않는 언어들은 분명히 소수이고 따라서, Sass에서 **문자열은 언제나 작은 따옴표(`'`)로 감싸져야 합니다**(*qwerty* 자판에서 작은 따옴표가 큰 따옴표보다 입력하기 쉬우므로). CSS의 사촌 JavaScript를 포함한 다른 언어와의 일관성 외에도, 이 선택에 대한 몇 가지 이유가 있습니다:
 
-- 색 이름은 따옴표가 없으면 색으로 취급되는데, 이는 심각한 문제로 이어질 수 있다;
-- 대부분의 구문 강조기는 따옴표 없는 문자열을 지원하지 못할 것이다;
-- 전반적인 가독성에 도움이 된다;
-- 문자열을 따옴표로 감싸지 않을 적절한 이유가 없다.
+* 색 이름은 따옴표가 없으면 색으로 취급되는데, 이는 심각한 문제로 이어질 수 있다;
+* 대부분의 구문 강조기는 따옴표 없는 문자열을 지원하지 못할 것이다;
+* 전반적인 가독성에 도움이 된다;
+* 문자열을 따옴표로 감싸지 않을 적절한 이유가 없다.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -64,8 +65,8 @@ URL 역시 위와 동일한 이유로 따옴표로 감싸여야 합니다:
 
 ###### 참고
 
-- [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-- [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
+* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## 숫자
 
@@ -109,7 +110,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 ### 매직 넘버
 
-"매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>)입니다. 기본적으로, 이 숫자는 어쩌다보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
+"매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants)입니다. 기본적으로, 이 숫자는 어쩌다보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
 
 말할 것도 없이 **매직 넘버는 역병 같은 존재이며 무슨 수를 써서라도 피해야 합니다**. 왜 매직넘버가 효과를 내는지에 대한 합리적인 설명을 찾을 수 없을 때는, 어떻게 거기에 도달했고 왜 효과를 낸다고 생각하는지를 설명하는 충분한 주석을 달아놓으세요. 무언가가 제대로 작동하는 이유를 모른다고 인정하는 것이 그래도 아무런 사전 정보 없이 알아내게 하는 것보다 다음 개발자에게 더 도움이 됩니다.
 
@@ -117,10 +118,10 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 ###### 참고
 
-- [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-- [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-- [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-- [Sassy-Math](https://github.com/at-import/sassy-math)
+* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
+* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+* [Sassy-Math](https://github.com/at-import/sassy-math)
 
 ## 색
 
@@ -175,11 +176,11 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 ###### 참고
 
-- [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## 리스트
 
@@ -187,13 +188,14 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 리스트는 다음의 가이드라인을 준수해야 합니다:
 
-- 한 줄 혹은 여러 줄;
-- 80자 줄에 안 들어갈 정도로 길면 반드시 여러 줄에 표기한다;
-- CSS 상에서 그대로 사용되지 않는 한, 언제나 쉼표로 분리한다;
-- 언제나 괄호로 감싼다;
-- 여러 줄인 경우 뒤따르는 쉼표를 붙이고, 한 줄인 경우 제외한다.
+* 한 줄 혹은 여러 줄;
+* 80자 줄에 안 들어갈 정도로 길면 반드시 여러 줄에 표기한다;
+* CSS 상에서 그대로 사용되지 않는 한, 언제나 쉼표로 분리한다;
+* 언제나 괄호로 감싼다;
+* 여러 줄인 경우 뒤따르는 쉼표를 붙이고, 한 줄인 경우 제외한다.
 
 {% include snippets/syntax/19/index.html %}
+
 
 리스트에 새로운 아이템을 추가할 때는, 언제나 제공된 API를 이용하세요. 수동으로 새로운 아이템을 추가하려고 하지 마세요.
 
@@ -201,8 +203,8 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 ###### 참고
 
-- [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-- [SassyLists](http://sassylists.com)
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [SassyLists](http://sassylists.com)
 
 ## 맵
 
@@ -210,14 +212,14 @@ Sass 3.3부터, 스타일시트 작성자는 맵을 정의할 수 있는데, 이
 
 맵은 다음과 같이 작성되어야 합니다:
 
-- 콜론(`:`) 다음에 스페이스;
-- 여는 괄호 (`(`)는 콜론(`:`)과 같은 줄에;
-- (99%의 경우에 해당하는) 문자열인 **키는 따옴표로 감싼다**;
-- 각각의 키/값 쌍은 새 줄을 차지한다;
-- 각 키/값 뒤에는 쉼표(`,`);
-- 추가, 제거 혹은 순서를 바꾸기 쉽도록 마지막 아이템 **뒤에 따라오는 쉼표**(`,`);
-- 닫는 괄호(`)`)는 새 줄을 차지한다;
-- 닫는 괄호(`)`)와 세미콜론(`;`) 사이에는 스페이스나 새 줄을 넣지 않는다.
+* 콜론(`:`) 다음에 스페이스;
+* 여는 괄호 (`(`)는 콜론(`:`)과 같은 줄에;
+* (99%의 경우에 해당하는) 문자열인 **키는 따옴표로 감싼다**;
+* 각각의 키/값 쌍은 새 줄을 차지한다;
+* 각 키/값 뒤에는 쉼표(`,`);
+* 추가, 제거 혹은 순서를 바꾸기 쉽도록 마지막 아이템 **뒤에 따라오는 쉼표**(`,`);
+* 닫는 괄호(`)`)는 새 줄을 차지한다;
+* 닫는 괄호(`)`)와 세미콜론(`;`) 사이에는 스페이스나 새 줄을 넣지 않는다.
 
 보기:
 
@@ -235,27 +237,27 @@ Sass 3.3부터, 스타일시트 작성자는 맵을 정의할 수 있는데, 이
 
 ###### 참고
 
-- [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-- [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-- [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-- [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-- [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-- [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-- [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-- [Sassy-Maps](https://github.com/at-import/sassy-maps)
-- [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
+* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
+* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
+* [Sassy-Maps](https://github.com/at-import/sassy-maps)
+* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 ## CSS 규칙
 
 이 부분은 모두가 알고 있는 내용의 복습이 되겠지만, 여기 CSS 규칙의 작성 방법이 있습니다 (적어도, [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)을 포함한 대부분의 가이드라인에 따르면 이렇습니다):
 
-- 관련된 선택자는 같은 줄에; 관련 없는 선택자는 새 줄에;
-- 여는 중괄호(`{`)는 마지막 선택자와 스페이스 한 칸의 간격을 둔다;
-- 각각의 선언은 저마다 새 줄을 차지한다;
-- 콜론(`:`) 뒤에는 스페이스 한 칸을 둔다;
-- 모든 선언의 끝은 세미콜론(`;`)으로 마무리한다;
-- 닫는 중괄호(`}`)는 새 줄을 차지한다;
-- 닫는 중괄호(`}`) 뒤에 새 줄.
+* 관련된 선택자는 같은 줄에; 관련 없는 선택자는 새 줄에;
+* 여는 중괄호(`{`)는 마지막 선택자와 스페이스 한 칸의 간격을 둔다;
+* 각각의 선언은 저마다 새 줄을 차지한다;
+* 콜론(`:`) 뒤에는 스페이스 한 칸을 둔다;
+* 모든 선언의 끝은 세미콜론(`;`)으로 마무리한다;
+* 닫는 중괄호(`}`)는 새 줄을 차지한다;
+* 닫는 중괄호(`}`) 뒤에 새 줄.
 
 보기:
 
@@ -263,11 +265,11 @@ Sass 3.3부터, 스타일시트 작성자는 맵을 정의할 수 있는데, 이
 
 CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심을 기울여야 합니다:
 
-- 지역 변수는 어떤 선언보다 먼저 선언되어야 하며, 새 줄 하나로 다른 선언들과 간격을 둔다;
-- `@content`가 없는 믹스인 호출은 다른 선언보다 앞에 위치한다;
-- 내포된 선택자는 언제나 새 줄 뒤에 온다;
-- `@content`를 가진 믹스인 호출은 내포된 선택자보다 뒤에 위치한다;
-- 닫는 중괄호(`}`) 앞에는 새 줄이 없어야 한다.
+* 지역 변수는 어떤 선언보다 먼저 선언되어야 하며, 새 줄 하나로 다른 선언들과 간격을 둔다;
+* `@content`가 없는 믹스인 호출은 다른 선언보다 앞에 위치한다;
+* 내포된 선택자는 언제나 새 줄 뒤에 온다;
+* `@content`를 가진 믹스인 호출은 내포된 선택자보다 뒤에 위치한다;
+* 닫는 중괄호(`}`) 앞에는 새 줄이 없어야 한다.
 
 보기:
 
@@ -275,14 +277,14 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 ###### 참고
 
-- [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
 ## 선언 정렬
 
 전 CSS 선언을 정렬하는 문제 만큼 견해가 갈리는 주제를 별로 떠올릴 수가 없습니다. 구체적으로, 여기 두 파가 있습니다:
 
-- 알파벳 순서 고수하기
-- 유형 별로 정렬하기(position, display, colors, font, 기타 등등…).
+* 알파벳 순서 고수하기
+* 유형 별로 정렬하기(position, display, colors, font, 기타 등등…).
 
 두 가지 방법 모두 장단점이 있습니다. 우선, 알파벳순은 (적어도 로마자를 사용하는 언어에서는) 보편적인 만큼 한 속성을 다른 속성 앞에 정렬하는 문제가 논쟁거리가 못됩니다. 하지만, `bottom`과 `top` 같은 속성들이 서로 붙어있지 않은 모습이 제겐 엄청나게 이상해보입니다. 왜 애니메이션이 디스플레이 유형보다 먼저 나와야 합니까? 알파벳순에는 이상한 점이 많이 있습니다.
 
@@ -303,17 +305,17 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 이 때문에, 이 스타일가이드에서는 선택을 강요하지 않겠습니다. 여러분이 스타일시트 내내 일관성을 유지하기만 한다면, 맘에 드는 걸로 고르시면 됩니다(즉, *랜덤*이 아닌 한).
 
 <div class="note">
-  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
+  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
 </div>
 
 ###### 참고
 
-- [CSS Comb](https://github.com/csscomb/csscomb.js)
-- [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-- [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-- [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-- [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-- [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
+* [CSS Comb](https://github.com/csscomb/csscomb.js)
+* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
+* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## 선택자 내포Nesting
 
@@ -377,6 +379,6 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 ###### 참고
 
-- [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-- [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-- [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
+* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
+* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

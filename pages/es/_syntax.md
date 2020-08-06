@@ -1,3 +1,4 @@
+
 # Sintaxis Y Formato
 
 En mi opinión, la primera cosa que debe hacer una guía de estilo es describir la forma en que queremos que luzca nuestro código.
@@ -6,16 +7,16 @@ Cuando varios desarrolladores están involucrados en la escritura CSS dentro del
 
 A grandes rasgos, lo que queremos (humildemente inspirados en [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) es):
 
-- dos (2) espacios en blanco, en lugar de tabulaciones;
-- idealmente, líneas de 80 caracteres;
-- reglas CSS multilínea correctamente escritas;
-- buen uso de los espacios en blanco.
+* dos (2) espacios en blanco, en lugar de tabulaciones;
+* idealmente, líneas de 80 caracteres;
+* reglas CSS multilínea correctamente escritas;
+* buen uso de los espacios en blanco.
 
 {% include snippets/syntax/01/index.html %}
 
 ## Cadenas
 
-Lo creas o no, las cadenas (_strings_) juegan un papel importante en los ecosistemas de CSS y Sass. La mayoría de los valores CSS suelen ser longitudes o identificadores, así que es bastante crucial que cumplas ciertas pautas cuando se trabaja con cadenas en Sass.
+Lo creas o no, las cadenas (*strings*) juegan un papel importante en los ecosistemas de CSS y Sass. La mayoría de los valores CSS suelen ser longitudes o identificadores, así que es bastante crucial que cumplas ciertas pautas cuando se trabaja con cadenas en Sass.
 
 ### Codificación
 
@@ -25,16 +26,16 @@ Para evitar cualquier posible problema con la codificación de caracteres, es mu
 
 ### Comillas
 
-En CSS, las cadenas (_strings_) no tienen por qué estar entre comillas, ni siquiera aquellas que contienen espacios. Toma como ejemplo, los nombres de las tipografías: no importa si las pones entre comillas o no para que el analizador sintáctico CSS las entienda.
+En CSS, las cadenas (*strings*) no tienen por qué estar entre comillas, ni siquiera aquellas que contienen espacios. Toma como ejemplo, los nombres de las tipografías: no importa si las pones entre comillas o no para que el analizador sintáctico CSS las entienda.
 
-Debido a esto, Sass _tampoco_ necesita que las cadenas estén entre comillas. Incluso mejor (y con _suerte_ me darás la razón) una cadena entre comillas es equivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
+Debido a esto, Sass *tampoco* necesita que las cadenas estén entre comillas. Incluso mejor (y con *suerte* me darás la razón) una cadena entre comillas es equivalente a su versión gemela sin comillas (por ejemplo, `'abc'` es estrictamente igual a `abc`).
 
-Dicho esto, los lenguajes que no requieren que las cadenas estén entre comillas, son definitivamente una minoría, y es por lo que **las cadenas siempre deben ir entre comillas simples** (`'`) en Sass (las comillas simples son mucho más fáciles de escribir en los teclados _qwerty_). Además de la coherencia con otros lenguajes, entre ellos el primo de CSS, Javascript, hay otras razones para esta elección:
+Dicho esto, los lenguajes que no requieren que las cadenas estén entre comillas, son definitivamente una minoría, y es por lo que **las cadenas siempre deben ir entre comillas simples** (`'`) en Sass (las comillas simples son mucho más fáciles de escribir en los teclados *qwerty*). Además de la coherencia con otros lenguajes, entre ellos el primo de CSS, Javascript, hay otras razones para esta elección:
 
-- los nombres de los colores son tratados directamente como colores cuando no están entre comillas, lo que provoca serios problemas;
-- muchos resaltadores de sintaxis se volverían locos sin las comillas;
-- ayuda a la legibilidad;
-- no hay una razón válida para no entrecomillar las cadenas.
+* los nombres de los colores son tratados directamente como colores cuando no están entre comillas, lo que provoca serios problemas;
+* muchos resaltadores de sintaxis se volverían locos sin las comillas;
+* ayuda a la legibilidad;
+* no hay una razón válida para no entrecomillar las cadenas.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -90,17 +91,17 @@ Cuando se trata de longitudes, el `0` nunca debe llevar el nombre de la unidad.
 
 El error más común que se me ocurre respecto a los números en Sass, es el de pensar que las unidades son solo una serie de cadenas que se añaden a un número. Aunque parezca verdad, esta sin duda, no es la forma en la que funcionan las unidades. Piensa en las unidades como símbolos algebráicos. Por ejemplo, en el mundo real, multiplicar 5 metros por 5 metros, da como resultado 25 metros cuadrados. La misma lógica se aplica a Sass.
 
-Para agregar una unidad a un número, hay que multiplicar este número por _1 unidad_.
+Para agregar una unidad a un número, hay que multiplicar este número por *1 unidad*.
 
 {% include snippets/syntax/09/index.html %}
 
-Ten en cuenta que sumando un _valor de 0 de unidad_ también funciona, pero prefiero recomendar el método antes mencionado, ya que sumar una _unidad 0_ puede resultar confuso. De hecho, cuando se trata de convertir un número a otra unidad compatible, emplear el truco del 0, no funcionará. Puedes leer más sobre esto en [este artículo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Ten en cuenta que sumando un *valor de 0 de unidad* también funciona, pero prefiero recomendar el método antes mencionado, ya que sumar una *unidad 0* puede resultar confuso. De hecho, cuando se trata de convertir un número a otra unidad compatible, emplear el truco del 0, no funcionará. Puedes leer más sobre esto en [este artículo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
 Al final, siempre depende lo que estés tratando de conseguir. Solo ten en cuenta que añadir la unidad como una cadena de caracteres no es una buena manera de proceder.
 
-Para eliminar la unidad de un valor, hay que dividirlo por _1 unidad de su mismo tipo_.
+Para eliminar la unidad de un valor, hay que dividirlo por *1 unidad de su mismo tipo*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -114,7 +115,7 @@ Al añadir a un número una unidad en forma de cadena, el resultado es una caden
 
 ### Números Mágicos
 
-Un "número mágico" es un término de programación de la [vieja escuela](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) para _las constantes numéricas sin nombre_. Básicamente, es solo un número aleatorio que _simplemente funciona_ y sin embargo no está ligado con ninguna explicación lógica.
+Un "número mágico" es un término de programación de la [vieja escuela](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica.
 
 No hace falta decir que **los números mágicos son una plaga y que se deben evitar a toda costa**. Cuando no se puede encontrar una explicación razonable a por qué un número funciona, añade un comentario claro y completo explicando como has llegado hasta allí y por qué crees que funciona. Admitir que no sabes por qué algo funciona es mucho más útil para el siguiente desarrollador que dejarle tener que averiguar lo que está pasando desde el principio.
 
@@ -128,9 +129,10 @@ Los colores ocupan un lugar importante en el lenguaje CSS. Naturalmente, Sass te
 
 Sass es tan útil cuando se trata de manipular los colores, que han florecido artículos por todo Internet sobre este tema. Te recomiendo algunas lecturas:
 
-- [¿Cómo ir programáticamente de un color a otro? - En inglés](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Usando Sass para construir paletas de color - En inglés](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Tratando con esquemas de color en Sass - En inglés](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [¿Cómo ir programáticamente de un color a otro? - En inglés](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Usando Sass para construir paletas de color - En inglés](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Tratando con esquemas de color en Sass - En inglés](http://www.sitepoint.com/dealing-color-schemes-sass/)
+
 
 ### Formatos De Color
 
@@ -186,15 +188,15 @@ Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes cre
 
 ## Listas
 
-Las listas son el equivalente en Sass a los arreglos (_Arrays_). Una lista es una estructura de datos plana (a diferencia de los [Mapas](#mapas)) destinada a almacenar valores de cualquier tipo (incluyendo listas, lo que conduce a las listas anidadas).
+Las listas son el equivalente en Sass a los arreglos (*Arrays*). Una lista es una estructura de datos plana (a diferencia de los [Mapas](#mapas)) destinada a almacenar valores de cualquier tipo (incluyendo listas, lo que conduce a las listas anidadas).
 
 Las listas deberían respetar las siguientes pautas:
 
-- pueden ser en una línea o multilínea
-- deben usar múltiples líneas si su longitud es mayor a 80 caracteres;
-- a menos que se utilice para CSS, siempre usará la coma como separador;
-- siempre debe ir entre paréntesis;
-- Usar coma final si hay múltiples líneas, pero no cuando es una sola.
+* pueden ser en una línea o multilínea
+* deben usar múltiples líneas si su longitud es mayor a 80 caracteres;
+* a menos que se utilice para CSS, siempre usará la coma como separador;
+* siempre debe ir entre paréntesis;
+* Usar coma final si hay múltiples líneas, pero no cuando es una sola.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -206,18 +208,18 @@ En [este artículo](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/
 
 ## Mapas
 
-Con Sass, se pueden definir mapas - el término en Sass para los arreglos asociativos, _hashes_ o incluso objetos JavaScript. Un mapa es una estructura de datos que asocia claves a valores. Tanto las claves como los valores, pueden ser de cualquier tipo de dato, incluyendo mapas, aunque yo no recomendaría usar tipos de datos tan complejos como claves de un mapa, solo por salud mental.
+Con Sass, se pueden definir mapas - el término en Sass para los arreglos asociativos, *hashes* o incluso objetos JavaScript. Un mapa es una estructura de datos que asocia claves a valores. Tanto las claves como los valores, pueden ser de cualquier tipo de dato, incluyendo mapas, aunque yo no recomendaría usar tipos de datos tan complejos como claves de un mapa, solo por salud mental.
 
 Los mapas deberían estar escritos de la siguiente manera:
 
-- poner un espacio después de los dos puntos (`:`);
-- la llave de apertura (`(`) debe ir en la misma línea que los dos puntos (`:`);
-- poner las **claves entre comillas** si son cadenas (lo que representa el 99% de los casos);
-- cada par clave/valor debe ir en su propia línea;
-- poner coma (`,`) al final de cada par clave/valor;
-- poner **coma final** (`,`) en el último elemento para que sea más sencillo añadir, eliminar o reordenarlos;
-- la llave de cierre (`)`) debe ir en una línea nueva;
-- no poner espacio o línea nueva entre la llave de cierre (`)`) y el punto y coma (`;`).
+* poner un espacio después de los dos puntos (`:`);
+* la llave de apertura (`(`) debe ir en la misma línea que los dos puntos (`:`);
+* poner las **claves entre comillas** si son cadenas (lo que representa el 99% de los casos);
+* cada par clave/valor debe ir en su propia línea;
+* poner coma (`,`) al final de cada par clave/valor;
+* poner **coma final** (`,`) en el último elemento para que sea más sencillo añadir, eliminar o reordenarlos;
+* la llave de cierre (`)`) debe ir en una línea nueva;
+* no poner espacio o línea nueva entre la llave de cierre (`)`) y el punto y coma (`;`).
 
 Ejemplo:
 
@@ -229,13 +231,13 @@ Los escritos acerca de los mapas de Sass son muchos dado cuánto se anhelaba est
 
 Llegados a este punto, esto es básicamente una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjunto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo la [Guía de estilo de CSS](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- los selectores relacionados deben ir en la misma línea; los selectores no vinculados en líneas nuevas;
-- la llave de apertura (`{`) debe separarse del selector usando un espacio;
-- cada declaración debe ir en una línea nueva;
-- añadir un espacio después de los dos puntos (`:`);
-- poner punto y coma (`;`) al final de todas las declaraciones;
-- la llave de cierre (`}`) debe ir en una línea nueva;
-- añadir una línea después de la llave de cierre (`}`).
+* los selectores relacionados deben ir en la misma línea; los selectores no vinculados en líneas nuevas;
+* la llave de apertura (`{`) debe separarse del selector usando un espacio;
+* cada declaración debe ir en una línea nueva;
+* añadir un espacio después de los dos puntos (`:`);
+* poner punto y coma (`;`) al final de todas las declaraciones;
+* la llave de cierre (`}`) debe ir en una línea nueva;
+* añadir una línea después de la llave de cierre (`}`).
 
 Ejemplo:
 
@@ -243,11 +245,11 @@ Ejemplo:
 
 Adicionalmente a esas guías CSS, queremos prestar especial atención a las siguientes pautas:
 
-- las variables locales se declaran antes que cualquier otra y están espaciadas por un salto de línea;
-- las llamadas a los _mixin_ sin `@content` deben ir antes de cualquier declaración;
-- los selectores anidados van siempre después de un salto de línea;
-- las llamadas a los _mixin_ con `@content` deben ir después de cualquier selector anidado;
-- no usar un salto de línea antes de una llave de cierre (`}`).
+* las variables locales se declaran antes que cualquier otra y están espaciadas por un salto de línea;
+* las llamadas a los *mixin* sin `@content` deben ir antes de cualquier declaración;
+* los selectores anidados van siempre después de un salto de línea;
+* las llamadas a los *mixin* con `@content` deben ir después de cualquier selector anidado;
+* no usar un salto de línea antes de una llave de cierre (`}`).
 
 Ejemplo:
 
@@ -257,8 +259,8 @@ Ejemplo:
 
 No se me ocurren muchos temas donde las opiniones estén tan divididas como en lo que respecta a la clasificación de las declaraciones en CSS. En concreto, hay dos bandos aquí:
 
-- mantener un estricto orden alfabético;
-- ordenar las declaraciones por tipo (posición, _display_, colores, tipografía, varios…).
+* mantener un estricto orden alfabético;
+* ordenar las declaraciones por tipo (posición, *display*, colores, tipografía, varios…).
 
 Hay pros y contras para estas dos posturas. Por una parte, el orden alfabético es universal (por lo menos para los idiomas que usan el alfabeto latino) así que no hay discusión posible a la hora de poner una propiedad antes que otra. Sin embargo, me parece extremadamente raro ver que propiedades como, `bottom` y `top` no estén la una justo después de la otra. ¿Por qué las animaciones deben aparecer antes que el tipo de display? Hay muchas singularidades con respecto al orden alfabético.
 
@@ -276,15 +278,15 @@ Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks
 
 {% include images/order-poll.html %}
 
-Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo. Elige la que más te guste, siempre y cuando sea coherente con el resto de tus hojas de estilo (es decir, no la opción _al azar_).
+Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo. Elige la que más te guste, siempre y cuando sea coherente con el resto de tus hojas de estilo (es decir, no la opción *al azar*).
 
 <div class="note">
-  <p>Un <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
+  <p>Un <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
 </div>
 
 ## Anidamiento De Selectores
 
-Una característica particular que aporta Sass y que está siendo muy mal utilizada por muchos desarrolladores es el _anidamiento de selectores_. El anidamiento de selectores ofrece una forma para que los autores de las hojas de estilo puedan calcular selectores largos anidando selectores más cortos dentro de ellos.
+Una característica particular que aporta Sass y que está siendo muy mal utilizada por muchos desarrolladores es el *anidamiento de selectores*. El anidamiento de selectores ofrece una forma para que los autores de las hojas de estilo puedan calcular selectores largos anidando selectores más cortos dentro de ellos.
 
 ### Regla General
 
@@ -314,7 +316,7 @@ El problema con la anidación de selectores es que en última instancia hace que
 
 Esta afirmación se vuelve más verdadera en cuanto los selectores se hacen más largos y las referencias al selector actual (`&`) más frecuentes. En algún punto, el riesgo de perder la pista y no poder entender lo que está pasando es tan alto que no merece la pena.
 
-Para evitar estas situaciónes, hemos hablado mucho sobre [la regla de Origen - En inglés](http://thesassway.com/beginner/the-inception-rule) desde hace algunos años. Recomendaba no anidar los selectores más allá de 3 niveles de profundidad, como referencia a la película _Inception_ de Christopher Nolan. Yo sería mucho más drástico y recomendaría **evitar la anidación de selectores tanto como sea posible**.
+Para evitar estas situaciónes, hemos hablado mucho sobre [la regla de Origen - En inglés](http://thesassway.com/beginner/the-inception-rule) desde hace algunos años. Recomendaba no anidar los selectores más allá de 3 niveles de profundidad, como referencia a la película *Inception* de Christopher Nolan. Yo sería mucho más drástico y recomendaría  **evitar la anidación de selectores tanto como sea posible**. 
 
 Sin embargo, es evidente que hay algunas excepciones a esta regla como se verá en la siguiente sección, esta opinión es bastante popular y puedes leer más sobre ella en [Ten cuidado con la anidación de selectores - En inglés](http://www.sitepoint.com/beware-selector-nesting-sass/) y [Evita la anidación de selectores para obtener un CSS más modular - En inglés](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 

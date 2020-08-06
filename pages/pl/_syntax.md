@@ -1,3 +1,4 @@
+
 # Składnia i formatowanie
 
 Pierwszą rzeczą, jaką powinien się zająć przewodnik po stylu jest niewątpliwie to, w jaki sposób nasz kod ma wyglądać.
@@ -6,10 +7,10 @@ Kiedy CSSem w tym samym projekcie zajmuje się kilku deweloperów, zazwyczaj jes
 
 W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-- indentacji składających się z (2) spacji, bez tabulatorów,
-- najlepiej 80 znaków w linii,
-- prawidłowo napisanych wieloliniowych reguł CSSa,
-- sensownego użycia tzw. znaków niedrukowalnych (whitespaces).
+* indentacji składających się z (2) spacji, bez tabulatorów,
+* najlepiej 80 znaków w linii,
+* prawidłowo napisanych wieloliniowych reguł CSSa,
+* sensownego użycia tzw. znaków niedrukowalnych (whitespaces).
 
 {% include snippets/syntax/01/index.html %}
 
@@ -29,14 +30,14 @@ Aby uniknąć potencjalnych problemów z kodowaniem znaków (character encoding)
 
 CSS nie wymaga by łańcuchy (ciągi) znaków były umieszczane między cudzysłowami, nawet te zawierające spacje. Weźmy nazwy font-family dla przykładu: dla parsera CSS nie ma znaczenia, czy otoczymy je cudzysłowami, czy też nie.
 
-Z tego powodu Sass _także_ nie wymaga, by ciągi znajdowały się między cudzysłowami. Co ciekawe (i na całe szczęście), ciąg umieszczony między takimi znakami jest dokładnie równy ciągowi bez cudzysłowów (`'abc'` jest ściśle równy `abc`).
+Z tego powodu Sass *także* nie wymaga, by ciągi znajdowały się między cudzysłowami. Co ciekawe (i na całe szczęście), ciąg umieszczony między takimi znakami jest dokładnie równy ciągowi bez cudzysłowów (`'abc'` jest ściśle równy `abc`).
 
 Języki programowania, które nie wymagają by łańcuchy znaków były umieszczane między cudzysłowami, należą jednak do rzadkości i z tego też powodu **ciągi powinny być zawsze otoczone znakami pojedynczych cudzysłowów** w Sassie (pojedyncze z tego względu, że na standardowej klawiaturze QWERTY łatwiej jest ich użyć, niż podwójnych). Oprócz spójności z innymi językami, łącznie z kuzynem CSS - JavaScriptem, jest także szereg innych dla tego powodów:
 
-- nazwy kolorów traktowane są jako faktyczne kolory, gdy są pozbawione cudzysłowów, co może prowadzić do poważnych problemów,
-- większość rozwiązań do podświetlania składni (syntax highlighters) może mieć problem z ciągami pozbawionymi cudzysłowów,
-- poprawia to ogólną czytelność,
-- nie ma absolutnie żadnego słusznego powodu, by nie umieszczać ciągów pomiędzy cudzysłowami.
+* nazwy kolorów traktowane są jako faktyczne kolory, gdy są pozbawione cudzysłowów, co może prowadzić do poważnych problemów,
+* większość rozwiązań do podświetlania składni (syntax highlighters) może mieć problem z ciągami pozbawionymi cudzysłowów,
+* poprawia to ogólną czytelność,
+* nie ma absolutnie żadnego słusznego powodu, by nie umieszczać ciągów pomiędzy cudzysłowami.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -68,8 +69,8 @@ Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
 
 ###### Dalsze informacje
 
-- [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-- [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
+* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Liczby
 
@@ -97,17 +98,17 @@ Zajmując się długościami, wartość `0` nigdy nie powinna mieć jednostki.
 
 Najczęściej powtarzającym się błędem jaki przychodzi mi do głowy na myśl o liczbach w Sassie jest przekonanie, że jednostki są po prostu ciągami znaków, które można swobodnie i bezpiecznie dodawać do liczby. O ile może się wydawać, że tak jest, w rzeczywistości jednostki wcale tak nie funkcjonują. Należy myśleć o jednostkach jako matematycznych symbolach. Dla przykładu, mnożąc 5 cali przez 5 cali uzyskamy wynik 25 cali kwadratowych. Ta sama logika tyczy się Sassa.
 
-By dodać jednostkę do liczby, należy pomnożyć tą liczbę przez _1 jednostkę_.
+By dodać jednostkę do liczby, należy pomnożyć tą liczbę przez *1 jednostkę*.
 
 {% include snippets/syntax/09/index.html %}
 
-Pamiętaj, że dodając _0 tej jednostki_ też zadziała, lecz ja bym rekomendował używanie wyżej wspomnianej metody. Dodawanie _0 jednostki_ może być trochę mylące. I tak, próbując przekonwertować liczbę do innej, kompatybilnej jednostki, dodawanie 0 nie zadziała.
+Pamiętaj, że dodając *0 tej jednostki* też zadziała, lecz ja bym rekomendował używanie wyżej wspomnianej metody. Dodawanie *0 jednostki* może być trochę mylące. I tak, próbując przekonwertować liczbę do innej, kompatybilnej jednostki, dodawanie 0 nie zadziała.
 
 {% include snippets/syntax/10/index.html %}
 
 Ostatecznie zależy to w dużej mierze od tego, co staramy się osiągnąć. Należy mieć jednak na uwadze to, że dodawanie jednostki jako ciągu znaków nie jest dobrym rozwiązaniem.
 
-By usunąć jednostkę z określonej wartości, dzielmy ją przez _jedną jednostkę jej typu_.
+By usunąć jednostkę z określonej wartości, dzielmy ją przez *jedną jednostkę jej typu*.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -121,7 +122,7 @@ Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekol
 
 ### Liczby magiczne
 
-Liczby magiczne są elementem [programowania starego typu](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) i określają _nienazwaną wartość liczbową_. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
+Liczby magiczne są elementem [programowania starego typu](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
 
 Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cenę**. Jeśli nie można sobie poradzić ze znalezieniem rozsądnego wytłumaczenia dlaczego dana liczba jest po prostu odpowiednia, pamiętajmy się o dodaniu wyczerpującego komentarza wyjaśniającego dlaczego na taką liczbę się zdecydowaliśmy i dlaczego się ona tutaj sprawdza. Przyznanie się do tego, że czegoś do końca nie wiemy jest zawsze lepsze dla innego dewelopera, niż pozostawianie im takiej łamigłówki do rozwiązania.
 
@@ -129,10 +130,10 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 
 ###### Dalsze informacje
 
-- [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-- [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-- [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-- [Sassy-Math](https://github.com/at-import/sassy-math)
+* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
+* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+* [Sassy-Math](https://github.com/at-import/sassy-math)
 
 ## Barwy
 
@@ -192,11 +193,11 @@ Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, 
 
 ###### Dalsze informacje
 
-- [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
+* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## Listy
 
@@ -204,11 +205,11 @@ Listy są w Sassie odpowiednikiem tablic (arrays). Lista jest typem płaskiej st
 
 Listy powinny być tworzone według następujących zasad:
 
-- pisane w jednej lub w wielu liniach
-- koniecznie w wielu liniach jeśli lista jest zbyt długa, by zmieścić się w 80 znakowej linii
-- przecinek powinien być zawsze używany jako separator, chyba że lista wykorzystywana jest wprost dla celów CSSa,
-- lista powinna być umieszczana wewnątrz nawiasów,
-- końcowy przecinek tylko i wyłącznie w przypadku list zajmujących wiele linii.
+* pisane w jednej lub w wielu liniach
+* koniecznie w wielu liniach jeśli lista jest zbyt długa, by zmieścić się w 80 znakowej linii
+* przecinek powinien być zawsze używany jako separator, chyba że lista wykorzystywana jest wprost dla celów CSSa,
+* lista powinna być umieszczana wewnątrz nawiasów,
+* końcowy przecinek tylko i wyłącznie w przypadku list zajmujących wiele linii.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -218,8 +219,8 @@ Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już A
 
 ###### Dalsze informacje
 
-- [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-- [SassyLists](http://sassylists.com)
+* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [SassyLists](http://sassylists.com)
 
 ## Mapy
 
@@ -227,14 +228,14 @@ Od wersji 3.3 Sassa, autorzy arkuszy stylów mogą korzystać z map, które są 
 
 Mapy powinny być tworzone w następujący sposób:
 
-- spacja po dwukropku (`:`),
-- nawias otwierający (`(`) powinien się znajdować na tej samej linii co dwukropek (`:`),
-- **klucze umieszczone między cudzysłowami** jeśli są łańcuchami (co stanowi 99% przypadków),
-- każda para klucz–wartość na osobnej linii,
-- przecienk (`,`) na końcu każdej pary klucz–wartość,
-- **końcowy przecinek** (`,`) przy ostatnim elemencie, dzięki czemu łatwiej nam będzie dodawać, usuwać czy zmieniać kolejność składników mapy,
-- nawias zamykający (`)`) na osobnej linii,
-- bez spacji czy nowej linii między zamykającym nawiasem (`)`) a średnikiem (`;`).
+* spacja po dwukropku (`:`),
+* nawias otwierający (`(`) powinien się znajdować na tej samej linii co dwukropek (`:`),
+* **klucze umieszczone między cudzysłowami** jeśli są łańcuchami (co stanowi 99% przypadków),
+* każda para klucz–wartość na osobnej linii,
+* przecienk (`,`) na końcu każdej pary klucz–wartość,
+* **końcowy przecinek** (`,`) przy ostatnim elemencie, dzięki czemu łatwiej nam będzie dodawać, usuwać czy zmieniać kolejność składników mapy,
+* nawias zamykający (`)`) na osobnej linii,
+* bez spacji czy nowej linii między zamykającym nawiasem (`)`) a średnikiem (`;`).
 
 Przykład:
 
@@ -242,27 +243,27 @@ Przykład:
 
 ###### Dalsze informacje
 
-- [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-- [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-- [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-- [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-- [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-- [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-- [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-- [Sassy-Maps](https://github.com/at-import/sassy-maps)
-- [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
+* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
+* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
+* [Sassy-Maps](https://github.com/at-import/sassy-maps)
+* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 ## Reguły dotyczące CSSa
 
 W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie podstawowe zasady dot. pisania zestawów reguł w CSSie (a przynajmniej te, które są przyjęte m.in. przez [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-- powiązane selektory umieszczamy na tej samej linii; niezwiązane ze sobą zaczynamy od nowej,
-- nawias otwierający (`{`) oddzielony od ostatniego selektora pojedynczą spacją,
-- każda deklaracja na swojej osobnej linii,
-- spacja po przecinku (`:`),
-- końcowy średnik (`;`) na końcu każdej deklaracji,
-- zamykający nawias (`}`) na osobnej linii,
-- nowa linia po zamykającym nawiasie (`}`).
+* powiązane selektory umieszczamy na tej samej linii; niezwiązane ze sobą zaczynamy od nowej,
+* nawias otwierający (`{`) oddzielony od ostatniego selektora pojedynczą spacją,
+* każda deklaracja na swojej osobnej linii,
+* spacja po przecinku (`:`),
+* końcowy średnik (`;`) na końcu każdej deklaracji,
+* zamykający nawias (`}`) na osobnej linii,
+* nowa linia po zamykającym nawiasie (`}`).
 
 Przykład:
 
@@ -270,11 +271,11 @@ Przykład:
 
 Dodając do powyższych reguł związanych z samym CSSem warto też zwrócić uwagę, by:
 
-- lokalne zmienne zostały nie tylko zadeklarowane przed innymi deklaracjami, ale także rozdzielone przed nimi pojedynczą, pustą linią,
-- wywołania mixinów bez `@content` (dodatkowych deklaracji) znajdowały się przed innymi deklaracjami,
-- zagnieżdżone selektory zawsze zaczynały się od nowej linii,
-- mixiny z `@content` (deklaracjami) pojawiały się po wszelkich zagnieżdżonych selektorach,
-- nie było pustej linii po zamykającym nawiasie (`}`).
+* lokalne zmienne zostały nie tylko zadeklarowane przed innymi deklaracjami, ale także rozdzielone przed nimi pojedynczą, pustą linią,
+* wywołania mixinów bez `@content` (dodatkowych deklaracji) znajdowały się przed innymi deklaracjami,
+* zagnieżdżone selektory zawsze zaczynały się od nowej linii,
+* mixiny z `@content` (deklaracjami) pojawiały się po wszelkich zagnieżdżonych selektorach,
+* nie było pustej linii po zamykającym nawiasie (`}`).
 
 Przykład:
 
@@ -282,14 +283,14 @@ Przykład:
 
 ###### Dalsze informacje
 
-- [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
 ## Sortowanie deklaracji
 
 Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak bardzo podzielone, jak jest to w przypadku sortowania deklaracji w CSSie. W szczególności należy tu mówić o dwóch poglądach:
 
-- porządek alfabetyczny,
-- porządkowanie deklaracji ze względu na ich typ (pozycja, `display`, kolory, czcionki i inne…).
+* porządek alfabetyczny,
+* porządkowanie deklaracji ze względu na ich typ (pozycja, `display`, kolory, czcionki i inne…).
 
 Obie metody mają swoje zalety i wady. Z jednej strony, sortowanie alfabetyczne jest uniwersalne (przynajmniej dla języków opartych o alfabet łaciński), więc przynajmniej nie sprawia ono większego problemu. Moim jednak zdaniem, nieumieszczanie własności takich jak `bottom` i `top` obok siebie jest pomysłem conajmniej dziwnym. Dlaczego też deklaracje dot. animacji miały by się znajdować przed własnością `display`? Jak można się domyśleć, w sortowaniu alfabetycznym nie trudno się doszukać szeregu takich nieścisłości.
 
@@ -310,17 +311,17 @@ Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opub
 Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sortowania deklaracji w tym przewodniku. Wybór pozostawiam czytelnikowi, tylko by być w swym wyborze konsekwentnym.
 
 <div class="note">
-  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
+  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
 </div>
 
 ###### Dalsze informacje
 
-- [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-- [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Zagnieżdżanie selektorów
 
-Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloperów, jest niewątpliwie _zagnieżdżanie selektorów_. Rozwiązanie to pozwala autorom arkuszy stylów na używanie z długich, wieloczłonowych selektorów rozbijając je na krótsze i zagnieżdżanie ich.
+Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloperów, jest niewątpliwie *zagnieżdżanie selektorów*. Rozwiązanie to pozwala autorom arkuszy stylów na używanie z długich, wieloczłonowych selektorów rozbijając je na krótsze i zagnieżdżanie ich.
 
 ### Generalna zasada
 
@@ -380,6 +381,6 @@ Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz si
 
 ###### Dalsze informacje
 
-- [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-- [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-- [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
+* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
+* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
