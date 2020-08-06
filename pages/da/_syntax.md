@@ -304,7 +304,7 @@ For at tale for mig selv, så kan jeg ikke beslutte mig. En nylig afstemning på
 På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Vælg den tilgang du foretrækker, så længe du er konsistent gennem dine stylesheets (ikke den *tilfældige* tilgang, for eksempel).
 
 <div class="note">
-  <p>Et <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
+  <p>Et <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
 </div>
 
 ###### Videre læsning
@@ -313,7 +313,7 @@ På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Væ
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
 * [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Indlejring af selektorer

@@ -282,7 +282,7 @@ Ich kann mich selber nicht entscheiden. Eine [kürzliche Umfrage auf CSS-Tricks]
 Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was dir am besten gefällt, solange du konsistent durch alle Stylesheets bleibst (z.B. nicht die *Random*-Option).
 
 <div class="note">
-  <p>Eine <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
+  <p>Eine <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
 
 ## Verschachtelung von Selektoren

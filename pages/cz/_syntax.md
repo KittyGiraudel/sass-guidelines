@@ -304,7 +304,7 @@ Musím říci, že se sám nemohu rozhodnout. [Nedávný průzkum na CSS-Tricks]
 Právě proto nebudu do příručky dávat doporučení na výběr. Vyberte si tu, kterou preferujete vy, jen buďte ve všech stylech konzistentní (tedy žádná *náhodná* možnost).
 
 <div class="note">
-  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Nedávná studie</a> ukazuje, že používání <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (což používá <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">řazení podle typu</a>) pro řazení CSS deklarací končí s zkrácením průměrné velikosti pod Gzip kompresí o 2,7%, v porovnání 1,3% když je řazení podle abecedy.</p>
+  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Nedávná studie</a> ukazuje, že používání <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (což používá <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">řazení podle typu</a>) pro řazení CSS deklarací končí s zkrácením průměrné velikosti pod Gzip kompresí o 2,7%, v porovnání 1,3% když je řazení podle abecedy.</p>
 </div>
 
 ###### Další četba
@@ -313,7 +313,7 @@ Právě proto nebudu do příručky dávat doporučení na výběr. Vyberte si t
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
 * [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+* [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Noření selektorů
