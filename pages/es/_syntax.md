@@ -281,7 +281,7 @@ Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks
 Debido a esto, no voy a imponer una opción en concreto en esta guía de estilo. Elige la que más te guste, siempre y cuando sea coherente con el resto de tus hojas de estilo (es decir, no la opción *al azar*).
 
 <div class="note">
-  <p>Un <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
+  <p>Un <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">estudio reciente</a> muestra que usando <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (que <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ordena por tipo</a>) para clasificar las declaraciones CSS termina acortando el tamaño promedio de los archivos bajo compresión Gzip en un 2.7% frente al 1.3% cuando se ordenan alfabéticamente.</p>
 </div>
 
 ## Anidamiento De Selectores

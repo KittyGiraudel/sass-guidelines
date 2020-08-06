@@ -281,7 +281,7 @@ Io posso dirvi che non riesco a decidermi. Un [sondaggio recente su CSS-Tricks](
 Proprio per questo, non voglio imporre una scelta in queste linee guida. Scegliete quella che preferite, purchè la manteniate in modo consistente nei vostri fogli di stile (quindi il metodo *random* non vale).
 
 <div class="note">
-  <p>Uno <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
+  <p>Uno <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">studio recente</a> mostra che usare <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (che utilizza  <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">l'ordine per tipo</a>) migliora la compressione Gzip del 2.7%, rispetto al miglioramento dell' 1.3% dell'ordine alfabetico.</p>
 </div>
 
 ## Selettori annidati

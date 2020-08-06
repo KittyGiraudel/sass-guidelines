@@ -280,7 +280,7 @@
 Εξαιτίας αυτού, δεν θα επιβάλω κάποια επιλογή σε αυτό το styleguide. Διάλεξε όποια προτιμάς, αρκεί να είσαι σταθερός σε όλα τα stylesheets σου (πχ. όχι την *τυχαία* επιλογή).
 
 <div class="note">
-  <p>Μια <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">πρόσφατη έρευνα</a> έδειξε ότι η χρήση του <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (το οποίο χρησιμοποιεί <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ταξινόμηση κατά τύπο</a>) για την ταξινόμηση των δηλώσεων CSS, καταλήγει στη μείωση του μέσου μεγέθους του αρχείου με συμπίεση Gzip κατά 2.7%, έναντι του 1.3% της ταξινόμησης με αλφαβητική σειρά.</p>
+  <p>Μια <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">πρόσφατη έρευνα</a> έδειξε ότι η χρήση του <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (το οποίο χρησιμοποιεί <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">ταξινόμηση κατά τύπο</a>) για την ταξινόμηση των δηλώσεων CSS, καταλήγει στη μείωση του μέσου μεγέθους του αρχείου με συμπίεση Gzip κατά 2.7%, έναντι του 1.3% της ταξινόμησης με αλφαβητική σειρά.</p>
 </div>
 
 ## Εμφώλευση Selectors

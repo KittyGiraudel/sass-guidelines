@@ -276,7 +276,7 @@ map 的使用应该遵循下述规范：
 因此，我不会在此强加规范选择怎样的声明顺序。只要你长久的在自己的样式表中保持一致的风格，那么选择喜欢的声明顺序就可以了（也就说不要太随便）。
 
 <div class="note">
-  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对 CSS 进行排序，按类型顺序声明，Gzip 压缩文件大小平均达到 2.7%,而按字母顺序排序压缩的文件大小平均达到 1.3%。</p>
+  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对 CSS 进行排序，按类型顺序声明，Gzip 压缩文件大小平均达到 2.7%,而按字母顺序排序压缩的文件大小平均达到 1.3%。</p>
 </div>
 
 ## 选择器嵌套
