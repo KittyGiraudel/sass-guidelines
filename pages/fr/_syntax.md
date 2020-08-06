@@ -1,4 +1,3 @@
-
 # Syntaxe & formatage
 
 À mon avis, la première chose que devrait proposer un guide de style est de décrire la façon dont notre code doit être écrit, du point vue de son aspect.
@@ -7,10 +6,10 @@ Lorsque plusieurs développeurs sont impliqués dans l’écriture de CSS sur un
 
 Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting))&nbsp;:
 
-* Une indentation à deux (2) espaces, pas de tabulation ;
-* Pas plus de 80 caractères par ligne ;
-* Du CSS écrit sur plusieurs lignes ;
-* Une utilisation efficace des lignes vides.
+- Une indentation à deux (2) espaces, pas de tabulation ;
+- Pas plus de 80 caractères par ligne ;
+- Du CSS écrit sur plusieurs lignes ;
+- Une utilisation efficace des lignes vides.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -30,12 +29,12 @@ En CSS, les chaînes de caractères n’ont pas à être entourées de guillemet
 
 C’est pourquoi dans Sass les chaînes de caractères n’ont pas non plus à être entourées de guillemets. Mieux, (et heureusement) une chaîne de caractères entre guillemets est strictement équivalente à sa jumelle sans guillemets (p.ex. `'abc'` est strictement égale à `abc`).
 
-Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de caractères entre guillemets sont une infime minorité, c’est la raison pour laquelle **les chaînes de caractères devraient toujours être entourées de guillemets simples** (`'`) dans Sass (pourquoi des guillemets simples&nbsp;? parce qu’ils sont plus faciles à taper sur un clavier *qwerty*). À part la cohérence avec d’autres langages, dont JavaScript le cousin de CSS, il y a plusieurs raisons à ce choix&nbsp;:
+Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de caractères entre guillemets sont une infime minorité, c’est la raison pour laquelle **les chaînes de caractères devraient toujours être entourées de guillemets simples** (`'`) dans Sass (pourquoi des guillemets simples&nbsp;? parce qu’ils sont plus faciles à taper sur un clavier _qwerty_). À part la cohérence avec d’autres langages, dont JavaScript le cousin de CSS, il y a plusieurs raisons à ce choix&nbsp;:
 
-* les noms de couleurs sont traités comme des couleurs lorsqu’ils ne sont pas entre guillemets, ce qui peut conduire à de sérieux problèmes&nbsp;;
-* la plupart des colorations syntaxiques fonctionnent mieux avec les guillemets&nbsp;;
-* la lisibilité est améliorée&nbsp;;
-* il n’y a pas de raison valable de ne pas utiliser de guillemets.
+- les noms de couleurs sont traités comme des couleurs lorsqu’ils ne sont pas entre guillemets, ce qui peut conduire à de sérieux problèmes&nbsp;;
+- la plupart des colorations syntaxiques fonctionnent mieux avec les guillemets&nbsp;;
+- la lisibilité est améliorée&nbsp;;
+- il n’y a pas de raison valable de ne pas utiliser de guillemets.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -91,17 +90,17 @@ S’agissant de longueurs, une valeur égale à `0` ne doit pas être suivie de 
 
 L’erreur la plus courante en ce qui concerne les nombres dans Sass est de penser que les unités sont de simples chaînes de caractères qu’on peut accoler à un nombre sans problème. Même si cela semble vrai, ce n’est pas ainsi que les unités fonctionnent. On peut voir les unités comme des symboles algébriques. Par exemple, dans le monde réel, si on multiplie 5 mètres par 5 mètres, on obtient 25 mètres carrés. La même logique s’applique à Sass.
 
-Pour ajouter une unité à un nombre, vous devez multiplier ce nombre par *1 unité*.
+Pour ajouter une unité à un nombre, vous devez multiplier ce nombre par _1 unité_.
 
 {% include snippets/syntax/09/index.html %}
 
-Remarquez qu’en ajoutant *0 membre de cette unité* on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l’ajout de *0 unité* peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas. Davantage d’information à ce sujet dans [cet article sur CSS-Tricks](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Remarquez qu’en ajoutant _0 membre de cette unité_ on obtient le même résultat, mais je recommande la méthode indiquée ci-dessus car l’ajout de _0 unité_ peut créer une certaine confusion. En effet, si vous essayez de convertir un nombre dans une autre unité compatible, ajouter `0` ne fonctionnera pas. Davantage d’information à ce sujet dans [cet article sur CSS-Tricks](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
 En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode. [Utilisez des longueurs, pas des chaînes de caractères.](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
 
-Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois son unité*.
+Pour supprimer l’unité d’une valeur, il suffit de la _diviser par une fois son unité_.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -109,13 +108,13 @@ Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le
 
 ### Calculs
 
-**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s’en trouve considérablement améliorée, mais les éventuels cas *borderline* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
+**Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s’en trouve considérablement améliorée, mais les éventuels cas _borderline_ sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
 
 {% include snippets/syntax/12/index.html %}
 
 ### Nombres magiques
 
-L’expression "nombre magique" est un [vieux terme de programmation](http://fr.wikipedia.org/wiki/Nombre_magique_(programmation)#Constantes_num.C3.A9riques_non-nomm.C3.A9es) qui désigne *une constante numérique non nommée*.  Quelque chose comme un nombre aléatoire *qui fonctionne* sans que l’on sache dire exactement pourquoi.
+L’expression "nombre magique" est un [vieux terme de programmation](<http://fr.wikipedia.org/wiki/Nombre_magique_(programmation)#Constantes_num.C3.A9riques_non-nomm.C3.A9es>) qui désigne _une constante numérique non nommée_. Quelque chose comme un nombre aléatoire _qui fonctionne_ sans que l’on sache dire exactement pourquoi.
 
 Est-il utile de préciser que **les nombres magiques sont une plaie et doivent être évités à tout prix** ? Si vous ne pouvez pas expliquer logiquement la raison pour laquelle un nombre fonctionne, ajoutez un commentaire détaillant la façon dont vous êtes arrivé à ce nombre et pourquoi vous pensez qu’il est approprié. Il vaut mieux expliquer pourquoi vous ne comprenez pas comment quelque chose fonctionne que de laisser au développeur qui vous suivra le soin de comprendre les raisons de votre choix.
 
@@ -129,9 +128,9 @@ Les couleurs occupent une place importante dans le langage CSS. Naturellement, S
 
 Sass est si utile quand il s’agit de manipuler les couleurs que des articles sont apparus de toute part pour en parler. Permettez-moi de vous recommander quelques lectures :
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Formats de couleurs
 
@@ -191,11 +190,11 @@ Les listes sont l’équivalent des arrays (tables) dans Sass. Une liste est une
 
 Les listes doivent respecter les recommandations suivantes&nbsp;:
 
-* sur une ligne ou sur plusieurs lignes&nbsp;;
-* impérativement sur plusieurs lignes si elles comptent plus de 80 caractères&nbsp;;
-* toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS&nbsp;;
-* toujours entre parenthèses&nbsp;;
-* ajouter une virgule après le dernier élément de la liste si elle compte plusieurs lignes.
+- sur une ligne ou sur plusieurs lignes&nbsp;;
+- impérativement sur plusieurs lignes si elles comptent plus de 80 caractères&nbsp;;
+- toujours utiliser une virgule pour séparer les éléments de la liste, sauf si elle est utilisée pour un contenu CSS&nbsp;;
+- toujours entre parenthèses&nbsp;;
+- ajouter une virgule après le dernier élément de la liste si elle compte plusieurs lignes.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -207,18 +206,18 @@ Dans [cet article](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
 
 ## Maps
 
-Avec Sass, les auteurs de feuilles de styles peuvent définir des *maps*, qui sont l’équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d’association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) à des valeurs. Les clés comme les valeurs peuvent être de tout type, y compris de type `map` même si je ne recommanderais pas l’utilisation de types complexes comme clés, ne serait-ce que dans un souci de simplicité.
+Avec Sass, les auteurs de feuilles de styles peuvent définir des _maps_, qui sont l’équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d’association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) à des valeurs. Les clés comme les valeurs peuvent être de tout type, y compris de type `map` même si je ne recommanderais pas l’utilisation de types complexes comme clés, ne serait-ce que dans un souci de simplicité.
 
 Les maps doivent être écrites comme suit&nbsp;:
 
-* un espace après les deux-points (`:`)&nbsp;;
-* parenthèse ouvrante (`(`) sur la même ligne que les deux-points (`:`)&nbsp;;
-* **clés entre guillemets** si ce sont des chaînes de caractères (soit 99% des cas)&nbsp;;
-* chaque paire clé/valeur sur sa propre ligne&nbsp;;
-* virgule (`,`) à la fin de chaque clé/valeur&nbsp;;
-* **virgule finale** (`,`) après le dernier item pour faciliter l’ajout, la suppression ou la réorganisation d’items&nbsp;;
-* parenthèse fermante (`)`) sur sa propre ligne&nbsp;;
-* pas d’espace ni de retour à la ligne entre la parenthèse finale et le point-virgule final.
+- un espace après les deux-points (`:`)&nbsp;;
+- parenthèse ouvrante (`(`) sur la même ligne que les deux-points (`:`)&nbsp;;
+- **clés entre guillemets** si ce sont des chaînes de caractères (soit 99% des cas)&nbsp;;
+- chaque paire clé/valeur sur sa propre ligne&nbsp;;
+- virgule (`,`) à la fin de chaque clé/valeur&nbsp;;
+- **virgule finale** (`,`) après le dernier item pour faciliter l’ajout, la suppression ou la réorganisation d’items&nbsp;;
+- parenthèse fermante (`)`) sur sa propre ligne&nbsp;;
+- pas d’espace ni de retour à la ligne entre la parenthèse finale et le point-virgule final.
 
 Illustration :
 
@@ -230,13 +229,13 @@ Les écrits à propos des maps sont légions tant cette fonctionnalité était a
 
 Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrait écrire une règle CSS (du moins selon la plupart des recommandations, dont [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset))&nbsp;:
 
-* les sélecteurs liés sur la même ligne, sinon sur une ligne différente&nbsp;;
-* l’accolade ouvrante (`{`) sur la ligne du dernier sélecteur séparé de celui-ci par un espace&nbsp;;
-* chaque déclaration sur une même ligne&nbsp;;
-* un espace après les deux-points (`:`)&nbsp;;
-* toujours un point-virgule (`;`) à la dernière déclaration d'une règle&nbsp;;
-* l’accolade fermante (`}`) sur sa propre ligne&nbsp;;
-* une nouvelle ligne après l’accolade fermante.
+- les sélecteurs liés sur la même ligne, sinon sur une ligne différente&nbsp;;
+- l’accolade ouvrante (`{`) sur la ligne du dernier sélecteur séparé de celui-ci par un espace&nbsp;;
+- chaque déclaration sur une même ligne&nbsp;;
+- un espace après les deux-points (`:`)&nbsp;;
+- toujours un point-virgule (`;`) à la dernière déclaration d'une règle&nbsp;;
+- l’accolade fermante (`}`) sur sa propre ligne&nbsp;;
+- une nouvelle ligne après l’accolade fermante.
 
 Illustration:
 
@@ -244,11 +243,11 @@ Illustration:
 
 En plus de ces recommandations liées à CSS, nous devons être attentifs aux points suivants&nbsp;:
 
-* les variables locales doivent être déclarées avant toute autre déclaration, puis séparées des autres par une ligne&nbsp;;
-* les inclusions de mixins sans `@content` doivent venir avant toute déclaration&nbsp;;
-* les sélecteurs imbriqués doivent toujours apparaître sur une nouvelle ligne&nbsp;;
-* les inclusions de mixins avec `@content` doivent apparaître après les sélecteurs imbriqués&nbsp;;
-* pas de saut de ligne avant une accolade fermante (`}`).
+- les variables locales doivent être déclarées avant toute autre déclaration, puis séparées des autres par une ligne&nbsp;;
+- les inclusions de mixins sans `@content` doivent venir avant toute déclaration&nbsp;;
+- les sélecteurs imbriqués doivent toujours apparaître sur une nouvelle ligne&nbsp;;
+- les inclusions de mixins avec `@content` doivent apparaître après les sélecteurs imbriqués&nbsp;;
+- pas de saut de ligne avant une accolade fermante (`}`).
 
 Illustration:
 
@@ -258,14 +257,14 @@ Illustration:
 
 Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en ce qui concerne l’ordre des déclarations CSS. Concrètement, deux opinions s’opposent&nbsp;:
 
-* s’en tenir à l’ordre alphabétique&nbsp;;
-* classer les déclarations par type (position, display, color, font, autres…).
+- s’en tenir à l’ordre alphabétique&nbsp;;
+- classer les déclarations par type (position, display, color, font, autres…).
 
 Il y a du pour et du contre dans chacune. D’un côté, l’ordre alphabétique est universel (du moins pour les langues utilisant l’alphabet latin), donc il n’y a pas de dispute possible quant à la position d’un sélecteur par rapport à un autre. Cependant, il me paraît bizarre de ne pas avoir des propriétés telles que `bottom` et `top` l’une derrière l’autre. Pourquoi les animations devraient-elles apparaître avant le type de display&nbsp;? L’ordre alphabétique crée de nombreuses bizarreries.
 
 {% include snippets/syntax/26/index.html %}
 
-D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme  [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?… ô ironie…).
+D’un autre côté, ordonner par propriété semble parfaitement logique. Les déclarations de `font` sont regroupées, `top` et `bottom` sont réunis et la lecture d’une règle CSS ressemble à une petite histoire. Mais à moins de s’en tenir à des conventions comme [Idiomatic CSS](https://github.com/necolas/idiomatic-css), cette façon de faire laisse encore beaucoup de place à l’interprétation. Où situer `white-space`&nbsp;? font ou display&nbsp;? Où situer `overflow`&nbsp;? Et quel ordre donner aux propriétés à l’intérieur d’un groupe&nbsp;? (alphabétique&nbsp;?… ô ironie…).
 
 {% include snippets/syntax/27/index.html %}
 
@@ -280,12 +279,12 @@ Je dois dire que je n’arrive pas à me décider moi-même. Un [récent sondage
 C’est la raison pour laquelle je ne recommande pas de choix particulier dans ce guide de style. Choisisssez celui que vous préférez, du moment qu’il reste cohérent tout au long de vos feuilles de style (en d'autres termes&nbsp;: pas l'option <em>au hasard</em>).
 
 <div class="note">
-  <p>Une <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
+  <p>Une <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
 </div>
 
 ## Imbrication des sélecteurs
 
-Parmi les fonctionnalités offertes par Sass, l’une d’entre elles est souvent mal utilisée, c’est *l’imbrication des sélecteurs*. Celle-ci permet aux auteurs de feuilles de styles de créer de longs sélecteurs en imbriquant des sélecteurs plus courts les uns dans les autres.
+Parmi les fonctionnalités offertes par Sass, l’une d’entre elles est souvent mal utilisée, c’est _l’imbrication des sélecteurs_. Celle-ci permet aux auteurs de feuilles de styles de créer de longs sélecteurs en imbriquant des sélecteurs plus courts les uns dans les autres.
 
 ### Règle générale
 
@@ -317,7 +316,7 @@ C’est d’autant plus vrai à mesure que les sélecteurs s’allongent et que 
 
 Pour éviter de telles situations, nous **évitons l’imbrication des sélecteurs autant que possible**. Il y a cependant quelques exceptions à cette règle.
 
-Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au-delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
+Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (_The Inception Rule_) depuis quelques années. Celle-ci déconseille d’imbriquer au-delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
 
 Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
@@ -333,7 +332,7 @@ De plus, lorsqu’on utilise des classes décrivant un état indépendant du com
 
 {% include snippets/syntax/34/index.html %}
 
-*Last but not least*, lorsqu’on applique un style à un élément parce qu’il se trouve être contenu dans un autre élément spécifique, il est également logique de l’imbriquer afin que tout ce qui concerne cet élément soit réuni au même endroit.
+_Last but not least_, lorsqu’on applique un style à un élément parce qu’il se trouve être contenu dans un autre élément spécifique, il est également logique de l’imbriquer afin que tout ce qui concerne cet élément soit réuni au même endroit.
 
 {% include snippets/syntax/35/index.html %}
 

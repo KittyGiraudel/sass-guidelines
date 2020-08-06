@@ -1,4 +1,3 @@
-
 # 语法格式
 
 如果你问我一个样式指南首先要描述什么，我会告诉你：编写代码的通用准则。
@@ -7,9 +6,9 @@
 
 概括地说，我们希望做到（受 [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) 所启发）：
 
-- 使用两个空格代表缩进，而不是使用tab键；
-- 理想上，每行保持为80个字符宽度；
-- 正确书写多行CSS规则；
+- 使用两个空格代表缩进，而不是使用 tab 键；
+- 理想上，每行保持为 80 个字符宽度；
+- 正确书写多行 CSS 规则；
 - 有意义的使用空格。
 
 {% include snippets/syntax/01/index.html %}
@@ -91,7 +90,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/09/index.html %}
 
-需要注意的是加上一个 *`0unit`* 也可以正确解析，但是这种方式在某种程度上会造成一些混乱，所以我更愿意推荐上面的方式。事实上，将一个数字转换为其他兼容单位时，加 `0` 操作并不会造成错误。更多信息请参考[这篇文章](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+需要注意的是加上一个 _`0unit`_ 也可以正确解析，但是这种方式在某种程度上会造成一些混乱，所以我更愿意推荐上面的方式。事实上，将一个数字转换为其他兼容单位时，加 `0` 操作并不会造成错误。更多信息请参考[这篇文章](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -111,7 +110,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 ### Magic numbers
 
-"幻数"，是<a href="http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants" >古老的学校编程</a>给*未命名数值常数*的命名。基本上，它们只是*能工作*™但没有任何逻辑思维的随机数。
+"幻数"，是<a href="http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants" >古老的学校编程</a>给*未命名数值常数*的命名。基本上，它们只是*能工作*™ 但没有任何逻辑思维的随机数。
 
 相信不用多说你也会理解，**幻数是一场瘟疫，应不惜一切代价以避免**。当你对数值的解析方式无法找到一个合理解释时，你可以对此提交一个内容宽泛的评论，包括你是怎样遇见这个问题以及你认为它应该怎样工作。承认自己不清楚一些机制的解析方式，远比让以后的开发者从零开始弄清它们更有帮助。
 
@@ -125,9 +124,9 @@ CSS-Tricks 上有一篇[文章](http://css-tricks.com/magic-numbers-in-css/) 讨
 
 Sass 非常善于操纵颜色，以下文章都讨论了在 Sass 中对颜色的操作，建议阅读：
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### 颜色格式
 
@@ -165,7 +164,7 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 ### 变亮和变暗颜色
 
-[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) 和 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 函数都是通过增加或者减小HSL中颜色的亮度来实现调节的。基本上，它们就是 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 函数添加了 `$lightness` 参数的别名。
+[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) 和 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 函数都是通过增加或者减小 HSL 中颜色的亮度来实现调节的。基本上，它们就是 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 函数添加了 `$lightness` 参数的别名。
 
 问题是，这些函数经常并不能实现预期的结果。另一方面，通过混合`白色` 或 `黑色`实现变量或变暗的 [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 函数，是一个不错的方法。
 
@@ -222,7 +221,7 @@ map 的使用应该遵循下述规范：
 
 自从 Sass 支持 map 依赖具有很多关于它的文章，我建议你阅读以下三篇：[Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
-## CSS规则集
+## CSS 规则集
 
 在这里，极有可能颠覆每个人对书写 CSS 规则集的认知（根据众多规范整理而成，包括[CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)）：
 
@@ -261,7 +260,7 @@ map 的使用应该遵循下述规范：
 
 {% include snippets/syntax/26/index.html %}
 
-另一方面，按照类型排序则让属性显得更具有意义。每个和字体相关的属性被声明在一起，`top` 和 `bottom` 也结合在一起，最终审阅CSS规则集感觉就像是在读故事。除非你坚持诸如 [Idiomatic CSS](https://github.com/necolas/idiomatic-css)的规定，不然类型声明顺序可以有更丰富充实的表现。`white-space` 应该放在哪里：font还是dispaly? `overflow` 应该归属何处？如何进行组内排序（如果是字母排序，这岂不成了个笑话）？
+另一方面，按照类型排序则让属性显得更具有意义。每个和字体相关的属性被声明在一起，`top` 和 `bottom` 也结合在一起，最终审阅 CSS 规则集感觉就像是在读故事。除非你坚持诸如 [Idiomatic CSS](https://github.com/necolas/idiomatic-css)的规定，不然类型声明顺序可以有更丰富充实的表现。`white-space` 应该放在哪里：font 还是 dispaly? `overflow` 应该归属何处？如何进行组内排序（如果是字母排序，这岂不成了个笑话）？
 
 {% include snippets/syntax/27/index.html %}
 
@@ -276,7 +275,7 @@ map 的使用应该遵循下述规范：
 因此，我不会在此强加规范选择怎样的声明顺序。只要你长久的在自己的样式表中保持一致的风格，那么选择喜欢的声明顺序就可以了（也就说不要太随便）。
 
 <div class="note">
-  <p><a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对 CSS 进行排序，按类型顺序声明，Gzip 压缩文件大小平均达到 2.7%,而按字母顺序排序压缩的文件大小平均达到 1.3%。</p>
+  <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">最新研究</a> 表明，使用<a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (按照<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">类型排序</a>) 对 CSS 进行排序，按类型顺序声明，Gzip 压缩文件大小平均达到 2.7%,而按字母顺序排序压缩的文件大小平均达到 1.3%。</p>
 </div>
 
 ## 选择器嵌套
@@ -285,10 +284,10 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 ### 一般规则
 
-比如下述Sass选择器的嵌套：
+比如下述 Sass 选择器的嵌套：
 
 {% include snippets/syntax/29/index.html %}
- 
+
 生成的 CSS:
 
 {% include snippets/syntax/30/index.html %}
@@ -311,7 +310,7 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 选择器越具体则声明语句越冗长，而且对最近选择器的引用(`&`)也越频繁。在某些时候，出现混淆选择器路径和探索下一级选择器的错误率很高，这非常不值得。
 
-为了防止此类情况，我们今年就 [the Inception rule](http://thesassway.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的意见比较激进，**建议尽量避免使用嵌套**。 
+为了防止此类情况，我们今年就 [the Inception rule](http://thesassway.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的意见比较激进，**建议尽量避免使用嵌套**。
 
 虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[《小心嵌套陷阱》](http://www.sitepoint.com/beware-selector-nesting-sass/) 和 [《避免选择器的过渡嵌套》](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 

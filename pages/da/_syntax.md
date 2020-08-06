@@ -1,4 +1,3 @@
-
 # Syntaks & formatering
 
 Hvis du spørger mig, så er noget af det allerførste en styleguide bør gøre, er at beskrive måden hvordan vi vil have vores kode til at se ud.
@@ -7,10 +6,10 @@ Når flere udviklere er involveret i at skrive CSS på de(t) samme projekt(er), 
 
 Groft sagt, så ønsker vi (skamløst inspireret af [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
 
-* indentering á to (2) mellemrum, ingen tabs;
-* 80-karakterer brede linjer, ideelt set;
-* ordentligt skrevede, multi-linje CSS-regler;
-* meningsfuld brug af whitespace.
+- indentering á to (2) mellemrum, ingen tabs;
+- 80-karakterer brede linjer, ideelt set;
+- ordentligt skrevede, multi-linje CSS-regler;
+- meningsfuld brug af whitespace.
 
 {% include snippets/syntax/01/index.html %}
 
@@ -30,14 +29,14 @@ For at undgå potentielle problemer med karakter-encoding, så anbefales det kra
 
 CSS kræver ikke at strenge bliver citerede, ikke engang dem der indeholder mellemrum. Tag font-family navne som eksempel: for CSS parseren gør det ingen forskel hvorvidt du pakker dem ind i citationstegn.
 
-På grund af det, så kræver Sass *heller ikke* at strenge citeres. Endnu bedre er (og *heldigvis*, vil du nok indrømme), at en citeret streng er fuldstændig den samme som dens uciterede tvilling (f. eks. er `'abc'` fuldstændig det samme som `abc`).
+På grund af det, så kræver Sass _heller ikke_ at strenge citeres. Endnu bedre er (og _heldigvis_, vil du nok indrømme), at en citeret streng er fuldstændig den samme som dens uciterede tvilling (f. eks. er `'abc'` fuldstændig det samme som `abc`).
 
-Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en minoritet, og derfor **bør strenge altid indpakkes i enkelte citationstegn** (`'`) i Sass (enkelte citationstegn er nemmere at taste end dobbelte på *qwerty* tastaturer). Foruden konsistens med andre sprog, inklusiv CSS' kusine JavaScript, er der flere grunde bag dette valg:
+Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en minoritet, og derfor **bør strenge altid indpakkes i enkelte citationstegn** (`'`) i Sass (enkelte citationstegn er nemmere at taste end dobbelte på _qwerty_ tastaturer). Foruden konsistens med andre sprog, inklusiv CSS' kusine JavaScript, er der flere grunde bag dette valg:
 
-* farvenavne behandles på samme måde som uciterede farver, hvilket kan lede til alvorlige problemer;
-* de fleste syntax highlighters får sure opstød af uciterede strenge;
-* det hjælper med generel læsbarhed;
-* der er ingen god grund til ikke at citere strenge.
+- farvenavne behandles på samme måde som uciterede farver, hvilket kan lede til alvorlige problemer;
+- de fleste syntax highlighters får sure opstød af uciterede strenge;
+- det hjælper med generel læsbarhed;
+- der er ingen god grund til ikke at citere strenge.
 
 {% include snippets/syntax/03/index.html %}
 
@@ -65,8 +64,8 @@ URL'er bør også blive citeret af de samme grunde som ovenfor:
 
 ###### Videre læsning
 
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
-* [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
+- [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+- [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Tal
 
@@ -86,17 +85,17 @@ Når du arbejder med længder, så bør en værdi af `0` aldrig have en enhed.
 
 Den mest typiske fejl jeg kan komme i tanke om, i relation til tal i Sass, er at tænke på enheder som kun værende strenge der trygt kan tilføjes til et tal. Selvom det lyder sandt, så er det absolut ikke sådan enheder virker. Tænk på enheder som algebraiske symboler. For eksempel, som i den virkelig verden, hvis du ganger 5 tommer med 5 tommer så får du 25 kvadrattommer. Den samme logik gælder ved Sass.
 
-For at tilføje en enhed til et tal, så er du nødt til at gange dette tal med *1 enhed*.
+For at tilføje en enhed til et tal, så er du nødt til at gange dette tal med _1 enhed_.
 
 {% include snippets/syntax/09/index.html %}
 
-Bemærk at tilføjelse af *0 medlem af samme enhed* også virker, men jeg vil hellere anbefale den førnævnte metode, siden *0 enhed* kan være en anelse forvirrende. Det er klart, at når man forsøger at konvertere et tal til en anden kompatibel enhed, så vil tilføjelse af 0 ikke være nok.
+Bemærk at tilføjelse af _0 medlem af samme enhed_ også virker, men jeg vil hellere anbefale den førnævnte metode, siden _0 enhed_ kan være en anelse forvirrende. Det er klart, at når man forsøger at konvertere et tal til en anden kompatibel enhed, så vil tilføjelse af 0 ikke være nok.
 
 {% include snippets/syntax/10/index.html %}
 
 Når alt kommer til alt, så afhænger det af hvad du forsøger at opnå. Bare hold det i tankerne, at tilføjelse af en enhed til en streng ikke altid er en god fremgangsmåde.
 
-For at fjerne en værdis enhed, så er du nødt til at dividere den med *en enhed af dets slags*.
+For at fjerne en værdis enhed, så er du nødt til at dividere den med _en enhed af dets slags_.
 
 {% include snippets/syntax/11/index.html %}
 
@@ -110,7 +109,7 @@ Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket
 
 ### Magiske tal
 
-"Magiske tal" er et [old school programmeringsterm](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) for *unavngivne numeriske konstanter*. Basalt set, så er det et tilfældigt tal der *bare virker*™, dog uden at være forbundet til nogen logisk forklaring.
+"Magiske tal" er et [old school programmeringsterm](<http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants>) for _unavngivne numeriske konstanter_. Basalt set, så er det et tilfældigt tal der *bare virker*™, dog uden at være forbundet til nogen logisk forklaring.
 
 Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når du ikke kan finde en fornuftig forklaring for hvorfor et tal virker, så tilføj en uddybende kommentar der forklarer hvordan du er nået hertil, og hvorfor du tror det virker. At indrømme at du ikke ved hvorfor noget virker er stadig mere hjælpsomt for den næste udvikler, end at få dem til regne ud hvad det er der sker fra bunden af.
 
@@ -118,10 +117,10 @@ Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når 
 
 ###### Videre læsning
 
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
-* [Sassy-Math](https://github.com/at-import/sassy-math)
+- [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+- [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
+- [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+- [Sassy-Math](https://github.com/at-import/sassy-math)
 
 ## Farver
 
@@ -176,11 +175,11 @@ Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to l
 
 ###### Videre læsning
 
-* [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+- [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
+- [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+- [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
+- [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
+- [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## Lister
 
@@ -188,11 +187,11 @@ Lister er Sass' svar på arrays. En liste er en flad datastruktur (modsat [maps]
 
 Lister bør respektere de følgende retningslinjer:
 
-* enten indlejrede eller i flere linjer;
-* nødvendigvis i flere linjer, hvis for lang til at passe ind i linje på 80-karakterer;
-* medmindre brugt som den er til CSS formål, skal det altid være komma-separeret;
-* altid indpakked i paranteser;
-* efterstillede kommaer hvis flere linjer, ikke hvis indlejret.
+- enten indlejrede eller i flere linjer;
+- nødvendigvis i flere linjer, hvis for lang til at passe ind i linje på 80-karakterer;
+- medmindre brugt som den er til CSS formål, skal det altid være komma-separeret;
+- altid indpakked i paranteser;
+- efterstillede kommaer hvis flere linjer, ikke hvis indlejret.
 
 {% include snippets/syntax/19/index.html %}
 
@@ -202,8 +201,8 @@ Når du tilføjer nye artikler til en liste, så brug altid den medfølgende API
 
 ###### Videre læsning
 
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+- [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+- [SassyLists](http://sassylists.com)
 
 ## Maps
 
@@ -211,13 +210,13 @@ Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for e
 
 Maps bør altid blive skrevet som følgende:
 
-* mellemrum efter kolon (`:`);
-* åbnende klamme (`(`) på samme linje som kolonet (`:`);
-* **citerede nøgler**, hvis de er strenge (hvilket repræsenterer 99% af situationerne);
-* hver nøgle/værdi par er på dets egen, nye linje;
-* **efterstillet komma** (`,`) på den sidste artikel gør det lettere at tilføje, fjerne eller omarrangere artikler;
-* afsluttende klamme (`)`) på hver sin, nye linje;
-* intet mellemrum eller ny linje mellem en afsluttende klamme (`)`) og semikolon (`;`).
+- mellemrum efter kolon (`:`);
+- åbnende klamme (`(`) på samme linje som kolonet (`:`);
+- **citerede nøgler**, hvis de er strenge (hvilket repræsenterer 99% af situationerne);
+- hver nøgle/værdi par er på dets egen, nye linje;
+- **efterstillet komma** (`,`) på den sidste artikel gør det lettere at tilføje, fjerne eller omarrangere artikler;
+- afsluttende klamme (`)`) på hver sin, nye linje;
+- intet mellemrum eller ny linje mellem en afsluttende klamme (`)`) og semikolon (`;`).
 
 Illustration:
 
@@ -235,40 +234,39 @@ Hvis du er interesseret i at vide dybden af map'et, så tilføj følgende funkti
 
 ###### Videre læsning
 
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
-* [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
-* [Sass list-maps](https://github.com/lunelson/sass-list-maps)
-* [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
-* [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+- [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
+- [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
+- [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
+- [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
+- [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+- [Sass list-maps](https://github.com/lunelson/sass-list-maps)
+- [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
+- [Sassy-Maps](https://github.com/at-import/sassy-maps)
+- [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 ## CSS Regelsæt
 
 På dette tidspunkt, hvilket mest er en opsummering af hvad alle ved, men her er måden hvordan et CSS regelsæt bør blive skrevet (i det mindste ifølge de fleste retningslinjer, inklusiv [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
 
-* relaterede selektorer på samme linje; urelaterede selektorer på nye linjer;
-* den åbnende klamme (`{`) har afstand fra den sidste selektor med et enkelt mellemrum;
-* hver deklaration på dets egen, nye linje;
-* et mellemrum efter kolonet (`:`);
-* et efterstillet semikolon (`;`) ved enden af alle deklarationer;
-* den afsluttende klamme (`}`) på sin egen, nye linje;
-* en ny linje efter den afsluttende klamme `}`.
+- relaterede selektorer på samme linje; urelaterede selektorer på nye linjer;
+- den åbnende klamme (`{`) har afstand fra den sidste selektor med et enkelt mellemrum;
+- hver deklaration på dets egen, nye linje;
+- et mellemrum efter kolonet (`:`);
+- et efterstillet semikolon (`;`) ved enden af alle deklarationer;
+- den afsluttende klamme (`}`) på sin egen, nye linje;
+- en ny linje efter den afsluttende klamme `}`.
 
 Illustration:
 
 {% include snippets/syntax/24/index.html %}
 
-
 Ifølge disse CSS-relaterede retningslinjer, så ønsker vi at være opmærksomme på:
 
-* at lokale variabler bliver deklareret før alle andre deklarationer, for derefter at have afstand til deklarationer via en ny linje;
-* at mixin-kald uden nogen `@content` kommer efter enhver deklaration;
-* at indlejrede selektorer altid kommer efter en ny linje;
-* at mixin-kald med `@content` kommer efter enhver indlejret selektor;
-* at der ikke er nogen ny linje før en afsluttende klamme (`}`).
+- at lokale variabler bliver deklareret før alle andre deklarationer, for derefter at have afstand til deklarationer via en ny linje;
+- at mixin-kald uden nogen `@content` kommer efter enhver deklaration;
+- at indlejrede selektorer altid kommer efter en ny linje;
+- at mixin-kald med `@content` kommer efter enhver indlejret selektor;
+- at der ikke er nogen ny linje før en afsluttende klamme (`}`).
 
 Illustration:
 
@@ -276,14 +274,14 @@ Illustration:
 
 ###### Videre læsning
 
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+- [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
 
 ## Sortering af Deklarationer
 
 Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er når det kommer til sortering af deklarationer i CSS. Helt konkret, så er to fraktioner på spil her:
 
-* at holde sig til den alfabetiske rækkefølge;
-* at arrangere deklarationerne efter type (position, display, farver, skrifttype, diverse…).
+- at holde sig til den alfabetiske rækkefølge;
+- at arrangere deklarationerne efter type (position, display, farver, skrifttype, diverse…).
 
 Der er fordele og ulemper ved begge tilgange. På den ene side, så er alfabetisk sortering universelt (i det mindste for sprog, der anvender det latinske alfabet), så der er ikke noget argument om at sortere en egenskab efter en anden. Dog finder jeg det ekstremt mærkeligt ikke at se værdier som `bottom` og `top` lige ved siden af hinanden. Hvorfor skulle animationer komme før display-typen? Der er mange særheder ved en alfabetisk arrangering.
 
@@ -301,24 +299,24 @@ For at tale for mig selv, så kan jeg ikke beslutte mig. En nylig afstemning på
 
 {% include images/order-poll.html %}
 
-På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Vælg den tilgang du foretrækker, så længe du er konsistent gennem dine stylesheets (ikke den *tilfældige* tilgang, for eksempel).
+På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Vælg den tilgang du foretrækker, så længe du er konsistent gennem dine stylesheets (ikke den _tilfældige_ tilgang, for eksempel).
 
 <div class="note">
-  <p>Et <a href="http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
+  <p>Et <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
 </div>
 
 ###### Videre læsning
 
-* [CSS Comb](https://github.com/csscomb/csscomb.js)
-* [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
-* [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
-* [Reduce File Size With CSS Sorting](http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
-* [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
+- [CSS Comb](https://github.com/csscomb/csscomb.js)
+- [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
+- [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
+- [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+- [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
+- [Poll Results: How Do You Order Your CSS Properties?](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
 ## Indlejring af selektorer
 
-En særlig funktionalitet som Sass giver, der bliver misbrugt alt for meget af mange udviklere er *indlejring af selektorer*. Indlejring af selektorer giver stylesheet forfattere en måde at beregne lange selektorer ved at indlejre kortere selektorer inde i hinanden.
+En særlig funktionalitet som Sass giver, der bliver misbrugt alt for meget af mange udviklere er _indlejring af selektorer_. Indlejring af selektorer giver stylesheet forfattere en måde at beregne lange selektorer ved at indlejre kortere selektorer inde i hinanden.
 
 ### Generel regel
 
@@ -378,6 +376,6 @@ Som med alting, så er det specifikke rimelig irrelevant, da det er konsistens d
 
 ###### Videre læsning
 
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+- [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
+- [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
+- [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
