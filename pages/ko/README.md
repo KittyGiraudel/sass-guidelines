@@ -12,7 +12,9 @@
 | 영어          | 한국어        |
 | ------------- | ------------- 다
 | access        | 접근          |
+| architecture    | 설계         |
 | article        | 글           |
+| component      | 컴퍼넌트        |
 | nest         | 내포하다         |
 | parse         | 파싱하다      |
 | prototype     | 프로토타입     |
@@ -23,5 +25,6 @@
 
 ## 대체 불가능한 단어나 표현
 
+- import
 - JavaScript
 - Sass
