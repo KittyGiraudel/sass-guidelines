@@ -2,27 +2,58 @@
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
 {% highlight scss %}
-.foo {
-  content: 'foo';
+%button {
+  display: inline-block;
+  // … 버튼 스타일
+
+  // 관계: %modal의 자식인 %button
+  %modal > & {
+    display: block;
+  }
 }
 
-@media print {
-  .bar {
-    // 이 코드는 듣지 않을 뿐더러 충돌을 일으킵니다.
-    @extend .foo;
+.button {
+  @extend %button;
+}
+
+// Yep
+.modal {
+  @extend %modal;
+}
+
+// Nope
+.modal {
+  @extend %modal;
+
+  > .button {
+    @extend %button;
   }
 }
 {% endhighlight %}
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-.foo
-  content: 'foo'
+%button
+  display: inline-block
+  // … button styles
 
-@media print
-  .bar
-    // 이 코드는 듣지 않을 뿐더러 충돌을 일으킵니다.
-    @extend .foo
+  // Relationship: a %button that is a child of a %modal
+  %modal > &
+    display: block
+
+.button
+  @extend %button
+
+// Yep
+.modal
+  @extend %modal
+
+// Nope
+.modal
+  @extend %modal
+
+  > .button
+    @extend %button
 {% endhighlight %}
   </div>
 </div>

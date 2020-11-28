@@ -3,19 +3,13 @@
 
 Sass 개발자들에 의해 간과되는 기능이 하나 있다면, 그것은 동적으로 경고와 오류를 출력하는 기능입니다. 사실, Sass에는 표준 출력 시스템(CLI, compiling app…)에 내용을 표시하는 세 가지의 지시어가 있습니다:
 
-* `@debug`;
-* `@warn`;
-* `@error`.
+- `@debug`;
+- `@warn`;
+- `@error`.
 
-`@debug`는 분명히 SassScript 디버그를 위해 의도된 것이므로 제쳐두겠습니다. 그건 지금 우리에게 중요한 게 아니니까요. 그럼 이제 하나는 컴파일러를 멈춰세우는 반면 다른 하나는 그렇지 않다는 점만 빼고 똑 닮은 `@warn`과 `@error`가 남았습니다. 무엇이 무엇인지 한 번 맞춰보세요.
+`@debug`는 분명히 SassScript 디버그를 위해 의도된 것이므로 제쳐두겠습니다. 그건 지금 우리에게 중요한 게 아니니까요. 그럼 이제 하나는 컴파일러를 멈춰 세우는 반면 다른 하나는 그렇지 않다는 점만 빼고 똑 닮은 `@warn`과 `@error`가 남았습니다. 무엇이 무엇인지 한 번 맞춰보세요.
 
-Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기본적으로 특정 유형의 매개변수를 기대하는 믹스인이나 함수는 뭔가가 잘못되었을 때 오류를 던지거나, 혹은 추정 시에는 경고를 표시합니다.
-
-###### 참고
-
-* [An Introduction To Error Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
-* [Building a Logger Mixin](http://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
+Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기본적으로 특정 유형의 전달인자를 기대하는 믹스인이나 함수는 뭔가가 잘못되었을 때 오류를 던지거나, 혹은 추정 시에는 경고를 표시합니다.
 
 ## 경고
 
@@ -32,3 +26,5 @@ Sass 프로젝트에는 경고와 오류의 여지가 많이 있습니다. 기�
 가령 특정 맵의 값에 접근하는 getter 함수를 만든다고 합시다. 만약 요청된 키가 맵에 존재하지 않으면 오류를 던질 수 있습니다.
 
 {% include snippets/errors/02/index.html %}
+
+`@error`를 효율적으로 사용하는 방법에 대한 자세한 내용은 [오류 처리에 대한 소개](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)가 도움이 될 거예요.

@@ -4,8 +4,14 @@
 {% highlight awk %}
 sass/
 |
+|– abstracts/
+|   |– _variables.scss    # Sass 변수
+|   |– _functions.scss    # Sass 함수
+|   |– _mixins.scss       # Sass 믹스인
+|   |– _placeholders.scss # Sass 플레이스홀더
+|
 |– base/
-|   |– _reset.scss       # Reset/normalize
+|   |– _reset.scss       # 리셋/정규화
 |   |– _typography.scss  # 타이포그래피 규칙
 |   …                    # 기타.
 |
@@ -35,17 +41,10 @@ sass/
 |   |– _admin.scss       # 관리자 테마
 |   …                    # 기타.
 |
-|– utils/
-|   |– _variables.scss   # Sass 변수
-|   |– _functions.scss   # Sass 함수
-|   |– _mixins.scss      # Sass 믹스인
-|   |– _helpers.scss     # 클래스 & 플레이스홀더 헬퍼
-|
 |– vendors/
 |   |– _bootstrap.scss   # Bootstrap
 |   |– _jquery-ui.scss   # jQuery UI
 |   …                    # 기타.
-|
 |
 `– main.scss             # 메인 Sass 파일
 {% endhighlight %}
