@@ -44,5 +44,5 @@
 요약하자면, 선택자 내에서 관계를 유지하기 위해서만 `@extend`를 사용하는 것이 좋습니다. 두 개의 선택자가 특징적으로 유사하다면, 그것은 `@extend`의 완벽한 사용 예입니다. 관련이 없지만, 일부 규칙을 공유할 때는 `@mixin`이 더 적합 할 수 있습니다. [이 글](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)에서 둘 중에서 선택하는 방법에 대해 자세히 알아보세요.
 
 <div class="note">
-<p>이 섹션에 대한 도움과 전문지식을 주신 <a href="https://twitter.com/davidkpiano">David Khourshid</a>에게 감사드립니다. </p>
-</div
+<p>이 섹션에 대한 도움과 전문지식을 주신 <a href="https://twitter.com/davidkpiano">David Khourshid</a>에게 감사드립니다.</p>
+</div>

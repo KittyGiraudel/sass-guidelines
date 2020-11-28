@@ -45,8 +45,8 @@ _작동하게_ 만드는 것과 _좋게_ 만드는 것 사이에는 커다란 �
 {% include snippets/architecture/06/index.html %}
 
 <div class="note">
-<p>이 섹션에 대한 도움과 전문지식을 주신 <a href="https://twitter.com/davidkpiano">David Khourshid</a>에게 감사드립니다. </p>
-</div
+<p>이 섹션에 대한 도움과 전문지식을 주신 <a href="https://twitter.com/davidkpiano">David Khourshid</a>에게 감사드립니다.</p>
+</div>
 
 ## 7-1 패턴
 
