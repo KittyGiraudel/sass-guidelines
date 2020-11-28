@@ -17,7 +17,7 @@ Sass는 이런 상황에서, 메타언어로서, 추가 기능과 유용한 도�
 
 [Sass의 첫 번째 커밋](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)은 8년 이상이 지난, 2006년 후반까지 거슬러 올라갑니다. 말할 것도 없이 그 이후로 아주 먼 길을 왔습니다. Ruby로 처음에 개발되었고, 여기저기서 다양한 포트들이 튀어나왔죠. 가장 성공적인, (C/C++로 쓰인) [LibSass](https://github.com/sass/libsass)는 현재 원래의 Ruby 버전과의 완전한 호환에 근접해 있습니다.
 
-2014년, [Ruby 사스와 LibSass 팀은 더 나아가기 전에 두 가지 버전의 동기화를 기다리기로 결정했습니다](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). 그 이후로, LibSass는 형과의 기능 동기화를 위해 활발하게 버전들을 출시하고 있습니다. 남아있는 불일치들은 제가 [Sass-Compatibility](http://sass-compatibility.github.io/) 프로젝트로 한데 모아 정리해두었습니다. 열거되지 않은 불일치를 알고 계신다면, 이슈를 여는 친절을 베풀어주시기 바랍니다.
+2014년, [Ruby 사스와 LibSass 팀은 더 나아가기 전에 두 가지 버전의 동기화를 기다리기로 결정했습니다](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). 그 이후로, LibSass는 형제와의 기능 동기화를 위해 활발하게 버전들을 출시하고 있습니다. 남아있는 불일치들은 제가 [Sass-Compatibility](http://sass-compatibility.github.io/) 프로젝트로 한데 모아 정리해두었습니다. 열거되지 않은 불일치를 알고 계신다면, 이슈를 여는 친절을 베풀어주시기 바랍니다.
 
 여러분의 컴파일러를 선택하는 것으로 돌아가겠습니다. 사실, 이건 여러분의 프로젝트에 달려있습니다. Ruby on Rails 프로젝트라면, Ruby Sass를 사용하는 게 나을 겁니다. Ruby Sass가 이 경우에 완벽하게 적합하죠. 또한, Ruby Sass가 언제나 참조 구현이 될 것이며 기능에 있어 LibSass를 선도할 것이라는 점을 알아두십시오. 그리고 만약 [Ruby Sass에서 LibSass로 바꾸기](http://www.sitepoint.com/switching-ruby-sass-libsass/)를 원한다면, 이 글은 당신을 위한 것입니다.
 

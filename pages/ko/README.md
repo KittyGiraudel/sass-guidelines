@@ -18,10 +18,11 @@
 | nest         | 내포하다         |
 | parse         | 파싱하다      |
 | prototype     | 프로토타입     |
-| tool          | 도구          |
+| ruleset      | 규칙        |
 | section       | 섹션          |
 | sementic      | 시맨틱         |
 | strings       | 문자열         |
+| tool          | 도구          |
 
 ## 대체 불가능한 단어나 표현
 
