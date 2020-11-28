@@ -13,6 +13,7 @@
 | ------------- | ------------- 다
 | access        | 접근          |
 | architecture    | 설계         |
+| argument    | 논쟁, 전달인자      |
 | article        | 글           |
 | component      | 컴퍼넌트        |
 | nest         | 내포하다         |

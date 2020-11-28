@@ -169,7 +169,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 ### 색 명암 조절
 
-[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개 변수의 가명일 뿐입니다.
+[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개변수의 가명일 뿐입니다.
 
 문제는, 이들 함수가 가끔 기대되는 결과를 제공하지 않는다는 것입니다. 반면에, [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 함수는 색을 `white`나 `black`과 혼합함으로써 명암을 조절하는 좋은 방법입니다.
 
