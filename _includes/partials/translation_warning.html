@@ -10,7 +10,7 @@
 
 {% else %}
 
-{% capture translators %}{% for translator in site.data[page.language].configuration.translators %}<a href="{{ translator.link }}" target="_blank" rel="noopener noreferrer">{{ translator.name }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}{% endcapture %}
+{% capture translators %}{% for translator in site.data[page.language].configuration.translators %}<a href="{{ translator.link }}" target="_blank" rel="noopener noreferrer">{{ translator.name }}</a>{% if forloop.rindex0 > 1 %}, {% endif %}{% if forloop.rindex0 == 1 %} and {% endif %}{% endfor %}{% endcapture %}
 
 <div class="{{ class }}">
   <div class="translation-warning__inner">
