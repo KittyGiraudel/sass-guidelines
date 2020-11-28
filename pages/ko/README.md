@@ -15,15 +15,20 @@
 | architecture    | 설계         |
 | argument    | 논쟁, 전달인자      |
 | article        | 글           |
+| color        | 색          |
 | component      | 컴퍼넌트        |
+| leading      | 앞장서는        |
+| lint        | 린트        |
 | nest         | 내포하다         |
 | parse         | 파싱하다      |
 | prototype     | 프로토타입     |
+| pseudo         | 가상      |
 | ruleset      | 규칙        |
 | section       | 섹션          |
 | sementic      | 시맨틱         |
 | strings       | 문자열         |
 | tool          | 도구          |
+| trailing        | 뒤따르는         |
 
 ## 대체 불가능한 단어나 표현
 
