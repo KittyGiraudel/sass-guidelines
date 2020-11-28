@@ -30,7 +30,7 @@ Hvis du skal til at anvende extend, så lad mig minde dig om at den ikke fungere
 > Du bør kun @extend'e selektorer inden for det samme direktiv.
 
 <div class="note">
-  <p>Ofte siges det, at <code>@extend</code> hjælper med filstørrelsen, siden den kombinerer selektorer fremfor at duplikere egenskaber. Det er sandt, dog er forskellen minimal når først <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> er færdig med sin kompression.</p>
+  <p>Ofte siges det, at <code>@extend</code> hjælper med filstørrelsen, siden den kombinerer selektorer fremfor at duplikere egenskaber. Det er sandt, dog er forskellen minimal når først <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a> er færdig med sin kompression.</p>
   <p>Når det er sagt, så hvis du ikke kan bruge Gzip (eller noget lignende), så kan det at skifte til en <code>@extend</code> tilgang muligvis ikke være så slem når du ved hvad du laver.</p>
 </div>
 
@@ -38,7 +38,7 @@ For at opsummere, så vil jeg **anbefale imod brugen af `@extend` direktivet**, 
 
 ###### Videre læsning
 
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [When to Use Extend; When to Use a Mixin](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)

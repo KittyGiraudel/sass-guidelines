@@ -5,13 +5,13 @@ configuration:
   available: true
   translators:
     - name: Anders Schmidt Hansen
-      link: http://codepen.io/andersschmidt/
+      link: https://codepen.io/andersschmidt/
 
 # For more information about the context around these translations, refer to
 # _locales/en.yml
 translations:
   baseline: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
-  footer_content: "Lavet med kærlighed af [Hugo Giraudel](http://hugogiraudel.com), oversat af [Anders Schmidt Hansen](http://codepen.io/andersschmidt/)"
+  footer_content: "Lavet med kærlighed af [Hugo Giraudel](https://hugogiraudel.com), oversat af [Anders Schmidt Hansen](https://codepen.io/andersschmidt/)"
 
   aside_title: "Muligheder"
   aside_report: "Rapporter et problem"
@@ -36,7 +36,7 @@ translations:
 
   note: "Note"
 
-  image_color_functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Illustration af forskellen mellem `lighten`/`darken` og `mix` af [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Diagram der viser hvordan udviklere arrangerer deres CSS deklarationer"
   image_sassdoc: "Dokumentation genereret af SassDoc"
   image_wallpaper: "Baggrund af [Julien He](https://twitter.com/julien_he)"

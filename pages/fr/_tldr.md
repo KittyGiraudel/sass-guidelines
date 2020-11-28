@@ -13,7 +13,7 @@ Ces règles de conduite sont assez longues, par conséquent il est de bon ton d�
 
 * Indentation à 2 espaces, pas de tabulations. [↩](#syntaxe--formatage)
 * La longueur des lignes doit être inférieure à 80 caractères autant que faire se peut. N’hésitez pas à diviser les lignes trop longues en plusieurs lignes plus courtes quand cela s’avère nécessaire. [↩](#syntaxe--formatage)
-* Le code CSS doit être écrit de manière propre et évidente, si possible suivant les [CSS Guidelines](http://cssguidelin.es) de Harry Roberts. [↩](#syntaxe--formatage)
+* Le code CSS doit être écrit de manière propre et évidente, si possible suivant les [CSS Guidelines](https://cssguidelin.es) de Harry Roberts. [↩](#syntaxe--formatage)
 * Les lignes vides ne coûtent rien ; servez-vous en pour séparer les éléments, règles et déclarations. [↩](#syntaxe--formatage)
 
 ### Chaînes De Caractères

@@ -27,5 +27,5 @@ Como ejemplo, digamos que construyes una función *getter* para acceder a los va
 
 {% include snippets/errors/02/index.html %}
 
-Para más información sobre cómo usar `@error` de manera eficiente, [ésta introducción acerca del manejo de errores -En inglés](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) puede serte de ayuda.
+Para más información sobre cómo usar `@error` de manera eficiente, [ésta introducción acerca del manejo de errores -En inglés](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) puede serte de ayuda.
 

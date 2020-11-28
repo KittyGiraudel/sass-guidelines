@@ -11,7 +11,7 @@ Por las mismas razones, los puntos de ruptura no deberían llevar el nombre de l
 
 {% include snippets/rwd/01/index.html %}
 
-Llegados a este punto, cualquier [nomenclatura](http://css-tricks.com/naming-media-queries/) que deje claro que el diseño no está ligado a un dispositivo en concreto podría funcionar, siempre y cuando tenga un sentido de magnitud.
+Llegados a este punto, cualquier [nomenclatura](https://css-tricks.com/naming-media-queries/) que deje claro que el diseño no está ligado a un dispositivo en concreto podría funcionar, siempre y cuando tenga un sentido de magnitud.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@ Una vez que tus *breakpoints* tengan la nomenclatura deseada, necesitas una mane
 
 <div class="note">
   <p>Obviamente, este es un gestor de puntos de ruptura bastante simplista. Si necesitas un gestor ligeramente más permisivo, te recomiendo que no reinventes la rueda y utilices algo que ya esté probado y comprobado, como por ejemplo <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
-  <p>Si estás buscando más información acerca de cómo enfocar las Media Queries en Sass, tanto <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (de este servidor) como <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> tienen muy buenos artículos al respecto.</p>
+  <p>Si estás buscando más información acerca de cómo enfocar las Media Queries en Sass, tanto <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (de este servidor) como <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> tienen muy buenos artículos al respecto.</p>
 </div>
 
 ## Uso De Media Queries

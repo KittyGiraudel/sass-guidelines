@@ -1,7 +1,7 @@
 
 # Konwencje nazw
 
-W tej sekcji nie zajmiemy się konwencjami na nazywanie elementów składni CSSa, które to mają za zadanie pomóc w łatwości utrzymania i skalowania kodu; nie tylko decyzja w tej kwestii należy do autora kodu, ale nie jest to też coś, co należy do zakresu merytorycznego tego przewodnika. Zalecam tym samym zapoznanie się z [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+W tej sekcji nie zajmiemy się konwencjami na nazywanie elementów składni CSSa, które to mają za zadanie pomóc w łatwości utrzymania i skalowania kodu; nie tylko decyzja w tej kwestii należy do autora kodu, ale nie jest to też coś, co należy do zakresu merytorycznego tego przewodnika. Zalecam tym samym zapoznanie się z [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
 Jest jednak w Sassie kilka rzeczy posługujących się nazwami i ważne jest, by nazywać je w sposób, dzięki któremu kod będzie spójny i czytelny:
 
@@ -17,7 +17,7 @@ W odniesieniu natomiast do zmiennych, funkcji i mixinów, utrzymujemy konwencję
 
 ###### Dalsze informacje
 
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
+* [CSS Guidelines’ Naming Conventions](https://cssguidelin.es/#naming-conventions)
 
 ## Stałe
 
@@ -29,7 +29,7 @@ Jak w przypadku wielu innych języków programowania, zalecam korzystanie z nazw
 
 ###### Dalsze informacje
 
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+* [Dealing With Constants in Sass](https://www.sitepoint.com/dealing-constants-sass/)
 
 ## Przestrzenie nazw
 
@@ -45,4 +45,4 @@ Na przykład, pracując nad projektem *Sassowski Jednorożec*, który z założe
 
 ###### Dalsze informacje
 
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
+* [Please Respect the Global CSS Namespace](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

@@ -1,8 +1,8 @@
 
 # L’autore
 
-Mi chiamo [Hugo Giraudel](http://hugogiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [N26](https://n26.com).
+Mi chiamo [Hugo Giraudel](https://hugogiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [N26](https://n26.com).
 
-Lavoro con Sass da diversi anni e sono la persona che sta dietro a progetti come [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](http://sitepoint.com/sass-reference/) e [Sass-Compatibility](http://sass-compatibility.github.io). Se sei interessato ai miei contributi nella comunità di Sass, dai un'occhiata a [questa lista](http://github.com/HugoGiraudel/awesome-sass).
+Lavoro con Sass da diversi anni e sono la persona che sta dietro a progetti come [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](https://sitepoint.com/sass-reference/) e [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Se sei interessato ai miei contributi nella comunità di Sass, dai un'occhiata a [questa lista](https://github.com/HugoGiraudel/awesome-sass).
 
-Sono anche l'autore di un libro su CSS (in francese) dal titolo [CSS3 Pratique du Design Web](http://css3-pratique.fr/) (*Eyrolles* editions) e di un libro su Sass (in inglese) dal titolo [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).
+Sono anche l'autore di un libro su CSS (in francese) dal titolo [CSS3 Pratique du Design Web](https://www.eyrolles.com/Informatique/Livre/css3-9782212678963/) (*Eyrolles* editions) e di un libro su Sass (in inglese) dal titolo [Jump Start Sass](https://learnable.com/books/jump-start-sass) (*Learnable* editions).

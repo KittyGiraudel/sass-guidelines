@@ -27,4 +27,4 @@
 
 {% include snippets/errors/02/index.html %}
 
-Больше информации, как эффективно использовать `@error`, [в этом введении в обработку ошибок](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996).
+Больше информации, как эффективно использовать `@error`, [в этом введении в обработку ошибок](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996).

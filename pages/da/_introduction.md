@@ -7,7 +7,7 @@ En styleguide er ikke bare hyggelæsning, der maler et ideelt billede af din kod
 
 Det er unnødvendigt at sige, at jo flere udviklere der er involveret i et projekt desto flere kode-retningslinjer er nødvendige. I samme dur, så jo større et projekt desto større er kravet for en styleguide.
 
-[Harry Roberts](http://csswizardry.com) forklarer dette meget godt i [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](https://csswizardry.com) forklarer dette meget godt i [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>En programmeringsstyleguide (bemærk, ikke en visuel styleguide) er et værdifuldt værktøj for teams som:</p>
@@ -35,7 +35,7 @@ Når alt kommer til alt, så hvis der er noget jeg gerne vil have at du tager me
 
 Takket være mine fjollede eksperimenter, såsom [bitwise operatører](https://github.com/HugoGiraudel/SassyBitwise), [iteratorer og generatorer](https://github.com/HugoGiraudel/SassyIteratorsGenerators) og [en JSON parser](https://github.com/HugoGiraudel/SassyJSON) i Sass, så er vi alle meget klare over hvad man kan gøre med denne preprocessor.
 
-I mellemtiden, så er CSS et simpelt sprog. Sass, som tiltænkt til at skrive CSS, bør ikke blive meget mere kompleks end almindelig CSS. [KISS princippet](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) er nøglen her, og kan endda være vigtigere end [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) i nogle tilfælde.
+I mellemtiden, så er CSS et simpelt sprog. Sass, som tiltænkt til at skrive CSS, bør ikke blive meget mere kompleks end almindelig CSS. [KISS princippet](https://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) er nøglen her, og kan endda være vigtigere end [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) i nogle tilfælde.
 
 Sommetider er det bedre at gentage sig selv en smule for at holde koden vedligeholdelsesvenlig, fremfor at bygge et meget tungt, uhåndterbart og unnødvendigt kompliceret system, der er fuldstændig umulig at vedligeholde fordi det er alt for komplekst.
 
@@ -43,6 +43,6 @@ Dertil, så lad mig citere [Harry Roberts](https://csswizardry.com) endnu engang
 
 ###### Videre læsning
 
-* [KISS principle](http://en.wikipedia.org/wiki/KISS_principle)
-* [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
+* [KISS principle](https://en.wikipedia.org/wiki/KISS_principle)
+* [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* [Keep Sass Simple](https://www.sitepoint.com/keep-sass-simple/)

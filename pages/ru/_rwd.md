@@ -11,7 +11,7 @@
 
 {% include snippets/rwd/01/index.html %}
 
-Таким образом, [любое соглашение по именованию](http://css-tricks.com/naming-media-queries/), которое даёт кристально чистое понимание, что дизайн не привязан к конкретным устройствам, будет работать до тех пор, пока даёт ощущение масштаба.
+Таким образом, [любое соглашение по именованию](https://css-tricks.com/naming-media-queries/), которое даёт кристально чистое понимание, что дизайн не привязан к конкретным устройствам, будет работать до тех пор, пока даёт ощущение масштаба.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@
 
 <div class="note">
   <p>Очевидно, что это довольно упрощенный менеджер точек останова, который не будет работать, когда надо обрабатывать произвольные или множественные точки остановки. Если вам нужно управление отзывчивостью с расширенными настройками, могу порекоммендовать вам не изобретать колесо, а воспользоваться отличными решениями: <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> или <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
-  <p>Если вы хотите больше узнать о том, как разобраться с медиа-запросами в Sass, то и <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a>, и <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> имеют отличные статьи на эту тему.</p>
+  <p>Если вы хотите больше узнать о том, как разобраться с медиа-запросами в Sass, то и <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a>, и <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> имеют отличные статьи на эту тему.</p>
 </div>
 
 ## Использование медиа-запросов

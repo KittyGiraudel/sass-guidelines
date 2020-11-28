@@ -17,7 +17,7 @@
 
 {% include snippets/mixins/02/index.html %}
 
-Για πιο περίπλοκα παραδείγματα των mixins, ρίξτε μια ματιά στα [this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) και [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Για πιο περίπλοκα παραδείγματα των mixins, ρίξτε μια ματιά στα [this mixin to generate CSS triangles](https://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) και [this mixin to polyfill CSS gradients for old browsers](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixins χωρίς arguments
 
@@ -39,13 +39,13 @@
 
 {% include snippets/mixins/04/index.html %}
 
-Σχετικά με το αν είναι βέλτιστο να χρησιμοποιείτε πολλαπλά arguments, μια list ή ένα argument list, [το SitePoint έχει ένα καλό άρθρο πάνω στο θέμα](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Σχετικά με το αν είναι βέλτιστο να χρησιμοποιείτε πολλαπλά arguments, μια list ή ένα argument list, [το SitePoint έχει ένα καλό άρθρο πάνω στο θέμα](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins και vendor prefixes
 
 Μπορεί να είναι δελεαστικό να ορίσεις δικά σου mixins που διαχειρίζονται τα vendor prefixes για ιδιότητες της CSS που υποστηρίζονται μερικώς ή καθόλου. Αλλά βασικά δε θέλουμε να το κάνουμε αυτό. Πρώτον, αν μπορείς να χρησιμοποιήσεις το [Autoprefixer](https://github.com/postcss/autoprefixer), χρησιμοποίησε το Autoprefixer. Θα αφαιρέσει τον κώδικα της Sass από το project σου, θα είναι πάντα ενημερωμένο και οπωσδήποτε θα κάνει καλύτερη δουλειά απο σένα στο να κάνεις prefix διάφορα.
 
-Δυστυχώς, το Autoprefixer δε μπορεί να χρησιμοποιηθεί παντού. Αν χρησιμοποιείς [Bourbon](http://bourbon.io/) ή [Compass](http://compass-style.org/), μάλλον θα ξέρεις πως και τα δύο προσφέρουν μία συλλογή από mixins που διαχειρίζονται τα vendor prefixes για σένα. Χρησιμοποίησέ τα.
+Δυστυχώς, το Autoprefixer δε μπορεί να χρησιμοποιηθεί παντού. Αν χρησιμοποιείς [Bourbon](https://bourbon.io/) ή [Compass](http://compass-style.org/), μάλλον θα ξέρεις πως και τα δύο προσφέρουν μία συλλογή από mixins που διαχειρίζονται τα vendor prefixes για σένα. Χρησιμοποίησέ τα.
 
 Αν δε μπορείς να χρησιμοποιήσεις το Autoprefixer ούτε το Bourbon ούτε το Compass, τότε και μόνο τότε μπορείς να φτιάξεις το δικό σου mixin για να κάνεις prefix τις ιδιότητες της CSS. Αλλά. Μην φτιάξεις ένα mixin για κάθε ιδιότητα που εκτυπώνε όλους τους vendors.
 

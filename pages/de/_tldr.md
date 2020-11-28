@@ -13,7 +13,7 @@ Diese Guidelines sind ziemlich lang, und manchmal ist es gut sie zusammengefasst
 
 * Eine Einrückung wird mit zwei (2) Spaces gemacht, keine Tabs. [↩](#syntax--formatierung)
 * Zeilen sollten, so weit wie möglich, kürzer als 80 Zeichen sein. Du kannst sie auch in mehrere Zeilen aufteilen wenn notwendig. [↩](#syntax--formatierung)
-* CSS sollte ordentlich geschrieben sein, möglichst den [CSS Guidelines](http://cssguidelin.es) von Harry Roberts folgend. [↩](#syntax--formatierung)
+* CSS sollte ordentlich geschrieben sein, möglichst den [CSS Guidelines](https://cssguidelin.es) von Harry Roberts folgend. [↩](#syntax--formatierung)
 * Leerzeichen sind umsonst, benutze sie um Einheiten, Regeln und Deklarationen zu trennen. Zögere nicht leere Zeilen zu verwenden, es kann nie schaden. [↩](#syntax--formatierung)
 
 ## Strings

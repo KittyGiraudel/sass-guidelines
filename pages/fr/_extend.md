@@ -11,7 +11,7 @@ Cependant, le vrai rôle de `@extend` est d’indiquer et de maintenir des relat
 
 Sachant cela, il est assez évident de voir comment le fait d’étendre des sélecteurs avec des contraintes trop souples peut engendrer une explosion du nombre de sélecteurs. Si `.baz .qux` étend `.foo .bar`, le sélecteur résultant peut être `.foo .baz .qux` ou `.baz .foo .qux`, dans la mesure où `.foo` et `.baz` sont des parents génériques. Ils peuvent être des parents, des grands-parents, etc.
 
-Essayez toujours de définir des relations via les [placeholders](http://www.sitepoint.com/sass-reference/placeholders/), plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
+Essayez toujours de définir des relations via les [placeholders](https://www.sitepoint.com/sass-reference/placeholders/), plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
 
 {% include snippets/extend/01/index.html %}
 
@@ -22,7 +22,7 @@ Il y a de nombreux scénarios où étendre des sélecteurs peut être pratique e
 * Évitez les sélecteurs parents génériques (p.ex. `.foo .bar`) ou les voisins génériques (p.ex. `.foo ~ .bar`). C’est précisément ce qui créé des problèmes de sélecteurs.
 
 <div class="note">
-  <p>Il est souvent dit que <code>@extend</code> aide à réduire la taille des feuilles de styles dans la mesure où il combine les sélecteurs plutôt que de dupliquer les déclarations. C’est vrai, cependant la différence devient négligeable quand <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> a effectué la compression.</p>
+  <p>Il est souvent dit que <code>@extend</code> aide à réduire la taille des feuilles de styles dans la mesure où il combine les sélecteurs plutôt que de dupliquer les déclarations. C’est vrai, cependant la différence devient négligeable quand <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a> a effectué la compression.</p>
   <p>Ceci étant dit, si vous ne pouvez pas utiliser Gzip (ou équivalent), basculer sur une approche utilisant <code>@extend</code> peut être envisageable, surtout si la taille de la feuille de styles constitue un problème de performance.</p>
 </div>
 
@@ -34,11 +34,11 @@ Vous ne devez étendre que des sélecteurs faisant partie du même cadre de méd
 
 Les opinions semblent très divisées vis-à-vis des avantages et inconvénients de `@extend`, et de nombreux développeurs (moi y compris) préconisent de ne pas l’utiliser, comme vous pouvez le lire dans ces articles :
 
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don’t Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
+* [Don’t Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
-Ceci étant dit et pour résumer, il est recommandé d’utiliser `@extend` exclusivement pour maintenir des relations entre les sélecteurs. Si deux sélecteurs ont des caractéristiques similaires, il y a là un cas d’utilisation typique pour `@extend`. S’ils n’ont rien à voir mais partagent quelques déclarations, un `@mixin` est probablement plus approprié. Davantage d’information sur leurs différences dans [cet article](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+Ceci étant dit et pour résumer, il est recommandé d’utiliser `@extend` exclusivement pour maintenir des relations entre les sélecteurs. Si deux sélecteurs ont des caractéristiques similaires, il y a là un cas d’utilisation typique pour `@extend`. S’ils n’ont rien à voir mais partagent quelques déclarations, un `@mixin` est probablement plus approprié. Davantage d’information sur leurs différences dans [cet article](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
   <p>Merci à <a href="https://twitter.com/davidkpiano">David Khourshid</a> pour son aide et son expertise dans cette section.</p>

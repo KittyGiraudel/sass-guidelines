@@ -7,9 +7,9 @@ Heldigvis er en af hovedfordelene ved at have en CSS preprocessor evnen til at k
 
 Oven på det, så kan jeg ikke udtrykke nødvendigheden for mapper nok, selv ved mindre projekter. Du smider ikke alle dine papirark i den samme kasse derhjemme. Du bruger mapper; en til huset/lejligheden, en til banken, en til regningerne og så videre. Der er ingen grund til ikke at strukturere et CSS projekt på samme måde. Split kodebasen i meningsfulde mapper, så det er nemt at finde tingene senere når du er nødt til at vende tilbage til koden.
 
-Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/)-lignende, [Foundation](http://foundation.zurb.com/)-lignende… De har alle deres meritter, fordele og ulemper.
+Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/)-lignende, [Foundation](https://get.foundation/)-lignende… De har alle deres meritter, fordele og ulemper.
 
-Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://smacss.com/) fra [Jonathan Snook](http://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
+Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://smacss.com/) fra [Jonathan Snook](https://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
 
 <div class="note">
   <p>Jeg har lært at arkitetur, for det meste, er meget specifik til projektet. Det står dig frit for helt at afskrive eller tilpasse løsningsforslaget, så du står med et system der dækker dine behov.</p>
@@ -17,12 +17,12 @@ Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://
 
 ###### Videre læsning
 
-* [Architecture for a Sass project](http://www.sitepoint.com/architecture-sass-project/)
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
+* [Architecture for a Sass project](https://www.sitepoint.com/architecture-sass-project/)
+* [A Look at Different Sass Architectures](https://www.sitepoint.com/look-different-sass-architectures/)
 * [SMACSS](https://smacss.com/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
-* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](http://slides.com/hugogiraudel/sass-une-architecture-composee)
+* [An Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
+* [Atomic Web Design](https://bradfrost.com/blog/post/atomic-web-design/)
+* [Sass, une architecture composée](https://slides.com/hugogiraudel/sass-une-architecture-composee)
 
 ## Komponenter
 
@@ -190,11 +190,11 @@ Der er en anden måde at importerer partials, som jeg også anser som værende i
 
 ## Shame filen
 
-Der findes et interessant koncept, der allerede er blevet gjort populært af [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) og [Chris Coyier](http://css-tricks.com), hvilket involverer at alle CSS-deklarationer, hacks og ting vi ikke er stolte af, bliver smidt i en *shame fil*. Denne fil, med den dramatiske titel `_shame.scss`, bliver så importeret efter alle andre filer, til sidst i stylesheetet.
+Der findes et interessant koncept, der allerede er blevet gjort populært af [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) og [Chris Coyier](https://css-tricks.com), hvilket involverer at alle CSS-deklarationer, hacks og ting vi ikke er stolte af, bliver smidt i en *shame fil*. Denne fil, med den dramatiske titel `_shame.scss`, bliver så importeret efter alle andre filer, til sidst i stylesheetet.
 
 {% include snippets/architecture/04/index.html %}
 
 ###### Videre læsning
 
-* [shame.css](http://csswizardry.com/2013/04/shame-css/)
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
+* [shame.css](https://csswizardry.com/2013/04/shame-css/)
+* [shame.css - full .net interview](https://csswizardry.com/2013/04/shame-css-full-net-interview/)

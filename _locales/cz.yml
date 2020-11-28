@@ -11,7 +11,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
-  footer_content: "Vytvořil s láskou [Hugo Giraudel](http://hugogiraudel.com)"
+  footer_content: "Vytvořil s láskou [Hugo Giraudel](https://hugogiraudel.com)"
 
   aside_title: "Možnosti"
   aside_report: "Nahlásit problém"
@@ -36,7 +36,7 @@ translations:
 
   note: "Poznámka"
 
-  image_color_functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Ilustrace rozdílu mezi `lighten`/`darken` a `mix` od [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Graf ukazuje, jak vývojáři řadí své CSS deklarace"
   image_sassdoc: "Dokumentace generována ze SassDoc"
   image_wallpaper: "Tapeta od [Julien He](https://twitter.com/julien_he)"

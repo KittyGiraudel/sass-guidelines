@@ -7,7 +7,7 @@ Przewodnik stylu nie stanowi tylko przyjemności do czytania, prezentującej ide
 
 Nie wymaga to zatem podkreślenia, że im więcej deweloperów jest zaangażowanych do danego projektu, tym bardziej niezbędny zdaje się być taki przewodnik. I analogicznie - im większy jest projekt, tym istotniejszym jest przewodnik.
 
-[Harry Roberts](http://csswizardry.com) określił to bardzo dobrze w [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](https://csswizardry.com) określił to bardzo dobrze w [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Przewodnik stylu kodu (zaznaczam, nie chodzi tu o przewodnik po wizualnym stylu) jest cennym narzędziem dla zespołów, które:</p>
@@ -34,7 +34,7 @@ Koniec końców, jeżeli miałbym określić jedyną rzecz jaką chciałbym, by 
 
 Dzięki moim zabawnym eksperymentom, takim jak [operator bitowy](https://github.com/HugoGiraudel/SassyBitwise), [iteratory i generatory](https://github.com/HugoGiraudel/SassyIteratorsGenerators) czy [parser JSON](https://github.com/HugoGiraudel/SassyJSON) napisanym w Sassie, możemy się przekonać jak dużo jest możliwe dzięki Sassowi.
 
-Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien zwiększać jego stopnia skomplikowania. [Zasada KISS](http://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](http://pl.wikipedia.org/wiki/DRY) (Don’t Repeat Yourself) w niektórych przypadkach.
+Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien zwiększać jego stopnia skomplikowania. [Zasada KISS](https://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](https://pl.wikipedia.org/wiki/DRY) (Don’t Repeat Yourself) w niektórych przypadkach.
 
 Czasami warto się trochę powtórzyć i dzięki temu sprawić, że nasz kod stanie się łatwiejszy do utrzymania. Jest to zdecydowanie lepsze rozwiązanie niż ciężki, niekontrolowalny i niepotrzebnie skomplikowany kod, którego utrzymanie w dłuższej perspektywie jest wręcz niemożliwe.
 
@@ -52,4 +52,4 @@ Przykład takiego rozwinięcia przewodnika jest dostępny na [repozytorium SassD
 
 ###### Dalsze informacje
 
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
+* [Keep Sass Simple](https://www.sitepoint.com/keep-sass-simple/)

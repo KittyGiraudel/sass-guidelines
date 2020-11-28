@@ -13,7 +13,7 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 
 * An indentation is made of two (2) spaces, no tabs. [↩](#syntax--formatting)
 * Lines should be, as much as possible, shorter than 80 characters. Feel free to split them into several lines when necessary. [↩](#syntax--formatting)
-* CSS should be properly written, possibly following the [CSS Guidelines](http://cssguidelin.es) from Harry Roberts. [↩](#syntax--formatting)
+* CSS should be properly written, possibly following the [CSS Guidelines](https://cssguidelin.es) from Harry Roberts. [↩](#syntax--formatting)
 * Whitespace is free, use it to separate items, rules and declarations. Do not hesitate to leave empty lines, it never hurts. [↩](#syntax--formatting)
 
 ### Strings

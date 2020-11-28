@@ -1,7 +1,7 @@
 
 # Συμβάσεις ονομασίας
 
-Σ' αυτήν την ενότητα δε θα ασχοληθούμε με τις καλύτερες συμβάσεις ονομασίας στη CSS για συντηρησιμότητα (maintainability) και κλιμάκωση (scale); όχι μόνο γιατί είναι στην κρίση σου, αλλά είναι εκτός του πεδιού εφαρμογής ενός Sass styleguide. Προτείνω αυτά που συνιστώνται στα [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+Σ' αυτήν την ενότητα δε θα ασχοληθούμε με τις καλύτερες συμβάσεις ονομασίας στη CSS για συντηρησιμότητα (maintainability) και κλιμάκωση (scale); όχι μόνο γιατί είναι στην κρίση σου, αλλά είναι εκτός του πεδιού εφαρμογής ενός Sass styleguide. Προτείνω αυτά που συνιστώνται στα [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
 Υπάρχουν κάποια πράγματα που μπορείς να ονομάσεις στη Sass, και είναι σημαντικό να τα ονομάσεις σωστά ώστε όλος ο κώδικας να φαίνεται τόσο συνεπής όσο και ευανάγνωστος:
 
@@ -15,7 +15,7 @@
 
 {% include snippets/naming/01/index.html %}
 
-Αν πραγματικά θέλετε να παίξετε με τις ιδέες των σταθερών στη Sass, θα πρέπει να διαβάσετε [αυτό το ειδικό άρθρο](http://www.sitepoint.com/dealing-constants-sass/).
+Αν πραγματικά θέλετε να παίξετε με τις ιδέες των σταθερών στη Sass, θα πρέπει να διαβάσετε [αυτό το ειδικό άρθρο](https://www.sitepoint.com/dealing-constants-sass/).
 
 ## Σταθερές
 
@@ -27,7 +27,7 @@
 
 ###### Περαιτέρω ανάγνωση
 
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+* [Dealing With Constants in Sass](https://www.sitepoint.com/dealing-constants-sass/)
 
 ## Namespace
 
@@ -37,7 +37,7 @@
 
 {% include snippets/naming/03/index.html %}
 
-Το [Kaelig](http://kaelig.fr) έχει [ένα πολύ διορατικό άρθρο σχετικά με το global CSS namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), σε περίπτωση που αυτό το θέμα σας ενδιαφέρει.
+Το [Kaelig](https://kaelig.fr) έχει [ένα πολύ διορατικό άρθρο σχετικά με το global CSS namespace](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), σε περίπτωση που αυτό το θέμα σας ενδιαφέρει.
 
 <div class="note">
   <p>Σημείωσε ότι το αυτόματο namespacing είναι οπωσδήποτε ένας σχεδιαστικός στόχος για την ανερχόμενη ανανέωση του <code>@import</code> στη Sass 4.0. Δεδομένου ότι πλησιάζουμε στην κυκλοφορία, θα γίνεται όλο και λιγότερο χρήσιμο το χειροκίνητο namespacing· ενδεχομένως οι βιβλιοθήκες με μη αυτόματο namespacing να είναι δυσκολότερες στη χρήση.</p>

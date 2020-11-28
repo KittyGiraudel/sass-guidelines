@@ -17,7 +17,7 @@ Ein weiteres Beispiel ist ein Mixin welches die Maße `width` und `height` für 
 
 {% include snippets/mixins/02/index.html %}
 
-Für weitere komplexe Beispiele von Mixing, werf einen Blick auf [dieses Mixin um CSS Dreiecke zu generieren]((http://www.sitepoint.com/sass-mixin-css-triangles/), [dieses Mixin für lange Schatten](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) oder um [CSS Verläufe für alte Browser zu polyfillen](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Für weitere komplexe Beispiele von Mixing, werf einen Blick auf [dieses Mixin um CSS Dreiecke zu generieren]((https://www.sitepoint.com/sass-mixin-css-triangles/), [dieses Mixin für lange Schatten](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) oder um [CSS Verläufe für alte Browser zu polyfillen](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Parameterlose Mixins
 
@@ -39,13 +39,13 @@ Sass ist sogar ziemlich Clever bei Mixin- und Funktionsdeklarationen. So sehr da
 
 {% include snippets/mixins/04/index.html %}
 
-Für weitere Informationen ob es besser ist mehrere Argumente, eine Liste oder eine Arguementenliste zu werdenen, [hat SitePoint einen netten Artikel zu dem Thema](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Für weitere Informationen ob es besser ist mehrere Argumente, eine Liste oder eine Arguementenliste zu werdenen, [hat SitePoint einen netten Artikel zu dem Thema](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins und Vendor-Prefixe
 
 Es mag verlockend sein, eigene Mixins zu schreiben die sich drum kümmern nicht oder nur teilweise unterstützte CSS Werte mit Vendor-Prefixen zu versehen. Doch genau das wollen wir nicht. Erstens, wenn du [Autoprefixer](https://github.com/postcss/autoprefixer) verwenden kannst, tu es. Es wird Sass-Code von deinem Projekt entfernen, immer up-to-date sein und eine wesentlich bessere Arbeit als du, beim hinzufügen von Prefixen, leisten.
 
-Unglücklicherweise ist Autoprefixer nicht für jeden eine Option. Wenn du entweder [Bourbon](http://bourbon.io/) oder [Compass](http://compass-style.org/) benutzt, weißt du vielleicht schon das beide eine gute Auswahl von Mixins bereitstellen um dir die Arbeit mit Vendor-Prefixen abzunehmen. Nutz diese.
+Unglücklicherweise ist Autoprefixer nicht für jeden eine Option. Wenn du entweder [Bourbon](https://bourbon.io/) oder [Compass](http://compass-style.org/) benutzt, weißt du vielleicht schon das beide eine gute Auswahl von Mixins bereitstellen um dir die Arbeit mit Vendor-Prefixen abzunehmen. Nutz diese.
 
 Falls du weder Autoprefixer, Bourbon noch Compass benutzen kannst, dann, aber auch nur dann, kannst du deine eigenen Mixins schreiben um CSS Werte mit Prefixe zu versehen. Aber. Erstell dir keine Mixins die jede Eigenschaft einzeln ausgeben.
 

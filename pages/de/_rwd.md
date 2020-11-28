@@ -11,7 +11,7 @@ Aus demselben Grund sollten Breakpoints nicht nach einem Endgerät, sondern allg
 
 {% include snippets/rwd/01/index.html %}
 
-An diesem Punkt wird [jede Namenskonvention](http://css-tricks.com/naming-media-queries/), die klar macht dass ein Design nicht auf einen bestimmten Gerätetyp zugeschnitten ist, den Zweck erfüllen. Solange sie die Größenordnung erraten lässt.
+An diesem Punkt wird [jede Namenskonvention](https://css-tricks.com/naming-media-queries/), die klar macht dass ein Design nicht auf einen bestimmten Gerätetyp zugeschnitten ist, den Zweck erfüllen. Solange sie die Größenordnung erraten lässt.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@ Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg
 
 <div class="note">
   <p>Das ist natürlich ein ziemlich einfacher Breakpoint-Manager. Falls du einen etwas toleranteren brauchst, kann ich dir nur empfehlen das Rad nicht neu zu erfinden und dir <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> oder <a href="https://github.com/eduardoboucas/include-media">include-media</a> anzuschauen.</p>
-  <p>Falls du mehr über Media-Queries in Sass erfahren möchtest, haben <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> und <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> gute Artikel dazu.</p>
+  <p>Falls du mehr über Media-Queries in Sass erfahren möchtest, haben <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> und <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> gute Artikel dazu.</p>
 </div>
 
 ## Media Queries verwenden

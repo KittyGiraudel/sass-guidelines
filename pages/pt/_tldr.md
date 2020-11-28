@@ -13,7 +13,7 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 
 * Identação é feita com com dois (2) espaços, sem tabulações. [↩](#formatao-e-sintaxe)
 * Linhas devem ser, tanto quanto possível, menores que 80 caracteres. Sinta-se à vontade para dividi-las em várias linhas, quando necessário. [↩](#formatao-e-sintaxe)
-* O CSS deve ser bem escrito e, possivelmente, seguindo o [CSS Guidelines](http://cssguidelin.es) de Harry Roberts. [↩](#formatao-e-sintaxe)
+* O CSS deve ser bem escrito e, possivelmente, seguindo o [CSS Guidelines](https://cssguidelin.es) de Harry Roberts. [↩](#formatao-e-sintaxe)
 * Espaços em branco são de grátis, então, use-o para separar itens, regras e declarações. Portanto, não hesite em deixar linhas em branco, afinal, não machuca ninguém. [↩](#formatao-e-sintaxe)
 
 ### Strings

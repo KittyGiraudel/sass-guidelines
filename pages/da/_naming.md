@@ -1,7 +1,7 @@
 
 # Konventioner for navngivelse
 
-I denne sektion vil vi ikke behandle hvad de bedste CSS navgivningskonventioner er for vedligeholdelse og skalering; det er ikke alene op til dig, det er også uden for rammerne af en Sass styleguide. Jeg foreslår disse, anbefalet af [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+I denne sektion vil vi ikke behandle hvad de bedste CSS navgivningskonventioner er for vedligeholdelse og skalering; det er ikke alene op til dig, det er også uden for rammerne af en Sass styleguide. Jeg foreslår disse, anbefalet af [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
 Der er få ting du kan navngive i Sass, og det er vigtigt at navngive dem ordentligt så hele kodebasen både ser konsistent ud og er let at læse:
 
@@ -17,7 +17,7 @@ Når det kommer til variabler, funktioner og mixins, så holder vi os til noget 
 
 ###### Videre læsning
 
-* [CSS Guidelines’ Naming Conventions](http://cssguidelin.es/#naming-conventions)
+* [CSS Guidelines’ Naming Conventions](https://cssguidelin.es/#naming-conventions)
 
 ## Konstanter
 
@@ -29,7 +29,7 @@ Som ved mange sprog, så anbefaler jeg variabelnavne i store bogstaver, med unde
 
 ###### Videre læsning
 
-* [Dealing With Constants in Sass](http://www.sitepoint.com/dealing-constants-sass/)
+* [Dealing With Constants in Sass](https://www.sitepoint.com/dealing-constants-sass/)
 
 ## Namespace
 
@@ -45,4 +45,4 @@ For eksempel, hvis du arbejder på et *Sassy Unicorn* projekt, der er tænkt som
 
 ###### Videre læsning
 
-* [Please Respect the Global CSS Namespace](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)
+* [Please Respect the Global CSS Namespace](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

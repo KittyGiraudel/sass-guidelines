@@ -11,7 +11,7 @@
 
 Με βάση τα παραπάνω, είναι εμφανές πως η επέκταση των selectors με επιεικείς περιορισμούς μπορεί να οδηγήσει σε μια έκρηξη από selectors. Αν ο `.baz .qux` επεκτείνει τον `.foo .bar`, ο παραγόμενος selector μπορεί να είναι `.foo .baz .qux` ή `.baz .foo .qux`, αφού και ο `.foo` και ο `.baz` είναι πρόγονοι. Μπορεί να είναι γονείς, παπούδες, κ.ο.κ.
 
-Πάντα να προσπαθείς να ορίζεις σχέσεις μέσω [selector placeholders](http://www.sitepoint.com/sass-reference/placeholders/), όχι μέσω πραγματικών selectors. Αυτό θα σου δώσει την ελευθερία να χρησιμοποιήσεις (και να αλλάξεις) οποιοδήποτε naming convention έχεις ορίσει για τους selectors σου, και αφού οι σχέσεις ορίζονται μόνο μία φορά μέσα στους placeholders, υπάρχουν πολύ μικρότερες πιθανότητες να παράξεις απροσδόκητους selectors.
+Πάντα να προσπαθείς να ορίζεις σχέσεις μέσω [selector placeholders](https://www.sitepoint.com/sass-reference/placeholders/), όχι μέσω πραγματικών selectors. Αυτό θα σου δώσει την ελευθερία να χρησιμοποιήσεις (και να αλλάξεις) οποιοδήποτε naming convention έχεις ορίσει για τους selectors σου, και αφού οι σχέσεις ορίζονται μόνο μία φορά μέσα στους placeholders, υπάρχουν πολύ μικρότερες πιθανότητες να παράξεις απροσδόκητους selectors.
 
 Για να κληρονομήσεις styles, χρησιμοποίησε το `@extend` μόνο αν ο εκτεινόμενος `.class` ή `%placeholder` selector _είναι ένα είδος_ επεκταμένου selector. Για παράδειγμα, ένα `.error` είναι ένα είδος `.warning`, οπότε το `.error` μπορεί να κάνει `@extend .warning`.
 
@@ -20,12 +20,12 @@
 Υπάρχουν πολλά σενάρια στα οποία η επέκταση βοηθάει και αξίζει τον κόπο. Να θυμάσαι πάντα τους εξής κανόνες για να μπορείς να κάνεις `@extend` με προσοχή:
 
 * Να επεκτείνεις σε `%placeholders` κυρίως, όχι σε κανονικούς selectors.
-* Όταν επεκτείνεις κλάσεις, να επεκτείνεις μόνο μία κλάση από μία άλλη κλάση, _ποτέ_ από ένα [σύνθετο selector](http://www.w3.org/TR/selectors4/#syntax).
+* Όταν επεκτείνεις κλάσεις, να επεκτείνεις μόνο μία κλάση από μία άλλη κλάση, _ποτέ_ από ένα [σύνθετο selector](https://www.w3.org/TR/selectors4/#syntax).
 * Να επεκτείνεις ευθέως έναν `%placeholder` όσο το δυνατόν λιγότερο.
 * Απόφυγε να επεκτείνεις γενικούς ancestor selectors (π.χ. `.foo .bar`) ή γενικούς sibling selectors (π.χ. `.foo ~ .bar`). Αυτό είναι που προκαλεί την έκρηξη από selectors.
 
 <div class="note">
-  <p>Συχνά λένε ότι το <code>@extend</code> βοηθάει στο μέγεθος των αρχείων επειδή συνδιάζει selectors αντί να επαναλαμβάνει τα properties. Αυτό ισχύει, αν και η διαφορά είναι αμελητέα εφόσον γίνει συμπίεση με <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a>.</p>
+  <p>Συχνά λένε ότι το <code>@extend</code> βοηθάει στο μέγεθος των αρχείων επειδή συνδιάζει selectors αντί να επαναλαμβάνει τα properties. Αυτό ισχύει, αν και η διαφορά είναι αμελητέα εφόσον γίνει συμπίεση με <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a>.</p>
   <p>Κατόπιν αυτού, αν δε μπορείς να χρησιμοποιήσεις Gzip (ή κάτι παρόμοιο) τότε η προσέγγιση με το <code>@extend</code> μπορεί να φανεί πολύτιμη, ειδικά αν το βάρος του stylesheet επιβαρύνει το performance.</p>
 </div>
 
@@ -37,16 +37,16 @@
 
 Οι απόψεις φαίνεται να είναι άκρως αντιφατικές σχετικά με το `@extend` σε σημείο που πολλοί developers συμπεριλαμβανομένου και του εαυτού μου δεν υποστηρίζουν την χρήση του, όπως μπορείτε να διαβάσετε στα παρακάτω άρθρα:
 
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
 
-Κατόπιν αυτού για να συνοψίσουμε, προτείνω την χρήση του `@extend` μόνο για την διατήρηση των σχέσεων εντός κάποιων selectors. Αν δύο selectors έχουν παρόμοια χαρακτηριστικά, τότε είναι η ιδανική περίπτωση για το `@extend`. Αν δεν έχουν κάποια σχέση αλλά μοιράζονται μερικά rules, ένα `@mixin` θα ταίριαζε καλύτερα. Περισσότερα για το πώς να επιλέξετε μεταξύ των δύο σε αυτό το  [άρθρο](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+Κατόπιν αυτού για να συνοψίσουμε, προτείνω την χρήση του `@extend` μόνο για την διατήρηση των σχέσεων εντός κάποιων selectors. Αν δύο selectors έχουν παρόμοια χαρακτηριστικά, τότε είναι η ιδανική περίπτωση για το `@extend`. Αν δεν έχουν κάποια σχέση αλλά μοιράζονται μερικά rules, ένα `@mixin` θα ταίριαζε καλύτερα. Περισσότερα για το πώς να επιλέξετε μεταξύ των δύο σε αυτό το  [άρθρο](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
   <p>Ευχαριστώ τον <a href="https://twitter.com/davidkpiano">David Khourshid</a> για τη βοήθεια και την πείρα σ' αυτή την ενότητα.</p>
 </div>
 
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
-* [Extending in Sass Without Mess](http://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)
+* [When to Use Extend; When to Use a Mixin](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [Extending in Sass Without Mess](https://www.smashingmagazine.com/2015/05/04/extending-in-sass-without-mess/)

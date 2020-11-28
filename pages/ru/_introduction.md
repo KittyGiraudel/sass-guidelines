@@ -7,7 +7,7 @@
 
 Излишне говорить, что чем больше разработчиков участвуют в проекте, тем больше руководств требуется. Так же, чем больше проект, тем более важен стайлгайд.
 
-[Гарри Робертс](http://csswizardry.com) очень хорошо об этом говорит в [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Гарри Робертс](https://csswizardry.com) очень хорошо об этом говорит в [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Стайлгайд (заметьте, не визуальный) является ценным инструментом для команд, которые:</p>
@@ -30,7 +30,7 @@
 
 ## Ключевые принципы
 
-В общем, всё, что я хочу донести этим стайлгайдом, так это что **[Sass должен быть предельно прост, насколько это возможно](http://www.sitepoint.com/keep-sass-simple/)**.
+В общем, всё, что я хочу донести этим стайлгайдом, так это что **[Sass должен быть предельно прост, насколько это возможно](https://www.sitepoint.com/keep-sass-simple/)**.
 
 Спасибо моим глупым эскпериментам, таким как [битовые операции](https://github.com/HugoGiraudel/SassyBitwise), [итераторы и генераторы](https://github.com/HugoGiraudel/SassyIteratorsGenerators) и [парсер JSON](https://github.com/HugoGiraudel/SassyJSON) на Sass, и теперь мы все хорошо знаем что можно сделать с этим препроцессором.
 

@@ -17,7 +17,7 @@ Another valid example would be a mixin to size an element, defining both `width`
 
 {% include snippets/mixins/02/index.html %}
 
-For more complex examples of mixins, have a look at [this mixin to generate CSS triangles](http://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) or [this mixin to polyfill CSS gradients for old browsers](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+For more complex examples of mixins, have a look at [this mixin to generate CSS triangles](https://www.sitepoint.com/sass-mixin-css-triangles/), [this mixin to create long shadows](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) or [this mixin to polyfill CSS gradients for old browsers](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Argument-less mixins
 
@@ -39,13 +39,13 @@ Sass is actually pretty clever with mixins and function declarations, so much so
 
 {% include snippets/mixins/04/index.html %}
 
-For more information on whether it is best to use multiple arguments, a list or an argument list, [SitePoint has a nice piece on the topic](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+For more information on whether it is best to use multiple arguments, a list or an argument list, [SitePoint has a nice piece on the topic](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins and vendor prefixes
 
 It might be tempting to define custom mixins to handle vendor prefixes for unsupported or partially supported CSS properties. But we do not want to do this. First, if you can use [Autoprefixer](https://github.com/postcss/autoprefixer), use Autoprefixer. It will remove Sass code from your project, will always be up-to-date and will necessarily do a much better job than you at prefixing stuff.
 
-Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](http://bourbon.io/) or [Compass](http://compass-style.org/), you may already know that they both provide a collection of mixins that handle vendor prefixes for you. Use those.
+Unfortunately, Autoprefixer is not always an option. If you use either [Bourbon](https://bourbon.io/) or [Compass](http://compass-style.org/), you may already know that they both provide a collection of mixins that handle vendor prefixes for you. Use those.
 
 If you cannot use Autoprefixer and use neither Bourbon nor Compass, then and only then, you can have your own mixin for prefixing CSS properties. But. Please do not build a mixin per property, manually printing each vendor.
 

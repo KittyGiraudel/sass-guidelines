@@ -27,4 +27,4 @@ As an example, let’s say you build a getter function to access values from a s
 
 {% include snippets/errors/02/index.html %}
 
-For more information on how to use `@error` efficiently, [this introduction about error handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) should help you.
+For more information on how to use `@error` efficiently, [this introduction about error handling](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) should help you.

@@ -21,7 +21,7 @@ Każda konwencja nazwowa, jaką w tym miejscu przyjmiemy, będzie dobra o ile ty
 
 ###### Dalsze informacje
 
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
+* [Naming Media Queries](https://css-tricks.com/naming-media-queries/)
 
 ## Menadżer breakpointów
 
@@ -35,8 +35,8 @@ W momencie gdy breakpointy są już nazwane, potrzeba sposobu by ich faktycznie 
 
 ###### Dalsze informacje
 
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
+* [Managing Responsive Breakpoints in Sass](https://www.sitepoint.com/managing-responsive-breakpoints-sass/)
+* [Approaches to Media Queries in Sass](https://css-tricks.com/approaches-media-queries-sass/)
 
 ## Używanie media queries
 

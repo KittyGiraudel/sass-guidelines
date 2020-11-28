@@ -13,7 +13,7 @@ Przewodnik ten jest dosyć długi i czasami dobrze jest mieć dostęp do pewnego
 
 * Indentacja powinna się składać z dwóch (2) spacji, bez tabulatora. [↩](#skadnia-i-formatowanie)
 * Linie powinny być, jak to jest tylko możliwe, szerokie na 80 znaków. Można je dowolnie dzielić na wiele linii, w razie potrzeby. [↩](#skadnia-i-formatowanie)
-* CSS powinien być pisany, w miarę możliwości, zgodnie z regułami [CSS Guidelines](http://cssguidelin.es) autorstwa Harry'ego Robertsa. [↩](#skadnia-i-formatowanie)
+* CSS powinien być pisany, w miarę możliwości, zgodnie z regułami [CSS Guidelines](https://cssguidelin.es) autorstwa Harry'ego Robertsa. [↩](#skadnia-i-formatowanie)
 * Znaki niedrukowalne (whitespaces) powinny być używane do rozdzielania pojedynczych elementów, reguł i deklaracji. Nie obawiaj się zostawić pustej linii, to nic nie kosztuje. [↩](#skadnia-i-formatowanie)
 
 ### Ciągi

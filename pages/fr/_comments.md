@@ -26,7 +26,7 @@ Lorsque vous commentez une section Sass, utilisez les commentaires en ligne Sass
 
 {% include snippets/comments/02/index.html %}
 
-Cette façon de faire est également encouragée dans CSS Guidelines dans la section [Commenting](http://cssguidelin.es/#commenting).
+Cette façon de faire est également encouragée dans CSS Guidelines dans la section [Commenting](https://cssguidelin.es/#commenting).
 
 ## Documentation
 

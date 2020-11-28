@@ -7,7 +7,7 @@
 
 Περιττό να πούμε πως όσο περισσότεροι developers εμπλέκονται σε ένα project, τόσο περισσότερο χρειάζονται guidelines για τον κώδικα. Στα ίδια πλαίσια, όσο μεγαλύτερο το project, τόσο αναγκαίο καθιστάται ένα styleguide.
 
-Ο [Harry Roberts](http://csswizardry.com) αναφέρει πολύ καλά στο [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+Ο [Harry Roberts](https://csswizardry.com) αναφέρει πολύ καλά στο [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Ένα code styleguide (σημ., όχι οπτικό styleguide) είναι ένα πολύτιμο εργαλείο για ομάδες οι οποίες:</p>
@@ -30,11 +30,11 @@
 
 ## Βασικές αρχές
 
-Στο τέλος της μέρας, αν μπορείς να συγκρατήσεις ένα πράγμα απ' όλο το styleguide, είναι ότι **[η Sass πρέπει να είναι όσο πιο απλή γίνεται](http://www.sitepoint.com/keep-sass-simple/)**.
+Στο τέλος της μέρας, αν μπορείς να συγκρατήσεις ένα πράγμα απ' όλο το styleguide, είναι ότι **[η Sass πρέπει να είναι όσο πιο απλή γίνεται](https://www.sitepoint.com/keep-sass-simple/)**.
 
 Χάρη στα ανόητα πειράματά μου όπως οι [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), οι [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) και [ένας JSON parser](https://github.com/HugoGiraudel/SassyJSON) σε Sass, ξέρουμε όλοι τι μπορεί να επιτευχθεί με αυτόν τον preprocessor.
 
-Παράλληλα, η CSS είναι μια απλή γλώσσα. Η Sass που προορίζεται για την εξαγωγή CSS, δεν θα έπρεπε να είναι αρκετά πιο περίπλοκη απο την CSS. Η [αρχή KISS](http://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) είναι το κλειδί και μπορεί να πάρει προτεραιότητα έναντι της [DRY αρχής](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) σε κάποιες περιπτώσεις.
+Παράλληλα, η CSS είναι μια απλή γλώσσα. Η Sass που προορίζεται για την εξαγωγή CSS, δεν θα έπρεπε να είναι αρκετά πιο περίπλοκη απο την CSS. Η [αρχή KISS](https://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) είναι το κλειδί και μπορεί να πάρει προτεραιότητα έναντι της [DRY αρχής](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) σε κάποιες περιπτώσεις.
 
 Μερικές φορές, είναι καλύτερο να επαναλάμβανόμαστε λίγο για να κρατήσουμε τον κώδικα συντηρήσιμο, αντι να φτιάξεις κάτι βαρή, δυσμεταχείριστος και αδικαιολόγητα περίπλοκο σύστημα που είναι αδύνατο να συντηρηθεί επειδή είναι υπερβολικά περίπλοκο.
 

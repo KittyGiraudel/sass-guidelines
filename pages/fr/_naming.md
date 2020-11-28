@@ -1,7 +1,7 @@
 
 # Conventions de nommage
 
-Dans cette section, nous ne traiterons pas des conventions de nommage CSS pour une meilleure maintenabilité et le passage à l’échelle ; non seulement cela dépend de chacun, mais cela sort du cadre d’un guide de style Sass. Je vous suggère de consulter les conventions recommandées par [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+Dans cette section, nous ne traiterons pas des conventions de nommage CSS pour une meilleure maintenabilité et le passage à l’échelle ; non seulement cela dépend de chacun, mais cela sort du cadre d’un guide de style Sass. Je vous suggère de consulter les conventions recommandées par [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
 Il existe un certain nombre de choses que l’on peut nommer en Sass, et il est important de bien les nommer de façon à assurer la cohérence et la lisibilité de votre code&nbsp;:
 
@@ -23,7 +23,7 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
 
 {% include snippets/naming/02/index.html %}
 
-Si vous désirez vraiment utiliser des constantes en Sass, vous devriez lire [cet article dédié à ce sujet](http://www.sitepoint.com/dealing-constants-sass/).
+Si vous désirez vraiment utiliser des constantes en Sass, vous devriez lire [cet article dédié à ce sujet](https://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespaces
 
@@ -33,7 +33,7 @@ Par exemple, si vous travaillez sur un projet *Sassy Unicorn* qui est destiné �
 
 {% include snippets/naming/03/index.html %}
 
-[Kaelig](http://kaelig.fr) a [un super article à propos du namespace global de CSS](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), si jamais le sujet vous passionne !
+[Kaelig](https://kaelig.fr) a [un super article à propos du namespace global de CSS](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace), si jamais le sujet vous passionne !
 
 <div class="note">
   <p>Le namespacing automatique est un des objectifs de la redéfinition à venir d’&nbsp;<code>@import</code> à partir de Sass 4.0. Lorsque cela se concrétisera, il sera de moins en moins utile de réaliser manuellement le namespacing, et à terme les bibliothèques conçues de la sorte (avec espaces de noms manuels) pourraient devenir plus difficiles à utiliser.</p>

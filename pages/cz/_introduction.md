@@ -7,7 +7,7 @@ Příručka není jenom bezvýznamný dokument na bezduché přečtení, nebo p�
 
 Netřeba ani říkat, že čím více vývojářů je zapojeno v projektu, tím více je manuál pro psaní kódu dost potřebný. Stejně tak čím větší je projekt, tím více je manuál potřeba.
 
-Důležitost dobře uvádí [Harry Roberts](http://csswizardry.com) v jeho [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+Důležitost dobře uvádí [Harry Roberts](https://csswizardry.com) v jeho [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Příručka pro psaní kódu (poznámka, nikoli ve vizuálním stylu) je hodnotným nástrojem pro týmy, které:</p>
@@ -44,4 +44,4 @@ Stejně tak, a znovu budu citovat [Harryho Robertse](https://csswizardry.com), *
 
 * [princip KISS](https://cs.wikipedia.org/wiki/KISS)
 * [princip DRY](https://cs.wikipedia.org/wiki/Don%27t_repeat_yourself)
-* [Keep Sass Simple](http://www.sitepoint.com/keep-sass-simple/)
+* [Keep Sass Simple](https://www.sitepoint.com/keep-sass-simple/)

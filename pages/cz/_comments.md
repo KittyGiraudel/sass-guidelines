@@ -28,7 +28,7 @@ Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře 
 
 ###### Další četba
 
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+* [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
 ## Dokumentace
 
@@ -54,4 +54,4 @@ Zde je příklad rozsáhle dokumentovaného mixinu se SassDoc:
 ###### Další četba
 
 * [SassDoc](http://sassdoc.com)
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

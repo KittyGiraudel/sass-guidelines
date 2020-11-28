@@ -11,7 +11,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
-  footer_content: "Von [Hugo Giraudel](http://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](http://morkro.de) übersetzt."
+  footer_content: "Von [Hugo Giraudel](https://hugogiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](https://morkro.de) übersetzt."
 
   aside_title: "Optionen"
   aside_report: "Ein Problem melden"
@@ -36,7 +36,7 @@ translations:
 
   note: "Notiz"
 
-  image_color_functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Illustration der Unterschiede von `lighten`/`darken` und `mix` von [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Diagramm welches zeigt wie Entwickler ihre CSS Deklarationen ordnen"
   image_sassdoc: "Dokumentation von SassDoc generiert"
   image_wallpaper: "Wallpaper von [Julien He](https://twitter.com/julien_he)"

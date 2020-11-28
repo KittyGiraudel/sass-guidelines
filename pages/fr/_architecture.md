@@ -7,9 +7,9 @@ Heureusement, l’un des principaux bénéfices de l’utilisation de préproces
 
 On n’insistera jamais assez sur la nécessité d’utiliser des dossiers, même sur des projets de dimension modeste. À la maison, vous ne rangez pas tous vos papiers dans la même boîte. Vous utilisez des dossiers&nbsp;: un pour les papiers de la maison, un pour la banque, un pour les factures, etc. Il en va de même lorsqu’on structure un projet CSS. Éclatez votre code en plusieurs dossiers qui font sens, de façon à retrouver ce que vous cherchez quand vous devez revenir sur le code.
 
-Il existe [plusieurs architectures populaires](http://www.sitepoint.com/look-different-sass-architectures/) pour les projets CSS&nbsp;: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](http://getbootstrap.com/) ou de [Foundation](http://foundation.zurb.com/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
+Il existe [plusieurs architectures populaires](https://www.sitepoint.com/look-different-sass-architectures/) pour les projets CSS&nbsp;: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](https://getbootstrap.com/) ou de [Foundation](https://get.foundation/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
 
-Personnellement j’utilise une approche assez similaire à [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
+Personnellement j’utilise une approche assez similaire à [SMACSS](https://smacss.com/) de [Jonathan Snook](https://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
 
 <div class="note">
   <p>L’expérience m’a appris que l’architecture était la plupart du temps très spécifique au projet. Sentez-vous libre de rejeter complètement ou d’adapter la solution proposée —&nbsp;votre système doit répondre à vos besoins spécifiques.</p>
@@ -221,6 +221,6 @@ Avec Ruby Sass, il existe une Gem Ruby appelée [sass-globbing](https://github.c
 
 ## Fichier de la honte
 
-Il existe un concept intéressant, popularisé par [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) et [Chris Coyier](http://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un [fichier de la honte](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
+Il existe un concept intéressant, popularisé par [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) et [Chris Coyier](https://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un [fichier de la honte](https://csswizardry.com/2013/04/shame-css-full-net-interview/). Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
 
 {% include snippets/architecture/04/index.html %}

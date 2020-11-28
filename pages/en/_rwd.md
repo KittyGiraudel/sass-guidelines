@@ -11,7 +11,7 @@ For the same reasons, breakpoints should not be named after devices but somethin
 
 {% include snippets/rwd/01/index.html %}
 
-At this point, [any naming convention](http://css-tricks.com/naming-media-queries/) that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
+At this point, [any naming convention](https://css-tricks.com/naming-media-queries/) that makes crystal clear that a design is not intimately tied to a specific device type will do the trick, as long as it gives a sense of magnitude.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
 
 <div class="note">
   <p>Obviously, this is a fairly simplistic breakpoint manager. If you need a slightly more permissive one, may I recommend you do not reinvent the wheel and use something that has been proven effective such as <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> or <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
-  <p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p>
+  <p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p>
 </div>
 
 ## Media Queries Usage

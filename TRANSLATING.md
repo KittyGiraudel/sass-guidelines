@@ -60,11 +60,11 @@ configuration:
     - name: Andrzej Kłapeć # Your name
       link: https://github.com/klapec # Feel free to link wherever you want
     - name: Mateusz Chabros
-      link: http://github.com/matchabros
+      link: https://github.com/matchabros
 
 translations:
   baseline: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
-  footer_content: "Stworzone z miłością przez [Hugo Giraudel](http://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](http://github.com/klapec) i [Mateusz Chabros](http://github.com/matchabros)"
+  footer_content: "Stworzone z miłością przez [Hugo Giraudel](https://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](https://github.com/klapec) i [Mateusz Chabros](https://github.com/matchabros)"
 
   aside_title: "Opcje"
   aside_report: "Zgłoś problem"
@@ -89,7 +89,7 @@ translations:
 
   note: "Uwaga"
 
-  image_color_functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Ilustracja pokazująca różnicę pomiędzy funkcjami `lighten`/`darken` i `mix`, stworzona przez [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Wykres pokazujący jak deweloperzy porządkują swoje deklaracje w CSSie"
   image_sassdoc: "Dokumentacja wygenerowana przez SassDoc"
   image_wallpaper: "Tapeta stworzona przez [Julien He](https://twitter.com/julien_he)"

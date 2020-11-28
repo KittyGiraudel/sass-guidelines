@@ -5,7 +5,7 @@
 
 같은 프로젝트에서 여러 명의 개발자들이 CSS 작성에 참여할 때, 그들 중 하나가 자기만의 방식으로 일을 하기 시작하는 것은 시간 문제일 뿐입니다. 일관성을 고취하는 코드 가이드라인은 이것을 방지할 뿐만 아니라, 코드를 읽고 업데이트하는 데에도 도움을 줍니다.
 
-대략, 우리가 원하는 것은 (뻔뻔스럽게도 [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)에서 영감을 얻은) 다음과 같습니다:
+대략, 우리가 원하는 것은 (뻔뻔스럽게도 [CSS Guidelines](https://cssguidelin.es/#syntax-and-formatting)에서 영감을 얻은) 다음과 같습니다:
 
 - 탭 대신 스페이스 두 칸 (2) 들여쓰기;
 - 이상적인 행의 너비는 80글자;
@@ -20,7 +20,7 @@
 
 ### 인코딩
 
-문자 인코딩과 관련한 잠재적인 문제를 피하기 위해서는, [메인 스타일시트](#main-file)에서 `@charset` 지시어를 사용해 [UTF-8](http://en.wikipedia.org/wiki/UTF-8) 인코딩을 강제하는 것이 강력하게 권장됩니다. 이 지시어가 스타일시트의 가장 첫 번째 요소이고 어트 종류의 문자도 앞에 오지 않도록 하세요.
+문자 인코딩과 관련한 잠재적인 문제를 피하기 위해서는, [메인 스타일시트](#main-file)에서 `@charset` 지시어를 사용해 [UTF-8](https://en.wikipedia.org/wiki/UTF-8) 인코딩을 강제하는 것이 강력하게 권장됩니다. 이 지시어가 스타일시트의 가장 첫 번째 요소이고 어트 종류의 문자도 앞에 오지 않도록 하세요.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -40,7 +40,7 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-<p>CSS 규격에 따라, <code>@charset</code> 지시어는 <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">유효하다고 간주되도록</a> 큰따옴표로 선언되어야 합니다. 그러나, Sass는 CSS로 컴파일할 때 이 문제를 처리하므로 최종 결과에 영향을 미치지 않습니다. <code>@charset</code>의 경우에도 작은따옴표를 안전하게 사용할 수 있습니다.</p>
+<p>CSS 규격에 따라, <code>@charset</code> 지시어는 <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">유효하다고 간주되도록</a> 큰따옴표로 선언되어야 합니다. 그러나, Sass는 CSS로 컴파일할 때 이 문제를 처리하므로 최종 결과에 영향을 미치지 않습니다. <code>@charset</code>의 경우에도 작은따옴표를 안전하게 사용할 수 있습니다.</p>
 </div>
 
 ### CSS 값인 문자열
@@ -95,7 +95,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 {% include snippets/syntax/09/index.html %}
 
-*0 단위*를 더하는 것도 역시 같은 결과를 내긴 하지만, *0 단위*를 더하는 것은 약간 혼란스러울 수 있기 때문에 앞서 언급한 방법을 추천합니다. 사실, 숫자를 다른 호환되는 단위로 변환하려고 할 때, 0을 더하는 것은 효과가 없습니다. [이 글](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)에서 더 알아볼 수 있습니다.
+*0 단위*를 더하는 것도 역시 같은 결과를 내긴 하지만, *0 단위*를 더하는 것은 약간 혼란스러울 수 있기 때문에 앞서 언급한 방법을 추천합니다. 사실, 숫자를 다른 호환되는 단위로 변환하려고 할 때, 0을 더하는 것은 효과가 없습니다. [이 글](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)에서 더 알아볼 수 있습니다.
 
 {% include snippets/syntax/10/index.html %}
 
@@ -115,7 +115,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 ### 매직 넘버
 
-"매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants)입니다. 기본적으로, 이 숫자는 어쩌다 보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
+"매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants)입니다. 기본적으로, 이 숫자는 어쩌다 보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
 
 말할 것도 없이 **매직 넘버는 역병 같은 존재이며 무슨 수를 써서라도 피해야 합니다**. 왜 매직넘버가 효과를 내는지에 대한 합리적인 설명을 찾을 수 없을 때는, 어떻게 거기에 도달했고 왜 효과를 낸다고 생각하는지를 설명하는 충분한 주석을 달아놓으세요. 무언가가 제대로 작동하는 이유를 모른다고 인정하는 것이 그래도 아무런 사전 정보 없이 알아내게 하는 것보다 다음 개발자에게 더 도움이 됩니다.
 
@@ -125,20 +125,20 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 ## 색
 
-색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 함수](http://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
+색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 함수](https://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
 
 Sass는 색을 조작할 때 매우 유용하여 이 주제에 대한 글이 인터넷 전체에서 번성했습니다. 몇 가지 글을 추천하겠습니다:
 
 - [프로그래밍 방식으로 한 색에서 다른 색으로 전환하는 방법](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-- [Sass를 사용하여 색상표 만들기](http://www.sitepoint.com/using-sass-build-color-palettes/)
-- [Sass에서 색 구성표 다루기](http://www.sitepoint.com/dealing-color-schemes-sass/)
+- [Sass를 사용하여 색상표 만들기](https://www.sitepoint.com/using-sass-build-color-palettes/)
+- [Sass에서 색 구성표 다루기](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### 색 서식
 
 색을 가능한 한 간단하게 만들기 위한 제 조언은 색 서식에 대한 다음의 우선순위를 따르라는 것입니다:
 
-1. [HSL 표기법](http://en.wikipedia.org/wiki/HSL_and_HSV);
-2. [RGB 표기법](http://en.wikipedia.org/wiki/RGB_color_model);
+1. [HSL 표기법](https://en.wikipedia.org/wiki/HSL_and_HSV);
+2. [RGB 표기법](https://en.wikipedia.org/wiki/RGB_color_model);
 3. 16진법 표기법. 가급적 소문자와 가능한 경우 단축형으로.
 
 CSS 색 키워드는 빠르게 프로토타입을 제작하는 게 아니라면 사용해서는 안 됩니다. 실제로, 그것들은 영어 단어이며 그들 중 일부는 특히 비원어민 사용자들에게 그들이 나타내는 색을 설명하는 데 꽤 나쁩니다. 게다가 키워드는 완벽하게 시맨틱하지 않습니다. 예를 들어 `grey`는 실제로 `darkgrey`보다 어둡고, `grey`와 `gray` 사이의 혼동은 이 색의 일관성 없는 사용으로 이어질 수 있습니다.
@@ -169,9 +169,9 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 ### 색 명암 조절
 
-[`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개변수의 가명일 뿐입니다.
+[`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개변수의 가명일 뿐입니다.
 
-문제는, 이들 함수가 가끔 기대되는 결과를 제공하지 않는다는 것입니다. 반면에, [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 함수는 색을 `white`나 `black`과 혼합함으로써 명암을 조절하는 좋은 방법입니다.
+문제는, 이들 함수가 가끔 기대되는 결과를 제공하지 않는다는 것입니다. 반면에, [`mix`](https://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) 함수는 색을 `white`나 `black`과 혼합함으로써 명암을 조절하는 좋은 방법입니다.
 
 앞서 언급한 두 함수보다 `mix`를 사용하는 것의 이점은 색의 비율을 감소시킴에 따라 점진적으로 검은 색(혹은 흰 색)으로 나아간다는 점입니다. 반면 `darken`과 `lighten`은 색을 순식간에 완전한 검은 색이나 흰 색으로 보내버릴 것입니다.
 
@@ -182,7 +182,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-<p><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 함수는 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 함수는 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
+<p><a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 함수는 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 함수는 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
 </div>
 
 ## 리스트
@@ -224,11 +224,11 @@ Sass를 사용하여 스타일시트 작성자는 맵을 정의할 수 있는데
 
 {% include snippets/syntax/21/index.html %}
 
-Sass 맵에 대한 글은 이 기능이 얼마나 갈망 되었는지를 보여줄 때가 많습니다. 제가 추천하는 3가지는: [Sass 맵 사용하기](http://www.sitepoint.com/using-sass-maps/), [Sass 맵의 추가 기능](http://www.sitepoint.com/extra-map-functions-sass/), [진짜 Sass, 진짜 맵](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)입니다.
+Sass 맵에 대한 글은 이 기능이 얼마나 갈망 되었는지를 보여줄 때가 많습니다. 제가 추천하는 3가지는: [Sass 맵 사용하기](https://www.sitepoint.com/using-sass-maps/), [Sass 맵의 추가 기능](https://www.sitepoint.com/extra-map-functions-sass/), [진짜 Sass, 진짜 맵](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)입니다.
 
 ## CSS 규칙
 
-이 부분은 모두가 알고 있는 내용의 복습이 되겠지만, 여기 CSS 규칙의 작성 방법이 있습니다. (적어도, [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)을 포함한 대부분의 가이드라인에 따르면 이렇습니다):
+이 부분은 모두가 알고 있는 내용의 복습이 되겠지만, 여기 CSS 규칙의 작성 방법이 있습니다. (적어도, [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)을 포함한 대부분의 가이드라인에 따르면 이렇습니다):
 
 - 관련된 선택자는 같은 줄에; 관련 없는 선택자는 새 줄에;
 - 여는 중괄호(`{`)는 마지막 선택자와 스페이스 한 칸의 간격을 둔다;
@@ -273,7 +273,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 {% include snippets/syntax/28/index.html %}
 
-저 스스로도 결정할 수가 없다는 점을 말씀드려야겠습니다. [CSS Tricks에서의 최근 설문조사](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)에 따르면 45% 이상의 개발자들이 유형별로, 14%가 알파벳순으로 선언을 정렬하는 것으로 나타났습니다. 또한, 완전히 임의로 정렬하는 39%의 개발자들도 있습니다. 저를 포함해서요.
+저 스스로도 결정할 수가 없다는 점을 말씀드려야겠습니다. [CSS Tricks에서의 최근 설문조사](https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)에 따르면 45% 이상의 개발자들이 유형별로, 14%가 알파벳순으로 선언을 정렬하는 것으로 나타났습니다. 또한, 완전히 임의로 정렬하는 39%의 개발자들도 있습니다. 저를 포함해서요.
 
 {% include images/order-poll.html %}
 
@@ -305,7 +305,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 {% include snippets/syntax/32/index.html %}
 
-이 방법은 종종 [BEM 작명 관례](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)와 함께 `.block__element`와 `.block__modifier` 선택자를 원래 선택자(이 경우엔 `.block`)에 기반하여 생성하는 데 사용됩니다.
+이 방법은 종종 [BEM 작명 관례](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)와 함께 `.block__element`와 `.block__modifier` 선택자를 원래 선택자(이 경우엔 `.block`)에 기반하여 생성하는 데 사용됩니다.
 
 <div class="note">
 <p>반드시 그런 건 아닐 수도 있지만, 현재 선택자 참조(<code>&</code>)로 새로운 선택자를 생성하면 그 선택자 자체가 코드베이스에 존재하지 않기 때문에 검색을 할 수 없게 됩니다.</p>
@@ -317,7 +317,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 이러한 상황을 방지하기 위해 우리는 몇 년 전 [인셉션 규칙](http://thesassway.com/beginner/the-inception-rule)에 대해 많이 이야기했습니다. 크리스토퍼 놀런의 영화 인셉션에 대한 레퍼런스로, 3단계 이상으로 깊이 내포하지 말자고 했습니다. 저는 좀 더 과감하고 **가능한 한 많이 선택자 내포를 피하는 것**을 추천합니다.
 
-다음 섹션에서 볼 수 있듯이 이 규칙에 대한 몇 가지 예외가 분명히 있지만, 이 의견은 꽤 인기 있는 것 같습니다. 자세한 내용은 [선택자 내포에 주의하세요](http://www.sitepoint.com/beware-selector-nesting-sass/) 및 [더 많은 모듈식 CSS에 대한 내포 선택자 방지](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)에서 자세히 읽을 수 있습니다.
+다음 섹션에서 볼 수 있듯이 이 규칙에 대한 몇 가지 예외가 분명히 있지만, 이 의견은 꽤 인기 있는 것 같습니다. 자세한 내용은 [선택자 내포에 주의하세요](https://www.sitepoint.com/beware-selector-nesting-sass/) 및 [더 많은 모듈식 CSS에 대한 내포 선택자 방지](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)에서 자세히 읽을 수 있습니다.
 
 ### 예외
 

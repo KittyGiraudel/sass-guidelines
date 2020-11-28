@@ -26,7 +26,7 @@ When commenting a Sass-specific section, use Sass inline comments instead of a C
 
 {% include snippets/comments/02/index.html %}
 
-Note that this way of doing things is also supported by CSS Guidelines in its [Commenting](http://cssguidelin.es/#commenting) section.
+Note that this way of doing things is also supported by CSS Guidelines in its [Commenting](https://cssguidelin.es/#commenting) section.
 
 ## Documentation
 

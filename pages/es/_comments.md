@@ -26,7 +26,7 @@ Cuando se comenta una sección específica de Sass, utiliza los comentarios de l
 
 {% include snippets/comments/02/index.html %}
 
-Ten en cuenta que esta forma de comentar el código, es compatible con la guía de CSS en su sección de [comentarios](http://cssguidelin.es/#commenting).
+Ten en cuenta que esta forma de comentar el código, es compatible con la guía de CSS en su sección de [comentarios](https://cssguidelin.es/#commenting).
 
 ## Documentación
 

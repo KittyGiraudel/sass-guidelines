@@ -1,7 +1,7 @@
 
 # Om Sass
 
-Sådan beskriver [Sass](http://sass-lang.com) sig selv i dets [dokumentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+Sådan beskriver [Sass](https://sass-lang.com) sig selv i dets [dokumentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass er en forlængelse af CSS, der tilføjer kraft og elegance til det basale sprog.
 
@@ -15,14 +15,14 @@ Når det er sagt, så er der mange måde at bruge disse funktionaliteter på. No
 
 ###### Videre læsning
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [Sass](https://sass-lang.com)
+* [Sass documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
 ## Ruby Sass eller LibSass
 
 [Sass’s første commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) går helt tilbage til sen-2006, over 8 år siden. Det er derfor overflødigt at sige, at det er kommet ret langt siden da. Originalt udviklet i Ruby, så poppede variationer op her og der. Den mest succesfulde, [LibSass](https://github.com/sass/libsass) (skrevet i C/C++), er nu tæt på at være fuldt kompatibel med den originale Ruby-version.
 
-I 2014 [besluttede holdene bag Ruby Sass og LibSass at vente på at begge versioner kunne synkronisere, før de bevægede sig videre fremad](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Siden da har LibSass været meget aktiv i at udgive versioner, der har funktionalitets-paritet med dets storebror. De sidste tilbageblivende inkonsistenser har jeg samlet og listet under projektet [Sass-Compatibility](http://sass-compatibility.github.io). Hvis du er blevet opmærksom på en inkompatibilitet mellem de to versioner, så vær rar at åbne et issue.
+I 2014 [besluttede holdene bag Ruby Sass og LibSass at vente på at begge versioner kunne synkronisere, før de bevægede sig videre fremad](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Siden da har LibSass været meget aktiv i at udgive versioner, der har funktionalitets-paritet med dets storebror. De sidste tilbageblivende inkonsistenser har jeg samlet og listet under projektet [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Hvis du er blevet opmærksom på en inkompatibilitet mellem de to versioner, så vær rar at åbne et issue.
 
 For at vende tilbage til valget om din compiler. Det hele afhænger rent faktisk af dit projekt. Hvis dit projekt er et Ruby on Rails projekt, så bør du bruge Ruby Sass, der er perfekt velegnet til en sådan situation. Vær også opmærksom på at Ruby Sass altid vil være implementationsreferencen, og vil derfor altid være foran LibSass når det kommer til funktionaliteter.
 
@@ -31,9 +31,9 @@ Ved ikke-Ruby projekter, der har behov for en workflow integration, så er LibSa
 ###### Videre læsning
 
 * [LibSass](https://github.com/sass/libsass)
-* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
-* [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
+* [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
+* [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/)
+* [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass eller SCSS
 
@@ -49,11 +49,11 @@ Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarer
 
 ###### Videre læsning
 
-* [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
+* [What’s the difference between Sass and SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 
 ## Andre preprocessorer
 
-Sass er en preprocessor blandt mange andre. Dens mest seriøse konkurrent må være [LESS](http://lesscss.org/), en Node.js-baseret preprocessor, der er blevet ret populært fordi det kendte CSS framework [Bootstrap](http://getbootstrap.com/) anvender det. Der findes også [Stylus](http://learnboost.github.io/stylus/) - som er den nørdede, ubegrænsede version af LESS - hvor du kan gøre praktisk taget lige hvad du vil, da den nærmest transformerer CSS om til et programmeringssprog.
+Sass er en preprocessor blandt mange andre. Dens mest seriøse konkurrent må være [LESS](http://lesscss.org/), en Node.js-baseret preprocessor, der er blevet ret populært fordi det kendte CSS framework [Bootstrap](https://getbootstrap.com/) anvender det. Der findes også [Stylus](https://stylus-lang.com/) - som er den nørdede, ubegrænsede version af LESS - hvor du kan gøre praktisk taget lige hvad du vil, da den nærmest transformerer CSS om til et programmeringssprog.
 
 *Hvorfor vælge Sass frem for LESS eller en anden preprocessor?*, er et godt spørgsmål selv i dag. For ikke så længe siden anbefalede vi Sass til Ruby-baserede projekter, fordi det først var skrevet i Ruby og fungerede godt med Ruby on Rails. Nu hvor LibSass (næsten) er på samme niveau som det originale Sass, så er anbefalingen ikke længere relevant.
 
@@ -63,7 +63,7 @@ Med andre ord, så er Sass ikke en preprocessor der er målrettet mod at please 
 
 Lad os lægge preprocessorerne til side, da vi også bør nævne postprocessorer, der har modtaget nævneværdig eksponering de sidste par måneder, hovedsageligt på grund af [PostCSS](https://github.com/postcss/postcss) og [cssnext](https://cssnext.github.io/). Postprocessorer er rimeligt meget det samme som preprocessorer bortset fra at de ikke tilføjer andet end den kommende CSS syntax.
 
-Du kan tænke på postprocessorer som en slags polyfill for ikke-understøttede CSS funktionaliteter. For eksempel, så ville du skrive variabler som de beskrives i [CSS specifications](http://dev.w3.org/csswg/css-variables/), dernæst kompilere dine stylesheets med en postprocessor for derefter at opleve at hver variabel bliver erstattet med dets værdi, ligesom Sass ville gøre.
+Du kan tænke på postprocessorer som en slags polyfill for ikke-understøttede CSS funktionaliteter. For eksempel, så ville du skrive variabler som de beskrives i [CSS specifications](https://drafts.csswg.org/css-variables/), dernæst kompilere dine stylesheets med en postprocessor for derefter at opleve at hver variabel bliver erstattet med dets værdi, ligesom Sass ville gøre.
 
 Idéen bag postprocessorer er, at når browsere støtter nye funktionaliteter (f.eks. CSS variabler), så vil postprocessoren ikke kompilere dem længere og lade browserne tage over.
 
@@ -72,6 +72,6 @@ Selvom det at give os morgendagens syntaks i dag er en nobel idé, så bliver je
 ###### Videre læsning
 
 * [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
+* [Stylus](https://stylus-lang.com/)
 * [cssnext](https://cssnext.github.io/)
 * [PostCSS](https://github.com/postcss/postcss)

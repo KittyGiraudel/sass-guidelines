@@ -7,9 +7,9 @@ Na szczęście, jedną z kluczowych zalet używania preprocesora CSS jest możli
 
 Niezbędnym, nawet dla małych projektów, jest także podział na foldery. Analogicznie, nie wkładamy przecież wszystkich dokumentów papierowych na jeden stos, w jedno miejsce. Używa się do tego segregatorów, teczek; jednej na dokumenty dotyczące domu, jednej na papiery z banku, rachunki, itd. Nie ma absolutnie żadnego powodu by robić to inaczej w stosunku do projektu w CSSie. Podział kodu na odpowiednio nazwane foldery pozwoli nam na łatwiejsze dotarcie do potrzebnej nam części kodu wtedy, gdy do niego będziemy wracali.
 
-Dostępnych jest obecnie wiele metod kategoryzacji kodu dla projektów w CSSie: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), podobne do tego w [Bootstrapie](http://getbootstrap.com/), czy w [Foundation](http://foundation.zurb.com/). Wszystkie z nich mają swoje cechy, zalety i wady.
+Dostępnych jest obecnie wiele metod kategoryzacji kodu dla projektów w CSSie: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), podobne do tego w [Bootstrapie](https://getbootstrap.com/), czy w [Foundation](https://get.foundation/). Wszystkie z nich mają swoje cechy, zalety i wady.
 
-Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego ujętego w [SMACSS](https://smacss.com/), stworzonego przez [Jonathana Snooka](http://snook.ca/). Opiera się ono przede wszystkim na prostocie.
+Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego ujętego w [SMACSS](https://smacss.com/), stworzonego przez [Jonathana Snooka](https://snook.ca/). Opiera się ono przede wszystkim na prostocie.
 
 <div class="note">
   <p>Wybór architektury jest, co do zasady, uzależniony od charakteru projektu. Dostosuj swoje podejście do tego w zależności od Twoich potrzeb.</p>
@@ -17,8 +17,8 @@ Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego u
 
 ###### Dalsze informacje
 
-* [A Look at Different Sass Architectures](http://www.sitepoint.com/look-different-sass-architectures/)
-* [An Introduction to OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
+* [A Look at Different Sass Architectures](https://www.sitepoint.com/look-different-sass-architectures/)
+* [An Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 
 ## Komponenty
 
@@ -196,10 +196,10 @@ Istnieje także inne podejście do importowania plików cząstkowych (partials),
 
 ## Plik wstydu
 
-Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry’ego Robertsa](http://csswizardry.com), [Dave'a Ruperta](http://daverupert.com) and [Chrisa Coyiera](http://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
+Pojawił się ostatnio interesujący pomysł, którego twórcami uznać można [Harry’ego Robertsa](https://csswizardry.com), [Dave'a Ruperta](https://daverupert.com) and [Chrisa Coyiera](https://css-tricks.com). Zakłada on mianowicie umieszczenie wszelkich deklaracji CSSa, haków i rzeczy, z których nie jesteśmy do końca dumni, w tzw. *pliku wstydu*. Ten plik, przewrotnie nazwany `_shame.css`, importowany jest po wszelkich innych plikach, na samym końcu arkusza stylów.
 
 {% include snippets/architecture/04/index.html %}
 
 ###### Dalsze informacje
 
-* [shame.css - full .net interview](http://csswizardry.com/2013/04/shame-css-full-net-interview/)
+* [shame.css - full .net interview](https://csswizardry.com/2013/04/shame-css-full-net-interview/)

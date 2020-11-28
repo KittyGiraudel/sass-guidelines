@@ -7,7 +7,7 @@ Una guía de estilo no es sólo un documento agradable de leer mientras te imagi
 
 Sobra decir, que cuantos más desarrolladores participen en el proyecto, más necesarias son las guías de estilo. En la misma línea, cuanto más grande es el proyecto, la guía de estilo se convierte en una necesidad.
 
-[Harry Roberts](http://csswizardry.com) Lo explica muy bien en su [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](https://csswizardry.com) Lo explica muy bien en su [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
   <p>Una guía de estilo (nota, no es una guía de estilo visual) es una valiosa herramienta para los equipos que:</p>
@@ -30,11 +30,11 @@ Obviamente, esta no es la única forma de hacer las cosas, y puede que encaje o 
 
 ## Principios Clave
 
-Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta guía, es que **[Sass debe mantenerse tan simple como sea posible](http://www.sitepoint.com/keep-sass-simple/)**.
+Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta guía, es que **[Sass debe mantenerse tan simple como sea posible](https://www.sitepoint.com/keep-sass-simple/)**.
 
 Gracias a mis tontos experimentos, como por ejemplo: [Operadores bit a bit](https://github.com/HugoGiraudel/SassyBitwise), [iteradores y generadores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) y [analizador JSON](https://github.com/HugoGiraudel/SassyJSON) en Sass, podemos ser conscientes de lo que se puede hacer con este preprocesador.
 
-Mientras CSS es un lenguaje sencillo. Sass, destinado a escribir CSS, no debería ser mucho más complejo que el CSS normal. El [principio KISS](http://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](http://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
+Mientras CSS es un lenguaje sencillo. Sass, destinado a escribir CSS, no debería ser mucho más complejo que el CSS normal. El [principio KISS](https://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](https://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
 
 Algunas veces es mejor repetirse un poco para que el proyecto sea fácil de mantener, antes que construir un sistema demasiado pesado, inabarcable e innecesariamente complicado que genere un código imposible de mantener debido a su complejidad.
 

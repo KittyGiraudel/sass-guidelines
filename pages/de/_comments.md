@@ -26,7 +26,7 @@ Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommen
 
 {% include snippets/comments/02/index.html %}
 
-Beachte dass dieser Weg ebenfalls von den CSS Guidelines in der [Kommentier-Sektion](http://cssguidelin.es/#commenting) unterstützt ist.
+Beachte dass dieser Weg ebenfalls von den CSS Guidelines in der [Kommentier-Sektion](https://cssguidelin.es/#commenting) unterstützt ist.
 
 ## Dokumentation
 
@@ -51,4 +51,4 @@ Beispiel eines umfangreich dokumentiertem Mixin über SassDoc:
 
 ###### Weitere Informationen
 
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

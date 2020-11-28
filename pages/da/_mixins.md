@@ -19,9 +19,9 @@ Et andet validt eksempel ville være en mixin til at definere størrelsen på et
 
 ###### Videre læsning
 
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Sass Mixins to Kickstart your Project](https://www.sitepoint.com/sass-mixins-kickstart-project/)
+* [A Sass Mixin for CSS Triangles](https://www.sitepoint.com/sass-mixin-css-triangles/)
+* [Building a Linear-Gradient Mixin](https://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 ## Argumentliste
 
@@ -37,13 +37,13 @@ Sass er faktisk ret smart med mixins og funktions-deklarationer, så smart at du
 
 ###### Videre læsning
 
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+* [Sass Multiple Arguments, Lists or Arglist](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
 ## Mixins og vendor-præfikser
 
 Det er fristende at definere skræddersyede mixins til at håndtere udbyder-præfikser for ikke-understøttede eller delvist understøttede CSS egenskaber. Men det ønsker vi ikke at gøre. Først og fremmest, hvis du kan bruge [Autoprefixer](https://github.com/postcss/autoprefixer), så brug Autoprefixer. Det vil fjerne Sass kode fra dit projekt, det vil altid være up-to-date og vil højest sandsynlig gøre et bedre arbejde med at præfikse ting end dig.
 
-Desværre er Autoprefixer ikke altid en mulighed. Hvis du bruger enten [Bourbon](http://bourbon.io/) eller [Compass](http://compass-style.org/), så ved du sikkert at de begge giver dig en samling af mixins der håndterer præfikser for dig. Brug disse.
+Desværre er Autoprefixer ikke altid en mulighed. Hvis du bruger enten [Bourbon](https://bourbon.io/) eller [Compass](http://compass-style.org/), så ved du sikkert at de begge giver dig en samling af mixins der håndterer præfikser for dig. Brug disse.
 
 Hvis du ikke kan bruge Autoprefixer og hverken kan bruge Bourbon eller Compass, så da, og kun da, kan du have dine egne mixins til at præfikse CSS egenskaber. Men. Lad venligst være med at bygge en mixin per enhed, der manuelt udskriver hver udbyder.
 
@@ -62,4 +62,4 @@ Hav venligst for øje, at dette er en ringe løsning. For eksempel kan den ikke 
 ###### Videre læsning
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Building a Linear-Gradient Mixin](https://www.sitepoint.com/building-linear-gradient-mixin-sass/)

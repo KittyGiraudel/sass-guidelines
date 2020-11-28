@@ -21,7 +21,7 @@ Hertil vil enhver navngivningskonvention, der gør det krystalklart at et design
 
 ###### Videre læsning
 
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
+* [Naming Media Queries](https://css-tricks.com/naming-media-queries/)
 
 ## Breakpoint manager
 
@@ -35,8 +35,8 @@ Når du har navngivet dine breakpoints som du ønsker, så har du brug for en m�
 
 ###### Videre læsning
 
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
+* [Managing Responsive Breakpoints in Sass](https://www.sitepoint.com/managing-responsive-breakpoints-sass/)
+* [Approaches to Media Queries in Sass](https://css-tricks.com/approaches-media-queries-sass/)
 
 ## Brug af Media Queries
 
@@ -57,5 +57,5 @@ Så hvis du virkelig er bekymret for duplikerede media queries, så kan du stadi
 
 ###### Videre læsning
 
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
+* [Inline or Combined Media queries? Fight!](https://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

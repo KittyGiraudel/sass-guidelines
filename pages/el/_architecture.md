@@ -7,9 +7,9 @@
 
 Πέρα από αυτό, δεν μπορώ να τονίσω αρκετά την ανάγκη για χρήση φακέλων, ακόμα και σε μικρά projects. Στο σπίτι, δεν πετάς όλα τα χαρτιά στο ίδιο κουτί. Χρησιμοποιείς φακέλους, εναν για το σπίτι/διαμέρισμα, έναν για την τράπεζα, έναν για τους λογαριασμούς και τα λοιπά. Δεν υπάρχει λόγος να γίνει διαφορετικά και για την δόμηση του CSS project σας. Διαχωρίστε τον κώδικα σε διαφορετικούς φακέλους, ονομασμένους λογικά, έτσι ώστε αργότερα να σας είναι εύκολο να βρείτε αυτό που ψάχνετε εύκολα και γρήγορα.
 
-Υπάρχουν πολλές δημοφιλείς [αρχιτεκτονικές](http://www.sitepoint.com/look-different-sass-architectures/) για CSS project(s) όπως: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](http://getbootstrap.com/) ή σε [Foundation](http://foundation.zurb.com/)… Τα οποία έχουν πλεονεκτήματα και μειονεκτήματα.
+Υπάρχουν πολλές δημοφιλείς [αρχιτεκτονικές](https://www.sitepoint.com/look-different-sass-architectures/) για CSS project(s) όπως: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](https://getbootstrap.com/) ή σε [Foundation](https://get.foundation/)… Τα οποία έχουν πλεονεκτήματα και μειονεκτήματα.
 
-Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](https://smacss.com/) του [Jonathan Snook](http://snook.ca/), η οποία επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
+Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](https://smacss.com/) του [Jonathan Snook](https://snook.ca/), η οποία επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
 
 <div class="note">
   <p>Έχω μάθει πως η δόμηση του κώδικα τις περισσότερες φορές αλλάζει ανάλογα με το project. Μη διστάσετε να απορρίψετε εντελώς ή να προσαρμόσετε την προτεινόμενη λύση έτσι ώστε να φτάσετε σε ένα αποτέλεσμα που θα ταιριάζει στις ανάγκες σας.</p>
@@ -219,6 +219,6 @@ O γενικός κανόνας του φακέλου αυτού είναι ότ
 
 ## Το αρχείο Shame
 
-Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλής απο τους [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) και [Chris Coyier](http://css-tricks.com) η οποία συνιστά να βάζουμε όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο [αρχείο *shame*](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
+Υπάρχει μια ενδιαφέρουσα ιδέα που έχει γίνει δημοφιλής απο τους [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) και [Chris Coyier](https://css-tricks.com) η οποία συνιστά να βάζουμε όλα τα CSS declarations, hacks και πράγματα για τα οποία δεν είμαστε περήφανοι μέσα στο [αρχείο *shame*](https://csswizardry.com/2013/04/shame-css-full-net-interview/). Αυτό το αρχείο, με τον δραματικό τίτλο `_shame.scss`, θα γινόταν import μετά από όλα τα άλλα αρχεία στο τέλος του stylesheet.
 
 {% include snippets/architecture/04/index.html %}

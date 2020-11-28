@@ -26,7 +26,7 @@
 
 {% include snippets/comments/02/index.html %}
 
- Σημείωση ότι αυτός ο τρόπος αντιμετώπισης των πραγμάτων υποστηρίζεται επίσης απο τα CSS Guidelines στο [Commenting](http://cssguidelin.es/#commenting) κεφάλαιο.
+ Σημείωση ότι αυτός ο τρόπος αντιμετώπισης των πραγμάτων υποστηρίζεται επίσης απο τα CSS Guidelines στο [Commenting](https://cssguidelin.es/#commenting) κεφάλαιο.
 
 ## Documentation
 

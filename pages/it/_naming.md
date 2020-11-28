@@ -1,7 +1,7 @@
 
 # Convenzione sui nomi
 
-In questa parte non andremo a parlare di qual è il miglior modo per creare nomi nel CSS in modo da assicurare manutenibilità e scalabilità. Non solo sta a te scegliere, ma è anche fuori dalla portata di queste linee guida Sass. Io suggerisco le convenzioni raccomandate da [CSS Guidelines](http://cssguidelin.es/#naming-conventions).
+In questa parte non andremo a parlare di qual è il miglior modo per creare nomi nel CSS in modo da assicurare manutenibilità e scalabilità. Non solo sta a te scegliere, ma è anche fuori dalla portata di queste linee guida Sass. Io suggerisco le convenzioni raccomandate da [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
 Ci sono alcune cose a cui si possono dare nomi in Sass, ed è importante scegliere bene, in modo che l’intera codebase sia coerente e facile da leggere:
 
@@ -23,7 +23,7 @@ Come per molti linguaggi, suggerisco di nominare le variabili costanti completam
 
 {% include snippets/naming/02/index.html %}
 
-Se volete davvero giocare con l'idea di costanti in Sass, dovreste leggere [questo articolo sull'argomento](http://www.sitepoint.com/dealing-constants-sass/).
+Se volete davvero giocare con l'idea di costanti in Sass, dovreste leggere [questo articolo sull'argomento](https://www.sitepoint.com/dealing-constants-sass/).
 
 ## Namespace
 

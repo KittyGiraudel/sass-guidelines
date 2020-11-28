@@ -30,7 +30,7 @@ Pokud se rozhodnete použít extend, dovolte mi připomenout, že si to moc dob�
 > Můžete použít pouze @extend selektory v rámci stejné direktivy.
 
 <div class="note">
-  <p>Často se říká, že <code>@extend</code> pomáhá s velikostí souboru, jelikož kombinuje selektory a neduplikuje vlastnosti. To je sice pravda, nicméně jakmile použijete <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a>, který provede svou kompresi, rozdíl je zanedbatelný.</p>
+  <p>Často se říká, že <code>@extend</code> pomáhá s velikostí souboru, jelikož kombinuje selektory a neduplikuje vlastnosti. To je sice pravda, nicméně jakmile použijete <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a>, který provede svou kompresi, rozdíl je zanedbatelný.</p>
   <p>Jak bylo řečeno, pokud nemůžete použít Gzip (nebo nic ekvivalentního), pak používání <code>@extend</code> přístupu nemusí být až tak špatné, dokud však víte, co děláte.</p>
 </div>
 
@@ -38,7 +38,7 @@ Abych to shrnul, **nedoporučoval bych používat `@extend` direktivu**, mimo n�
 
 ###### Další četba
 
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
-* [When to Use Extend; When to Use a Mixin](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [When to Use Extend; When to Use a Mixin](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)

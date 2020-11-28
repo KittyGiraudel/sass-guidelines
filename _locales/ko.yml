@@ -13,7 +13,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
-  footer_content: "애정을 담아 [Hugo Giraudel](http://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
+  footer_content: "애정을 담아 [Hugo Giraudel](https://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
 
   aside_title: "옵션"
   aside_report: "문제 신고"
@@ -38,7 +38,7 @@ translations:
 
   note: "주"
 
-  image_color_functions: "`lighten`/`darken` 과 `mix` 사이의 차이를 보여주는 삽화 by [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "`lighten`/`darken` 과 `mix` 사이의 차이를 보여주는 삽화 by [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "개발자들의 CSS 선언 정렬 방식을 보여주는 도표"
   image_sassdoc: "SassDoc에 의해 생성된 문서"
   image_wallpaper: "배경화면 by [Julien He](https://twitter.com/julien_he)"

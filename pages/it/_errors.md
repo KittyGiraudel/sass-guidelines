@@ -27,4 +27,4 @@ Ad esempio, diciamo che si vuol costruire una fuzione _getter_ per accedere ai v
 
 {% include snippets/errors/02/index.html %}
 
-Per avere più informazioni su come usare `@error` in maniera efficiente, [questa introduzione alla gestione degli errori](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) potrebbe aiutarvi.
+Per avere più informazioni su come usare `@error` in maniera efficiente, [questa introduzione alla gestione degli errori](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) potrebbe aiutarvi.

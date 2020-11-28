@@ -17,7 +17,7 @@ Otro ejemplo válido sería un *mixin* para para darle tamaño a un elemento, de
 
 {% include snippets/mixins/02/index.html %}
 
-Para ejemplos más complejos, echa un vistazo a [éste mixin para generar triángulos CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [éste mixin para crear sombras largas](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [éste mixin para mantener gradientes CSS en navegadores antiguos (polyfill)](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Para ejemplos más complejos, echa un vistazo a [éste mixin para generar triángulos CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [éste mixin para crear sombras largas](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [éste mixin para mantener gradientes CSS en navegadores antiguos (polyfill)](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 
 ## Mixins Sin Argumentos
@@ -40,13 +40,13 @@ Sass es de hecho muy inteligente con los *mixins* y las declaraciones de funcion
 
 {% include snippets/mixins/04/index.html %}
 
-Para más información acerca de cuál es la mejor opción entre usar múltiples argumentos, una lista o una lista de argumentos, [SitePoint tiene una buen artículo sobre el tema](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Para más información acerca de cuál es la mejor opción entre usar múltiples argumentos, una lista o una lista de argumentos, [SitePoint tiene una buen artículo sobre el tema](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins Y Prefijos De Proveedores
 
 Puede ser tentador definir *mixins* personalizados para manejar prefijos de *vendors* en propiedades CSS que no son compatibles o totalmente soportadas. Pero no queremos esto. Primero, si puedes usar [Autoprefixer](https://github.com/postcss/autoprefixer), usa Autoprefixer. Eliminará código Sass de tu proyecto, siempre estará al día y hará un trabajo mejor de lo que lo puedes hacer tu al poner prefijos a los atributos.
 
-Desafortunadamente, Autoprefixer no siempre es una opción. Si usas [Bourbon](http://bourbon.io/) o [Compass](http://compass-style.org/), seguramente sabrás que ambos proporcinan una coleción de *mixins* que manejan los prefijos de los *vendors* por ti. Úsalos.
+Desafortunadamente, Autoprefixer no siempre es una opción. Si usas [Bourbon](https://bourbon.io/) o [Compass](http://compass-style.org/), seguramente sabrás que ambos proporcinan una coleción de *mixins* que manejan los prefijos de los *vendors* por ti. Úsalos.
 
 Si no puedes usar Autoprefixer, ni Bourbon, ni Compass, entonces y sólo entonces, puedes tener tu propio *mixin* para añadir prefijos a las propiedades CSS. Pero. Por favor, no construyas un *mixin* por propiedad, imprimiendo manualmente cada *vendor*.
 

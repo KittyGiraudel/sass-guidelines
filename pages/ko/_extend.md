@@ -11,7 +11,7 @@
 
 이를 감안할 때, 관대한 제약 조건으로 선택자를 확장하면 어떻게 선택자가 폭발할 수 있는지 쉽게 알 수 있습니다. `.baz .qux`가 `.foo .bar`를 확장하는 경우 결과 선택자는 `.foo .baz .qux` 또는 `.baz .foo .qux`가 될 수 있습니다. `.foo`와 `.baz`는 모두 일반 조상이기 때문입니다. 이는 부모, 조부모 등일 수도 있습니다.
 
-항상 실제 선택자가 아닌 [선택자 플레이스홀더](http://www.sitepoint.com/sass-reference/placeholders/)로 관계를 정의하세요. 이렇게 하면 선택자에 대한 작명 관례를 자유롭게 사용(그리고 변경)할 수 있으며, 관계가 플레이스홀더 내에서 한 번만 정의되므로 의도하지 않은 선택자를 생성할 가능성이 훨씬 적어집니다.
+항상 실제 선택자가 아닌 [선택자 플레이스홀더](https://www.sitepoint.com/sass-reference/placeholders/)로 관계를 정의하세요. 이렇게 하면 선택자에 대한 작명 관례를 자유롭게 사용(그리고 변경)할 수 있으며, 관계가 플레이스홀더 내에서 한 번만 정의되므로 의도하지 않은 선택자를 생성할 가능성이 훨씬 적어집니다.
 
 스타일을 상속할 때, 확장하는 `.class` 또는 `%placeholder` 선택자가 확장된 선택자의 일종인 경우에만 `@extend`를 사용하십시오. 예를 들어, `.error`는 `.warning`의 일종이기 때문에, `.error`는 `@extend .warning`을 할 수 있습니다.
 
@@ -25,7 +25,7 @@
 - 일반 조상 선택자 (예 : `.foo .bar`) 또는 일반 형제 선택자 (예 : `.foo ~ .bar`)를 확장하지 마세요. 이것이 선택자 폭발의 원인입니다.
 
 <div class="note">
-<p><code>@extend</code>는 속성을 중복하지 않고 선택자를 합치기 때문에 파일 크기와 관련해서 도움이 된다고들 말합니다. 사실이긴 하지만, <a ="http://en.wikipedia.org/wiki/Gzip">Gzip</a>으로 압축하게 되면 그 차이는 무시할 만한 정도입니다.</p>
+<p><code>@extend</code>는 속성을 중복하지 않고 선택자를 합치기 때문에 파일 크기와 관련해서 도움이 된다고들 말합니다. 사실이긴 하지만, <a ="https://en.wikipedia.org/wiki/Gzip">Gzip</a>으로 압축하게 되면 그 차이는 무시할 만한 정도입니다.</p>
 <p>말인즉슨, 만약 Gzip(혹은 그에 상당하는 다른 방법)을 이용할 수 없는 경우, 자신이 뭘 하고 있는지 이해하는 한 <code>@extend</code> 접근법을 선택하는 것도 그렇게 나쁘진 않을 수도 있습니다.</p>
 </div>
 
@@ -39,7 +39,7 @@
 
 - [Sass Extend에 대해 아무도 알려주지 않은 내용](https://www.sitepoint.com/sass-extend-nobody-told-you/)
 - [Extend를 피해야 하는 이유](https://www.sitepoint.com/avoid-sass-extend/)
-- [지나치게 Extend하지 마세요.](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+- [지나치게 Extend하지 마세요.](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
 요약하자면, 선택자 내에서 관계를 유지하기 위해서만 `@extend`를 사용하는 것이 좋습니다. 두 개의 선택자가 특징적으로 유사하다면, 그것은 `@extend`의 완벽한 사용 예입니다. 관련이 없지만, 일부 규칙을 공유할 때는 `@mixin`이 더 적합 할 수 있습니다. [이 글](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)에서 둘 중에서 선택하는 방법에 대해 자세히 알아보세요.
 

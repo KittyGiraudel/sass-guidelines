@@ -1,7 +1,7 @@
 
 # 命名约定
 
-在本节，我们不会讨论适用于大规模和可维护的最佳 CSS 命名方案，因为这不仅仅超过了个人的能力范围，也不是一个Sass样式指南可以解决的问题。我个人推荐遵从 [CSS Guidelines](http://cssguidelin.es/#naming-conventions) 的建议。
+在本节，我们不会讨论适用于大规模和可维护的最佳 CSS 命名方案，因为这不仅仅超过了个人的能力范围，也不是一个Sass样式指南可以解决的问题。我个人推荐遵从 [CSS Guidelines](https://cssguidelin.es/#naming-conventions) 的建议。
 
 良好的命名对保持整体代码的一致性和可读性非常重要，在 Sass 中可以命名的地方如下：
 
@@ -23,7 +23,7 @@
 
 {% include snippets/naming/02/index.html %}
 
-如果你在 Sass 中使用常量，请参考这篇文章：[如何在 Sass 中使用常量](http://www.sitepoint.com/dealing-constants-sass/).
+如果你在 Sass 中使用常量，请参考这篇文章：[如何在 Sass 中使用常量](https://www.sitepoint.com/dealing-constants-sass/).
 
 ## 命名空间
 
@@ -33,7 +33,7 @@
 
 {% include snippets/naming/03/index.html %}
 
-关于 CSS 的全局命名，[Kaelig](http://kaelig.fr) 写过 [一篇非常具有思考价值的文章](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)。
+关于 CSS 的全局命名，[Kaelig](https://kaelig.fr) 写过 [一篇非常具有思考价值的文章](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)。
 
 <div class="note">
   <p>需要注意的是，自动命名空间功能绝对是即将到来的Sass4.0中重构的<code>@import</code>的一个设计目标。随着即将取得结果，将会越来越少的需要手动命名，最终，手动命名库名实际上会越来越难用。</p>

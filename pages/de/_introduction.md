@@ -7,7 +7,7 @@ Ein Styleguide ist nicht nur einfach ein schönes Dokument um darzustellen wie d
 
 Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind Guidelines. Und je größer das Projekt, desto notwendiger ist ein Styleguide.
 
-[Harry Roberts](http://csswizardry.com) hat es in seinen [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide) bereits gut erklärt:
+[Harry Roberts](https://csswizardry.com) hat es in seinen [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide) bereits gut erklärt:
 
 <blockquote>
   <p>Ein Code Styleguide (kein visueller) ist ein wertvolles Werkzeug für Teams die:</p>
@@ -30,11 +30,11 @@ Natürlich ist das hier nicht der einzige Weg das Thema anzugehen und es mag auc
 
 ## Grundprinzipien
 
-Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass [**Sass so einfach wie möglich gehalten werden sollte**](http://www.sitepoint.com/keep-sass-simple/).
+Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass [**Sass so einfach wie möglich gehalten werden sollte**](https://www.sitepoint.com/keep-sass-simple/).
 
 Dank meiner dummen Experimente wie [Binäre Operatoren](https://github.com/HugoGiraudel/SassyBitwise), [Iteratoren und Generatoren](https://github.com/HugoGiraudel/SassyIteratorsGenerators) sowie [einem JSON Parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, können wir gut sehen was Sass als Präprozessor alles drauf hat.
 
-CSS ist eine einfache Sprache. Da Sass beabsichtigt CSS zu schreiben, sollte es niemals komplexer als normales CSS werden. Das [KISS Prinzip](http://de.wikipedia.org/wiki/KISS-Prinzip) (Keep it simple, stupid) ist in diesem Fall der Schlüssel, und hat unter gewissen Umständen sogar vorrang über [DRY](http://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself) (Don't repeat yourself).
+CSS ist eine einfache Sprache. Da Sass beabsichtigt CSS zu schreiben, sollte es niemals komplexer als normales CSS werden. Das [KISS Prinzip](https://de.wikipedia.org/wiki/KISS-Prinzip) (Keep it simple, stupid) ist in diesem Fall der Schlüssel, und hat unter gewissen Umständen sogar vorrang über [DRY](https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself) (Don't repeat yourself).
 
 Manchmal ist es besser sich etwas im Code zu wiederholen um es wartbar zu halten, anstatt ein schwerfälliges und unnötig kompliziertes System zu haben welches komplett unwartbar ist.
 

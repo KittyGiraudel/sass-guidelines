@@ -26,7 +26,7 @@ Sass에만 한정된 부분에 주석을 달 때는, C 스타일 블록 대신 S
 
 {% include snippets/comments/02/index.html %}
 
-이러한 작업 방식은 CSS 가이드라인의 [주석](http://cssguidelin.es/#commenting) 섹션에서도 지원됩니다.
+이러한 작업 방식은 CSS 가이드라인의 [주석](https://cssguidelin.es/#commenting) 섹션에서도 지원됩니다.
 
 ## 문서화
 

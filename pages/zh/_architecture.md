@@ -7,9 +7,9 @@
 
 最重要的是，我无法形容我是多么需要设置大量的文件夹——即使是小项目中。这就像是在家里，你不会将所有的纸片放在同一个盒子中。你可以使用文件夹：一个为房产，一个为银行，一个为账单，等等。没有理由在构架 CSS 项目时不这么做。拆分代码库到多个有意义的文件夹，当你回头来找东西的时候就会发现是那么容易。
 
-有很多[受欢迎的构建 CSS 项目的体系结构]((http://www.sitepoint.com/look-different-sass-architectures/) )：[OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/) 式, [Foundation](http://foundation.zurb.com/) 式...它们各有优劣，难分伯仲。
+有很多[受欢迎的构建 CSS 项目的体系结构]((https://www.sitepoint.com/look-different-sass-architectures/) )：[OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/) 式, [Foundation](https://get.foundation/) 式...它们各有优劣，难分伯仲。
 
-我自己使用的方式，与 [Jonathan Snook](http://snook.ca/) 的 [SMACSS](https://smacss.com/) 非常相似，其致力于保持代码简洁易见。
+我自己使用的方式，与 [Jonathan Snook](https://snook.ca/) 的 [SMACSS](https://smacss.com/) 非常相似，其致力于保持代码简洁易见。
 
 <div class="note">
   <p>我认为，项目之间的结构是极其具体的。你完全可以随意摒弃或调整建议方案，拥有最适合自己需求的体系系统。</p>
@@ -215,6 +215,6 @@ Sass 并不直接支持通配符扩展的机制，这是因为 CSS 样式是对�
 
 ## Shame 文件
 
-另一个有意思的方面，由业内已流行的 [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) 和 [Chris Coyier](http://css-tricks.com) 引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个 [shame file](http://csswizardry.com/2013/04/shame-css-full-net-interview/)。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
+另一个有意思的方面，由业内已流行的 [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) 和 [Chris Coyier](https://css-tricks.com) 引起的，那就是将所有的CSS声明、Hack行为和我们不支持的行为放入一个 [shame file](https://csswizardry.com/2013/04/shame-css-full-net-interview/)。该文件命名为 `_shame.scss`，在所有文件之后被引用，放在所有样式表的最后。
 
 {% include snippets/architecture/04/index.html %}

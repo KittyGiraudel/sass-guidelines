@@ -11,7 +11,7 @@ Per le stesse ragioni, i _breakpoint_ non dovrebbero avere i nomi di device, ma 
 
 {% include snippets/rwd/01/index.html %}
 
-A questo punto, [qualsiasi convenzione di nomenclatura](http://css-tricks.com/naming-media-queries/) che renda chiaro e cristallino che un design non è mutualmente legato ad uno specifico dispositivo farà al caso nostro, l’importante è che parli di grandezze.
+A questo punto, [qualsiasi convenzione di nomenclatura](https://css-tricks.com/naming-media-queries/) che renda chiaro e cristallino che un design non è mutualmente legato ad uno specifico dispositivo farà al caso nostro, l’importante è che parli di grandezze.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@ Una volta che avrete dato il nome che preferite ai vostri _breakpoint_, avrete b
 
 <div class="note">
   <p>Ovviamente questo è un modo fin troppo semplice di gestire i <em>breakpoint</em>. Se avete bisogno di un metodo più permissivo, vi raccomando di non reinventare la ruota ed utilizzare qualcosa di testato ed efficace come: <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a> o <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
-  <p>Se state cercando degli approfondimenti su come approcciare le Media Query in Sass, sia <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (sinceramente vostro) che <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a>hanno dei begli articoli sull'argomento.</p>
+  <p>Se state cercando degli approfondimenti su come approcciare le Media Query in Sass, sia <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (sinceramente vostro) che <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a>hanno dei begli articoli sull'argomento.</p>
 </div>
 
 ## Utilizzo delle Mediaquery

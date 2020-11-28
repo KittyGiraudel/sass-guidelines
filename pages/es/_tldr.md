@@ -13,7 +13,7 @@ Esta guía es bastante larga y algunas veces es bueno tenerla resumida es una ve
 
 * La sangría debe hacerse con (2) espacios, no con tabulaciones. [↩](#sintaxis-y-formato)
 * Las líneas, deben ser, en la medida de lo posible, más cortas de 80 caracteres. Siéntete libre de dividirlas en disitintas líneas cuando sea necesario. [↩](#sintaxis-y-formato)
-* CSS debe escribirse adecuadamente, posiblemente siguiendo la [guía CSS](http://cssguidelin.es) de Harry Roberts. [↩](#sintaxis-y-formato)
+* CSS debe escribirse adecuadamente, posiblemente siguiendo la [guía CSS](https://cssguidelin.es) de Harry Roberts. [↩](#sintaxis-y-formato)
 * Los espacios en blanco son gratuitos, úsalos para separar elementos, reglas y declaraciones. No dudes en dejar líneas en blanco, no hacen daño. [↩](#sintaxis-y-formato)
 
 ### Cadenas

@@ -21,7 +21,7 @@ V tomto bodě naprosto stačí, pokud použijeme jakoukoli jmennou konvenci, kte
 
 ###### Další četba
 
-* [Naming Media Queries](http://css-tricks.com/naming-media-queries/)
+* [Naming Media Queries](https://css-tricks.com/naming-media-queries/)
 
 ## Správce breakpointů
 
@@ -35,8 +35,8 @@ Jakmile pojmenujete své breakpointy tak, jak chcete, budete potřebovat najít 
 
 ###### Další četba
 
-* [Managing Responsive Breakpoints in Sass](http://www.sitepoint.com/managing-responsive-breakpoints-sass/)
-* [Approaches to Media Queries in Sass](http://css-tricks.com/approaches-media-queries-sass/)
+* [Managing Responsive Breakpoints in Sass](https://www.sitepoint.com/managing-responsive-breakpoints-sass/)
+* [Approaches to Media Queries in Sass](https://css-tricks.com/approaches-media-queries-sass/)
 
 ## Použití Media Queries
 
@@ -57,5 +57,5 @@ Pokud máte obavu ohledně duplicitních media queries, pořád můžete použí
 
 ###### Další četba
 
-* [Inline or Combined Media queries? Fight!](http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
+* [Inline or Combined Media queries? Fight!](https://benfrain.com/inline-or-combined-media-queries-in-sass-fight/)
 * [Sass::MediaQueryCombiner](https://github.com/aaronjensen/sass-media_query_combiner)

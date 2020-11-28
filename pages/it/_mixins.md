@@ -17,7 +17,7 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 {% include snippets/mixins/02/index.html %}
 
-Per esempi più complessi di mixin, date un occhio a [questo mixin per generare triangoli CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [questo mixin per generare ombre lunghe](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [questo mixin per aggiungere il codice polyfill necessario per i gradienti su browser datati](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Per esempi più complessi di mixin, date un occhio a [questo mixin per generare triangoli CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [questo mixin per generare ombre lunghe](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [questo mixin per aggiungere il codice polyfill necessario per i gradienti su browser datati](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixin senza argomenti
 
@@ -43,7 +43,7 @@ Sass è piuttosto intelligente con la dichiarazione di _Mixin_ e funzioni, così
 
 Si potrebbe essere tentati di definire un mixin personalizzato per avere i prefissi _vendor_ da applicare a proprietà CSS non ancora supportate o supportate solo parzialmente. Ma non vogliamo certo farlo. Prima di tutto, se si può usare [Autoprefixer](https://github.com/postcss/autoprefixer), che si usi Autoprefixer. Autoprefixer rimuoverà dal vostro progetto del codice Sass superfluo, sarà sempre aggiornato e sarà compilato in una maniera più efficiente di quanto si possa fare da soli.
 
-Sfortunatamente, non è sempre possibile avere a disposizione Autoprefixer. Se però usate [Bourbon](http://bourbon.io/) o [Compass](http://compass-style.org/) scoprirete che entrambi mettono a disposizione una collezione di Mixin per applicare i prefissi vendor. Usateli.
+Sfortunatamente, non è sempre possibile avere a disposizione Autoprefixer. Se però usate [Bourbon](https://bourbon.io/) o [Compass](http://compass-style.org/) scoprirete che entrambi mettono a disposizione una collezione di Mixin per applicare i prefissi vendor. Usateli.
 
 Se non si può usare Autoprefixer e nemmeno Bourbon o Compass, allora, e solo allora, si può creare un mixin per applicare i prefissi alle proprietà CSS. Ma per favore, non create un mixin per ogni proprietà, che stampa manualmente ogni prefisso.
 

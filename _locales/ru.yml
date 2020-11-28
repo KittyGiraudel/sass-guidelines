@@ -18,7 +18,7 @@ translations:
   baseline: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
 
 # Content of the footer, parsed as Markdown
-  footer_content: "Сделал с любовью [Хьюго Гираудел](http://hugogiraudel.com), перевели [Даниил Пронин](http://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
+  footer_content: "Сделал с любовью [Хьюго Гираудел](https://hugogiraudel.com), перевели [Даниил Пронин](https://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
 
 # Everything related to the options panel
   aside_title: "Опции"
@@ -47,7 +47,7 @@ translations:
 
   note: "Замечание"
 
-  image_color_functions: "Иллюстрация разницы между функциями `lighten`/`darken` и `mix` в Sass от [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Иллюстрация разницы между функциями `lighten`/`darken` и `mix` в Sass от [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "График, показывающий, как разработчики упорядочивают свой CSS"
   image_sassdoc: "Документация, сгенерированная в SassDoc"
   image_wallpaper: "Обои от [Julien He](https://twitter.com/julien_he)"

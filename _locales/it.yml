@@ -13,7 +13,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
-  footer_content: "Fatto con amore da [Hugo Giraudel](http://hugogiraudel.com)"
+  footer_content: "Fatto con amore da [Hugo Giraudel](https://hugogiraudel.com)"
 
   aside_title: "Opzioni"
   aside_report: "Segnala un problema"
@@ -38,7 +38,7 @@ translations:
 
   note: "Note"
 
-  image_color_functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS"
   image_sassdoc: "La documentazione è creata da SassDoc"
   image_wallpaper: "Wallpaper di [Julien He](https://twitter.com/julien_he)"

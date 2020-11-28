@@ -17,7 +17,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 {% include snippets/mixins/02/index.html %}
 
-Pour des exemples plus avancés de mixins, jetez un oeil à [celui-ci pour générer des triangles en CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [celui-ci pour créer de longues ombres](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou encore [celui-ci pour gérer les anciennes syntaxes de dégradés](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Pour des exemples plus avancés de mixins, jetez un oeil à [celui-ci pour générer des triangles en CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [celui-ci pour créer de longues ombres](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou encore [celui-ci pour gérer les anciennes syntaxes de dégradés](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Argument-less mixins
 
@@ -39,13 +39,13 @@ Sass gère très intelligemment les mixins et les déclarations de fonction, vou
 
 {% include snippets/mixins/04/index.html %}
 
-Pour plus d’information sur les différences entre des arguments multiples, une liste, et une liste d’arguments pour un mixin, [SitePoint a un très bel article](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Pour plus d’information sur les différences entre des arguments multiples, une liste, et une liste d’arguments pour un mixin, [SitePoint a un très bel article](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins et préfixes constructeurs
 
 Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes constructeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n’allons pas faire cela. D’abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allégera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l’être.
 
-Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si vous utilisez [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu’ils proposent tous les deux une collection de mixins qui traitent les préfixes constructeurs pour vous. Utilisez-les.
+Malheureusement, Autoprefixer n’est pas toujours une option envisageable. Si vous utilisez [Bourbon](https://bourbon.io/) ou [Compass](http://compass-style.org/), vous savez sans doute déjà qu’ils proposent tous les deux une collection de mixins qui traitent les préfixes constructeurs pour vous. Utilisez-les.
 
 Si vous ne pouvez utiliser ni Autoprefixer, ni Bourbon, ni Compass, alors —&nbsp;et seulement alors&nbsp;— vous pouvez créer votre propre mixin pour préfixer les propriétés CSS. Attention, ne construisez pas un mixin par propriété en écrivant manuellement chaque préfixe constructeur.
 

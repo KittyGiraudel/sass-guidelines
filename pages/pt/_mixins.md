@@ -20,7 +20,7 @@ Outro exemplo de código que deveria estar num Mixin é definir o tamanho de um 
 
 {% include snippets/mixins/02/index.html %}
 
-Para mais exemplos complexos de mixins, dê uma olhada [neste mixin para gerar triângulos CSS](http://www.sitepoint.com/sass-mixin-css-triangles/), [nesse mixin para criar sombras longas](http://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou [neste outro mixin de polyfill para gradientes CSS em navegadores antigos](http://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+Para mais exemplos complexos de mixins, dê uma olhada [neste mixin para gerar triângulos CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [nesse mixin para criar sombras longas](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou [neste outro mixin de polyfill para gradientes CSS em navegadores antigos](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
 ## Mixins sem argumentos
 
@@ -41,13 +41,13 @@ O Sass é bastante inteligente relativamente aos mixins e a declaração de fun�
 
 {% include snippets/mixins/04/index.html %}
 
-Para mais informação, sobre se é melhor usar múltiplos argumentos, lista ou uma lista de argumentos [o SitePoint tem um ótimo tópico sobre isso](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
+Para mais informação, sobre se é melhor usar múltiplos argumentos, lista ou uma lista de argumentos [o SitePoint tem um ótimo tópico sobre isso](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
 ## Mixins e prefixos de fabricantes
 
 Pode ser tentador definir mixins personalizados para prefixos de fabricantes que são propriedades de CSS não suportadas ou fracamente suportadas. Mas nós não queremos fazer isso. Primeiro, se puderem usar o [Autoprefixer](https://github.com/postcss/autoprefixer), usem-no. O Autoprefixer vai remover código Sass do projeto, vai estar sempre atualizado e vai muito provavelmente fazer um melhor trabalho do que nós a colocar prefixos.
 
-Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](http://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma coleção de mixins que tratam dos prefixos de fabricantes por nós.
+Infelizmente, usar o Autoprefixer nem sempre é uma opção. Se usam [Bourbon](https://bourbon.io/) ou [Compass](http://compass-style.org/), provavelmente já sabem que tanto um como outro oferecem uma coleção de mixins que tratam dos prefixos de fabricantes por nós.
 
 Se não podem usar Autoprefixer nem Bourbon ou Compass, então, apenas nesta situação, podem criar o vosso próprio mixin para colocar prefixos em propriedades de CSS. Mas, por favor, não criem um mixin por propriedade.
 

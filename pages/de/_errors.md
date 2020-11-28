@@ -27,4 +27,4 @@ Lass uns als Beispiel annehmen dass du eine Getter-Funktion hast um Werte aus ei
 
 {% include snippets/errors/02/index.html %}
 
-Für weitere Informationen wie `@error` effizient zu verwenden ist, sollte [diese Einführung über Error-Handling](http://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) weiterhelfen.
+Für weitere Informationen wie `@error` effizient zu verwenden ist, sollte [diese Einführung über Error-Handling](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996) weiterhelfen.

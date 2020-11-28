@@ -5,7 +5,7 @@ En mi opinión, la primera cosa que debe hacer una guía de estilo es describir 
 
 Cuando varios desarrolladores están involucrados en la escritura CSS dentro del mismo proyecto o proyectos, es sólo cuestión de tiempo antes de que uno de ellos empiece a hacer las cosas a su manera. Las guías de estilo de código que fomentan la coherencia no solo previenen esto, sino que también ayudan a la hora de leer y actualizar el código.
 
-A grandes rasgos, lo que queremos (humildemente inspirados en [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting) es):
+A grandes rasgos, lo que queremos (humildemente inspirados en [CSS Guidelines](https://cssguidelin.es/#syntax-and-formatting) es):
 
 * dos (2) espacios en blanco, en lugar de tabulaciones;
 * idealmente, líneas de 80 caracteres;
@@ -20,7 +20,7 @@ Lo creas o no, las cadenas (*strings*) juegan un papel importante en los ecosist
 
 ### Codificación
 
-Para evitar cualquier posible problema con la codificación de caracteres, es muy recomendable forzar la codificación [UTF-8](http://es.wikipedia.org/wiki/UTF-8) en la [hoja de estilo principal](#archivo-principal) usando la directiva `@charset`. Asegúrate que es el primer elemento de la hoja de estilo y que no hay ningún otro caracter de ningún tipo antes.
+Para evitar cualquier posible problema con la codificación de caracteres, es muy recomendable forzar la codificación [UTF-8](https://es.wikipedia.org/wiki/UTF-8) en la [hoja de estilo principal](#archivo-principal) usando la directiva `@charset`. Asegúrate que es el primer elemento de la hoja de estilo y que no hay ningún otro caracter de ningún tipo antes.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -40,7 +40,7 @@ Dicho esto, los lenguajes que no requieren que las cadenas estén entre comillas
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-  <p>Según las especificaciones CSS, la directiva <code>@charset</code> debe estar declarada con comillas dobles <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">para ser considerada válida</a>. Sin embargo, Sass se preocupa de esto cuando compila el CSS para que su creación no tenga ningún impacto con el resultado final. Puedes usar sin ningún problema las comillas simples, incluso para <code>@charset</code>.</p>
+  <p>Según las especificaciones CSS, la directiva <code>@charset</code> debe estar declarada con comillas dobles <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">para ser considerada válida</a>. Sin embargo, Sass se preocupa de esto cuando compila el CSS para que su creación no tenga ningún impacto con el resultado final. Puedes usar sin ningún problema las comillas simples, incluso para <code>@charset</code>.</p>
 </div>
 
 ### Cadenas Como Valores CSS
@@ -95,7 +95,7 @@ Para agregar una unidad a un número, hay que multiplicar este número por *1 un
 
 {% include snippets/syntax/09/index.html %}
 
-Ten en cuenta que sumando un *valor de 0 de unidad* también funciona, pero prefiero recomendar el método antes mencionado, ya que sumar una *unidad 0* puede resultar confuso. De hecho, cuando se trata de convertir un número a otra unidad compatible, emplear el truco del 0, no funcionará. Puedes leer más sobre esto en [este artículo](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Ten en cuenta que sumando un *valor de 0 de unidad* también funciona, pero prefiero recomendar el método antes mencionado, ya que sumar una *unidad 0* puede resultar confuso. De hecho, cuando se trata de convertir un número a otra unidad compatible, emplear el truco del 0, no funcionará. Puedes leer más sobre esto en [este artículo](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -105,7 +105,7 @@ Para eliminar la unidad de un valor, hay que dividirlo por *1 unidad de su mismo
 
 {% include snippets/syntax/11/index.html %}
 
-Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. Separando la parte numérica de un número con una unidad también devolverá una cadena. [Usa longitudes, no cadenas](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. Separando la parte numérica de un número con una unidad también devolverá una cadena. [Usa longitudes, no cadenas](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Cálculos
 
@@ -115,31 +115,31 @@ Al añadir a un número una unidad en forma de cadena, el resultado es una caden
 
 ### Números Mágicos
 
-Un "número mágico" es un término de programación de la [vieja escuela](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica.
+Un "número mágico" es un término de programación de la [vieja escuela](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) para *las constantes numéricas sin nombre*. Básicamente, es solo un número aleatorio que *simplemente funciona* y sin embargo no está ligado con ninguna explicación lógica.
 
 No hace falta decir que **los números mágicos son una plaga y que se deben evitar a toda costa**. Cuando no se puede encontrar una explicación razonable a por qué un número funciona, añade un comentario claro y completo explicando como has llegado hasta allí y por qué crees que funciona. Admitir que no sabes por qué algo funciona es mucho más útil para el siguiente desarrollador que dejarle tener que averiguar lo que está pasando desde el principio.
 
 {% include snippets/syntax/13/index.html %}
 
-Relacionado con esto, CSS-Tricks tiene un [excelente artículo](http://css-tricks.com/magic-numbers-in-css/) acerca de los números mágicos en CSS que te animo a que leas.
+Relacionado con esto, CSS-Tricks tiene un [excelente artículo](https://css-tricks.com/magic-numbers-in-css/) acerca de los números mágicos en CSS que te animo a que leas.
 
 ## Colores
 
-Los colores ocupan un lugar importante en el lenguaje CSS. Naturalmente, Sass termina siendo un valioso aliado cuando se trata de la manipulación de colores, especialmente, al proporcionar un puñado de [funciones potentes](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Los colores ocupan un lugar importante en el lenguaje CSS. Naturalmente, Sass termina siendo un valioso aliado cuando se trata de la manipulación de colores, especialmente, al proporcionar un puñado de [funciones potentes](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 Sass es tan útil cuando se trata de manipular los colores, que han florecido artículos por todo Internet sobre este tema. Te recomiendo algunas lecturas:
 
 * [¿Cómo ir programáticamente de un color a otro? - En inglés](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Usando Sass para construir paletas de color - En inglés](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Tratando con esquemas de color en Sass - En inglés](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [Usando Sass para construir paletas de color - En inglés](https://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Tratando con esquemas de color en Sass - En inglés](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
 
 ### Formatos De Color
 
 Con el objetivo de que hacer colores sean tan simple como sea posible, mi consejo es que respetes el siguiente orden de preferencia de los formatos de color:
 
-1. [Notación HSL](http://es.wikipedia.org/wiki/Modelo_de_color_HSV);
-1. [Notación RGB](http://es.wikipedia.org/wiki/RGB);
+1. [Notación HSL](https://es.wikipedia.org/wiki/Modelo_de_color_HSV);
+1. [Notación RGB](https://es.wikipedia.org/wiki/RGB);
 1. Notación hexadecimal. Preferiblemente en minúsculas y en formato corto.
 
 Las palabras clave para denominar colores en CSS no deben ser usadas, a menos que se utilicen para prototipos rápidos. De hecho, son palabras inglesas y algunas de ellas hacen un trabajo bastante malo al describir el color que representan, especialmente para hablantes no nativos. Además de eso, las palabras clave no son perfectamente semánticas; Por ejemplo `grey` es en realidad más oscuro que `darkgrey`, y la confusión entre `grey` y `gray` puede llevar a usos inconsistentes de este color.
@@ -166,13 +166,13 @@ Ahora puedes usar esta variable en cualquier lugar. Sin embargo, si su uso está
 
 {% include snippets/syntax/17/index.html %}
 
-Al hacer esto, evitarás que algún cambio en el tema resulte en algo como `$sass-pink: blue`. [Este artículo](http://davidwalsh.name/sass-color-variables-dont-suck) hace un buen trabajo explicando por qué pensar el nombre de tus variables de color es importante.
+Al hacer esto, evitarás que algún cambio en el tema resulte en algo como `$sass-pink: blue`. [Este artículo](https://davidwalsh.name/sass-color-variables-dont-suck) hace un buen trabajo explicando por qué pensar el nombre de tus variables de color es importante.
 
 ### Aclarando Y Oscureciendo Colores
 
-Tanto las funciones [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) como [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulan la luminosidad de un color en el espacio HSL añadiendo o restando a la luminosidad de dicho espacio. Básicamente, son alias para el parámetro `$lightness` de la función [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method)
+Tanto las funciones [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) como [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulan la luminosidad de un color en el espacio HSL añadiendo o restando a la luminosidad de dicho espacio. Básicamente, son alias para el parámetro `$lightness` de la función [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method)
 
-La cuestión es que esas funciones a menudo no proporcionan el resultado esperado. Por otro lado, la función [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) es una buena manera para aclarar u oscurecer un color al mezclarlo con `blanco` or `negro`.
+La cuestión es que esas funciones a menudo no proporcionan el resultado esperado. Por otro lado, la función [`mix`](https://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) es una buena manera para aclarar u oscurecer un color al mezclarlo con `blanco` or `negro`.
 
 La ventaja de usar `mix` en lugar de una de las funciones anteriormente mencionadas, es que con `mix` irá progresivamente a negro (o blanco) a medida que se disminuye la proporción de color, mientras que `darken` y `lighten` apagará rápidamente el color hasta llegar a negro o blanco.
 
@@ -183,7 +183,7 @@ Si no quieres escribir la función `mix` cada vez que quieras usarla, puedes cre
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>La función <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (escala de color) está diseñada para escalar las propiedades de una forma más fluida, al tener en cuenta qué tan altas o bajas son en el momento inicial. Debe proporcionar resultados tan agradables como los de <code>mix</code> pero con una nomenclatura mucho más clara. Sin embargo, el factor de escalado no es exactamente el mismo.</p>
+  <p>La función <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> (escala de color) está diseñada para escalar las propiedades de una forma más fluida, al tener en cuenta qué tan altas o bajas son en el momento inicial. Debe proporcionar resultados tan agradables como los de <code>mix</code> pero con una nomenclatura mucho más clara. Sin embargo, el factor de escalado no es exactamente el mismo.</p>
 </div>
 
 ## Listas
@@ -204,7 +204,7 @@ Al añadir nuevos elementos a una lista, utiliza siempre la API proporcionada. N
 
 {% include snippets/syntax/20/index.html %}
 
-En [este artículo](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), explico un montón de trucos y consejos para manejar y manipular las listas correctamente en Sass.
+En [este artículo](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), explico un montón de trucos y consejos para manejar y manipular las listas correctamente en Sass.
 
 ## Mapas
 
@@ -225,11 +225,11 @@ Ejemplo:
 
 {% include snippets/syntax/21/index.html %}
 
-Los escritos acerca de los mapas de Sass son muchos dado cuánto se anhelaba esta característica. Aquí hay 3 que recomiendo: [Usando Mapas en Sass - En inglés](http://www.sitepoint.com/using-sass-maps/), [Funciones adicionales de mapas en Sass - En inglés](http://www.sitepoint.com/extra-map-functions-sass/), [Sass real, mapas reales - En inglés](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
+Los escritos acerca de los mapas de Sass son muchos dado cuánto se anhelaba esta característica. Aquí hay 3 que recomiendo: [Usando Mapas en Sass - En inglés](https://www.sitepoint.com/using-sass-maps/), [Funciones adicionales de mapas en Sass - En inglés](https://www.sitepoint.com/extra-map-functions-sass/), [Sass real, mapas reales - En inglés](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Conjunto De Reglas CSS
 
-Llegados a este punto, esto es básicamente una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjunto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo la [Guía de estilo de CSS](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Llegados a este punto, esto es básicamente una revisión de lo que todo el mundo ya sabe, pero esta es la forma en la que un conjunto de reglas CSS deben estar escritas (por lo menos según la mayoría de las guías, incluyendo la [Guía de estilo de CSS](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * los selectores relacionados deben ir en la misma línea; los selectores no vinculados en líneas nuevas;
 * la llave de apertura (`{`) debe separarse del selector usando un espacio;
@@ -274,7 +274,7 @@ También hay otra rama interesante en cuanto al orden de propiedades, llamado [C
 
 {% include snippets/syntax/28/index.html %}
 
-Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determinó que más de un 45% de los desarrolladores ordenan sus declaraciones por tipo, frente el 14% que lo hace alfabéticamente. También hay un 39% que lo hace completamente al azar, incluido yo mismo.
+Debo decir que ni yo mismo puedo decidirme. Una [encuesta reciente en CSS-Tricks](https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) determinó que más de un 45% de los desarrolladores ordenan sus declaraciones por tipo, frente el 14% que lo hace alfabéticamente. También hay un 39% que lo hace completamente al azar, incluido yo mismo.
 
 {% include images/order-poll.html %}
 
@@ -306,7 +306,7 @@ En la misma línea, desde Sass 3.3 es posible usar la referencia al selector act
 
 {% include snippets/syntax/32/index.html %}
 
-Este método se utiliza a menudo junto con las [convenciones de nombrado BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para generar los selectores `.block__element` y `.block--modifier` basados en los selectores originales (por ejemplo, `.block` en este caso).
+Este método se utiliza a menudo junto con las [convenciones de nombrado BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) para generar los selectores `.block__element` y `.block--modifier` basados en los selectores originales (por ejemplo, `.block` en este caso).
 
 <div class="note">
   <p>Aunque podría ser anecdótico, generar nuevos selectores a partir de la referencia del selector actual (<code>&</code>) hace que dichos selectores no se puedan buscar en la base del código ya que no existen per se.</p>
@@ -318,7 +318,7 @@ Esta afirmación se vuelve más verdadera en cuanto los selectores se hacen más
 
 Para evitar estas situaciónes, hemos hablado mucho sobre [la regla de Origen - En inglés](http://thesassway.com/beginner/the-inception-rule) desde hace algunos años. Recomendaba no anidar los selectores más allá de 3 niveles de profundidad, como referencia a la película *Inception* de Christopher Nolan. Yo sería mucho más drástico y recomendaría  **evitar la anidación de selectores tanto como sea posible**. 
 
-Sin embargo, es evidente que hay algunas excepciones a esta regla como se verá en la siguiente sección, esta opinión es bastante popular y puedes leer más sobre ella en [Ten cuidado con la anidación de selectores - En inglés](http://www.sitepoint.com/beware-selector-nesting-sass/) y [Evita la anidación de selectores para obtener un CSS más modular - En inglés](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+Sin embargo, es evidente que hay algunas excepciones a esta regla como se verá en la siguiente sección, esta opinión es bastante popular y puedes leer más sobre ella en [Ten cuidado con la anidación de selectores - En inglés](https://www.sitepoint.com/beware-selector-nesting-sass/) y [Evita la anidación de selectores para obtener un CSS más modular - En inglés](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### Excepciones
 

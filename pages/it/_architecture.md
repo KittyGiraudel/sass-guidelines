@@ -7,9 +7,9 @@ Fortunatamente, uno dei benefici principali dell’usare un preprocessore CSS è
 
 Detto questo, non mi stancherò mai di sottolineare quanto sia importante dividere questi file in cartelle, anche per progetti piccoli. A casa non mettiamo tutti i nostri fogli di carta in una scatola. Li dividiamo in cartelle: una per i documenti della casa, una per la banca, una per le bollette e così via. Non c’è ragione per non far così anche quando si struttura un progetto CSS. Dividere la codebase dentro cartelle separate, ognuna con il proprio ruolo, ci aiuterà a trovare le cose quando torneremo sul codice in un secondo momento.
 
-Ci sono [molti modi](http://www.sitepoint.com/look-different-sass-architectures/) per organizzare i file di un progetto CSS: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), simil-[Bootstrap](http://getbootstrap.com/), simil-[Foundation](http://foundation.zurb.com/)… Hanno tutti i propri meriti, i vantaggi e gli svantaggi.
+Ci sono [molti modi](https://www.sitepoint.com/look-different-sass-architectures/) per organizzare i file di un progetto CSS: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), simil-[Bootstrap](https://getbootstrap.com/), simil-[Foundation](https://get.foundation/)… Hanno tutti i propri meriti, i vantaggi e gli svantaggi.
 
-Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) di [Jonathan Snook](http://snook.ca/), che mantiene le cose semplici e facili da capire.
+Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) di [Jonathan Snook](https://snook.ca/), che mantiene le cose semplici e facili da capire.
 
 <div class="note">
   <p>Ho imparato che l’architettura il più delle volte è differente da progetto a progetto. Sentitevi liberi di adattare o modificare completamente la soluzione proposta, in modo da poter ottenere un sistema che fa al caso vostro.</p>
@@ -213,6 +213,6 @@ Quando si usa Ruby Sass, c'è una gemma chiamata [sass-globbing](https://github.
 
 ## Il file Shame
 
-C’è un’idea interessante, diffusa da [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) e [Chris Coyier](http://css-tricks.com) che consiste nel mettere tutto il CSS, gli hack e tutte le cose di cui non andremmo fieri in un *[file della vergogna](http://csswizardry.com/2013/04/shame-css-full-net-interview/) (Shame)*. Questo file, platealmente chiamato `_shame.scss`, verrebbe importato dopo tutti i file, alla fine del foglio di stile.
+C’è un’idea interessante, diffusa da [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) e [Chris Coyier](https://css-tricks.com) che consiste nel mettere tutto il CSS, gli hack e tutte le cose di cui non andremmo fieri in un *[file della vergogna](https://csswizardry.com/2013/04/shame-css-full-net-interview/) (Shame)*. Questo file, platealmente chiamato `_shame.scss`, verrebbe importato dopo tutti i file, alla fine del foglio di stile.
 
 {% include snippets/architecture/04/index.html %}

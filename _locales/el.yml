@@ -17,7 +17,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
-  footer_content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](http://hugogiraudel.com)"
+  footer_content: "Φτιαγμένο με μεράκι από τον [Hugo Giraudel](https://hugogiraudel.com)"
 
   aside_title: "επιλογές"
   aside_report: "Αναφορά προβλήματος"
@@ -42,7 +42,7 @@ translations:
 
   note: "Σημείωση"
 
-  image_color_functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](http://codepen.io/KatieK2/pen/tejhz/)"
+  image_color_functions: "Εικονογράφηση των διαφορών μεταξύ `lighten`/`darken` και `mix` από την [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Διάγραμμα που δείχνει πως οι developers ταξινομούν τα CSS declarations"
   image_sassdoc: "Το documentation δημιουργήθηκε με SassDoc"
   image_wallpaper: "Wallpaper από τον [Julien He](https://twitter.com/julien_he)"

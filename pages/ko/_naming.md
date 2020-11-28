@@ -1,7 +1,7 @@
 
 # 작명 관례
 
-이 절에서는, 유지와 확장을 위한 최고의 CSS 작명 관례를 다루진 않을 것입니다; 그것은 여러분에게 달린 문제일 뿐만 아니라, Sass 스타일가이드의 범위를 벗어나는 것이기도 합니다. 전 [CSS Guidelines](http://cssguidelin.es/#naming-conventions)가 추천하는 방법을 참고하시길 권하겠습니다.
+이 절에서는, 유지와 확장을 위한 최고의 CSS 작명 관례를 다루진 않을 것입니다; 그것은 여러분에게 달린 문제일 뿐만 아니라, Sass 스타일가이드의 범위를 벗어나는 것이기도 합니다. 전 [CSS Guidelines](https://cssguidelin.es/#naming-conventions)가 추천하는 방법을 참고하시길 권하겠습니다.
 
 Sass에서 이름을 붙일 수 있는 것들이 몇 가지 있는데, 코드베이스 전체가 일관되며 읽기 쉽도록 이름을 잘 짓는 것이 중요합니다:
 
@@ -33,7 +33,7 @@ Sass에서 상수를 정말 잘 다루고 싶다면, [이 전용 글](https://ww
 
 {% include snippets/naming/03/index.html %}
 
-이 주제에 관심이 있다면 [Kaelig](http://kaelig.fr/)의 [글로벌 CSS 네임스페이스에 대한 매우 통찰력 있는 글](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)을 한 번 읽어보세요.
+이 주제에 관심이 있다면 [Kaelig](https://kaelig.fr/)의 [글로벌 CSS 네임스페이스에 대한 매우 통찰력 있는 글](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)을 한 번 읽어보세요.
 
 <div class="note">
 <p>자동 네임스페이스는 단연 사스 4.0에서 곧 있을 `@import` 개선의 설계 목표입니다. 그것이 결실을 맺기에 가까워지면서, 수동 네임스페이스는 점점 유용성이 떨어질 것입니다: 결국에는, 수동 네임스페이스를 이용한 라이브러리는 실제로 사용하기가 더 어려워질 수도 있습니다.</p>

@@ -1,7 +1,7 @@
 
 # 도구
 
-Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플러그인, 라이브러리, 도구로 이루어진 완전한 생태계와 동반한다는 것입니다. 시작으로부터 8년이 지난 지금, 우리는 [Sass로 쓰일 수 있는 모든 것은 Sass로 쓰인](http://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/) 지점에 점점 더 가까워지고 있습니다.
+Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플러그인, 라이브러리, 도구로 이루어진 완전한 생태계와 동반한다는 것입니다. 시작으로부터 8년이 지난 지금, 우리는 [Sass로 쓰일 수 있는 모든 것은 Sass로 쓰인](https://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/) 지점에 점점 더 가까워지고 있습니다.
 
 하지만 제가 드리는 조언은 의존성의 수를 최소한으로 줄이라는 것입니다. 의존성을 관리하는 것은 여러분이 피해야 할 일종의 지옥입니다. 게다가, Sass의 경우 외부 의존성이 거의 혹은 전혀 필요하지 않습니다.
 
@@ -9,7 +9,7 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 [Compass](http://compass-style.org/)는 주요 Sass 프레임워크입니다. Sass의 핵심 디자이너 둘 중 한 명인 [Chris Eppstein](https://twitter.com/chriseppstein)에 의해 개발되었죠. 제 생각으로는 한동안은 그 인기가 크게 떨어질 것 같진 않습니다.
 
-그렇지만, [전 더이상 Compass를 사용하지 않습니다](http://www.sitepoint.com/dont-use-compass-anymore/). 가장 큰 이유로는 Sass를 매우 느리게 만들기 때문입니다. Ruby Sass는 그 자체로도 꽤 느리기 때문에 그 위에 Ruby와 Sass를 더해서 좋을 게 없습니다.
+그렇지만, [전 더이상 Compass를 사용하지 않습니다](https://www.sitepoint.com/dont-use-compass-anymore/). 가장 큰 이유로는 Sass를 매우 느리게 만들기 때문입니다. Ruby Sass는 그 자체로도 꽤 느리기 때문에 그 위에 Ruby와 Sass를 더해서 좋을 게 없습니다.
 
 문제는 우리가 전체 프레임워크에서 아주 적은 일부만을 사용한다는 점입니다. Compass는 거대합니다. 크로스 브라우저 호환 믹스인은 빙산의 일각에 불과하죠. 수학 함수, 이미지 헬퍼, 스프라이트… 이 훌륭한 소프트웨어를 가지고 할 수 있는 일이 너무나도 많습니다.
 
@@ -27,9 +27,9 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 솔직하게 말씀드릴게요: 전 그리드 시스템의 열렬한 팬은 아닙니다. 물론 그 가능성은 알고 있습니다만, 대부분은 너무 지나치고 주로 너드 디자이너들의 연단에서 흰 배경 위에 빨간 칼럼을 그리는 데 사용됩니다. 마지막으로 _정말-다행이야-2-5-3.1-π-그리드를-제작하는-이-툴이-있어서_ 라고 생각한 게 언제입니까? 맞습니다, 한 번도 생각한 적 없죠. 대부분의 경우, 복잡한 것이 아니라 평범하고 규칙적인 12 칼럼 그리드를 원할 뿐이니까요.
 
-프로젝트에 [Bootstrap](http://getbootstrap.com/)이나 [Foundation](http://foundation.zurb.com/) 같은 CSS 프레임워크를 사용한다면 이미 그리드 시스템을 포함하고 있을 확률이 높습니다. 이 경우에는 또 다른 의존성을 피하기 위해 그것을 사용할 것을 추천합니다.
+프로젝트에 [Bootstrap](https://getbootstrap.com/)이나 [Foundation](https://get.foundation/) 같은 CSS 프레임워크를 사용한다면 이미 그리드 시스템을 포함하고 있을 확률이 높습니다. 이 경우에는 또 다른 의존성을 피하기 위해 그것을 사용할 것을 추천합니다.
 
-만약 여러분이 특정 그리드 시스템에 묶여 있지 않다면, 두 개의 아주 뛰어난 Sass 그리드 엔진이 있다는 사실에 기뻐하실 겁니다: [Susy](http://susy.oddbird.net/), [Singularity](https://github.com/at-import/Singularity). 둘 모두 여러분에게 필요한 것 이상을 제공하니 이 둘 중 맘에 드는 것을 고르시고 에지 케이스에도 잘 대응하는지 확인하세요. 제게 묻는다면, Susy가 좀 더 좋은 커뮤니티를 갖고 있습니다. 하지만 제 의견일 뿐입니다.
+만약 여러분이 특정 그리드 시스템에 묶여 있지 않다면, 두 개의 아주 뛰어난 Sass 그리드 엔진이 있다는 사실에 기뻐하실 겁니다: [Susy](https://www.oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity). 둘 모두 여러분에게 필요한 것 이상을 제공하니 이 둘 중 맘에 드는 것을 고르시고 에지 케이스에도 잘 대응하는지 확인하세요. 제게 묻는다면, Susy가 좀 더 좋은 커뮤니티를 갖고 있습니다. 하지만 제 의견일 뿐입니다.
 
 혹은 [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) 같이 좀 더 가벼운 걸로 갈 수도 있습니다. 대부분의 경우, 뭘 선택하든 여러분의 코딩 스타일에 큰 영향을 미치진 않을 것이므로, 선택은 여러분에게 달렸습니다.
 
@@ -43,9 +43,9 @@ Sass처럼 인기 있는 CSS 전처리기의 좋은 점은 프레임워크, 플�
 
 {% include snippets/tools/01/index.html %}
 
-SCSS-lint를 사용해야 한다는 확신이 없다면, 다음 훌륭한 글들을 읽는 것을 추천합니다: [SCSS-lint를 사용하여 Sass를 정리하세요](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [theguardian.com의 Sass 코드 품질 개선](https://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom), [자동 수행 가능한 SCSS 스타일 가이드](http://davidtheclark.com/scss-lint-styleguide/).
+SCSS-lint를 사용해야 한다는 확신이 없다면, 다음 훌륭한 글들을 읽는 것을 추천합니다: [SCSS-lint를 사용하여 Sass를 정리하세요](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [theguardian.com의 Sass 코드 품질 개선](https://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom), [자동 수행 가능한 SCSS 스타일 가이드](https://davidtheclark.com/scss-lint-styleguide/).
 
 <div class="note">
 <p>SCSS lint를 Grunt 빌드 프로세스에 추가하고 싶으시다면, 기쁘게도 <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>라고 하는 Grunt 플러그인이 있습니다.</p>
-<p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="http://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat…)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
+<p>또한, SCSS-lint와 함께 작동하는 깔끔한 어플리케이션을 찾고 계신다면, <a href="https://thoughtbot.com/">Thoughtbot</a>(Bourbon, Neat…)이 <a href="https://houndci.com/">Hound</a>에 공을 들이고 있습니다.</p>
 </div>

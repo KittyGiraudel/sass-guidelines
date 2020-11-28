@@ -7,9 +7,9 @@ Zum Glück ist einer der Hauptvorteile eines CSS Präprozessor der, eine Codebas
 
 Darüber hinaus kann ich nicht oft genug erwähnen, wie wichtig es selbst in kleinen Projekten ist, Ordner zu verwenden. Zu Hause wirfst du schließlich auch nicht jedes Blatt Papier in eine große Kiste. Du ordnest sie; einen Ordner für die Wohnung, einen anderen für die Bank, in den nächsten kommen Rechnungen, und so weiter. Deshalb gibt es auch keinen Grund es mit der Struktur deines CSS anders zu machen. Teile es in verschiedene Ordner auf, sodass du dich später, wenn du zurück in das Projekt kommst, leicht zurecht findest.
 
-Es gibt [viele beliebte Architekturen](http://www.sitepoint.com/look-different-sass-architectures/) für CSS Projekte: [OOCSS](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) sowie ein [Bootstrap](http://getbootstrap.com/) und [Foundation](http://foundation.zurb.com/) ähnliches… alle mit ihren Vor- und Nachteilen.
+Es gibt [viele beliebte Architekturen](https://www.sitepoint.com/look-different-sass-architectures/) für CSS Projekte: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) sowie ein [Bootstrap](https://getbootstrap.com/) und [Foundation](https://get.foundation/) ähnliches… alle mit ihren Vor- und Nachteilen.
 
-Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jonathan Snook](http://snook.ca/), welcher sich darauf fokusiert etwas einfach und offensichtlich zu halten.
+Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jonathan Snook](https://snook.ca/), welcher sich darauf fokusiert etwas einfach und offensichtlich zu halten.
 
 <div class="note">
   <p>Ich habe gelernt das Architektur meistens sehr Projektspezifisch ist. Deshalb tu dir keinen Zwang an mir komplett zu widersprechen oder nur die Lösungen zu übernehmen welche du brauchst.</p>
@@ -221,6 +221,6 @@ In einer strikten, komponentenbasierten Architektur mit extra Rücksicht keine S
 
 ## Shame-Datei
 
-Es gibt ein interessantes Konzept von [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) und [Chris Coyier](http://css-tricks.com), wo alle Deklarationen, Hacks und Dinge auf die wir nicht stolz sind, in einer [*Shame-Datei*](http://csswizardry.com/2013/04/shame-css-full-net-interview/) zusammengefasst sind. Die dramatisch benannte `_shame.scss` sollte nach jeder anderen Datei und ganz am Ende deines Stylesheets  importiert werden.
+Es gibt ein interessantes Konzept von [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) und [Chris Coyier](https://css-tricks.com), wo alle Deklarationen, Hacks und Dinge auf die wir nicht stolz sind, in einer [*Shame-Datei*](https://csswizardry.com/2013/04/shame-css-full-net-interview/) zusammengefasst sind. Die dramatisch benannte `_shame.scss` sollte nach jeder anderen Datei und ganz am Ende deines Stylesheets  importiert werden.
 
 {% include snippets/architecture/04/index.html %}

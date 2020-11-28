@@ -5,7 +5,7 @@
 
 Όταν διάφοροι developers συμμετέχουν στην συγγραφή CSS στο ίδιο project, είναι απλά θέμα χρόνου μέχρι ένας από αυτούς να ξεκινήσει να δρα με το δικό του τρόπο. Τα guidelines κώδικα που προωθούν την ομοιομορφία όχι μόνο προλαμβάνουν κάτι τέτοιο, αλλά επίσης βοηθούν στο διάβασμα και την ενημέρωση του κώδικα.
 
-Γενικά, θέλουμε (εμπνευσμένα από τα [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
+Γενικά, θέλουμε (εμπνευσμένα από τα [CSS Guidelines](https://cssguidelin.es/#syntax-and-formatting)):
 
 * δύο (2) κενά για indentation, όχι tabs,
 * ιδανικά, 80 χαρακτήρες ανά γραμμή,
@@ -20,7 +20,7 @@
 
 ### Κωδικοποίηση
 
-Για την αποφυγή πιθανού προβλήματος με την κωδικοποίηση χαρακτήρων, συνιστάται ιδιαίτερα να εφαρμοστεί κωδικοποίηση [UTF-8](http://en.wikipedia.org/wiki/UTF-8) στο [main stylesheet](#main) χρησιμοποιώντας το `@charset` directive. Βεβαιώσου ότι είναι το πρώτο πρώτο στοιχείο του stylesheet και ότι δεν υπάρχει κάποιος χαρακτήρας οποιουδήποτε είδους πριν από αυτό.
+Για την αποφυγή πιθανού προβλήματος με την κωδικοποίηση χαρακτήρων, συνιστάται ιδιαίτερα να εφαρμοστεί κωδικοποίηση [UTF-8](https://en.wikipedia.org/wiki/UTF-8) στο [main stylesheet](#main) χρησιμοποιώντας το `@charset` directive. Βεβαιώσου ότι είναι το πρώτο πρώτο στοιχείο του stylesheet και ότι δεν υπάρχει κάποιος χαρακτήρας οποιουδήποτε είδους πριν από αυτό.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -40,7 +40,7 @@
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-  <p>Σύμφωνα με τις προδιαγραφές της CSS, το <code>@charset</code> directive πρέπει να δηλώνεται με διπλά εισαγωγικά <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">για να θεωρείται έγκυρο</a>. Παρόλα αυτά, η Sass φροντίζει γι' αυτό όταν κάνει compile σε CSS οπότε ο τρόπος που θα το γράψεις δεν έχει αντίκτυπο στο τελικό αποτέλεσμα. Μπορείς να μείνεις με ασφάλεια στα μονά εισαγωγικά, ακόμη και για το <code>@charset</code>.</p>
+  <p>Σύμφωνα με τις προδιαγραφές της CSS, το <code>@charset</code> directive πρέπει να δηλώνεται με διπλά εισαγωγικά <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">για να θεωρείται έγκυρο</a>. Παρόλα αυτά, η Sass φροντίζει γι' αυτό όταν κάνει compile σε CSS οπότε ο τρόπος που θα το γράψεις δεν έχει αντίκτυπο στο τελικό αποτέλεσμα. Μπορείς να μείνεις με ασφάλεια στα μονά εισαγωγικά, ακόμη και για το <code>@charset</code>.</p>
 </div>
 
 ### Strings σαν τιμές CSS
@@ -95,7 +95,7 @@
 
 {% include snippets/syntax/09/index.html %}
 
-Σημειώστε ότι το να προσθέσουμε *0 μέλη αυτής της μονάδας* επίσης λειτουργεί, αλλά θα προτιμούσα να προτείνω την προαναφερθείσα μέθοδο επειδή η πρόσθεση *0 μονάδων* μπορεί να μας μπερδέψει. Πράγματι, όταν προσπαθούμε να μετατρέψουμε έναν αριθμό σε μία άλλη συμβατή μονάδα, το να προσθέσουμε το 0 δεν έχει το αναμενόμενο αποτέλεσμα. Μπορείτε να διαβάσετε περισσότερα για αυτό το θέμα σε [αυτό το άρθρο](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
+Σημειώστε ότι το να προσθέσουμε *0 μέλη αυτής της μονάδας* επίσης λειτουργεί, αλλά θα προτιμούσα να προτείνω την προαναφερθείσα μέθοδο επειδή η πρόσθεση *0 μονάδων* μπορεί να μας μπερδέψει. Πράγματι, όταν προσπαθούμε να μετατρέψουμε έναν αριθμό σε μία άλλη συμβατή μονάδα, το να προσθέσουμε το 0 δεν έχει το αναμενόμενο αποτέλεσμα. Μπορείτε να διαβάσετε περισσότερα για αυτό το θέμα σε [αυτό το άρθρο](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/).
 
 {% include snippets/syntax/10/index.html %}
 
@@ -105,7 +105,7 @@
 
 {% include snippets/syntax/11/index.html %}
 
-Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις. [Use lengths, not strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις. [Use lengths, not strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Υπολογισμοί
 
@@ -115,30 +115,30 @@
 
 ### Μαγικοί αριθμοί
 
-Ο "Μαγικός αριθμός" είναι ένας όρος της [παλιάς σχολής προγραμματισμού](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) για την *unnamed αριθμητική σταθερά*. Βασικά, είναι απλά ένας τυχαίος αριθμός ο οποίος συμβαίνει *απλά να δουλεύει* (*just work*™) ενώ δεν συνδέεται με καμία λογική εξήγηση.
+Ο "Μαγικός αριθμός" είναι ένας όρος της [παλιάς σχολής προγραμματισμού](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) για την *unnamed αριθμητική σταθερά*. Βασικά, είναι απλά ένας τυχαίος αριθμός ο οποίος συμβαίνει *απλά να δουλεύει* (*just work*™) ενώ δεν συνδέεται με καμία λογική εξήγηση.
 
 Περιττό να πω ότι **οι μαγικοί αριθμοί είναι κατάρα και πρέπει να αποφεύγονται πάση θυσία**. Όταν δεν καταφέρνεις να βρεις μια λογική εξήγηση γιατί ένας αριθμός λειτουργεί, πρόσθεσε ένα εκτενές σχόλιο που να εξηγεί πώς έφτασες εκεί και γιατί πιστεύεις ότι λειτουργεί. Το να παραδεχτείς ότι δεν ξέρεις για ποιο λόγο λειτουργεί κάτι, είναι πιο βοηθητικό για τον επόμενο developer από το να τον αφήσεις να καταλάβει μόνος του από το μηδέν τι συμβαίνει.
 
 {% include snippets/syntax/13/index.html %}
 
-Πάνω στο θέμα, το CSS-Tricks έχει ένα [καταπληκτικό άρθρο](http://css-tricks.com/magic-numbers-in-css/) σχετικά με τα magic numbers στη CSS το οποίο σας ενθαρρύνω να διαβάσετε.
+Πάνω στο θέμα, το CSS-Tricks έχει ένα [καταπληκτικό άρθρο](https://css-tricks.com/magic-numbers-in-css/) σχετικά με τα magic numbers στη CSS το οποίο σας ενθαρρύνω να διαβάσετε.
 
 ## Χρώματα
 
-Τα χρώματα έχουν σημαντική θέση στη CSS. Φυσικά, η Sass καταλήγει να είναι ένας πολύτιμος σύμμαχος όσον αφορά τη χρήση χρωμάτων, κυρίως προσφέροντας πολλές [δυνατές συναρτήσεις](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Τα χρώματα έχουν σημαντική θέση στη CSS. Φυσικά, η Sass καταλήγει να είναι ένας πολύτιμος σύμμαχος όσον αφορά τη χρήση χρωμάτων, κυρίως προσφέροντας πολλές [δυνατές συναρτήσεις](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 Η Sass είναι τόσο χρήσιμη σε ό,τι έχει να κάνει με την διαχείριση χρωμάτων που έχουν εμφανιστεί διάφορα άρθρα στο internet σχετικά με αυτό ακριβώς το θέμα. Επιτρέψτε μου να σας συστήσω μερικά:
 
  * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
- * [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
- * [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+ * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
+ * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ### Τύποι χρωμάτων
 
 Για να κάνεις τα χρώματα όσο πιο απλά γίνεται, η συμβουλή μου είναι να τηρήσεις την ακόλουθη σειρά προτίμησης για τους τύπους χρωμάτων:
 
-1. [Συμβολισμός HSL](http://en.wikipedia.org/wiki/HSL_and_HSV);
-1. [Συμβολισμός RGB](http://en.wikipedia.org/wiki/RGB_color_model);
+1. [Συμβολισμός HSL](https://en.wikipedia.org/wiki/HSL_and_HSV);
+1. [Συμβολισμός RGB](https://en.wikipedia.org/wiki/RGB_color_model);
 1. Δεκαεξαδικός συμβολισμός (με μικρά γράμματα και συντομευμένος).
 
 Δεν πρέπει να χρησιμοποιούνται οι λέξεις κλειδιά CSS χρωμάτων, εκτός αν πρόκεται για γρήγορα πρωτότυπα. Πράγματι, είναι αγγλικές λέξεις και μερικές από αυτές δεν περιγράφουν πολύ καλά το χρώμα που αντιπροσωπεύουν, ειδικά για κάποιους που η μητρική τους γλώσσα δεν είναι τα αγγλικά. Εκτός αυτού, οι λέξεις κλειδιά δεν είναι απόλυτα σωστές εννοιολογικά· για παράδειγμα το `grey` (γκρι) είναι στην πραγματικότητα πιο σκούρο από το `darkgrey` (σκούρο γκρι), και η σύγχυση μεταξύ του `grey` και του `gray` μπορεί να οδηγήσει σε αντιφατικές χρήσεις του χρώματος.
@@ -165,13 +165,13 @@
 
 {% include snippets/syntax/17/index.html %}
 
-Με αυτό τον τρόπο προλαμβάνουμε μια αλλαγή θέματος που να οδηγεί σε κάτι σαν το `$sass-pink: blue`. [Αυτό το άρθρο](http://davidwalsh.name/sass-color-variables-dont-suck) κάνει πολύ καλή δουλειά στο να εξηγήσει το πόσο σημαντικό είναι να δώσετε προσοχή στις μεταβλητές χρωμάτων.
+Με αυτό τον τρόπο προλαμβάνουμε μια αλλαγή θέματος που να οδηγεί σε κάτι σαν το `$sass-pink: blue`. [Αυτό το άρθρο](https://davidwalsh.name/sass-color-variables-dont-suck) κάνει πολύ καλή δουλειά στο να εξηγήσει το πόσο σημαντικό είναι να δώσετε προσοχή στις μεταβλητές χρωμάτων.
 
 ### Κάνοντας τα χρώματα πιο φωτεινά και πιο σκόυρα
 
-Τόσο η συνάρτηση [`lighten`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) όσο και η [`darken`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) τροποποιούν την φωτεινότητα ενός χρώματος στο διάστημα HSL προσθέτοντας ή αφαιρώντας από τη φωτεινότητα σε αυτό το διάστημα. Βασικά, δεν είναι τίποτα παραπάνω από ψευδώνυμα για την παράμετρο `$lightness` της συνάρτησης [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
+Τόσο η συνάρτηση [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) όσο και η [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) τροποποιούν την φωτεινότητα ενός χρώματος στο διάστημα HSL προσθέτοντας ή αφαιρώντας από τη φωτεινότητα σε αυτό το διάστημα. Βασικά, δεν είναι τίποτα παραπάνω από ψευδώνυμα για την παράμετρο `$lightness` της συνάρτησης [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
-Το θέμα είναι ότι αυτές οι συναρτήσεις συχνά δεν παρέχουν το αναμενόμενο αποτέλεσμα. Από την άλλη η συνάρτηση [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) είναι ένας ωραίος τρόπος για να κάνεις πιο φωτεινό ή πιο σκούρο ένα χρώμα αναμιγνύοντάς το είτε με το `white` (άσπρο) ή με το `black` (μαύρο).
+Το θέμα είναι ότι αυτές οι συναρτήσεις συχνά δεν παρέχουν το αναμενόμενο αποτέλεσμα. Από την άλλη η συνάρτηση [`mix`](https://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) είναι ένας ωραίος τρόπος για να κάνεις πιο φωτεινό ή πιο σκούρο ένα χρώμα αναμιγνύοντάς το είτε με το `white` (άσπρο) ή με το `black` (μαύρο).
 
 Το πλεονέκτημα του να χρησιμοποιείς το `mix` αντί για κάποια από τις δύο προαναφερθείσες συναρτήσεις είναι ότι πηγαίνει προοδευτικά στο μαύρο (ή το άσπρο) καθώς μειώνεις το ποσοστό του χρώματος, ενώ το `darken` και το `lighten` υπερκαλύπτουν γρήγορα όλο το χρώμα με μαύρο ή άσπρο.
 
@@ -182,7 +182,7 @@
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>Η συνάρτηση <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> είναι σχεδιασμένη έτσι ώστε να αυξομειώνει πιο ομαλά τα properties λαμβάνοντας υπόψη πόσο υψηλά η χαμηλά είναι ήδη. Παράγει αποτελέσματα που είναι το ίδιο όμορφα με τα αποτελέσματα της <code>mix</code> αλλά με πιο καθαρές κλήσεις. Ωστόσο ο συντελεστής προσαύξησης δεν είναι ακριβώς ο ίδιος.</p>
+  <p>Η συνάρτηση <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> είναι σχεδιασμένη έτσι ώστε να αυξομειώνει πιο ομαλά τα properties λαμβάνοντας υπόψη πόσο υψηλά η χαμηλά είναι ήδη. Παράγει αποτελέσματα που είναι το ίδιο όμορφα με τα αποτελέσματα της <code>mix</code> αλλά με πιο καθαρές κλήσεις. Ωστόσο ο συντελεστής προσαύξησης δεν είναι ακριβώς ο ίδιος.</p>
 </div>
 
 ## Λίστες
@@ -203,7 +203,7 @@
 
 {% include snippets/syntax/20/index.html %}
 
-Σε [αυτό το άρθρο](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/), σας προσφέρω αρκετές συμβουλές και κόλπα για το πώς να διαχειριστείτε σωστά lists στη Sass.
+Σε [αυτό το άρθρο](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), σας προσφέρω αρκετές συμβουλές και κόλπα για το πώς να διαχειριστείτε σωστά lists στη Sass.
 
 ## Maps
 
@@ -224,11 +224,11 @@
 
 {% include snippets/syntax/21/index.html %}
 
-Τα αρθρα σχετικά με τα Sass maps είναι πολλά και προδίδουν πόσο πολυπόθητο ήταν αυτό το χαρακτηριστικό. Εδώ είναι 3 άρθρα που σας συστήνω να διαβάσετε: [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
+Τα αρθρα σχετικά με τα Sass maps είναι πολλά και προδίδουν πόσο πολυπόθητο ήταν αυτό το χαρακτηριστικό. Εδώ είναι 3 άρθρα που σας συστήνω να διαβάσετε: [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](https://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
 ## Σετ κανόνων CSS
 
-Σε αυτό το σημείο, αυτό είναι πάνω κάτω μια επανάληψη όσων γνωρίζουν όλοι, αλλά ορίστε πώς πρέπει να γράφεται ένα σετ κανόνων CSS (τουλάχιστον σύμφωνα με τα περισσότερα guidelines, συμπεριλαμβανομένων και των [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+Σε αυτό το σημείο, αυτό είναι πάνω κάτω μια επανάληψη όσων γνωρίζουν όλοι, αλλά ορίστε πώς πρέπει να γράφεται ένα σετ κανόνων CSS (τουλάχιστον σύμφωνα με τα περισσότερα guidelines, συμπεριλαμβανομένων και των [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * σχετικοί selectors στην ίδια γραμμή· άσχετοι selectors σε νέες γραμμές·
 * η αγκύλη που ανοίγει τις δηλώσεις (`{`) να χωρίζεται από τον τελευταίο selector με ένα κενό·
@@ -273,7 +273,7 @@
 
 {% include snippets/syntax/28/index.html %}
 
-Πρέπει να πω ότι ούτε εγώ δεν μπορώ να αποφασίσω. Μία [πρόσφατη δημοσκόπηση στο CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) είχε ως αποτέλεσμα ότι πάνω από το 45% των developers ταξινομεί τις δηλώσεις κατά τύπο ενώ το 14% ταξινομεί αλφαβητικά. Ακόμη, υπάρχει κι ένα 39% που τις ταξινομεί τελείως τυχαία, συμπεριλαμβανομένου και εμού.
+Πρέπει να πω ότι ούτε εγώ δεν μπορώ να αποφασίσω. Μία [πρόσφατη δημοσκόπηση στο CSS-Tricks](https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) είχε ως αποτέλεσμα ότι πάνω από το 45% των developers ταξινομεί τις δηλώσεις κατά τύπο ενώ το 14% ταξινομεί αλφαβητικά. Ακόμη, υπάρχει κι ένα 39% που τις ταξινομεί τελείως τυχαία, συμπεριλαμβανομένου και εμού.
 
 {% include images/order-poll.html %}
 
@@ -305,7 +305,7 @@
 
 {% include snippets/syntax/32/index.html %}
 
-Αυτή η μέθοδος χρησιμοποιείται συχνά μαζί με τις [Συνθήκες ονομασίας BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) για να παράγει selectors `.block__element` και `.block--modifier` βασισμένους στον αρχικό selector (πχ. `.block` σε αυτή την περίπτωση).
+Αυτή η μέθοδος χρησιμοποιείται συχνά μαζί με τις [Συνθήκες ονομασίας BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) για να παράγει selectors `.block__element` και `.block--modifier` βασισμένους στον αρχικό selector (πχ. `.block` σε αυτή την περίπτωση).
 
 <div class="note">
   <p>Μπορεί να είναι ανεπίσημο, αλλά η παραγωγή νέων selectors με αναφορά στον τρέχοντα selector (<code>&</code>) καθιστά αδύνατη την αναζήτηση αυτών των selectors στην codebase αφού δεν υπάρχουν καθ' εαυτοί.</p>
@@ -319,7 +319,7 @@
 
 Για να αποφύγουμε μια τέτοια κατάσταση, συνηθίζαμε να μιλάμε για το [Inception rule](http://thesassway.com/beginner/the-inception-rule) πριν απο μερικά χρόνια. Αυτό συμβούλευε κατά της εμφώλευσης πέραν των 3 επιπέδων, έχοντας ως σημείο αναφοράς την ταινία Inception του Christopher Nolan. Θα ήθελα να γίνω λίγο πιο δραστικός και να προτείνω την **αποφυγή εμφωλευμένων selectors όσο το δυνατόν περισσότερο**.
 
- Ενώ υπάρχουν πολλές προφανείς εξαιρέσεις στον κανόνα όπως θα δούμε στο επόμενο τμήμα, αυτή η άποψη φαίνεται να είναι αρκετά δημοφιλής. Μπορείτε να διαβάσετε γι' αυτό με περισσότερες λεπτομέρειες στο [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/) και στο [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+ Ενώ υπάρχουν πολλές προφανείς εξαιρέσεις στον κανόνα όπως θα δούμε στο επόμενο τμήμα, αυτή η άποψη φαίνεται να είναι αρκετά δημοφιλής. Μπορείτε να διαβάσετε γι' αυτό με περισσότερες λεπτομέρειες στο [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) και στο [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 ### Εξαιρέσεις
 

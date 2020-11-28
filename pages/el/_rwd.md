@@ -11,7 +11,7 @@
 
 {% include snippets/rwd/01/index.html %}
 
-[Σ' αυτό το σημείο](http://css-tricks.com/naming-media-queries/), οποιαδήποτε ονοματολογική σύμβαση ξεκαθαρίζει ότι ένα design δεν είναι άμεσα συνδεδεμένο με ένα συγκεκριμένο είδος συσκευής, μας κάνει, αρκεί να προκύπτει μια τάξη μεγέθους από το όνομα.
+[Σ' αυτό το σημείο](https://css-tricks.com/naming-media-queries/), οποιαδήποτε ονοματολογική σύμβαση ξεκαθαρίζει ότι ένα design δεν είναι άμεσα συνδεδεμένο με ένα συγκεκριμένο είδος συσκευής, μας κάνει, αρκεί να προκύπτει μια τάξη μεγέθους από το όνομα.
 
 {% include snippets/rwd/02/index.html %}
 
@@ -27,7 +27,7 @@
 
 <div class="note">
   <p>Προφανώς, πρόκειται για έναν απλουστευμένο διαχειριστή των breakpoints. Αν χρειάζεστε κάτι πιο ευέλικτο, προτείνω να μην ανακαλύψετε ξανά τον τροχό και να χρησιμοποιήσετε κάτι που έχει αποδειχτεί αποτελεσματικό όπως το <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, το <a href="http://breakpoint-sass.com/">Breakpoint</a> ή το <a href="https://github.com/eduardoboucas/include-media">include-media</a>.</p>
-   <p>Αν ψάχνετε περισσότερο υλικό για διάβασμα στο πώς να προσεγγίσετε τα Media Queries στη Sass, τόσο το <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (από τον υποφαινόμενο) όσο και το <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> έχουν ωραία άρθρα σχετικά με το θέμα αυτό.</p>
+   <p>Αν ψάχνετε περισσότερο υλικό για διάβασμα στο πώς να προσεγγίσετε τα Media Queries στη Sass, τόσο το <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (από τον υποφαινόμενο) όσο και το <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> έχουν ωραία άρθρα σχετικά με το θέμα αυτό.</p>
 </div>
 
 ## Χρήση των media Queries

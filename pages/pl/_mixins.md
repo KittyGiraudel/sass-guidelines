@@ -19,8 +19,8 @@ Innym słusznym przykładem może być mixin do określenia rozmiarów elementu,
 
 ###### Dalsze informacje
 
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
+* [Sass Mixins to Kickstart your Project](https://www.sitepoint.com/sass-mixins-kickstart-project/)
+* [A Sass Mixin for CSS Triangles](https://www.sitepoint.com/sass-mixin-css-triangles/)
 
 ## Mixiny bezargumentowe
 
@@ -44,13 +44,13 @@ Sass jest dosyć sprytny jeśli chodzi o deklaracje mixinów i funkcji, do tego 
 
 ###### Dalsze informacje
 
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+* [Sass Multiple Arguments, Lists or Arglist](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
 ## Mixiny a vendor prefixy
 
 Definiowanie własnych mixinów do radzenia sobie z vendor prefixami dla niewspieranych lub częściowo wspieranych własności CSS może być kuszące. My jednak tego nie chcemy. Przede wszystkim, jeśli można użyć [Autoprefixera](https://github.com/postcss/autoprefixer), warto to zrobić. Został on napisany do tego celu i zrobi to bez wątpienia lepiej.
 
-Niestety, zdarzają się przypadki w których z Autoprefixera skorzystać nie możemy. Jeśli natomiast używamy [Bourbona](http://bourbon.io/) albo [Compassu](http://compass-style.org/), oba rozwiązania radzą sobie z vendor prefixami same.
+Niestety, zdarzają się przypadki w których z Autoprefixera skorzystać nie możemy. Jeśli natomiast używamy [Bourbona](https://bourbon.io/) albo [Compassu](http://compass-style.org/), oba rozwiązania radzą sobie z vendor prefixami same.
 
 Jeśli jednak nie można skorzystać ani z Autoprefixera, ani z Bourbona czy Compassu, wtedy i tylko wtedy, można tworzyć własne mixiny dla prefixowania własności CSSa. Proszę jednak by nie tworzyć osobnych mixinów dla każdej z własności.
 
@@ -69,4 +69,4 @@ Proszę mieć jednak na uwadze, że jest to dosyć kiepskie rozwiązanie. Na prz
 ###### Dalsze informacje
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Building a Linear-Gradient Mixin](https://www.sitepoint.com/building-linear-gradient-mixin-sass/)

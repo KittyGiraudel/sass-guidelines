@@ -13,7 +13,7 @@ Queste linee guida sono abbastanza lunghe e a volte è meglio avere accesso ad u
 
 * Un'indentazione va fatta con due (2) spazi, nessun tab. [↩](#sintassi-e-formattazione)
 * Le linee di testo dovrebbero essere più corte di 80 caratteri. Sentitevi liberi di dividere una linea in più linee, quando necessario. [↩](#sintassi-e-formattazione)
-* Il CSS dovrebbe essere scritto in modo corretto, seguite le [Linee guida CSS](http://cssguidelin.es) di Harry Roberts, se potete. [↩](#sintassi-e-formattazione)
+* Il CSS dovrebbe essere scritto in modo corretto, seguite le [Linee guida CSS](https://cssguidelin.es) di Harry Roberts, se potete. [↩](#sintassi-e-formattazione)
 * Gli spazi sono gratis, usateli per separare elementi, regole e dichiarazioni. Non esistate a lasciare linee vuote, non fa' mai male. [↩](#sintassi-e-formattazione)
 
 ### Stringhe

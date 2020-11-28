@@ -26,7 +26,7 @@ Quando commenti parti specifiche in Sass, usa commenti inline piuttosto che il b
 
 {% include snippets/comments/02/index.html %}
 
-Questo approccio è consiglato anche da CSS guidelines nella sezione [Commenting](http://cssguidelin.es/#commenting).
+Questo approccio è consiglato anche da CSS guidelines nella sezione [Commenting](https://cssguidelin.es/#commenting).
 
 ## Documentazione
 

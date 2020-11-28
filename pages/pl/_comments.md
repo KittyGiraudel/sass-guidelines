@@ -28,7 +28,7 @@ Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych k
 
 ###### Dalsze informacje
 
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+* [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
 ## Dokumentowanie
 
@@ -53,4 +53,4 @@ Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
 ###### Dalsze informacje
 
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

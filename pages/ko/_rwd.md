@@ -27,7 +27,7 @@
 
 <div class="note">
 <p>확실히, 이건 아주 단순한 브레이크포인트 매니저입니다. 좀 더 많은 기능을 제공하는 브레이크포인트 매니저가 필요하다면, 바퀴를 새로 발명할 것 없이 <a href="https://github.com/sass-mq/sass-mq">Sass-MQ</a>, <a href="http://breakpoint-sass.com/">Breakpoint</a>, <a href="https://github.com/eduardoboucas/include-media">include-media</a>와 같은 효과가 검증된 것을 사용하기를 권합니다.</p>
-<p>Sass에서 미디어 쿼리에 접근하는 방법에 대한 글을 더 읽어보고 싶다면, <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a>와 <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> 모두 이에 대한 멋진 글을 제공합니다.</p>
+<p>Sass에서 미디어 쿼리에 접근하는 방법에 대한 글을 더 읽어보고 싶다면, <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a>와 <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> 모두 이에 대한 멋진 글을 제공합니다.</p>
 </div>
 
 ## 미디어 쿼리 사용법

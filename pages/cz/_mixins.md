@@ -19,9 +19,9 @@ Dalším příkladem může být mixin pro nastavení velikosti elementu, který
 
 ###### Další četba
 
-* [Sass Mixins to Kickstart your Project](http://www.sitepoint.com/sass-mixins-kickstart-project/)
-* [A Sass Mixin for CSS Triangles](http://www.sitepoint.com/sass-mixin-css-triangles/)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Sass Mixins to Kickstart your Project](https://www.sitepoint.com/sass-mixins-kickstart-project/)
+* [A Sass Mixin for CSS Triangles](https://www.sitepoint.com/sass-mixin-css-triangles/)
+* [Building a Linear-Gradient Mixin](https://www.sitepoint.com/building-linear-gradient-mixin-sass/)
 
 ## Seznam argumentů
 
@@ -37,13 +37,13 @@ Sass je vlastně pěkně chytrý, co se deklarace mixinů a funkcí týče. Tak 
 
 ###### Další četba
 
-* [Sass Multiple Arguments, Lists or Arglist](http://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
+* [Sass Multiple Arguments, Lists or Arglist](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/)
 
 ## Mixiny a vendor prefixy
 
 Mohlo by být lákavé, udělat si vlastní mixin, který vám bude přidávat vendor prefixy pro nepodporovatelné, nebo částečně podporované, CSS vlastnosti. Ale to není to, co chceme. Za prvé, pokud můžete použít [Autoprefixer](https://github.com/postcss/autoprefixer), použijte Autoprefixer. Díky němu nebudete muset v Sassu psát přebyteční kód a ten bude vždy aktuální a vždy udělá lepší práci, než-li vaše prefixující věci.
 
-Bohužel vždy není možné Autoprefixer použít. Pokud používáte [Bourbon](http://bourbon.io/) nebo [Compass](http://compass-style.org/), asi již pravděpodobně víte, že oba mají kolekci mixinů, které se o vendor prefixy starají. Použijte je.
+Bohužel vždy není možné Autoprefixer použít. Pokud používáte [Bourbon](https://bourbon.io/) nebo [Compass](http://compass-style.org/), asi již pravděpodobně víte, že oba mají kolekci mixinů, které se o vendor prefixy starají. Použijte je.
 
 Pokud nemůžete použít Autoprefixer ani Bourbon nebo Compass, pak a jen tehdy můžete použít svůj vlastní mixin, který se s prefixováním CSS vlastností popere. Ale, prosím vás, nedělejte pro každou vlastnost svůj vlastní mixin, který ručně vypíše každý vendor.
 
@@ -62,4 +62,4 @@ Prosím, vemte na vědomí, že je to velmi špatné řešení. Například se t
 ###### Další četba
 
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
-* [Building a Linear-Gradient Mixin](http://www.sitepoint.com/building-linear-gradient-mixin-sass/)
+* [Building a Linear-Gradient Mixin](https://www.sitepoint.com/building-linear-gradient-mixin-sass/)

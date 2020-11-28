@@ -7,9 +7,9 @@ Afortunadamente, uno de los principales beneficios de utilizar un preprocesador 
 
 Además, también quiero hacer hincapié en la necesidad de utilizar carpetas, incluso para los proyectos a pequeña escala. En casa, no guardas todos tus documentos en el mismo cajón sin más. Utilizas carpetas; una para la casa/apartamento, otra para el banco, otra para las facturas y así sucesivamente. No hay razón para hacer lo contrario cuando se estructura un proyecto CSS. Divide el código en carpetas significativas para que sea sencillo encontrar las cosas más tarde cuando tengas que volver al código de nuevo.
 
-Hay una gran cantidad de [arquitecturas populares - En inglés](http://www.sitepoint.com/look-different-sass-architectures/) para los proyectos CSS: [OOCSS](http://oocss.org/), [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/) o similare. Todas ellas tienen sus méritos, pros y contras.
+Hay una gran cantidad de [arquitecturas populares - En inglés](https://www.sitepoint.com/look-different-sass-architectures/) para los proyectos CSS: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/), [Foundation](https://get.foundation/) o similare. Todas ellas tienen sus méritos, pros y contras.
 
-Yo utilizo un método que resulta ser bastante similar a [SMACSS](https://smacss.com/) de [Jonathan Snook](http://snook.ca/), que se centra en mantener las cosas simples y evidentes.
+Yo utilizo un método que resulta ser bastante similar a [SMACSS](https://smacss.com/) de [Jonathan Snook](https://snook.ca/), que se centra en mantener las cosas simples y evidentes.
 
 <div class="note">
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta hasta que encuentres un sistema que se adapte a tus necesidades.</p>
@@ -219,7 +219,7 @@ Cuando se usa Ruby Sass, hay una gema de Ruby llamada [sass-globbing](https://gi
 
 ## El Archivo De La Verguenza
 
-Hay un concepto interesante que ha popularizado [Harry Roberts](http://csswizardry.com), [Dave Rupert](http://daverupert.com) y [Chris Coyier](http://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un [archivo de la verguenza](http://csswizardry.com/2013/04/shame-css-full-net-interview/). Este archivo, titulado dramáticamente `_shame.scss`, se importará después de los demás archivos, al final de la hoja de estilo.
+Hay un concepto interesante que ha popularizado [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) y [Chris Coyier](https://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un [archivo de la verguenza](https://csswizardry.com/2013/04/shame-css-full-net-interview/). Este archivo, titulado dramáticamente `_shame.scss`, se importará después de los demás archivos, al final de la hoja de estilo.
 
 {% include snippets/architecture/04/index.html %}
 

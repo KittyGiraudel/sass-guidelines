@@ -11,7 +11,7 @@
 
 {% include snippets/rwd/01/index.html %}
 
-就此来说，任何不与特定设备关联而表达清晰的[命名约定](http://css-tricks.com/naming-media-queries/)，都会因其广泛的通用性获得认可。
+就此来说，任何不与特定设备关联而表达清晰的[命名约定](https://css-tricks.com/naming-media-queries/)，都会因其广泛的通用性获得认可。
 
 {% include snippets/rwd/02/index.html %}
 
@@ -26,7 +26,7 @@
 {% include snippets/rwd/03/index.html %}
 
 <div class="note">
-  <p>更多有关 Sass 中媒体查询的信息，请参考 <a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> 和 <a href="http://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> 中优秀的实践文章。</p>
+  <p>更多有关 Sass 中媒体查询的信息，请参考 <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> 和 <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> 中优秀的实践文章。</p>
 </div>
 
 ## 媒体查询用法

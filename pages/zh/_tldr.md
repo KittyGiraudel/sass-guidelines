@@ -13,7 +13,7 @@
 
 * 使用两个空格代表缩进，而不是使用tab键。[↩](#section-9)
 * 理想上，每行保持为 80 个字符宽度。[↩](#section-9)
-* 根据 [CSS Guidelines](http://cssguidelin.es) 正确书写 CSS 属性。[↩](#section-9)
+* 根据 [CSS Guidelines](https://cssguidelin.es) 正确书写 CSS 属性。[↩](#section-9)
 * 有意义的使用空格。[↩](#section-9)
 
 ### 字符串

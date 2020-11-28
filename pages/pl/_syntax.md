@@ -5,7 +5,7 @@ Pierwszą rzeczą, jaką powinien się zająć przewodnik po stylu jest niewątp
 
 Kiedy CSSem w tym samym projekcie zajmuje się kilku deweloperów, zazwyczaj jest to tylko kwestią czasu kiedy ktoś zacznie pisać rzeczy po swojemu. Przewodniki po stylu kodu, które promują spójność nie tylko temu zapobiegają, lecz także pomagają w czytaniu i aktualizowaniu kodu.
 
-W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http://cssguidelin.es/#syntax-and-formatting)):
+W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](https://cssguidelin.es/#syntax-and-formatting)):
 
 * indentacji składających się z (2) spacji, bez tabulatorów,
 * najlepiej 80 znaków w linii,
@@ -42,7 +42,7 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
 {% include snippets/syntax/03/index.html %}
 
 <div class="note">
-  <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="http://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
+  <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
 </div>
 
 ### Ciągi jako wartości w CSSie
@@ -69,7 +69,7 @@ Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
 
 ###### Dalsze informacje
 
-* [All You Ever Need to Know About Sass Interpolation](http://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+* [All You Ever Need to Know About Sass Interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/HugoGiraudel/SassyStrings)
 
 ## Liczby
@@ -122,7 +122,7 @@ Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekol
 
 ### Liczby magiczne
 
-Liczby magiczne są elementem [programowania starego typu](http://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
+Liczby magiczne są elementem [programowania starego typu](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
 
 Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cenę**. Jeśli nie można sobie poradzić ze znalezieniem rozsądnego wytłumaczenia dlaczego dana liczba jest po prostu odpowiednia, pamiętajmy się o dodaniu wyczerpującego komentarza wyjaśniającego dlaczego na taką liczbę się zdecydowaliśmy i dlaczego się ona tutaj sprawdza. Przyznanie się do tego, że czegoś do końca nie wiemy jest zawsze lepsze dla innego dewelopera, niż pozostawianie im takiej łamigłówki do rozwiązania.
 
@@ -130,21 +130,21 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 
 ###### Dalsze informacje
 
-* [Use Lengths, Not Strings](http://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
-* [Correctly Adding Unit to Number](http://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
-* [Magic Numbers in CSS](http://css-tricks.com/magic-numbers-in-css/)
+* [Use Lengths, Not Strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Correctly Adding Unit to Number](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
+* [Magic Numbers in CSS](https://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
 ## Barwy
 
-Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się już do tego przyzwyczaić, Sass jest cennym pomocnikiem także w kwestii manipulacji barwami, głównie za zasługą jego [funkcji](http://sass-lang.com/documentation/Sass/Script/Functions.html).
+Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się już do tego przyzwyczaić, Sass jest cennym pomocnikiem także w kwestii manipulacji barwami, głównie za zasługą jego [funkcji](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
 ### Formaty barw
 
 Aby uczynić zagadnienie dotyczące barw najprostszym jak się tylko da, zalecałbym uszanować następujący porządek preferencji, jeśli chodzi o formaty barw:
 
-1. [HSL](http://pl.wikipedia.org/wiki/HSL);
-2. [RGB](http://pl.wikipedia.org/wiki/RGB);
+1. [HSL](https://pl.wikipedia.org/wiki/HSL);
+2. [RGB](https://pl.wikipedia.org/wiki/RGB);
 3. Określenia szesnastkowe (małymi literami i skrócone).
 
 Słowa kluczowe reprezentujące barwy nie powinny być używane, za wyjątkiem szybkiego prototypowania projektu. Są one słowami z języka angielskiego i często, zwłaszcza dla osób dla których język angielski nie jest językiem ojczystym, nie najlepiej opisują kolor, jaki reprezentują. Ponadto, słowa kluczowe nie są w pełni semantyczne, np. `grey` jest faktycznie ciemniejszy od `darkgrey`, a mylenie `grey` i `gray` może prowadzić do niekonsekwentnego używania tego koloru.
@@ -175,9 +175,9 @@ Robiąc to w ten sposób zapobiega się sytuacji, w której zmiana motywu doprow
 
 ### Rozjaśnianie i przyciemnianie barw
 
-Funkcje służące zarówno [`rozjaśnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](http://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie od tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](http://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
+Funkcje służące zarówno [`rozjaśnianiu`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie od tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
-Rzecz w tym, że te funkcje często nie prowadzą do takich rezultatów, jakich od nich oczekujemy. Z drugiej jednak strony, funkcja [`mix`](http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) jest ciekawym rozwiązaniem dla rozjaśniania lub przyciemniania barw. Robi to poprzez mieszanie koloru z barwą `white` (białą), lub `black` (czarną).
+Rzecz w tym, że te funkcje często nie prowadzą do takich rezultatów, jakich od nich oczekujemy. Z drugiej jednak strony, funkcja [`mix`](https://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method) jest ciekawym rozwiązaniem dla rozjaśniania lub przyciemniania barw. Robi to poprzez mieszanie koloru z barwą `white` (białą), lub `black` (czarną).
 
 Korzyścią z używania funkcji `mix`, zamiast jednej z tych poprzednio wspomnianych, jest niewątpliwie fakt, że zapewnia ona progresywne przejście do czerni (lub bieli) w trakcie zmniejszania proporcji głównego koloru, w czasie gdy funkcje `darken` i `lighten` w sposób o wiele bardziej nagły wytracają nasz kolor.
 
@@ -188,16 +188,16 @@ Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, 
 {% include snippets/syntax/18/index.html %}
 
 <div class="note">
-  <p>Funkcja <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
+  <p>Funkcja <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
 </div>
 
 ###### Dalsze informacje
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
-* [Sass Color Variables That Don’t Suck](http://davidwalsh.name/sass-color-variables-dont-suck)
-* [Using Sass to Build Color Palettes](http://www.sitepoint.com/using-sass-build-color-palettes/)
-* [Dealing with Color Schemes in Sass](http://www.sitepoint.com/dealing-color-schemes-sass/)
+* [Sass Color Variables That Don’t Suck](https://davidwalsh.name/sass-color-variables-dont-suck)
+* [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
+* [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
 ## Listy
 
@@ -219,8 +219,8 @@ Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już A
 
 ###### Dalsze informacje
 
-* [Understanding Sass lists](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
-* [SassyLists](http://sassylists.com)
+* [Understanding Sass lists](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [SassyLists](https://at-import.github.io/SassyLists/)
 
 ## Mapy
 
@@ -243,19 +243,19 @@ Przykład:
 
 ###### Dalsze informacje
 
-* [Using Sass Maps](http://www.sitepoint.com/using-sass-maps/)
-* [Debugging Sass Maps](http://www.sitepoint.com/debugging-sass-maps/)
-* [Extra Map functions in Sass](http://www.sitepoint.com/extra-map-functions-sass/)
+* [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/)
+* [Debugging Sass Maps](https://www.sitepoint.com/debugging-sass-maps/)
+* [Extra Map functions in Sass](https://www.sitepoint.com/extra-map-functions-sass/)
 * [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)
-* [Sass Maps are Awesome](http://viget.com/extend/sass-maps-are-awesome)
+* [Sass Maps are Awesome](https://viget.com/extend/sass-maps-are-awesome)
 * [Sass list-maps](https://github.com/lunelson/sass-list-maps)
 * [Sass Maps Plus](https://github.com/lunelson/sass-maps-plus)
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
-* [Introduction to Sass Maps Usage and Examples](http://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
+* [Introduction to Sass Maps Usage and Examples](https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
 ## Reguły dotyczące CSSa
 
-W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie podstawowe zasady dot. pisania zestawów reguł w CSSie (a przynajmniej te, które są przyjęte m.in. przez [CSS Guidelines](http://cssguidelin.es/#anatomy-of-a-ruleset)):
+W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie podstawowe zasady dot. pisania zestawów reguł w CSSie (a przynajmniej te, które są przyjęte m.in. przez [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
 * powiązane selektory umieszczamy na tej samej linii; niezwiązane ze sobą zaczynamy od nowej,
 * nawias otwierający (`{`) oddzielony od ostatniego selektora pojedynczą spacją,
@@ -283,7 +283,7 @@ Przykład:
 
 ###### Dalsze informacje
 
-* [Anatomy of a Ruleset](http://cssguidelin.es/#anatomy-of-a-ruleset)
+* [Anatomy of a Ruleset](https://cssguidelin.es/#anatomy-of-a-ruleset)
 
 ## Sortowanie deklaracji
 
@@ -304,7 +304,7 @@ Istnieje również inny interesujący pogląd na porządkowanie reguł zwany [Co
 
 {% include snippets/syntax/28/index.html %}
 
-Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
+Szczerze mówiąc sam jeszcze nie podjąłem ostatecznej decyzji. [Niedawno opublikowana sonda na CSS-Tricks](https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/) pokazała, że 45% deweloperów sortuje swoje deklaracje według typów, 14% zaś alfabetycznie. Co ciekawe, 39% programistów robi to kompletnie losowo – i ja do tych osób również się zaliczam.
 
 {% include images/order-poll.html %}
 
@@ -316,7 +316,7 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
 
 ###### Dalsze informacje
 
-* [On Declaration Sorting](http://meiert.com/en/blog/20140924/on-declaration-sorting/)
+* [On Declaration Sorting](https://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
 ## Zagnieżdżanie selektorów
@@ -341,7 +341,7 @@ Oprócz tego, od momentu wydania Sassa w wersji 3.3 możliwe jest odwoływanie s
 
 {% include snippets/syntax/32/index.html %}
 
-Metoda ta jest często używana w połączeniu z [konwencją nazewnictwa BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/), by generować selektory `.block__element` i `.block--modifier` bazujące na ich oryginalnym selektorze (a więc `.block` w tym przypadku).
+Metoda ta jest często używana w połączeniu z [konwencją nazewnictwa BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/), by generować selektory `.block__element` i `.block--modifier` bazujące na ich oryginalnym selektorze (a więc `.block` w tym przypadku).
 
 <div class="note">
   <p>Podczas gdy może mieć to małe znaczenie, generowanie nowych selektorów w oparciu o odwołanie (<code>&</code>) do obecnego selektora sprawia, że wyszukiwanie w kodzie tych nowych selektorów staje się nie możliwe, gdyż one faktycznie (ich pełna nazwa) nie istnieją.</p>
@@ -381,6 +381,6 @@ Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz si
 
 ###### Dalsze informacje
 
-* [Beware of Selector Nesting](http://www.sitepoint.com/beware-selector-nesting-sass/)
+* [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
 * [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)

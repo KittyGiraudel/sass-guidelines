@@ -28,7 +28,7 @@ Når du kommenterer en Sass-specifik sektion, så anvend indlejrede Sass-komment
 
 ###### Videre læsning
 
-* [CSS Guidelines’ Commenting section](http://cssguidelin.es/#commenting)
+* [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
 ## Dokumentation
 
@@ -54,4 +54,4 @@ Her er et eksempel af en mixin, der er omfattende dokumenteret med SassDoc:
 ###### Videre læsning
 
 * [SassDoc](http://sassdoc.com)
-* [SassDoc: a Documentation Tool for Sass](http://www.sitepoint.com/sassdoc-documentation-tool-sass/)
+* [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

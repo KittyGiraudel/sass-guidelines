@@ -1,7 +1,7 @@
 
 # Namenskonventionen
 
-In dieser Sektion werden wir uns nicht den besten CSS Namenskonventionen für Wartbarkeit und Skalierbarkeit widmen; das gehört nicht zum Umfang eines Sass Styleguide und sollte generell dir überlassen sein. Ich würde die Konventionen von [CSS Guidelines](http://cssguidelin.es/#naming-conventions) empfehlen.
+In dieser Sektion werden wir uns nicht den besten CSS Namenskonventionen für Wartbarkeit und Skalierbarkeit widmen; das gehört nicht zum Umfang eines Sass Styleguide und sollte generell dir überlassen sein. Ich würde die Konventionen von [CSS Guidelines](https://cssguidelin.es/#naming-conventions) empfehlen.
 
 Es gibt ein paar Dinge die in Sass benannt werden können, und es ist wichtig diese auch gut zu benennen damit deine gesamte Codebasis konsistent und einfach zu lesen ist:
 
@@ -23,7 +23,7 @@ Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben un
 
 {% include snippets/naming/02/index.html %}
 
-Wenn du wirklich mit der Idee von Konstanten in Sass herumspielen möchtest, solltest du [diesen Artikel](http://www.sitepoint.com/dealing-constants-sass/) lesen.
+Wenn du wirklich mit der Idee von Konstanten in Sass herumspielen möchtest, solltest du [diesen Artikel](https://www.sitepoint.com/dealing-constants-sass/) lesen.
 
 ## Namespace
 
@@ -33,7 +33,7 @@ Zum Beispiel, wenn du an einem *Sassy Unicorn* Projekt arbeitest, welches veröf
 
 {% include snippets/naming/03/index.html %}
 
-[Kaelig](http://kaelig.fr) hat [einen sehr aufschlussreichen Artikel über globale CSS Namespaces](http://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace) geschrieben, falls dich das Thema interessiert.
+[Kaelig](https://kaelig.fr) hat [einen sehr aufschlussreichen Artikel über globale CSS Namespaces](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace) geschrieben, falls dich das Thema interessiert.
 
 <div class="note">
   <p>Beachte das automatisches Namespacing ein Designziel für die zukünftige Umgestaltung von <code>@import</code> in Sass 4.0 ist. Je näher wir vor der Verwirklichung stehen, desto weniger von nutzen ist es manuell Namespaces zu vergeben; eventuell werden Libraries deren Namespace manuell gepflegt wurde, sogar schwieriger zu benutzen sein.</p>

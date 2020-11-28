@@ -1,7 +1,7 @@
 
 # O Sassu
 
-Takto je [Sass](http://sass-lang.com) popisován v jeho [dokumentaci](http://sass-lang.com/documentation/file.SASS_REFERENCE.html):
+Takto je [Sass](https://sass-lang.com) popisován v jeho [dokumentaci](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
 > Sass je CSS rozšíření, které dodává sílu a eleganci základnímu jazyku.
 
@@ -15,14 +15,14 @@ Jak již bylo řečeno, existuje mnoho způsobů využití těchto funkcí. Něk
 
 ###### Další četba
 
-* [Sass](http://sass-lang.com)
-* [Sass documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [Sass](https://sass-lang.com)
+* [Sass documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
 ## Ruby Sass nebo LibSass
 
 [První commit Sassu](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se datuje na konec roku 2006, tedy skoro před 8 lety. Netřeba snad ani dodávat, že od té doby uplynula dlouhá doba. Při počátečním vývoji v Ruby se tu a tam objevil nějaký ten port. Nejúspěšnější z nich, [LibSass](https://github.com/sass/libsass) (napsaný v C/C++) je nyní blízko k plné kompatibilitě s původní Ruby verzí.
 
-V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě verze před dalším postupem](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od té doby LibSass aktivně uvolňuje verze kompatibilní s jeho starším bratrem. Poslední zbývající nesrovnalosti jsem osobně zaznamenal ve svém projektu [Sass-Compatibility](http://sass-compatibility.github.io). Pokud víte o nějakém rozdílu mezi verzemi, který v seznamu není uvedený, budu vám vděčný za otevření příslušné issue.
+V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě verze před dalším postupem](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od té doby LibSass aktivně uvolňuje verze kompatibilní s jeho starším bratrem. Poslední zbývající nesrovnalosti jsem osobně zaznamenal ve svém projektu [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Pokud víte o nějakém rozdílu mezi verzemi, který v seznamu není uvedený, budu vám vděčný za otevření příslušné issue.
 
 Vraťme se zpět k volbě kompilátoru. Ono to vlastně záleží na vašem projektu. Pokud je založen na Ruby on Rails, je lepší použít Ruby Sass, který se na takovýto případ perfektně hodí. Také mějte na paměti, že Ruby Sass bude vždy referenční implementací a bude vždy udávat směr funkcí LibSassu.
 Na projektech, které Ruby nevyužívají, bude použití LibSassu pravděpodobně lepší nápad, jelikož je pravděpodobně už je wrapper pro daný jazyk vytvořen. Takže pokud chcete použít například Node.js, [node-sass](https://github.com/sass/node-sass) je jasná volba.
@@ -30,9 +30,9 @@ Na projektech, které Ruby nevyužívají, bude použití LibSassu pravděpodobn
 ###### Další četba
 
 * [LibSass](https://github.com/sass/libsass)
-* [Getting to know LibSass](http://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](http://sass-compatibility.github.io)
-* [Switching from Ruby Sass to LibSass](http://www.sitepoint.com/switching-ruby-sass-libsass/)
+* [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
+* [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/)
+* [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass nebo SCSS
 
@@ -48,11 +48,11 @@ Já osobně preferuji SCSS nad Sass, protože je blíže k CSS a je přátelšt�
 
 ###### Další četba
 
-* [What’s the difference between Sass and SCSS](http://www.sitepoint.com/whats-difference-sass-scss/)
+* [What’s the difference between Sass and SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 
 ## Další preprocesory
 
-Sass je preprocesor jako každý jiný. Jeho největší soupeř je [LESS](http://lesscss.org/). Preprocesor založený na Node.js a který se stal poměrně populárním díky proslulému CSS frameworku [Bootstrap](http://getbootstrap.com/), který jej využívá. Je tu také [Stylus](http://learnboost.github.io/stylus/), což je tak trochu hloupá neomezená verze LESS, kde můžete dělat v podstatě co jen chcete, protože skoro dělá z CSS programovací jazyk.
+Sass je preprocesor jako každý jiný. Jeho největší soupeř je [LESS](http://lesscss.org/). Preprocesor založený na Node.js a který se stal poměrně populárním díky proslulému CSS frameworku [Bootstrap](https://getbootstrap.com/), který jej využívá. Je tu také [Stylus](https://stylus-lang.com/), což je tak trochu hloupá neomezená verze LESS, kde můžete dělat v podstatě co jen chcete, protože skoro dělá z CSS programovací jazyk.
 
 *Proč zvolit Sass nad LESS nebo jiným preprocesorem?* je dnes stále hojně pokládaná otázka. Ne tak dávno jsme doporučovali Sass pro projekty založené na Ruby, protože to byl první vytvořený v Ruby a dobře se používal s Ruby on Rails. Nyní, když LibSass skoro dohnal originální Sass to již není až tak relevantní rada.
 
@@ -62,7 +62,7 @@ Jinými slovy, Sass není preprocesor zaměřen na hloupoučké rádoby program�
 
 Preprocesory stranou, měli bychom také zmínit postprocesory, které obdržely v několika posledních měsících významné boom. A to především díky [PostCSS](https://github.com/postcss/postcss) a [cssnext](https://cssnext.github.io/). Postprocesory jsou do značné míry rovnocenné k preprocesorům až na to, že neposkytují nic jiného než CSS syntaxi zítřka.
 
-Můžete je brát jako polyfill pro nepodporované CSS funkce. Například kdybyste psali proměnné tak, jak je popsáno v [CSS specifikaci](http://dev.w3.org/csswg/css-variables/), poté zkompilovali své styly pouze postprocessorem, abyste našli každou proměnnou a ta byla nahrazena její hodnotou, jako by to udělal Sass.
+Můžete je brát jako polyfill pro nepodporované CSS funkce. Například kdybyste psali proměnné tak, jak je popsáno v [CSS specifikaci](https://drafts.csswg.org/css-variables/), poté zkompilovali své styly pouze postprocessorem, abyste našli každou proměnnou a ta byla nahrazena její hodnotou, jako by to udělal Sass.
 
 Nápad za postprocesory je ten, že jednou budou prohlížeče podporovat nové funkce (například CSS proměnné), postprocesory je nezkompilují, nechají je být a nechají prohlížeče ať se starají.
 
@@ -71,6 +71,6 @@ Zatímco poskytování zítřejší syntaxe už dnes je opravdu ušlechtilý ná
 ###### Další četba
 
 * [LESS](http://lesscss.org/)
-* [Stylus](http://learnboost.github.io/stylus/)
+* [Stylus](https://stylus-lang.com/)
 * [cssnext](https://cssnext.github.io/)
 * [PostCSS](https://github.com/postcss/postcss)

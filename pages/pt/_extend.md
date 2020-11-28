@@ -11,7 +11,7 @@ No entanto, a verdadeiro propósito do `@extend` é manter relações (restriç�
 
 Dado isso, é certo ver como os seletores sendo estendidos com fracas restrições podem levar a uma explosão de seletor. Se `.baz .qux` estende `.foo .bar`, o resultado pode ser `.foo .baz .qux` ou `.baz .foo .qux`, já que `.foo` e `.baz` são ancestrais mais genéricos (eles podem ser pais, avós e etc).
 
-Sempre tente definir relações via [placeholders](http://www.sitepoint.com/sass-reference/placeholders/), não classes. Isso vai lhe dar a liberdade para usar (e alterar) qualquer convenção de nomeclatura que você usa em seus seletores e, já que relações são definidas apenas uma vez dentro do placeholder, é menos provavel que você irá compilar seletores indesejados.
+Sempre tente definir relações via [placeholders](https://www.sitepoint.com/sass-reference/placeholders/), não classes. Isso vai lhe dar a liberdade para usar (e alterar) qualquer convenção de nomeclatura que você usa em seus seletores e, já que relações são definidas apenas uma vez dentro do placeholder, é menos provavel que você irá compilar seletores indesejados.
 
 {% include snippets/extend/01/index.html %}
 
@@ -22,7 +22,7 @@ Existem muitos cenários onde seletores sendo extendidos são úteis e valem a p
 * Evite estender seletores ancestrais genéricos (como `.foo .bar`) ou seletores irmãos genéricos (como `.foo ~ .bar`). Isso é o que causa explosão de seletores.
 
 <div class="note">
-  <p>Frequentemente, é falado que o <code>@extend</code> ajuda com o tamanho tamanho do arquivo, já que ele combina seletores invés de duplicar propriedades. Isso verdade, mas a diferença é insignificante quando o <a href="http://en.wikipedia.org/wiki/Gzip">Gzip</a> faz sua compressão.</p>
+  <p>Frequentemente, é falado que o <code>@extend</code> ajuda com o tamanho tamanho do arquivo, já que ele combina seletores invés de duplicar propriedades. Isso verdade, mas a diferença é insignificante quando o <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a> faz sua compressão.</p>
   <p>Dessa maneira, se você não pode usar Gzip (ou algo parecido), então, usar a abordagem <code>@extend</code> pode ser bom, especialmente, se o peso da folha de estilos é o gargalo na performance.</p>
 </div>
 
@@ -34,11 +34,11 @@ Você deve estender apenas seletores com o mesmo escopo da media (`@media`). Pen
 
 As opiniões parecem ser extremamente divididas a respeito das vantagens e problemas do `@extend`, ao ponto que muitos desenvolvedores (incluindo eu) tem discutido contra o uso disso, como você pode ver nos seguintes artigos:
 
-* [What Nobody Told you About Sass Extend](http://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](http://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](http://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
+* [Don't Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
-Dado isso e resumindo, eu gostaria de aconselhar o uso de `@extend` apenas para manter relações entre seletores, se dois seletores são característicamente similares porque, então, teremos uma situação perfeita para uso do `@extend`. No entanto, se eles são irrelacionados mas compartilham algumas regras, um `@mixin` pode ser melhor. Para saber mais, sobre como escolher entre esses dois, leia este [artigo](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+Dado isso e resumindo, eu gostaria de aconselhar o uso de `@extend` apenas para manter relações entre seletores, se dois seletores são característicamente similares porque, então, teremos uma situação perfeita para uso do `@extend`. No entanto, se eles são irrelacionados mas compartilham algumas regras, um `@mixin` pode ser melhor. Para saber mais, sobre como escolher entre esses dois, leia este [artigo](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
   <p>Agradeço o <a href="https://twitter.com/davidkpiano">David Khourshid</a> por sua ajuda e expertise, nesta seção.</p>
