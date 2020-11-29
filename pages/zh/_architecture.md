@@ -9,7 +9,7 @@
 
 有很多[受欢迎的构建 CSS 项目的体系结构]((https://www.sitepoint.com/look-different-sass-architectures/) )：[OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/) 式, [Foundation](https://get.foundation/) 式...它们各有优劣，难分伯仲。
 
-我自己使用的方式，与 [Jonathan Snook](https://snook.ca/) 的 [SMACSS](https://smacss.com/) 非常相似，其致力于保持代码简洁易见。
+我自己使用的方式，与 [Jonathan Snook](https://snook.ca/) 的 [SMACSS](http://smacss.com/) 非常相似，其致力于保持代码简洁易见。
 
 <div class="note">
   <p>我认为，项目之间的结构是极其具体的。你完全可以随意摒弃或调整建议方案，拥有最适合自己需求的体系系统。</p>

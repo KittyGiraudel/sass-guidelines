@@ -9,7 +9,7 @@ On n’insistera jamais assez sur la nécessité d’utiliser des dossiers, mêm
 
 Il existe [plusieurs architectures populaires](https://www.sitepoint.com/look-different-sass-architectures/) pour les projets CSS&nbsp;: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), ou inspirées de [Bootstrap](https://getbootstrap.com/) ou de [Foundation](https://get.foundation/)… Elles ont toutes leurs mérites et chacune a du pour et du contre.
 
-Personnellement j’utilise une approche assez similaire à [SMACSS](https://smacss.com/) de [Jonathan Snook](https://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
+Personnellement j’utilise une approche assez similaire à [SMACSS](http://smacss.com/) de [Jonathan Snook](https://snook.ca/), dont l’objectif est de conserver une architecture simple et évidente.
 
 <div class="note">
   <p>L’expérience m’a appris que l’architecture était la plupart du temps très spécifique au projet. Sentez-vous libre de rejeter complètement ou d’adapter la solution proposée —&nbsp;votre système doit répondre à vos besoins spécifiques.</p>

@@ -9,7 +9,7 @@ Nad vším tímhle snad ani nemohu dostatečně zdůraznit potřebu složek, a t
 
 Je tu hodně populárních architektur pro CSS projekty: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/)-like, [Foundation](https://get.foundation/)-like… Všechny mají své přednosti, klady a zápory.
 
-Já sám používám přístup shodou okolností docela podobný k [SMACSS](https://smacss.com/) od [Jonathan Snook](https://snook.ca/), který se zaměřuje na udržování věcí jednoduchých a jasných.
+Já sám používám přístup shodou okolností docela podobný k [SMACSS](http://smacss.com/) od [Jonathan Snook](https://snook.ca/), který se zaměřuje na udržování věcí jednoduchých a jasných.
 
 <div class="note">
   <p>Naučil jsem se, že architektura je většinou velmi specifická pro daný projekt. Neváhejte jí tedy kompletně zrušit, nebo upravit navrhované řešení tak, aby jste se vypořádali se systémem, který sedí vašim potřebám.</p>
@@ -19,7 +19,7 @@ Já sám používám přístup shodou okolností docela podobný k [SMACSS](http
 
 * [Architecture for a Sass project](https://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](https://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
+* [SMACSS](http://smacss.com/)
 * [An Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](https://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](https://slides.com/hugogiraudel/sass-une-architecture-composee)

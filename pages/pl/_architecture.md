@@ -9,7 +9,7 @@ Niezbędnym, nawet dla małych projektów, jest także podział na foldery. Anal
 
 Dostępnych jest obecnie wiele metod kategoryzacji kodu dla projektów w CSSie: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), podobne do tego w [Bootstrapie](https://getbootstrap.com/), czy w [Foundation](https://get.foundation/). Wszystkie z nich mają swoje cechy, zalety i wady.
 
-Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego ujętego w [SMACSS](https://smacss.com/), stworzonego przez [Jonathana Snooka](https://snook.ca/). Opiera się ono przede wszystkim na prostocie.
+Ja osobiście korzystam z podejścia, które zdaje się być zbliżone do tego ujętego w [SMACSS](http://smacss.com/), stworzonego przez [Jonathana Snooka](https://snook.ca/). Opiera się ono przede wszystkim na prostocie.
 
 <div class="note">
   <p>Wybór architektury jest, co do zasady, uzależniony od charakteru projektu. Dostosuj swoje podejście do tego w zależności od Twoich potrzeb.</p>

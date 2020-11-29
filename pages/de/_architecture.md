@@ -9,7 +9,7 @@ Darüber hinaus kann ich nicht oft genug erwähnen, wie wichtig es selbst in kle
 
 Es gibt [viele beliebte Architekturen](https://www.sitepoint.com/look-different-sass-architectures/) für CSS Projekte: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) sowie ein [Bootstrap](https://getbootstrap.com/) und [Foundation](https://get.foundation/) ähnliches… alle mit ihren Vor- und Nachteilen.
 
-Ich selber nutze einen Ansatz ähnlich wie [SMACSS](https://smacss.com/) von [Jonathan Snook](https://snook.ca/), welcher sich darauf fokusiert etwas einfach und offensichtlich zu halten.
+Ich selber nutze einen Ansatz ähnlich wie [SMACSS](http://smacss.com/) von [Jonathan Snook](https://snook.ca/), welcher sich darauf fokusiert etwas einfach und offensichtlich zu halten.
 
 <div class="note">
   <p>Ich habe gelernt das Architektur meistens sehr Projektspezifisch ist. Deshalb tu dir keinen Zwang an mir komplett zu widersprechen oder nur die Lösungen zu übernehmen welche du brauchst.</p>

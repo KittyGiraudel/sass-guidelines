@@ -9,7 +9,7 @@
 
 Υπάρχουν πολλές δημοφιλείς [αρχιτεκτονικές](https://www.sitepoint.com/look-different-sass-architectures/) για CSS project(s) όπως: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), projects βασισμένα σε [Bootstrap](https://getbootstrap.com/) ή σε [Foundation](https://get.foundation/)… Τα οποία έχουν πλεονεκτήματα και μειονεκτήματα.
 
-Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](https://smacss.com/) του [Jonathan Snook](https://snook.ca/), η οποία επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
+Εγώ, προσωπικά, χρησιμοποιώ μια προσέγγιση που μοιάζει πολύ με αυτή του [SMACSS](http://smacss.com/) του [Jonathan Snook](https://snook.ca/), η οποία επικεντρώνεται στην διατήρηση της κατάστασης όσο πιο απλής και φανερής γίνεται.
 
 <div class="note">
   <p>Έχω μάθει πως η δόμηση του κώδικα τις περισσότερες φορές αλλάζει ανάλογα με το project. Μη διστάσετε να απορρίψετε εντελώς ή να προσαρμόσετε την προτεινόμενη λύση έτσι ώστε να φτάσετε σε ένα αποτέλεσμα που θα ταιριάζει στις ανάγκες σας.</p>
