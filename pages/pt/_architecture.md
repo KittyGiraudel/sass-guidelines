@@ -9,7 +9,7 @@ Em cima disso, não posso salientar o suficiente a necessidade de pastas, mesmo 
 
 Há muitas [arquiteturas populares](https://www.sitepoint.com/look-different-sass-architectures/) para projectos de CSS: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), arquitetura usada no [Bootstrap](https://getbootstrap.com/), arquitetura usada no [Foundation](https://get.foundation/)... Todas têm os seus méritos, prós e contras.
 
-Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](https://smacss.com/) de [Jonathan Snook](https://snook.ca/), e que se foca em manter as coisas simples e óbvias.
+Eu uso uma abordagem que acaba por ser muito parecida com [SMACSS](http://smacss.com/) de [Jonathan Snook](https://snook.ca/), e que se foca em manter as coisas simples e óbvias.
 
 <div class="note">
   <p>Eu aprendi que a arquitetura é muito especifica para o projeto. Estejam à vontade para ignorarem ou adaptarem a solução proposta para lidarem com um sistema que se adapta melhor às vossas necessidades.</p>

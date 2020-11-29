@@ -9,7 +9,7 @@
 
 Существует [много популярных архитектур](https://www.sitepoint.com/look-different-sass-architectures/) для CSS проектов: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/), [Foundation](https://get.foundation/) и тому подобные… все они имеют свои достоинства, плюсы и минусы.
 
-Я сам использую подход, который очень похож на [SMACSS](https://smacss.com/) от [Джонатана Снука](https://snook.ca/), который фокусируется на сохранении простоты и очевидности.
+Я сам использую подход, который очень похож на [SMACSS](http://smacss.com/) от [Джонатана Снука](https://snook.ca/), который фокусируется на сохранении простоты и очевидности.
 
 <div class="note">
   <p>Я осознал, что архитектура в основном зависит от проекта. Используйте или адаптируйте предложенное решение так, чтобы работать с системой, которая соответствует вашим потребностям.</p>

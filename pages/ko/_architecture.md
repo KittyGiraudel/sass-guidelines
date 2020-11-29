@@ -10,7 +10,7 @@ Sass가 `@import` 지시어의 무거운 짐을 짊어진 덕분에 개발 단�
 
 CSS 프로젝트를 위한 [잘 알려진 설계 양식들](https://www.sitepoint.com/look-different-sass-architectures/)이 많이 있습니다: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/)류, [Foundation](https://get.foundation/)류… 이들 모두 훌륭하며, 장단점을 갖고 있습니다.
 
-저 스스로는 [Jonathan Snook](https://snook.ca/)의 [SMACSS](https://smacss.com/)와 아주 비슷한 접근법을 사용하는데, 이것은 간단명료함을 유지하는 데에 초점을 맞추고 있습니다.
+저 스스로는 [Jonathan Snook](https://snook.ca/)의 [SMACSS](http://smacss.com/)와 아주 비슷한 접근법을 사용하는데, 이것은 간단명료함을 유지하는 데에 초점을 맞추고 있습니다.
 
 <div class="note">
 <p>저는 설계가 대부분의 경우 프로젝트에 한정되어 있다는 사실을 배웠습니다. 여러분의 필요에 맞는 시스템을 사용할 수 있도록 제시된 해법을 마음대로 폐기하거나 조정하세요.</p>

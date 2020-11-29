@@ -9,7 +9,7 @@ Oven på det, så kan jeg ikke udtrykke nødvendigheden for mapper nok, selv ved
 
 Der er mange populære arkitekturer for CSS-projekter: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/)-lignende, [Foundation](https://get.foundation/)-lignende… De har alle deres meritter, fordele og ulemper.
 
-Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://smacss.com/) fra [Jonathan Snook](https://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
+Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](http://smacss.com/) fra [Jonathan Snook](https://snook.ca/), der fokuserer på at holde tingene simple og åbenlyse.
 
 <div class="note">
   <p>Jeg har lært at arkitetur, for det meste, er meget specifik til projektet. Det står dig frit for helt at afskrive eller tilpasse løsningsforslaget, så du står med et system der dækker dine behov.</p>
@@ -19,7 +19,7 @@ Jeg selv bruger en tilgang der har vist sig at være meget lig [SMACSS](https://
 
 * [Architecture for a Sass project](https://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](https://www.sitepoint.com/look-different-sass-architectures/)
-* [SMACSS](https://smacss.com/)
+* [SMACSS](http://smacss.com/)
 * [An Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](https://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](https://slides.com/hugogiraudel/sass-une-architecture-composee)

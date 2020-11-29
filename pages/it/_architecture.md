@@ -9,7 +9,7 @@ Detto questo, non mi stancherò mai di sottolineare quanto sia importante divide
 
 Ci sono [molti modi](https://www.sitepoint.com/look-different-sass-architectures/) per organizzare i file di un progetto CSS: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), simil-[Bootstrap](https://getbootstrap.com/), simil-[Foundation](https://get.foundation/)… Hanno tutti i propri meriti, i vantaggi e gli svantaggi.
 
-Io uso un approccio che sembra piuttosto simile a [SMACSS](https://smacss.com/) di [Jonathan Snook](https://snook.ca/), che mantiene le cose semplici e facili da capire.
+Io uso un approccio che sembra piuttosto simile a [SMACSS](http://smacss.com/) di [Jonathan Snook](https://snook.ca/), che mantiene le cose semplici e facili da capire.
 
 <div class="note">
   <p>Ho imparato che l’architettura il più delle volte è differente da progetto a progetto. Sentitevi liberi di adattare o modificare completamente la soluzione proposta, in modo da poter ottenere un sistema che fa al caso vostro.</p>

@@ -9,7 +9,7 @@ Además, también quiero hacer hincapié en la necesidad de utilizar carpetas, i
 
 Hay una gran cantidad de [arquitecturas populares - En inglés](https://www.sitepoint.com/look-different-sass-architectures/) para los proyectos CSS: [OOCSS](http://oocss.org/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/), [Foundation](https://get.foundation/) o similare. Todas ellas tienen sus méritos, pros y contras.
 
-Yo utilizo un método que resulta ser bastante similar a [SMACSS](https://smacss.com/) de [Jonathan Snook](https://snook.ca/), que se centra en mantener las cosas simples y evidentes.
+Yo utilizo un método que resulta ser bastante similar a [SMACSS](http://smacss.com/) de [Jonathan Snook](https://snook.ca/), que se centra en mantener las cosas simples y evidentes.
 
 <div class="note">
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta hasta que encuentres un sistema que se adapte a tus necesidades.</p>
