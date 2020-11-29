@@ -9,7 +9,7 @@ On top of that, I cannot stress enough the need for folders, even on small scale
 
 There are [a lot of popular architectures](https://www.sitepoint.com/look-different-sass-architectures/) for CSS projects: [OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/)-like, [Foundation](https://get.foundation/)-like… They all have their merits, pros and cons.
 
-I, myself, use an approach that happens to be quite similar to [SMACSS](https://smacss.com/) from [Jonathan Snook](https://snook.ca/), which focuses on keeping things simple and obvious.
+I, myself, use an approach that happens to be quite similar to [SMACSS](http://smacss.com) from [Jonathan Snook](https://snook.ca/), which focuses on keeping things simple and obvious.
 
 <div class="note">
   <p>I have learnt that architecture is most of the time very specific to the project. Feel free to discard completely or adapt the proposed solution so that you deal with a system that suits your needs.</p>
