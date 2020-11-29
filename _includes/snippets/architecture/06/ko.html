@@ -45,16 +45,16 @@ $button-color: $secondary-color;
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
 {% highlight sass %}
-// Button-specific variables
+// 버튼 관련 변수
 $button-color: $secondary-color
 
-// ... include any button-specific:
-// - mixins
-// - placeholders
-// - functions
+// … 버튼 관련 include
+// - 믹스인
+// - 플레이스홀더
+// - 함수
 
 /**
- * Buttons
+ * 버튼
  */
 .button
   +vertical-rhythm
@@ -64,21 +64,21 @@ $button-color: $secondary-color
   // ... 등.
 
   /**
-   * Inlined buttons on large screens
+   * 큰 화면의 인라인 버튼
    */
   +respond-to('medium')
     display: inline-block
 }
 
 /**
- * Icons within buttons
+ * 버튼 내의 아이콘
  */
 .button > svg
   fill: currentcolor
   // ... 등.
 
 /**
- * Inline button
+ * 인라인 버튼
  */
 .button--inline
   display: inline-block

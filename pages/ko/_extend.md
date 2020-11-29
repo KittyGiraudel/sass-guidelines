@@ -25,7 +25,7 @@
 - 일반 조상 선택자 (예 : `.foo .bar`) 또는 일반 형제 선택자 (예 : `.foo ~ .bar`)를 확장하지 마세요. 이것이 선택자 폭발의 원인입니다.
 
 <div class="note">
-<p><code>@extend</code>는 속성을 중복하지 않고 선택자를 합치기 때문에 파일 크기와 관련해서 도움이 된다고들 말합니다. 사실이긴 하지만, <a ="https://en.wikipedia.org/wiki/Gzip">Gzip</a>으로 압축하게 되면 그 차이는 무시할 만한 정도입니다.</p>
+<p><code>@extend</code>는 속성을 중복하지 않고 선택자를 합치기 때문에 파일 크기와 관련해서 도움이 된다고들 말합니다. 사실이긴 하지만, <a="https://ko.wikipedia.org/wiki/Gzip">Gzip</a=>으로 압축하게 되면 그 차이는 무시할 만한 정도입니다.</p>
 <p>말인즉슨, 만약 Gzip(혹은 그에 상당하는 다른 방법)을 이용할 수 없는 경우, 자신이 뭘 하고 있는지 이해하는 한 <code>@extend</code> 접근법을 선택하는 것도 그렇게 나쁘진 않을 수도 있습니다.</p>
 </div>
 
@@ -39,7 +39,7 @@
 
 - [Sass Extend에 대해 아무도 알려주지 않은 내용](https://www.sitepoint.com/sass-extend-nobody-told-you/)
 - [Extend를 피해야 하는 이유](https://www.sitepoint.com/avoid-sass-extend/)
-- [지나치게 Extend하지 마세요.](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+- [지나치게 Extend하지 마세요](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
 요약하자면, 선택자 내에서 관계를 유지하기 위해서만 `@extend`를 사용하는 것이 좋습니다. 두 개의 선택자가 특징적으로 유사하다면, 그것은 `@extend`의 완벽한 사용 예입니다. 관련이 없지만, 일부 규칙을 공유할 때는 `@mixin`이 더 적합 할 수 있습니다. [이 글](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)에서 둘 중에서 선택하는 방법에 대해 자세히 알아보세요.
 

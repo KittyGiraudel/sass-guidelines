@@ -7,7 +7,7 @@
 
 - 스타일가이드가 있는 이유는 **일관성**이 전부입니다. Sass 가이드라인의 일부 규칙에 동의하지 않더라도, 일관성이 있는 한 충분히 타당합니다. [↩](#section-5)
 - Sass는 가능한 한 단순하게 유지해야 합니다. 꼭 필요한 경우가 아니면 복잡한 시스템을 구축하지 마세요. [↩](#section-7)
-- 때로는 _KISS_(Keep It Simple, Stupid)가 _DRY_(Don't Repeat Yourself)보다 우선한다는 점을 명심하세요. [↩](#section-7)
+- 때로는 _KISS_ (Keep It Simple, Stupid)가 _DRY_ (Don't Repeat Yourself)보다 우선한다는 점을 명심하세요. [↩](#section-7)
 
 ## 구문 & 서식
 
