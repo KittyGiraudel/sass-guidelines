@@ -64,7 +64,7 @@ configuration:
 
 translations:
   baseline: "Subiektywny przewodnik po stylu dla pisania rozsądnego, łatwego w utrzymaniu i skalowalnego Sassa."
-  footer_content: "Stworzone z miłością przez [Hugo Giraudel](https://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](https://github.com/klapec) i [Mateusz Chabros](https://github.com/matchabros)"
+  footer_content: "Stworzone z miłością przez [Hugo “Kitty” Giraudel](https://hugogiraudel.com), tłumaczenie [Andrzej Kłapeć](https://github.com/klapec) i [Mateusz Chabros](https://github.com/matchabros)"
 
   aside_title: "Opcje"
   aside_report: "Zgłoś problem"

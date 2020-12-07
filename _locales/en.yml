@@ -10,7 +10,7 @@ translations:
   baseline: "An opinionated styleguide for writing sane, maintainable and scalable Sass."
 
   # Content of the footer, parsed as Markdown
-  footer_content: "Made with love by [Hugo Giraudel](https://hugogiraudel.com)"
+  footer_content: "Made with love by [Hugo “Kitty” Giraudel](https://hugogiraudel.com)"
 
   # Everything related to the options panel
   aside_title: "Options"
