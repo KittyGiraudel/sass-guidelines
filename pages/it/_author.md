@@ -1,7 +1,7 @@
 
 # L’autore
 
-Mi chiamo [Hugo “Kitty” Giraudel](https://hugogiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [N26](https://n26.com).
+Mi chiamo [Hugo “Kitty” Giraudel](https://hugogiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [Gorillas](https://gorillas.io/).
 
 Lavoro con Sass da diversi anni e sono la persona che sta dietro a progetti come [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](https://sitepoint.com/sass-reference/) e [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Se sei interessato ai miei contributi nella comunità di Sass, dai un'occhiata a [questa lista](https://github.com/HugoGiraudel/awesome-sass).
 
