@@ -20,9 +20,6 @@ jobs:
           bundler-cache: true
 
       - name: Install npm dependencies
-        run: bundle install
-
-      - name: Install npm dependencies
         run: npm install
 
       - name: Build site
