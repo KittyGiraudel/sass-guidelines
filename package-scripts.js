@@ -45,7 +45,6 @@ module.exports = {
       // the `vendors` task)
       utilities: [
         'uglifyjs', [
-          'node_modules/fg-loadcss/src/cssrelpreload.js',
           'node_modules/woff2-feature-test/woff2.js',
           'node_modules/OptimizedWebfontLoading/loadFont.js'
         ].join(' '),
