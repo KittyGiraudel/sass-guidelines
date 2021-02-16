@@ -19,7 +19,7 @@ Essas diretrizes são longas e, de vez em quando, é bom tê-las resumidas. Port
 ### Strings
 
 * Declarar a diretiva `@charset` no topo da folha de estilos é altamente recomendado. [↩](#codificao)
-* A não ser que aplicadas como identificadores CSS, strings devem ser envoltas em aspas simples. Além disso, URLs também devem ser envoltas em aspas. [↩](#strings-como-valores-CSS)
+* A não ser que aplicadas como identificadores CSS, strings devem ser envoltas em aspas simples. Além disso, URLs também devem ser envoltas em aspas. [↩](#strings-como-valores-css)
 
 ### Números
 

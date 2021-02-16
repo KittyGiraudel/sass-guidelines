@@ -7,7 +7,7 @@
 
 最重要的是，我无法形容我是多么需要设置大量的文件夹——即使是小项目中。这就像是在家里，你不会将所有的纸片放在同一个盒子中。你可以使用文件夹：一个为房产，一个为银行，一个为账单，等等。没有理由在构架 CSS 项目时不这么做。拆分代码库到多个有意义的文件夹，当你回头来找东西的时候就会发现是那么容易。
 
-有很多[受欢迎的构建 CSS 项目的体系结构]((https://www.sitepoint.com/look-different-sass-architectures/) )：[OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/) 式, [Foundation](https://get.foundation/) 式...它们各有优劣，难分伯仲。
+有很多[受欢迎的构建 CSS 项目的体系结构](https://www.sitepoint.com/look-different-sass-architectures/)：[OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/), [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/), [Bootstrap](https://getbootstrap.com/) 式, [Foundation](https://get.foundation/) 式...它们各有优劣，难分伯仲。
 
 我自己使用的方式，与 [Jonathan Snook](https://snook.ca/) 的 [SMACSS](http://smacss.com/) 非常相似，其致力于保持代码简洁易见。
 
