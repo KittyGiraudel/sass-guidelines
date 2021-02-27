@@ -130,7 +130,7 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 
 ###### Dalsze informacje
 
-* [Use Lengths, Not Strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Use Lengths, Not Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](https://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
@@ -219,7 +219,7 @@ Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już A
 
 ###### Dalsze informacje
 
-* [Understanding Sass lists](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [Understanding Sass lists](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](https://at-import.github.io/SassyLists/)
 
 ## Mapy

@@ -99,7 +99,7 @@ Remarquez qu’en ajoutant *0 membre de cette unité* on obtient le même résul
 
 {% include snippets/syntax/10/index.html %}
 
-En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode. [Utilisez des longueurs, pas des chaînes de caractères.](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+En fin de compte, tout dépend de ce que vous cherchez à obtenir. Rappelez-vous simplement qu’ajouter l’unité sous forme de chaîne de caractères n’est pas la bonne méthode. [Utilisez des longueurs, pas des chaînes de caractères.](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)
 
 Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois son unité*.
 
@@ -203,7 +203,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 
 {% include snippets/syntax/20/index.html %}
 
-Dans [cet article](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), je parcours un certain nombre de trucs et astuces pour comprendre et manipuler les listes en Sass.
+Dans [cet article](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), je parcours un certain nombre de trucs et astuces pour comprendre et manipuler les listes en Sass.
 
 ## Maps
 

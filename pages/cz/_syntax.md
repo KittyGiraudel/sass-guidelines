@@ -118,7 +118,7 @@ Netřeba snad ani dodávat, že **magická čísla jsou mor a mělo by se jim vy
 
 ###### Další četba
 
-* [Use Lengths, Not Strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)
+* [Use Lengths, Not Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](https://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
@@ -202,7 +202,7 @@ Pokud přidáváte nové položky do seznamu, vždy používejte dodávané API.
 
 ###### Další četba
 
-* [Understanding Sass lists](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/)
+* [Understanding Sass lists](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](https://at-import.github.io/SassyLists/)
 
 ## Mapy

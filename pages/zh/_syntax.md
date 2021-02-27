@@ -101,7 +101,7 @@ URL 最好也用引号包裹起来，原因和上面所描述一样：
 
 {% include snippets/syntax/11/index.html %}
 
-给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。更多信息请参考这篇文章：[Use lengths, not strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/)。
+给一个数值以字符串形式添加单位的结果是产生一个字符串，同时要防止对数据的额外操作。从一个带有单位的数值中分离数字部分也会产生字符串，但这些都不是你想要的。更多信息请参考这篇文章：[Use lengths, not strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)。
 
 ### 计算
 
@@ -199,7 +199,7 @@ HSL 表示法不仅仅是最易于理解的颜色表示方法，而且也便于�
 
 {% include snippets/syntax/20/index.html %}
 
-在[这篇文章](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/)中介绍了许多合理使用列表的技巧和注意事项。
+在[这篇文章](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)中介绍了许多合理使用列表的技巧和注意事项。
 
 ## Maps
 

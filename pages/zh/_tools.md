@@ -1,7 +1,7 @@
 
 # 工具
 
-和 Sass 一样受欢迎的 CSS 预处理器的优秀之处就在于，它提供了包括框架、插件、库和工具在内的整套开发环境。Sass 诞生 8 年以来，其本身的特性和 [everything that can be written in Sass has been written in Sass](https://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/) 一文中的观点越来越相近。
+和 Sass 一样受欢迎的 CSS 预处理器的优秀之处就在于，它提供了包括框架、插件、库和工具在内的整套开发环境。Sass 诞生 8 年以来，其本身的特性和 [everything that can be written in Sass has been written in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/) 一文中的观点越来越相近。
 
 不过，我的建议是最小程度的依赖于各种工具。管理依赖可能会是你特别不想面对的事情。此外，在 Sass 中很少需要外部依赖。
 

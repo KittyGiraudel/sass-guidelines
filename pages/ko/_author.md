@@ -1,7 +1,7 @@
 
 # 저자에 대해
 
-제 이름은 [Hugo “Kitty” Giraudel](https://hugogiraudel.com/)이며, 2015년부터 베를린에 거주하고 있는 프랑스 출신의 프론트 엔드 개발자입니다. 현재 [N26](https://n26.com/)에서 근무하고 있습니다.
+제 이름은 [Kitty Giraudel](https://kittygiraudel.com/)이며, 2015년부터 베를린에 거주하고 있는 프랑스 출신의 프론트 엔드 개발자입니다. 현재 [N26](https://n26.com/)에서 근무하고 있습니다.
 
 몇 년 동안 Sass를 써왔고 [SassDoc](http://sassdoc.com/), [SitePoint Sass Reference](https://sitepoint.com/sass-reference/), [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility//) 같은 Sass 관련 프로젝트의 저자입니다. Sass 커뮤니티에 대한 제 기여에 더 관심이 있으시면 [해당 목록](https://github.com/HugoGiraudel/awesome-sass)을 한 번 살펴보세요.
 

@@ -1,7 +1,7 @@
 
 # Σχετικά με τον συγγραφέα
 
-Ονομάζομαι [Hugo “Kitty” Giraudel](https://hugogiraudel.com), είμαι ένας front-end developer με έδρα το Βερολίνο (Γερμανία) απο το 2015, αυτή τη στιμγή εργάζομαι για την [Gorillas](https://gorillas.io/).
+Ονομάζομαι [Kitty Giraudel](https://kittygiraudel.com), είμαι ένας front-end developer με έδρα το Βερολίνο (Γερμανία) απο το 2015, αυτή τη στιμγή εργάζομαι για την [Gorillas](https://gorillas.io/).
 
 Γράφω Sass αρκετά χρόνια και έχω δημιουργήσει πολλά projects σχετικά με την Sass όπως το [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](https://sitepoint.com/sass-reference/) και το [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Αν σ' ενδιαφέρει να δεις περισσότερα για τη συνεισφορά μου στην κοινότητα της Sass, ρίξε μια ματιά [σ' αυτήν τη λίστα](https://github.com/HugoGiraudel/awesome-sass).
 

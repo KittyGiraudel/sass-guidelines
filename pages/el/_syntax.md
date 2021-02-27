@@ -105,7 +105,7 @@
 
 {% include snippets/syntax/11/index.html %}
 
-Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις. [Use lengths, not strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Η προσάρτηση μιας μονάδας σαν string σε έναν αριθμό έχει σαν αποτέλεσμα string, που εμποδίζει περαιτέρω πράξεις σε αυτήν την τιμή. Ο διαχωρισμός του αριθμητικού μέρους ενός αριθμού με μια μονάδα επίσης έχει σαν αποτέλεσμα string. Αυτό είναι κάτι που δεν θέλεις. [Use lengths, not strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Υπολογισμοί
 
@@ -203,7 +203,7 @@
 
 {% include snippets/syntax/20/index.html %}
 
-Σε [αυτό το άρθρο](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), σας προσφέρω αρκετές συμβουλές και κόλπα για το πώς να διαχειριστείτε σωστά lists στη Sass.
+Σε [αυτό το άρθρο](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), σας προσφέρω αρκετές συμβουλές και κόλπα για το πώς να διαχειριστείτε σωστά lists στη Sass.
 
 ## Maps
 

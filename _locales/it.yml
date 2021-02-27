@@ -13,7 +13,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
-  footer_content: "Fatto con amore da [Hugo “Kitty” Giraudel](https://hugogiraudel.com)"
+  footer_content: "Fatto con amore da [Kitty Giraudel](https://kittygiraudel.com)"
 
   aside_title: "Opzioni"
   aside_report: "Segnala un problema"

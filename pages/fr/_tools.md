@@ -1,7 +1,7 @@
 
 # Outils
 
-Ce qui est bien avec un préprocesseur CSS aussi populaire que Sass est qu’il est accompagné de tout un écosystème de frameworks, plugins, bibliothèques et outils. Après 8 ans d’existence, nous sommes proches du point où [tout ce qui peut être écrit en Sass a été écrit en Sass](https://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Ce qui est bien avec un préprocesseur CSS aussi populaire que Sass est qu’il est accompagné de tout un écosystème de frameworks, plugins, bibliothèques et outils. Après 8 ans d’existence, nous sommes proches du point où [tout ce qui peut être écrit en Sass a été écrit en Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Mon conseil toutefois est de restreindre le nombre de dépendances au strict minimum. La gestion des dépendances est un enfer que vous pouvez vous épargner. De plus, il n’y a pas besoin de beaucoup de dépendances avec un langage comme Sass.
 

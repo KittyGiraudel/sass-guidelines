@@ -18,7 +18,7 @@ translations:
   baseline: "Руководство по написанию разумного, поддерживаемого и масштабируемого Sass."
 
 # Content of the footer, parsed as Markdown
-  footer_content: "Сделал с любовью [Хьюго Гираудел](https://hugogiraudel.com), перевели [Даниил Пронин](https://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
+  footer_content: "Сделал с любовью [Китти Гираудел](https://kittygiraudel.com), перевели [Даниил Пронин](https://github.com/grawl) и [Павел Демьяненко](https://github.com/paveldemyanenko)"
 
 # Everything related to the options panel
   aside_title: "Опции"

@@ -105,7 +105,7 @@ Per rimuovere l'unità di misura di un valore, basta dividere di *una unità del
 
 {% include snippets/syntax/11/index.html %}
 
-Aggiungere un'unità di misura come stringa ad un numero genera una stringa, impendendo qualsiasi altra operazione sul valore. Anche fare uno `str-slice` (ovvero tagliare una parte della stringa), prendendo solo la parte numerica, genererà comunque una nuova stringa. Non è certo quel che vogliamo. [Usiamo lunghezze, non stringhe](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Aggiungere un'unità di misura come stringa ad un numero genera una stringa, impendendo qualsiasi altra operazione sul valore. Anche fare uno `str-slice` (ovvero tagliare una parte della stringa), prendendo solo la parte numerica, genererà comunque una nuova stringa. Non è certo quel che vogliamo. [Usiamo lunghezze, non stringhe](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Calcoli
 
@@ -204,7 +204,7 @@ Quando si aggiunge un nuovo elemento ad una lista, bisogna sempre utilizzare la 
 
 {% include snippets/syntax/20/index.html %}
 
-In [questo articolo](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), mostro un sacco di consigli e trucchi per gestire e manipolare correttamente le liste in Sass.
+In [questo articolo](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), mostro un sacco di consigli e trucchi per gestire e manipolare correttamente le liste in Sass.
 
 ## Mappe
 

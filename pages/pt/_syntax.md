@@ -105,7 +105,7 @@ Para remover a unidade de um valor, temos que dividi-lo por *uma unidade do seu 
 
 {% include snippets/syntax/11/index.html %}
 
-Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado. [Use cumprimentos, não strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Adicionar uma unidade como string a um número resulta numa string, prevenindo qualquer operação adicional no seu valor. Cortar a parte numérica de um número com uma unidade também resulta numa string, o que não é o desejado. [Use cumprimentos, não strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Cálculos
 
@@ -203,7 +203,7 @@ Ao adicionar novos itens a uma lista, usar sempre a API fornecida. Nunca tentar 
 
 {% include snippets/syntax/20/index.html %}
 
-[Neste artigo](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), eu vou a fundo de vários truques e dicas para lidar e manipular listas corretamente, no Sass.
+[Neste artigo](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), eu vou a fundo de vários truques e dicas para lidar e manipular listas corretamente, no Sass.
 
 ## Mapas
 

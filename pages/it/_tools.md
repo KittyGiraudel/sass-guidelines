@@ -1,7 +1,7 @@
 
 # Tools
 
-Una cosa carina di un preprocessore CSS popolare come Sass è che si porta dietro un intero ecosistema di framework, plugin, librerie e strumenti. Dopo otto anni di esistenza, siamo sempre più vicini al punto in cui [qualsiasi cosa possa essere scritta in Sass è già stata scritta in Sass](https://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Una cosa carina di un preprocessore CSS popolare come Sass è che si porta dietro un intero ecosistema di framework, plugin, librerie e strumenti. Dopo otto anni di esistenza, siamo sempre più vicini al punto in cui [qualsiasi cosa possa essere scritta in Sass è già stata scritta in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Tuttavia il mio consiglio è quello di tenere al minimo indispensabile il numero di dipendenze. Gestire dipendenze è un tipo di inferno di cui non velete fare parte. In più non c’è molto bisogno di dipendenze esterne quando parliamo di Sass.
 

@@ -105,7 +105,7 @@ Um die Einheit von einem Wert zu entfernen, musst du es um *eine Einheit seiner 
 
 {% include snippets/syntax/11/index.html %}
 
-Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst. [Benutze Längen, keine Strings](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst. [Benutze Längen, keine Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Berechnungen
 
@@ -205,7 +205,7 @@ Wenn neue Inhalte zu einer Liste hinzugefügt werden sollen, dann verwende immer
 
 ###### Weitere Informationen
 
-+In [diesem Artikel](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/) gehe ich durch eine Menge Tipps und Tricks wie man Listen in Sass korrekt benutzt und manipuliert.
++In [diesem Artikel](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/) gehe ich durch eine Menge Tipps und Tricks wie man Listen in Sass korrekt benutzt und manipuliert.
 
 ## Maps
 

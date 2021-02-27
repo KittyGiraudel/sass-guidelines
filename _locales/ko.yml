@@ -13,7 +13,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "분별 있고, 유지∙확장 가능한 Sass 작성을 위한 주관적인 스타일가이드."
-  footer_content: "애정을 담아 [Hugo “Kitty” Giraudel](https://hugogiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
+  footer_content: "애정을 담아 [Kitty Giraudel](https://kittygiraudel.com) 지음, [김동희](https://github.com/kimdhoe) 옮김"
 
   aside_title: "옵션"
   aside_report: "문제 신고"

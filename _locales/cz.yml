@@ -11,7 +11,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Umíněný průvodce pro psaní rozumného, udržovatelného a škálovatelného Sass."
-  footer_content: "Vytvořil s láskou [Hugo “Kitty” Giraudel](https://hugogiraudel.com)"
+  footer_content: "Vytvořil s láskou [Kitty Giraudel](https://kittygiraudel.com)"
 
   aside_title: "Možnosti"
   aside_report: "Nahlásit problém"

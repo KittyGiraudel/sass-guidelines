@@ -203,7 +203,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 {% include snippets/syntax/20/index.html %}
 
-[이 글](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/)에서 저는 Sass에서 리스트를 올바르게 처리하고 조작하기 위한 많은 트릭과 팁을 살펴봅니다.
+[이 글](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)에서 저는 Sass에서 리스트를 올바르게 처리하고 조작하기 위한 많은 트릭과 팁을 살펴봅니다.
 
 ## 맵
 

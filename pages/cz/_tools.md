@@ -1,7 +1,7 @@
 
 # Nástroje
 
-Co je opravdu hezké na CSS preprocesoru tak populárním jako Sass je to, že přichází s celým ekosystémem frameworků, pluginů, knihoven a nástrojů. Po 8 letech existence se dostáváme blíže a blíže k bodu, kde [všechno co může být napsané v Sassu, je napsané v Sassu](https://hugogiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Co je opravdu hezké na CSS preprocesoru tak populárním jako Sass je to, že přichází s celým ekosystémem frameworků, pluginů, knihoven a nástrojů. Po 8 letech existence se dostáváme blíže a blíže k bodu, kde [všechno co může být napsané v Sassu, je napsané v Sassu](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Každopádně mojí radou je udržet počet závislostí na opravdové minimum. Spravování závislostí je tak trochu peklo, kterého nechcete být součástí. A navíc ani žádné externí závislosti nepotřebujete.
 

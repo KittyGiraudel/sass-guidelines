@@ -105,7 +105,7 @@ Para eliminar la unidad de un valor, hay que dividirlo por *1 unidad de su mismo
 
 {% include snippets/syntax/11/index.html %}
 
-Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. Separando la parte numérica de un número con una unidad también devolverá una cadena. [Usa longitudes, no cadenas](https://hugogiraudel.com/2013/09/03/use-lengths-not-strings/).
+Al añadir a un número una unidad en forma de cadena, el resultado es una cadena, impidiendo cualquier operación adicional con dicho valor. Separando la parte numérica de un número con una unidad también devolverá una cadena. [Usa longitudes, no cadenas](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
 ### Cálculos
 
@@ -204,7 +204,7 @@ Al añadir nuevos elementos a una lista, utiliza siempre la API proporcionada. N
 
 {% include snippets/syntax/20/index.html %}
 
-En [este artículo](https://hugogiraudel.com/2013/07/15/understanding-sass-lists/), explico un montón de trucos y consejos para manejar y manipular las listas correctamente en Sass.
+En [este artículo](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), explico un montón de trucos y consejos para manejar y manipular las listas correctamente en Sass.
 
 ## Mapas
 

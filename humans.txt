@@ -3,15 +3,15 @@
 
 /* TEAM */
 
-    Author: Hugo “Kitty” Giraudel
+    Author: Kitty Giraudel
     Contact: @HugoGiraudel
     From: Berlin, Germany
 
-    Designer: Hugo “Kitty” Giraudel
+    Designer: Kitty Giraudel
     Contact: @HugoGiraudel
     From: Berlin, Germany
 
-    Front-end developer: Hugo “Kitty” Giraudel
+    Front-end developer: Kitty Giraudel
     Contact: @HugoGiraudel
     From: Berlin, Germany
 

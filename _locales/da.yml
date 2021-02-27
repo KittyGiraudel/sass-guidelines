@@ -11,7 +11,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "En subjektiv styleguide til at skrive fornuftigt, vedligeholdelsesvenligt og skalerbart Sass."
-  footer_content: "Lavet med kærlighed af [Hugo “Kitty” Giraudel](https://hugogiraudel.com), oversat af [Anders Schmidt Hansen](https://codepen.io/andersschmidt/)"
+  footer_content: "Lavet med kærlighed af [Kitty Giraudel](https://kittygiraudel.com), oversat af [Anders Schmidt Hansen](https://codepen.io/andersschmidt/)"
 
   aside_title: "Muligheder"
   aside_report: "Rapporter et problem"

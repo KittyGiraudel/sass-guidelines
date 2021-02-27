@@ -1,7 +1,7 @@
 
 # About the author
 
-My name is [Hugo “Kitty” Giraudel](https://hugogiraudel.com), I am a French front-end developer, based in Berlin (Germany) since 2015, currently working at [Gorillas](https://gorillas.io/).
+My name is [Kitty Giraudel](https://kittygiraudel.com), I am a French front-end developer, based in Berlin (Germany) since 2015, currently working at [Gorillas](https://gorillas.io/).
 
 I have been writing Sass for several years now and I am the author of many Sass-related projects such as [SassDoc](http://sassdoc.com), [SitePoint Sass Reference](https://sitepoint.com/sass-reference/) and [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). If you are interested in more of my contributions to the Sass community, have a look at [that list](https://github.com/HugoGiraudel/awesome-sass).
 
