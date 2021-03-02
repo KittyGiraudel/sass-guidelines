@@ -15,7 +15,7 @@ V Sass projektu je nespočet využití pro varování a chyby. V podstatě každ
 
 * [An Introduction To Error Handling](https://webdesign.tutsplus.com/tutorials/an-introduction-to-error-handling-in-sass--cms-19996)
 * [Building a Logger Mixin](https://webdesign.tutsplus.com/tutorials/building-a-logger-mixin-in-sass--cms-22070)
-* [SassyLogger](https://github.com/HugoGiraudel/SassyLogger)
+* [SassyLogger](https://github.com/KittyGiraudel/SassyLogger)
 
 ## Varování
 

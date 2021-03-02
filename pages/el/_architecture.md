@@ -66,7 +66,7 @@
 * `main.scss`
 
 <div class="note">
-  <p>Αν σας ενδιαφέρει να χρησιμοποιήσετε το 7-1 pattern, υπάρχει ήδη το <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> έτοιμο στο GitHub. Πρέπει να περιέχει όλα όσα χρειάζεστε για να ξεκινήσετε με αυτή την αρχιτεκτονική.</p>
+  <p>Αν σας ενδιαφέρει να χρησιμοποιήσετε το 7-1 pattern, υπάρχει ήδη το <a href="https://github.com/KittyGiraudel/sass-boilerplate">boilerplate</a> έτοιμο στο GitHub. Πρέπει να περιέχει όλα όσα χρειάζεστε για να ξεκινήσετε με αυτή την αρχιτεκτονική.</p>
 </div>
 
 {% include images/wallpaper.html %}

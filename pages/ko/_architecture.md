@@ -65,7 +65,7 @@ _작동하게_ 만드는 것과 _좋게_ 만드는 것 사이에는 커다란 �
 - `main.scss`
 
 <div class="note">
-<p>7-1 패턴을 사용하려는 경우, 여기 <a href="https://github.com/HugoGiraudel/sass-boilerplate">보일러플레이트</a>가 Github에 준비돼있습니다. 여기에는 이 설계를 시작하는 데 필요한 모든 것이 포함되어야 합니다.</p>
+<p>7-1 패턴을 사용하려는 경우, 여기 <a href="https://github.com/KittyGiraudel/sass-boilerplate">보일러플레이트</a>가 Github에 준비돼있습니다. 여기에는 이 설계를 시작하는 데 필요한 모든 것이 포함되어야 합니다.</p>
 </div>
 
 {% include images/wallpaper.html %}

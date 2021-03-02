@@ -32,7 +32,7 @@ Nie ulega wątpliwości natomiast, że poradnik ten nie jest jedynym źródłem 
 
 Koniec końców, jeżeli miałbym określić jedyną rzecz jaką chciałbym, by została wyniesiona z czytania tego przewodnika, to jest nią to, że **Sass powinien być pisany tak prosto, jak to jest tylko możliwe**.
 
-Dzięki moim zabawnym eksperymentom, takim jak [operator bitowy](https://github.com/HugoGiraudel/SassyBitwise), [iteratory i generatory](https://github.com/HugoGiraudel/SassyIteratorsGenerators) czy [parser JSON](https://github.com/HugoGiraudel/SassyJSON) napisanym w Sassie, możemy się przekonać jak dużo jest możliwe dzięki Sassowi.
+Dzięki moim zabawnym eksperymentom, takim jak [operator bitowy](https://github.com/KittyGiraudel/SassyBitwise), [iteratory i generatory](https://github.com/KittyGiraudel/SassyIteratorsGenerators) czy [parser JSON](https://github.com/KittyGiraudel/SassyJSON) napisanym w Sassie, możemy się przekonać jak dużo jest możliwe dzięki Sassowi.
 
 Nie zapominajmy jednak, że CSS jest prostym językiem. Sass, którego celem jest pisanie CSSa, nie powinien zwiększać jego stopnia skomplikowania. [Zasada KISS](https://pl.wikipedia.org/wiki/KISS_(reguła)) (Keep It Simple, Stupid) jest tu kluczowa i można nawet stwierdzić, że przysłania ona [zasadę DRY](https://pl.wikipedia.org/wiki/DRY) (Don’t Repeat Yourself) w niektórych przypadkach.
 

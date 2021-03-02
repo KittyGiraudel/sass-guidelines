@@ -32,7 +32,7 @@ Obviamente, esta no es la única forma de hacer las cosas, y puede que encaje o 
 
 Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta guía, es que **[Sass debe mantenerse tan simple como sea posible](https://www.sitepoint.com/keep-sass-simple/)**.
 
-Gracias a mis tontos experimentos, como por ejemplo: [Operadores bit a bit](https://github.com/HugoGiraudel/SassyBitwise), [iteradores y generadores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) y [analizador JSON](https://github.com/HugoGiraudel/SassyJSON) en Sass, podemos ser conscientes de lo que se puede hacer con este preprocesador.
+Gracias a mis tontos experimentos, como por ejemplo: [Operadores bit a bit](https://github.com/KittyGiraudel/SassyBitwise), [iteradores y generadores](https://github.com/KittyGiraudel/SassyIteratorsGenerators) y [analizador JSON](https://github.com/KittyGiraudel/SassyJSON) en Sass, podemos ser conscientes de lo que se puede hacer con este preprocesador.
 
 Mientras CSS es un lenguaje sencillo. Sass, destinado a escribir CSS, no debería ser mucho más complejo que el CSS normal. El [principio KISS](https://es.wikipedia.org/wiki/Principio_KISS) (Keep It Simple Stupid) es la clave aquí, e incluso puede tener prioridad respecto al [principio DRY](https://es.wikipedia.org/wiki/No_te_repitas) (Don’t Repeat Yourself) en algunas circunstancias.
 

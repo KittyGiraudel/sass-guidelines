@@ -51,7 +51,7 @@ I oczywiście:
 * `main.scss`
 
 <div class="note">
-  <p>Chcąc wykorzystać wzór 7-1 w praktyce, dostępny jest gotowy <a href="https://github.com/HugoGiraudel/sass-boilerplate">boilerplate</a> na GitHubie. Powinien on zawierać wszystko, co będzie potrzebne do rozpoczęcia nowego projektu.</p>
+  <p>Chcąc wykorzystać wzór 7-1 w praktyce, dostępny jest gotowy <a href="https://github.com/KittyGiraudel/sass-boilerplate">boilerplate</a> na GitHubie. Powinien on zawierać wszystko, co będzie potrzebne do rozpoczęcia nowego projektu.</p>
 </div>
 
 {% include images/wallpaper.html %}

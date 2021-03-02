@@ -32,7 +32,7 @@ Natürlich ist das hier nicht der einzige Weg das Thema anzugehen und es mag auc
 
 Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass [**Sass so einfach wie möglich gehalten werden sollte**](https://www.sitepoint.com/keep-sass-simple/).
 
-Dank meiner dummen Experimente wie [Binäre Operatoren](https://github.com/HugoGiraudel/SassyBitwise), [Iteratoren und Generatoren](https://github.com/HugoGiraudel/SassyIteratorsGenerators) sowie [einem JSON Parser](https://github.com/HugoGiraudel/SassyJSON) in Sass, können wir gut sehen was Sass als Präprozessor alles drauf hat.
+Dank meiner dummen Experimente wie [Binäre Operatoren](https://github.com/KittyGiraudel/SassyBitwise), [Iteratoren und Generatoren](https://github.com/KittyGiraudel/SassyIteratorsGenerators) sowie [einem JSON Parser](https://github.com/KittyGiraudel/SassyJSON) in Sass, können wir gut sehen was Sass als Präprozessor alles drauf hat.
 
 CSS ist eine einfache Sprache. Da Sass beabsichtigt CSS zu schreiben, sollte es niemals komplexer als normales CSS werden. Das [KISS Prinzip](https://de.wikipedia.org/wiki/KISS-Prinzip) (Keep it simple, stupid) ist in diesem Fall der Schlüssel, und hat unter gewissen Umständen sogar vorrang über [DRY](https://de.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself) (Don't repeat yourself).
 

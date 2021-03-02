@@ -22,7 +22,7 @@ Já sám používám přístup shodou okolností docela podobný k [SMACSS](http
 * [SMACSS](http://smacss.com/)
 * [An Introduction to OOCSS](https://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
 * [Atomic Web Design](https://bradfrost.com/blog/post/atomic-web-design/)
-* [Sass, une architecture composée](https://slides.com/hugogiraudel/sass-une-architecture-composee)
+* [Sass, une architecture composée](https://slides.com/KittyGiraudel/sass-une-architecture-composee)
 
 ## Komponenty
 
