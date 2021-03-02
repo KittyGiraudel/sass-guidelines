@@ -22,7 +22,7 @@ Når det er sagt, så er der mange måde at bruge disse funktionaliteter på. No
 
 [Sass’s første commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) går helt tilbage til sen-2006, over 8 år siden. Det er derfor overflødigt at sige, at det er kommet ret langt siden da. Originalt udviklet i Ruby, så poppede variationer op her og der. Den mest succesfulde, [LibSass](https://github.com/sass/libsass) (skrevet i C/C++), er nu tæt på at være fuldt kompatibel med den originale Ruby-version.
 
-I 2014 [besluttede holdene bag Ruby Sass og LibSass at vente på at begge versioner kunne synkronisere, før de bevægede sig videre fremad](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Siden da har LibSass været meget aktiv i at udgive versioner, der har funktionalitets-paritet med dets storebror. De sidste tilbageblivende inkonsistenser har jeg samlet og listet under projektet [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Hvis du er blevet opmærksom på en inkompatibilitet mellem de to versioner, så vær rar at åbne et issue.
+I 2014 [besluttede holdene bag Ruby Sass og LibSass at vente på at begge versioner kunne synkronisere, før de bevægede sig videre fremad](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Siden da har LibSass været meget aktiv i at udgive versioner, der har funktionalitets-paritet med dets storebror. De sidste tilbageblivende inkonsistenser har jeg samlet og listet under projektet [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/). Hvis du er blevet opmærksom på en inkompatibilitet mellem de to versioner, så vær rar at åbne et issue.
 
 For at vende tilbage til valget om din compiler. Det hele afhænger rent faktisk af dit projekt. Hvis dit projekt er et Ruby on Rails projekt, så bør du bruge Ruby Sass, der er perfekt velegnet til en sådan situation. Vær også opmærksom på at Ruby Sass altid vil være implementationsreferencen, og vil derfor altid være foran LibSass når det kommer til funktionaliteter.
 
@@ -32,7 +32,7 @@ Ved ikke-Ruby projekter, der har behov for en workflow integration, så er LibSa
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/)
+* [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/)
 * [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass eller SCSS

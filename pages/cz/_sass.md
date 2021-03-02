@@ -22,7 +22,7 @@ Jak již bylo řečeno, existuje mnoho způsobů využití těchto funkcí. Něk
 
 [První commit Sassu](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se datuje na konec roku 2006, tedy skoro před 8 lety. Netřeba snad ani dodávat, že od té doby uplynula dlouhá doba. Při počátečním vývoji v Ruby se tu a tam objevil nějaký ten port. Nejúspěšnější z nich, [LibSass](https://github.com/sass/libsass) (napsaný v C/C++) je nyní blízko k plné kompatibilitě s původní Ruby verzí.
 
-V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě verze před dalším postupem](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od té doby LibSass aktivně uvolňuje verze kompatibilní s jeho starším bratrem. Poslední zbývající nesrovnalosti jsem osobně zaznamenal ve svém projektu [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/). Pokud víte o nějakém rozdílu mezi verzemi, který v seznamu není uvedený, budu vám vděčný za otevření příslušné issue.
+V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě verze před dalším postupem](https://github.com/sass/libsass/wiki/The-LibSass-Compatibility-Plan). Od té doby LibSass aktivně uvolňuje verze kompatibilní s jeho starším bratrem. Poslední zbývající nesrovnalosti jsem osobně zaznamenal ve svém projektu [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/). Pokud víte o nějakém rozdílu mezi verzemi, který v seznamu není uvedený, budu vám vděčný za otevření příslušné issue.
 
 Vraťme se zpět k volbě kompilátoru. Ono to vlastně záleží na vašem projektu. Pokud je založen na Ruby on Rails, je lepší použít Ruby Sass, který se na takovýto případ perfektně hodí. Také mějte na paměti, že Ruby Sass bude vždy referenční implementací a bude vždy udávat směr funkcí LibSassu.
 Na projektech, které Ruby nevyužívají, bude použití LibSassu pravděpodobně lepší nápad, jelikož je pravděpodobně už je wrapper pro daný jazyk vytvořen. Takže pokud chcete použít například Node.js, [node-sass](https://github.com/sass/node-sass) je jasná volba.
@@ -31,7 +31,7 @@ Na projektech, které Ruby nevyužívají, bude použití LibSassu pravděpodobn
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
-* [Sass-Compatibility](https://hugogiraudel.github.io/sass-compatibility/)
+* [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/)
 * [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
 ## Sass nebo SCSS
