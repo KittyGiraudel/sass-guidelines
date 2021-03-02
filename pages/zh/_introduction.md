@@ -32,7 +32,7 @@
 
 最后，如果有一件事是我想从整个样式指南中传授的，那就是：**[Sass 以简为美，简约至上](https://www.sitepoint.com/keep-sass-simple/)**。
 
-感谢我过去使用 Sass 时傻傻的尝试，比如 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise)、[iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) 和 [a JSON parser](https://github.com/HugoGiraudel/SassyJSON)，从而认识到了可以用预处理器来做什么。
+感谢我过去使用 Sass 时傻傻的尝试，比如 [bitwise operators](https://github.com/KittyGiraudel/SassyBitwise)、[iterators and generators](https://github.com/KittyGiraudel/SassyIteratorsGenerators) 和 [a JSON parser](https://github.com/KittyGiraudel/SassyJSON)，从而认识到了可以用预处理器来做什么。
 
 同时，CSS 是一门简单的语言，那么 Sass 在书写常规 CSS 的时候就不应该更复杂。[KISS principle](https://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) 在这里是一个核心原则，甚至在有些情况下要优先于[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself)。
 

@@ -32,7 +32,7 @@
 
 Στο τέλος της μέρας, αν μπορείς να συγκρατήσεις ένα πράγμα απ' όλο το styleguide, είναι ότι **[η Sass πρέπει να είναι όσο πιο απλή γίνεται](https://www.sitepoint.com/keep-sass-simple/)**.
 
-Χάρη στα ανόητα πειράματά μου όπως οι [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), οι [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators) και [ένας JSON parser](https://github.com/HugoGiraudel/SassyJSON) σε Sass, ξέρουμε όλοι τι μπορεί να επιτευχθεί με αυτόν τον preprocessor.
+Χάρη στα ανόητα πειράματά μου όπως οι [bitwise operators](https://github.com/KittyGiraudel/SassyBitwise), οι [iterators and generators](https://github.com/KittyGiraudel/SassyIteratorsGenerators) και [ένας JSON parser](https://github.com/KittyGiraudel/SassyJSON) σε Sass, ξέρουμε όλοι τι μπορεί να επιτευχθεί με αυτόν τον preprocessor.
 
 Παράλληλα, η CSS είναι μια απλή γλώσσα. Η Sass που προορίζεται για την εξαγωγή CSS, δεν θα έπρεπε να είναι αρκετά πιο περίπλοκη απο την CSS. Η [αρχή KISS](https://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) είναι το κλειδί και μπορεί να πάρει προτεραιότητα έναντι της [DRY αρχής](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don't Repeat Yourself) σε κάποιες περιπτώσεις.
 

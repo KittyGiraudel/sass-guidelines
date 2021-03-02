@@ -66,7 +66,7 @@ Y por supuesto:
 * `main.scss`
 
 <div class="note">
-  <p>Si quieres usar el patrón 7-1, aquí hay una <a href="https://github.com/HugoGiraudel/sass-boilerplate">plantilla reutilizable</a> en GitHub. Debería contener todo lo que necesitas para empezar con esta arquitectura.</p>
+  <p>Si quieres usar el patrón 7-1, aquí hay una <a href="https://github.com/KittyGiraudel/sass-boilerplate">plantilla reutilizable</a> en GitHub. Debería contener todo lo que necesitas para empezar con esta arquitectura.</p>
 </div>
 
 {% include images/wallpaper.html %}

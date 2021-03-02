@@ -32,7 +32,7 @@ Samozřejmě to není jediná možnost jak dělat věci a hodně může záleže
 
 Na závěr toho všeho, pokud tu je jediná věc, kterou bych vám rád předal z celé této příručky, je to právě to, že **Sass by měl zůstat jednoduchý jak jen to je možné**.
 
-Díky mým pošetilým experimentům jako [bitový operátor](https://github.com/HugoGiraudel/SassyBitwise), [iterátory a generátory](https://github.com/HugoGiraudel/SassyIteratorsGenerators) a [JSON parser](https://github.com/HugoGiraudel/SassyJSON) v Sasu, jsme si všichni vědomi, co se dá s takovýmto preprocesorem dělat.
+Díky mým pošetilým experimentům jako [bitový operátor](https://github.com/KittyGiraudel/SassyBitwise), [iterátory a generátory](https://github.com/KittyGiraudel/SassyIteratorsGenerators) a [JSON parser](https://github.com/KittyGiraudel/SassyJSON) v Sasu, jsme si všichni vědomi, co se dá s takovýmto preprocesorem dělat.
 
 Zatímco je CSS jednoduchý jazyk, Sass, kterým se má psát CSS, by neměl být o nic moc složitější než obyčejné CSS.Hlavní roli zde hraje [princip KISS](https://cs.wikipedia.org/wiki/KISS) (Keep It Simple Stupid), který může mít v některých případech dokonce přednost před [principem DRY](https://cs.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself).
 

@@ -32,7 +32,7 @@ Obviamente, esta não será a única maneira de fazer as coisas e poderá ou nã
 
 No final do dia, se há algum conceito que eu gostava que toda a gente retirasse, seria que **[Sass deve ser mantido o mais simples possível](https://www.sitepoint.com/keep-sass-simple/)**.
 
-Graças às minhas experiências, tais como [operadores  binários](https://github.com/HugoGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/HugoGiraudel/SassyIteratorsGenerators) e [um interpretador de JSON](https://github.com/HugoGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
+Graças às minhas experiências, tais como [operadores  binários](https://github.com/KittyGiraudel/SassyBitwise), [iteradores e geradores](https://github.com/KittyGiraudel/SassyIteratorsGenerators) e [um interpretador de JSON](https://github.com/KittyGiraudel/SassyJSON) em Sass, temos todos uma boa ideia das capacidades deste pré-processador.
 
 Apesar de tudo, CSS é uma linguagem simples. Sass, com o propósito de escrever CSS, não deverá tornar-se muito mais complexa que CSS normal. O [princípio KISS](https://en.wikipedia.org/wiki/KISS_principle) (*Keep It Simple Stupid*) é chave, aqui, e deverá manter a precedência sobre o [princípio DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (*Don't Repeat Yourself*) na maior parte das situações.
 

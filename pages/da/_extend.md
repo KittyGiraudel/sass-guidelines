@@ -14,7 +14,7 @@ Ud fra hvad du ved, så kunne resultatet variere fra at gøre ingenting til at f
 Med det sagt, så kender du ordsproget:
 
 > Aldrig sig aldrig.<br>
-> &mdash; Tilsyneladende, [ikke Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
+> &mdash; Tilsyneladende, [ikke Beyonce](https://github.com/KittyGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
 
 Der er scenarier, hvor at udvide selektorer kan være hjælpsomt og tiden værd. Hav dog altid disse regler for øje, så du ikke kommer i problemer:
 

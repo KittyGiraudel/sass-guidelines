@@ -32,7 +32,7 @@
 
 마지막에 가서, 여러분이 이 스타일가이드 전체로부터 얻기를 바라는 한 가지가 있다면, 그것은 **Sass는 가능한 한 간단하게 유지되어야 한다**는 것입니다.
 
-Sass로 쓰인 [bitwise operators](https://github.com/HugoGiraudel/SassyBitwise), [iterators and generators](https://github.com/HugoGiraudel/SassyIteratorsGenerators), [a JSON parser](https://github.com/HugoGiraudel/SassyJSON) 등 저의 실없는 실험들 덕분에 우리는 이 전처리기를 가지고 어떤 일을 할 수 있는지 잘 알고 있습니다.
+Sass로 쓰인 [bitwise operators](https://github.com/KittyGiraudel/SassyBitwise), [iterators and generators](https://github.com/KittyGiraudel/SassyIteratorsGenerators), [a JSON parser](https://github.com/KittyGiraudel/SassyJSON) 등 저의 실없는 실험들 덕분에 우리는 이 전처리기를 가지고 어떤 일을 할 수 있는지 잘 알고 있습니다.
 
 한편, CSS는 간단한 언어입니다. Sass는 CSS를 작성하도록 의도되었으므로, 보통의 CSS보다 더 복잡해져선 안 됩니다. [KISS 원칙](https://en.wikipedia.org/wiki/KISS_principle)(Keep It Simple Stupid)이 핵심이며 어떤 상황에선 심지어 [DRY 원칙](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)(Don’t Repeat Yourself)보다 우선할 수도 있습니다.
 

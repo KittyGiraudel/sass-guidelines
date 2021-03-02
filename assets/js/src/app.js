@@ -36,7 +36,7 @@
   }
 
   function getChapterEditUrl (chapter) {
-    var BASE_URL = 'https://github.com/HugoGiraudel/sass-guidelines/blob/master/pages'
+    var BASE_URL = 'https://github.com/KittyGiraudel/sass-guidelines/blob/master/pages'
     var locale = getCurrentLocale()
     var fileName = '_' + getChapterName(chapter) + '.md'
 

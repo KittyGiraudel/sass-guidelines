@@ -14,7 +14,7 @@ Všichni víte, že výsledek se může pohybovat od 'nic to nedělá' až po ka
 Jak již bylo řečeno, znáte rčení:
 
 > Nikdy neříkej nikdy.<br>
-> &mdash; Zřejmě [ne Beyonce](https://github.com/HugoGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
+> &mdash; Zřejmě [ne Beyonce](https://github.com/KittyGiraudel/sass-guidelines/issues/31#issuecomment-69112419).
 
 Samozřejmě existují případy, kde by extendování selektorů mohlo být k užitku, přesto ale vždy mějte na paměti tyto pravidla, abyste se nedostali do potíží:
 

@@ -32,7 +32,7 @@
 
 В общем, всё, что я хочу донести этим стайлгайдом, так это что **[Sass должен быть предельно прост, насколько это возможно](https://www.sitepoint.com/keep-sass-simple/)**.
 
-Спасибо моим глупым эскпериментам, таким как [битовые операции](https://github.com/HugoGiraudel/SassyBitwise), [итераторы и генераторы](https://github.com/HugoGiraudel/SassyIteratorsGenerators) и [парсер JSON](https://github.com/HugoGiraudel/SassyJSON) на Sass, и теперь мы все хорошо знаем что можно сделать с этим препроцессором.
+Спасибо моим глупым эскпериментам, таким как [битовые операции](https://github.com/KittyGiraudel/SassyBitwise), [итераторы и генераторы](https://github.com/KittyGiraudel/SassyIteratorsGenerators) и [парсер JSON](https://github.com/KittyGiraudel/SassyJSON) на Sass, и теперь мы все хорошо знаем что можно сделать с этим препроцессором.
 
 Между тем, CSS является простым языком. Sass, предназначенный для написания CSS, не должен стать значительно сложнее обычного CSS. [Принцип KISS](https://ru.wikipedia.org/wiki/KISS_(принцип)) (**K**eep **I**t **S**imple **S**tupid, делай это проще, тупица) является ключевым моментом и в некоторых случаях может даже взять верх над [принципом DRY](https://ru.wikipedia.org/wiki/Don%27t_repeat_yourself) (**D**on’t **R**epeat **Y**ourself, не повторяйся).
 
