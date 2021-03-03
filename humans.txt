@@ -4,15 +4,15 @@
 /* TEAM */
 
     Author: Kitty Giraudel
-    Contact: @HugoGiraudel
+    Contact: @KittyGiraudel
     From: Berlin, Germany
 
     Designer: Kitty Giraudel
-    Contact: @HugoGiraudel
+    Contact: @KittyGiraudel
     From: Berlin, Germany
 
     Front-end developer: Kitty Giraudel
-    Contact: @HugoGiraudel
+    Contact: @KittyGiraudel
     From: Berlin, Germany
 
     Front-end developer: Moritz Kröger
