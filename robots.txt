@@ -1,0 +1,4 @@
+Sitemap: https://sass-guidelin.es/sitemap.xml
+
+User-agent: *
+Disallow:

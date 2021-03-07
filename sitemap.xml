@@ -1,0 +1,12 @@
+---
+---
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for language in site.languages %}
+  <url>
+    <loc>https://sass-guidelin.es/{% if language != 'en' %}{{ language }}/{% endif %}</loc>
+     <lastmod>2017-01-30</lastmod>
+     <changefreq>yearly</changefreq>
+  </url>
+  {% endfor %}
+</urlset>
