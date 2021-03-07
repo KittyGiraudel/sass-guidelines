@@ -11,7 +11,7 @@ Cependant, le vrai rôle de `@extend` est d’indiquer et de maintenir des relat
 
 Sachant cela, il est assez évident de voir comment le fait d’étendre des sélecteurs avec des contraintes trop souples peut engendrer une explosion du nombre de sélecteurs. Si `.baz .qux` étend `.foo .bar`, le sélecteur résultant peut être `.foo .baz .qux` ou `.baz .foo .qux`, dans la mesure où `.foo` et `.baz` sont des parents génériques. Ils peuvent être des parents, des grands-parents, etc.
 
-Essayez toujours de définir des relations via les [placeholders](https://www.sitepoint.com/sass-reference/placeholders/), plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
+Essayez toujours de définir des relations via les placeholders, plutôt que des classes. Ça permet d’utiliser n’importe quelle convention de nommage, et d’en changer sans problème. De plus, vu que les relations sont définies une fois seulement par les placeholders, il est bien plus rare de générer des sélecteurs non désirés.
 
 {% include snippets/extend/01/index.html %}
 

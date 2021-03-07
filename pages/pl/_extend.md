@@ -11,7 +11,7 @@ Niemniej jednak, prawdziwym przeznaczeniem dyrektywy `@extend` jest utrzymywanie
 
 Biorąc powyższe pod uwagę można zauważyć, że rozwijanie selektorów luźnymi ograniczeniami może powodować znaczne zwiększenie rozmiarów takich selektorów. Jeśli `.baz .qux` rozwija `.foo .bar`, to selektorem wynikowym może być `.foo .baz .qux` lub `.baz .foo .qux`, jako że zarówno `.foo` i `.baz` są ogólnymi wstępnymi. Mogą być zatem rodzicami, dziadkami, itd.
 
-Zawsze staraj się definiować powiązania za pomocą [placeholderów](https://www.sitepoint.com/sass-reference/placeholders/), a nie faktycznych selektorów. Przyniesie to większą swobodę używania (i zmieniania) konwencji nazwowych dla Twoich selektorów, a jako że związki są definiowane tylko raz wewnątrz placeholderów, ryzyko utworzenia niepożądanego selektora jest znacznie niższe.
+Zawsze staraj się definiować powiązania za pomocą placeholderów, a nie faktycznych selektorów. Przyniesie to większą swobodę używania (i zmieniania) konwencji nazwowych dla Twoich selektorów, a jako że związki są definiowane tylko raz wewnątrz placeholderów, ryzyko utworzenia niepożądanego selektora jest znacznie niższe.
 
 Dla dziedziczenia stylów używaj `@extend` wyłącznie wtedy, gdy rozwijający selektor `.class` czy `%placeholder` jest _tego rodzaju_, co rozwijany selektor. Na przykład, `.error` jest podobny do `.warning`, więc `.error` może wykorzystywać `@extend .warning`.
 

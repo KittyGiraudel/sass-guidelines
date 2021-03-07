@@ -9,7 +9,7 @@ L’objectif ultime de Sass est de combler les lacunes de CSS. Nous le savons, C
 
 Sass intervient ici comme un méta-langage, pour améliorer la syntaxe CSS afin d’offrir des fonctionnalités supplémentaires et des outils pratiques. Dans le même temps, Sass entend rester proche du langage CSS.
 
-Il ne s’agit pas de transformer CSS en langage de programmation. L’intention de Sass est simplement d’intervenir là où CSS montre ses limites. C’est pour cela qu’il est si simple de se lancer dans Sass&nbsp;: il ne fait qu’ajouter [quelques fonctionnalités](https://sitepoint.com/sass-reference/) à CSS.
+Il ne s’agit pas de transformer CSS en langage de programmation. L’intention de Sass est simplement d’intervenir là où CSS montre ses limites. C’est pour cela qu’il est si simple de se lancer dans Sass&nbsp;: il ne fait qu’ajouter quelques fonctionnalités à CSS.
 
 Ceci étant, il y a bien des manières d’utiliser ces fonctionnalités. Certaines sont bonnes, d’autres mauvaises, comme toujours. Les recommandations qui suivent ont pour objectif de vous donner une approche documentée et cohérente de l’écriture de code Sass.
 

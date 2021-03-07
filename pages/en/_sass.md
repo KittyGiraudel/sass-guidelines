@@ -9,7 +9,7 @@ Sass’ ultimate objective is to fix CSS’ flaws. CSS, as we all know, is not t
 
 This is where Sass comes in, as a meta-language, to improve CSS’ syntax in order to provide extra features and handy tools. Meanwhile, Sass wants to be conservative regarding the CSS language.
 
-The point is not to turn CSS into a fully featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of [extra features](https://sitepoint.com/sass-reference/) on top of it.
+The point is not to turn CSS into a fully featured programming language; Sass only wants to help where CSS fails. Because of this, getting started with Sass is no harder than learning CSS: it simply adds a couple of extra features on top of it.
 
 That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
 

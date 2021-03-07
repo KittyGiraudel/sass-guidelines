@@ -11,7 +11,7 @@ Dennoch, der wahre Grund von `@extend` ist es die Beziehung (Beschränkungen) in
 
 Dem vorausgesetzt ist es ziemlich einfach zu sehen, wie erweiternde Selektoren mit nachsichtigen Beschränkungen zu Selektorexplosion führen können. Wenn `.baz .qux` `.foo .bar` erweitert, kann der erzeugte Selektor `.foo .baz .qux` oder `.baz .foo .qux` sein, da `.foo` und `.baz` allgemeine Vorfahren dessen sind.
 
-Versuch immer solche Beziehungen durch [Selektorenplatzhalter](https://www.sitepoint.com/sass-reference/placeholders/) zu definieren, und nicht durch richtige Selektoren. Dadurch bekommst du die Freiheit jede Namenskonvention die du für deine Selektoren hast zu verwenden (und ändern). Da Beziehungen auch nur einmal innerhalb des Platzhalters definiert werden, ist die Möglichkeit ungewollte Selektoren zu erzeugen außerdem sehr gering.
+Versuch immer solche Beziehungen durch Selektorenplatzhalter zu definieren, und nicht durch richtige Selektoren. Dadurch bekommst du die Freiheit jede Namenskonvention die du für deine Selektoren hast zu verwenden (und ändern). Da Beziehungen auch nur einmal innerhalb des Platzhalters definiert werden, ist die Möglichkeit ungewollte Selektoren zu erzeugen außerdem sehr gering.
 
 Um Styles zu vererben, benutze `@exend` nur wenn der erweiternde `.class` oder `%placeholder` Selektor _ähnlich_ zu dem zu erweiterndem Selektor ist. Zum Beispiel `.error` ist ähnlich zu `.warning`, also kann `.error` `@extend .warning`.
 

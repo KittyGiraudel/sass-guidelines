@@ -9,7 +9,7 @@ Das ultimative Ziel von Sass ist es, die Fehler von CSS zu beheben. Denn wir wis
 
 Hier kommt Sass als Meta-Sprache hinzu, um die Syntax von CSS zu verbessern und nützliche Features sowie Extras hinzuzufügen. Trotz dessen möchte Sass aber konservativ gegenüber CSS bleiben.
 
-Es geht nämlich nicht darum CSS in eine Programmiersprache voller Features umzuändern. Sass möchte lediglich da helfen wo CSS versagt. Deshalb ist Sass zu erlernen auch nicht schwieriger als CSS; es fügt einfach nur ein paar [extra Features](https://sitepoint.com/sass-reference/) oben drauf.
+Es geht nämlich nicht darum CSS in eine Programmiersprache voller Features umzuändern. Sass möchte lediglich da helfen wo CSS versagt. Deshalb ist Sass zu erlernen auch nicht schwieriger als CSS; es fügt einfach nur ein paar extra Features oben drauf.
 
 Von daher gibt es gleichzeitig viele verschiedene Möglichkeiten diese Features einzusetzen. Manche sind gut, manche schlecht und andere wiederum unüblich. Die Absicht dieser Guidelines ist es einen konsistenten und dokumentierten Ansatz zu bieten um Sass zu schreiben.
 

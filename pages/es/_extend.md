@@ -11,7 +11,7 @@ Si embargo, el verdadero propósito de `@extend` es mantener las relaciones (res
 
 Se puede ver con claridad que al extender selectores con restricciones indulgentes puede conducir a una explosión del selector. Si `.baz .qux` extiende` .foo .bar`, el selector resultante puede ser `.foo .baz .qux` o` .baz .foo .qux`, ya que tanto `.foo` como` .baz` son antepasados ​​generales. Pueden ser padres, abuelos, etc.
 
-Intenta definir las relaciones vía [placeholders](https://www.sitepoint.com/sass-reference/placeholders/) y no con selectores directos. Esto te dará la libertad de usar (y cambiar) cualquier convención de nomenclatura que tengas para tus selectores, y ya que las relaciones solo se definen una vez dentro de los *placeholders*, es mucho menos probable tener selectores no desados.
+Intenta definir las relaciones vía placeholders y no con selectores directos. Esto te dará la libertad de usar (y cambiar) cualquier convención de nomenclatura que tengas para tus selectores, y ya que las relaciones solo se definen una vez dentro de los *placeholders*, es mucho menos probable tener selectores no desados.
 
 Para heredar estilos, usa sólo `@extend` si el selector que se extiende `.class` o `%placeholder` _es un tipo del_ selector extendido. Por ejemplo, un `.error` es un tipo de `.warning`, por lo que `.error` puede `@extend .warning`.
 

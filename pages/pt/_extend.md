@@ -11,7 +11,7 @@ No entanto, a verdadeiro propósito do `@extend` é manter relações (restriç�
 
 Dado isso, é certo ver como os seletores sendo estendidos com fracas restrições podem levar a uma explosão de seletor. Se `.baz .qux` estende `.foo .bar`, o resultado pode ser `.foo .baz .qux` ou `.baz .foo .qux`, já que `.foo` e `.baz` são ancestrais mais genéricos (eles podem ser pais, avós e etc).
 
-Sempre tente definir relações via [placeholders](https://www.sitepoint.com/sass-reference/placeholders/), não classes. Isso vai lhe dar a liberdade para usar (e alterar) qualquer convenção de nomeclatura que você usa em seus seletores e, já que relações são definidas apenas uma vez dentro do placeholder, é menos provavel que você irá compilar seletores indesejados.
+Sempre tente definir relações via placeholders, não classes. Isso vai lhe dar a liberdade para usar (e alterar) qualquer convenção de nomeclatura que você usa em seus seletores e, já que relações são definidas apenas uma vez dentro do placeholder, é menos provavel que você irá compilar seletores indesejados.
 
 {% include snippets/extend/01/index.html %}
 

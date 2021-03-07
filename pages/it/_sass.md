@@ -9,7 +9,7 @@ L’obiettivo finale di Sass è di sistemare i difetti di CSS. CSS, come tutti s
 
 Ed è qui che arriva Sass, che come meta linguaggio migliora la sintassi di CSS in modo da fornire funzionalità in più e strumenti di supporto extra. Inoltre Sass vuole rimanere conservativo riguardo la sintassi CSS.
 
-Il punto non è rendere CSS un linguaggio di programmazione pieno di funzionalità: Sass vuole solo aiutare dove CSS fallisce. Proprio per questo, iniziare con Sass non è più difficile che imparare CSS: vengono semplicemente aggiunte un [paio di funzionalità](https://sitepoint.com/sass-reference/).
+Il punto non è rendere CSS un linguaggio di programmazione pieno di funzionalità: Sass vuole solo aiutare dove CSS fallisce. Proprio per questo, iniziare con Sass non è più difficile che imparare CSS: vengono semplicemente aggiunte un paio di funzionalità.
 
 Detto questo, per usare queste funzionalità, ci sono molti modi. Alcuni buoni, altri cattivi, altri inusuali. Queste linee guida intendono fornire un approccio consistente e documentato per scrivere codice in Sass.
 

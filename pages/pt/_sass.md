@@ -9,7 +9,7 @@ O objectivo final de Sass é corrigir as falhas de CSS. CSS, como todos sabemos,
 
 É aqui que Sass entra em cena, como meta-linguagem, para melhorar a sintaxe original de CSS de maneira a oferecer novas funcionalidades e ferramentas úteis. No entanto, Sass pretende manter-se algo conservadora no que diz respeito à linguagem de CSS.
 
-A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass pretende apenas oferecer ajuda onde CSS demonstra falhas. Graças a esta abordagem, começar a aprender Sass não é mais difícil que aprender CSS: simplesmente [adiciona funcionalidades](https://sitepoint.com/sass-reference/) em cima da linguagem.
+A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass pretende apenas oferecer ajuda onde CSS demonstra falhas. Graças a esta abordagem, começar a aprender Sass não é mais difícil que aprender CSS: simplesmente adiciona funcionalidades em cima da linguagem.
 
 Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas são boas, outras más, outras pouco usuais. Este guia pretende providenciar uma forma documentada e consistente de escrever código em Sass.
 
