@@ -3,17 +3,6 @@
 (function () {
   'use strict'
 
-  var sanitizeSvg = (function ensureSvgId () {
-    var id = 100
-
-    return function (svg) {
-      id++
-      return svg
-        .replace(/title\-\d+/g, ('title-' + id))
-        .replace(/desc\-\d+/g, ('desc-' + id))
-    }
-  }())
-
   function getMetaContent (name) {
     return document.querySelector('meta[name="' + name + '"]').getAttribute('content')
   }
@@ -36,22 +25,11 @@
   }
 
   function getChapterEditUrl (chapter) {
-    var BASE_URL = 'https://github.com/KittyGiraudel/sass-guidelines/blob/master/pages'
+    var BASE_URL = 'https://github.com/KittyGiraudel/sass-guidelines/tree/main/pages'
     var locale = getCurrentLocale()
     var fileName = '_' + getChapterName(chapter) + '.md'
 
     return [ BASE_URL, locale, fileName ].join('/')
-  }
-
-  function translateSvgTitle (svg, title) {
-    return svg.replace('</title>', ' “' + title + '”</title>')
-  }
-
-  function getLinkSvgContent (svg, chapter) {
-    return translateSvgTitle(
-      sanitizeSvg(svg),
-      getChapterTitle(chapter)
-    )
   }
 
   function createChapterEditLink (chapter, svg) {
@@ -62,7 +40,8 @@
     link.classList.add('chapter__edit', 'button-ui')
     link.setAttribute('target', '_blank')
     link.setAttribute('rel', 'noreferrer noopener')
-    link.innerHTML = getLinkSvgContent(svg, chapter)
+    link.innerHTML = svg
+    link.querySelector('.sr-only').innerHTML += ' ' + title
 
     return link
   }
@@ -70,10 +49,12 @@
   function createChapterAnchorLink (chapter, svg) {
     var link = document.createElement('a')
     var heading = getChapterHeading(chapter)
+    var title = (heading.innerText || heading.textContent)
 
     link.href = '#' + heading.id
     link.classList.add('chapter__link', 'button-ui')
-    link.innerHTML = getLinkSvgContent(svg, chapter)
+    link.innerHTML = svg
+    link.querySelector('.sr-only').innerHTML += ' ' + title
 
     return link
   }
