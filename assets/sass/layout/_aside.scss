@@ -21,6 +21,11 @@
   top: 0; /* 1 */
   width: $sidebar-width;
   z-index: 30;
+  animation: slide-in 250ms 250ms both;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); }
 }
 
 .aside__overlay {
@@ -31,6 +36,11 @@
   right: 0;
   top: 0;
   z-index: 20;
+  animation: appear 200ms both;
+}
+
+@keyframes appear {
+  from { opacity: 0 }
 }
 
 /**
