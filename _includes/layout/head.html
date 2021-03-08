@@ -47,13 +47,6 @@
   <link rel="icon" href="/assets/images/favicon.png">
   <!--[if IE]><link rel="shortcut icon" href="/assets/images/favicon.ico"><![endif]-->
 
-  <!-- SVG for JavaScript usage -->
-  {% capture link_to_chapter %}{{ site.data[page.language].translations.link_to_chapter | default: site.data.en.translations.link_to_chapter }}{% endcapture %}
-  {% capture edit_chapter %}{{ site.data[page.language].translations.link_to_edit_chapter | default: site.data.en.translations.link_to_edit_chapter }}{% endcapture %}
-
-  <meta name="svg-link-icon" content='{% include partials/icon.html icon="pin" title=link_to_chapter %}'>
-  <meta name="svg-pencil-icon" content='{% include partials/icon.html icon="pencil" title=edit_chapter %}'>
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ site_title | strip }}">

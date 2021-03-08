@@ -3,17 +3,12 @@
 (function () {
   'use strict'
 
-  function getMetaContent (name) {
-    return document.querySelector('meta[name="' + name + '"]').getAttribute('content')
+  function getTemplateContent (id) {
+    return document.getElementById(id).content.firstElementChild.cloneNode(true)
   }
 
   function getChapterHeading (chapter) {
     return chapter.querySelector('h2[id]')
-  }
-
-  function getChapterTitle (chapter) {
-    var heading = getChapterHeading(chapter)
-    return (heading.innerText || heading.textContent)
   }
 
   function getChapterName (chapter) {
@@ -32,39 +27,20 @@
     return [ BASE_URL, locale, fileName ].join('/')
   }
 
-  function createChapterEditLink (chapter, svg) {
-    var title = getChapterTitle(chapter)
-    var link = document.createElement('a')
-
-    link.href = getChapterEditUrl(chapter)
-    link.classList.add('chapter__edit', 'button-ui')
-    link.setAttribute('target', '_blank')
-    link.setAttribute('rel', 'noreferrer noopener')
-    link.innerHTML = svg
-    link.querySelector('.sr-only').innerHTML += ' ' + title
-
-    return link
-  }
-
-  function createChapterAnchorLink (chapter, svg) {
-    var link = document.createElement('a')
-    var heading = getChapterHeading(chapter)
+  function createChapterLinks (chapter, heading) {
+    var editLink = getTemplateContent('svg-pencil-tpl')
+    var chapterLink = getTemplateContent('svg-link-tpl')
+    var wrapper = document.createElement('div')
     var title = (heading.innerText || heading.textContent)
 
-    link.href = '#' + heading.id
-    link.classList.add('chapter__link', 'button-ui')
-    link.innerHTML = svg
-    link.querySelector('.sr-only').innerHTML += ' ' + title
-
-    return link
-  }
-
-  function createChapterLinks (chapter, editSvg, linkSvg) {
-    var wrapper = document.createElement('div')
+    editLink.href = getChapterEditUrl(chapter)
+    chapterLink.href = '#' + heading.id
+    editLink.querySelector('.sr-only').innerHTML += ' ' + title
+    chapterLink.querySelector('.sr-only').innerHTML += ' ' + title
 
     wrapper.classList.add('button-wrapper', 'chapter__buttons')
-    wrapper.appendChild(createChapterAnchorLink(chapter, linkSvg))
-    wrapper.appendChild(createChapterEditLink(chapter, editSvg))
+    wrapper.appendChild(chapterLink)
+    wrapper.appendChild(editLink)
 
     return wrapper
   }
@@ -114,14 +90,12 @@
 
   function initialiseChapters () {
     var chapters = $('.chapter:not(.toc)')
-    var editSvg = getMetaContent('svg-pencil-icon')
-    var linkSvg = getMetaContent('svg-link-icon')
 
     chapters.forEach(function (chapter) {
       var heading = getChapterHeading(chapter)
 
       heading.parentNode.insertBefore(
-        createChapterLinks(chapter, editSvg, linkSvg),
+        createChapterLinks(chapter, heading),
         heading.nextSibling
       )
     })
