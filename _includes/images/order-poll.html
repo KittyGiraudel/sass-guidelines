@@ -1,10 +1,14 @@
 {::options parse_block_html="false" /}
 
 <figure role="group">
-  <img width="700" height="308"
-    loading="lazy"
-    alt="{{ site.data[page.language].translations.image_order_poll | markdownify | strip_html }}"
-    src="/assets/images/css-order-chart.png">
+  <picture>
+    <source type="image/avif" srcset="/assets/images/css-order-chart.avif">
+    <source type="image/webp" srcset="/assets/images/css-order-chart.webp">
+    <img width="700" height="308"
+      loading="lazy"
+      alt="{{ site.data[page.language].translations.image_order_poll | markdownify | strip_html }}"
+      src="/assets/images/css-order-chart.png">
+  </picture>
   <figcaption>{{ site.data[page.language].translations.image_order_poll | markdownify | replace:"<p>","" | replace:"</p>","" }}</figcaption>
 </figure>
 
