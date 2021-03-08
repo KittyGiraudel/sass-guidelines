@@ -1,14 +1,27 @@
 {::options parse_block_html="false" /}
 
 <figure role="group">
-  <img data-proofer-ignore
-    alt="{{ site.data[page.language].translations.image_color_functions | markdownify | strip_html }}"
-    sizes="100vw"
-    loading="lazy"
-    srcset="/assets/images/lighten-darken-mix_small.png  540w,
-            /assets/images/lighten-darken-mix_medium.png 900w,
-            /assets/images/lighten-darken-mix_large.png 1200w,
-            /assets/images/lighten-darken-mix_huge.png  1590w">
+  <picture>
+    <source sizes="100vw" type="image/avif"
+      srcset="/assets/images/lighten-darken-mix_small.avif  540w,
+              /assets/images/lighten-darken-mix_medium.avif 900w,
+              /assets/images/lighten-darken-mix_large.avif 1200w,
+              /assets/images/lighten-darken-mix_huge.avif  1590w">
+    <source sizes="100vw" type="image/webp"
+      srcset="/assets/images/lighten-darken-mix_small.webp  540w,
+              /assets/images/lighten-darken-mix_medium.webp 900w,
+              /assets/images/lighten-darken-mix_large.webp 1200w,
+              /assets/images/lighten-darken-mix_huge.webp  1590w">
+    <img
+      data-proofer-ignore
+      alt="{{ site.data[page.language].translations.image_color_functions | markdownify | strip_html }}"
+      sizes="100vw"
+      loading="lazy"
+      srcset="/assets/images/lighten-darken-mix_small.png  540w,
+              /assets/images/lighten-darken-mix_medium.png 900w,
+              /assets/images/lighten-darken-mix_large.png 1200w,
+              /assets/images/lighten-darken-mix_huge.png  1590w">
+  </picture>
   <figcaption>{{ site.data[page.language].translations.image_color_functions | markdownify | replace:"<p>","" | replace:"</p>","" }}</figcaption>
 </figure>
 

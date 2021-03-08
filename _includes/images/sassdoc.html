@@ -1,14 +1,26 @@
 {::options parse_block_html="false" /}
 
 <figure role="group">
-  <img data-proofer-ignore
-    loading="lazy"
-    alt="{{ site.data[page.language].translations.image_sassdoc | markdownify | strip_html }}"
-    sizes="100vw"
-    srcset="/assets/images/sassdoc-preview_small.png  540w,
-            /assets/images/sassdoc-preview_medium.png 900w,
-            /assets/images/sassdoc-preview_large.png 1200w,
-            /assets/images/sassdoc-preview_huge.png  1590w">
+  <picture>
+    <source sizes="100vw" type="image/avif"
+      srcset="/assets/images/sassdoc-preview_small.avif  540w,
+              /assets/images/sassdoc-preview_medium.avif 900w,
+              /assets/images/sassdoc-preview_large.avif 1200w,
+              /assets/images/sassdoc-preview_huge.avif  1590w">
+    <source sizes="100vw" type="image/webp"
+      srcset="/assets/images/sassdoc-preview_small.webp  540w,
+              /assets/images/sassdoc-preview_medium.webp 900w,
+              /assets/images/sassdoc-preview_large.webp 1200w,
+              /assets/images/sassdoc-preview_huge.webp  1590w">
+    <img data-proofer-ignore
+      loading="lazy"
+      alt="{{ site.data[page.language].translations.image_sassdoc | markdownify | strip_html }}"
+      sizes="100vw"
+      srcset="/assets/images/sassdoc-preview_small.png  540w,
+              /assets/images/sassdoc-preview_medium.png 900w,
+              /assets/images/sassdoc-preview_large.png 1200w,
+              /assets/images/sassdoc-preview_huge.png  1590w">
+  </picture>
   <figcaption>{{ site.data[page.language].translations.image_sassdoc | markdownify | replace:"<p>","" | replace:"</p>","" }}</figcaption>
 </figure>
 
