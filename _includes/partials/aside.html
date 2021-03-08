@@ -27,19 +27,14 @@
     </section>
 
     <section class="aside__section  aside__section--syntax js-powered">
-      <h3 class="aside__heading">
-        {{ site.data[page.language].translations.aside_syntax }}
-      </h3>
-
-      {% include partials/syntax_picker.html %}
+      {% assign legend = site.data[page.language].translations.aside_syntax %}
+      {% include partials/syntax_picker.html legend = legend %}
     </section>
 
     <section class="aside__section  aside__section--language">
-      <h3 class="aside__heading">
-        <label for="language-picker">
-          {{ site.data[page.language].translations.aside_language }}
-        </label>
-      </h3>
+      <label for="language-picker" class="aside__heading">
+        {{ site.data[page.language].translations.aside_language }}
+      </label>
 
       {% include partials/language_picker.html id = "language-picker" %}
     </section>
