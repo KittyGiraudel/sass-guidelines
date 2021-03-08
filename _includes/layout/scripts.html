@@ -1,3 +1,18 @@
+<!-- SVG for JavaScript usage -->
+{% capture link_to_chapter %}{{ site.data[page.language].translations.link_to_chapter | default: site.data.en.translations.link_to_chapter }}{% endcapture %}
+{% capture edit_chapter %}{{ site.data[page.language].translations.link_to_edit_chapter | default: site.data.en.translations.link_to_edit_chapter }}{% endcapture %}
+
+<template id="svg-link-tpl">
+  <a class="chapter__link button-ui">
+  {% include partials/icon.html icon="pin" title=link_to_chapter %}
+  </a>
+</template>
+<template id="svg-pencil-tpl">
+  <a class="chapter__edit button-ui" target="_blank" rel="noopener noreferrer">
+  {% include partials/icon.html icon="pencil" title=edit_chapter %}
+  </a>
+</template>
+
 <!-- Main JavaScript file, bundled by Netlify -->
 <script defer src="/assets/js/vendor/bling.js"></script>
 <script defer src="/assets/js/vendor/a11y-dialog.min.js"></script>
