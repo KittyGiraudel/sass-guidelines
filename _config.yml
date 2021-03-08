@@ -49,7 +49,7 @@ exclude:
 markdown: kramdown
 kramdown:
   auto_ids: true
-  toc_levels: 1..1
+  toc_levels: 2..2
 
 sass:
   sass_dir: ./assets/sass

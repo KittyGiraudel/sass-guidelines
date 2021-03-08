@@ -1,7 +1,7 @@
 
-# Indledning
+## Indledning
 
-## Hvorfor en styleguide
+### Hvorfor en styleguide
 
 En styleguide er ikke bare hyggelæsning, der maler et ideelt billede af din kode. Det er et vigtigt dokument i et projekts liv, der beskriver hvordan og hvorfor kode bør blive skrevet. Det kan se overdrevet ud til små projekter, men det hjælper meget med at holde kodebasen ren, skalérbar og let at vedligeholde.
 
@@ -21,7 +21,7 @@ Det er unnødvendigt at sige, at jo flere udviklere der er involveret i et proje
   </ul>
 </blockquote>
 
-## Disclaimer
+### Disclaimer
 
 Først og fremmest: **dette er ikke en CSS styleguide**. Dette dokument vil ikke diskutere konventioner for navngivning af CSS-klasser, modulære mønstre og spørgsmålet om ID'er i CSS-verdenen. Disse retningslinjer fokuserer kun på hvordan man arbejder med Sass-specifikt indhold.
 
@@ -29,7 +29,7 @@ Dertil, så er denne styleguide min egen og den er derfor **meget farvet**. Tæn
 
 Det er åbenlyst at dette selvfølgelig ikke er den eneste måde at gøre tingene på, og vil enten passe eller ikke passe til dit projekt. Vær velkommen til at udvælge hvad du kan bruge, og tilpasse det til dine behov. **Hver sin smag**, som vi siger.
 
-## Nøgleprincipper
+### Nøgleprincipper
 
 Når alt kommer til alt, så hvis der er noget jeg gerne vil have at du tager med dig fra hele denne styleguide, så er det at **Sass bør holdes så enkelt som det kan blive**.
 
@@ -41,7 +41,7 @@ Sommetider er det bedre at gentage sig selv en smule for at holde koden vedligeh
 
 Dertil, så lad mig citere [Harry Roberts](https://csswizardry.com) endnu engang, **pragmatisme trumfer perfektion**. På et tidspunkt, så vil du højest sandsynlig finde dig selv i en situation hvor du går imod reglerne, som står beskrevet her. Hvis det giver mening, og hvis det føles rigtigt, så gør det. Kode er kun et middel, ikke målet.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [KISS principle](https://en.wikipedia.org/wiki/KISS_principle)
 * [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)

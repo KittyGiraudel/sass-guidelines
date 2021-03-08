@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 Die `@extend` Regel ist ein mächtiges Feature welches häufig missverstanden wird. Generell ermöglicht es Sass zu sagen, dass ein Element A exakt gleich wie Selektor B gestyled werden soll. Deshalb kann es ein wertvoller Verbündeter bei modularem CSS sein.
 
@@ -29,7 +29,7 @@ Es gibt viele Szenarien wo Selektoren zu erweitern hilfreich und wertvoll ist. T
   <p>Wenn du von daher nicht auf Gzip (oder etwas ähnliches) zurückgreifen kannst, mag zu <code>@extend</code> zu wechseln wertvoll sein. Besonders wenn die Größe deines Stylesheets ein Performanceproblem ist.</p>
 </div>
 
-## Extend und Media Queries
+### Extend und Media Queries
 
 Du solltest Selektoren nur innerhalb desselben Media Scopes (`@media` Regel) erweitern. Stell dir ein Media Query als weitere Beschränkung vor.
 

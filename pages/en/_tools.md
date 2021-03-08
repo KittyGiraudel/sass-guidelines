@@ -1,11 +1,11 @@
 
-# Tools
+## Tools
 
 What’s nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 However my advice would be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don’t want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) is the main [Sass framework](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don’t see it dramatically losing in popularity for a while, if you want my opinion.
 
@@ -21,7 +21,7 @@ Anyway, I do not forbid the use of Compass although I would not recommend it eit
   <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
 </div>
 
-## Grid systems
+### Grid systems
 
 Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
 
@@ -33,7 +33,7 @@ If you are not tied to a specific grid system, you will be pleased to know there
 
 Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
 
-## SCSS-lint
+### SCSS-lint
 
 Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody’s perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
 

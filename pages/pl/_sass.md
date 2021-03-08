@@ -1,5 +1,5 @@
 
-# O Sassie
+## O Sassie
 
 Zdaniem twórców [Sassa](https://sass-lang.com), zawartym w jego [dokumentacji](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,7 +13,7 @@ Jego celem nie jest przekształcenie CSSa w pełnoprawny język programowania z 
 
 Tym samym, istnieje wiele sposobów na korzystanie z tych dodatkowych rozwiązań. Niektóre są poprawne, niektóre mniej, a niektóre też są niezwykłe. Ten przewodnik ma na celu przedstawienie spójnego i dobrze udokumentowanego podejścia do pisania kodu w Sassie.
 
-## Ruby Sass czy LibSass
+### Ruby Sass czy LibSass
 
 [Pierwszy commit Sassa](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) pochodzi z końca 2006 roku, a więc było to ponad 8 lat temu. Nie trzeba więc dodawać, że Sass przebył dość długą drogę. Choć początkowo rozwijany w Ruby, od tego czasu pojawił się szereg różnych portów. Ten najbardziej kompletny, [LibSass](https://github.com/sass/libsass) (napisany w C/C++), jest bliski do pełnej kompatybilności z oryginalną wersją, napisaną w Ruby.
 
@@ -23,12 +23,12 @@ Wracając do doboru kompilatora. Tak naprawdę, to wszystko zależy od konkretne
 
 W przypadku zaś projektów nieopartych o Ruby, a które wymagają integracji z określonym porządkiem pracy, LibSass będzie prawdopodobnie lepszym rozwiązaniem. Jest on bowiem stworzony pod kątem wykorzystania go przez różne wrappery. W przypadku chęci użycia go z Node.js, [node-sass](https://github.com/sass/node-sass) będzie dla Ciebie idealny.
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
-## Sass czy SCSS
+### Sass czy SCSS
 
 Panuje powszechnie dosyć spore zamieszanie, jeśli chodzi o znaczenie nazwy *Sass* i nie jest to bez powodu. Sass bowiem jest zarówno określeniem dla preprocesora, jak i swojej składni. Może to się wydawać nie do końca jasne, prawda?
 
@@ -40,11 +40,11 @@ Wrażliwa na tzw. znaki niedrukowalne składnia opiera się na indentacji zmiast
 
 Osobiście preferuję SCSS nad Sassem z powodu większej kompatybilności z CSSem i łatwości przyswojenia go sobie dla większości deweloperów. Z tego też powodu, w poniższym przewodniku posługiwać się będę raczej SCSSem niż Sassem. Można jednak w każdej chwili zmienić składnię przykładów tego przewodnika w <button type="button" data-a11y-dialog-show="options-panel" class="link-like">panelu opcji</button>.
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [What’s the difference between Sass and SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 
-## Inne preprocesory
+### Inne preprocesory
 
 Sass jest jednym z wielu dostępnych preprocesorów. Jego głównym konkurentem zdaje się być [LESS](http://lesscss.org/), który jest oparty o Node.js i który to zyskał popularność dzięki znanemu frameworkowi CSS, [Bootstrapowi](https://getbootstrap.com/). Znany jest także [Stylus](https://stylus-lang.com/) - zdający się być niczym nieskrępowaną wersją LESSa - z użyciem którego możesz zrobić w zasadzie wszystko, bowiem przekształca on właściwie CSS w pełnoprawny język programowania.
 

@@ -1,5 +1,5 @@
 
-# Variables
+## Variables
 
 Variables are the essence of any programming language. They allow us to reuse values without having to copy them over and over again. Most importantly, they make updating a value very easy. No more find and replace or manual crawling.
 
@@ -13,7 +13,7 @@ My advice would be to only create variables when it makes sense to do so. Do not
 
 Basically, there is no point declaring a variable that will never be updated or that is only being used at a single place.
 
-## Scoping
+### Scoping
 
 Variable scoping in Sass has changed over the years. Until fairly recently, variable declarations within rulesets and other scopes were local by default. However when there was already a global variable with the same name, the local assignment would change the global variable. Since version 3.4, Sass now properly tackles the concept of scopes and create a new local variable instead.
 
@@ -23,7 +23,7 @@ The following code snippet explains the *variable shadowing* concept.
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flag
+### `!default` flag
 
 When building a library, a framework, a grid system or any piece of Sass that is intended to be distributed and used by external developers, all configuration variables should be defined with the `!default` flag so they can be overwritten.
 
@@ -33,13 +33,13 @@ Thanks to this, a developer can define their own `$baseline` variable *before* i
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+### `!global` flag
 
 The `!global` flag should only be used when overriding a global variable from a local scope. When defining a variable at root level, the `!global` flag should be omitted.
 
 {% include snippets/variables/04/index.html %}
 
-## Multiple variables or maps
+### Multiple variables or maps
 
 There are advantages of using maps rather than multiple distinct variables. The main one is the ability to loop over a map, which is not possible with distinct variables.
 

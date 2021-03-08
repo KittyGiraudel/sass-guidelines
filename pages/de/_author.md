@@ -1,5 +1,5 @@
 
-# Über den Autor
+## Über den Autor
 
 Mein Name ist Kitty, ich bin ein Front-End Entwickler aus Frankreich, lebe seit 2015 in Berlin (Deutschland) und arbeite derzeit bei [Gorillas](https://gorillas.io/).
 

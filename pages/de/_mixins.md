@@ -1,5 +1,5 @@
 
-# Mixins
+## Mixins
 
 Mixins gehören zu den meist genutzten Features in der gesamten Sass-Sprache. Sie sind aus gutem Grund der Schlüssel zur Wiederverwendbarkeit und DRY-Komponenten: Mixins erlauben es dem Autor durch sein gesamtes Stylesheet hinweg Styles wiederzuverwenden, ohne auf nicht-semantische Klassen wie `.float-left` zurückzufallen.
 
@@ -7,7 +7,7 @@ Sie können komplette CSS-Regeln beinhalten, und so gut wie alles was sonst noch
 
 Dennoch habe ich das Gefühl, vor dem Missbrauch von Mixins warnen zu müssen. Denn erneut ist das Schlüsselwort hierbei *Einfachheit*. Es mag verlockend sein, extrem mächtige Mixins mit massiver Logik zu bauen. Man nennt es Over-Engineering, und die meisten Entwickler leiden darunter. Überdenke nicht zu viel und halt es vor allem einfach. Wenn ein Mixin länger als 20 Zeilen wird, solltest du es lieber in kleinere Teile aufteilen oder komplett überdenken.
 
-## Grundlagen
+### Grundlagen
 
 Davon abgesehen sind Mixins extrem hilfreich und du solltest ein paar verwenden. Die Faustformel hierbei ist, wenn dir auffällt das eine bestimmte Gruppe von CSS Werten immer zusammen auftritt (also nicht zufällig), dann kannst du ein Mixin draus machen. Der [Mikro-Clearfix Hack von Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) zum Beispiel, verdient es (ohne Argumente) in einem Mixin zu sein.
 
@@ -19,7 +19,7 @@ Ein weiteres Beispiel ist ein Mixin welches die Maße `width` und `height` für 
 
 Für weitere komplexe Beispiele von Mixing, werf einen Blick auf [dieses Mixin um CSS Dreiecke zu generieren]((https://www.sitepoint.com/sass-mixin-css-triangles/), [dieses Mixin für lange Schatten](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) oder um [CSS Verläufe für alte Browser zu polyfillen](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
-## Parameterlose Mixins
+### Parameterlose Mixins
 
 Manchmal werden Mixins nur dazu benutzt, um zu verhindern dass man eine Gruppe von Deklarationen immer und immer wieder wiederholt. Dennoch brauchen sie keine Parameter oder haben sensible Standardwerte welche nicht notwendigerweise einen Parameter benötigen.
 
@@ -27,7 +27,7 @@ In solchen Fällen können wir beim Aufruf ohne Probleme die Klammern weglassen.
 
 {% include snippets/mixins/08/index.html %}
 
-## Parameterliste
+### Parameterliste
 
 Wenn du es mit einer unbekannten Anzahl von Parametern in einem Mixin zu tun hast, solltest du lieber `arglist` anstatt einer Liste verwenden. Stell dir `arglist` als den 8. versteckten und undokumentierten Datentyp mit der `...` Signatur in Sass vor, welcher unbedingt genutzt werden sollte, sobald du eine willkürliche Anzahl von Parametern in deinem Mixin oder Funktion hast.
 
@@ -41,7 +41,7 @@ Sass ist sogar ziemlich Clever bei Mixin- und Funktionsdeklarationen. So sehr da
 
 Für weitere Informationen ob es besser ist mehrere Argumente, eine Liste oder eine Arguementenliste zu werdenen, [hat SitePoint einen netten Artikel zu dem Thema](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
-## Mixins und Vendor-Prefixe
+### Mixins und Vendor-Prefixe
 
 Es mag verlockend sein, eigene Mixins zu schreiben die sich drum kümmern nicht oder nur teilweise unterstützte CSS Werte mit Vendor-Prefixen zu versehen. Doch genau das wollen wir nicht. Erstens, wenn du [Autoprefixer](https://github.com/postcss/autoprefixer) verwenden kannst, tu es. Es wird Sass-Code von deinem Projekt entfernen, immer up-to-date sein und eine wesentlich bessere Arbeit als du, beim hinzufügen von Prefixen, leisten.
 

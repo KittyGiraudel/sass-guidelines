@@ -1,5 +1,5 @@
 
-# Contributing
+## Contributing
 
 Sass Guidelines is a free project that I maintain in my spare time. Needless to say, it is quite a large amount of work to keep everything up-to-date, documented and relevant. Thankfully, I get helped by a lot of great contributors, especially when it comes to maintaining dozens of <a href="#options-panel" class="link-like">different translations</a>. Be sure to thank them!
 

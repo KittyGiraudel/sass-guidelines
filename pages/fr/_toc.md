@@ -1,5 +1,5 @@
 
-# Table des matières
+## Table des matières
 
 * Toc
 {:toc}

@@ -1,5 +1,5 @@
 
-# Tabella dei contenuti
+## Tabella dei contenuti
 
 * Toc
 {:toc}

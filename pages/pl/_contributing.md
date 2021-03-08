@@ -1,5 +1,5 @@
 
-# Pomoc w tworzeniu
+## Pomoc w tworzeniu
 
 Sass Guidelines jest darmowym projektem, którym zajmuję się w swoim wolnym czasie. Wymaga on ode mnie dużo poświęcenia, by stale go aktualizować, dokładnie dokumentować i podnosić jego wartość merytoryczną. Na szczęście pomaga mi w tym wiele wspaniałych osób, zwłaszcza w utrzymywaniu <a href="#options-panel" class="link-like">wielu różnych tłumaczeń</a>. Nie zapomnij im podziękować!
 

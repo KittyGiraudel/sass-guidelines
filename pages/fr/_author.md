@@ -1,5 +1,5 @@
 
-# Sur l’auteur
+## Sur l’auteur
 
 Je m’appelle [Kitty Giraudel](https://kittygiraudel.com), je suis un·e développeur·se front-end français·e basé·e à Berlin (Allemagne) depuis 2015, actuellement en poste à [Gorillas](https://gorillas.io/).
 

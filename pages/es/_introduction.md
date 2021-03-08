@@ -1,7 +1,7 @@
 
-# Introducción
+## Introducción
 
-## Por Qué Una Guía De Estilo
+### Por Qué Una Guía De Estilo
 
 Una guía de estilo no es sólo un documento agradable de leer mientras te imaginas tu código perfecto. Se trata de un documento clave en la vida de un proyecto, describe cómo y por qué debe escribirse el código. Puede parecer una exageración para pequeños proyectos, pero es de gran ayuda para mantener el código limpio, escalable y fácil de mantener.
 
@@ -20,7 +20,7 @@ Sobra decir, que cuantos más desarrolladores participen en el proyecto, más ne
   </ul>
 </blockquote>
 
-## Renuncia De Responsabilidad
+### Renuncia De Responsabilidad
 
 Primero lo primero: **esta no es una guía de CSS**. Este documento no tratará sobre convenciones de nomenclatura para clases CSS, ni sobre los patrones modulares de CSS, ni mucho menos, sobre la cuestión de los IDs en el mundo CSS. Esta guía solo busca estudiar el contenido relacionado específicamente con Sass.
 
@@ -28,7 +28,7 @@ Además, esta guía está elaborada por mi y por tanto es **subjetiva y personal
 
 Obviamente, esta no es la única forma de hacer las cosas, y puede que encaje o no en tu proyecto. Siéntete libre de elegir lo que te interese y de adaptarlo a tus necesidades. Como decimos, *tu experiencia puede variar*.
 
-## Principios Clave
+### Principios Clave
 
 Al final del día, si hay una cosa que me gustaría que aprendieses de toda esta guía, es que **[Sass debe mantenerse tan simple como sea posible](https://www.sitepoint.com/keep-sass-simple/)**.
 
@@ -42,7 +42,7 @@ También, si me permites que cite a [Harry Roberts](https://csswizardry.com) una
 
 
 
-## Ampliación de la guía
+### Ampliación de la guía
 
 Una gran parte de esta guía es claramente subjetiva. Llevo leyendo y escribiendo Sass bastantes años, hasta el punto en el que tengo muchos principios en lo que se refiere a escribir una hoja de estilo limpia. Entiendo que esto no pueda complacer o encajar con todo el mundo, lo cual es perfectamente normal.
 

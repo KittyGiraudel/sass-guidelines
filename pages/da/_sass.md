@@ -1,5 +1,5 @@
 
-# Om Sass
+## Om Sass
 
 Sådan beskriver [Sass](https://sass-lang.com) sig selv i dets [dokumentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,12 +13,12 @@ Pointen er ikke at transformere CSS til et fuldt udstyret programmeringssprog; S
 
 Når det er sagt, så er der mange måde at bruge disse funktionaliteter på. Nogle gode, nogle dårlige, nogle underlige. Disse retningslinjer er tiltænkt at give dig en konsistent og dokumenteret tilgang til at skrive Sass kode.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Sass](https://sass-lang.com)
 * [Sass documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-## Ruby Sass eller LibSass
+### Ruby Sass eller LibSass
 
 [Sass’s første commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) går helt tilbage til sen-2006, over 8 år siden. Det er derfor overflødigt at sige, at det er kommet ret langt siden da. Originalt udviklet i Ruby, så poppede variationer op her og der. Den mest succesfulde, [LibSass](https://github.com/sass/libsass) (skrevet i C/C++), er nu tæt på at være fuldt kompatibel med den originale Ruby-version.
 
@@ -28,14 +28,14 @@ For at vende tilbage til valget om din compiler. Det hele afhænger rent faktisk
 
 Ved ikke-Ruby projekter, der har behov for en workflow integration, så er LibSass højest sandsynlig en bedre idé, da den for det meste er dedikeret til at blive indpakket. Så hvis du ønsker at bruge f.eks. Node.js, så er [node-sass](https://github.com/sass/node-sass) det klare valg.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/)
 * [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
-## Sass eller SCSS
+### Sass eller SCSS
 
 Der er eksisterer megen forvirring omkring semantikken ved navnet *Sass*, og af god grund: Sass betyder både preprocessoren og dens egen syntaks. Ikke særlig hensigtsmæssigt, vel?
 
@@ -47,11 +47,11 @@ Sass' whitespace-sensitive syntaks afhænger af indentering for at fjerne klamme
 
 Jeg selv foretrækker SCSS frem for Sass, fordi det er tættere på CSS og rarere for de fleste udviklere. På grund af det, så er SCSS standard-syntaksen for disse retningslinjer. Du kan skifte til indenteret Sass syntaks via <button type="button" data-a11y-dialog-show="options-panel" class="link-like">indstillingspanelet</button>.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [What’s the difference between Sass and SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 
-## Andre preprocessorer
+### Andre preprocessorer
 
 Sass er en preprocessor blandt mange andre. Dens mest seriøse konkurrent må være [LESS](http://lesscss.org/), en Node.js-baseret preprocessor, der er blevet ret populært fordi det kendte CSS framework [Bootstrap](https://getbootstrap.com/) anvender det. Der findes også [Stylus](https://stylus-lang.com/) - som er den nørdede, ubegrænsede version af LESS - hvor du kan gøre praktisk taget lige hvad du vil, da den nærmest transformerer CSS om til et programmeringssprog.
 
@@ -69,7 +69,7 @@ Idéen bag postprocessorer er, at når browsere støtter nye funktionaliteter (f
 
 Selvom det at give os morgendagens syntaks i dag er en nobel idé, så bliver jeg nødt til at sige at jeg stadig foretrækker at anvende Sass til de fleste opgaver. Dog er der situationer, hvor jeg tror at postprocessorer er mere velegnet end Sass og lignende - CSS præ-fiksing for eksempel - men dette vender vi tilbage til.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [LESS](http://lesscss.org/)
 * [Stylus](https://stylus-lang.com/)

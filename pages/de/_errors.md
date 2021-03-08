@@ -1,5 +1,5 @@
 
-# Warnungen und Fehler
+## Warnungen und Fehler
 
 Wenn es ein Feature gibt welches von Entwicklern oft übersehen wird, dann ist es die Fähigkeit dynamisch Warnungen und Fehler auszugeben. Tatsächlich kommt Sass mit drei eigenen Funktionen um Inhalt in dem Standardausgabesystem (CLI, kompilierte App, …) darzustellen.
 
@@ -11,7 +11,7 @@ Lasst uns `@debug` mal zur Seite stellen, da es dazu vorgesehen ist SassScript z
 
 Es gibt eine Menge Spielraum für Warnungen und Fehler in einem Sass Projekt. Grundsätzlich kann jedes Mixin oder Funktion, welche einen bestimmten Typ von Parameter akzeptiert, einen Fehler anzeigen sobald etwas schief geht oder eine Warnung wenn eine Vermutung angestellt wird.
 
-## Warnungen
+### Warnungen
 
 Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche versucht einen `px`-Wert in `em` umzuwandeln, als Beispiel:
 
@@ -19,7 +19,7 @@ Nimm diese Funktion von [Sass-MQ](https://github.com/sass-mq/sass-mq), welche ve
 
 Wenn der Wert ohne Einheit ist, geht die Funktion davon aus das es als Pixel behandelt werden soll. An dieser Stelle ist eine Vermutung eventuell zu riskant, deshalb sollte der Entwickler davor gewarnt werden dass die Software etwas unerwartes ausgeben könnte.
 
-## Fehler
+### Fehler
 
 Fehler, im Gegenteil zu Warnungen, hindern den Compiler dabei weiter zu machen. Grundsätzlich halten sie die Verarbeitung an und zeigen in der Ausgabe die Nachricht sowie den Stacktrace an, welcher gut fürs debuggen ist. Deshalb sollten Fehler immer nur dann angezeigt werden, wenn es für das Programm keinen Weg mehr gibt weiterzumachen. Wenn möglich, versuch um das Problem herum zu arbeiten und stattdessen eine Warnung anzuzeigen.
 

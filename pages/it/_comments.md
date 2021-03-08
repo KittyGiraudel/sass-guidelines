@@ -1,5 +1,5 @@
 
-# Commentare
+## Commentare
 
 CSS è un linguaggio complicato, pieno di hack e stranezze. Per questo motivo, dovrebbe essere sempre ben commentato, specialmente se tu o qualcun altro ha bisogno di leggere e aggiornare il codice tra sei mesi o un anno. Fa’ in modo che nessuno possa mai pensare *non-l’ho-segnato-dio-mio-perchè*.
 
@@ -14,7 +14,7 @@ Per quanto il CSS possa essere semplice, c’è comunque un sacco di spazio per 
 
 Probabilmente sto dimenticando un mucchio di altre ragioni. Commentare è un’attività che richiede poco tempo quando la si fa mentre si scrive il codice, per cui fatelo al momento giusto. Tornare su un pezzo di codice per aggiungere commenti è davvero poco pratico, oltre che assai fastidioso.
 
-## Scrivere i commenti
+### Scrivere i commenti
 
 Idealmente, *ogni* set di regole CSS dovrebbe essere preceduto da un commento stile C che spiega il ruolo di quel blocco. Questo commento contiene anche spiegazioni, in una lista numerata, riguardo parti specifiche del set di regole. Ad esempio:
 
@@ -28,7 +28,7 @@ Quando commenti parti specifiche in Sass, usa commenti inline piuttosto che il b
 
 Questo approccio è consiglato anche da CSS guidelines nella sezione [Commenting](https://cssguidelin.es/#commenting).
 
-## Documentazione
+### Documentazione
 
 Ogni variabile, funzione, mixin e placeholder che viene riusata all’interno della codebase è da documentare come parte dell’API globale, usando [SassDoc](http://sassdoc.com).
 

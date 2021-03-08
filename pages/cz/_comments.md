@@ -1,5 +1,5 @@
 
-# Komentování
+## Komentování
 
 CSS je ošemetný jazyk plný hacků a podivností. Díky tomu by měl být hodně komentován, zvláště pokud vy nebo někdo jiný zamýšlíte číst a upravovat kód za 6 měsíců nebo rok. Nenechte se, nebo někoho jiného, dostat do pozice *Já-jsem-tohle-pane-bože-nenapsal*.
 
@@ -14,7 +14,7 @@ I přesto, že se CSS může zdát jednoduché, je mnoho situací, kdy může ko
 
 A pravděpodobně jsem ještě zapomněl mnoho dalších důvodů. Komentování zabere málo času, když se dělá plynule při psaní kódu, takže jej dělejte ve správný čas. Vracet se zpátky okomentovat kus kódu není nejen zcela nereálné, ale je to zároveň příšerně otravné.
 
-## Psaní komentářů
+### Psaní komentářů
 
 Nejlepší je, když *každé* CSS pravidlo předchází předchází komentář ve stylu jazyka C, který vysvětluje smysl CSS bloku. Tento komentář může také obsahuje očíslované vysvětlení pro specifické části pravidel. Například:
 
@@ -26,11 +26,11 @@ Pokud komentujete Sass specifickou sekci, použijte Sass řádkové komentáře 
 
 {% include snippets/comments/02/index.html %}
 
-###### Další četba
+**Další četba:**
 
 * [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
-## Dokumentace
+### Dokumentace
 
 Každá proměnná, funkce, mixin a placeholder, která je zamýšlena býti znovupoužitelná v codebase by měla být dokumentována jako část globálního API využívající [SassDoc](http://sassdoc.com).
 
@@ -51,7 +51,7 @@ Zde je příklad rozsáhle dokumentovaného mixinu se SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Další četba
+**Další četba:**
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

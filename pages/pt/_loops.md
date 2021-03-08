@@ -1,11 +1,11 @@
 
-# Ciclos
+## Ciclos
 
 Visto que Sass providencia estruturas de dados complexas, tal como [listas](#listas) e [mapas](#mapas), não é surpresa fornecer também formas de iterar sobre essas entidades.
 
 No entanto, a presença de ciclos normalmente implica lógica moderadamente complexa que provavelmente não pertence a Sass. Antes de usar um ciclo, certifiquem-se que tal faz sentido e que realmente resolve um problema.
 
-## Each
+### Each
 
 O ciclo `@each` é definitivamente o mais usado dos três ciclos que Sass oferece. Apresenta uma API simples para iterar uma lista ou mapa.
 
@@ -20,7 +20,7 @@ Façam também questão de respeitar as seguintes diretrizes para preservar a le
 * Colocar sempre uma linha em branco antes do `@each`;
 * Colocar sempre uma linha em branco antes da chaveta de fecho (`}`) a menos que a próxima linha seja uma chaveta de fecho (`}`).
 
-## For
+### For
 
 O ciclo `@for` poderá ser útil quando combinado com as pseudo-classes `:nth-*` de CSS. À exceção destes cenários, é preferível um ciclo `@each` se *têm* de iterar sobre algo.
 
@@ -33,6 +33,6 @@ Também não se esqueçam de respeitar as seguintes diretrizes para preservar a 
 * Colocar sempre uma linha em branco antes do `@each`;
 * Colocar sempre uma linha em branco antes da chaveta de fecho (`}`) a menos que a próxima linha seja uma chaveta de fecho (`}`).
 
-## While
+### While
 
 O ciclo `@while` não possui absolutamente nenhum uso real num projeto de Sass, especialmente porque não é possível quebrar o ciclo por dentro. **Não usar**.

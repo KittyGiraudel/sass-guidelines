@@ -1,5 +1,5 @@
 
-# Conventions de nommage
+## Conventions de nommage
 
 Dans cette section, nous ne traiterons pas des conventions de nommage CSS pour une meilleure maintenabilité et le passage à l’échelle ; non seulement cela dépend de chacun, mais cela sort du cadre d’un guide de style Sass. Je vous suggère de consulter les conventions recommandées par [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
@@ -15,7 +15,7 @@ En ce qui concerne les variables, les fonctions et les mixins, nous allons nous 
 
 {% include snippets/naming/01/index.html %}
 
-## Constantes
+### Constantes
 
 Si vous êtes un développeur de frameworks ou si vous écrivez des bibliothèques, vous pouvez avoir besoin de variables qui ne sont pas supposées être mises à jour, en aucune circonstance&nbsp;: en d’autres termes des constantes. Malheureusement (ou heureusement&nbsp;?), Sass ne permet pas de définir de telles entités, c’est pourquoi nous devons nous tenir à des conventions strictes si nous voulons que les choses soient claires.
 
@@ -25,7 +25,7 @@ Comme dans de nombreux langages, je suggère d’utiliser des variables tout en 
 
 Si vous désirez vraiment utiliser des constantes en Sass, vous devriez lire [cet article dédié à ce sujet](https://www.sitepoint.com/dealing-constants-sass/).
 
-## Namespaces
+### Namespaces
 
 Si vous avez l’intention de distribuer votre code Sass, sous forme de bibliothèque, de framework, de système de grille ou autre, il peut s’avérer intéressant de donner un *namespace* à vos variables, fonctions, mixins et placeholders de façon à ce qu’ils n’entrent pas en conflit avec le code d’une autre personne.
 

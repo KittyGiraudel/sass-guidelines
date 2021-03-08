@@ -6,7 +6,7 @@
   // DOM queries
   var tableOfContents = $('.toc')[0]
   var footer = $('.footer')[0]
-  var headings = $('.chapter:not(.toc) > h1[id]')
+  var headings = $('.chapter:not(.toc) > h2[id]')
 
   // Internal variables
   var addOffsetView = 50

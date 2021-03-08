@@ -1,5 +1,5 @@
 
-# 关于作者
+## 关于作者
 
 [Kitty Giraudel](https://kittygiraudel.com)，来自法国的前端工程师，现居柏林，目前在 [Gorillas](https://gorillas.io/) 工作。
 

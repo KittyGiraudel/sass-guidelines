@@ -1,5 +1,5 @@
 
-# Contributions
+## Contributions
 
 Sass Guidelines est un projet ouvert que je maintiens sur mon temps libre. S’assurer qu’il soit toujours à jour, documenté et pertinent représente beaucoup de travail. Heureusement, je reçois l’aide de nombreux et généreux contributeurs, notamment pour la tenue à jour des <a href="#options-panel" class="link-like">différentes traductions</a>. Pensez à les remercier !
 

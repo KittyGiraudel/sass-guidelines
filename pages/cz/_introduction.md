@@ -1,7 +1,7 @@
 
-# Úvod
+## Úvod
 
-## Proč mít příručku
+### Proč mít příručku
 
 Příručka není jenom bezvýznamný dokument na bezduché přečtení, nebo představení ideálního stavu pro váš kód. Je to klíčový dokument projektu, který popisuje, jak a proč psát kód. Pro malé projekty se může zdát spíše jako zbytečnost, ale opravdu dost pomáhá udržovat codebase čistou a jednoduše upravitelnou.
 
@@ -20,7 +20,7 @@ Důležitost dobře uvádí [Harry Roberts](https://csswizardry.com) v jeho [CSS
   </ul>
 </blockquote>
 
-## Podmínky odpovědnosti
+### Podmínky odpovědnosti
 
 Zaprvé: **toto není CSS příručka**. Tento dokument nebude probírat jmenné konvence pro CSS třídy, modulárních vzorů a otázku problematiky ID v CSS. Tato příručka se zabývá pouze otázkami spojenými se Sass.
 
@@ -28,7 +28,7 @@ Tato příručka je také mojí vlastní a proto je **velmi tvrdohlavá**. Berte
 
 Samozřejmě to není jediná možnost jak dělat věci a hodně může záležet na vašem projektu. Klidně si vyberte a upravte si vše podle vašich potřeb. Jak říkám, *záleží na vkusu*.
 
-## Klíčové principy
+### Klíčové principy
 
 Na závěr toho všeho, pokud tu je jediná věc, kterou bych vám rád předal z celé této příručky, je to právě to, že **Sass by měl zůstat jednoduchý jak jen to je možné**.
 
@@ -40,7 +40,7 @@ Někdy se je lepší trochu opakovat tak, aby se kód dobře upravoval, spíše 
 
 Stejně tak, a znovu budu citovat [Harryho Robertse](https://csswizardry.com), **pragmatismus přebíjí dokonalost**. V nějakém momentu se pravděpodobně nachytáte, když budete dělat něco, co se příčí pravidlům. Pokud to dává smysl a pokud to zní dobře, dělejte to. Kodex je jen prostředkem, nikoli cílem.
 
-###### Další četba
+**Další četba:**
 
 * [princip KISS](https://cs.wikipedia.org/wiki/KISS)
 * [princip DRY](https://cs.wikipedia.org/wiki/Don%27t_repeat_yourself)

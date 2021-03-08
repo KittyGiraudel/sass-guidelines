@@ -1,5 +1,5 @@
 
-# Kommentering
+## Kommentering
 
 CSS er et udfordrende sprog, fyldt med hacks og mærkværdigheder. På grund af det, så bør det blive kraftigt kommenteret, især hvis du eller andre har til hensigt at læse eller opdatere koden 6 måneder, eller 1 år, fra nu. Lad ikke dig selv eller andre komme i en situation af *Jeg-har-ikke-skrevet-det-her-åh-gud-hvorfor*.
 
@@ -14,7 +14,7 @@ Så simpelt som CSS kan blive, så er der stadig masser af plads til kommentarer
 
 Og jeg glemte sikkert en masse andre grunde. Kommentering tager meget lidt tid når det gøres samtidig med koden, så gør det på det rigtige tidspunkt. At vende tilbage til et stykke kode for at kommentere det er ikke blot urealistisk, men også ekstremt irriterende.
 
-## At skrive kommentarer
+### At skrive kommentarer
 
 Ideelt set, så bør *alle* CSS regelsæt foranstilles med en C-stil kommentar, der forklarer grunden bag CSS-blokken. Denne kommentar indeholder nummererede forklaringer, der vedrører specifikke dele af regelsættet. For eksempel:
 
@@ -26,11 +26,11 @@ Når du kommenterer en Sass-specifik sektion, så anvend indlejrede Sass-komment
 
 {% include snippets/comments/02/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
-## Dokumentation
+### Dokumentation
 
 Hver variabel, funktion, mixin og placeholder, der har til hensigt at blive genbrugt igennem hele kodebasen, bør dokumenteres som en del af den globale API ved at anvende [SassDoc](http://sassdoc.com).
 
@@ -51,7 +51,7 @@ Her er et eksempel af en mixin, der er omfattende dokumenteret med SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [SassDoc](http://sassdoc.com)
 * [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

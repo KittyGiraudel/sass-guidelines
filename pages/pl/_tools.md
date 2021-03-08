@@ -1,11 +1,11 @@
 
-# Narzędzia
+## Narzędzia
 
 Jedną z niewątpliwych zalet preprecessora CSS tak popularnego jak Sass jest to, że dostępny jest cały ekosystem frameworków, pluginów, bibliotek i narzędzi. Po 8 latach od powstania, zbliżamy się do momentu w którym [wszystko co może być napisane w Sassie, zostało napisane w Sassie](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Mimo to, moim zdaniem należy ograniczyć liczbę zależności do ścisłego minimum. Zarządzanie zależnościami jest swoistym piekłem, w którym na pewno nikt nie chciałby się znaleźć. Poza tym, potrzeba korzystania z zewnętrznych zależności, w odniesieniu do Sassa, jest mała, jeśli nie znikoma.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) jest jednym z frameworków dostępnych dla Sassa. Zaprojektowany został przez [Chrisa Eppsteina](https://twitter.com/chriseppstein), jednego z dwóch głównych twórców Sassa. Jest on obecnie dosyć popularny i nie widzę powodu, dla którego miało by się to w najbliższym czasie zmienić.
 
@@ -21,13 +21,13 @@ W każdym bądź razie, w żadnym wypadku nie zabraniam używania Compassu, choc
   <p>Ruby Sass jest obecnie gruntownie optymalizowany i prace te są ukierunkowane w szczególności na rozbudowane style, z wieloma funkcjami i mixinami. Wydajność i szybkość kompilacji powinna zostać znacznie poprawiona, dzięki czemu Compass i inne frameworki nie będą tak bardzo spowalniać Sassa.</p>
 </div>
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Sass Frameworks: Compass or Bourbon](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Why I don't use Compass anymore](https://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](https://www.sitepoint.com/compass-sass-jquery-javascript/)
 
-## Systemy gridów
+### Systemy gridów
 
 Pomijanie kwestii systemów gridów jest w dobie Responsive Web Designu obecnie niemożliwe. Aby sprawić, by design wyglądał spójnie i poprawnie na urządzeniach o różnych rozmiarach, stosujemy różnego rodzaju systemy "kratek", zwanych gridami, odpowiednio rozkładające wszystkie elementy. Z kolei aby uniknąć potrzeby ręcznego pisania takiego systemu za każdym razem od nowa, niektórzy wspaniali ludzie postanowili udostępnić ich rozwiązania i sprawili, że są one dostęne do wielokrotnego użytku.
 
@@ -39,7 +39,7 @@ Jeśli nie jesteśmy przywiązani do określonego frameworku, mam dobrą wiadomo
 
 Można też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). W każdym bądź razie, wybór nie będzie miał olbrzymiego wpływu na styl kodu, więc swoboda decyzji należy tylko i wyłącznie do autora kodu.
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Singularity: Grids Without Limits](https://fourword.fourkitchens.com/article/singularity-grids-without-limits)
 * [Singularity Grid System](https://www.mediacurrent.com/blog/singularity-grid-system)
@@ -50,7 +50,7 @@ Można też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grid
 * [How to Use Susy: Superpowered Sass Grids](https://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](https://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-## SCSS-lint
+### SCSS-lint
 
 Prześwietlanie (linting) kodu jest zagadnieniem o bardzo dużej wadze. Zazwyczaj podążanie za sprawdzonymi wytycznymi, m.in. określonymi w tym przewodniku, redukuje ilość pomyłek w kodzie. Nie zapominajmy jednocześnie, że każdemu zdarzają się błędy i zawsze będzie coś do poprawki. Można więc śmiało stwierdzić, że linting kodu jest równie ważny co odpowiednie komentowanie go.
 
@@ -65,7 +65,7 @@ Na całe szczęście, rekomendacje SCSS-linta są w wysokim stopniu zbliżone do
   <p>Poza tym, chłopaki z <a href="https://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) pracują obecnie nad <a href="https://houndci.com/">Hound</a>, który współpracuje z SCSS-lint i jemu podobnymi</p>
 </div>
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Clean Up your Sass with SCSS-lint](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)
 * [Improving Sass code quality on theguardian.com](https://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom)

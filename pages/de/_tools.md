@@ -1,11 +1,11 @@
 
-# Tools
+## Tools
 
 Was an einem so bekannten CSS Präprozessor wie Sass gut ist, dass es mit einem gesamten Ökosystem an Frameworks, Plugins, Libraries und Tools daher kommt. Nach 8 Jahren Existenz, kommen wir dem Punkt immer näher wo [alles was in Sass geschrieben werden kann, auch in Sass geschrieben werden sollte](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Deshalb ist mein Ratschlag die Anzahl von Dependencies auf ein Minium zu halten. Dependencies zu verwalten ist eine Art von Hölle wo du kein Teil von sein willst. Dazu gibt es, wenn es um Sass geht, kaum bis garkeinen Nutzen von externen Dependencies.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) ist das [Hauptframework für Sass](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) da draußen. Entwickelt von [Chris Eppstein](https://twitter.com/chriseppstein), einer der Hauptentwickler von Sass, glaube ich nicht dass es in nächster Zeit dramatisch an Popularität verlieren wird.
 
@@ -21,7 +21,7 @@ Wie auch immer, ich verbiete natürlich nicht Compass zu verwenden auch wenn ich
   <p>Ruby Sass wird aktuell hervorragenden Optimierungen unterzogen, welche speziell auf logikschwere Styles mit vielen Funktionen und Mixins abziehlen. Diese sollten die Performance bis zu dem Punkt dramatisch verbessern, wo Compass und andere Frameworks Sass eventuell nicht mehr verlangsamen.</p>
 </div>
 
-## Gridsysteme
+### Gridsysteme
 
 Kein Gridsystem zu benutzen ist keine Option mehr, gerade jetzt wo Responsive Webdesign überall ist. Um ein Design konsistent und stabil über alle Größen hinweg aussehen zu lassen, benutzen wir eine Art Grid um Elemente auszurichten. Um so ein Grid nicht immer und immer wieder zu erfinden, haben ein paar brilliante Leute Ihre wiederverwendbar gemacht.
 
@@ -33,7 +33,7 @@ Wenn du an ein bestimmtes Gridsystem gebunden bist, wirst du dich freuen zu hör
 
 Oder du schaust dir eine lässigere Variante wie [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids) an. Alles in allem, die Wahl wird keine große Auswirkung auf deinen Codingstyle haben, deshalb liegt es absolut bei dir.
 
-## SCSS-lint
+### SCSS-lint
 
 Code zu linten ist wirklich wichtig. Generell hilft es die Guidelines eines Styleguides zu folgen, um dabei die Menge an Qualitätsfehlern im Code zu reduzieren. Aber niemand ist perfekt und es gibt immer etwas zu verbessern. Deshalb kann man sagen das linting genauso wichtig wie kommentieren ist.
 

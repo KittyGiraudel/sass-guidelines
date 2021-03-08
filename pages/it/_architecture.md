@@ -1,5 +1,5 @@
 
-# Architettura
+## Architettura
 
 Una delle cose più difficili da fare è decidere la giusta architettura per un progetto CSS. Mantenere questa architettura coerente e facile da capire è ancora più complicato.
 
@@ -15,7 +15,7 @@ Io uso un approccio che sembra piuttosto simile a [SMACSS](http://smacss.com/) d
   <p>Ho imparato che l’architettura il più delle volte è differente da progetto a progetto. Sentitevi liberi di adattare o modificare completamente la soluzione proposta, in modo da poter ottenere un sistema che fa al caso vostro.</p>
 </div>
 
-## Componenti
+### Componenti
 
 C’è una differenza sostanziale tra il *far funzionare qualcosa* e il farlo funzionare *bene*. Anche qui CSS si rivela un bel casino <sup>[necessaria citazione]</sup>. Meno CSS abbiamo, meglio è. Non vogliamo aver a che fare con megabyte di codice CSS. Per mantenere i fogli di stile piccoli ed efficienti &mdash;è non c’è da sorprendersi&mdash; è una buona idea pensare all’interfaccia come ad un insieme di componenti.
 
@@ -29,7 +29,7 @@ Ad esempio, una form di ricerca potrebbe essere considerata come un componente. 
 
 La maggior prte delle interfacce può essere pensata come un insieme di piccoli componenti. Suggerisco di tener sempre presente questo paradigma. Questo non solo ridurrà la quantità di CSS di cui il progetto avrà bisogno, ma ci porterà anche ad avere un codice più semplice da manutenere rispetto a un caos dove tutto è mischiato.
 
-## La struttura dei componenti
+### La struttura dei componenti
 
 I componenti dovrebbero essere idealmente descritti ciascuno nel loro file .sass parziale. Dovrebbero essere poi contenuti all’interno della cartella `components/`, come descritto nel  [7-1 pattern](#il-pattern-7-1)) - ad esempio: `components/_button.scss`. Lo stile descritto in ciascuno di questi file dovrebbe solo includere:
 
@@ -49,7 +49,7 @@ Ecco un esempio del parziale di un componente:
   <p>Grazie a <a href="https://twitter.com/davidkpiano">David Khourshid</a> per aver dato una mano in questa sezione.</p>
 </div>
 
-## Il pattern 7-1 
+### Il pattern 7-1 
 
 Torniamo all’architettura, che ne dite? Io di solito utilizzo ciò che chiamo il *pattern 7-1*: 7 cartelle, 1 file. In pratica si hanno tutti i file parziali dentro sette cartelle differenti e un singolo file al livello root (di solito chiamato `main.scss`) che importa il resto dei file. Questo viene compilato in un singolo foglio CSS.
 
@@ -75,7 +75,7 @@ Idealmente, avremo qualcosa simile a questo:
   <p>I file seguono la stessa convenzione sui nomi descritta prima: sono separati dal trattino.</p>
 </div>
 
-### La cartella Base
+#### La cartella Base
 
 La cartella `base/` contiene ciò che potremmo chiamare il codice boilerplate per il progetto. Qui troveremo il file di reset, qualche regola tipografica, e probabilmente un foglio di stile (che di solito chiamo `_base.scss`), il quale definisce alcuni stili standard per elementi HTML comunemente usati.
 
@@ -87,7 +87,7 @@ La cartella `base/` contiene ciò che potremmo chiamare il codice boilerplate pe
   <p>Se il progetto usa <em>molto</em> le animazioni CSS, si potrebbe pensare di aggiungere un file <code>_animations.scss</code> che contiene le definizioni dei <code>@keyframes</code> per le animazioni. Se si usano solo sporadicamente, meglio farle vivere nei selettori che le usano. </p>
 </div>
 
-### La cartella Layout
+#### La cartella Layout
 
 La cartella `layout/` contiene tutto ciò che si occupa di creare i layout del sito o dell’applicazione. Questa cartella può raccogliere i fogli di stile per le parti principali del sito (header, footer, navigazione, sidebar...), la griglia (grid), o anche le regole CSS per tutte le form.
 
@@ -102,7 +102,7 @@ La cartella `layout/` contiene tutto ciò che si occupa di creare i layout del s
   La cartella <code>layout/</code> può anche essere chiamata <code>partials/</code>; dipende da ciò che preferite.
 </div>
 
-### La cartella Components
+#### La cartella Components
 
 Per i piccoli componenti, c’è la cartella `components/`. Mentre `layout/` è *macro* (definisce il *wireframe* globale), `components/` è più focalizzato sui widget. Contiene tutti i moduli specifici come uno slider, un loader, un widget, e via dicendo. Di solito ci sono molti file in `components/`, dato che l’intera applicazione andrebbe composta come l’insieme di tanti piccoli moduli
 
@@ -114,7 +114,7 @@ Per i piccoli componenti, c’è la cartella `components/`. Mentre `layout/` è 
   <p>La cartella <code>components/</code> può essere anche chiamata <code>modules/</code>; dipende da ciò che preferite.</p>
 </div>
 
-### La cartella Pages
+#### La cartella Pages
 
 Se si hanno stili specifici per una pagina, è meglio raccoglierli in un file con lo stesso nome in una cartella `pages/`. Non è così strano avere stili particolari per la home page, che avranno bisogno di un `_home.scss` nella cartella `pages/`.
 
@@ -125,7 +125,7 @@ Se si hanno stili specifici per una pagina, è meglio raccoglierli in un file co
   <p>A seconda del processo di deploy, questi file possono essere richiamati indipendentemente nella pagina, piuttosto che essere raccolti col resto del foglio di stile in un unico file. Vedete voi.</p>
 </div>
 
-### Cartella Themes
+#### Cartella Themes
 
 In grossi siti o applicazioni, non è strano avere bisogno di differenti temi. Ci sono molti diversi modi per lavorare bene coi temi. Personalmente mi piace averli tutti in una cartella `themes/`.
 
@@ -136,7 +136,7 @@ In grossi siti o applicazioni, non è strano avere bisogno di differenti temi. C
   <p>Il bisogno di questa cartella dipende dal progetto. In molti progetti potrebbe non essercene la necessità.</p>
 </div>
 
-### La cartella Abstracts
+#### La cartella Abstracts
 
 La cartella `abstracts/` raccoglie tutti gli strumenti e gli helper usati nel progetto. Tutte le variabili globali, le funzioni, i mixin e i placeholder dovrebbero essere messi qui dentro.
 
@@ -153,7 +153,7 @@ Quando si lavora in un progetto grande, con molte _utility_ astratte, sarebbe bu
   <p>La cartella <code>abstracts/</code> può anche essere chiamanta <code>utilities</code> o <code>helpers</code>, a seconda di come si preferisce.</p>
 </div>
 
-### La cartella Vendors
+#### La cartella Vendors
 
 Ultima ma non ultima, la cartella `vendors/` presente in molti progetti contiene tutti i file CSS che provengono da librerie e framework esterni – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, e così via. Mettere tutto nella stessa cartella è un buon modo per dire "Ehi, questa non è roba mia, non è il mio codice, non è mia responsabilità".
 
@@ -166,7 +166,7 @@ Se c’è da sovrascrivere una parte di qualche file Vendor, consiglio di avere 
 
 Ad esempio, `vendors-extensions/_bootstrap.scss` è un file che contiene tutto il CSS che ri-dichiara alcune dei default di Bootstrap. Evitate di modificare direttamente i file Vendor: non è una buona idea.
 
-### Il file Main
+#### Il file Main
 
 Il file principale (Main, spesso chiamato `main.scss`) dovrebbe essere l’unico file Sass nell’intera codebase a non iniziare per trattino basso (underscore). Questo file non contiene nient’altro che `@import` e commenti.
 
@@ -200,7 +200,7 @@ C’è un altro modo per importare i file parziali che ritengo valido. Da un lat
 
 {% include snippets/architecture/03/index.html %}
 
-## Riguardo al globbing
+### Riguardo al globbing
 In informatica, i pattern detti _glob_ si riferiscono all'uso di asterischi (wildcard) per accedere ad un set di file, come ad esempio `*.scss`. Partendo da qui, _globbing_ significa riferirsi ad un set di file basandosi su un'espressione piuttosto che una lista di nomi di file. Quando è applicato a Sass, significa che importare i parziali dentro il [main file](#il-file-main) può essere fatto usando un pattern _globbing_ invece che aggiungendo i file uno ad uno. Il risultato è una cosa del genere:
 
 {% include snippets/architecture/05/index.html %}
@@ -211,7 +211,7 @@ Detto ciò, in un’architettura strettamente basata sui componenti, con parecch
 
 Quando si usa Ruby Sass, c'è una gemma chiamata [sass-globbing](https://github.com/chriseppstein/sass-globbing) che abilita esattamente questa funzionalità. Se utilizzate invece node-sass, potete fare affidamento o direttamente a Node.js o a qualsiasi tool di sviluppo che state utilizzando al momento (Gulp, Grunt, etc.),
 
-## Il file Shame
+### Il file Shame
 
 C’è un’idea interessante, diffusa da [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) e [Chris Coyier](https://css-tricks.com) che consiste nel mettere tutto il CSS, gli hack e tutte le cose di cui non andremmo fieri in un *[file della vergogna](https://csswizardry.com/2013/04/shame-css-full-net-interview/) (Shame)*. Questo file, platealmente chiamato `_shame.scss`, verrebbe importato dopo tutti i file, alla fine del foglio di stile.
 

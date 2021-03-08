@@ -1,5 +1,5 @@
 
-# Jmenné konvence
+## Jmenné konvence
 
 V této sekci se nebudeme zabývat nejlepšími jmennými CSS konvencemi pro udržovatelnost a rozsah. Nejen že je to jen a jen na vás, ale je to také mimo oblast Sass manuálu. Navrhuji však ty, které jsou doporučeny v [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
@@ -15,11 +15,11 @@ Pokud jde o proměnné, funce a mixiny, držme se něčeho velmi *ve stylu CSS*:
 
 {% include snippets/naming/01/index.html %}
 
-###### Další četba
+**Další četba:**
 
 * [Jmenné konvence z CSS Guidelines](https://cssguidelin.es/#naming-conventions)
 
-## Konstanty
+### Konstanty
 
 Pokud jste náhodou vývojáři frameworku, nebo píšete knihovnu, pravděpodobně se potýkáte s proměnnými, které nejsou zamýšleny tak, aby se daly upravovat: konstanty. Bohužel (nebo naštěstí?) Sass neumožňuje žádnou cestu pro takovouto věc, takže si musíme vystačit s jmennými konvencemi.
 
@@ -27,11 +27,11 @@ Tak jako pro mnoho jazyků, doporučuji proměnné, pokud jsou konstantami, psá
 
 {% include snippets/naming/02/index.html %}
 
-###### Další četba
+**Další četba:**
 
 * [Dealing With Constants in Sass](https://www.sitepoint.com/dealing-constants-sass/)
 
-## Namespace
+### Namespace
 
 Pokud máte v úmyslu svůj Sass kód rozšířit, v případě knihovny, frameworku, grid systému nebo čehokoli, pravděpodobně zvažujete použít namespace na všechny vaše proměnné, funkce, mixiny a placeholdery, takže nebude moci dojít ke konfliktu s kódem někoho jiného.
 
@@ -43,6 +43,6 @@ Například, pokud pracujete na projektu *Sassy Unicorn*, se kterým budou moci 
   <p>Poznámka: automatické namespacy budou definitivně designový cíl pro připravovaný <code>@import</code> od Sassu 4.0. Čím je blíže k uskutečnění, tím je méně a méně užitečné dělat namespace ručně. Případně ručně namespacované knihovny mohou být složitější na použití.</p>
 </div>
 
-###### Další četba
+**Další četba:**
 
 * [Please Respect the Global CSS Namespace](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

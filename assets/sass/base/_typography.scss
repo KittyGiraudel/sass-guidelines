@@ -2,7 +2,7 @@
  * Poor man's vertical rhythm
  */
 .chapter {
-  h1, h2, h3, h6, p, ul, ol {
+  h1, h2, h3, h4, p, ul, ol {
     margin-bottom: $vertical-rhythm-baseline;
   }
 }
@@ -23,7 +23,7 @@ li {
  * Headings
  * 1. Position context for absolutely positioned anchor
  */
-h1, h2, h3, h6 {
+h1, h2, h3, h4 {
   -webkit-hyphens: auto;
   hyphens: auto;
   position: relative; /* 1 */
@@ -40,23 +40,25 @@ h1, h2, h3, h6 {
 /**
  * Chapter titles
  */
-h1 {
-  font-weight: 700;
+h2 {
+  font-size: 2em;
+  font-weight: bold;
   margin-top: 6rem;
 }
 
 /**
  * Section headings
  */
-h2 {
+h3 {
   color: $secondary-color;
+  font-size: 1.5em;
   margin-top: 3rem;
 }
 
 /**
- * Sub-headings and “Further readings” headings
+ * Sub-headings
  */
-h3, h6 {
+h4 {
   color: rgb(107, 120, 133);
   font-size: 1em;
   margin-top: 1.5rem;
@@ -69,7 +71,7 @@ h3, h6 {
  */
 :lang(de),
 :lang(ru) {
-  h1, h2, h3, h6 {
+  h1, h2, h3, h4 {
     text-transform: initial;
   }
 }

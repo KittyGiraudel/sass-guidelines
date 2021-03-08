@@ -1,5 +1,5 @@
 
-# Instrukcje warunkowe (conditionals)
+## Instrukcje warunkowe (conditionals)
 
 Sass zapewnia wsparcie dla instrukcji warunkowych poprzez dyrektywy `@if` i `@else`. Jeśli w bazie kodu brak jest średnio lub bardzo skomplikowanych rozwiązań, nie ma większej potrzeby dla stosowania tychże instrukcji. W zasadzie to one głównie istnieją dla potrzeb bibliotek i frameworków.
 

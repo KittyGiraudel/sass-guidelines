@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 `@extend` direktivet er en af de funktionaliteter der har gjort Sass så populært for et par år siden. Som en påmindelse, så er det muligt at fortælle Sass at det skal style element A præcis som hvis det også matchede selektor B. Det er derfor unnødvendigt at sige, at det kan ende med at blive en ret værdifuld allieret når der skal skrives modulært CSS.
 
@@ -36,7 +36,7 @@ Hvis du skal til at anvende extend, så lad mig minde dig om at den ikke fungere
 
 For at opsummere, så vil jeg **anbefale imod brugen af `@extend` direktivet**, medmindre under særlige omstændigheder, men jeg vil ikke gå så langt som at forbyde det.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)

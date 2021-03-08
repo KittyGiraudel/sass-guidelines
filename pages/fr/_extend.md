@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 La directive `@extend` est une fonctionnalité puissante qui est bien souvent mal comprise. En règle générale, elle permet d’indiquer à Sass qu’il doit styler un sélecteur A comme s’il correspondait à un élément B. Il va sans dire que c’est un allié de poids lorsqu’on écrit un CSS modulaire.
 
@@ -26,7 +26,7 @@ Il y a de nombreux scénarios où étendre des sélecteurs peut être pratique e
   <p>Ceci étant dit, si vous ne pouvez pas utiliser Gzip (ou équivalent), basculer sur une approche utilisant <code>@extend</code> peut être envisageable, surtout si la taille de la feuille de styles constitue un problème de performance.</p>
 </div>
 
-## Extend et les media queries
+### Extend et les media queries
 
 Vous ne devez étendre que des sélecteurs faisant partie du même cadre de média (directive `@media`). Considérez les media queries comme une autre contrainte.
 

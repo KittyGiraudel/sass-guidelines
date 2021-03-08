@@ -1,5 +1,5 @@
 
-# Avisos e erros
+## Avisos e erros
 
 Se há uma característica que é muitas vezes esquecida pelos programadores de Sass, é a capacidade de enviar dinamicamente avisos e erros. Por acaso, Sass vem com três diretivas personalizadas para imprimir conteúdo no *standard output system* (CLI, compilador…):
 
@@ -11,7 +11,7 @@ Vamos colocar o `@debug` de lado, uma vez que se destina claramente a fazer *deb
 
 Agora, há muito espaço num projecto de Sass para avisos e erros. Basicamente, qualquer *mixin* ou função à espera de um tipo ou argumento específico poderia lançar um error se algo desse errado, ou mostrar um aviso ao fazer uma suposição.
 
-## Avisos
+### Avisos
 
 Considerem esta função de [Sass-MQ](https://github.com/sass-mq/sass-mq) a tentar converter um valor em `px` para `em`, por exemplo:
 
@@ -19,7 +19,7 @@ Considerem esta função de [Sass-MQ](https://github.com/sass-mq/sass-mq) a tent
 
 Se o valor fornecido não possuir unidade, a função assume que o valor está expresso em píxeis. Neste ponto, uma suposição poderá ser arriscada, pelo que o utilizador deverá ser avisado que o software fez algo que poderá ser considerado inesperado.
 
-## Erros
+### Erros
 
 Erros, ao contrário de avisos, previnem o compilador de ir mais além. Basicamente, interrompem o compilador e mostram uma mensagem no *output stream* tal como o *stack trace*, o que é útil para *debugging*. Por causa disto, erros deverão ser lançados quando não há mais forma do programa continuar a correr. Sempre que possível, tentem antes contornar o problema e mostrar um aviso em seu lugar.
 

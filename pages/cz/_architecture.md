@@ -1,5 +1,5 @@
 
-# Architektura
+## Architektura
 
 Navrhnout architekturu CSS projektu je pravděpodobně jedna z nejvíce těžkých věcí, kterou budete muset v životě projektu udělat. Udržovat návrh konzistentní a smysluplný je ještě těžší.
 
@@ -15,7 +15,7 @@ Já sám používám přístup shodou okolností docela podobný k [SMACSS](http
   <p>Naučil jsem se, že architektura je většinou velmi specifická pro daný projekt. Neváhejte jí tedy kompletně zrušit, nebo upravit navrhované řešení tak, aby jste se vypořádali se systémem, který sedí vašim potřebám.</p>
 </div>
 
-###### Další četba
+**Další četba:**
 
 * [Architecture for a Sass project](https://www.sitepoint.com/architecture-sass-project/)
 * [A Look at Different Sass Architectures](https://www.sitepoint.com/look-different-sass-architectures/)
@@ -24,7 +24,7 @@ Já sám používám přístup shodou okolností docela podobný k [SMACSS](http
 * [Atomic Web Design](https://bradfrost.com/blog/post/atomic-web-design/)
 * [Sass, une architecture composée](https://slides.com/KittyGiraudel/sass-une-architecture-composee)
 
-## Komponenty
+### Komponenty
 
 Je tu podstatný rozdíl mezi děláním to *funkční* a děláním to *dobře*. Znovu, CSS je tak trochu nepořádný jazyk <sup>[nutná citace]</sup>. Čím méně CSS máme, tím lépe. Nechceme se zabývat s megybyty CSS kódu. Chcete-li zachovat styly krátké a efektivní&mdash;a to pro vás nebude žádné překvápko&mdash;je většinou dobrý nápad přemýšlet o rozhraní jako o kolekci komponent.
 
@@ -38,7 +38,7 @@ Například vyhledávací formulář by měl být považován za komponentu. Mě
 
 Většina z jakéhokoliv rozhraní se dá představit jako malé komponenty a hodně doporučuji, abyste se drželi tohoto paradigmatu. Tím se nejen že zkrátí množství potřebného CSS pro celý projekt, ale také to bude jednodušší spravovat spíše než-li chaotický nepořádek, kde je všechno vyvedeno z míry.
 
-## Vzor 7-1
+### Vzor 7-1
 
 Zpátky k architektuře, můžeme? Obvykle pracuji s tím, čemu říkám *vzor 7-1*: 7 složek, 1 soubor. V podstatě máte všechny své partials nacpané do 7 různých složek a jeden soubor na kořenové úrovni (obvykle pojmenován `main.scss`) je všechny importuje do CSS stylu.
 
@@ -64,7 +64,7 @@ Ideálně můžeme přijít s něčím jako je toto:
   <p>Soubory následují stejné jmenné konvence jako je popsáno výše: jsou oddelene-pomlckou.</p>
 </div>
 
-### Složka base
+#### Složka base
 
 Složka `base/` obsahuje to, co bychom mohli nazvat 'často používaný kód' projektu. Můžete tam najít soubor pro resetování, nějaké pravidla pro typografii a pravděpodobně styl (který nazývám `_base.scss`), který definuje nějaké standardní styly pro obyčejně používané HTML elementy.
 
@@ -72,7 +72,7 @@ Složka `base/` obsahuje to, co bychom mohli nazvat 'často používaný kód' p
 * `_reset.scss`
 * `_typography.scss`
 
-### Složka layout
+#### Složka layout
 
 Složka `layout/` obsahuje vše, co se podílí na rozvržení stránky nebo aplikace. Tato složka může obsahovat styly pro hlavní části stránky (hlavička, patička, navigace, postranní panel…), grid systém nebo dokonce CSS styly pro všechny formuláře.
 
@@ -87,7 +87,7 @@ Složka `layout/` obsahuje vše, co se podílí na rozvržení stránky nebo apl
   <p>Složka <code>layout/</code> může být také nazývána <code>partials/</code>, záleží především na tom, co preferujete.</p>
 </div>
 
-### Složka components
+#### Složka components
 
 Pro menší komponenty tu je složka `components/`. Zatímco `layout/` je *makro* (definuje globální wireframe), `components/` je více zaměřený na widgety. Obsahuje všechny druhy specifických modulů jako slider, loader, widget a v podstatě cokoliv v tomto směru. V `components/` je obvykle hodně souborů, protože celá stránka/aplikace by měla být převážně složena z malých modulů.
 
@@ -99,7 +99,7 @@ Pro menší komponenty tu je složka `components/`. Zatímco `layout/` je *makro
   <p>Složka <code>components/</code> může být také nazývána <code>modules/</code>, záleží především na tom, co preferujete.</p>
 </div>
 
-### Složka pages
+#### Složka pages
 
 Pokud máte styly specifické pro jednotlivé stránky, je nejlepší je umístit do složky `pages/`, do souboru pojmenovaného po stránce. Není neobvyklé mít například velmi specifické styly pro úvodní stránku, proto je pak potřeba soubor `_home.scss` ve složce `pages/`.
 
@@ -110,7 +110,7 @@ Pokud máte styly specifické pro jednotlivé stránky, je nejlepší je umísti
   <p>Tyto soubory mohou být nazvány jako jen chcete, závisí na vašem projektu, ale je nutné, abyste se vyhnuli jejich sloučení s ostatními ve výsledném stylu. Je to vážně jen na vás.</p>
 </div>
 
-### Složka themes
+#### Složka themes
 
 Na velkých stránkách a aplikacích není neobvyklé mít rozdílné témata. Jsou tu jistě různé způsoby, jak se přáve s tématy vyrovnat, ale já osobně je mám rád všechny ve složce `themes/`.
 
@@ -121,7 +121,7 @@ Na velkých stránkách a aplikacích není neobvyklé mít rozdílné témata. 
   <p>Toto je velmi specifické pro daný projekt a je proto pravděpodobné, že ji v mnoha projektech mít nebudete.</p>
 </div>
 
-### Složka utils
+#### Složka utils
 
 Složka `utils/` shromažďuje všechny Sass nástroje a helpery použité napříč projektem. Měla by tu být každý globální proměnná, funkce, mixin a placeholder.
 
@@ -136,7 +136,7 @@ Pravidlem této složky je to, že by se neměl vypsat ani jeden řádek stylů 
   <p>Složka <code>utils/</code> může být také nazývána <code>helpers/</code>, <code>sass-helpers/</code> nebo <code>sass-utils/</code>, záleží co preferujete vy osobně.</p>
 </div>
 
-### Složka vendors
+#### Složka vendors
 
 V neposlední řadě mnoho projektů bude mít složku `vendors/` obsahující všechny CSS soubory od externích knihoven a frameworků - Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, a tak dále. Odložení všech těchto věcí stranou do jedné složky je dobrý způsob, jak říci „Hej, tohle není ode mne, není to můj kód, není to má zodpovědnost“.
 
@@ -149,7 +149,7 @@ Pokud musíte přepsat sekci nějakého vendoru, doporučuji mít 8. složku naz
 
 Například `vendors-extensions/_bootstrap.scss` je soubor obsahující všechny CSS pravidla, které předeklarovávají nějaké Bootstrap defaultní CSS. A to proto, aby se zabránilo editaci vendor souborů samo o sobě, což obecně není dobrý nápad.
 
-### Hlavní soubor
+#### Hlavní soubor
 
 Hlavní soubor (obvykle označován `main.scss`) by měl být jediný Sass soubor z celého codebase, který nezačíná na podtržítko. Tento soubor by neměl obsahovat nic více než `@import` a komentáře.
 
@@ -188,13 +188,13 @@ Je tu ještě další způsob importování partials, který také považuji za 
   <p>Jak bylo řečeno, toto řešení bych nedoporučoval, jelikož importujete soubory podle abecedního pořadí, což obvykle není to co chcete, zvláště pokud se musíte vypořádat s pořadím souborů v závislosti na jazyku.</p>
 </div>
 
-## Ostudný soubor
+### Ostudný soubor
 
 Zajímavý koncept, který zpopularizoval [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) a [Chris Coyier](https://css-tricks.com), který se skládá z uvedení všech CSS deklarací, hacků a věcí, na které nejsme pyšní do *ostudného souboru*. Tento soubor, který je dramaticky pojmenován `_shame.scss`, by měl být importován po ostatních souborech na konci stylu.
 
 {% include snippets/architecture/04/index.html %}
 
-###### Další četba
+**Další četba:**
 
 * [shame.css](https://csswizardry.com/2013/04/shame-css/)
 * [shame.css - full .net interview](https://csswizardry.com/2013/04/shame-css-full-net-interview/)

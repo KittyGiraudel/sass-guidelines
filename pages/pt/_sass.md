@@ -1,5 +1,5 @@
 
-# Sobre Sass
+## Sobre Sass
 
 Esta é forma como [Sass](https://sass-lang.com) se auto-descreve na sua própria [documentação](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,7 +13,7 @@ A ideia não é tornar CSS numa linguagem de programação de alto nível; Sass 
 
 Dito isto, existem imensas formas de utilizar estas funcionalidades. Algumas são boas, outras más, outras pouco usuais. Este guia pretende providenciar uma forma documentada e consistente de escrever código em Sass.
 
-## Ruby Sass ou LibSass
+### Ruby Sass ou LibSass
 
 [O primeiro _commit_ de Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) foi feito em 2006, mais de 10 anos atrás. Desnecessário dizer que evoluiu muito desde então. Inicialmente desenvolvido utilizando Ruby, diversas adaptações foram surgindo. A mais bem sucedida, [LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) está hoje muito perto de ser totalmente compatível com a versão original.
 
@@ -23,7 +23,7 @@ Voltando à questão de escolher o compilador. Na verdade, tudo depende do vosso
 
 Em projetos que não sejam em Ruby que precisem de integração no método de trabalho, LibSass será provavelmente uma melhor opção, uma vez que esta é praticamente dedicada a adaptações externas. Por exemplo, se quiserem utilizar NodeJS, [node-sass](https://github.com/sass/node-sass), a escolha já está feita.
 
-## Sass ou SCSS
+### Sass ou SCSS
 
 Existe alguma confusão no que diz respeito à semântica do nome *Sass*, e justificadamente: Sass significa tanto o pré-processador e a sua própria sintaxe. Não é lá muito conveniente, pois não?
 
@@ -35,7 +35,7 @@ A sensibilidade aos espaços em Sass depende na indentação para se ver livre d
 
 Pessoalmente, prefiro SCSS a Sass apenas porque é mais aproximada de CSS e mais amigável para os programadores. Por isso, SCSS será a sintaxe padrão, durante esse guia. Podem sempre alterar para a sintaxe indentada de Sass no painel de <button type="button" data-a11y-dialog-show="options-panel" class="link-like">opções</button>.
 
-## Outros pré-processadores
+### Outros pré-processadores
 
 Entre outras coisas, Sass é um pré-processador. O seu principal rival será [Less](http://lesscss.org/), um pré-processador baseado em NodeJS que se tornou bastante popular graças à *framework* de CSS [Bootstrap](https://getbootstrap.com/), que faz uso deste (até a versão 4). Existe ainda o [Stylus](https://stylus-lang.com/), um pré-processador muito permissivo e flexível, apesar de ser mais difícil de usar e possuir comunidade menor.
 

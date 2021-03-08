@@ -1,5 +1,5 @@
 
-# Om forfatteren
+## Om forfatteren
 
 Mit navn er [Kitty Giraudel](https://kittygiraudel.com), jeg er en fransk front-end udvikler med base i Berlin, Tyskland. Jeg har skrevet Sass i over to år nu, og er forfatteren af Sass-relaterede projekter såsom [SassDoc](http://sassdoc.com) og [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/). Jeg har også skrevet en bog om CSS (på fransk) med titlen [CSS3 Pratique du Design Web](https://www.amazon.fr/dp/2212140231).
 

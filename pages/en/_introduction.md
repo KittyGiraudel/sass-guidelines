@@ -1,7 +1,7 @@
 
-# Introduction
+## Introduction
 
-## Why a styleguide
+### Why a styleguide
 
 A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
 
@@ -20,7 +20,7 @@ Needless to say, the more developers involved on a project, the more code guidel
   </ul>
 </blockquote>
 
-## Disclaimer
+### Disclaimer
 
 First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
 
@@ -28,7 +28,7 @@ Also, this styleguide is my own and therefore **very opinionated**. Think of it 
 
 Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
 
-## Key principles
+### Key principles
 
 At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **[Sass should be kept as simple as it can be](https://www.sitepoint.com/keep-sass-simple/)**.
 
@@ -40,7 +40,7 @@ Sometimes, it’s better to repeat a little to keep the code maintainable, rathe
 
 Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
 
-## Extending the guidelines
+### Extending the guidelines
 
 A large part of this styleguide is strongly opinionated. I have been reading and writing Sass for several years now, to the point where I now have a lot of principles when it comes to writing clean stylesheets. I understand that it might not please nor suit everybody, and this is perfectly normal.
 

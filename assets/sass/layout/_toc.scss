@@ -80,7 +80,7 @@
    * Hide ToC title on large screens, only displayed on small screens
    */
   .toc li:nth-of-type(3),
-  .toc h1 {
+  .toc h2 {
     display: none;
   }
 }

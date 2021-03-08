@@ -1,5 +1,5 @@
 
-# Zmienne
+## Zmienne
 
 Zmienne należą do istoty każdego języka programowania. Pozwalają nam na wielokrotne użycie określonych wartości bez potrzeby ich kopiowania. Przede wszystkim jednak, umożliwiają nam one aktualizowanie tych wartości w bardzo łatwy sposób.
 
@@ -13,7 +13,7 @@ Moja rada jest następujące: twórzmy zmienne tylko wtedy, kiedy ich istnienie 
 
 Zasadniczo nie ma powodu aby deklarować zmienną która nigdy nie będzie aktualizowana albo taką, która będzie użyta tylko w jednym miejscu.
 
-## Zasięg (scope)
+### Zasięg (scope)
 
 Zasięg widoczności (scope) zmiennych w Sassie zmienił się w trakcie jego historii. Do niedawna, zmienne deklarowane w ramach zestawów reguł, czy też innych zakresów, standardowo traktowane były jako zmienne lokalne. Co ciekawe jednak, w przypadku gdy istniała już globalna zmienna o tej samej nazwie, mogła ona zostać nadpisana przez tą przypisaną lokalnie. Od czasu wersji 3.4, Sass już właściwie radzi sobie z koncepcją zasięgów i zamiast tego tworzy teraz nową, lokalną zmienną.
 
@@ -23,7 +23,7 @@ Poniższy przykład tłumaczy koncepcję *przysłaniania zmiennych*.
 
 {% include snippets/variables/01/index.html %}
 
-## Flaga `!default`
+### Flaga `!default`
 
 Budując bibliotekę, framework, system gridów albo jakikolwiek inny kod Sassa, który ma być rozpowszechniany i używany przez innych deweloperów, wszystkie zmienne konfigurujące powinny być deklarowane z flagą `!default`, dzięki czemu będą one mogły być później nadpisane.
 
@@ -33,13 +33,13 @@ Dzięki temu deweloper może zdefiniować własną zmienną `$baseline` *przed* 
 
 {% include snippets/variables/03/index.html %}
 
-## Flaga `!global`
+### Flaga `!global`
 
 Flaga `!global` powinna być użyta jedynie wtedy, gdy zmienna z lokalnego zasięgu ma nadpisać zmienną globalną. Deklarując zmienną na głównym poziomie, flaga `!global` powinna zostać pominięta.
 
 {% include snippets/variables/04/index.html %}
 
-## Wiele zmiennych lub map
+### Wiele zmiennych lub map
 
 Używanie map zamiast wielu odrębnych zmiennych ma swoje zalety. Pozwala to przede wszystkim na korzystanie z pętli, co nie jest możliwe w przypadku zmiennych.
 

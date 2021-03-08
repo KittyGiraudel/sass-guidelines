@@ -1,5 +1,5 @@
 
-# Syntaxe & formatage
+## Syntaxe & formatage
 
 À mon avis, la première chose que devrait proposer un guide de style est de décrire la façon dont notre code doit être écrit, du point vue de son aspect.
 
@@ -14,17 +14,17 @@ Globalement, voici ce que nous voulons (inspiré sans honte des [CSS Guidelines]
 
 {% include snippets/syntax/01/index.html %}
 
-## Chaînes de caractères
+### Chaînes de caractères
 
 Ça peut paraître incroyable, mais les chaînes de caractères jouent un grand rôle dans les écosystèmes CSS et Sass. La plupart des valeurs CSS sont soit des longueurs soit des identifiants, il est donc crucial de se tenir à des règles lorsqu’on utilise ces chaînes dans Sass.
 
-### Encodage
+#### Encodage
 
 Afin d’éviter tout problème potentiel lié à l’encodage des caractères, il est recommandé de forcer l’encodage [UTF-8](https://fr.wikipedia.org/wiki/UTF-8) dans le [fichier principal](#fichier-principal) en utilisant la directive `@charset`. Assurez-vous que ce soit le premier élément de la feuille de style et qu’il n’y ait aucun caractère de quelque nature en amont.
 
 {% include snippets/syntax/02/index.html %}
 
-### Guillemets
+#### Guillemets
 
 En CSS, les chaînes de caractères n’ont pas à être entourées de guillemets, pas même celles qui contiennent des espaces. Prenez les noms de `font-family` par exemple&nbsp;: peu importe qu’elles soient ou non entre guillemets.
 
@@ -43,7 +43,7 @@ Ceci étant, les langages qui ne requièrent pas d’envelopper les chaînes de 
   <p>Selon les spécifications CSS, la déclaration <code>@charset</code> doit utiliser des guillemets doubles <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">pour être considérée valide</a>. Cependant, Sass s’en assure en compilant vos feuilles de styles si bien que vous pouvez tout à fait utiliser des guillemets simples, même pour <code>@charset</code>.</p>
 </div>
 
-### Chaînes comme valeurs CSS
+#### Chaînes comme valeurs CSS
 
 Certaines valeurs spécifiques de CSS (identifiants), telles que `initial` ou `sans-serif` ne doivent pas être entourées de guillemets. Si vous déclarez `font-family: 'sans-serif'` CSS ignorera votre déclaration car il attend un identifiant et non une chaîne de caractères. C’est pourquoi on ne met jamais de guillemets autour de ces valeurs.
 
@@ -53,23 +53,23 @@ Il convient de faire une distinction entre les chaînes de caractères qui sont 
 
 On ne met pas de guillemets pour les premières, mais il en faut pour ces dernières.
 
-### Chaînes contenant des guillemets
+#### Chaînes contenant des guillemets
 
 Si une chaîne de caractères contient un ou plusieurs guillemets simples, on peut éviter l’utilisation d’échappements répétés en enveloppant la chaîne à l’intérieur de guillemets doubles (`"`) .
 
 {% include snippets/syntax/05/index.html %}
 
-### URLs
+#### URLs
 
 Les URL doivent être écrites entre guillemets pour les mêmes raisons que ci-dessus&nbsp;:
 
 {% include snippets/syntax/06/index.html %}
 
-## Nombres
+### Nombres
 
 Dans Sass, un nombre est une donnée qui peut avoir une unité ou pas et qui décrit une longueur, une durée, une fréquence, un angle, etc. Cela permet d’effectuer des calculs sur les mesures.
 
-### Zéros
+#### Zéros
 
 Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N’écrivez pas de zéros finaux après le point.
 
@@ -79,7 +79,7 @@ Une valeur décimale inférieure à `1` doit être précédée d’un zéro. N�
   <p>Dans Sublime Text ainsi que d’autres éditeurs permettant d’effectuer des remplacements à partir d’expressions régulières, il est très facile d’ajouter le zéro manquant avant le point. Remplacez simplement <code>\s+\.(\d+)</code> par <code>\ 0.$1</code>. N’oubliez pas l’espace précédant le <code>0</code> par contre.</p>
 </div>
 
-### Unités
+#### Unités
 
 S’agissant de longueurs, une valeur égale à `0` ne doit pas être suivie de son unité.
 
@@ -107,13 +107,13 @@ Pour supprimer l’unité d’une valeur, il suffit de la *diviser par une fois 
 
 Si vous ajoutez une unité sous forme de chaîne de caractères à un nombre, le résultat est une chaîne de caractères, ce qui vous empêche d’effectuer toute opération sur la valeur. De même avec l’opération `slice` si vous découpez la partie numérique d’un nombre —&nbsp;ce qui n’est sans doute pas le résultat souhaité.
 
-### Calculs
+#### Calculs
 
 **Les calculs numériques de premier niveau devraient toujours être entre parenthèses**. Non seulement la lisibilité s’en trouve considérablement améliorée, mais les éventuels cas *borderline* sont résolus en forçant Sass à évaluer le contenu entre parenthèses.
 
 {% include snippets/syntax/12/index.html %}
 
-### Nombres magiques
+#### Nombres magiques
 
 L’expression "nombre magique" est un [vieux terme de programmation](https://fr.wikipedia.org/wiki/Nombre_magique_(programmation)#Constantes_num.C3.A9riques_non-nomm.C3.A9es) qui désigne *une constante numérique non nommée*.  Quelque chose comme un nombre aléatoire *qui fonctionne* sans que l’on sache dire exactement pourquoi.
 
@@ -123,7 +123,7 @@ Est-il utile de préciser que **les nombres magiques sont une plaie et doivent �
 
 À ce sujet, CSS-Tricks a [un superbe article](https://css-tricks.com/magic-numbers-in-css/) à propos des nombres magiques en CSS, que je vous recommande de lire.
 
-## Couleurs
+### Couleurs
 
 Les couleurs occupent une place importante dans le langage CSS. Naturellement, Sass devient un excellent allié lorsqu’il s’agit de manipuler les couleurs, essentiellement à l’aide de quelques [fonctions puissantes](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
@@ -133,7 +133,7 @@ Sass est si utile quand il s’agit de manipuler les couleurs que des articles s
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-### Formats de couleurs
+#### Formats de couleurs
 
 Pour simplifier les couleurs autant que possible, mon conseil est de respecter l’ordre de préférence suivant pour les formats&nbsp;:
 
@@ -155,7 +155,7 @@ Si vous utilisez la notation HSL ou RGB, ajoutez toujours un espace après la vi
 
 {% include snippets/syntax/15/index.html %}
 
-### Couleurs et variables
+#### Couleurs et variables
 
 Si vous utilisez une couleur plusieurs fois, enregistrez-la dans une variable portant un nom représentatif de la couleur.
 
@@ -167,7 +167,7 @@ Vous pouvez maintenant utiliser cette variable où vous voulez. Cependant, si so
 
 De cette façon vous éviterez qu’une modification de votre thème ne conduise à quelque chose comme `$sass-pink: blue`. [Cet article](https://davidwalsh.name/sass-color-variables-dont-suck) explique bien pourquoi il est important de bien nommer ses variables.
 
-### Éclaircir et obscurcir les couleurs
+#### Éclaircir et obscurcir les couleurs
 
 Les fonctions [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) et [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) manipulent la luminosité d’une couleur dans l’espace HSL en augmentant ou en diminuant sa valeur. En fait, elles ne sont rien d’autre que des alias du paramètre `$lightness` de la fonction [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
@@ -185,7 +185,7 @@ Si vous ne voulez pas écrire la fonction `mix` à chaque fois, vous pouvez cré
   <p>La fonction <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> échelonne les propriétés de manière plus fluide en prenant en compte leur degré de luminosité actuelle. Elle donne des résultats aussi beaux que <code>mix</code> mais avec des conventions d’utilisation plus claires. Le facteur d’échelonnage n’est cependant pas le même.</p>
 </div>
 
-## Listes
+### Listes
 
 Les listes sont l’équivalent des arrays (tables) dans Sass. Une liste est une structure de données plate (contrairement à [maps](#maps)) dont le but est de stocker des valeurs de tout type (y compris des listes, ce qui autorise l’imbrication de listes).
 
@@ -205,7 +205,7 @@ Lorsque vous ajoutez de nouveaux items à une liste, utilisez toujours l’API f
 
 Dans [cet article](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), je parcours un certain nombre de trucs et astuces pour comprendre et manipuler les listes en Sass.
 
-## Maps
+### Maps
 
 Avec Sass, les auteurs de feuilles de styles peuvent définir des *maps*, qui sont l’équivalent en Sass des tableaux associatifs (ou dictionnaires ou tables d’association), des hashs ou même des objets JavaScript. Une map est une structure de données qui associe des clés (keys) à des valeurs. Les clés comme les valeurs peuvent être de tout type, y compris de type `map` même si je ne recommanderais pas l’utilisation de types complexes comme clés, ne serait-ce que dans un souci de simplicité.
 
@@ -226,7 +226,7 @@ Illustration :
 
 Les écrits à propos des maps sont légions tant cette fonctionnalité était attendue. En voici 3 que je recommande : [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](https://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
-## Ensemble de règles CSS
+### Ensemble de règles CSS
 
 Ici nous allons réviser ce que tout le monde sait, mais voici comment on devrait écrire une règle CSS (du moins selon la plupart des recommandations, dont [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset))&nbsp;:
 
@@ -254,7 +254,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-## Ordre des déclarations
+### Ordre des déclarations
 
 Je ne connais aucun autre sujet où les opinions sont aussi partagées qu’en ce qui concerne l’ordre des déclarations CSS. Concrètement, deux opinions s’opposent&nbsp;:
 
@@ -283,11 +283,11 @@ C’est la raison pour laquelle je ne recommande pas de choix particulier dans c
   <p>Une <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">étude récente</a> montre que l’utilisation de <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (qui s’appuie sur <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">un ordre par type</a>) pour organiser les déclarations CSS permet de réduire la taille moyenne des fichiers gzippés de 2,7% contre 1,3% lorsqu’ils sont ordonnés alphabétiquement.</p>
 </div>
 
-## Imbrication des sélecteurs
+### Imbrication des sélecteurs
 
 Parmi les fonctionnalités offertes par Sass, l’une d’entre elles est souvent mal utilisée, c’est *l’imbrication des sélecteurs*. Celle-ci permet aux auteurs de feuilles de styles de créer de longs sélecteurs en imbriquant des sélecteurs plus courts les uns dans les autres.
 
-### Règle générale
+#### Règle générale
 
 Par exemple, l’imbrication Sass suivante&nbsp;:
 
@@ -321,7 +321,7 @@ Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](h
 
 Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
-### Exceptions
+#### Exceptions
 
 Pour commencer, il est permis —&nbsp;et même recommandé&nbsp;— d’imbriquer les pseudo-classes et les pseudo-éléments à l’intérieur du sélecteur initial.
 

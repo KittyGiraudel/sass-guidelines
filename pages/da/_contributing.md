@@ -1,5 +1,5 @@
 
-# Kontribuering
+## Kontribuering
 
 Sass Guidelines er et gratis projekt, som jeg vedligeholder i min fritid. Jeg behøver ikke sige, at det er et ret stort arbejde at holde alt opdateret, dokumenteret og relevant. Det er dog åbenlyst, at bare det at vide, at du kunne lide denne styleguide allerede er meget værdsat!
 

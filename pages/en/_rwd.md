@@ -1,9 +1,9 @@
 
-# Responsive Web Design and breakpoints
+## Responsive Web Design and breakpoints
 
 I do not think we still have to introduce Responsive Web Design now that it is everywhere. However you might ask yourself *why is there a section about RWD in a Sass styleguide?* Actually there are quite a few things that can be done to make working with breakpoints easier, so I thought it would not be such a bad idea to list them here.
 
-## Naming breakpoints
+### Naming breakpoints
 
 I think it is safe to say that media queries should not be tied to specific devices. For instance, this is definitely a bad idea to try targeting iPads or Blackberry phones specifically. Media queries should take care of a range of screen sizes, until the design breaks and the next media query takes over.
 
@@ -19,7 +19,7 @@ At this point, [any naming convention](https://css-tricks.com/naming-media-queri
   <p>The previous examples uses nested maps to define breakpoints, however this really depends on what kind of breakpoint manager you use. You could opt for strings rather than inner maps for more flexibility (e.g. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-## Breakpoint manager
+### Breakpoint manager
 
 Once you have named your breakpoints the way you want, you need a way to use them in actual media queries. There are plenty of ways to do so but I must say I am a big fan of the breakpoint map read by a getter function. This system is both simple and efficient.
 
@@ -30,7 +30,7 @@ Once you have named your breakpoints the way you want, you need a way to use the
   <p>If you are looking to read more on how to approach Media Queries in Sass, both <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (from yours, truly) and <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> have nice articles on this.</p>
 </div>
 
-## Media Queries Usage
+### Media Queries Usage
 
 Not so long ago, there was quite a hot debate about where media queries should be written: do they belong within selectors (as Sass allows it) or strictly dissociated from them? I have to say I am a fervent defender of the *media-queries-within-selectors* system, as I think it plays well with the ideas of *components*.
 

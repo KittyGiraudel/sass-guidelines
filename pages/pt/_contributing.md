@@ -1,5 +1,5 @@
 
-# Contribuir
+## Contribuir
 
 Sass Guidelines é um projecto sem fins lucrativos que mantenho no meu tempo livre. Escusado será dizer que é necessário uma generosa quantidade de tempo para o manter sempre actualizado, bem documentado e relevante. Felizmente, recebi ajuda de ótimos contribuidores, especialmente na manutenção das dezenas de <label for="aside-toggle" class="link-like">diferentes traduções</label>. Certifique-se de agradecê-los!
 

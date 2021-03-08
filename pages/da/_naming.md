@@ -1,5 +1,5 @@
 
-# Konventioner for navngivelse
+## Konventioner for navngivelse
 
 I denne sektion vil vi ikke behandle hvad de bedste CSS navgivningskonventioner er for vedligeholdelse og skalering; det er ikke alene op til dig, det er også uden for rammerne af en Sass styleguide. Jeg foreslår disse, anbefalet af [CSS Guidelines](https://cssguidelin.es/#naming-conventions).
 
@@ -15,11 +15,11 @@ Når det kommer til variabler, funktioner og mixins, så holder vi os til noget 
 
 {% include snippets/naming/01/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [CSS Guidelines’ Naming Conventions](https://cssguidelin.es/#naming-conventions)
 
-## Konstanter
+### Konstanter
 
 Hvis du tilfældigvis er en framework-udvikler eller biblioteksforfatter, så finder du muligvis dig selv i færd med at behandle variabler, der ikke er tiltænkt at blive opdateret under nogen omstændigheder: konstanter. Desværre (eller heldigvis?), så giver Sass ikke nogen måde at definere denne slags enheder på, så vi er nødt til at holde os til strikse navngivningskonventioner for at slå vores pointe fast.
 
@@ -27,11 +27,11 @@ Som ved mange sprog, så anbefaler jeg variabelnavne i store bogstaver, med unde
 
 {% include snippets/naming/02/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Dealing With Constants in Sass](https://www.sitepoint.com/dealing-constants-sass/)
 
-## Namespace
+### Namespace
 
 Hvis du har til hensigt at distribuere din Sass kode, i tilfældet af et bibliotek, et framework, et gittersystem eller hvadend det kunne være, så bør du muligvis overveje at namespace alle dine variabler, funktioner, mixins og placeholdere så de ikke kolliderer med nogen andens kode.
 
@@ -43,6 +43,6 @@ For eksempel, hvis du arbejder på et *Sassy Unicorn* projekt, der er tænkt som
   <p>Bemærk, at automatisk namespacing absolut er et designmål for den kommende <code>@import</code> opdatering fra Sass 4.0. Efterhånden som det kommer tættere på at være realitet, så vil det blive mindre og mindre brugbart at foretage manuel namespacing; efterhånden vil manuelt namespacede biblioteker muligvis blive sværere at bruge.</p>
 </div>
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Please Respect the Global CSS Namespace](https://blog.kaelig.fr/post/44554267597/please-respect-the-global-css-namespace)

@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 Direktiva `@extend` je právě jedna z funkcí Sassu, co jej udělalo tak populárním již několik let zpátky. Jen připomenu, že to umožňuje říci Sassu, aby nastyloval element A tak, aby to odpovídalo selektoru B. Netřeba asi dodávat, že tato funkce může ztratit svou hodnotu, pokud píšete modulární CSS.
 
@@ -36,7 +36,7 @@ Pokud se rozhodnete použít extend, dovolte mi připomenout, že si to moc dob�
 
 Abych to shrnul, **nedoporučoval bych používat `@extend` direktivu**, mimo nějaké specifické okolnosti, ale nezajdu až tak daleko, abych ji úplně zakázal.
 
-###### Další četba
+**Další četba:**
 
 * [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)

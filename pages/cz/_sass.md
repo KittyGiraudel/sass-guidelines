@@ -1,5 +1,5 @@
 
-# O Sassu
+## O Sassu
 
 Takto je [Sass](https://sass-lang.com) popisován v jeho [dokumentaci](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,12 +13,12 @@ Nejde ale o to, proměnit CSS do plnohodnotného programovacího jazyka, jeliko�
 
 Jak již bylo řečeno, existuje mnoho způsobů využití těchto funkcí. Některé jsou dobré, některé špatné a některé poměrně neobvyklé. Tenhle manuál si klade za cíl nastínit vám konzistentní zdokumentovaný přístup pro psaní Sassu.
 
-###### Další četba
+**Další četba:**
 
 * [Sass](https://sass-lang.com)
 * [Sass documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 
-## Ruby Sass nebo LibSass
+### Ruby Sass nebo LibSass
 
 [První commit Sassu](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) se datuje na konec roku 2006, tedy skoro před 8 lety. Netřeba snad ani dodávat, že od té doby uplynula dlouhá doba. Při počátečním vývoji v Ruby se tu a tam objevil nějaký ten port. Nejúspěšnější z nich, [LibSass](https://github.com/sass/libsass) (napsaný v C/C++) je nyní blízko k plné kompatibilitě s původní Ruby verzí.
 
@@ -27,14 +27,14 @@ V roce 2014 se [Ruby Sass a LibSass týmy se rozhodly počkat a sjednotit obě v
 Vraťme se zpět k volbě kompilátoru. Ono to vlastně záleží na vašem projektu. Pokud je založen na Ruby on Rails, je lepší použít Ruby Sass, který se na takovýto případ perfektně hodí. Také mějte na paměti, že Ruby Sass bude vždy referenční implementací a bude vždy udávat směr funkcí LibSassu.
 Na projektech, které Ruby nevyužívají, bude použití LibSassu pravděpodobně lepší nápad, jelikož je pravděpodobně už je wrapper pro daný jazyk vytvořen. Takže pokud chcete použít například Node.js, [node-sass](https://github.com/sass/node-sass) je jasná volba.
 
-###### Další četba
+**Další četba:**
 
 * [LibSass](https://github.com/sass/libsass)
 * [Getting to know LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114)
 * [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/)
 * [Switching from Ruby Sass to LibSass](https://www.sitepoint.com/switching-ruby-sass-libsass/)
 
-## Sass nebo SCSS
+### Sass nebo SCSS
 
 Ohledně sémantiky jména *Sass* je hodně nejasností, a to z dobrého důvodu: Sass označuje jak preprocessor, tak i jeho vlastní syntaxi. To není moc příhodné, co?
 
@@ -46,11 +46,11 @@ Na mezery citlivá syntaxe Sass spoléhá na odsazení, zbavení se závorek, st
 
 Já osobně preferuji SCSS nad Sass, protože je blíže k CSS a je přátelštější k většině vývojářů. Proto je také SCSS výchozí syntaxí v tomto manuálu. Můžete přepnout na Sass odsazenou syntaxi v <button data-toggle="aside" class="link-like" role="button" type="button">panelu nastavení</button>.
 
-###### Další četba
+**Další četba:**
 
 * [What’s the difference between Sass and SCSS](https://www.sitepoint.com/whats-difference-sass-scss/)
 
-## Další preprocesory
+### Další preprocesory
 
 Sass je preprocesor jako každý jiný. Jeho největší soupeř je [LESS](http://lesscss.org/). Preprocesor založený na Node.js a který se stal poměrně populárním díky proslulému CSS frameworku [Bootstrap](https://getbootstrap.com/), který jej využívá. Je tu také [Stylus](https://stylus-lang.com/), což je tak trochu hloupá neomezená verze LESS, kde můžete dělat v podstatě co jen chcete, protože skoro dělá z CSS programovací jazyk.
 
@@ -68,7 +68,7 @@ Nápad za postprocesory je ten, že jednou budou prohlížeče podporovat nové 
 
 Zatímco poskytování zítřejší syntaxe už dnes je opravdu ušlechtilý nápad, musím říci, že pořád preferuji používání Sassu pro většinu věcí. Každopádně jsou tu některé případy, kde věřím, že je použití postprocesorů více vhodné, než-li Sass a tak podobně, například CSS prefixování, ale k tomu se vrátíme.
 
-###### Další četba
+**Další četba:**
 
 * [LESS](http://lesscss.org/)
 * [Stylus](https://stylus-lang.com/)

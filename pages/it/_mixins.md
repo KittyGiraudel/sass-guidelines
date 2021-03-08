@@ -1,5 +1,5 @@
 
-# I Mixin
+## I Mixin
 
 I _Mixin_ sono una delle caratterstiche più usate dell’intero linguaggio Sass. Sono la chiave per ottenere componenti riusabili e fedeli al _DRY_. Per una buona ragione: i _Mixin_ danno l’opportunità all’autore di definire stili che possono essere riusati all’interno del foglio di stile senza aver bisogno di classi non semantiche come `.float-left`.
 
@@ -7,7 +7,7 @@ Possono contenere una serie di regole CSS e grosso modo tutto ciò che è lecito
 
 Devo però fare un avviso contro l’abuso del potere dei _Mixin_. Una volta ancora, la chiave qui è la *semplicità*. Costruire un _Mixin_ estremamente potente con un sacco di logica dentro potrebbe sembrare una buona idea, ma saremmo di fronte ad un caso di sovra-ingegnerizzazione, una malattia di cui molti sviluppatori soffrono. Se un _Mixin_ finisce per avere più di venti righe di codice, allora dovrebbe essere diviso in pezzetti più piccoli, o completamente rivisto.
 
-## Le basi
+### Le basi
 
 Detto questo, i _Mixin_ sono estremamente utili e vi capiterà di usarne qualcuno. La regola di base è che se ci si accorge di avere un gruppo di proprietà CSS che compaiono sempre insieme per una ragione (non per coincidenza), queste dovrebbero essere inserite dentro un _Mixin_. Ad esempio, il [micro-clearfix hack di Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) merita di esser messo (senza argomenti) in un _Mixin_.
 
@@ -19,7 +19,7 @@ Un altro esempio valido potrebbe essere un _Mixin_ per impostare la grandezza di
 
 Per esempi più complessi di mixin, date un occhio a [questo mixin per generare triangoli CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [questo mixin per generare ombre lunghe](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) o [questo mixin per aggiungere il codice polyfill necessario per i gradienti su browser datati](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
-## Mixin senza argomenti
+### Mixin senza argomenti
 
 Ci sono casi in cui i _Mixin_ sono utilizzati solamente per evitare di ripetere lo stesso gruppo di dichiarazioni più e più volte. Non hanno quindi bisogno di alcun parametro o hanno dei valori di default che non necessitano alcun passaggio di argomenti.
 
@@ -27,7 +27,7 @@ In questi casi, possiamo tranquillamente omettere le parentesi quando li richiam
 
 {% include snippets/mixins/08/index.html %}
 
-## Lista di argomenti
+### Lista di argomenti
 
 Quando c’è da aver a che fare con un numero sconosciuto di argomenti in un _Mixin_ è meglio utilizzare un `arglist` piuttosto che una _Lista_. Pensate ad `arglist` come l’ottavo tipo di dati in Sass, nascosto e non documentato, che è implicitamente usato quando passiamo un numero arbitrario di argomenti ad un _Mixin_ o ad una funzione la cui firma contiene `...`.
 
@@ -39,7 +39,7 @@ Sass è piuttosto intelligente con la dichiarazione di _Mixin_ e funzioni, così
 
 {% include snippets/mixins/04/index.html %}
 
-## I mixin e i prefissi vendor
+### I mixin e i prefissi vendor
 
 Si potrebbe essere tentati di definire un mixin personalizzato per avere i prefissi _vendor_ da applicare a proprietà CSS non ancora supportate o supportate solo parzialmente. Ma non vogliamo certo farlo. Prima di tutto, se si può usare [Autoprefixer](https://github.com/postcss/autoprefixer), che si usi Autoprefixer. Autoprefixer rimuoverà dal vostro progetto del codice Sass superfluo, sarà sempre aggiornato e sarà compilato in una maniera più efficiente di quanto si possa fare da soli.
 

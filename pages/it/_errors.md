@@ -1,5 +1,5 @@
 
-# Avvisi ed errori
+## Avvisi ed errori
 
 Se c’è una cosa che viene troppo spesso trascurata dagli sviluppatori di Sass, è la capacità di segnalare dinamicamente avvisi ed errori. Sass, infatti, ha tre direttive custom per stampare gli errori nel sistema di output standard (CLI, compiling app…):
 
@@ -11,7 +11,7 @@ Mettiamo da parte `@debug`, che è qui chiaramente per fare debug di SassScript 
 
 In un progetto Sass c’è quindi parecchio bisogno di avvisi ed errori. In pratica, qualsiasi mixin o funzione che si aspetta uno specifico tipo o argomento può generare un errore se qualcosa è andato storto, o mostrare un avviso quando non ha le idee chiare e sta provando ad indovinare.
 
-## Avvisi
+### Avvisi
 
 Prendete ad esempio questa funzione di [Sass-MQ](https://github.com/sass-mq/sass-mq), che prova a convertire un valore in `px` in `em`. Ad esempio:
 
@@ -19,7 +19,7 @@ Prendete ad esempio questa funzione di [Sass-MQ](https://github.com/sass-mq/sass
 
 Se il valore è senza unità di misura, la fuzione parte dal presupposto che sia espresso in pixel. Un’ipotesi di questo tipo potrebbe essere rischiosa, perciò l’utente dovrebbe essere avvisato che il software ha fatto qualcosa il cui risultato potrebbe essere inaspettato.
 
-## Errori
+### Errori
 
 Gli errori, diversamente dagli avvisi, fanno in modo che il compiler vada avanti nel suo lavoro. Praticamente fermano la compilazione e mostrano un messaggio nell’output e nello stack trace, utile per il debug. Per questo motivo, gli errori dovrebbero essere chiamati quando non c’è altra maniera per il programmatore di tenere il programma in funzione. Quando possibile, meglio provare un workaround sul problema e mostrare un avviso.
 

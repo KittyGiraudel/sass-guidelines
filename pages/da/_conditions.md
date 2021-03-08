@@ -1,5 +1,5 @@
 
-# Betingede udsagn
+## Betingede udsagn
 
 Du kender sikkert allerede til at Sass tilbyder betingede udsagn via `@if` og `@else` direktiverne. Medmindre du har rimelig kompleks logik i din kode, så er der ikke behov for betingede udsagn i dine hverdags-stylesheets. Faktisk, så eksisterer de hovedsageligt for biblioteker og frameworks.
 

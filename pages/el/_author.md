@@ -1,5 +1,5 @@
 
-# Σχετικά με τον συγγραφέα
+## Σχετικά με τον συγγραφέα
 
 Ονομάζομαι [Kitty Giraudel](https://kittygiraudel.com), είμαι ένας front-end developer με έδρα το Βερολίνο (Γερμανία) απο το 2015, αυτή τη στιμγή εργάζομαι για την [Gorillas](https://gorillas.io/).
 

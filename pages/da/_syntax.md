@@ -1,5 +1,5 @@
 
-# Syntaks & formatering
+## Syntaks & formatering
 
 Hvis du spørger mig, så er noget af det allerførste en styleguide bør gøre, er at beskrive måden hvordan vi vil have vores kode til at se ud.
 
@@ -16,17 +16,17 @@ Groft sagt, så ønsker vi (skamløst inspireret af [CSS Guidelines](https://css
 
 Vi vil ikke tackle spørgsmålet omkring filorganisering i denne sektion. Det er formålet for [en anden sektion](#arkitektur).
 
-## Strenge
+### Strenge
 
 Tro det eller ej, så spiller strenge en ret stor rolle i økosystemerne for både CSS og Sass. De fleste CSS-værdier er enten længder eller strenge (ofte uciterede), så det er faktisk ret vigtigt at holde sig til nogle retningslinjer når man arbejder med strenge i Sass.
 
-### Encoding
+#### Encoding
 
 For at undgå potentielle problemer med karakter-encoding, så anbefales det kraftigt at tvinge [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding i [hoved-stylesheetet](#main-filen) ved at anvende `@charset` direktivet. Vær sikker på at det er det allerførste element i stylesheetet, og at der ikke er nogen form for karakterer før det.
 
 {% include snippets/syntax/02/index.html %}
 
-### Citationstegn
+#### Citationstegn
 
 CSS kræver ikke at strenge bliver citerede, ikke engang dem der indeholder mellemrum. Tag font-family navne som eksempel: for CSS parseren gør det ingen forskel hvorvidt du pakker dem ind i citationstegn.
 
@@ -41,7 +41,7 @@ Med det sagt, så er sprog der ikke kræver at strenge bliver citeret klart en m
 
 {% include snippets/syntax/03/index.html %}
 
-### Strenge som CSS værdier
+#### Strenge som CSS værdier
 
 Specifikke CSS værdier, såsom `initial` eller `sans-serif` kræver ikke at blive citeret. Det er klart, at `font-family: 'sans-serif'` vil fejle i stilhed fordi CSS forventer en identifier og ikke en citeret streng. På grund af dette, så citerer vi ikke disse værdier.
 
@@ -51,34 +51,34 @@ Dermed kan vi lave en distinktion mellem strenge der har til hensigt at blive br
 
 Vi citerer ikke den førstnævnte, men vi indpakker den sidstnævnte i enkelte citationstegn.
 
-### Strenge der indeholder citationstegn
+#### Strenge der indeholder citationstegn
 
 Hvis en streng indeholder en eller flere citationstegn, så kan man overveje at indpakke strengen i dobbelte citationstegn (`"`) i stedet, for at undgå at escape for mange karakterer inden i strengen.
 
 {% include snippets/syntax/05/index.html %}
 
-### URL'er
+#### URL'er
 
 URL'er bør også blive citeret af de samme grunde som ovenfor:
 
 {% include snippets/syntax/06/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [All You Ever Need to Know About Sass Interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/KittyGiraudel/SassyStrings)
 
-## Tal
+### Tal
 
 I Sass er tal en datatype der inkluderer alt lige fra enhedsløse numre til længder, varigheder, frekvenser, vinkler og så videre. Dette tillader udførelse af udregninger på sådanne målinger.
 
-### Nuller
+#### Nuller
 
 Tal bør vise foranstillede nuller før en decimalværdi, der er mindre end et. Vis aldrig efterstillede nuller.
 
 {% include snippets/syntax/07/index.html %}
 
-### Enheder
+#### Enheder
 
 Når du arbejder med længder, så bør en værdi af `0` aldrig have en enhed.
 
@@ -102,13 +102,13 @@ For at fjerne en værdis enhed, så er du nødt til at dividere den med *en enhe
 
 Tilføjelse af en enhed som en streng til et tal resulterer i en streng, hvilket forhindrer enhver yderligere operation på værdien. At opdele den numeriske del af et tal med en enhed resulterer også i en streng. Dette er ikke hvad du ønsker.
 
-### Kalkulationer
+#### Kalkulationer
 
 **Numeriske kalkulationer på top-niveau bør altid indpakkes i paranteser**. Ikke alene forbedrer dette krav læsbarheden dramatisk, det forhindrer også særtilfælde ved at tvinge Sass til at evaluere indholdet af paranteserne.
 
 {% include snippets/syntax/12/index.html %}
 
-### Magiske tal
+#### Magiske tal
 
 "Magiske tal" er et [old school programmeringsterm](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) for *unavngivne numeriske konstanter*. Basalt set, så er det et tilfældigt tal der *bare virker*™, dog uden at være forbundet til nogen logisk forklaring.
 
@@ -116,18 +116,18 @@ Selvfølgelig er **magiske tal en plage og bør undgås for enhver pris**. Når 
 
 {% include snippets/syntax/13/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Use Lengths, Not Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](https://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-## Farver
+### Farver
 
 Farver har en vigtig plads i CSS-sproget. Sass bliver derfor naturligt en værdifuld allieret når det kommer til manipulation af farver, mest fordi det giver os en håndfuld [kraftfulde funktioner](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-### Farveformater
+#### Farveformater
 
 For at holde farver så simple som muligt, så vil mit råd være at respektere den følgende rækkefølge for farveformater:
 
@@ -144,7 +144,7 @@ Når man anvender HSL eller RGB, så tilføj altid et enkelt mellemrum efter et 
 
 {% include snippets/syntax/15/index.html %}
 
-### Farver og variabler
+#### Farver og variabler
 
 Når en farve anvendes mere end én gang, så gem den i en variabel med et meningsfuldt navn, der repræsenterer farven.
 
@@ -156,7 +156,7 @@ Du står dig nu frit for at anvende denne variabel hvorend du vil. Dog, hvis din
 
 Ved at gøre det på denne måde, forhindrer du at tema-ændringer fører til ting som `$sass-pink: blue`.
 
-### Lysning og mørkning af farver
+#### Lysning og mørkning af farver
 
 Både [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) og [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) er funktioner til manipulation af lysstyrken af en farve i HSL-rum ved at tilføje eller fratrække lysstyrken i HSL-rummet. Basalt set er de intet andet end aliaser for `$lightness` parametret af [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) funktionen.
 
@@ -174,7 +174,7 @@ Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to l
   <p><a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> funktionen er designet til at skalere egenskaber mere flydende ved at tage hvor høje og lave de allerede er med i betragtning. Den bør give resultater der er ligeså gode som <code>mix'</code> men med en klarere konvention for kald. Skaleringsfaktoren er dog ikke helt den samme.</p>
 </div>
 
-###### Videre læsning
+**Videre læsning:**
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -182,7 +182,7 @@ Hvis du ikke ønsker at skrive `mix` funktionen hver gang, så kan du skabe to l
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-## Lister
+### Lister
 
 Lister er Sass' svar på arrays. En liste er en flad datastruktur (modsat [maps](#maps)), der har til hensigt at gemme værdier af enhver type (inklusiv lister, hvilket leder til indlejrede lister).
 
@@ -200,12 +200,12 @@ Når du tilføjer nye artikler til en liste, så brug altid den medfølgende API
 
 {% include snippets/syntax/20/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Understanding Sass lists](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](https://at-import.github.io/SassyLists/)
 
-## Maps
+### Maps
 
 Siden Sass 3.3 kan stylesheet forfattere definere maps &mdash; Sass-termet for et associativ array, hashes eller endda JavaScript objekter. Et map er en datastruktur til forbinde nøgler (der kan være af enhver datatype, inklusiv maps, selvom jeg ikke anbefaler det) til værdier af enhver type.
 
@@ -223,7 +223,7 @@ Illustration:
 
 {% include snippets/syntax/21/index.html %}
 
-### Debugging af et Sass map
+#### Debugging af et Sass map
 
 Hvis du nogensinde har følt dig fortabt, og tænkt hvilken skør magi der foregår i et Sass map, så fortvivl ikke, der stadig er en måde at blive reddet på.
 
@@ -233,7 +233,7 @@ Hvis du er interesseret i at vide dybden af map'et, så tilføj følgende funkti
 
 {% include snippets/syntax/23/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](https://www.sitepoint.com/debugging-sass-maps/)
@@ -245,7 +245,7 @@ Hvis du er interesseret i at vide dybden af map'et, så tilføj følgende funkti
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
-## CSS Regelsæt
+### CSS Regelsæt
 
 På dette tidspunkt, hvilket mest er en opsummering af hvad alle ved, men her er måden hvordan et CSS regelsæt bør blive skrevet (i det mindste ifølge de fleste retningslinjer, inklusiv [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
@@ -274,11 +274,11 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Anatomy of a Ruleset](https://cssguidelin.es/#anatomy-of-a-ruleset)
 
-## Sortering af Deklarationer
+### Sortering af Deklarationer
 
 Jeg kan ikke komme på mange emner, hvor meninger er så splittede som de er når det kommer til sortering af deklarationer i CSS. Helt konkret, så er to fraktioner på spil her:
 
@@ -307,7 +307,7 @@ På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Væ
   <p>Et <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">nyligt studie</a> viser at ved at anvende <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (der anvender <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type-arrangering</a> til sortering af CSS deklarationer, så afkortes gennemsnitsfilen under Gzip kompression med 2.7%, sammenligned med 1.3% når der sorteres alfabetisk.</p>
 </div>
 
-###### Videre læsning
+**Videre læsning:**
 
 * [CSS Comb](https://github.com/csscomb/csscomb.js)
 * [Concentric CSS](https://github.com/brandon-rhodes/Concentric-CSS)
@@ -316,11 +316,11 @@ På grund af det, så vil jeg ikke pålægge dig et valg i denne styleguide. Væ
 * [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 * [Poll Results: How Do You Order Your CSS Properties?](https://css-tricks.com/poll-results-how-do-you-order-your-css-properties/)
 
-## Indlejring af selektorer
+### Indlejring af selektorer
 
 En særlig funktionalitet som Sass giver, der bliver misbrugt alt for meget af mange udviklere er *indlejring af selektorer*. Indlejring af selektorer giver stylesheet forfattere en måde at beregne lange selektorer ved at indlejre kortere selektorer inde i hinanden.
 
-### Generel regel
+#### Generel regel
 
 For eksempel, så vil den følgende Sass indlejring:
 
@@ -350,7 +350,7 @@ Dette udsagn bliver mere sandt efterhånden som selektorer og referencer til den
 
 For at undgå en sådan situation, så **undgår vi indlejring af selektorer så meget som muligt**. Dog er der åbenlyst nogle få undtagelser til denne regel.
 
-### Undtagelser
+#### Undtagelser
 
 Til at starte med, så er det tilladt og endda anbefalet at indlejre pseudo-klasser og pseudo-elementer inden i den indledende selektor.
 
@@ -376,7 +376,7 @@ Ved at genskrive vores tidligere eksempel, så vil det se ud som dette:
 
 Som med alting, så er det specifikke rimelig irrelevant, da det er konsistens der er det vigtige. Hvis du føler dig fuldstændig sikker på selektor-indlejring, så brug selektor-indlejring. Bare sikr dig, at hele dit team er med på det.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

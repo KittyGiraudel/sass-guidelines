@@ -95,7 +95,7 @@
   /**
    * Avoid breaking page right after a title
    */
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     page-break-after: avoid;
   }
 }

@@ -1,5 +1,5 @@
 
-# Sass에 대해
+## Sass에 대해
 
 [Sass](https://sass-lang.com/)는 [공식 문서](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)에서 스스로를 이렇게 묘사하고 있습니다:
 
@@ -13,7 +13,7 @@ Sass는 이런 상황에서, 메타언어로서, 추가 기능과 유용한 도�
 
 그렇다고는 하나, 이 기능들을 사용하는 데에는 많은 방법들이 있습니다. 좋은 것도 있고, 나쁜 것도, 예외적인 것도 있죠. 이 가이드라인은 여러분에게 Sass 코드 작성에 대한 일관되고, 기록된 접근법을 제공할 것입니다.
 
-## Ruby Sass 혹은 LibSass
+### Ruby Sass 혹은 LibSass
 
 [Sass의 첫 번째 커밋](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe)은 8년 이상이 지난, 2006년 후반까지 거슬러 올라갑니다. 말할 것도 없이 그 이후로 아주 먼 길을 왔습니다. Ruby로 처음에 개발되었고, 여기저기서 다양한 포트들이 튀어나왔죠. 가장 성공적인, (C/C++로 쓰인) [LibSass](https://github.com/sass/libsass)는 현재 원래의 Ruby 버전과의 완전한 호환에 근접해 있습니다.
 
@@ -23,7 +23,7 @@ Sass는 이런 상황에서, 메타언어로서, 추가 기능과 유용한 도�
 
 작업 흐름의 통합이 필요한 비(非)Ruby 프로젝트의 경우, 주로 감싸는 용도로 만들어져 있으므로 LibSass가 아마도 더 나은 생각일 것입니다. 그러니까 만약 Node.js를 사용하고 싶으시다면, 선택은 [node-sass](https://github.com/sass/node-sass)입니다.
 
-## Sass 혹은 SCSS
+### Sass 혹은 SCSS
 
 *Sass*라는 이름의 의미에 관해 꽤 많은 혼동이 있습니다. 그럴 만한 이유가 있죠: Sass는 전처리기와 그 구문 두 가지를 의미합니다. 좀 불편하죠, 안 그런가요?
 
@@ -35,7 +35,7 @@ Sass의 공백에 반응하는 구문은 중괄호, 세미콜론 그리고 다�
 
 저 자신은 CSS와 더 비슷하고 대부분의 개발자들에게 더 친숙하기 때문에 SCSS를 Sass보다 더 선호합니다. 그런 이유로, SCSS가 이 가이드라인의 기본 구문입니다. <button type="button" data-a11y-dialog-show="options-panel" class="link-like">옵션 패널</button>에서 Sass의 들여쓰기 구문으로 바꾸실 수 있습니다.
 
-## 기타 전처리기들
+### 기타 전처리기들
 
 Sass 외에도 여러 전처리기가 있습니다. 가장 만만찮은 경쟁자는 [Less](http://lesscss.org/)일 것입니다. 유명한 CSS 프레임워크인 [Bootstrap](https://getbootstrap.com/)이 (버전 4까지) 사용한 덕분에 널리 알려진 Node.js 기반의 전처리기죠. 또한 [Stylus](https://stylus-lang.com/)라는 매우 관대하고 유연한 전처리가 있지만, 사용하기가 조금 더 어렵고 커뮤니티가 작습니다.
 

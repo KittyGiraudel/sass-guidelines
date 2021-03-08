@@ -1,5 +1,5 @@
 
-# Convenciones De Nomenclatura
+## Convenciones De Nomenclatura
 
 En esta sección, no trataremos sobre cuáles son las mejores convenciones de nomenclatura en CSS para mejorar el mantenimiento y la escalabilidad; esto no solo depende de tí, sino que también está fuera del alcance de una guía de estilo. Sugiero las recomendaciones que aparecen en [la guía de estilo de CSS - En inglés](https://cssguidelin.es/#naming-conventions).
 
@@ -15,7 +15,7 @@ En cuanto a las variables, las funciones y los *mixins*, utilizaremos algo muy *
 
 {% include snippets/naming/01/index.html %}
 
-## Constantes
+### Constantes
 
 Si resultas ser un desarrollador de *frameworks* o de librerías, puede que te encuentres con variables que no van a ser actualizadas bajo ninguna circunstancia: las constantes. Desafortunadamente (o ¿afortunadamente?), Sass no proporciona ninguna forma para definir este tipo de entidades, por lo que tenemos que ser muy estrictos con las nomenclaturas para mantener nuestro objetivo.
 
@@ -25,7 +25,7 @@ Como con muchos lenguajes, sugiero que se utilice la opción todo-mayúsculas cu
 
 Si realmente quieres jugar con la idea de las constantes en Sass, deberías leer [este dedicado artículo](https://www.sitepoint.com/dealing-constants-sass/).
 
-## Espacio De Nombres
+### Espacio De Nombres
 
 Si tienes la intención de distribuir tu código Sass, como por ejemplo, en el caso de una librería, un *framework*, un sistema de retícula o lo que sea, es posible que quieras considerar crear un espacio de nombres (*namespace*) para tus variables, funciones, *mixins* y *placeholders* para que no entren en conflicto con el código de ninguna otra persona.
 
