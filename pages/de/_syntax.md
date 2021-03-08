@@ -1,5 +1,5 @@
 
-# Syntax & Formatierung
+## Syntax & Formatierung
 
 Wenn du mich fragst, sollte dass erste sein was ein Styleguide definiert, die Art und Weise wie der Code aussehen soll.
 
@@ -14,17 +14,17 @@ Grob gesehen wollen wir (schamlos inspiriert bei [CSS Guidelines](https://cssgui
 
 {% include snippets/syntax/01/index.html %}
 
-## Strings
+### Strings
 
 Ob du es glaubst oder nicht, Strings spielen eine große Rolle in CSS und Sass. Die meisten Werte in CSS sind entweder Zahlen oder Identifikatoren. Deshalb ist es wichtig sich an gewisse Guidelines zu halten, wenn Strings in Sass verwendet werden.
 
-### Encoding
+#### Encoding
 
 Um potentielle Probleme in der Zeichenkodierung zu vermeiden, empfehle ich [UTF-8](https://de.wikipedia.org/wiki/UTF-8) durch die `@charset` Regel im [Main Stylesheet](#main-datei) zu erzwingen. Versicher dich, dass es die allererste Regel in deinem Stylesheet ist, und nichts davor kommt.
 
 {% include snippets/syntax/02/index.html %}
 
-### Anführungszeichen
+#### Anführungszeichen
 
 CSS setzt nicht voraus dass Strings in Anführungszeichen zu setzen sind, nichtmal jene die Leerzeichen beinhalten. Zum Beispiel font-family: für den CSS Parser ist es vollkommen egal ob du die Namen in Anführunsgzeichen setzt oder nicht.
 
@@ -43,7 +43,7 @@ Im übrigen sind Sprachen die es nicht erfordern Strings in Anführungszeichen z
   <p>Laut CSS Spezifikation, muss die <code>@charset</code> Regel mit doppelten Anführungszeichen deklariert werden um <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">valide</a> zu sein. Wie auch immer, Sass kümmert sich bereits darum wenn es CSS kompiliert, deswegen wird es kaum eine Auswirkung auf das Endergebnis haben. Deshalb kannst du ohne Probleme bei einfachen Anführungszeichen bleiben, selbst bei <code>@charset</code>.</p>
 </div>
 
-### Strings als CSS Werte
+#### Strings als CSS Werte
 
 Bestimmte CSS Werte (Identifikatoren) wie `initial` oder `sans-serif` müssen nicht in Anführungszeichen stehen. Tatsächlich wird CSS unbemerkt versagen, wenn `font-family: 'sans-serif'` benutzt wird, da es einen Identifier erwartet und keinen String. Deshalb setzen wir diese Werte nicht in Anführungszeichen.
 
@@ -53,23 +53,23 @@ Deshalb können wir zwischen Strings die wie im vorigen Beispiel als CSS Werte (
 
 Wir setzen ersteres nicht in Anführungszeichen, aber letzteres in einfache.
 
-### Strings die Anführungszeichen beinhalten
+#### Strings die Anführungszeichen beinhalten
 
 Wenn ein String mehrere einfache Anführungszeichen beinhaltet, mag man drüber nachdenken diese in doppelte (`"`) zu setzen, um zu vermeiden Zeichen escapen zu müssen.
 
 {% include snippets/syntax/05/index.html %}
 
-### URLs
+#### URLs
 
 URLs sollten aus denselben Gründen wie oben in Anführungszeichen gesetzt werden:
 
 {% include snippets/syntax/06/index.html %}
 
-## Zahlen
+### Zahlen
 
 In Sass sind Zahlen ein Datentyp der alles von einheitlosen Zahlen über Längen, Dauer, Frequenzen, Winkel und so weiter, beinhalten kann. Das erlaubt es dementsprechende Berechnung zu machen.
 
-### Nullen
+#### Nullen
 
 Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, anzeigen. Eine Null niemals hinten anhängen.
 
@@ -79,7 +79,7 @@ Zahlen sollten immer eine Null vor dezimalen Werten, die weniger als eins sind, 
   <p>In Sublime Text und anderen Editoren welche suchen und ersetzen mittels regulären Ausdrücken unterstützen, ist es ziemlich einfach eine Null zu einer Gleitkommazahl (wenn nicht zu allen) hinzuzufügen. Ersetze <code>\s+\.(\d+)</code> einfach mit <code>\ 0.$1</code>. Vergiss nicht das Leerzeichen vor der <code>0</code>.</p>
 </div>
 
-### Einheiten
+#### Einheiten
 
 Wenn es um Längen geht, sollte eine `0` niemals eine weitere Einheit besitzen.
 
@@ -107,13 +107,13 @@ Um die Einheit von einem Wert zu entfernen, musst du es um *eine Einheit seiner 
 
 Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. Dadurch sind alle weiteren Operationen mit dem Wert nicht mehr möglich. Den numerischen Teil einer Einheit zu trennen, führt ebenfalls zu einem String. Das ist nicht was du willst. [Benutze Längen, keine Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
-### Berechnungen
+#### Berechnungen
 
 **Numerische Berechnungen auf höchser Ebene sollten immer in Klammern stehen**. Es erhöht nicht nur enorm die Lesbarkeit, sondern umgeht auch Edge Cases indem Sass gezwungen wird den Inhalt von Klammern zu erst zu berechnen.
 
 {% include snippets/syntax/12/index.html %}
 
-### Magische Zahlen
+#### Magische Zahlen
 
 "Magische Zahlen" sind in der [Old School Programmierung](https://de.wikipedia.org/wiki/Magische_Zahl_(Informatik)#Magische_Zahlen_in_Code) ein Term dafür, *Werte direkt im Quellcode zu benutzen*. Grundsätzlich erklärt, ist es eine zufällige Zahl die *einfach funktioniert*™ ohne an irgendeine logische Begründung gebunden zu sein.
 
@@ -123,7 +123,7 @@ Eine Einheit als String zu einer Zahl hinzuzufügen, macht sie zu einem String. 
 
 Zu dem Thema hat CSS-Tricks einen [hervoragenden Artikel](https://css-tricks.com/magic-numbers-in-css/) über magische Zahlen in CSS den ich dir nur empfehlen kann.
 
-## Farben
+### Farben
 
 Farben nehmen einen wichtigen Platz in der CSS Sprache ein. Normalerweise ist Sass ein wertvoller Verbündeter wenn es darum geht Farben zu manipulieren. Meistens dadurch [mächtige Funktionen](https://sass-lang.com/documentation/Sass/Script/Functions.html) bereit zu stellen.
 
@@ -133,7 +133,7 @@ Sass ist so nützlich Farben zu manipulieren dass das Internet voller Artikel ü
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-### Farbformate
+#### Farbformate
 
 Um Farben so einfach wie sie sind zu lassen, ist mein Ratschlag folgende Reihenfolge bei Farbformaten zu respektieren:
 
@@ -155,7 +155,7 @@ Wenn der HSL oder RGB-Farbaum verwendet wird, füge immer ein Leerzeichen nach d
 
 {% include snippets/syntax/15/index.html %}
 
-### Farben und Variablen
+#### Farben und Variablen
 
 Wenn du eine Farbe mehr als einmal verwendest, speicher sie in einer sinnvoll benannten Variable.
 
@@ -167,7 +167,7 @@ Nun kannst du die Variable überall verwenden wo du willst. Wenn du aber stark a
 
 Dadurch verhinderst du auch bei einem Themewechsel etwas wie `$sass-pink: blue` machen zu müssen. [Dieser Artikel](https://davidwalsh.name/sass-color-variables-dont-suck) erledigt einen guten Job darin zu erklären weshalb es wichtig ist deine Farbvariablen durchzudenken.
 
-### Farben aufhellen und verdunkeln
+#### Farben aufhellen und verdunkeln
 
 Beide [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) und [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) Funktionen manipulieren die Helligkeit einer Farbe im HSL-Farbraum durch hinzufügen oder entfernen von Helligkeit. Grundsätzlich sind sie nicht als Pseudonyme für den `$lightness` Parameter der [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) Funktion.
 
@@ -185,7 +185,7 @@ Wenn du nicht jedesmal die `mix` Funktion schreiben möchtest, kannst du dir auc
   <p>Die <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> Funktion ist entworfen worden, um Werte flüssiger zu skalieren indem sie berücksichtigt wie hell oder dunkel sie bereits sind. Sie sollte Ergebnisse liefern, die genauso gut wie <code>mix</code> sind, aber mit einer eindeutigeren Aufrufkonvention. Der Skalierfaktor ist dennoch nicht derselbe.</p>
 </div>
 
-## Listen
+### Listen
 
 Listen sind Sass' äquivalent zu Arrays. Eine Liste ist eine flache Datenstruktur (anders als [Maps](#maps)), vorgesehen um Werte jeden Typs (einschließlich Listen, was zu verschachtelten Listen führt) zu speichern.
 
@@ -203,11 +203,11 @@ Wenn neue Inhalte zu einer Liste hinzugefügt werden sollen, dann verwende immer
 
 {% include snippets/syntax/20/index.html %}
 
-###### Weitere Informationen
+**Weitere Informationen:**
 
 +In [diesem Artikel](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/) gehe ich durch eine Menge Tipps und Tricks wie man Listen in Sass korrekt benutzt und manipuliert.
 
-## Maps
+### Maps
 
 Mit Sass können Stylesheet Autoren sogenannte Maps definieren — der Sass Term für assoziative Arrays, Hashes oder sogar JavaScript Objects. Eine Map ist eine Datenstruktur welche Keys mit Werten vereinigt. Keys und Werte können von jedem Typ, einschließlich Maps, sein. Ich empfehle aber nicht solch komplexe Datentypen als Map-Keys zu verwenden, nur weil es möglich ist.
 
@@ -228,7 +228,7 @@ Illustration:
 
 Artikel über Sass Maps zeigen wie lang ersehnt dieses Feature war. Ich kann diese 3 Artikel empfehlen: [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](https://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
-## CSS Regelwerk
+### CSS Regelwerk
 
 An diesem Punkt, ist es hauptsächlich nur noch ein Überarbeiten von dem was jeder schon weiß, aber hier haben wir wie CSS Regelwerke geschrieben werden sollten (zumindest, nach den meisten Guidelines, einschließlich [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-Regelwerk)):
 
@@ -256,7 +256,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-## Anordnung der Deklarationen
+### Anordnung der Deklarationen
 
 Ich kann mir kein Thema vorstellen, wo die Meinungen am weitesten außeinander gehen als bei der Anordnung von Deklarationen in CSS. Konkret gibt es zwei Fraktionen:
 
@@ -285,11 +285,11 @@ Deshalb werde ich auch keines davon hier im Styleguide definieren. Nimm das was 
   <p>Eine <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">kürzliche Studie</a> zeigt, dass die Verwendung von <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (welches <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">Typsortierung</a> verwendet) für CSS Deklarationen die durchschnittliche Dateigröße unter Gzip-Kompression um 2.7% verkürzt. Im Vergleich nur 1.3% wenn alphabetisch sortiert.</p>
 </div>
 
-## Verschachtelung von Selektoren
+### Verschachtelung von Selektoren
 
 Ein bestimmtes Feature von Sass, welches von vielen Entwickler übermäßig missbraucht wird, ist die *Verschachtelung von Selektoren*. Sie bietet einen Weg für Stylesheet Autoren, lange Selektoren, durchs ineinander verschachteln von kurzen Selektoren, zu erzeugen.
 
-### Generelle Regel
+#### Generelle Regel
 
 Zum Beispiel, folgende Sass Verschachtelung:
 
@@ -321,7 +321,7 @@ Um dem ganzen also Vorzubeugen, haben wir ein paar Jahre zurück viel über [die
 
 Es gibt selbsverständlich ein paar Ausnahmen zu dieser Regel wie wir in der nächsten Sektion sehen werden. Diese Meinung scheint ziemlich beliebt zu sein. Du kannst mehr darüber in [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) und [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css) lesen.
 
-### Ausnahmen
+#### Ausnahmen
 
 Für Anfänger ist es erlaubt und sogar empfohlen Pseudoklassen und Pseudoelemente innerhalb des Selektors zu verschachteln.
 

@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 La direttiva `@extend` è una funzione spesso mal interpretata. Giusto per ricordarlo, con questa direttiva possiamo dire a Sass di stilare un elemento `A` esattamente come se corrispondesse ad un selettore `B`. Inutile dire che rappresenta un ottimo alleato quando c’è da scrivere del CSS modulare.
 
@@ -29,7 +29,7 @@ Ci sono condizioni dove estendere un selettore può essere d’aiuto e può vale
   <p>Detto questo, se non si può usare Gzip (o qualsiasi equivalente) allora passare ad un approccio che usa <code>@extend</code> può non essere così male, soprattutto se il peso dei vostri fogli di stile è un vostro collo di bottiglia alle performance.</p>
 </div>
 
-### Extend e media query
+#### Extend e media query
 
 Dovreste estendere i selettori solo all’interno della stessa _mediaquery_ (la direttiva `@media`). Pensate alla _mediaquery_ come ad un altro vincolo.
 

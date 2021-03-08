@@ -1,11 +1,11 @@
 
-# Outils
+## Outils
 
 Ce qui est bien avec un préprocesseur CSS aussi populaire que Sass est qu’il est accompagné de tout un écosystème de frameworks, plugins, bibliothèques et outils. Après 8 ans d’existence, nous sommes proches du point où [tout ce qui peut être écrit en Sass a été écrit en Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Mon conseil toutefois est de restreindre le nombre de dépendances au strict minimum. La gestion des dépendances est un enfer que vous pouvez vous épargner. De plus, il n’y a pas besoin de beaucoup de dépendances avec un langage comme Sass.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) est le principal [framework Sass](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) aujourd’hui. Développé par [Chris Eppstein](https://twitter.com/chriseppstein), l’un des deux concepteurs de Sass, il est encore là pour un bout de temps.
 
@@ -21,7 +21,7 @@ Rien n’interdit d’utiliser Compass, je ne le recommande pas toutefois, d’a
   <p>Ruby Sass est actuellement en cours d’optimisation. Sont visés en particulier les styles faisant appel à des doses massives de logique, de fonctions et de mixins. Les performances de Compass et des autres frameworks devraient s’en trouver grandement améliorées et ne devraient plus ralentir Sass.</p>
 </div>
 
-## Systèmes de grilles
+### Systèmes de grilles
 
 Se passer d’un système de grilles n’est pas vraiment une option, maintenant que le Responsive Web Design est partout. Pour donner cohérence et solidité à votre design quelle que soit la taille de l’écran, nous utilisons une grille pour mettre en page les éléments, et quelques brillants esprits ont conçu des grilles réutilisables pour nous éviter d’avoir à coder encore et encore.
 
@@ -33,7 +33,7 @@ Dans le cas contraire, vous serez content de savoir qu’il existe deux gestionn
 
 Vous pouvez également choisir quelque chose de plus simple comme [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Au bout du compte, votre choix n’aura pas beaucoup d’impact sur votre style de code, donc c’est vraiment selon vos goûts et besoins.
 
-## SCSS-lint
+### SCSS-lint
 
 Il est important de faire l’analyse statique (*lint*) de votre code. Si vous suivez les recommandations d’un guide de style, vous réduirez grandement le nombre d’erreurs mais nul n’est parfait et on peut toujours s’améliorer. On peut donc dire que faire l’analyse statique du code est aussi important que le commenter.
 

@@ -1,5 +1,5 @@
 
-# A proposito di Sass
+## A proposito di Sass
 
 Questo è come [Sass](https://sass-lang.com) descrive se stesso e la propria [documentazione](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,7 +13,7 @@ Il punto non è rendere CSS un linguaggio di programmazione pieno di funzionalit
 
 Detto questo, per usare queste funzionalità, ci sono molti modi. Alcuni buoni, altri cattivi, altri inusuali. Queste linee guida intendono fornire un approccio consistente e documentato per scrivere codice in Sass.
 
-## Ruby Sass o LibSass
+### Ruby Sass o LibSass
 
 [La prima commit di Sass](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) è del lontano 2006, più di dieci anni fa. Inutile dire che è passato molto tempo. Inizialmente è stato sviluppato in Ruby e sono apparsi qua e là vari _porting_. Quello che ha avuto più successo è [LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (scritto in C), che è quasi pronto ad essere pienamente compatibile con la versione originale scritta in Ruby.
 
@@ -23,7 +23,7 @@ Torniamo indietro alla scelta del vostro compilatore. Attualmente tutto dipende 
 
 Su progetti che non utilizzano Ruby e che necessitano di una integrazione del flusso di lavoro, LibSass è probabilmente un’idea migliore, visto che è pensato maggiormente per essere incluso in _workflow_ differenti. Quindi se volete usarlo con Node.js, ad esempio, potete farlo subito grazie a [node-sass](https://github.com/sass/node-sass).
 
-## Sass o SCSS
+### Sass o SCSS
 
 C’è sempre molta confusione sulla semantica del nome *Sass*, e per una buona ragione: il nome Sass si riferisce sia al preprocessore che alla propria sintassi. Non proprio comodo eh?
 
@@ -39,7 +39,7 @@ La sintassi indentata si basa sull’indentazione e sugli spazi bianchi per elim
   <p>Thanks to <a href="https://github.com/corysimmons">Cory Simmons</a> for his help and expertise on this section.</p>
 </div>
 
-## Altri preprocessor
+### Altri preprocessor
 
 Sass è un _preprocessor_ come un altro. Il suo maggior concorrente è [LESS](http://lesscss.org/), un _preprocessor_ basato su Node.js, che ha avuto molta popolarità grazie al famoso _framework_ CSS [Bootstrap](https://getbootstrap.com/) che lo utilizza. C’è anche [Stylus](https://stylus-lang.com/), molto capace e flessibile; un po' più difficile da usare e con una comunità più piccola.
 

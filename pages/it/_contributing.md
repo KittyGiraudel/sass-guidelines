@@ -1,5 +1,5 @@
 
-# Contributi
+## Contributi
 
 "Le linee guida di Sass" è un progetto libero di cui mi prendo cura nel mio tempo libero. Inutile a dirsi, c’è un bel po’ di lavoro da fare per tenere tutto aggiornato, documentato e rilevante. 
 Per fortuna, mi aiutano un sacco di _contributors_ specialmente quando si tratta di mantenere <a href="#options-panel" class="link-like">traduzioni</a>. Ringraziamoli!

@@ -1,9 +1,9 @@
 
-# Responsive Web Design et points de rupture
+## Responsive Web Design et points de rupture
 
 Je ne pense pas qu’il soit nécessaire de présenter le Responsive Web Design qui est maintenant omniprésent. Cependant vous vous demandez peut-être *pourquoi diable parler de RWD dans un guide de style Sass&nbsp;?* En fait, Sass peut nous faciliter la vie avec les points de rupture, voici ce qu’on peut faire.
 
-## Nommer les points de rupture
+### Nommer les points de rupture
 
 Je pense qu’on peut affirmer sans crainte que les *media queries* ne devraient jamais être liées à tel ou tel terminal. Par exemple, cibler spécifiquement les iPads ou les téléphones Blackberry est une très mauvaise idée. Les media queries doivent s’occuper d’amplitudes de tailles d’écran, jusqu’à ce que le design ne fonctionne plus comme souhaité et que la media query suivante prenne la relève.
 
@@ -19,7 +19,7 @@ Ici, il est clair que toute convention de nommage clairement déconnectée de to
   <p>L’exemple qui précède utilise des maps imbriquées pour définir les points de rupture, mais tout dépend de la façon dont vous gérez vos points de rupture. On pourrait tout aussi bien choisir des chaînes de caractères plutôt que des maps internes, pour plus de flexibilité (p.ex. <code>'(min-width: 800px)'</code>).</p>
 </div>
 
-## Gestion des points de rupture
+### Gestion des points de rupture
 
 Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un moyen de les utiliser dans les media queries. Il y a de nombreuses façons d’y parvenir, mais je dois dire que je suis un fan des fonctions *getter* pour lire les maps de points. C’est un système à la fois simple et efficace.
 
@@ -30,7 +30,7 @@ Une fois vos points de rupture nommés comme vous le souhaitez, il vous faut un 
   <p>Si vous souhaitez en savoir davantage sur les façons d’aborder les Media Queries en Sass, <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> (via votre serviteur) et <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> proposent de très beaux articles.</p>
 </div>
 
-## Utilisation des Media Queries
+### Utilisation des Media Queries
 
 Il y a peu, un débat faisait rage sur la question de savoir où placer les media queries dans le code&nbsp;: à l’intérieur des sélecteurs (comme le permet Sass) ou ailleurs de façon strictement dissociée&nbsp;? Je dois dire que je suis un fervent défenseur du système *media-queries-dans-les-sélecteurs* car il s’accorde bien avec l’idée de *composants*.
 

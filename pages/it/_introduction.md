@@ -1,7 +1,7 @@
 
-# Introduzione
+## Introduzione
 
-## Perché una guida di stile
+### Perché una guida di stile
 
 Una guida di stile non è solamente un bel documento da leggere, che racconta come dovrebbe essere scritto il vostro codice. È un documento importantissimo per la vita di un progetto, che descrive come e perchè il codice dovrebbe esser scritto. Può sembrare una cosa eccessiva per un piccolo progetto, ma aiuta parecchio a mantenere la codebase pulita, scalabile e facile da manutenere.
 
@@ -20,7 +20,7 @@ Una guida di stile non è solamente un bel documento da leggere, che racconta co
   </ul>
 </blockquote>
 
-## Disclaimer
+### Disclaimer
 
 Prima di tutto: **questa non è una guida di stile CSS**. Questo documento non andrà a descrivere convenzioni per i nomi delle classi CSS, pattern modulari o la questione degli ID nel CSS. Queste linee guida hanno solo a che fare con contenuti relativi a Sass.
 
@@ -28,7 +28,7 @@ Aggiungo poi che queste linee guida sono _le mie_, per cui è tutto un **secondo
 
 Naturalmente, quella che illustro non è l’unica maniera per fare le cose e può o non può essere adatta al vostro progetto. Sentitevi liberi di partire da qui e adattare le cose ai vostri bisogni. Come si dice: *le cose potrebbero cambiare*.
 
-## Principi chiave
+### Principi chiave
 
 Alla fin fine, se c’è una cosa che mi piacerebbe arrivasse da tutte queste linee guida è che **[Sass dovrebbe essere scritto il più semplice possibile](https://www.sitepoint.com/keep-sass-simple/)**.
 
@@ -40,7 +40,7 @@ Certe volte è meglio ripetere un po’ di codice per mantenere il tutto più se
 
 Fatemi ancora citare [Harry Roberts](https://csswizardry.com): **il pragmatismo vince sulla perfezione**. Ad un certo punto, probabilmente vi troverete ad andare contro le regole descritte in queste linee guida. Se ciò ha un senso, se le cose filano, fatelo. Il codice è solo un mezzo, non il fine.
 
-## Estendere le linee guida
+### Estendere le linee guida
 
 Buona parte di questa guida di stile è scritta secondo le mie opinioni. Sono anni che leggo e scrivo Sass ed ho ormai un sacco di principi quando si tratta di scrivere fogli di stile puliti. Capisco che questo possa non piacere o non andare bene a qualcuno. È perfettamente normale.
 

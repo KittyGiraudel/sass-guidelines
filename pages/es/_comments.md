@@ -1,5 +1,5 @@
 
-# Comentarios
+## Comentarios
 
 CSS es un lenguajes complicado, lleno de *hacks* y rarezas. Debido a esto, debería de tener muchos comentarios, especialmente si tú o alguien más tiene la intención de leer y actualizar el código dentro de 6 meses o 1 año. No dejes que ni tú, ni nadie se encuentre en la situación de: *yo-no-escribí-esto-oh-dios-mio-por-qué*.
 
@@ -14,7 +14,7 @@ Tan simple como pueda resultar CSS, aún se pueden escribir muchos comentarios. 
 
 Y probablemente haya olvidado muchas otras razones para realizar comentarios. Comentar lleva muy poco tiempo cuando se realiza a la vez que escribes el código, así que hazlo en el momento correcto. Volver atrás y comentar un trozo de código antiguo, no solo es completamente irreal, sino que también es extremadamente molesto.
 
-## Escribiendo Comentarios
+### Escribiendo Comentarios
 
 Idealmente, *cualquier* conjunto de reglas CSS debería ir precedida por un comentario estilo-C explicando el objetivo del bloque CSS. Este comentario también debe dar una explicación numerada respecto a partes específicas del conjunto de reglas. Por ejemplo:
 
@@ -28,7 +28,7 @@ Cuando se comenta una sección específica de Sass, utiliza los comentarios de l
 
 Ten en cuenta que esta forma de comentar el código, es compatible con la guía de CSS en su sección de [comentarios](https://cssguidelin.es/#commenting).
 
-## Documentación
+### Documentación
 
 Cada variable, función, *mixin* y *placeholder* que tiene como objetivo ser reutilizado en todo el código, debería estar documentado como parte de la API global usando [SassDoc](http://sassdoc.com).
 

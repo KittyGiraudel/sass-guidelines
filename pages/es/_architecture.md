@@ -1,5 +1,5 @@
 
-# Arquitectura
+## Arquitectura
 
 Establecer la arquitectura CSS es probablemente una de las cosas más difíciles que tendrás que hacer en la vida de un proyecto. Mantener esa arquitectura consistente y significativa es aún más difícil.
 
@@ -15,7 +15,7 @@ Yo utilizo un método que resulta ser bastante similar a [SMACSS](http://smacss.
   <p>He aprendido que la arquitectura es, en la mayoría de los casos muy específica para cada proyecto. Siéntete libre de descartar o de adaptar la solución propuesta hasta que encuentres un sistema que se adapte a tus necesidades.</p>
 </div>
 
-## Componentes
+### Componentes
 
 Hay una gran diferencia entre hacer que algo *funcione* y hacerlo *bien*. De nuevo, CSS es un lenguaje bastante desordenado <sup>[cita requerida]</sup>. Cuánto menos CSS tengamos, mejor. No queremos tener que trabajar con megabytes de código CSS. Para mantener las hojas de estilo cortas y eficientes &mdash;y esto no será ninguna sorpresa para tí&mdash; es una buena idea pensar en una interfaz como en una colección de componentes.
 
@@ -29,7 +29,7 @@ Por ejemplo, un formulario de búsqueda debería ser tratado como un componente.
 
 La mayor parte de cualquier interfaz puede concebirse en forma de pequeños componentes y te recomiendo encarecidamente que lo hagas. Esto no solo reducirá la cantidad de CSS necesario para todo el proyecto, sino que también resultará más fácil de mantener que un desorden caótico donde todo está hecho un lío.
 
-## Estructura de un componente
+### Estructura de un componente
 
 Idealmente, los componentes deberían existir dentro de su propia partición Sass (en la carpeta `components/`, como se describe en el patrón [7-1](#el-patron-7-1)), por ejemplo `components/_button.scss`. Los estilos descritos en cada archivo de componentes sólo deben estar relacionados con:
 
@@ -49,7 +49,7 @@ Este es un ejemplo del componente de un botón:
   <p>Gracias a <a href="https://twitter.com/davidkpiano">David Khourshid</a> por su ayuda y experiencia en esta sección.</p>
 </div>
 
-## El Patron 7-1
+### El Patron 7-1
 
 Volvamos a la arquitectura, ¿de acuerdo? Normalmente suelo trabajar con lo que yo llamo el *patrón 7-1*: 7 carpetas, 1 archivo. Basicamente, tienes todas las partes almacenadas en 7 carpetas diferentes, y un único archivo en el directorio raíz (normalmente llamado `main.scss`) y que importa todas estas partes para luego compilarlas en una hoja de estilo CSS.
 
@@ -79,7 +79,7 @@ Idealmente, podemos llegar a algo como esto:
   <p>Los archivos siguen las mismas convenciones de nomenclatura descritas anteriormente: están delimitadas por guiones.</p>
 </div>
 
-### Carpeta Base
+#### Carpeta Base
 
 La carpeta `base/` contiene lo que podríamos llamar la plantilla del proyecto. Allí, puedes encontrar el archivo *reset* para reiniciar los estilos CSS, algunas reglas tipográficas y probablemente un archivo CSS que define algunos estilos estándares  para los elementos HTML más comunes (y que me gusta llamar `_base.scss`).
 
@@ -91,7 +91,7 @@ La carpeta `base/` contiene lo que podríamos llamar la plantilla del proyecto. 
   <p>Si tu proyecto usa <em>muchas</em> animaciones CSS, podrías pensar en añadir un archivo <code>\_animations.scss</code> conteniendo las deficiones de <code>@keyframes</code> de todas tus animaciones. Si solo las usas esporádicamente, déjalas convivir con los selectores que las usan.</p>
 </div>
 
-### Carpeta Layout
+#### Carpeta Layout
 
 La carpeta `layout/` contiene todo lo que tiene que ver con la distribución del sitio o la aplicación. Esta carpeta puede contener hojas de estilo para las partes principales del sitio (header, footer, navigation, sidebar…), el sistema de retícula o incluso el estilo CSS para los formularios.
 
@@ -106,7 +106,7 @@ La carpeta `layout/` contiene todo lo que tiene que ver con la distribución del
   <p>La carpeta <code>layout/</code> también se puede llamar <code>partials/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-### Carpeta Componentes
+#### Carpeta Componentes
 
 Para componentes más pequeños, existe la carpeta `components/`. Mientras `layout/` tiene una visión *macro* (definiendo la estructura global), `components/` está mucho más centrado en los *widgets*. Contiene todo tipo de módulos específicos como por ejemplo, un *slider*, un *loader*, un *widget*, y básicamente todo lo que esté en esa misma línea. Por lo general hay un montón de archivos en `components/` ya que todo el sitio o la aplicación debería estar compuesto en su mayoría, de pequeños módulos.
 
@@ -118,7 +118,7 @@ Para componentes más pequeños, existe la carpeta `components/`. Mientras `layo
   <p>La carpeta <code>components/</code> también se puede llamar <code>modules/</code>, todo depende de lo que tu prefieras.</p>
 </div>
 
-### Carpeta Páginas
+#### Carpeta Páginas
 
 Si tienes estilos específicos para cada página, es mejor ponerlos en una carpeta `pages/`, dentro de un archivo con el nombre de la página. Por ejemplo, es común tener muchos estilos específicos para la página principal, por lo que existe la necesidad de tener un archivo `_home.scss` en la carpeta `pages/`.
 
@@ -129,7 +129,7 @@ Si tienes estilos específicos para cada página, es mejor ponerlos en una carpe
   <p>Dependiendo de tu proceso de implementación, estos archivos podrían llamarse de manera independiente para evitar que sean fusionados con otros en la hoja de estilos resultante. Todo depende de ti.</p>
 </div>
 
-### Carpeta Temas
+#### Carpeta Temas
 
 En sitios y aplicaciones grandes, no es raro tener diferentes temas. Es cierto que hay diferentes maneras de tratar con los temas, pero personalmente, me gusta tenerlos todos en la carpeta `themes/`.
 
@@ -140,7 +140,7 @@ En sitios y aplicaciones grandes, no es raro tener diferentes temas. Es cierto q
   <p>Esto es muy específico del proyecto y es probable que sea inexistente en muchos de ellos.</p>
 </div>
 
-### Carpeta Abstracts
+#### Carpeta Abstracts
 
 La carpeta `abstracts/` reúne todas las herramientas y *helpers* de Sass utilizados en todo el proyecto. Cada variable global, función, *mixin* y *placeholder* debería estar en esta carpeta.
 
@@ -157,7 +157,7 @@ Cuando se trabaja en un proyecto muy grande, con muchas utilidades abstractas, p
   <p>La carpeta <code>abstracts/</code> también se puede llamar <code>utilities/</code> o <code>helpers/</code>, dependiendo de tus preferencias.</p>
 </div>
 
-### Carpeta Vendors
+#### Carpeta Vendors
 
 Y por último, pero no menos importante, la mayoría de los proyectos tienen una carpeta `vendors/` que contiene todos los archivos CSS procedentes de librerías externas y *frameworks* – Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, etc. Poner estos archivos en una misma carpeta, es una buena forma de decir "¡Hey! esto no lo he escrito yo, no es mi código y no es mi responsabilidad".
 
@@ -170,7 +170,7 @@ Si tienes que sobrescribir una sección de cualquier *vendor*, te recomiendo que
 
 Por ejemplo, `vendors-extensions/_bootstrap.scss` es un archivo que contiene todas las reglas CSS que se volverán a declarar con respecto al CSS por defecto de Bootstrap. Esto se hace para evitar editar directamente los archivos del proveedor, lo que es en general una mala idea.
 
-### Archivo Principal
+#### Archivo Principal
 
 El archivo principal (normalmente llamado `main.scss`) debería ser el único archivo Sass de todo el código que no empieza con guión bajo. Este archivo no debería contener nada más que `@import` y comentarios.
 
@@ -204,7 +204,7 @@ Hay otra forma de importar las partes de un proyecto que también que me parece 
 
 {% include snippets/architecture/03/index.html %}
 
-## Acerca de globbing
+### Acerca de globbing
 
 En programación, los patrones glob especifican un conjunto de nombres de fichero con caracteres comodín, como `*.scss`. En general, *globbing* busca hacer coincidir un conjunto de archivos basado en una expresión, en lugar de en una lista de nombres de archivo. Cuando esto se aplica a Sass, significa importar *partials* en el [archivo main](#archivo-principal) con un patrón glob en lugar de enumerarlos individualmente. Esto hará que el archivo principal tenga este aspecto:
 
@@ -217,7 +217,7 @@ Dicho esto, en una estricta arquitectura basada en componentes, en la que se tie
 Cuando se usa Ruby Sass, hay una gema de Ruby llamada [sass-globbing](https://github.com/chriseppstein/sass-globbing) que permite tener este mismo comportamiento. Si se utiliza node-sass, se puede confiar en Node.js o en cualquier herramienta que se use para realizar la compilación (Gulp, Grunt, etc.).
 
 
-## El Archivo De La Verguenza
+### El Archivo De La Verguenza
 
 Hay un concepto interesante que ha popularizado [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) y [Chris Coyier](https://css-tricks.com) y que consiste en poner todas las declaraciones CSS, *hacks* y cosas de las que no nos sentimos muy orgullosos en un [archivo de la verguenza](https://csswizardry.com/2013/04/shame-css-full-net-interview/). Este archivo, titulado dramáticamente `_shame.scss`, se importará después de los demás archivos, al final de la hoja de estilo.
 

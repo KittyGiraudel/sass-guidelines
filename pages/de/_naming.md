@@ -1,5 +1,5 @@
 
-# Namenskonventionen
+## Namenskonventionen
 
 In dieser Sektion werden wir uns nicht den besten CSS Namenskonventionen für Wartbarkeit und Skalierbarkeit widmen; das gehört nicht zum Umfang eines Sass Styleguide und sollte generell dir überlassen sein. Ich würde die Konventionen von [CSS Guidelines](https://cssguidelin.es/#naming-conventions) empfehlen.
 
@@ -15,7 +15,7 @@ Bezüglich Variablen, Funktionen und Mixins werden wir uns an etwas sehr *CSS-m�
 
 {% include snippets/naming/01/index.html %}
 
-## Konstanten
+### Konstanten
 
 Falls du ein Framework- oder Library-Entwickler sein solltest, magst du wahrscheinlich schon Erfahrung mit Variablen gemacht haben, die unter keinen Umständen aktualisiert werden dürfen: Konstanten. Unglücklicherweise (oder zum Glück?) bietet Sass keinen Weg um solche Instanzen zu defineren, deshalb müssen wir auf eine strikte Namenskonvention zurückfallen um klar zu machen was wir meinen.
 
@@ -25,7 +25,7 @@ Wie in vielen Sprachen, schlage ich vor Variablen komplett in Großbuchstaben un
 
 Wenn du wirklich mit der Idee von Konstanten in Sass herumspielen möchtest, solltest du [diesen Artikel](https://www.sitepoint.com/dealing-constants-sass/) lesen.
 
-## Namespace
+### Namespace
 
 Falls du deinen Sass Code in Form einer Library, Framework, Gridsystem oder was auch immer verbreiten möchtest, solltest du überlegen all deine Variablen, Funktionen, Mixins und Platzhalter mit einem Namespace zu versehen damit sie nicht mit jemand anderem Code in Konflikt geraten.
 

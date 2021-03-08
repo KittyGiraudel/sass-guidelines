@@ -1,5 +1,5 @@
 
-# About the author
+## About the author
 
 My name is [Kitty Giraudel](https://kittygiraudel.com), I am a French front-end developer, based in Berlin (Germany) since 2015, currently working at [Gorillas](https://gorillas.io/).
 

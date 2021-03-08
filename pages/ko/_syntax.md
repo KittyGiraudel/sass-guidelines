@@ -1,5 +1,5 @@
 
-# 구문 & 서식
+## 구문 & 서식
 
 제 생각으로는, 스타일가이드가 가장 먼저 해야 할 일은 우리 코드가 어떻게 보이길 원하는지를 묘사하는 것입니다.
 
@@ -14,17 +14,17 @@
 
 {% include snippets/syntax/01/index.html %}
 
-## 문자열
+### 문자열
 
 믿거나 말거나, 문자열은 CSS와 Sass 생태계에서 꽤 중요한 역할을 합니다. 대부분의 CSS 값들은 길이 혹은 식별자이기 때문에, Sass에서 문자열을 다룰 때는 어느 정도 가이드라인을 따르는 것이 사실 제법 중요합니다.
 
-### 인코딩
+#### 인코딩
 
 문자 인코딩과 관련한 잠재적인 문제를 피하기 위해서는, [메인 스타일시트](#main-)에서 `@charset` 지시어를 사용해 [UTF-8](https://ko.wikipedia.org/wiki/UTF-8) 인코딩을 강제하는 것이 강력하게 권장됩니다. 이 지시어가 스타일시트의 가장 첫 번째 요소이고 어트 종류의 문자도 앞에 오지 않도록 하세요.
 
 {% include snippets/syntax/02/index.html %}
 
-### 따옴표
+#### 따옴표
 
 CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지어 공백을 포함한 경우에도요. 예를 들면 font-family가 있습니다: 따옴표로 감쌌는지 여부는 CSS 파서에게 문제가 되지 않습니다.
 
@@ -43,7 +43,7 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 <p>CSS 규격에 따라, <code>@charset</code> 지시어는 <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">유효하다고 간주되도록</a> 큰따옴표로 선언되어야 합니다. 그러나, Sass는 CSS로 컴파일할 때 이 문제를 처리하므로 최종 결과에 영향을 미치지 않습니다. <code>@charset</code>의 경우에도 작은따옴표를 안전하게 사용할 수 있습니다.</p>
 </div>
 
-### CSS 값인 문자열
+#### CSS 값인 문자열
 
 `initial`이나 `sans-serif` 같은 특정 CSS 값은 따옴표로 싸여서는 안 됩니다. `font-family: 'sans-serif'` 같은 선언의 경우 CSS는 인용부호가 붙은 문자열이 아니라 식별자를 기대하고 있기 때문에 아무 경고도 없이 작동하지 않을 것입니다. 이 때문에, 그런 값들은 따옴표로 감싸지 않습니다.
 
@@ -53,23 +53,23 @@ CSS에서 문자열은 따옴표로 둘러싸일 필요가 없습니다. 심지�
 
 전자에는 따옴표를 붙이지 않지만, 후자는 작은따옴표로 감쌉니다.
 
-### 따옴표를 포함한 문자열
+#### 따옴표를 포함한 문자열
 
 만약 문자열이 하나 혹은 여러 개의 작은따옴표를 포함하고 있다면, 문자열 안에서 과도한 문자 이스케이프를 피하기 위해 대신 큰따옴표(`"`)로 문자열을 감싸는 것을 고려해볼 수 있습니다.
 
 {% include snippets/syntax/05/index.html %}
 
-### URL
+#### URL
 
 URL 역시 위와 동일한 이유로 따옴표로 감싸져야 합니다:
 
 {% include snippets/syntax/06/index.html %}
 
-## 숫자
+### 숫자
 
 Sass에서 숫자는 단위가 없는 숫자에서부터 길이, 기간, 빈도, 각도 등에 이르기까지 모든 것을 포함하는 데이터 타입입니다. 덕분에 그런 단위들을 가지고 연산을 하는 것이 가능해집니다.
 
-### 0(영)
+#### 0(영)
 
 숫자는 1보다 작은 소수 앞에 앞장서는 0을 표기해야 합니다. 뒤따르는 0은 절대 표기하지 마세요.
 
@@ -79,7 +79,7 @@ Sass에서 숫자는 단위가 없는 숫자에서부터 길이, 기간, 빈도,
 <p>Sublime Text와 정규식 기반 검색 및 교체를 제공하는 다른 편집기에서는 (전부는 아니지만 대부분) 부동 숫자에 선행 0을 추가하는 것이 매우 쉽습니다. <code>\s+\.(\d+)</code>를<code>\ 0.$1</code>로 바꾸기만 하면 됩니다. 그러나 <code>0</code> 앞에 띄어쓰기하는 것을 잊지 마세요. </p>
 </div>
 
-### 단위
+#### 단위
 
 길이를 다룰 때, `0` 값은 절대로 단위를 가져선 안 됩니다.
 
@@ -107,13 +107,13 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 단위를 문자열로서 숫자에 덧붙이면 결과물은 문자열이 되며, 그 값으로 더이상 연산을 할 수 없습니다. 숫자의 숫자 부분을 단위에서 잘라내면 그 결과 역시 문자열이 됩니다. 이것은 여러분이 원하는 것이 아닙니다.
 
-### 연산
+#### 연산
 
 **최상위 숫자 계산은 언제나 괄호로 감싸져야 합니다**. 이 요건은 가독성을 향상할 뿐만 아니라, Sass가 괄호 안의 수치를 계산하도록 강제함으로써 일부 예외적인 상황을 방지합니다.
 
 {% include snippets/syntax/12/index.html %}
 
-### 매직 넘버
+#### 매직 넘버
 
 "매직 넘버"는 *익명의 숫자 상수*를 일컫는 [전통적인 프로그래밍 용어](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants)입니다. 기본적으로, 이 숫자는 어쩌다 보니 *맞아떨어지지만*™ 어떤 논리적인 설명과도 관련되지 않은 임의의 숫자입니다.
 
@@ -123,7 +123,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 주제에 대해 CSS-Tricks에 CSS의 매직 넘버에 관한 [훌륭한 글](https://css-tricks.com/magic-numbers-in-css/)이 있는데, 한 번 읽어 보시길 권장합니다.
 
-## 색
+### 색
 
 색은 CSS 언어에서 중요한 위치를 차지하고 있습니다. 자연스럽게, Sass는 몇 가지의 [강력한 함수](https://sass-lang.com/documentation/Sass/Script/Functions.html)을 제공함으로써 색 조작에 있어 소중한 동맹이 되었습니다.
 
@@ -133,7 +133,7 @@ Sass는 색을 조작할 때 매우 유용하여 이 주제에 대한 글이 인
 - [Sass를 사용하여 색상표 만들기](https://www.sitepoint.com/using-sass-build-color-palettes/)
 - [Sass에서 색 구성표 다루기](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-### 색 서식
+#### 색 서식
 
 색을 가능한 한 간단하게 만들기 위한 제 조언은 색 서식에 대한 다음의 우선순위를 따르라는 것입니다:
 
@@ -155,7 +155,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 {% include snippets/syntax/15/index.html %}
 
-### 색과 변수
+#### 색과 변수
 
 색을 한 번 이상 사용할 때는 색을 대변하는 의미 있는 이름을 붙여 변수에 저장하세요.
 
@@ -167,7 +167,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 이렇게 함으로써 테마 변경이 `$sass-pink: blue` 같은 사태를 초래하는 것을 방지할 수 있습니다. [이 글](https://davidwalsh.name/sass-color-variables-dont-suck)은 색 변수를 끝까지 생각하는 것이 왜 중요한지를 잘 설명해 줍니다.
 
-### 색 명암 조절
+#### 색 명암 조절
 
 [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method)과 [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) 두 함수는 HSL 공간에서 색의 명도를 증감하여 조정합니다. 기본적으로, 이들은 [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) 함수의 `$lightness` 매개변수의 가명일 뿐입니다.
 
@@ -185,7 +185,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 <p><a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> 함수는 속성들이 이미 얼마나 높거나 낮은지를 고려함으로써 그 크기를 보다 유동적으로 변경하도록 디자인되었습니다. 이 함수는 <code>mix</code> 만큼이나 좋은 결과물과 함께 보다 명확한 호출 관례를 제공합니다. 그렇지만 비례 계수는 정확히 같지 않습니다.</p>
 </div>
 
-## 리스트
+### 리스트
 
 리스트는 Sass에서 배열에 해당하는 개념입니다. 리스트는 어떤 타입의 값이든(리스트도 포함. 이 경우 내포 리스트가 된다) 저장할 수 있게 의도된 ([맵](#maps))과 달리) 평면적인 데이터 구조입니다.
 
@@ -205,7 +205,7 @@ HSL이나 RGB 표기를 사용할 때, 쉼표(`,`) 뒤에는 언제나 스페이
 
 [이 글](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)에서 저는 Sass에서 리스트를 올바르게 처리하고 조작하기 위한 많은 트릭과 팁을 살펴봅니다.
 
-## 맵
+### 맵
 
 Sass를 사용하여 스타일시트 작성자는 맵을 정의할 수 있는데, 이는 연관 배열, 해쉬 혹은 JavaScript 오브젝트에 해당하는 Sass 용어입니다. 맵은 키를 모든 유형의 값과 연결하는 자료 구조입니다. 제정신을 위해서라면 복잡한 데이터 유형을 맵의 키로 사용하는 것을 권장하지는 않지만, 키와 값 모두 맵을 포함한 어떤 데이터 유형일 수는 있습니다.
 
@@ -226,7 +226,7 @@ Sass를 사용하여 스타일시트 작성자는 맵을 정의할 수 있는데
 
 Sass 맵에 대한 글은 이 기능이 얼마나 갈망 되었는지를 보여줄 때가 많습니다. 제가 추천하는 3가지는: [Sass 맵 사용하기](https://www.sitepoint.com/using-sass-maps/), [Sass 맵의 추가 기능](https://www.sitepoint.com/extra-map-functions-sass/), [진짜 Sass, 진짜 맵](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/)입니다.
 
-## CSS 규칙
+### CSS 규칙
 
 이 부분은 모두가 알고 있는 내용의 복습이 되겠지만, 여기 CSS 규칙의 작성 방법이 있습니다. (적어도, [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)을 포함한 대부분의 가이드라인에 따르면 이렇습니다):
 
@@ -254,7 +254,7 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 
 {% include snippets/syntax/25/index.html %}
 
-## 선언 정렬
+### 선언 정렬
 
 전 CSS 선언을 정렬하는 문제만큼 견해가 갈리는 주제를 별로 떠올릴 수가 없습니다. 구체적으로, 여기 두 파가 있습니다:
 
@@ -283,11 +283,11 @@ CSS와 관련된 가이드라인에 더해, 우리는 다음 사항들에 관심
 <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">최근의 연구</a>는 (<a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">유형별 정렬</a>을 이용하는) <a href="https://github.com/csscomb/csscomb.js">CSScomb</a>를 사용한 CSS 선언 정렬이 Gzip 압축 시 평균 파일 크기를 2.7% 줄인다는 결과를 보여줍니다. 그에 비해, 알파벳순으로 정렬했을 때는 1.3%가 줄었습니다.</p>
 </div>
 
-## 선택자 내포Nesting
+### 선택자 내포Nesting
 
 Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용되고 있는 것 하나는 *선택자 내포*입니다. 선택자 내포는 짧은 선택자들을 서로 포개어 넣음으로써 긴 선택자를 산출해 내는 방식을 제안합니다.
 
-### 일반적인 규칙
+#### 일반적인 규칙
 
 예로, 아래의 Sass는:
 
@@ -319,7 +319,7 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 다음 섹션에서 볼 수 있듯이 이 규칙에 대한 몇 가지 예외가 분명히 있지만, 이 의견은 꽤 인기 있는 것 같습니다. 자세한 내용은 [선택자 내포에 주의하세요](https://www.sitepoint.com/beware-selector-nesting-sass/) 및 [더 많은 모듈식 CSS에 대한 내포 선택자 방지](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)에서 자세히 읽을 수 있습니다.
 
-### 예외
+#### 예외
 
 우선, 원래의 선택자 안에 가상 클래스와 가상 요소를 내포하는 것은 허용되며 나아가 추천할 만합니다.
 

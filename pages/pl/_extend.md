@@ -1,5 +1,5 @@
 
-# Extendy
+## Extendy
 
 Dyrektywa `@extend` należy do potężnych funkcjonalności Sassa, lecz jest ona często źle rozumiana. Co do zasady, dyrektywa ta pozwala na przekazanie Sassowi, żeby zaaplikował określone style selektorowi A tak, jakby pasował on także do selektora B. Nie ulega wątpliwości, że może to być pomocne przy pisaniu modułowego CSSa.
 
@@ -29,7 +29,7 @@ Istnieje wiele sytuacji, w których rozwijanie selektorów może być pomocne i 
   <p>Jeśli jednak w danej sytuacji niemożliwe jest użycie kompresji Gzip (lub jej ekwiwalentu), korzystanie z dyrektywy <code>@extend</code> może być dobrym rozwiązaniem, zwłaszcza gdy rozmiar arkusza stylów jest problemem dla wydajności naszego projektu.</p>
 </div>
 
-## Extendy a media queries
+### Extendy a media queries
 
 Selektory należy rozwijać jedynie w ramach tego samego scope'u media (dyrektywy `@media`). Traktujmy tym samym media query jako kolejne ograniczenie dla extendów.
 
@@ -41,7 +41,7 @@ Podsumowując, zalecam wykorzystywanie dyrektywy `@extend` jedynie dla utrzymywa
   <p>Dzięki dla <a href="https://twitter.com/davidkpiano">Davida Khourshid</a> za jego pomoc w przygotowywaniu tej sekcji.</p>
 </div>
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
 * [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)

@@ -1,5 +1,5 @@
 
-# Advertencias Y Errores
+## Advertencias Y Errores
 
 Si hay una característica que a menudo es pasada por alto por los desarrolladores Sass, es la capacidad de generar advertencias e informes de errores de manera dinámica. De hecho, Sass viene con tres directivas personalizadas para imprimir contenido en el sistema de salida estándar (CLI, compiling app…):
 
@@ -11,7 +11,7 @@ Dejemos `@debug` de lado, ya que claramente está pensado para depurar SassScrip
 
 Ahora, siempre hay sitio en cualquer proyecto Sass para advertencias y errores. Básicamente cualquier mixin o función que espera un tipo o argumento específico podría lanzar un error si algo sale mal, o mostrar una advertencia cuando se hace una suposición.
 
-## Advertencias
+### Advertencias
 
 Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq) que intenta convertir un valor de `px` a `em`:
 
@@ -19,7 +19,7 @@ Toma como ejemplo esta función de [Sass-MQ](https://github.com/sass-mq/sass-mq)
 
 Si el valor no tiene unidades, la función asume que el valor estará expresado en píxeles. En este punto, hacer este tipo de hipótesis puede ser arriesgado, por lo que el usuario debe recibir una advertencia de que el software ha hecho algo que podría considerarse inesperado.
 
-## Errores
+### Errores
 
 Los errores, a diferencia de las advertencias, impiden continuar al compilador. Básicamente paran la compilación y muestran un mensaje en la consola de salida, así como el rastro de seguimiento del error, lo que suele ser muy útil para la depuración. Debido a esto, los errores aparecerán cuando no hay manera de que el programa continúe funcionando. Cuando sea posible, trata de evitar el problema y mostrar una advertencia en su lugar.
 

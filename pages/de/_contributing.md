@@ -1,5 +1,5 @@
 
-# Mitwirken
+## Mitwirken
 
 Sass Guidelines ist ein freies Projekt welches ich in meiner Freizeit entwickle. Es ist daher recht großer Aufwand alles aktuell, dokumentiert und logisch zu halten. Glücklicherweise wird mir von vielen großartigen Mitwirkenden geholfen; besonders wenn es um die Pfleger der dutzend <a href="#options-panel" class="link-like">verschiedenen Übersetzungen</a> geht. Also dankt Ihnen!
 

@@ -1,5 +1,5 @@
 
-# Mixins
+## Mixins
 
 Les mixins sont l’une des fonctionnalités les plus utilisées de Sass. Elles sont essentielles pour la réutilisabilité et pour les composants DRY. Il y a de bonnes raisons à cela&nbsp;: les mixins permettent aux auteurs de définir des styles qui peuvent être réutilisés dans l’ensemble de la feuille de styles sans avoir à recourir à des classes non sémantiques comme `.float-left`.
 
@@ -7,7 +7,7 @@ Ils contiennent des règles CSS complètes et tout ce qui est permis n’importe
 
 Mais je dois vous mettre en garde contre l’abus de mixins. Là encore, le plus important est la *simplicité*. Il peut être tentant de construire des mixins extrêmement puissants faisant appel massivement à la logique. Cela ressemble à de l’ingénierie excessive et de nombreux développeurs souffrent de cette affection. Ne réfléchissez pas trop et surtout concentrez-vous sur la simplicité. Si un mixin dépasse 20 lignes de code, alors soit il doit être éclaté en parties plus réduites, soit il doit être repensé.
 
-## Les bases
+### Les bases
 
 Ceci étant dit, les mixins sont extrêmement utiles et vous devriez faire usage de quelques-uns. La règle générale est que si vous repérez un groupe de propriétés CSS qui apparaissent toujours ensemble pour une bonne raison (c’est-à-dire pas par pure coïncidence), vous pouvez les regrouper dans un mixin. Le [micro-clearfix hack de Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/) par exemple mérite d’être déclaré dans un mixin (sans argument).
 
@@ -19,7 +19,7 @@ Un autre exemple valable serait un mixin permettant de dimensionner un élément
 
 Pour des exemples plus avancés de mixins, jetez un oeil à [celui-ci pour générer des triangles en CSS](https://www.sitepoint.com/sass-mixin-css-triangles/), [celui-ci pour créer de longues ombres](https://www.sitepoint.com/ultimate-long-shadow-sass-mixin/) ou encore [celui-ci pour gérer les anciennes syntaxes de dégradés](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
 
-## Argument-less mixins
+### Argument-less mixins
 
 Parfois les mixins sont utilisés simplement pour éviter de répéter le même groupe de déclarations encore et encore, et par conséquent ne nécessitent pas de paramètres, ou se trouvent avoir des valeurs par défaut suffisamment éloquentes qu’il ne soit pas nécessaire de leur passer d’arguments.
 
@@ -27,7 +27,7 @@ Dans ces cas de figure, on peut tout à fait omettre les parenthèses lorsqu’o
 
 {% include snippets/mixins/08/index.html %}
 
-## Listes d'Arguments
+### Listes d'Arguments
 
 Lorsque vous avez affaire à un nombre inconnu d’arguments dans un mixin, utilisez toujours une `arglist` plutôt qu’une liste. On peut voir `arglist` comme le 8<sup>e</sup> type de données de Sass, caché et non documenté, qui est implicitement utilisé lorsqu’on passe un nombre arbitraire d’arguments dans un mixin ou une fonction dont la signature contient `...`.
 
@@ -41,7 +41,7 @@ Sass gère très intelligemment les mixins et les déclarations de fonction, vou
 
 Pour plus d’information sur les différences entre des arguments multiples, une liste, et une liste d’arguments pour un mixin, [SitePoint a un très bel article](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
-## Mixins et préfixes constructeurs
+### Mixins et préfixes constructeurs
 
 Il pourrait être tentant de définir des mixins personnalisés pour traiter les préfixes constructeurs utilisés pour les propriétés CSS partiellement ou non supportées. Mais nous n’allons pas faire cela. D’abord, si vous pouvez utiliser [Autoprefixer](https://github.com/postcss/autoprefixer), faites-le. Il allégera votre code Sass, il sera toujours à jour et fera un bien meilleur boulot que vous pour préfixer ce qui doit l’être.
 

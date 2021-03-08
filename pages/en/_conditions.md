@@ -1,5 +1,5 @@
 
-# Conditional statements
+## Conditional statements
 
 You probably already know that Sass provides conditional statements via the `@if` and `@else` directives. Unless you have some medium to complex logic in your code, there is no need for conditional statements in your everyday stylesheets. Actually, they mainly exist for libraries and frameworks.
 

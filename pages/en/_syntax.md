@@ -1,5 +1,5 @@
 
-# Syntax & formatting
+## Syntax & formatting
 
 If you ask me, the very first thing a styleguide should do is describe the way we want our code to look.
 
@@ -14,17 +14,17 @@ Roughly, we want (shamelessly inspired by [CSS Guidelines](https://cssguidelin.e
 
 {% include snippets/syntax/01/index.html %}
 
-## Strings
+### Strings
 
 Believe it or not, strings play quite a large role in both CSS and Sass ecosystems. Most CSS values are either lengths or identifiers, so it actually is quite crucial to stick to some guidelines when dealing with strings in Sass.
 
-### Encoding
+#### Encoding
 
 To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
 
 {% include snippets/syntax/02/index.html %}
 
-### Quotes
+#### Quotes
 
 CSS does not require strings to be quoted, not even those containing spaces. Take font-family names for instance: it doesn’t matter whether you wrap them in quotes for the CSS parser.
 
@@ -43,7 +43,7 @@ That being said, languages that do not require strings to be quoted are definite
   <p>As per the CSS specifications, the <code>@charset</code> directive should be declared in double quotes <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">to be considered valid</a>. However, Sass takes care of this when compiling to CSS so the authoring has no impact on the final result. You can safely stick to single quotes, even for <code>@charset</code>.</p>
 </div>
 
-### Strings as CSS values
+#### Strings as CSS values
 
 Specific CSS values (identifiers) such as `initial` or `sans-serif` require not to be quoted. Indeed, the declaration `font-family: 'sans-serif'` will silently fail because CSS is expecting an identifier, not a quoted string. Because of this, we do not quote those values.
 
@@ -53,23 +53,23 @@ Hence, we can make a distinction between strings intended to be used as CSS valu
 
 We don't quote the former, but we do wrap the latter in single quotes.
 
-### Strings containing quotes
+#### Strings containing quotes
 
 If a string contains one or several single quotes, one might consider wrapping the string with double quotes (`"`) instead, in order to avoid escaping characters within the string.
 
 {% include snippets/syntax/05/index.html %}
 
-### URLs
+#### URLs
 
 URLs should be quoted as well, for the same reasons as above:
 
 {% include snippets/syntax/06/index.html %}
 
-## Numbers
+### Numbers
 
 In Sass, number is a data type including everything from unitless numbers to lengths, durations, frequencies, angles and so on. This allows calculations to be run on such measures.
 
-### Zeros
+#### Zeros
 
 Numbers should display leading zeros before a decimal value less than one. Never display trailing zeros.
 
@@ -79,7 +79,7 @@ Numbers should display leading zeros before a decimal value less than one. Never
   <p>In Sublime Text and other editors providing a regular-expression powered search and replace, it is very easy to add a leading zero to (most if not all) float numbers. Simply replace <code>\s+\.(\d+)</code> with <code>\ 0.$1</code>. Do not forget the space before the <code>0</code> though.</p>
 </div>
 
-### Units
+#### Units
 
 When dealing with lengths, a `0` value should never ever have a unit.
 
@@ -107,13 +107,13 @@ To remove the unit of a value, you have to divide it by *one unit of its kind*.
 
 Appending a unit as a string to a number results in a string, preventing any additional operation on the value. Slicing the numeric part of a number with a unit also results in a string. This is not what you want. [Use lengths, not strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/).
 
-### Calculations
+#### Calculations
 
 **Top-level numeric calculations should always be wrapped in parentheses**. Not only does this requirement dramatically improve readability, it also prevents some edge cases by forcing Sass to evaluate the contents of the parentheses.
 
 {% include snippets/syntax/12/index.html %}
 
-### Magic numbers
+#### Magic numbers
 
 "Magic number" is an [old school programming](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term for *unnamed numerical constant*. Basically, it’s just a random number that happens to *just work*™ yet is not tied to any logical explanation.
 
@@ -123,7 +123,7 @@ Needless to say **magic numbers are a plague and should be avoided at all costs*
 
 On topic, CSS-Tricks has a [terrific article](https://css-tricks.com/magic-numbers-in-css/) about magic numbers in CSS that I encourage you to read.
 
-## Colors
+### Colors
 
 Colors occupy an important place in the CSS language. Naturally, Sass ends up being a valuable ally when it comes to manipulating colors, mostly by providing a handful of [powerful functions](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
@@ -133,7 +133,7 @@ Sass is so useful when it comes to manipulating colors that articles have flouri
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-### Color formats
+#### Color formats
 
 In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
 
@@ -155,7 +155,7 @@ When using HSL or RGB notation, always add a single space after a comma (`,`) an
 
 {% include snippets/syntax/15/index.html %}
 
-### Colors and variables
+#### Colors and variables
 
 When using a color more than once, store it in a variable with a meaningful name representing the color.
 
@@ -167,7 +167,7 @@ Now you are free to use this variable wherever you want. However, if your usage 
 
 Doing this would prevent a theme change leading to something like `$sass-pink: blue`. [This article](https://davidwalsh.name/sass-color-variables-dont-suck) does a good job at explaining why thinking your color variables through is important.
 
-### Lightening and darkening colors
+#### Lightening and darkening colors
 
 Both [`lighten`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method) and [`darken`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) functions manipulate the lightness of a color in the HSL space by adding to or subtracting from the lightness in the HSL space. Basically, they are nothing but aliases for the `$lightness` parameter of the [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method) function.
 
@@ -185,7 +185,7 @@ If you don’t want to write the `mix` function every time, you can create two e
   <p>The <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> function is designed to scale properties more fluidly by taking into account how high or low they already are. It should provide results that are as nice as <code>mix</code>’s but with a clearer calling convention. The scaling factor isn’t exactly the same though.</p>
 </div>
 
-## Lists
+### Lists
 
 Lists are the Sass equivalent of arrays. A list is a flat data structure (unlike [maps](#maps)) intended to store values of any type (including lists, leading to nested lists).
 
@@ -205,7 +205,7 @@ When adding new items to a list, always use the provided API. Do not attempt to 
 
 In [this article](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/), I go through a lot of tricks and tips to handle and manipulate lists correctly in Sass.
 
-## Maps
+### Maps
 
 With Sass, stylesheet authors can define maps — the Sass term for associative arrays, hashes or even JavaScript objects. A map is a data structure associating keys to values. Both keys and values can be of any data type, including maps although I would not recommend using complex data types as map keys, if only for the sake of sanity.
 
@@ -226,7 +226,7 @@ Illustration:
 
 Write-ups about Sass maps are many given how longed-for this feature was. Here are 3 that I recommend: [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/), [Extra Map functions in Sass](https://www.sitepoint.com/extra-map-functions-sass/), [Real Sass, Real Maps](http://blog.grayghostvisuals.com/sass/real-sass-real-maps/).
 
-## CSS Ruleset
+### CSS Ruleset
 
 At this point, this is mostly revising what everybody knows, but here is how a CSS ruleset should be written (at least, according to most guidelines, including [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
@@ -254,7 +254,7 @@ Illustration:
 
 {% include snippets/syntax/25/index.html %}
 
-## Declaration Sorting
+### Declaration Sorting
 
 I cannot think of many topics where opinions are as divided as they are regarding declaration sorting in CSS. Concretely, there are two factions here:
 
@@ -283,11 +283,11 @@ Because of this, I will not impose a choice in this styleguide. Pick the one you
   <p>A <a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">recent study</a> shows that using <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (which uses <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">type ordering</a>) for sorting CSS declarations ends up shortening the average file size under Gzip compression by 2.7%, compared to 1.3% when sorting alphabetically.</p>
 </div>
 
-## Selector Nesting
+### Selector Nesting
 
 One particular feature Sass provides that is being overly misused by many developers is *selector nesting*. Selector nesting offers a way for stylesheet authors to compute long selectors by nesting shorter selectors within each others.
 
-### General rule
+#### General rule
 
 For instance, the following Sass nesting:
 
@@ -319,7 +319,7 @@ To prevent such situations, we talked a lot about [the Inception rule](http://th
 
 While there are obviously a few exceptions to this rule as we’ll see in the next section, this opinion seems to be quite popular. You can read about it more in details in [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) and [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
-### Exceptions
+#### Exceptions
 
 For starters, it is allowed and even recommended to nest pseudo-classes and pseudo-elements within the initial selector.
 

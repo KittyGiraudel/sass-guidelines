@@ -1,5 +1,5 @@
 
-# Variabler
+## Variabler
 
 Variabler er essencen af ethvert programmeringssprog. De tillader os at genbruge værdier uden at være nødsaget til at kopiere dem igen og igen. Vigtigst er dog at de gør opdateringen af en værdi meget nem. Slut med søg og erstat, eller manuel gennemgang.
 
@@ -13,7 +13,7 @@ Mit råd vil være, kun at oprette variabler når det giver mening. Lad være me
 
 Basalt set, er der ikke nogen grund til at deklarere en variabel der aldrig vil blive opdateret eller kun anvendes et enkelt sted.
 
-## Scoping
+### Scoping
 
 Variabel-scoping i Sass har ændret sig med årene. Indtil for nylig har variabel-deklarationer inden for regelsæt og andre scopes været lokale, som udgangspunkt. Dog, når der allerede var en global variabel med det samme navn, så ændrede den lokale anvisning den globale variabel. Siden version 3.4, har Sass tacklet konceptet af scopes korrekt, og skaber en ny lokal variabel i stedet.
 
@@ -23,7 +23,7 @@ Følgende kodestykke forklarer konceptet bag *overskygning af variabler*.
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flaget
+### `!default` flaget
 
 Når du bygger et bibliotek, et framework, et gittersystem, eller ethvert andet stykke Sass der er tiltænkt at blive distribueret og anvendt af eksterne udviklere, bør alle konfigurations-variabler være defineret med `!default` flaget, så de kan blive overskrevet.
 
@@ -33,13 +33,13 @@ Takket være dette, så kan en udvikler definere hans egen `$baseline` variabel 
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flaget
+### `!global` flaget
 
 `!global` flaget bør kun anvendes når en global variabel fra et lokalt scope overskrives. Når en variabel på root-niveauet defineres, bør `!global` flaget udelades.
 
 {% include snippets/variables/04/index.html %}
 
-## Flere variabler eller maps
+### Flere variabler eller maps
 
 Der er fordele ved at bruge maps frem for flere, særskilte variabler. Den primære er evnen til at iterere over et map, hvilket ikke er muligt med enkeltstående variabler.
 

@@ -1,11 +1,11 @@
 
-# Tools
+## Tools
 
 Una cosa carina di un preprocessore CSS popolare come Sass è che si porta dietro un intero ecosistema di framework, plugin, librerie e strumenti. Dopo otto anni di esistenza, siamo sempre più vicini al punto in cui [qualsiasi cosa possa essere scritta in Sass è già stata scritta in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Tuttavia il mio consiglio è quello di tenere al minimo indispensabile il numero di dipendenze. Gestire dipendenze è un tipo di inferno di cui non velete fare parte. In più non c’è molto bisogno di dipendenze esterne quando parliamo di Sass.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) è il maggior [framework Sass](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) là fuori. Sviluppato da [Chris Eppstein](https://twitter.com/chriseppstein), uno dei due principali designer di Sass. Se volete la mia opinione, non credo che perderà molta popolarità nel breve periodo.
 
@@ -21,7 +21,7 @@ Comunque, non proibisco l’uso di Compass, ma non lo raccomando nemmeno, soprat
   <p>Ruby Sass sta subendo alcune ottimizzazioni, specificamente rivolte a stili con molta logica, funzioni e <em>mixin</em>_. Queste modifiche dovrebbero migliorare sensibilmente le prestazioni fino al punto in cui Compass ed altri <em>framework</em> potrebbero non rallentare più di tanto Sass.</p>
 </div>
 
-## Sistemi di griglie
+### Sistemi di griglie
 
 Non usare un sistema di griglie non è più un’opzione ora che il _Responsive Web Design_ è ovunque. Per rendere il design consistente e uniforme a tutte le dimensioni, usiamo una specie di griglia per impaginare gli elementi. Per evitare di riscrivere griglie costantemente, alcune menti brillanti hanno reso riutilizzabile il loro sistema di griglie.
 
@@ -33,7 +33,7 @@ Se non siete legati ad uno specifico sistema di griglie, sarete contenti di sape
 
 Oppure si può andare verso qualcosa di un po’ più informale, tipo [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Tutto sommato, la scelta non avrà molto impatto sul vostro modo di scrivere codice, quindi sta a voi scegliere a questo punto.
 
-## SCSS-lint
+### SCSS-lint
 
 Effettuare il _linting_ del codice è molto importante. Tipicamente seguire i suggerimenti di una guida di stile aiuta a migliorare la qualità e ridurre la quantità di errori, ma nessuno è perfetto e ci sono sempre cose da migliorare. Si potrebbe dire che fare il _linting_ del codice è importante esattamente come commentarlo.
 

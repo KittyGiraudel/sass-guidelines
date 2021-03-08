@@ -1,5 +1,5 @@
 
-# Składnia i formatowanie
+## Składnia i formatowanie
 
 Pierwszą rzeczą, jaką powinien się zająć przewodnik po stylu jest niewątpliwie to, w jaki sposób nasz kod ma wyglądać.
 
@@ -16,17 +16,17 @@ W dużym skrócie, chcemy (bezwstydnie zainspirowane przez [CSS Guidelines](http
 
 W tej sekcji nie zajmiemy się jeszcze zagadnieniem organizacji plików. Poruszone to zostanie w [dalszym miejscu](#architektura).
 
-## Ciągi znaków
+### Ciągi znaków
 
 Choć może się to wydawać nie do końca oczywistym, łańcuchy (ciągi znaków) odgrywają kluczową rolę w ekosystemach CSS i Sass. Większość wartości w CSSie jest przedstawiana jako liczby albo jako łańcuchy (zazwyczaj bez znaków cudzysłowów), dlatego też niezbędnym jest trzymanie się pewnych zasad podczas pracy z łańcuchami w Sassie.
 
-### Encoding
+#### Encoding
 
 Aby uniknąć potencjalnych problemów z kodowaniem znaków (character encoding), zalecanym jest by stosować system [UTF-8](https://pl.wikipedia.org/wiki/UTF-8) w [głównym arkuszu](#gwny-plik) z użyciem dyrektywy `@charset`. Należy się również upewnić, by był to pierwszy element w arkuszu i żeby nic wcześniej się przed nim nie znajdowało.
 
 {% include snippets/syntax/02/index.html %}
 
-### Cudzysłowia
+#### Cudzysłowia
 
 CSS nie wymaga by łańcuchy (ciągi) znaków były umieszczane między cudzysłowami, nawet te zawierające spacje. Weźmy nazwy font-family dla przykładu: dla parsera CSS nie ma znaczenia, czy otoczymy je cudzysłowami, czy też nie.
 
@@ -45,7 +45,7 @@ Języki programowania, które nie wymagają by łańcuchy znaków były umieszcz
   <p>Zgodnie ze specyfikacją CSS, dyrektywa <code>@charset</code> powinna być deklarowana w podwójnych cudzysłowach <a href="https://www.w3.org/TR/css3-syntax/#charset-rule">aby być uznana za właściwą</a>. Co ciekawe, Sass na etapie kompilacji do CSSa zajmuje się także i tą regułą. Można tym samym spokojnie korzystać ze znaków pojedynczego cudzysłowa, nawet dla <code>@charset</code>.</p>
 </div>
 
-### Ciągi jako wartości w CSSie
+#### Ciągi jako wartości w CSSie
 
 Niektóre z wartości CSS, takie jak `initial` czy `sans-serif` wymagają, by nie znajdowały się pomiędzy cudzysłowami. Deklaracja `font-family: 'sans-serif'` zostanie pominięta, bowiem CSS oczekuje identyfikatora, a nie ciągu w cudzysłowach. Z tego też powodu unikamy umieszczania tych wartości w cudzysłowach.
 
@@ -55,28 +55,28 @@ Możemy dzięki temu zauważyć różnicę pomiędzy ciągami przeznaczonymi do 
 
 Tych pierwszych nie umieszczamy w cudzysłowach, te drugie natomiast pomiędzy znakami pojedzynczych cudzysłowów (`'`).
 
-### Ciągi zawierające cudzysłowy
+#### Ciągi zawierające cudzysłowy
 
 Jeżeli ciąg zawiera jeden lub więcej cudzysłowów, można rozważyć umieszczenie całego ciągu wewnątrz znaków podwójnych cudzysłowów (`"`). Zaoszczędzi nam to korzystanie ze zbyt wielu tzw. znaków ucieczki.
 
 {% include snippets/syntax/05/index.html %}
 
-### Adresy URL
+#### Adresy URL
 
 Adresy URL także powinny być otaczane cudzysłowami, z tych samych powodów:
 
 {% include snippets/syntax/06/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [All You Ever Need to Know About Sass Interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
 * [SassyStrings](https://github.com/KittyGiraudel/SassyStrings)
 
-## Liczby
+### Liczby
 
 W Sassie, liczby są typem danych w którego skład wchodzą zarówno liczby niemianowane (bez jednostek), określenia dla długości, frekwencji, kątów i tak dalej. Pozwala to na przeprowadzanie na tych wartościach obliczeń.
 
-### Zera
+#### Zera
 
 Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość wynosi mniej niż jeden. Nigdy nie dodawajmy zer końcowych.
 
@@ -86,7 +86,7 @@ Liczby powinny zawierać zero przed znakiem dziesiętnym, jeżeli ich wartość 
   <p>W Sublime Text i innych edytorach, które wykorzystują wyrażenia regularne (regular expressions) dla wyszukiwania i zastępowania, bardzo łatwo dodaje się poprzedzające zera do (każdych, jeśli nie wszystkich) liczb zmiennoprzecinkowych. Wystarczy bowiem zamienić <code>\s+\.(\d+)</code> na <code>\ 0.$1</code>. Nie zapomnij jednak o spacji przed <code>0</code>.</p>
 </div>
 
-### Jednostki
+#### Jednostki
 
 Zajmując się długościami, wartość `0` nigdy nie powinna mieć jednostki.
 
@@ -114,13 +114,13 @@ By usunąć jednostkę z określonej wartości, dzielmy ją przez *jedną jednos
 
 Dodając jednostkę jako ciąg do liczby uzyskujemy ciąg, wykluczając jakiekolwiek dodatkowe operacje na tej wartości. Wycinając sam numer z liczby zawierającej określenie jednostki również skutkować będzie otrzymaniem ciągu. A przecież nie o to nam chodzi.
 
-### Obliczenia
+#### Obliczenia
 
 **Obliczenia najwyższego poziomu powinny być zawsze otoczone nawiasami**. Ten wymóg nie tylko drastycznie poprawia czytelność kodu, zapobiega on także niektórym rzadkim sytuacjom wymuszając na Sassie określenie wartości tego, co zawarte jest w tym nawiasie.
 
 {% include snippets/syntax/12/index.html %}
 
-### Liczby magiczne
+#### Liczby magiczne
 
 Liczby magiczne są elementem [programowania starego typu](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) i określają *nienazwaną wartość liczbową*. Innymi słowy, są to losowe liczby które *po prostu działają*™, nie mając żadnego logicznego wyjaśnienia.
 
@@ -128,18 +128,18 @@ Rzecz jasna, **liczby magiczne są plagą i powinny być unikane za wszelką cen
 
 {% include snippets/syntax/13/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Use Lengths, Not Strings](https://kittygiraudel.com/2013/09/03/use-lengths-not-strings/)
 * [Correctly Adding Unit to Number](https://css-tricks.com/snippets/sass/correctly-adding-unit-number/)
 * [Magic Numbers in CSS](https://css-tricks.com/magic-numbers-in-css/)
 * [Sassy-Math](https://github.com/at-import/sassy-math)
 
-## Barwy
+### Barwy
 
 Barwy stanowią istotny element języka, jakim jest CSS. Jak moglibyśmy się już do tego przyzwyczaić, Sass jest cennym pomocnikiem także w kwestii manipulacji barwami, głównie za zasługą jego [funkcji](https://sass-lang.com/documentation/Sass/Script/Functions.html).
 
-### Formaty barw
+#### Formaty barw
 
 Aby uczynić zagadnienie dotyczące barw najprostszym jak się tylko da, zalecałbym uszanować następujący porządek preferencji, jeśli chodzi o formaty barw:
 
@@ -161,7 +161,7 @@ Używając systemu HSL czy RGB, zawsze dodawaj pojedynczą spację po przecinku 
 
 {% include snippets/syntax/15/index.html %}
 
-### Barwy i zmienne
+#### Barwy i zmienne
 
 Używając danej barwy więcej niż jeden raz, warto ją umieścić w zmiennej o nazwie, która w sposób konkretny reprezentuje dany kolor.
 
@@ -173,7 +173,7 @@ W tym momencie można używać tej zmiennej kiedykolwiek zachodzi taka potrzeba.
 
 Robiąc to w ten sposób zapobiega się sytuacji, w której zmiana motywu doprowadzi do czegoś jak `$sass-pink: blue`.
 
-### Rozjaśnianie i przyciemnianie barw
+#### Rozjaśnianie i przyciemnianie barw
 
 Funkcje służące zarówno [`rozjaśnianiu`](https://sass-lang.com/documentation/Sass/Script/Functions.html#lighten-instance_method), jak i [`przyciemnianiu`](https://sass-lang.com/documentation/Sass/Script/Functions.html#darken-instance_method) barw manipulują jasnością koloru w przestrzeni barwy HSL poprzez dodawanie lub, odpowiednio, odejmowanie od tejże jasności. Zasadniczo są one jedynie nazwą zastępczą (aliasem) dla parametru `$lightness` funkcji [`adjust-color`](https://sass-lang.com/documentation/Sass/Script/Functions.html#adjust_color-instance_method).
 
@@ -191,7 +191,7 @@ Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, 
   <p>Funkcja <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#scale_color-instance_method"><code>scale-color</code></a> zaprojektowana została w celu skalowania właściwości bardziej płynnie, biorąc pod uwagę ich pierwotny wysoki, bądź niski, poziom. Co do zasady powinna przynosić efekt zbliżony do tego z funkcji <code>mix</code>, lecz sposób jej użycia może być nieco czytelniejszy. Czynnik odpowiadający za skalowanie nie jest jednak identyczny.</p>
 </div>
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
 * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
@@ -199,7 +199,7 @@ Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, 
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
-## Listy
+### Listy
 
 Listy są w Sassie odpowiednikiem tablic (arrays). Lista jest typem płaskiej struktury danych (w przeciwieństwie do [map](#mapy)), która stworzona została w celu przechowywania wartości różnego typu (włączając w to listy, tworząc tym samym zagnieżdżone listy).
 
@@ -217,12 +217,12 @@ Dodając nowy składnik do listy, należy zawsze korzystać z dostępnego już A
 
 {% include snippets/syntax/20/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Understanding Sass lists](https://kittygiraudel.com/2013/07/15/understanding-sass-lists/)
 * [SassyLists](https://at-import.github.io/SassyLists/)
 
-## Mapy
+### Mapy
 
 Od wersji 3.3 Sassa, autorzy arkuszy stylów mogą korzystać z map, które są niczym innym jak tablicami asocjacyjnymi (skojarzeniowymi, słownikami), haszami czy nawet obiektami JavaScriptowymi. Mapa jest takim typem danych, który powiązuje klucze (mogące być dowolnym typem danych, łącznie z mapami, choć nie jest to zalecane) z określonymi wartościami.
 
@@ -241,7 +241,7 @@ Przykład:
 
 {% include snippets/syntax/21/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Using Sass Maps](https://www.sitepoint.com/using-sass-maps/)
 * [Debugging Sass Maps](https://www.sitepoint.com/debugging-sass-maps/)
@@ -253,7 +253,7 @@ Przykład:
 * [Sassy-Maps](https://github.com/at-import/sassy-maps)
 * [Introduction to Sass Maps Usage and Examples](https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184)
 
-## Reguły dotyczące CSSa
+### Reguły dotyczące CSSa
 
 W tym miejscu, mimo że zapewne każdy je zna, warto jednak powtórzyć sobie podstawowe zasady dot. pisania zestawów reguł w CSSie (a przynajmniej te, które są przyjęte m.in. przez [CSS Guidelines](https://cssguidelin.es/#anatomy-of-a-ruleset)):
 
@@ -281,11 +281,11 @@ Przykład:
 
 {% include snippets/syntax/25/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Anatomy of a Ruleset](https://cssguidelin.es/#anatomy-of-a-ruleset)
 
-## Sortowanie deklaracji
+### Sortowanie deklaracji
 
 Nie przychodzi mi do głowy obecnie zagadnienie, co do którego zdania są tak bardzo podzielone, jak jest to w przypadku sortowania deklaracji w CSSie. W szczególności należy tu mówić o dwóch poglądach:
 
@@ -314,16 +314,16 @@ Z tego też powodu nie mam zamiaru odgórnie narzucać określonego sposobu sort
   <p><a href="https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/">Ostatnie badania</a> pokazują, że używanie <a href="https://github.com/csscomb/csscomb.js">CSS Comb</a> (które z kolei korzysta z <a href="https://github.com/csscomb/csscomb.js/blob/master/config/csscomb.json">sortowania wg. typu</a>) do porządkowania deklaracji w CSSie prowadzi do zmniejszania średniej wagi pliku kompresowanego przez Gzip o ok. 2.7%, podczas gdy sortowanie alfabetyczne przynosi rezultat w postaci 1.3%.</p>
 </div>
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [On Declaration Sorting](https://meiert.com/en/blog/20140924/on-declaration-sorting/)
 * [Reduce File Size With CSS Sorting](https://web.archive.org/web/20190618180712/http://peteschuster.com/2014/12/reduce-file-size-css-sorting/)
 
-## Zagnieżdżanie selektorów
+### Zagnieżdżanie selektorów
 
 Jedną z cech Sassa, która jest szczególnie nadużywana przez wielu deweloperów, jest niewątpliwie *zagnieżdżanie selektorów*. Rozwiązanie to pozwala autorom arkuszy stylów na używanie z długich, wieloczłonowych selektorów rozbijając je na krótsze i zagnieżdżanie ich.
 
-### Generalna zasada
+#### Generalna zasada
 
 Na przykład, poniższe zagnieżdżenie w Sassie:
 
@@ -353,7 +353,7 @@ To stwierdzenie staje się tym bardziej prawdziwe, im dłuże stają się selekt
 
 Aby zapobiec tego typu sytuacjom, **unikamy zagnieżdżania selektorów jeśli to jest możliwe**. Niemniej jednak są pewne wyjątki od tej zasady.
 
-### Wyjątki
+#### Wyjątki
 
 Przede wszystkim, dozwolone jest – a nawet rekomendowane – zagnieżdżanie pseudo-klas i pseudo-elementów wewnątrz selektorów.
 
@@ -379,7 +379,7 @@ Pozwoli nam to zmodyfikować poprzedni przykład, który teraz będzie wygląda�
 
 Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz się pewien zagnieżdżania selektorów, korzystaj z tego. Pamiętaj jednak by cały zespół, z którym pracujesz, się temu nie sprzeciwiał.
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/)
 * [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)

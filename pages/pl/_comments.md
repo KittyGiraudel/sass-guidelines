@@ -1,5 +1,5 @@
 
-# Komentarze
+## Komentarze
 
 CSS jest dosyć specyficznym językiem, pełnym haków i dziwactw. Z tego też powodu, pisany w nim kod powinien być należycie komentowany, zwłaszcza jeśli zachodzi przypuszczenie, że ktoś będzie czytał i aktualizował ten kod w przyszłości. Warto zapobiec sytuacji, w której czytelnik znajdzie się w sytuacji typu *ja-tego-nie-pisałem-o-matko-dlaczego*.
 
@@ -14,7 +14,7 @@ Choć CSS może się zdawać prosty, istnieje wiele sytuacji w których warto u�
 
 Prawdopodobnie pominąłem tu wiele innych ważnych sytuacji. Pisanie komentarzy nie zajmuje jednak tak dużo czasu, jakby to się mogło wydawać, dlatego też warto to robić w trakcie pisania kodu. Powrót do niego później, by dodać jakiś komentarz jest nie tylko pomysłem nierealistycznym, ale jest to także dosyć męczące.
 
-## Pisanie komentarzy
+### Pisanie komentarzy
 
 Najlepiej jest, gdy *każdy* zestaw reguł jest poprzedzony komentarzem, napisanym w stylu komentarzy z języka C, który objaśnia znaczenie danego bloku kodu. Komentarz ten także może dotyczyć konkretnych reguł. Dla przykładu:
 
@@ -26,11 +26,11 @@ Komentując rzeczy ściśle związane z Sassem należy używać jednoliniowych k
 
 {% include snippets/comments/02/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [CSS Guidelines’ Commenting section](https://cssguidelin.es/#commenting)
 
-## Dokumentowanie
+### Dokumentowanie
 
 Każda zmienna, funkcja, mixin czy placeholder, które mają zostać wielokrotnie użyte w całej bazie kodu, powinne być udokumentowane jako elementy globalnego API z użyciem [SassDoc](http://sassdoc.com).
 
@@ -51,6 +51,6 @@ Przykład mixinu szczegółowo udokumentowanego z użyciem SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Dalsze informacje
+**Dalsze informacje:**
 
 * [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

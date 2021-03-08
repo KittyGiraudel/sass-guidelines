@@ -1,9 +1,9 @@
 
-# Responsive Webdesign und Breakpoints
+## Responsive Webdesign und Breakpoints
 
 Ich denke nicht das wir groß über Responsive Webdesign sprechen müssen, wo es mittlerweile überall zu finden ist. Dennoch fragst du dich bestimmt, *warum gibt es eine RWD Sektion in einem Sass Styleguide*? Eigentlich gibt es ein paar Dinge die getan werden können um die Benutzung von Breakpoints einfach zu machen, deshalb dachte ich es wäre garkeine schlechte Idee sie hier aufzulisten.
 
-## Breakpoints benennen
+### Breakpoints benennen
 
 Ich denke ich kann mit Sicherheit sagen dass Media Queries nicht auf ein bestimmtes Endgerät ausgerichtet sein sollten. Zum Beispiel ist es definitiv eine schlechte Idee, zu versuchen speziell iPads oder Blackberry Smartphones zu erreichen. Media Queries sollten sich um Bildschirmgrößen kümmern, solange ein neuer Media Query oder Designbreak übernimmt.
 
@@ -19,7 +19,7 @@ An diesem Punkt wird [jede Namenskonvention](https://css-tricks.com/naming-media
   <p>Das vorige Beispiel verwendet verschachtelte Maps um Breakpoints zu definieren, wie auch immer, das hängt ganz davon ab was für eine Art von Breakpointmanager du verwendest. Du könntest für eine bessere Flexibilität genauso gut Strings (z.B. <code>'(min-width: 800px)'</code>) anstatt Maps verwenden.</p>
 </div>
 
-## Breakpoint-Manager
+### Breakpoint-Manager
 
 Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg finden sie in deinen Media Queries anzuwenden. Es gibt eine Menge Wege, doch ich muss sagen das ich ein großer Fan von Breakpoint-Maps mit einer Getter-Funktion bin. Es ist einfach und effizient.
 
@@ -30,7 +30,7 @@ Sobald du deine Breakpoints so benannt hast wie du möchtest, musst du einen Weg
   <p>Falls du mehr über Media-Queries in Sass erfahren möchtest, haben <a href="https://www.sitepoint.com/managing-responsive-breakpoints-sass/">SitePoint</a> und <a href="https://css-tricks.com/approaches-media-queries-sass/">CSS-Tricks</a> gute Artikel dazu.</p>
 </div>
 
-## Media Queries verwenden
+### Media Queries verwenden
 
 Noch garnicht lange her, gab es eine ziemlich hitzige Diskussion darüber wo man Media Queries deklarieren soll: gehören sie innerhalb eines Selektors (wie Sass es möglich macht) oder strikt getrennt? Ich muss sagen dass ich ein leidenschaftlicher Verfechter des *Media-Queries-in-Selektor* Systems bin, da ich denke dass es gut mit der Idee von *Komponenten* einher geht.
 

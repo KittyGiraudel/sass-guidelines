@@ -1,7 +1,7 @@
 
-# Einleitung
+## Einleitung
 
-## Warum ein Styleguide
+### Warum ein Styleguide
 
 Ein Styleguide ist nicht nur einfach ein schönes Dokument um darzustellen wie dein Code idealerweise aussehen sollte, sondern er ist essenziell für das Projekt, um zu beschreiben weshalb und wie Code geschrieben werden sollte. Zwar sieht es in kleinen Projekten etwas nach Overkill aus, zahlt sich am Ende aber in Sachen Skalierbarkeit, Wartbarkeit und einer sauberen Codebasis aus.
 
@@ -20,7 +20,7 @@ Deshalb gilt, je mehr Entwickler an einem Projekt arbeiten, desto wichtiger sind
   </ul>
 </blockquote>
 
-## Disclaimer
+### Disclaimer
 
 Zu aller erst: **das ist kein CSS Styleguide**. Hier werden keine Namenskonventionen für CSS Klassen, Modulare Patterns oder die Frage der ID's im CSS diskutiert. Diese Guidelines fokussieren sich lediglich auf Sass spezifischen Inhalt.
 
@@ -28,7 +28,7 @@ Dazu ist dieser Styleguide mein eigener und von daher **stark meinungsbasiert**.
 
 Natürlich ist das hier nicht der einzige Weg das Thema anzugehen und es mag auch garnicht auf dein Projekt passen. Deshalb fühl dich frei einfach die Inhalte die dir am besten passen zu übernehmen.
 
-## Grundprinzipien
+### Grundprinzipien
 
 Am Ende des Tages, möchte ich lediglich dass du eine Sache für dich mitnimmst: dass [**Sass so einfach wie möglich gehalten werden sollte**](https://www.sitepoint.com/keep-sass-simple/).
 
@@ -40,7 +40,7 @@ Manchmal ist es besser sich etwas im Code zu wiederholen um es wartbar zu halten
 
 Um noch einmal [Harry Roberts](https://csswizardry.com) zu zitieren, **Pragmatimus geht vor Perfektion**. Ab einem gewissen Punkt wirst du dich wahrscheinlich selbst dabei erwischen wie du diese Regeln ignorierst. Wenn es Sinn macht und sich richtig anfühlt, dann tu es. Code ist ein Mittel zum Zweck, kein Ende.
 
-## Erweiterung dieser Guidelines
+### Erweiterung dieser Guidelines
 
 Ein großer Teil dieses Styleguide ist stark meinungsbasiert. Ich lese und schreibe Sass nun seit einigen Jahren, bis zu dem Punkt wo ich eine Menge Prinzipien übers Schreiben von sauberen Stylesheets habe. Ich verstehe natürlich, dass es wohlmöglich einigen nicht zufrieden stellt weder passen wird. Und das ist absolut normal.
 

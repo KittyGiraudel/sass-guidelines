@@ -1,5 +1,5 @@
 
-# Variablen
+## Variablen
 
 Variablen sind die Essenz jeder Programmiersprache. Sie erlauben es Werte wiederzuverwenden ohne sie jedesmal erneut kopieren zu müssen. Der wichtigste Punkt ist, dass sie es wirklich einfach machen einen Wert zu aktualisieren. Kein manuelles durchsuchen mehr.
 
@@ -13,7 +13,7 @@ Von daher ist mein Ratschlag Variablen nur dann zu erzeugen, wenn es auch wirkli
 
 Grundsätzlich macht es keinen Sinn eine Variable zu erstellen die niemals aktualisiert oder nur ein einziges Mal verwendet wird.
 
-## Scoping
+### Scoping
 
 Der Scope von Variablen in Sass hat sich über die Jahre verändert. Bis vor kurzem waren Deklarationen innerhalb des Regelwerk und andere Scopes standardmäßig lokal. Wenn es jedoch eine globale Variable mit demselben Namen gab, hat die lokale Variable die globale überschrieben. Seit Version 3.4 allerdings, greift Sass das Konzept von Scopes korrekt und erzeugt stattdessen eine neue lokale Variable.
 
@@ -23,7 +23,7 @@ Folgendes Code-Snippet erklärt das Konzept der *Variablenbeschattung*:
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flag
+### `!default` flag
 
 Wenn eine Library, ein Framework, ein Gridsystem oder irgendwas anders in Sass verbreitet, und von externen Entwicklern benutzt wird, sollten alle Konfigurationsvariablen als `!default` markiert werden, sodass sie auch überschrieben werden können.
 
@@ -33,13 +33,13 @@ Dadurch ist es einem Entwicker möglich, eigene `$baseline` Variable *vor* dem i
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+### `!global` flag
 
 Das `!global` Flag sollte nur benutzt werden wenn eine globale Variable vom lokalen Scope überschrieben wird. Wenn eine Variable auf dem Root-Level definiert wird, sollte das `!global` Flag weggelassen werden.
 
 {% include snippets/variables/04/index.html %}
 
-## Mehrere Variablen oder Maps
+### Mehrere Variablen oder Maps
 
 Es gibt Vorteile Maps anstatt mehreren eindeutigen Variablen zu verwenden. Der größte ist, die Fähigkeit über eine Map zu iterieren, was mit eindeutigen Variablen nicht möglich ist.
 

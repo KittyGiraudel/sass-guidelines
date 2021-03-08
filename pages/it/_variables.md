@@ -1,5 +1,5 @@
 
-# Variables
+## Variables
 
 Le variabili sono l’essenza di ogni linguaggio di programmazione. Ci permettono di riutilizzare un valore senza doverlo copiare e incollare ogni volta. Ancora più importante, le variabili ci permettono di aggiornare un valore molto facilmente. Ci permettono di dire addio al cerca e sostituisci o alla sostituzione manuale.
 
@@ -13,7 +13,7 @@ Il mio consiglio è di creare variabili solo quando ha senso farlo. Non iniziali
 
 In pratica, non c’è nessun motivo di dichiarare una variabile che non verrà mai aggiornata o che verrà usata solo in un posto.
 
-## Scoping
+### Scoping
 
 Lo _Scoping_ in Sass è cambiato molto durante gli anni. Fino a poco tempo fa, la dichiarazione di una variabile all’interno di set di regole e altri _scope_ era considerata locale di _default_. Tuttavia quando esisteva già una variabile globale con lo stesso nome, l’assegnazione della variabile locale avrebbe sovrascritto quella globale. Dalla versione 3.4, Sass implementa il concetto di _scope_ e crea una nuova variabile locale invece di sovrascrivere quella globale.
 
@@ -23,7 +23,7 @@ Il seguente frammento di codice spiega il concetto di *oscuramento di variabili*
 
 {% include snippets/variables/01/index.html %}
 
-## `!default` flag
+### `!default` flag
 
 Quando si costruisce una libreria, un framework, un sistema di griglie o un qualsiasi pezzo in Sass che si vuole poi distribuire e che sarà utilizzato da altri sviluppatori, tutte le variabili di configurazione devono essere contrassegnate con il _flag_ `!default`, in modo da poter essere sovrascritte.
 
@@ -33,13 +33,13 @@ Grazie a questo, uno sviluppatore può definire la propria variabile `$baseline`
 
 {% include snippets/variables/03/index.html %}
 
-## `!global` flag
+### `!global` flag
 
 Il _flag_ `!global` dovrebbe essere usato solamente quando si sovrascrive una variabile globale da uno _scope_ locale. Quando si definisce una variabile fuori da un selettore, un mixin o una funzione, il flag `!global` dovrebbe essere omesso.
 
 {% include snippets/variables/04/index.html %}
 
-## Variabili multiple o mappe
+### Variabili multiple o mappe
 
 Ci sono molti vantaggi ad usare le mappe invece che variabili distinte. Il principale è poter iterare in una mappa, cosa impossibile con variabili separate.
 

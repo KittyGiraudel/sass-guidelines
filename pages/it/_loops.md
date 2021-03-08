@@ -1,11 +1,11 @@
 
-# Iteratori
+## Iteratori
 
 Dato che Sass mette a disposizione strutture di dati complesse come [liste](#liste) e [mappe](#mappe), non c’è da sorprendersi che ci siano strumenti per iterare all’interno di queste entità.
 
 La presenza di iteratori implica però la presenza di una logica moderatamente complessa, che probabilmente non appartiene a Sass. Prima di usare un iteratore, bisogna essere sicuri che questo abbia un senso, e che risolva effettivamente un problema.
 
-## Each
+### Each
 
 L’iteratore `@each` è il più usato dei tre tipi di iteratori messi a disposizione da Sass. Offre una API chiara per iterare all’interno di una lista o una mappa.
 
@@ -20,7 +20,7 @@ C’è poi bisogno di rispettare queste linee guida per mantenere la leggibilit�
 * Sempre una riga vuota prima di  `@each`;
 * Sempre una riga vuota dopo la chiusura della parentesi graffa (`}`) a meno che la linea seguente non sia un’altra chiusura di parentesi graffa (`}`).
 
-## For
+### For
 
 L’iteratore `@for` può essere utile quando viene combinato con la pseudo-classe CSS `:nth-*`. Tranne per questo scenario, è preferibile usare un iteratore `@each` se c’è da iterare all’interno di qualcosa.
 
@@ -33,6 +33,6 @@ Anche in questo caso è meglio assicurarsi di rispettare una serie di linee guid
 * Sempre una riga vuota prima di `@for`;
 * Sempre una riga vuota dopo la chiusura della parentesi graffa (`}`) a meno che la linea seguente non sia un’altra chiusura di parentesi graffa (`}`).
 
-## While
+### While
 
 L’iteratore `@while` non ha nessun caso d’uso in un vero progetto Sass, specialmente per il fatto che non c’è nessun modo per fermare l’iteratore dall’interno. **Non usatelo**.

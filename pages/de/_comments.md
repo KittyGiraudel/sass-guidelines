@@ -1,5 +1,5 @@
 
-# Kommentieren
+## Kommentieren
 
 CSS ist eine knifflige Sprache, voller Hacks und Seltsamkeiten. Deshalb sollte es viel kommentiert werden, besonders wenn du oder jemand anders die Absicht hat deinen Code nach 6 Monaten oder 1 Jahr nochmal zu lesen oder updaten. Lass dich oder jemand anderen niemals in die Position *Ich-hab-das-nicht-geschrieben-Oh-mein-Gott-warum* kommen.
 
@@ -14,7 +14,7 @@ So einfach CSS sein kann, es ist immer Raum für Kommentare. Diese könnten unte
 
 Und wahrscheinlich habe ich noch eine Menge weiterer Gründe vergessen warum man kommentieren sollte. Kommentieren verbraucht nur sehr wenig Zeit wenn es sofort im Anschluss getan wird, deshalb tu es zur richtigen Zeit. Im nachhinein zurück in deinen Code zu gehen um Kommentare hinzuzufügen ist nicht nur absolut unrealistisch, sondern auch extrem nervig.
 
-## Kommentare schreiben
+### Kommentare schreiben
 
 Idealerweise, ist *jedes* CSS Regelwerk durch einen im C-Stil vorangestellten Kommentar, welcher erklärt was der jeweilige CSS Block soll, versehen. Der Kommentar beinhaltet ebenfalls eine nummerierte Liste an Erklärung zu bestimmten Teilen des Regelwerk. Zum Beispiel:
 
@@ -28,7 +28,7 @@ Wenn du einen Sass spezifischen Bereich kommentierst, benutze Sass Inline-Kommen
 
 Beachte dass dieser Weg ebenfalls von den CSS Guidelines in der [Kommentier-Sektion](https://cssguidelin.es/#commenting) unterstützt ist.
 
-## Dokumentation
+### Dokumentation
 
 Jede Variable, Funktion, Mixin und Platzhalter welches nicht vorgesehen ist innerhalb der Codebasis wiederverwendet zu werden, sollte via [SassDoc](http://sassdoc.com) als Teil der globalen API dokumentiert werden.
 
@@ -49,6 +49,6 @@ Beispiel eines umfangreich dokumentiertem Mixin über SassDoc:
 
 {% include snippets/comments/04/index.html %}
 
-###### Weitere Informationen
+**Weitere Informationen:**
 
 * [SassDoc: a Documentation Tool for Sass](https://www.sitepoint.com/sassdoc-documentation-tool-sass/)

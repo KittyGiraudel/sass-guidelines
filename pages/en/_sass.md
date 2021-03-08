@@ -1,5 +1,5 @@
 
-# About Sass
+## About Sass
 
 This is how [Sass](https://sass-lang.com) describes itself in its [documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html):
 
@@ -13,7 +13,7 @@ The point is not to turn CSS into a fully featured programming language; Sass on
 
 That being said, there are many ways to use these features. Some good, some bad, some unusual. These guidelines are meant to give you a consistent and documented approach to writing Sass code.
 
-## Ruby Sass or LibSass
+### Ruby Sass or LibSass
 
 [Sass’ first commit](https://github.com/hcatlin/sass/commit/fa5048ba405619273e474a50400c7243fbff54fe) goes back as far as late 2006, more than 10 years ago. Needless to say it has come a long way since then. Initially developed in Ruby, varied ports popped up here and there. The most successful one, [LibSass](https://webdesign.tutsplus.com/articles/getting-to-know-libsass--cms-23114) (written in C/C++) is now close to being fully compatible with the original Ruby version.
 
@@ -23,7 +23,7 @@ Coming back to choosing your compiler. Actually, it all depends on your project.
 
 On non-Ruby projects that need a workflow integration, LibSass is probably a better idea since it is mostly dedicated to being wrapped. So if you want to use, let’s say Node.js, [node-sass](https://github.com/sass/node-sass) is all chosen.
 
-## Sass or SCSS
+### Sass or SCSS
 
 There is quite a lot of confusion regarding the semantics of the name *Sass*, and for good reason: Sass means both the preprocessor and its own syntax. Not very convenient, is it?
 
@@ -35,7 +35,7 @@ Sass’ whitespace-sensitive syntax relies on indentation to get rid of braces, 
 
 I, myself, prefer SCSS over Sass because it is closer to CSS and friendlier to most developers. Because of that, SCSS is the default syntax throughout these guidelines. You can switch to Sass indented syntax in the <button type="button" data-a11y-dialog-show="options-panel" class="link-like">side panel</button>.
 
-## Other preprocessors
+### Other preprocessors
 
 Sass is a preprocessor among others. Its most serious competitor has to be [Less](http://lesscss.org/), a Node.js based preprocessor that has gotten quite popular thanks to the famous CSS framework [Bootstrap](https://getbootstrap.com/) using it (until version 4). There is also [Stylus](https://stylus-lang.com/), a very permissive and flexible preprocessor however slightly harder to use and with a smaller community.
 

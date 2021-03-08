@@ -1,5 +1,5 @@
 
-# Contribuir
+## Contribuir
 
 Esta guía de Sass, es un proyecto abierto que mantengo en mi tiempo libre. Sobra decir que lleva una cantidad enorme de trabajo mantenerlo todo vigente, documentado y relevante. Afortunadamente, cuento con la ayuda de muchos colaboradores que hacen un gran trabajo manteniendo las docenas de <a href="#options-panel" class="link-like">traducciones diferentes</a> que hay hoy en día. ¡Asegúrate de darles las gracias!
 

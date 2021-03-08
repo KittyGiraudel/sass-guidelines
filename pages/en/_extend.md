@@ -1,5 +1,5 @@
 
-# Extend
+## Extend
 
 The `@extend` directive is a powerful feature that is frequently misunderstood. In general, it makes it possible to tell Sass to style a selector A as though it also matched selector B. Needless to say, this can be a valuable ally when writing modular CSS.
 
@@ -29,7 +29,7 @@ There are many scenarios where extending selectors are helpful and worthwhile. A
   <p>That being said, if you cannot use Gzip (or any equivalent) then switching to a <code>@extend</code> approach might be valuable, especially if stylesheet weight is your performance bottleneck.</p>
 </div>
 
-## Extend and media queries
+### Extend and media queries
 
 You should only extend selectors within the same media scope (`@media` directive). Think of a media query as another constraint.
 

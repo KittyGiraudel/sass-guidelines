@@ -1,5 +1,5 @@
 
-# Architecture
+## Architecture
 
 La conception de l’architecture d’un projet CSS est probablement l’une des étapes les plus complexes dans la vie d’un projet. Conserver la cohérence de l’architecture et son sens est encore plus difficile.
 
@@ -15,7 +15,7 @@ Personnellement j’utilise une approche assez similaire à [SMACSS](http://smac
   <p>L’expérience m’a appris que l’architecture était la plupart du temps très spécifique au projet. Sentez-vous libre de rejeter complètement ou d’adapter la solution proposée —&nbsp;votre système doit répondre à vos besoins spécifiques.</p>
 </div>
 
-## Composants
+### Composants
 
 Il y a une différence essentielle entre un projet *qui marche* et un *bon* projet. Encore une fois, CSS est un langage confus <sup>[citation requise]</sup>. Moins nous avons de CSS et mieux nous nous portons. Nous ne voulons pas avoir à gérer des mégaoctets de code CSS. Pour conserver des feuilles de styles concises et efficaces —&nbsp;ce ne sera pas une surprise pour vous&nbsp;— il est généralement utile de voir l’interface comme un ensemble de composants.
 
@@ -29,7 +29,7 @@ Par exemple, un formulaire de recherche devrait être traité comme un composant
 
 La plupart des éléments constituant une interface peuvent être pensés comme des composants et je recommande de se tenir à ce paradigme. Non seulement cela réduira le CSS nécessaire à un projet, mais encore ce sera bien plus facile à maintenir qu’un code chaotique et confus.
 
-## Anatomie d’un Composant
+### Anatomie d’un Composant
 
 Idéalement, les composants devraient exister dans leur propre fichier (dans le dossier `components/`, comme décrit dans la section dédiée [au pattern 7-1](#le-pattern-7-1)), par exemple `components/_button.scss`). Les styles décrits dans chaque composant devraient uniquement traiter :
 
@@ -49,7 +49,7 @@ Voilà un exemple de composant bouton :
   <p>Merci à <a href="https://twitter.com/davidkpiano">David Khourshid</a> pour son aide et son expertise dans cette section.</p>
 </div>
 
-## Le pattern 7-1
+### Le pattern 7-1
 
 Revenons à l’architecture. J’utilise habituellement ce que j’appelle le *pattern 7-1*&nbsp;: 7&nbsp;dossiers, 1&nbsp;fichier. Tous vos partiels regroupés dans 7&nbsp;dossiers différents et un fichier simple à la racine (généralement appelé `main.scss`) qui les importe tous pour les compiler dans une feuille de style CSS.
 
@@ -79,7 +79,7 @@ Idéalement, nous pouvons proposer quelque chose comme ceci&nbsp;:
   <p>Les fichiers suivent les conventions de nommage décrites précédemment&nbsp;: minuscules et utilisation du trait d’union.</p>
 </div>
 
-### Dossier base
+#### Dossier base
 
 Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boilerplate*) du projet. On pourrait y trouver par exemple le fichier de reset, quelques règles typographiques, et probablement une feuille de style définissant quelques styles standard pour les éléments HTML les plus employés (que j’ai l’habitude d’appeler `_base.scss`).
 
@@ -91,7 +91,7 @@ Le dossier `base/` contient ce que nous pourrions appeler le code standard (*boi
   <p>Si votre projet utilise <em>beaucoup</em> d’animations CSS, vous pouvez envisager d’ajouter un fichier <code>_animations.scss</code> contenant les définitions de <code>@keyframes</code> pour toutes vos animations. Si vous n’utilisez les animations que de façon sporadique, laissez leur déclaration près des sélecteurs qui les emploient.</p>
 </div>
  
-### Dossier layout
+#### Dossier layout
 
 Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de l’application. Ce dossier pourrait intégrer des feuilles de style pour les principales parties du site (header, footer, navigation, sidebar…), pour le système de grille ou même les styles CSS pour tous les formulaires.
 
@@ -106,7 +106,7 @@ Le dossier `layout/` contient tout ce qui concerne la mise en page du site ou de
   <p>Le dossier <code>layout/</code> pourrait aussi être appelé <code>partiels/</code>, selon ce que vous préférez.</p>
 </div>
 
-### Dossier composants
+#### Dossier composants
 
 Pour les plus petits composants, il y a le dossier `components/`. Alors que `layout/` est *macro* (c’est-à-dire qu’il définit l’*armature* globale), `components/` est plus centré sur les widgets.  Il contient toutes sortes de modules spécifiques tels qu’un slider, un loader, un widget et toutes ces sortes de choses. Il y a en général de nombreux fichiers dans `components/` car l’application tout entière devrait être essentiellement constituée de petits modules.
 
@@ -118,7 +118,7 @@ Pour les plus petits composants, il y a le dossier `components/`. Alors que `lay
   <p>Le dossier <code>components/</code> pourrait également être appelé <code>modules/</code>, selon ce que vous préférez.</p>
 </div>
 
-### Dossier Pages
+#### Dossier Pages
 
 Si vous avez des styles spécifiques à certaines pages, il est préférable de les inclure à l’intérieur d’un dossier `pages/` dans un fichier portant le nom de la page. Par exemple, il n’est pas rare d’avoir des styles très spécifiques pour la page d’accueil, d’où la nécessité d’un fichier `_home.scss` dans `pages/`.
 
@@ -129,7 +129,7 @@ Si vous avez des styles spécifiques à certaines pages, il est préférable de 
   <p>Selon votre processus de déploiement, ces fichiers peuvent être appelés individuellement pour éviter de les mélanger aux autres dans la feuille de style finale. Cela dépend vraiment de vous.</p>
 </div>
 
-### Dossier Thèmes
+#### Dossier Thèmes
 
 Dans des sites ou applications de grande envergure, il n’est pas rare d’avoir plusieurs thèmes. Il y a certainement bien des façons de traiter les thèmes, mais personnellement j’aime les regrouper dans un dossier `themes/`.
 
@@ -140,7 +140,7 @@ Dans des sites ou applications de grande envergure, il n’est pas rare d’avoi
   <p>On est ici dans des considérations très spécifiques aux projets, et il est probable que ce dossier n’existera pas dans bien des cas.</p>
 </div>
 
-### Dossier d’Abstractions
+#### Dossier d’Abstractions
 
 Le dossier `abstracts/` regroupe les outils et helpers Sass utilisés à travers le projet. Toutes les variables globales, les fonctions, les mixins et les placeholders devraient se retrouver dans ce dossier.
 
@@ -155,7 +155,7 @@ La règle générale concernant ce dossier est qu’il ne devrait pas retourner 
   <p>Le dossier <code>abstracts/</code> pourrait également être appelé <code>utilities/</code> ou <code>helpers/</code>, au choix.</p>
 </div>
 
-### Dossier vendors
+#### Dossier vendors
 
 Et *last but not least*, la plupart des projets comportent un dossier `vendors/` qui regroupe tous les fichiers CSS provenant de bibliothèques et frameworks externes —&nbsp;Normalize, Bootstrap, jQueryUI, FancyCarouselSliderjQueryPowered, etc. Le fait de les mettre ainsi de côté dans un dossier séparé est une bonne façon d’indiquer qu’ils ne sont pas de vous et ne relèvent pas de votre responsabilité.
 
@@ -168,7 +168,7 @@ Si vous devez remplacer une section d’un fichier *vendor*, je recommande de cr
 
 Par exemple, `vendors-extensions/_boostrap.scss` serait un fichier contenant toutes les règles CSS qui re-déclarent le CSS par défaut de Bootstrap. Vous éviterez ainsi de modifier les fichiers *vendors* eux-mêmes, ce qui n’est pas conseillé.
 
-### Fichier principal
+#### Fichier principal
 
 Le fichier principal (généralement appelé `main.scss`) devrait être le seul fichier de toute la base à ne pas commencer par un underscore (`_`). Ce fichier ne devrait rien contenir d’autre que les `@import` et des commentaires.
 
@@ -207,7 +207,7 @@ Il existe une autre façon d’importer les partiels, que je considère égaleme
   <p>Ceci dit, je ne la recommande pas car elle importe les fichiers par ordre alphabétique ce qui n’est pas souhaitable en général, surtout s’agissant d’un langage dans lequel l’ordre des sources est essentiel.</p>
 </div>
 
-## À propos du “globbing”
+### À propos du “globbing”
 
 En informatique, les “glob patterns” spécifient des collections de noms de fichiers contenant des caractères dits “joker”, tels que `*.scss`. De manière générale, globbing signifie déterminer un ensemble de fichiers à partir d’une expression plutôt que via une liste de noms de fichier. Quand il s’agit de Sass, cela signifie importer des fichiers individuels dans le [fichier principal](#fichier-principal) avec un pattern plutôt qu’en les listant un par un. Cela donnerait un fichier principal comme celui-ci :
 
@@ -219,7 +219,7 @@ Ceci étant dit, dans une architecture strictement basée sur les composants où
 
 Avec Ruby Sass, il existe une Gem Ruby appelée [sass-globbing](https://github.com/chriseppstein/sass-globbing) qui autorise ce comportement. Avec node-sass, on peut s’appuyer sur Node.js ou l’outil gérant la compilation des feuilles de styles (Gulp, Grunt, etc.).
 
-## Fichier de la honte
+### Fichier de la honte
 
 Il existe un concept intéressant, popularisé par [Harry Roberts](https://csswizardry.com), [Dave Rupert](https://daverupert.com) et [Chris Coyier](https://css-tricks.com) qui consiste à ranger toutes les déclarations CSS, les hacks et tout ce dont on n’est pas vraiment fier dans un [fichier de la honte](https://csswizardry.com/2013/04/shame-css-full-net-interview/). Ce fichier, pathétiquement dénommé `_shame.scss`, est importé après tous les autres fichiers, à la toute fin de la feuille de style.
 

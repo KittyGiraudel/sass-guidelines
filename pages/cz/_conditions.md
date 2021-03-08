@@ -1,5 +1,5 @@
 
-# Podmíněné příkazy
+## Podmíněné příkazy
 
 Pravděpodobně již víte, že Sass poskytuje podmíněné příkazy pomocí `@if` a `@else` direktiv. V běžných stylech nejsou podmíněné příkazy potřeba, ledaže máte střední až velmi komplexní řešení. Ve skutečnosti existují hlavně pro knihovny a frameworky.
 

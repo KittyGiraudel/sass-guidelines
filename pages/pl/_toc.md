@@ -1,5 +1,5 @@
 
-# Spis treści
+## Spis treści
 
 * Toc
 {:toc}

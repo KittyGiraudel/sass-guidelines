@@ -1,11 +1,11 @@
 
-# Værktøjer
+## Værktøjer
 
 Dét der er rart ved en så populær CSS preprocessor som Sass er, at den kommer med et helt økosystem af frameworks, plugins, biblioteker og værktøjer. Efter 8 års eksistens er vi ved at komme tættere og tættere på et punkt hvor [alt der kan skrives i Sass er blevet skrevet i Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Mit råd er dog, at sænke antallet af dependencies til det absolut nødvendige. At håndtere dependencies er en form for helvede du ikke ønsker at være en del af. Plus, der er begrænset til intet behov for eksterne dependencies når det kommer til Sass.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) er det primære Sass framework derude. Udviklet af [Chris Eppstein](https://twitter.com/chriseppstein), en af hoved-designerne bag Sass, og jeg ser det ikke tabe popularitet dramatisk det næste stykke tid, hvis du spørger mig.
 
@@ -21,14 +21,14 @@ Under alle omstændigheder, så afviser jeg ikke brugen af Compass selvom jeg he
   <p>Ruby Sass er p.t. ved at gennemgå nogle ekstraordinære optimering, som er specifikt målrettet mod logik-tunge styles med mange funktioner og mixins. De skulle forbedre effektiviteten dramatisk til et punkt hvor Compass og andre frameworks muligvis ikke længere vil sløve Sass.</p>
 </div>
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Compass](http://compass-style.org/)
 * [Sass Frameworks: Compass or Bourbon](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)
 * [Why I don't use Compass anymore](https://www.sitepoint.com/dont-use-compass-anymore/)
 * [Is Compass to Sass with jQuery is to JavaScript?](https://www.sitepoint.com/compass-sass-jquery-javascript/)
 
-## Gitter-systemer
+### Gitter-systemer
 
 At undlade at anvende et gitter-system er ikke længere en mulighed, nu hvor Responsivt Web Design er overalt. For at få designs til at se konsistente og solide ud på tværs af alle skærmstørrelser, anvender vi en eller anden form for gitter til at layoute elementer. For at undgå at skulle kode dette gitter igen og igen, så har nogle geniale folk gjort deres genbrugelige.
 
@@ -40,7 +40,7 @@ Hvis du ikke er tilknyttet til et specifikt gitter-system, så vil det nok glæd
 
 Alternativt kan du gå over til noget mere nede på jorden, såsom [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Når alt kommer til alt, vil dit valg ikke have den store indvirkning på din kodestil, så det er faktisk mest op til dig.
 
-###### Videre læsning
+**Videre læsning:**
 
 * [Singularity](https://github.com/at-import/Singularity)
 * [Singularity: Grids Without Limits](https://fourword.fourkitchens.com/article/singularity-grids-without-limits)
@@ -53,7 +53,7 @@ Alternativt kan du gå over til noget mere nede på jorden, såsom [csswizardry-
 * [How to Use Susy: Superpowered Sass Grids](https://webdesign.tutsplus.com/tutorials/how-to-use-susy-superpowered-sass-grids--cms-22744)
 * [A Creative Grid System with Sass and calc()](https://www.sitepoint.com/creative-grid-system-sass-calc/)
 
-## SCSS-lint
+### SCSS-lint
 
 Kode-linting er meget vigtigt. Ved at følge retningslinjer fra en styleguide, vil mængden af kodekvalitetsfejl normalt blive reduceret, men ingen er perfekt, og der er altid ting der kan forbedres. Derfor kan man sige, at dét linte kode er lige så vigtigt som at kommentere den.
 
@@ -68,7 +68,7 @@ Heldigvis er anbefalinger for SCSS-lint meget lig de der beskrives i dette dokum
   <p>Dertil, så hvis du er på jagt efter et smart program der virker både med SCSS-lint og lignende, så arbejder folkene hos <a href="https://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) på <a href="https://houndci.com/">Hound</a>.</p>
 </div>
 
-###### Videre læsning
+**Videre læsning:**
 
 * [SCSS-lint](https://github.com/causes/scss-lint)
 * [Clean Up your Sass with SCSS-lint](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/)

@@ -1,11 +1,11 @@
 
-# 工具
+## 工具
 
 和 Sass 一样受欢迎的 CSS 预处理器的优秀之处就在于，它提供了包括框架、插件、库和工具在内的整套开发环境。Sass 诞生 8 年以来，其本身的特性和 [everything that can be written in Sass has been written in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/) 一文中的观点越来越相近。
 
 不过，我的建议是最小程度的依赖于各种工具。管理依赖可能会是你特别不想面对的事情。此外，在 Sass 中很少需要外部依赖。
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) 是 [Sass 中主要的框架](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/)。其开发者 [Chris Eppstein](https://twitter.com/chriseppstein)，是 Sass 的两位核心开发者之一。如果你想听一下我的看法，我想说这个框架一直很流行。
 
@@ -21,7 +21,7 @@
   <p>Ruby Sass 目前正着手进行一些很棒的优化，目标是通过运用诸多函数和混合宏实现具有深度逻辑的样式。它们应该显著改善性能，而这往往是 Compass 和其他框架拖慢 Sass 的原因。</p>
 </div>
 
-## 栅格系统
+### 栅格系统
 
 随着响应式网页设计地遍地开花，栅格系统布局已经成为了一种必然选择。为了固定大小并使设计风格统一，我们通常使用网格来给元素布局。为了避免反复地布局工作，一些非凡的想法认为应该使它们保持可复用性。
 
@@ -33,7 +33,7 @@
 
 或者你可以处理地更轻松些，就像使用 [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids) 的感觉。总而言之，任何选择都不会对你的代码风格有过多影响，所以这一点上一切取决于你。
 
-## SCSS-lint
+### SCSS-lint
 
 审查代码是非常重要的事情。通常来说，遵从一份样式指南的规范可以帮助减少代码质量上的问题，但是没有人的工作是无懈可击的，何况总有些地方需要改善。所以，可以认为，审查代码和注释文档一样重要。
 

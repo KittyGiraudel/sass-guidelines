@@ -1,5 +1,5 @@
 
-# Об авторе
+## Об авторе
 
 Меня зовут [Kitty Giraudel](https://kittygiraudel.com), я frontend-разработчик из Франции, проживаю в Берлине (Германия) с 2015 года, сейчас работаю в [Gorillas](https://gorillas.io/).
 

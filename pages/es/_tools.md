@@ -1,11 +1,11 @@
 
-# Herramientas
+## Herramientas
 
 Lo bueno de un preprocesador CSS tan popular como Sass es que viene con un completo ecosistema de *frameworks*, *plugins*, librerías y herramientas. Después de 8 años de existencia, nos estamos acercando cada vez más a un punto donde [todo lo que se puede escribir en Sass, ya ha sido escrito en Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
 Sin embargo, mi consejo es que debes disminuir al mínimo el número de dependencias. Manejarlas es casi un infierno del que no quieres formar parte. Además, hay pocas cosas que necesiten dependencias externas cuando se habla de Sass.
 
-## Compass
+### Compass
 
 [Compass](http://compass-style.org/) es el principal [*framework* de Sass](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) ahí fuera. Desarrollado por [Chris Eppstein](https://twitter.com/chriseppstein), uno de los diseñadores principales de Sass, y que en mi opinión, no creo que vaya a perder drásticamente su popularidad en un futuro cercano.
 
@@ -21,7 +21,7 @@ De todas formas, no es que prohíba el uso de Compass aunque tampoco lo recomien
   <p>Ruby Sass tiene algunas optimizaciones importantes pendientes y que están específicamente orientadas a estilos de fuerte lógica con muchas funciones y *mixins*. Deberían mejorar drásticamente el rendimiento, hasta un punto en el que Compass u otros *frameworks* no volverán a ralentizar a Sass nunca más.</p>
 </div>
 
-## Sistemas De Retícula
+### Sistemas De Retícula
 
 No es una opción no utilizar un sistema de retícula ahora que el *Responsive Web Design* está por todas partes. Para que los diseños sean consistentes y coherentes en todos los tamaños, utilizamos algo similar a una cuadrícula para disponer los elementos. Para evitar tener que escribir el código de ésta retícula una y otra vez, algunas mentes brillantes han hecho la suya reutilizable.
 
@@ -33,7 +33,7 @@ Si no trabajas con un sistema de retícula específico, te sentirás complacido 
 
 O puedes trabajar con algo más casual, como [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Con todo, la elección no tendrá mucho impacto en el estilo de tu código, así que todo depende de ti llegados a este punto.
 
-## SCSS-lint
+### SCSS-lint
 
 Limpiar el código es muy importante. Normalmente, seguir las pautas de una guía de estilo reduce la cantidad de errores en el código, pero nadie es perfecto y siempre hay cosas a mejorar. Asi que se puede decir que limpiar el código es tan importante como comentarlo.
 
