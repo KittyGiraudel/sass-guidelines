@@ -25,26 +25,24 @@ gems:
   - jekyll-sitemap
 data_dir: ./_locales
 exclude:
-  [
-    "CHANGELOG.md",
-    "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
-    "TRANSLATING.md",
-    "assets/images/icons",
-    "package.json",
-    "package-lock.json",
-    "package-scripts.js",
-    "Gemfile",
-    "Gemfile.lock",
-    "README.md",
-    "pages/**/README.md",
-    "LICENSE",
-    "CNAME",
-    "node_modules",
-    "vendor",
-    "_bin",
-    "sw-precache-config.js",
-  ]
+  - CHANGELOG.md
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - TRANSLATING.md
+  - assets/images/icons
+  - package.json
+  - package-lock.json
+  - package-scripts.js
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - pages/**/README.md
+  - LICENSE
+  - CNAME
+  - node_modules
+  - vendor
+  - _bin
+  - sw-precache-config.js
 
 markdown: kramdown
 kramdown:
