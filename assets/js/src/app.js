@@ -19,7 +19,7 @@
   }
 
   function getChapterHeading (chapter) {
-    return chapter.querySelector('h1[id]')
+    return chapter.querySelector('h2[id]')
   }
 
   function getChapterTitle (chapter) {

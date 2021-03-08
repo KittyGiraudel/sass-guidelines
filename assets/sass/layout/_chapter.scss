@@ -30,7 +30,7 @@
 }
 
 @include media('<=small') {
-  .chapter > h1 {
+  .chapter > h2 {
     text-align: center;
   }
 
