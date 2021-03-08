@@ -41,8 +41,6 @@
  */
 .button svg {
   fill: currentcolor; /* 1 */
-  -webkit-transform: translateY(1px); /* 2 */
-  -ms-transform: translateY(1px); /* 2 */
   transform: translateY(1px); /* 2 */
 }
 

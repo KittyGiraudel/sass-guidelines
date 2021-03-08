@@ -49,8 +49,6 @@
    * Non-overflowing black and white images
    */
   img {
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
     filter: grayscale(100%);
     max-width: 100%;
   }

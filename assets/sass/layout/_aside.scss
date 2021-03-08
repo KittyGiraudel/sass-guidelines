@@ -94,8 +94,6 @@
   position: absolute;
   right: 0.5em;
   top: 0.4em; /* 1 */
-  -webkit-transform: scale(1.25); /* 2 */
-  -moz-transform: scale(1.25); /* 2 */
   transform: scale(1.25); /* 2 */
   text-decoration: none;
 }
@@ -126,8 +124,6 @@
    * Visual fix for input placement
    */
   input {
-    -webkit-transform: translate(-1px, -1px);
-    -ms-transform: translate(-1px, -1px);
     transform: translate(-1px, -1px);
   }
 
