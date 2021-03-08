@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 $length: 42px;
 
 // Yep
@@ -9,10 +9,10 @@ $value: $length / 1px;
 
 // Nope
 $value: str-slice($length + unquote(''), 1, 2);
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 $length: 42px
 
 // Yep
@@ -20,6 +20,6 @@ $value: $length / 1px
 
 // Nope
 $value: str-slice($length + unquote(''), 1, 2)
-{% endhighlight %}
+```
   </div>
 </div>

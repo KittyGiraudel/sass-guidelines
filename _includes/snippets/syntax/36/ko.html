@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 /// 간단한 선택자 내포 API를 제공하는 헬퍼 믹스인
 /// @param {String} $selector - 선택자
 @mixin when-inside($selector) {
@@ -9,16 +9,16 @@
     @content;
   }
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 /// 간단한 선택자 내포 API를 제공하는 헬퍼 믹스인
 /// @param {String} $selector - 선택자
 =when-inside($selector) {
   #{$selector} &
     @content
 }
-{% endhighlight %}
+```
   </div>
 </div>

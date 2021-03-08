@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 // Объявить глобальную переменную на корневом уровне.
 $variable: 'initial value';
 
@@ -27,10 +27,10 @@ $variable: 'initial value';
 .other-local-scope::before {
   content: $variable;
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 // Объявить глобальную переменную на корневом уровне.
 $variable: 'initial value'
 
@@ -53,6 +53,6 @@ $variable: 'initial value'
 // Здесь значение **глобальное**, как и ожидалось.
 .other-local-scope::before
   content: $variable
-{% endhighlight %}
+```
   </div>
 </div>

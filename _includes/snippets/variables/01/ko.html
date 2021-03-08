@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 // 루트 수준에 전역 변수를 초기화합니다.
 $variable: 'initial value';
 
@@ -27,10 +27,10 @@ $variable: 'initial value';
 .other-local-scope::before {
   content: $variable;
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 // 루트 수준에 전역 변수를 초기화합니다.
 $variable: 'initial value'
 
@@ -53,6 +53,6 @@ $variable: 'initial value'
 // 예상대로, **전역** 변수의 값이 출력됩니다.
 .other-local-scope::before
   content: $variable
-{% endhighlight %}
+```
   </div>
 </div>

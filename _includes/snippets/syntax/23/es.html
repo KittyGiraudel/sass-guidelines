@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 /// Calcular la profundidad máxima de un mapa
 /// @param {Map} $map
 /// @return {Number} máxima profundidad de `$map`
@@ -16,10 +16,10 @@
 
   @return $level;
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 /// Calcular la profundidad máxima de un mapa
 /// @param {Map} $map
 /// @return {Number} máxima profundidad de `$map`
@@ -31,6 +31,6 @@
       $level: max(map-depth($value) + 1, $level)
 
   @return $level;
-{% endhighlight %}
+```
   </div>
 </div>

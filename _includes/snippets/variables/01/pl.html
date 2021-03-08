@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 // Zainicjuj globalną zmienną na poziomie głównym.
 $variable: 'initial value';
 
@@ -27,10 +27,10 @@ $variable: 'initial value';
 .other-local-scope::before {
   content: $variable;
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 // Zainicjuj globalną zmienną na poziomie głównym.
 $variable: 'initial value'
 
@@ -53,6 +53,6 @@ $variable: 'initial value'
 // Będzie to ta **globalna**, jak oczekiwano.
 .other-local-scope::before
   content: $variable
-{% endhighlight %}
+```
   </div>
 </div>

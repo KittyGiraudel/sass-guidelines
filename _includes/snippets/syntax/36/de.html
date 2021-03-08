@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 /// Helfer-Mixin um eine einfachere API für verschachtelte Selektoren zu bieten
 /// @param {String} $selector - Selektor
 @mixin when-inside($selector) {
@@ -9,16 +9,16 @@
     @content;
   }
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 /// Helfer-Mixin um eine einfachere API für verschachtelte Selektoren zu bieten
 /// @param {String} $selector - Selektor
 =when-inside($selector) {
   #{$selector} &
     @content
 }
-{% endhighlight %}
+```
   </div>
 </div>
