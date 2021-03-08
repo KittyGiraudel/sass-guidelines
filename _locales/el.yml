@@ -17,7 +17,7 @@ configuration:
 # _locales/en.yml
 translations:
   baseline: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
-  footer_content: "Φτιαγμένο με μεράκι από τον [Kitty Giraudel](https://kittygiraudel.com)"
+  footer_content: "Φτιαγμένο με μεράκι από τον [Kitty Giraudel](https://kittygiraudel.com) και μεταφράστηκε από τους [Kostantinos Margaritis](https://github.com/margaritis), [Adonis K.](https://github.com/varemenos), [Mod Kaffes](https://github.com/modkaffes) και [Sébastien Nikolaou](vhttps://github.com/sebdesign)"
 
   aside_title: "επιλογές"
   aside_report: "Αναφορά προβλήματος"
