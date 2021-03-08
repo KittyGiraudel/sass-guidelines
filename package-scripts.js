@@ -24,7 +24,7 @@ module.exports = {
 
     js: {
       default: 'npm start js.build',
-      build: 'npm start js.vendors && npm start js.utilities',
+      build: 'npm start js.vendors',
 
       // Copy third-party vendor scripts into the `assets/js/vendor` folder to
       // avoid maintaining our own (possibly outdated) version of these vendor
@@ -38,18 +38,6 @@ module.exports = {
         'cp node_modules/blingdotjs/bling.js assets/js/vendor',
         'cp node_modules/picturefill/dist/picturefill.min.js assets/js'
       ].join(' && '),
-
-      // Generates `_includes/utilities.js` from non-copied third-party vendor
-      // scripts which will be inlined in the `<head>` of the document for quick
-      // use instead of being bundled in the main JavaScript file (cf. through
-      // the `vendors` task)
-      utilities: [
-        'uglifyjs', [
-          'node_modules/woff2-feature-test/woff2.js',
-          'node_modules/OptimizedWebfontLoading/loadFont.js'
-        ].join(' '),
-        '-o _includes/utilities.js'
-      ].join(' '),
 
       // Run the `standard` linter on all JavaScript files from the JS folder
       // Note: the `assets/js/vendor` folder is naturally omitted by standard
