@@ -88,17 +88,6 @@
     return wrapper
   }
 
-  function fixSkipLinks () {
-    var element = document.getElementById(window.location.hash.substring(1))
-
-    if (element) {
-      if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
-        element.tabIndex = -1
-      }
-      element.focus()
-    }
-  }
-
   function redirectUrl (event) {
     window.location.href = this.value
   }
@@ -157,7 +146,6 @@
     })
   }
 
-  window.on('hashchange', fixSkipLinks, false)
   document.addEventListener('DOMContentLoaded', function (event) {
     initialiseLanguagePicker()
     initialiseSyntaxToggle()
