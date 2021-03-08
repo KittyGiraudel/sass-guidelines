@@ -3,7 +3,6 @@
 set -e
 
 CRITICAL_CSS_FILE=_includes/critical.css
-UTILITIES_JS_FILE=_includes/utilities.js
 DIST_CSS_FILE=_site/assets/css/main.css
 
 test_file ()
@@ -27,5 +26,4 @@ test_file ${CRITICAL_CSS_FILE}
 
 if [ -d "_site" ]; then
   test_file ${DIST_CSS_FILE}
-  test_file ${UTILITIES_JS_FILE}
 fi
