@@ -1,11 +1,5 @@
-/**
- * Site advertisement
- * 1. Computed height to minimise CLS.
- */
 .Ad {
   max-width: 100%;
-  height: 100px; /* 1 */
-  background-color: white;
 
   @include media(">large") {
     position: fixed;
