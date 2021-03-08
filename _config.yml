@@ -33,6 +33,8 @@ exclude:
     "TRANSLATING.md",
     "assets/images/icons",
     "package.json",
+    "package-lock.json",
+    "package-scripts.js",
     "Gemfile",
     "Gemfile.lock",
     "README.md",
