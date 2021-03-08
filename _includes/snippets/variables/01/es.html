@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 // Inicializar una variable global a nivel raiz.
 $variable: 'valor inicial';
 
@@ -27,10 +27,10 @@ $variable: 'valor inicial';
 .other-local-scope::before {
   content: $variable;
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 // Inicializar una variable global a nivel raiz.
 $variable: 'valor inicial'
 
@@ -53,6 +53,6 @@ $variable: 'valor inicial'
 // Es la variable **global**, como se esperaba.
 .other-local-scope::before
   content: $variable
-{% endhighlight %}
+```
   </div>
 </div>

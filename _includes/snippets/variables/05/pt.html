@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 /// Mapa dos z-indexes, reunindo todas as camadas Z da aplicação
 /// @access private
 /// @type Map
@@ -22,10 +22,10 @@ $z-indexes: (
 @function z($layer) {
   @return map-get($z-indexes, $layer);
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 /// Mapa dos z-indexes, reunindo todas as camadas Z da aplicação
 /// @access private
 /// @type Map
@@ -40,6 +40,6 @@ $z-indexes: ('modal': 5000, 'dropdown': 4000, 'default': 1, 'below': -1,)
 /// @require $z-indexes
 @function z($layer)
   @return map-get($z-indexes, $layer)
-{% endhighlight %}
+```
   </div>
 </div>

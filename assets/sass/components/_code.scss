@@ -15,22 +15,16 @@
 /**
  * Code blocks
  */
-.highlight {
+pre.highlight {
   background-color: $code-background;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: rgb(255, 255, 255);
   margin: 0 0 $vertical-rhythm-baseline;
-}
-
-/**
- * <pre> element direct child of `.highlight` modules
- */
-.highlight > pre {
-  margin: 0;
+  padding: 1.5em;
 }
 
 .highlight code,
-.highlight pre {
+pre.highlight {
   color: rgb(253, 206, 147);
   font-family: $code-font-stack;
 }

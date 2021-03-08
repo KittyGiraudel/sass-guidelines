@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 @mixin dummy($a, $b, $c) {
   // …
 }
@@ -24,10 +24,10 @@ $params: (
   'b': 42,
 );
 @include dummy($params...);
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 =dummy($a, $b, $c)
   // …
 
@@ -45,6 +45,6 @@ $params: (true, 42, 'kittens')
 // Yep
 $params: ('c': 'kittens', 'a': true, 'b': 42,)
 +dummy($params...)
-{% endhighlight %}
+```
   </div>
 </div>

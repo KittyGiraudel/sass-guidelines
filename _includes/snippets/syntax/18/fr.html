@@ -1,7 +1,7 @@
 
 <div class="code-block">
   <div class="code-block__wrapper" data-syntax="scss">
-{% highlight scss %}
+```scss
 /// Slightly lighten a color
 /// @access public
 /// @param {Color} $color - color to tint
@@ -19,10 +19,10 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
-{% endhighlight %}
+```
   </div>
   <div class="code-block__wrapper" data-syntax="sass">
-{% highlight sass %}
+```sass
 /// Slightly lighten a color
 /// @access public
 /// @param {Color} $color - color to tint
@@ -38,6 +38,6 @@
 /// @return {Color}
 @function shade($color, $percentage)
   @return mix($color, black, $percentage)
-{% endhighlight %}
+```
   </div>
 </div>
