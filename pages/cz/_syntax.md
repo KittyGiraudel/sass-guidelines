@@ -177,7 +177,7 @@ Pokud nechcete pokaždé psát `mix` funkci, můžete vytvořit dvě jednoduché
 **Další četba:**
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Sass Color Variables That Don’t Suck](https://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
@@ -379,5 +379,5 @@ Jako asi se vším, specifika jsou poněkud nedůležitá, důležitá je konzis
 **Další četba:**
 
 * [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+* [The Inception Rule](https://thesassway.herokuapp.com/beginner/the-inception-rule)
+* [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css)

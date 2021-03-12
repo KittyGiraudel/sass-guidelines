@@ -194,7 +194,7 @@ Aby nie używać pełnej funkcji `mix` za każdym razem, można stworzyć dwie, 
 **Dalsze informacje:**
 
 * [A Visual Guide to Sass & Compass Color Functions](http://jackiebalzer.com/color)
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Sass Color Variables That Don’t Suck](https://davidwalsh.name/sass-color-variables-dont-suck)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
@@ -382,5 +382,5 @@ Jak we wszystkich sytuacjach, kluczem jest zawsze spójność. Jeśli czujesz si
 **Dalsze informacje:**
 
 * [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/)
-* [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)
-* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
+* [The Inception Rule](https://thesassway.herokuapp.com/beginner/the-inception-rule)
+* [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css)

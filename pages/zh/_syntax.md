@@ -125,7 +125,7 @@ CSS-Tricks 上有一篇[文章](https://css-tricks.com/magic-numbers-in-css/) �
 
 Sass 非常善于操纵颜色，以下文章都讨论了在 Sass 中对颜色的操作，建议阅读：
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -311,9 +311,9 @@ Sass 中一个正在被众多开发者滥用的功能，就是**选择器嵌套*
 
 选择器越具体则声明语句越冗长，而且对最近选择器的引用(`&`)也越频繁。在某些时候，出现混淆选择器路径和探索下一级选择器的错误率很高，这非常不值得。
 
-为了防止此类情况，我们今年就 [the Inception rule](http://thesassway.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的意见比较激进，**建议尽量避免使用嵌套**。 
+为了防止此类情况，我们今年就 [the Inception rule](https://thesassway.herokuapp.com/beginner/the-inception-rule) 讨论了很多很多。它建议嵌套不要超过三层，我的意见比较激进，**建议尽量避免使用嵌套**。 
 
-虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[《小心嵌套陷阱》](https://www.sitepoint.com/beware-selector-nesting-sass/) 和 [《避免选择器的过渡嵌套》](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+虽然我们在下一节看到这条规则有一些例外，但这一观点还是很受欢迎的。更多信息请阅读：[《小心嵌套陷阱》](https://www.sitepoint.com/beware-selector-nesting-sass/) 和 [《避免选择器的过渡嵌套》](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 #### 例外
 

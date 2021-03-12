@@ -129,7 +129,7 @@ Les couleurs occupent une place importante dans le langage CSS. Naturellement, S
 
 Sass est si utile quand il s’agit de manipuler les couleurs que des articles sont apparus de toute part pour en parler. Permettez-moi de vous recommander quelques lectures :
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -317,9 +317,9 @@ C’est d’autant plus vrai à mesure que les sélecteurs s’allongent et que 
 
 Pour éviter de telles situations, nous **évitons l’imbrication des sélecteurs autant que possible**. Il y a cependant quelques exceptions à cette règle.
 
-Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](http://thesassway.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au-delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
+Pour éviter de telles situations, il existe la fameuse [Règle d’Inception](https://thesassway.herokuapp.com/beginner/the-inception-rule) (*The Inception Rule*) depuis quelques années. Celle-ci déconseille d’imbriquer au-delà de 3 niveaux, en référence au film Inception de Christopher Nolan. Je suis plus drastique encore et vais jusqu’à **déconseiller l’imbrication des sélecteurs autant que faire se peut**.
 
-Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+Bien qu’il y ait bien évidemment quelques exceptions à cette règle comme nous allons le voir dans la prochaine section, cette opinion tranchée semble malgré tout assez populaire. Vous pouvez en lire davantage dans [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) et [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 #### Exceptions
 

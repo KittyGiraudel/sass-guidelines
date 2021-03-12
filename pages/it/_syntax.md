@@ -129,7 +129,7 @@ I colori occupano un importante posto nel mondo CSS. Ovviamente Sass è un nostr
 
 Sass è così utile quando si tratta di manipolare colori, che sono spuntati ovunque su internet articoli su questo argomento. Posso raccomandarvene alcuni da leggere:
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -316,10 +316,10 @@ Il problema con i selettori annidati è che rendono definitivamente il codice mo
 
 Questo diventa sempre più vero man mano che i selettori diventano più lunghi e i riferimenti al selettore corrente (`&`) diventano più frequenti. Ad un certo punto, il rischo di perdere traccia e di non capire più cosa sta accadendo diventa sempre più grande, tanto che annidare non vale più la pena.
 
-Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](http://thesassway.com/beginner/the-inception-rule). Il suggerimento è semplice, ovvero evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io sarei più drastico e raccomando di  **evitare i selettori annidati il più possibile**.
+Per prevenire queste situazione, abbiamo discusso a lungo qualche anno fa riguardo [la regola Inception](https://thesassway.herokuapp.com/beginner/the-inception-rule). Il suggerimento è semplice, ovvero evitare di andare oltre 3 livelli di profondità, come riferimento al film Inception di Christopher Nolan. Io sarei più drastico e raccomando di  **evitare i selettori annidati il più possibile**.
 
 Per quanto ci siano alcune eccezioni a questa regola, come vedremo nella prossima sezione, questa opinione pare essere molto popolare. Potete leggere a riguardo qualcosa su questi articoli:
-[Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+[Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 #### Eccezioni
 

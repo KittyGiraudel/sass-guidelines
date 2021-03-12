@@ -129,7 +129,7 @@ Sass에서 숫자와 관련해 제가 생각할 수 있는 가장 흔한 실수�
 
 Sass는 색을 조작할 때 매우 유용하여 이 주제에 대한 글이 인터넷 전체에서 번성했습니다. 몇 가지 글을 추천하겠습니다:
 
-- [프로그래밍 방식으로 한 색에서 다른 색으로 전환하는 방법](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+- [프로그래밍 방식으로 한 색에서 다른 색으로 전환하는 방법](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 - [Sass를 사용하여 색상표 만들기](https://www.sitepoint.com/using-sass-build-color-palettes/)
 - [Sass에서 색 구성표 다루기](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -315,9 +315,9 @@ Sass가 제공하는 기능 중 많은 개발자들에 의해 심하게 남용�
 
 선택자가 길어지고 현재 선택자(`&`)를 더 자주 인용할수록 더더욱 그러합니다. 어느 순간이 되면, 선택자를 파악하고 무슨 일이 일어나고 있는지 더이상 이해하기가 힘들어질 위험이 너무 커지기 때문에 무릅쓸 만한 가치가 없습니다.
 
-이러한 상황을 방지하기 위해 우리는 몇 년 전 [인셉션 규칙](http://thesassway.com/beginner/the-inception-rule)에 대해 많이 이야기했습니다. 크리스토퍼 놀런의 영화 인셉션에 대한 레퍼런스로, 3단계 이상으로 깊이 내포하지 말자고 했습니다. 저는 좀 더 과감하고 **가능한 한 많이 선택자 내포를 피하는 것**을 추천합니다.
+이러한 상황을 방지하기 위해 우리는 몇 년 전 [인셉션 규칙](https://thesassway.herokuapp.com/beginner/the-inception-rule)에 대해 많이 이야기했습니다. 크리스토퍼 놀런의 영화 인셉션에 대한 레퍼런스로, 3단계 이상으로 깊이 내포하지 말자고 했습니다. 저는 좀 더 과감하고 **가능한 한 많이 선택자 내포를 피하는 것**을 추천합니다.
 
-다음 섹션에서 볼 수 있듯이 이 규칙에 대한 몇 가지 예외가 분명히 있지만, 이 의견은 꽤 인기 있는 것 같습니다. 자세한 내용은 [선택자 내포에 주의하세요](https://www.sitepoint.com/beware-selector-nesting-sass/) 및 [더 많은 모듈식 CSS에 대한 내포 선택자 방지](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)에서 자세히 읽을 수 있습니다.
+다음 섹션에서 볼 수 있듯이 이 규칙에 대한 몇 가지 예외가 분명히 있지만, 이 의견은 꽤 인기 있는 것 같습니다. 자세한 내용은 [선택자 내포에 주의하세요](https://www.sitepoint.com/beware-selector-nesting-sass/) 및 [더 많은 모듈식 CSS에 대한 내포 선택자 방지](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css)에서 자세히 읽을 수 있습니다.
 
 #### 예외
 

@@ -129,7 +129,7 @@ Cores ocupam um lugar muito importante em CSS. Naturalmente, Sass acaba por se t
 
 Sass é tão bom na hora de manipular cores que artigos tem florescidos por toda parte da internet, exatamente sobre este tema. Por isso, posso recomendar algumas leituras:
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -315,9 +315,9 @@ O problema com aninhar seletores é que, em última instância, torna o código 
 
 Este argumento torna-se ainda mais verdadeiro à medida que os seletores se tornam mais longos e as referências ao seletor atual (`&`) mais frequentes. A dada altura, o risco de perder o fio à meada e deixar de perceber o que se passa e onde é tão alto que deixa de valer a pena.
 
-Para evitar tais situações, nós falamos muito sobre a [Inception rule](http://thesassway.com/beginner/the-inception-rule) alguns anos atrás, aconselhando contra aninhamento de mais de três leveis a fundo, usando como referência o filme "Inception" de Christopher Nolan. Além do mais, eu seria mais dramático e recomendaria **evitar aninhamento de seletores, o máximo possível**.
+Para evitar tais situações, nós falamos muito sobre a [Inception rule](https://thesassway.herokuapp.com/beginner/the-inception-rule) alguns anos atrás, aconselhando contra aninhamento de mais de três leveis a fundo, usando como referência o filme "Inception" de Christopher Nolan. Além do mais, eu seria mais dramático e recomendaria **evitar aninhamento de seletores, o máximo possível**.
 
-Enquanto há, obviamente, algumas exceções para esta regra (como nós vamos ver na próxima seção), esta opinião parece ser a mais popular. Você pode ler sobre isso mais em detelhes no [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+Enquanto há, obviamente, algumas exceções para esta regra (como nós vamos ver na próxima seção), esta opinião parece ser a mais popular. Você pode ler sobre isso mais em detelhes no [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) e [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 #### Exceções
 

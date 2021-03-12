@@ -129,7 +129,7 @@
 
 Η Sass είναι τόσο χρήσιμη σε ό,τι έχει να κάνει με την διαχείριση χρωμάτων που έχουν εμφανιστεί διάφορα άρθρα στο internet σχετικά με αυτό ακριβώς το θέμα. Επιτρέψτε μου να σας συστήσω μερικά:
 
- * [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+ * [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
  * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
  * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -317,9 +317,9 @@
 
 Για να αποφύγουμε μια τέτοια κατάσταση, **αποφεύγουμε την εμφώλευση των selectors όσο το δυνατόν περισσότερο**. Παρόλα αυτά, προφανώς υπάρχουν μερικές εξαιρέσεις σε αυτόν τον κανόνα.
 
-Για να αποφύγουμε μια τέτοια κατάσταση, συνηθίζαμε να μιλάμε για το [Inception rule](http://thesassway.com/beginner/the-inception-rule) πριν απο μερικά χρόνια. Αυτό συμβούλευε κατά της εμφώλευσης πέραν των 3 επιπέδων, έχοντας ως σημείο αναφοράς την ταινία Inception του Christopher Nolan. Θα ήθελα να γίνω λίγο πιο δραστικός και να προτείνω την **αποφυγή εμφωλευμένων selectors όσο το δυνατόν περισσότερο**.
+Για να αποφύγουμε μια τέτοια κατάσταση, συνηθίζαμε να μιλάμε για το [Inception rule](https://thesassway.herokuapp.com/beginner/the-inception-rule) πριν απο μερικά χρόνια. Αυτό συμβούλευε κατά της εμφώλευσης πέραν των 3 επιπέδων, έχοντας ως σημείο αναφοράς την ταινία Inception του Christopher Nolan. Θα ήθελα να γίνω λίγο πιο δραστικός και να προτείνω την **αποφυγή εμφωλευμένων selectors όσο το δυνατόν περισσότερο**.
 
- Ενώ υπάρχουν πολλές προφανείς εξαιρέσεις στον κανόνα όπως θα δούμε στο επόμενο τμήμα, αυτή η άποψη φαίνεται να είναι αρκετά δημοφιλής. Μπορείτε να διαβάσετε γι' αυτό με περισσότερες λεπτομέρειες στο [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) και στο [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
+ Ενώ υπάρχουν πολλές προφανείς εξαιρέσεις στον κανόνα όπως θα δούμε στο επόμενο τμήμα, αυτή η άποψη φαίνεται να είναι αρκετά δημοφιλής. Μπορείτε να διαβάσετε γι' αυτό με περισσότερες λεπτομέρειες στο [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) και στο [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 
 #### Εξαιρέσεις
 

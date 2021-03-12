@@ -129,7 +129,7 @@ Farben nehmen einen wichtigen Platz in der CSS Sprache ein. Normalerweise ist Sa
 
 Sass ist so nützlich Farben zu manipulieren dass das Internet voller Artikel über das Thema aufblüht. Lass mich ein paar Artikel empfehlen:
 
-* [How to Programmatically Go From One Color to Another](http://thesassway.com/advanced/how-to-programtically-go-from-one-color-to-another-in-sass)
+* [How to Programmatically Go From One Color to Another](https://kittygiraudel.com/2014/01/30/programmatically-go-from-one-color-to-another-with-sass/)
 * [Using Sass to Build Color Palettes](https://www.sitepoint.com/using-sass-build-color-palettes/)
 * [Dealing with Color Schemes in Sass](https://www.sitepoint.com/dealing-color-schemes-sass/)
 
@@ -317,9 +317,9 @@ Das Problem mit dem Verschachteln von Selektoren ist, dass es den Code unheimlic
 
 Die Aussage gewinnt an Relevanz, sobald Selektoren immer länger werden und die Verwendung von (`&`) häufiger. Ab einem gewissen Punkt, ist das Risiko nicht mehr zu verstehen was passiert zu hoch und es nicht wert.
 
-Um dem ganzen also Vorzubeugen, haben wir ein paar Jahre zurück viel über [die Inception-Regel](http://thesassway.com/beginner/the-inception-rule) gesprochen. Es wird nicht empfohlen mehr als 3 Ebenen tief zu verschachteln, als Referenz zu dem Film Inception von Christopher Nolan. Ich würde drastischer sein und es **vermeiden so viel wie möglich Selektoren zu verschachteln**.
+Um dem ganzen also Vorzubeugen, haben wir ein paar Jahre zurück viel über [die Inception-Regel](https://thesassway.herokuapp.com/beginner/the-inception-rule) gesprochen. Es wird nicht empfohlen mehr als 3 Ebenen tief zu verschachteln, als Referenz zu dem Film Inception von Christopher Nolan. Ich würde drastischer sein und es **vermeiden so viel wie möglich Selektoren zu verschachteln**.
 
-Es gibt selbsverständlich ein paar Ausnahmen zu dieser Regel wie wir in der nächsten Sektion sehen werden. Diese Meinung scheint ziemlich beliebt zu sein. Du kannst mehr darüber in [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) und [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css) lesen.
+Es gibt selbsverständlich ein paar Ausnahmen zu dieser Regel wie wir in der nächsten Sektion sehen werden. Diese Meinung scheint ziemlich beliebt zu sein. Du kannst mehr darüber in [Beware of Selector Nesting](https://www.sitepoint.com/beware-selector-nesting-sass/) und [Avoid nested selectors for more modular CSS](https://thesassway.herokuapp.com/intermediate/avoid-nested-selectors-for-more-modular-css) lesen.
 
 #### Ausnahmen
 
