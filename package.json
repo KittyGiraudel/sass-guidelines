@@ -15,7 +15,7 @@
     "sw-precache": "^5.2.1"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.2.1",
+    "clean-css-cli": "^5.2.2",
     "criticalcss": "^2.1.0",
     "nps": "^5.10.0",
     "spritesh": "^1.2.1",
