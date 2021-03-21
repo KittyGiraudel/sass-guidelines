@@ -41,7 +41,7 @@
   <!-- Responsive images setup -->
   <script src="/assets/js/picturefill.min.js" async></script>
 
-    <!-- PWA -->
+  <!-- PWA -->
   <meta name="theme-color" content="#cc6699">
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="/assets/images/favicon.png">
@@ -60,4 +60,13 @@
   <meta name="twitter:title" content="{{ site_title | strip }}">
   <meta name="twitter:description" content="{{ site.data[page.language].translations.baseline }}">
   <meta name="twitter:image" content="{{ '/assets/images/sass-guidelines.png' | prepend: site.url }}">
+
+  <!-- Internationalisation -->
+  <link rel="alternate" href="{{ site.url | default: '/' }}" hreflang="x-default" />
+  <link rel="alternate" href="{{ site.url | default: '/' }}" hreflang="en" />
+  {% for language in site.languages %}
+  {% if langage != 'en' %}
+  <link rel="alternate" href="{{ language | prepend: '/' | prepend: site.url }}" hreflang="{{ language }}" />
+  {% endif %}
+  {% endfor %}
 </head>
