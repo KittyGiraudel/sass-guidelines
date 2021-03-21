@@ -65,7 +65,7 @@
   <link rel="alternate" href="{{ site.url | default: '/' }}" hreflang="x-default" />
   <link rel="alternate" href="{{ site.url | default: '/' }}" hreflang="en" />
   {% for language in site.languages %}
-  {% if langage != 'en' %}
+  {% if language != 'en' %}
   <link rel="alternate" href="{{ language | prepend: '/' | prepend: site.url }}" hreflang="{{ language }}" />
   {% endif %}
   {% endfor %}
