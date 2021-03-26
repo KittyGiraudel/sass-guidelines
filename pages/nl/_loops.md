@@ -1,7 +1,7 @@
 
 ## Lussen
 
-Omdat Sass complexe datastructuren biedt, zoals [lijsten](#lijsten) en [maps](#maps), is het geen verrassing dat het ook een manier biedt voor auteurs om deze entiteiten te herhalen.
+Omdat Sass complexe datastructuren biedt, zoals [lijsten](#lists) en [maps](#maps), is het geen verrassing dat het ook een manier biedt voor auteurs om deze entiteiten te herhalen.
 
 De aanwezigheid van lussen impliceert echter meestal matig complexe logica die waarschijnlijk niet tot Sass behoort. Voordat u een lus gebruikt, moet u ervoor zorgen dat deze logisch is en dat deze daadwerkelijk een probleem oplost.
 
