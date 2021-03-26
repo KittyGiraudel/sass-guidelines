@@ -1,0 +1,59 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+%button {
+  display: inline-block;
+  // … button styles
+
+  // Relatie: een %button die een kind is van een %modal
+  %modal > & {
+    display: block;
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+// Yep
+.modal {
+  @extend %modal;
+}
+
+// Nope
+.modal {
+  @extend %modal;
+
+  > .button {
+    @extend %button;
+  }
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+%button
+  display: inline-block
+  // … button styles
+
+  // Relatie: een %button die een kind is van een %modal
+  %modal > &
+    display: block
+
+.button
+  @extend %button
+
+// Yep
+.modal
+  @extend %modal
+
+// Nope
+.modal
+  @extend %modal
+
+  > .button
+    @extend %button
+```
+  </div>
+</div>

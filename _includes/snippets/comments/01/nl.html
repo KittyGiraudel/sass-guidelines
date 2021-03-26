@@ -1,0 +1,32 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/**
+ * Helper-klasse om af te kappen en ellips toe te voegen aan een string die te lang is om
+ * op een enkele regel te passen.
+ * 1. Voorkom dat inhoud wordt ingepakt door deze op één regel te dwingen.
+ * 2. Voeg ellipsis toe aan het einde van de regel.
+ */
+.ellipsis {
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/**
+ * Helper-klasse om af te kappen en ellips toe te voegen aan een string die te lang is om
+ * op een enkele regel te passen.
+ * 1. Voorkom dat inhoud wordt ingepakt door deze op één regel te dwingen.
+ * 2. Voeg ellipsis toe aan het einde van de regel.
+ */
+.ellipsis
+  white-space: nowrap /* 1 */
+  text-overflow: ellipsis /* 2 */
+  overflow: hidden
+```
+  </div>
+</div>

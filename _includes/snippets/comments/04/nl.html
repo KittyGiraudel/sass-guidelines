@@ -1,0 +1,72 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/// Mixin helpt bij het gelijktijdig definiëren van zowel `width` als `height`.
+///
+/// @author Kitty Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - De `width` van het element
+/// @param {Length} $height [$width] - De `height` van het element
+///
+/// @example scss - Gebruik
+///   .foo {
+///     @include size(10em);
+///   }
+///
+///   .bar {
+///     @include size(100%, 10em);
+///   }
+///
+/// @example css - CSS-uitvoer
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/// Mixin helpt bij het gelijktijdig definiëren van zowel `width` als `height`.
+///
+/// @author Kitty Giraudel
+///
+/// @access public
+///
+/// @param {Length} $width - De `width` van het element
+/// @param {Length} $height ($width) - De `height` van het element
+///
+/// @example scss - Gebruik
+///   .foo
+///     +size(10em)
+///
+///   .bar
+///     +size(100%, 10em)
+///
+/// @example css - CSS-uitvoer
+///   .foo {
+///     width: 10em;
+///     height: 10em;
+///   }
+///
+///   .bar {
+///     width: 100%;
+///     height: 10em;
+///   }
+=size($width, $height: $width)
+  width: $width
+  height: $height
+```
+  </div>
+</div>

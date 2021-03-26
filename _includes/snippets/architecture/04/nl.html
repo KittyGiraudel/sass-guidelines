@@ -1,0 +1,30 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/**
+ * Nav specificiteit fix.
+ *
+ * Iemand gebruikte een ID in de headercode (`#header a {}`) die de nav
+ * selectors overtroeft (`.site-nav a {}`). Gebruik !Important om het
+ * te negeren totdat ik tijd heb om de koptekst te refactoren.
+ */
+.site-nav a {
+    color: #BADA55 !important;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/**
+ * Nav specificiteit fix.
+ *
+ * Iemand gebruikte een ID in de headercode (`#header a {}`) die de nav
+ * selectors overtroeft (`.site-nav a {}`). Gebruik !Important om het
+ * te negeren totdat ik tijd heb om de koptekst te refactoren.
+ */
+.site-nav a
+    color: #BADA55 !important
+```
+  </div>
+</div>

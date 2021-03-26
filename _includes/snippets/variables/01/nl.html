@@ -1,0 +1,58 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+// Initialiseer een globale variabele op rootniveau.
+$variable: 'initial value';
+
+// Maak een mixin die die globale variabele overschrijft.
+@mixin global-variable-overriding {
+  $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+  // Maak een lokale variabele die de globale in de schaduw stelt.
+  $variable: 'local value';
+
+  // Voeg de mixin toe: deze overschrijft de globale variabele.
+  @include global-variable-overriding;
+
+  // Druk de waarde van de variabele af.
+  // Het is de **lokale**, aangezien het de globale overschaduwt.
+  content: $variable;
+}
+
+// Druk de variabele af in een andere selector die geen schaduwwerking heeft.
+// Het is de **globale**, zoals verwacht.
+.other-local-scope::before {
+  content: $variable;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+// Initialiseer een globale variabele op rootniveau.
+$variable: 'initial value'
+
+// Maak een mixin die die globale variabele overschrijft.
+@mixin global-variable-overriding
+  $variable: 'mixin value' !global
+
+.local-scope::before
+  // Maak een lokale variabele die de globale in de schaduw stelt.
+  $variable: 'local value'
+
+  // Voeg de mixin toe: deze overschrijft de globale variabele.
+  +global-variable-overriding
+
+  // Druk de waarde van de variabele af.
+  // Het is de **lokale**, aangezien het de globale schaduw overschaduwt.
+  content: $variable
+
+// Druk de variabele af in een andere selector die geen schaduwwerking heeft.
+// Het is de **globale**, zoals verwacht.
+.other-local-scope::before
+  content: $variable
+```
+  </div>
+</div>

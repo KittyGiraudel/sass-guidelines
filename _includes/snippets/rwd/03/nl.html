@@ -1,0 +1,49 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/// Responsieve breekpuntmanager
+/// @access public
+/// @param {String} $breakpoint - Breekpunt
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'Geen waarde gevonden voor `#{$breakpoint}`. '
+         + 'Zorg ervoor dat het is gedefinieerd in de `$breakpoints` map.';
+  }
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/// Responsieve breekpuntmanager
+/// @access public
+/// @param {String} $breakpoint - Breekpunt
+/// @requires $breakpoints
+=respond-to($breakpoint)
+  $raw-query: map-get($breakpoints, $breakpoint)
+
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+
+    @media #{$query}
+      @content
+
+  @else
+    @error 'Geen waarde gevonden voor `#{$breakpoint}`. '
+         + 'Zorg ervoor dat het is gedefinieerd in de `$breakpoints` map.'
+```
+  </div>
+</div>
