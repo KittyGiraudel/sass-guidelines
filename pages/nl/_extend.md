@@ -1,48 +1,48 @@
 
 ## Extend
 
-The `@extend` directive is a powerful feature that is frequently misunderstood. In general, it makes it possible to tell Sass to style a selector A as though it also matched selector B. Needless to say, this can be a valuable ally when writing modular CSS.
+De `@extend`-instructie is een krachtige functie die vaak verkeerd wordt begrepen. In het algemeen maakt het het mogelijk om Sass te vertellen een selector A te stylen alsof deze ook overeenkomt met selector B. Onnodig te zeggen dat dit een waardevolle bondgenoot kan zijn bij het schrijven van modulaire CSS.
 
-However, the true purpose of `@extend` is to maintain the relationships (constraints) within extended selectors between rulesets. What exactly does this mean?
+Het echte doel van `@extension` is echter om de relaties (beperkingen) binnen uitgebreide selectors tussen regelsets te behouden. Wat houdt dit precies in?
 
-- Selectors have *constraints* (e.g. `.bar` in `.foo > .bar` must have a parent `.foo`);
-- These constraints are *carried over* to the extending selector (e.g. `.baz { @extend .bar; }` will produce `.foo > .bar, .foo > .baz`);
-- The declarations of the extended selector will be shared with the extending selector.
+- Selectors hebben *beperkingen* (bijv. `.Bar` in `.foo > .bar` moet een ouder `.foo` hebben);
+- Deze beperkingen worden *overgedragen* naar de uitbreidende selector (bijv. `.Baz { @extend .bar; }` zal `.foo > .bar, .foo > .baz` produceren);
+- De verklaringen van de uitgebreide selector worden gedeeld met de uitbreidende selector.
 
-Given that, it's straightforward to see how extending selectors with lenient constraints can lead to selector explosion. If `.baz .qux` extends `.foo .bar`, the resulting selector can be `.foo .baz .qux` or `.baz .foo .qux`, as both `.foo` and `.baz` are general ancestors. They can be parents, grandparents, etc.
+Gegeven dat, het eenvoudig is om te zien hoe het uitbreiden van selectors met milde beperkingen kan leiden tot een explosie van selectors. Als `.baz .qux` de extensie `.foo .bar` uitbreidt, kan de resulterende selector `.foo .baz .qux` of `.baz .foo .qux` zijn, aangezien zowel `.foo` als `.baz` algemene voorouders. Dit kunnen ouders, grootouders enz. Zijn.
 
-Always try to define relationships via selector placeholders, not actual selectors. This will give you the freedom to use (and change) any naming convention you have for your selectors, and since relationships are only defined once inside the placeholders, you are far less likely to produce unintended selectors.
+Probeer relaties altijd te definiëren via tijdelijke aanduidingen voor selectoren, niet met daadwerkelijke selectors. Dit geeft u de vrijheid om elke naamgevingsconventie die u hebt voor uw selectors te gebruiken (en te wijzigen), en aangezien relaties maar één keer worden gedefinieerd binnen de tijdelijke aanduidingen, is de kans veel kleiner dat u onbedoelde selectors produceert.
 
-For inheriting styles, only use `@extend` if the extending `.class` or `%placeholder` selector _is a kind of_ the extended selector. For instance, an `.error` is a kind of `.warning`, so `.error` can `@extend .warning`.
+Gebruik voor het erven van stijlen alleen `@extend` als de uitbreidende `.class` of `%placeholder` selector _een soort_ van de uitgebreide selector is. Een `.error` is bijvoorbeeld een soort `.warning`, dus `.error` kan `@extend .warning`.
 
 {% include snippets/extend/01/index.html %}
 
-There are many scenarios where extending selectors are helpful and worthwhile. Always keep in mind these rules so you can `@extend` with care:
+Er zijn veel scenario's waarin uitbreidende selectors nuttig en de moeite waard zijn. Houd altijd rekening met deze regels, zodat u met zorg kunt `@extend`:
 
-* Use extend on `%placeholders` primarily, not on actual selectors.
-* When extending classes, only extend a class with another class, _never_ a [complex selector](https://www.w3.org/TR/selectors4/#syntax).
-* Directly extend a `%placeholder` as few times as possible.
-* Avoid extending general ancestor selectors (e.g. `.foo .bar`) or general sibling selectors (e.g. `.foo ~ .bar`). This is what causes selector explosion.
+* Gebruik primair extend voor `%placeholders`, niet voor daadwerkelijke selectors.
+* Bij het uitbreiden van klassen, breid dan alleen een klasse uit met een andere klasse, _nooit_ een [complexe selector](https://www.w3.org/TR/selectors4/#syntax).
+* Extend een `%placeholder` zo min mogelijk direct.
+* Vermijd uitbreiding van algemene selectors voor voorouders (bijv. `.Foo .bar`) of algemene selectors voor broers en zussen (bijv. `.Foo ~ .bar`). Dit is wat de selector-explosie veroorzaakt.
 
 <div class="note">
-  <p>It is often said that <code>@extend</code> helps with the file size since it combines selectors rather than duplicating properties. That is true, however the difference is negligible once <a href="https://en.wikipedia.org/wiki/Gzip">Gzip</a> has done its compression.</p>
-  <p>That being said, if you cannot use Gzip (or any equivalent) then switching to a <code>@extend</code> approach might be valuable, especially if stylesheet weight is your performance bottleneck.</p>
+  <p>Er wordt vaak gezegd dat <code>@extend</code> helpt bij de bestandsgrootte omdat het selectors combineert in plaats van eigenschappen te dupliceren. Dat is waar, maar het verschil is te verwaarlozen zodra <a href="https://nl.wikipedia.org/wiki/Gzip">Gzip</a> de compressie heeft uitgevoerd.</p>
+  <p>Dat gezegd hebbende, als u Gzip (of een equivalent daarvan) niet kunt gebruiken, kan het waardevol zijn om over te schakelen naar een <code>@extend</code>-benadering, vooral als het stylesheet-gewicht het knelpunt is voor uw prestaties.</p>
 </div>
 
-### Extend and media queries
+### Extend and mediaquery's
 
-You should only extend selectors within the same media scope (`@media` directive). Think of a media query as another constraint.
+U moet alleen selectors uitbreiden binnen hetzelfde mediabereik (`@media`-instructie). Beschouw een mediaquery als een andere beperking.
 
 {% include snippets/extend/02/index.html %}
 
-Opinions seem to be extremely divided regarding the benefits and problems from `@extend` to the point where many developers including myself have been advocating against it, as you can read in the following articles:
+De meningen lijken extreem verdeeld te zijn over de voordelen en problemen van `@extend` tot het punt waarop veel ontwikkelaars, waaronder ikzelf, er tegen hebben gepleit, zoals u kunt lezen in de volgende artikelen:
 
-* [What Nobody Told you About Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
-* [Why You Should Avoid Extend](https://www.sitepoint.com/avoid-sass-extend/)
-* [Don't Over Extend Yourself](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
+* [Wat niemand u heeft verteld over Sass Extend](https://www.sitepoint.com/sass-extend-nobody-told-you/)
+* [Waarom u verlenging moet vermijden](https://www.sitepoint.com/avoid-sass-extend/)
+* [Breid jezelf niet te veel uit](https://pressupinc.com/blog/2014/11/dont-overextend-yourself-in-sass/)
 
-That being said and to sum up, I would advise to use `@extend` only for maintaining relationships within selectors. If two selectors are characteristically similar, that is the perfect use-case for `@extend`. If they are unrelated but share some rules, a `@mixin` might suit you better. More on how to choose between the two in this [write-up](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+Dat gezegd hebbende, en kort samengevat, zou ik adviseren om `@extend` alleen te gebruiken voor het onderhouden van relaties binnen selectors. Als twee selectors karakteristiek vergelijkbaar zijn, is dat de perfecte use-case voor `@extend`. Als ze niets met elkaar te maken hebben, maar enkele regels delen, kan een `@mixin` beter bij u passen. Meer over hoe u tussen de twee kunt kiezen in dit [artikel](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
 
 <div class="note">
-  <p>Thanks to <a href="https://twitter.com/davidkpiano">David Khourshid</a> for his help and expertise on this section.</p>
+  <p>Met dank aan <a href="https://twitter.com/davidkpiano">David Khourshid</a> voor zijn hulp en expertise op dit gebied.</p>
 </div>

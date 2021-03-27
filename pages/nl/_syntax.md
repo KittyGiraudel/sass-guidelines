@@ -20,7 +20,7 @@ Believe it or not, strings play quite a large role in both CSS and Sass ecosyste
 
 #### Encoding
 
-To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
+To avoid any potential issue with character encoding, it is highly recommended to force [UTF-8](https://nl.wikipedia.org/wiki/UTF-8) encoding in the [main stylesheet](#main-file) using the `@charset` directive. Make sure it is the very first element of the stylesheet and there is no character of any kind before it.
 
 {% include snippets/syntax/02/index.html %}
 
@@ -138,7 +138,7 @@ Sass is so useful when it comes to manipulating colors that articles have flouri
 In order to make colors as simple as they can be, my advice would be to respect the following order of preference for color formats:
 
 1. [HSL notation](https://en.wikipedia.org/wiki/HSL_and_HSV);
-1. [RGB notation](https://en.wikipedia.org/wiki/RGB_color_model);
+1. [RGB notation](https://nl.wikipedia.org/wiki/RGB-kleursysteem);
 1. Hexadecimal notation (lowercase and shortened).
 
 CSS color keywords should not be used, unless for rapid prototyping. Indeed, they are English words and some of them do a pretty bad job at describing the color they represent, especially for non-native speakers. On top of that, keywords are not perfectly semantic; for instance `grey` is actually darker than `darkgrey`, and the confusion between `grey` and `gray` can lead to inconsistent usages of this color.

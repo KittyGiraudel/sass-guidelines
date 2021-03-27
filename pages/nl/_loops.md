@@ -26,7 +26,7 @@ De `@for`-lus kan handig zijn in combinatie met CSS’ `:nth-*` pseudo-klassen. 
 
 {% include snippets/loops/03/index.html %}
 
-Gebruik altijd `$i` als een variabelenaam om vast te houden aan de gebruikelijke conventie en tenzij je een echt goede reden hebt, gebruik nooit het `to` trefwoord: gebruik altijd `through`. Veel ontwikkelaars weten niet eens dat Sass deze variant aanbiedt; het gebruik ervan kan tot verwarring leiden.
+Gebruik altijd `$i` als een variabelenaam om vast te houden aan de gebruikelijke conventie en tenzij u een echt goede reden hebt, gebruik nooit het `to` trefwoord: gebruik altijd `through`. Veel ontwikkelaars weten niet eens dat Sass deze variant aanbiedt; het gebruik ervan kan tot verwarring leiden.
 
 Zorg er ook voor dat u deze richtlijnen respecteert om de leesbaarheid te behouden:
 
