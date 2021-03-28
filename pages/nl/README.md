@@ -28,3 +28,4 @@ Het doel van dit bestand is om enkele algemene richtlijnen te definiëren voor v
 - _flag_
 - _dependencies_
 - _casual_
+- _features_
