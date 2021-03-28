@@ -27,7 +27,7 @@ Als u echt wilt spelen met de ideeën van constanten in Sass, zou u [dit toegewi
 
 ### Namespace
 
-Als u van plan bent uw Sass-code te verspreiden, in het geval van een bibliotheek, een framework, een grid-systeem of wat dan ook, kunt u overwegen om al uw variabelen, functies, mixins en tijdelijke aanduidingen een naam te geven, zodat deze niet conflicteert met de code van iemand anders.
+Als u van plan bent uw Sass-code te verspreiden, in het geval van een bibliotheek, een framework, een rastersysteem of wat dan ook, kunt u overwegen om al uw variabelen, functies, mixins en tijdelijke aanduidingen een naam te geven, zodat deze niet conflicteert met de code van iemand anders.
 
 Als u bijvoorbeeld aan een *Sassy Unicorn*-project werkt dat bedoeld is om te worden gedistribueerd, zou u kunnen overwegen om `su-` als namespace te gebruiken. Het is specifiek genoeg om botsingen met namen te voorkomen en kort genoeg om niet lastig te schrijven.
 

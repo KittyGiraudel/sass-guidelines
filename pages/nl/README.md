@@ -17,6 +17,7 @@ Het doel van dit bestand is om enkele algemene richtlijnen te definiëren voor v
 
 - _up-to-date_
 - _Last but not least_
+- _fair enough_
 - _issue_
 - _repository_
 - _pull-request_
@@ -25,3 +26,5 @@ Het doel van dit bestand is om enkele algemene richtlijnen te definiëren voor v
 - _codebase_
 - _namespace_
 - _flag_
+- _dependencies_
+- _casual_

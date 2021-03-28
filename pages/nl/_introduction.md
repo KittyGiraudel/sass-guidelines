@@ -1,51 +1,51 @@
 
-## Introduction
+## Inleiding
 
-### Why a styleguide
+### Waarom een stijlgids
 
-A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+Een stijlgids is niet alleen een aangenaam document om te lezen, een ideale staat voor uw code voor te stellen. Het is een belangrijk document in het leven van een project, beschrijft hoe en waarom code moet worden geschreven. Het lijkt misschien op overkill voor kleine projecten, maar het helpt veel in het schoon, schaalbaar en gemakkelijk te onderhouden houden van de codebase.
 
-Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+Onnodig te zeggen dat hoe meer ontwikkelaars betrokken zijn bij een project, hoe meer coderichtlijnen nodig zijn. Langs dezelfde lijnen, hoe groter het project, hoe meer een stijlgids een must is.
 
-[Harry Roberts](https://csswizardry.com) states it very well in [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
+[Harry Roberts](https://csswizardry.com) stelt het heel goed in [CSS Guidelines](https://cssguidelin.es/#the-importance-of-a-styleguide):
 
 <blockquote>
-  <p>A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:</p>
+  <p>Een coderingsstijlgids (opmerking: geen visuele stijlgids) is een waardevol hulpmiddel voor teams die:</p>
   <ul>
-    <li>build and maintain products for a reasonable length of time;</li>
-    <li>have developers of differing abilities and specialties;</li>
-    <li>have a number of different developers working on a product at any given time;</li>
-    <li>on-board new staff regularly;</li>
-    <li>have a number of codebases that developers dip in and out of.</li>
+    <li>producten bouwen en onderhouden voor een redelijke tijdsduur;</li>
+    <li>ontwikkelaars van verschillende vaardigheden en specialiteiten hebben;</li>
+    <li>een aantal verschillende ontwikkelaars hebben die op een bepaald moment aan een product werken;</li>
+    <li>regelmatig nieuw personeel aan boord nemen;</li>
+    <li>een aantal codebases hebben die ontwikkelaars in en uit dippen.</li>
   </ul>
 </blockquote>
 
 ### Disclaimer
 
-First things first: **this is not a CSS styleguide**. This document will not discuss naming conventions for CSS classes, modular patterns and the question of IDs in the CSS world. These guidelines only aim at dealing with Sass-specific content.
+Allereerst: **Dit is geen CSS-stijlgids**. Dit document zal geen conventies van naamgevingsconventies voor CSS-klassen geven, modulaire patronen en de vraag van ID's in de CSS-wereld. Deze richtlijnen zijn alleen gericht op het omgaan met sass-specifieke inhoud.
 
-Also, this styleguide is my own and therefore **very opinionated**. Think of it as a collection of methodologies and advice that I have polished and given over the years. It also gives me the opportunity to link to a handful of insightful resources, so be sure to check the *further readings*.
+Ook is deze stijlgids de mijne en daarom **zeer eigenwijs**. Zie het als een verzameling van methodologieën en advies die ik in de loop van de jaren heb gepolijst en gegeven. Het geeft me ook de mogelijkheid om te linken naar een handvol inzichtelijke bronnen, dus controleer de *verdere metingen*.
 
-Obviously, this is certainly not the only way of doing things, and it may or may not suit your project. Feel free to pick from it and adapt it to your needs. As we say, *your mileage may vary*.
+Vanzelfsprekend is dit zeker niet de enige manier om dingen te doen, en het kan al dan niet bij uw project passen. Voelt u vrij om eruit te halen en het aan te passen aan uw behoeften. Zoals we zeggen, *kunnen uw kilometers variëren*.
 
-### Key principles
+### Basisprincipes
 
-At the end of the day, if there is one thing I would like you to get from this whole styleguide, it is that **[Sass should be kept as simple as it can be](https://www.sitepoint.com/keep-sass-simple/)**.
+Aan het einde van de dag, als er één ding is, zou ik willen dat u van deze hele stijlgids krijgt, is het dat **[SASS zo eenvoudig moet worden gehouden als het kan zijn](https://www.sitepoint.com/keep-sass-simple/)**.
 
-Thanks to my silly experiments like [bitwise operators](https://github.com/KittyGiraudel/SassyBitwise), [iterators and generators](https://github.com/KittyGiraudel/SassyIteratorsGenerators) and [a JSON parser](https://github.com/KittyGiraudel/SassyJSON) in Sass, we are all well aware of what one can do with this preprocessor.
+Dankzij mijn domme experimenten zoals [bitwise operators](https://github.com/KittyGiraudel/SassyBitwise), [iterators and generators](https://github.com/KittyGiraudel/SassyIteratorsGenerators) en [een JSON parser](https://github.com/KittyGiraudel/SassyJSON) in Sass, zijn we allemaal goed bewust van wat men kan doen met deze preprocessor.
 
-Meanwhile, CSS is a simple language. Sass, being intended to write CSS, should not get much more complex than regular CSS. The [KISS principle](https://en.wikipedia.org/wiki/KISS_principle) (Keep It Simple Stupid) is key here and may even take precedence over the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (Don’t Repeat Yourself) in some circumstances.
+Ondertussen is CSS een eenvoudige taal. Sass, die bedoeld is om CSS te schrijven, mag niet veel complexer worden dan gewone CSS. Het [KISS Principe](https://nl.wikipedia.org/wiki/KISS-principe) (Keep It Simple Stupid) is hier de sleutel en kan zelfs voorrang hebben over het [DRY principe](https://nl.wikipedia.org/wiki/DRY_(programmeren)) (Don’t Repeat Yourself) in sommige omstandigheden.
 
-Sometimes, it’s better to repeat a little to keep the code maintainable, rather than building a top-heavy, unwieldy, unnecessarily complicated system that is completely unmaintainable because it is overly complex.
+Soms is het beter om een beetje te herhalen om de code onderhoudbaar te houden, in plaats van een topzware, onhandelbare, onnodig gecompliceerde systeem te bouwen dat volledig ontmoedigend is omdat het overdreven complex is.
 
-Also, and let me quote [Harry Roberts](https://csswizardry.com) once again, **pragmatism trumps perfection**. At some point, you will probably find yourself going against the rules described here. If it makes sense, if it feels right, do it. Code is just a means, not an end.
+Ook, en laat me [Harry Roberts](https://cswizardry.com) opnieuw citeren, **pragmatisme overtreft perfectie**. Op een gegeven moment zult u waarschijnlijk merken dat u tegen de hier beschreven regels gaat. Als het logisch is, als het goed voelt, doe het dan. Code is slechts een middel, geen einde.
 
-### Extending the guidelines
+### Verlengen van de richtlijnen
 
-A large part of this styleguide is strongly opinionated. I have been reading and writing Sass for several years now, to the point where I now have a lot of principles when it comes to writing clean stylesheets. I understand that it might not please nor suit everybody, and this is perfectly normal.
+Een groot deel van deze stijlgids is sterk eigenwijs. Ik ben nu al enkele jaren Sass aan het lezen en schrijven, tot het punt waarop ik nu veel principes heb als het gaat om het schrijven van schone stylesheets. Ik begrijp dat het misschien niet bij iedereen past, en dit is volkomen normaal.
 
-Although, I believe that guidelines are made to be extended. Extending Sass Guidelines could be as simple as having a document stating that the code is following the guidelines from this styleguide except for a few things; in which case, specific rules would be explained below.
+Hoewel, ik ben van mening dat richtlijnen worden gemaakt om te worden verlengd. Uitbreiden van SASS-richtlijnen kan zo eenvoudig zijn als het hebben van een document waarin staat dat de code de richtlijnen van deze stijlgids volgt, behalve een paar dingen; In welk geval zouden specifieke regels hieronder worden uitgelegd.
 
-An example of styleguide extension can be found on the [SassDoc repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
+Een voorbeeld van stijlgids-extensie is te vinden op de [Sassdoc-repository](https://github.com/SassDoc/sassdoc/blob/master/GUIDELINES.md):
 
-> This is an extension to [Node Styleguide](https://github.com/felixge/node-style-guide) by Felix Geisendörfer. Anything from this document overrides what could be said in the Node Styleguide.
+> Dit is een extensie van [Node StyleGuide](https://github.com/felixge/nodo-style-guide) van Felix Geisendörfer. Alles van dit document overschrijft wat erin kan worden gezegd in de Node Styleguide.

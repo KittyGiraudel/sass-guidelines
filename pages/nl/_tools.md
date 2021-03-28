@@ -1,51 +1,51 @@
 
 ## Tools
 
-What’s nice about a CSS preprocessor as popular as Sass is that it comes with a whole ecosystem of frameworks, plugins, libraries and tools. After 8 years of existence, we are getting closer and closer to the point where [everything that can be written in Sass has been written in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
+Wat leuk is aan een CSS-preprocessor zo populair als Sass is dat het wordt geleverd met een geheel ecosysteem van frameworks, plug-ins, bibliotheken en tools. Na 8 jaar bestaan zijn we dichter en dichter bij het punt waar [alles in Sass kan worden geschreven in Sass](https://kittygiraudel.com/2014/10/27/rethinking-atwoods-law/).
 
-However my advice would be to lower the number of dependencies to the strict minimum. Managing dependencies is some sort of hell you don’t want to be part of. Plus, there is little to no need for external dependencies when it comes to Sass.
+Mijn advies zou echter zijn om het aantal dependencies tot het strikte minimum te verlagen. Het beheren van dependencies is een soort hel waar u niet deel van wilt maken. Bovendien is er weinig tot geen behoefte aan externe dependencies als het gaat om SASS.
 
 ### Compass
 
-[Compass](http://compass-style.org/) is the main [Sass framework](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/) out there. Developed by [Chris Eppstein](https://twitter.com/chriseppstein), one of the two core designers of Sass, I don’t see it dramatically losing in popularity for a while, if you want my opinion.
+[Compass](http://compass-style.org/) is de hoofd [Sass Framework](https://www.sitepoint.com/compass-or-bourbon-sass-frameworks/). Ontwikkeld door [Chris Eppstein](https://twitter.com/chriseppstein), een van de twee kernontwerpers van Sass, ik zie het niet drastisch verliezen in populariteit voor een tijdje, als u mijn mening wilt.
 
-Still, [I do not use Compass anymore](https://www.sitepoint.com/dont-use-compass-anymore/), the main reason is that it slows Sass down a lot. Ruby Sass is quite slow in itself, so adding more Ruby and more Sass on top of it doesn’t really help.
+Toch, [ik gebruik Compass niet meer](https://www.sitepoint.com/dont-use-compass-anymore/), de belangrijkste reden is dat het veel vertraagt. Ruby Sass is vrij langzaam op zich, dus het toevoegen van meer Ruby en meer Sass erbovenop helpt niet echt.
 
-The thing is, we use very little from the whole framework. Compass is huge. Cross-browser compatibility mixins is just the tip of the iceberg. Math functions, image helpers, spriting… There is so much that can be done with this great piece of software.
+Het ding is, we gebruiken heel weinig van het hele framework. Compass is enorm. Cross-Browser compatibiliteit Mixins is slechts het topje van de ijsberg. Wiskundige functies, beeldhelpers, spriting... Er is zoveel dat kan worden gedaan met dit geweldige stukje software.
 
-Unfortunately, this is all sugar and there is no killer feature in there. An exception could be made of the sprite builder which is *really great*, but [Grunticon](https://github.com/filamentgroup/grunticon) and [Grumpicon](http://grumpicon.com/) do the job as well, and have the benefit of being pluggable in the build process.
+Helaas is dit allemaal suiker en is er geen moordende functie. Een uitzondering kan worden gemaakt van de sprite builder die *echt geweldig* is, maar [grunticon](https://github.com/filamentgroup/grunticon) en [Grumpicon](http://grumpicon.com/) doen het werk ook, en hebben het voordeel van plugbaar in het bouwproces.
 
-Anyway, I do not forbid the use of Compass although I would not recommend it either, especially since it is not LibSass-compatible (even if efforts have been made in that direction). If you feel better using it, fair enough, but I don’t think you’ll get much from it at the end of the day.
+Hoe dan ook, ik verbied niet het gebruik van Compass, hoewel ik het ook niet zou aanraden, vooral omdat het niet LibSass-compatibel is (zelfs als inspanningen in die richting zijn gemaakt). Als u het fijner vindt om het te gebruiken, fair enough, maar ik denk niet dat u er veel van krijgt aan het einde van de dag.
 
 <div class="note">
-  <p>Ruby Sass is currently going under some outstanding optimizations that are specifically targeted at logic-heavy styles with many functions and mixins. They should dramatically improve performance to the point where Compass and other frameworks might not be slowing Sass anymore.</p>
+  <p>Ruby Sass gaat momenteel onder enkele uitstekende optimalisaties die specifiek zijn gericht op logica-zware stijlen met veel functies en mixins. Ze moeten de prestaties drastisch verbeteren tot het punt waar Compass en andere frameworks Sass misschien niet meer vertragen.</p>
 </div>
 
-### Grid systems
+### Rastersystemen
 
-Not using a grid system is not an option now that Responsive Web Design is all over the place. To make designs look consistent and solid across all sizes, we use some sort of grid to lay out the elements. To avoid having to code this grid work over and over again, some brilliant minds made theirs reusable.
+Het gebruik van een rastersysteem is geen optie nu dat Responsive Web Design overal is. Om ontwerpen te maken die consistent en solide in alle maten lijken, gebruiken we een soort raster om de elementen op te leggen. Om het coderen van dit rastersysteem elke keer te vermijden, maakten enkele briljante mensen hun systeem herbruikbaar.
 
-Let me put this straight: I am not a big fan of grid systems. Of course I do see the potential, but I think most of them are completely overkill and are mostly used to draw red columns on a white background in nerdy designers’ speaker decks. When is the last time you thought *thank-God-I-have-this-tool-to-build-this-2-5-3.1-π-grid*? That’s right, never. Because in most cases, you just want the usual regular 12-columns grid, nothing fancy.
+Laat me dit recht zetten: ik ben geen grote fan van rastersystemen. Natuurlijk zie ik het potentieel, maar ik denk dat de meesten van hen volledig overdreven zijn en meestal worden gebruikt om rode kolommen op een witte achtergrond in de sprekerdecks van nerdy ontwerpers te tekenen. Wanneer was de laatste keer dat u dacht *God-zij-dank-ik-heb-deze-tool-om-deze-2-5-3.1-π-grid-te-bouwen*? Dat klopt, nooit. Want in de meeste gevallen wilt u gewoon het gebruikelijke normale rooster van 12 kolommen, niets bijzonders.
 
-If you are using a CSS framework for your project like [Bootstrap](https://getbootstrap.com/) or [Foundation](https://get.foundation/), chances are high it includes a grid system already in which case I would recommend to use it to avoid having to deal with yet another dependency.
+Als u een CSS-framework gebruikt voor uw project zoals [Bootstrap](https://getbootstrap.com/) of [Foundation](https://get.foundation/), is de kans groot dat het al een rastersysteem bevat in welk geval Ik zou aanraden om het te gebruiken om te voorkomen dat ik met nog een andere dependency zou moeten dealen.
 
-If you are not tied to a specific grid system, you will be pleased to know there are two top-notch Sass powered grid engines out there: [Susy](https://www.oddbird.net/susy/) and [Singularity](https://github.com/at-import/Singularity). Both do much more than you will ever need so you can pick the one you prefer between these two and be sure all your edge cases&mdash;even the most nifty ones&mdash;will be covered. If you ask me, Susy has a slightly better community, but that’s my opinion.
+Als u niet gebonden bent aan een specifiek rastersysteem, zult u blij zijn te weten dat er twee eersteklas door Sass aangedreven rastermotoren zijn: [Susy](https://www.oddbird.net/susy/) en [Singularity ](https://github.com/at-import/Singularity). Beide doen veel meer dan u ooit nodig zult hebben, dus u kunt degene kiezen die u verkiest tussen deze twee en er zeker van zijn dat al uw edge cases&mdash;zelfs de handigste&mdash;worden gedekt. Als u het mij vraagt, heeft Susy een iets betere gemeenschap, maar dat is mijn mening.
 
-Or you can head over to something a bit more casual, like [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). All in all, the choice will not have much of an impact on your coding style, so this is pretty much up to you at this point.
+Of u kunt naar iets meer casual gaan, zoals [csswizardry-grids](https://github.com/csswizardry/csswizardry-grids). Al met al heeft de keuze niet veel invloed op uw coderingsstijl, dus dit is op dit moment vrijwel aan u.
 
 ### SCSS-lint
 
-Linting code is very important. Usually, following guidelines from a styleguide helps reducing the amount of code quality mistakes but nobody’s perfect and there are always things to improve. So you could say that linting code is as important as commenting it.
+Code linting is erg belangrijk. Gewoonlijk helpt het volgen van de richtlijnen van een stijlgids om het aantal fouten in de codekwaliteit te verminderen, maar niemand is perfect en er zijn altijd dingen die verbeterd kunnen worden. U zou dus kunnen zeggen dat code linting net zo belangrijk is als commentaar geven.
 
-[SCSS-lint](https://github.com/causes/scss-lint) is a tool to help you keep your SCSS files clean and readable. It is fully customisable and easy to integrate with your own tools.
+[SCSS-lint](https://github.com/causes/scss-lint) is een hulpmiddel om uw SCSS-bestanden schoon en leesbaar te houden. Het is volledig aanpasbaar en gemakkelijk te integreren met uw eigen tools.
 
-Fortunately, SCSS-lint recommendations are very similar to those described in this document. In order to configure SCSS-lint according to Sass Guidelines, may I recommend the following setup:
+Gelukkig lijken de SCSS-lint-aanbevelingen sterk op de aanbevelingen die in dit document worden beschreven. Om SCSS-lint te configureren volgens de Sass-richtlijnen, kan ik de volgende configuratie aanbevelen:
 
 {% include snippets/tools/01/index.html %}
 
-If you are not convinced of the necessity to use SCSS-lint, I recommend reading these great articles: [Clean Up your Sass with SCSS-lint](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](https://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) and [An Auto-Enforceable SCSS Styleguide](https://davidtheclark.com/scss-lint-styleguide/).
+Als u niet overtuigd bent van de noodzaak om SCSS-lint te gebruiken, raad ik u aan deze geweldige artikelen te lezen: [Clean Up your Sass with SCSS-lint](https://blog.martinhujer.cz/clean-up-your-sass-with-scss-lint/), [Improving Sass code quality on theguardian.com](https://www.theguardian.com/info/developer-blog/2014/may/13/improving-sass-code-quality-on-theguardiancom) en [An Auto-Enforceable SCSS Styleguide](https://davidtheclark.com/scss-lint-styleguide/).
 
 <div class="note">
-  <p>If you want to plug SCSS lint into your Grunt build process, you will be pleased to know there is a Grunt plugin for that called <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
-  <p>Also, if you are on the hunt for a neat application that works with SCSS-lint and the like, the guys at <a href="https://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat…) are working on <a href="https://houndci.com/">Hound</a>.</p>
+  <p>Als u SCSS-lint in uw Grunt-buildproces wilt aansluiten, zult u blij zijn te weten dat er een Grunt-plug-in voor is genaamd <a href="https://github.com/ahmednuaman/grunt-scss-lint">grunt-scss-lint</a>.</p>
+  <p>En als u op zoek bent naar een handige applicatie die werkt met SCSS-lint en dergelijke, kunnen de mensen van <a href="https://thoughtbot.com/">Thoughtbot</a> (Bourbon, Neat...) werken aan <a href="https://houndci.com/">Hound</a>.</p>
 </div>

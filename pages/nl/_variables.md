@@ -25,7 +25,7 @@ Het volgende codefragment legt het *variable shadowing*-concept uit.
 
 ### `!default` flag
 
-Bij het bouwen van een bibliotheek, een framework, een grid-systeem of een stukje Sass dat bedoeld is om te worden gedistribueerd en gebruikt door externe ontwikkelaars, moeten alle configuratievariabelen worden gedefinieerd met de `!default` flag zodat ze kunnen worden overschreven.
+Bij het bouwen van een bibliotheek, een framework, een rastersysteem of een stukje Sass dat bedoeld is om te worden gedistribueerd en gebruikt door externe ontwikkelaars, moeten alle configuratievariabelen worden gedefinieerd met de `!default` flag zodat ze kunnen worden overschreven.
 
 {% include snippets/variables/02/index.html %}
 
