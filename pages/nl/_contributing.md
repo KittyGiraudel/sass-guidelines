@@ -5,4 +5,4 @@ Sass Guidelines is een gratis project dat ik in mijn vrije tijd onderhoud. Het b
 
 Als u nu zin hebt om een bijdrage te leveren, weet dan dat erover tweeten, het verspreiden van het woord of het oplossen van een kleine typefout door een issue of een pull-request te openen in de [GitHub-repository](https://github.com/KittyGiraudel/sass-guidelines) geweldig zou zijn!
 
-Last but not least voordat we beginnen: als u dit document leuk vond, of als het nuttig is voor u of uw team, overweeg dan om het te steunen zodat ik eraan kan blijven werken!
+_Last but not least_ voordat we beginnen: als u dit document leuk vond, of als het nuttig is voor u of uw team, overweeg dan om het te steunen zodat ik eraan kan blijven werken!

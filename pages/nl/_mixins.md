@@ -41,13 +41,13 @@ Sass is eigenlijk best slim met mixins en functieverklaringen, zo erg zelfs dat 
 
 Voor meer informatie over of het het beste is om meerdere argumenten, een lijst of een argumentenlijst te gebruiken, [SitePoint heeft een mooi stuk over het onderwerp](https://www.sitepoint.com/sass-multiple-arguments-lists-or-arglist/).
 
-### Mixins en leveranciersvoorvoegsels
+### Mixins en vendorvoorvoegsels
 
-Het kan verleidelijk zijn om aangepaste mixins te definiëren om prefixen van leveranciers af te handelen voor niet-ondersteunde of gedeeltelijk ondersteunde CSS-eigenschappen. Maar we willen dit niet doen. Ten eerste, als u [Autoprefixer](https://github.com/postcss/autoprefixer) kunt gebruiken, gebruik dan Autoprefixer. Het verwijdert Sass-code uit uw project, is altijd up-to-date en zal noodzakelijkerwijs veel beter werk leveren dan u bij toevoegen van voorvoegsel.
+Het kan verleidelijk zijn om aangepaste mixins te definiëren om prefixen van vendors af te handelen voor niet-ondersteunde of gedeeltelijk ondersteunde CSS-eigenschappen. Maar we willen dit niet doen. Ten eerste, als u [Autoprefixer](https://github.com/postcss/autoprefixer) kunt gebruiken, gebruik dan Autoprefixer. Het verwijdert Sass-code uit uw project, is altijd up-to-date en zal noodzakelijkerwijs veel beter werk leveren dan u bij toevoegen van voorvoegsel.
 
-Helaas is Autoprefixer niet altijd een optie. Als u ofwel [Bourbon](https://bourbon.io/) of [Compass](http://compass-style.org/) gebruikt, weet u misschien al dat ze allebei een verzameling mixins bieden die voorvoegsels van leveranciers verwerken voor jou. Gebruik die.
+Helaas is Autoprefixer niet altijd een optie. Als u ofwel [Bourbon](https://bourbon.io/) of [Compass](http://compass-style.org/) gebruikt, weet u misschien al dat ze allebei een verzameling mixins bieden die voorvoegsels van vendors verwerken voor jou. Gebruik die.
 
-Als u Autoprefixer niet kunt gebruiken en noch Bourbon noch Compass kunt gebruiken, dan en alleen dan, kunt u uw eigen mixin hebben om CSS-eigenschappen voor te voegen. Maar. Bouw alstublieft geen mixin per eigenschap, maar druk elke leverancier handmatig af.
+Als u Autoprefixer niet kunt gebruiken en noch Bourbon noch Compass kunt gebruiken, dan en alleen dan, kunt u uw eigen mixin hebben om CSS-eigenschappen voor te voegen. Maar. Bouw alstublieft geen mixin per eigenschap, maar druk elke vendor handmatig af.
 
 {% include snippets/mixins/05/index.html %}
 

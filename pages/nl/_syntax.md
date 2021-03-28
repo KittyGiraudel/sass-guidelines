@@ -331,7 +331,7 @@ Also, when using component-agnostic state classes such as `.is-active`, it is pe
 
 {% include snippets/syntax/34/index.html %}
 
-Last but not least, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
+_Last but not least_, when styling an element because it happens to be contained within another specific element, it is also fine to use nesting to keep everything about the component at the same place.
 
 {% include snippets/syntax/35/index.html %}
 
