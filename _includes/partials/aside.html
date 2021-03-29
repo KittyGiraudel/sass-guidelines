@@ -1,8 +1,8 @@
 {% assign id = include.id | default: "options-panel" %}
 
-<aside class="aside" id="{{ id }}">
-  <div class="aside__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-  <div class="aside__content" role="dialog" aria-labelledby="aside-title">
+<aside class="aside" id="{{ id }}" aria-labelledby="aside-title">
+  <div class="aside__overlay" data-a11y-dialog-hide></div>
+  <div class="aside__content" role="document">
     <h2 class="aside__title" id="aside-title">
       {{ site.data[page.language].translations.aside_title }}
     </h2>

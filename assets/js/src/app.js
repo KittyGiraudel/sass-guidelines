@@ -78,10 +78,7 @@
   function initialiseOptionsPanel () {
     $('a[href="#options-panel"]').forEach(replaceSidebarOpener)
 
-    var dialog = new A11yDialog(
-      document.querySelector('#options-panel'),
-      document.querySelector('#main-content')
-    )
+    var dialog = new A11yDialog(document.querySelector('#options-panel'))
 
     dialog
       .on('show', function (el) { el.classList.add('is-open') })
