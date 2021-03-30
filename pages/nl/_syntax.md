@@ -115,7 +115,7 @@ Het toevoegen van een eenheid als tekenreeks aan een getal resulteert in een tek
 
 #### Magische getallen
 
-"Magisch getal" is een [oude schoolprogrammering] (https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term voor *naamloze numerieke constante*. Kortom, het is gewoon een willekeurig getal dat toevallig *werkt*™, maar het is niet gebonden aan een logische verklaring.
+"Magisch getal" is een [oude schoolprogrammering](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) term voor *naamloze numerieke constante*. Kortom, het is gewoon een willekeurig getal dat toevallig *werkt*™, maar het is niet gebonden aan een logische verklaring.
 
 Onnodig te zeggen **magische getallen zijn een plaag en moeten koste wat het kost worden vermeden**. Als het u niet lukt om een redelijke verklaring te vinden waarom een getal werkt, voeg dan een uitgebreide opmerking toe waarin u uitlegt hoe u daar bent gekomen en waarom u denkt dat het werkt. Toegeven dat u niet weet waarom iets werkt, is nog steeds nuttiger voor de volgende ontwikkelaar dan dat hij moet uitzoeken wat er vanaf het begin aan de hand is.
 
