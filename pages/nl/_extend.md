@@ -11,7 +11,7 @@ Het echte doel van `@extension` is echter om de relaties (beperkingen) binnen ui
 
 Gegeven dat, het eenvoudig is om te zien hoe het uitbreiden van selectors met milde beperkingen kan leiden tot een explosie van selectors. Als `.baz .qux` de extensie `.foo .bar` uitbreidt, kan de resulterende selector `.foo .baz .qux` of `.baz .foo .qux` zijn, aangezien zowel `.foo` als `.baz` algemene voorouders. Dit kunnen ouders, grootouders enz. Zijn.
 
-Probeer relaties altijd te definiëren via tijdelijke aanduidingen voor selectoren, niet met daadwerkelijke selectors. Dit geeft u de vrijheid om elke naamgevingsconventie die u hebt voor uw selectors te gebruiken (en te wijzigen), en aangezien relaties maar één keer worden gedefinieerd binnen de tijdelijke aanduidingen, is de kans veel kleiner dat u onbedoelde selectors produceert.
+Probeer relaties altijd te definiëren via tijdelijke aanduidingen voor selectors, niet met daadwerkelijke selectors. Dit geeft u de vrijheid om elke naamgevingsconventie die u hebt voor uw selectors te gebruiken (en te wijzigen), en aangezien relaties maar één keer worden gedefinieerd binnen de tijdelijke aanduidingen, is de kans veel kleiner dat u onbedoelde selectors produceert.
 
 Gebruik voor het erven van stijlen alleen `@extend` als de uitbreidende `.class` of `%placeholder` selector _een soort_ van de uitgebreide selector is. Een `.error` is bijvoorbeeld een soort `.warning`, dus `.error` kan `@extend .warning`.
 

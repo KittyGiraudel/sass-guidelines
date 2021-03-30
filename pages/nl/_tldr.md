@@ -52,7 +52,7 @@ Deze richtlijnen zijn vrij lang en soms is het goed om ze in een kortere versie 
 
 #### Selector nesten
 
-* Vermijd het nesten van selectoren wanneer dit niet nodig is (wat de meeste gevallen vertegenwoordigt).
+* Vermijd het nesten van selectors wanneer dit niet nodig is (wat de meeste gevallen vertegenwoordigt).
 * Gebruik selector nesten voor pseudo-klassen en pseudo-elementen.
 * Mediaquery's kunnen ook in hun relevante selector worden genest.
 
