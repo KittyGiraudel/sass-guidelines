@@ -1,0 +1,42 @@
+configuration:
+  version: 1.3
+  label: Dutch
+  prefix: /nl/
+  available: true
+  translators:
+    - name: Noah van der Veer
+      link: https://github.com/noah-vdv
+
+# For more information about the context around these translations, refer to
+# _locales/en.yml
+translations:
+  baseline: "Een eigenzinnige stijlgids voor het schrijven van gezonde, onderhoudbare en schaalbare Sass."
+  footer_content: "Met liefde gemaakt door [Kitty Giraudel](https://kittygiraudel.com) en vertaald door [Noah van der Veer](https://github.com/noah-vdv)"
+
+  aside_title: "Opties"
+  aside_report: "Een probleem (issue) melden"
+  aside_support: "Steun het project"
+  aside_tweet: "Tweet het"
+  aside_syntax: "Code syntaxis"
+  aside_language: "Taal"
+  aside_close: "Sluit het optiepaneel"
+  aside_open: "Open het optiepaneel"
+
+  link_to_top: "Terug naar boven"
+  link_to_skip: "Naar de hoofdinhoud"
+  link_to_chapter: "Link naar dit hoofdstuk:"
+  link_to_edit_chapter: "Bewerk dit hoofdstuk op GitHub:"
+  link_to_twitter: "Zoek me op op Twitter"
+
+  contributing_support_button: "Ondersteun Sass Guidelines"
+  contributing_tweet_button: "Vertel het verder"
+
+  donate_content: "Als je Sass Guidelines leuk vindt, overweeg dan om ze te steunen."
+  donate_button: "Ondersteun Sass Guidelines"
+
+  note: "Notitie"
+
+  image_color_functions: "Illustratie van het verschil tussen `lighten`/`darken` en `mix` door [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
+  image_order_poll: "Grafiek die de volgorde van de CSS-declaraties van ontwikkelaars laat zien"
+  image_sassdoc: "Documentatie gegenereerd door SassDoc"
+  image_wallpaper: "Wallpaper van [Julien He](https://twitter.com/julien_he)"

@@ -1,0 +1,36 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/// Bereken de maximale diepte van een map
+/// @param {Map} $map
+/// @return {Number} max diepte van `$map`
+@function map-depth($map) {
+  $level: 1;
+
+  @each $key, $value in $map {
+    @if type-of($value) == 'map' {
+      $level: max(map-depth($value) + 1, $level);
+    }
+  }
+
+  @return $level;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/// Bereken de maximale diepte van een map
+/// @param {Map} $map
+/// @return {Number} max diepte van `$map`
+@function map-depth($map)
+  $level: 1
+
+  @each $key, $value in $map
+    @if type-of($value) == 'map'
+      $level: max(map-depth($value) + 1, $level)
+
+  @return $level;
+```
+  </div>
+</div>

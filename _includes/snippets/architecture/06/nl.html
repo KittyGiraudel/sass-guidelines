@@ -1,0 +1,87 @@
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+// Knopspecifieke variabelen
+$button-color: $secondary-color;
+
+// … inclusief alle knopspecifieke:
+// - mixins
+// - tijdelijke aanduidingen
+// - functies
+
+/**
+ * Knoppen
+ */
+.button {
+  @include vertical-rhythm;
+  display: block;
+  padding: 1rem;
+  color: $button-color;
+  // … etc.
+
+  /**
+   * Inline knoppen op grote schermen
+   */
+  @include respond-to('medium') {
+    display: inline-block;
+  }
+}
+
+/**
+ * Pictogrammen binnen knoppen
+ */
+.button > svg {
+  fill: currentcolor;
+  // … etc.
+}
+
+/**
+ * Inline-knop
+ */
+.button--inline {
+  display: inline-block;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+// Knopspecifieke variabelen
+$button-color: $secondary-color
+
+// ... inclusief alle knopspecifieke:
+// - mixins
+// - tijdelijke aanduidingen
+// - functies
+
+/**
+ * Knoppen
+ */
+.button
+  +vertical-rhythm
+  display: block
+  padding: 1rem
+  color: $button-color
+  // ... etc.
+
+  /**
+   * Inline knoppen op grote schermen
+   */
+  +respond-to('medium')
+    display: inline-block
+}
+
+/**
+ * Pictogrammen binnen knoppen
+ */
+.button > svg
+  fill: currentcolor
+  // ... etc.
+
+/**
+ * Inline-knop
+ */
+.button--inline
+  display: inline-block
+```
+  </div>
+</div>

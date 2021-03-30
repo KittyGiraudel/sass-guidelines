@@ -1,0 +1,43 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/// Maak een kleur iets lichter
+/// @access public
+/// @param {Color} $color - kleur om te kleuren
+/// @param {Number} $percentage - percentage van `$color` in geretourneerde kleur
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Een kleur iets donkerder maken
+/// @access public
+/// @param {Color} $color - kleur tot schaduw
+/// @param {Number} $percentage - percentage van `$color` in geretourneerde kleur
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/// Maak een kleur iets lichter
+/// @access public
+/// @param {Color} $color - kleur om te kleuren
+/// @param {Number} $percentage - percentage van `$color` in geretourneerde kleur
+/// @return {Color}
+@function tint($color, $percentage)
+  @return mix($color, white, $percentage)
+
+/// Een kleur iets donkerder maken
+/// @access public
+/// @param {Color} $color - kleur tot schaduw
+/// @param {Number} $percentage - percentage van `$color` in geretourneerde kleur
+/// @return {Color}
+@function shade($color, $percentage)
+  @return mix($color, black, $percentage)
+```
+  </div>
+</div>

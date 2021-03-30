@@ -1,0 +1,35 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+/// Mixin-helper om voorvoegsels van leveranciers uit te voeren
+/// @access public
+/// @author KittyGiraudel
+/// @param {String} $property - CSS-eigenschap zonder prefix
+/// @param {*} $value - Ruwe CSS-waarde
+/// @param {List} $prefixes - Lijst met voorvoegsels die moeten worden uitgevoerd
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+/// Mixin-helper om voorvoegsels van leveranciers uit te voeren
+/// @access public
+/// @author KittyGiraudel
+/// @param {String} $property - CSS-eigenschap zonder prefix
+/// @param {*} $value - Ruwe CSS-waarde
+/// @param {List} $prefixes - Lijst met voorvoegsels die moeten worden uitgevoerd
+=prefix($property, $value, $prefixes: ())
+  @each $prefix in $prefixes
+    -#{$prefix}-#{$property}: $value
+
+  #{$property}: $value
+```
+  </div>
+</div>

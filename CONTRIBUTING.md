@@ -21,7 +21,7 @@ Read [TRANSLATING.md](TRANSLATING.md) to know more about this.
 
 ## Submitting your work
 
-Once you are done with the translation, make sure your branch is up-to-date with the `master` branch.
+Once you are done with the translation, make sure your branch is up-to-date with the `main` branch.
 
 ```
 $ git fetch
@@ -36,4 +36,4 @@ Then it is time to push your branch to your fork
 $ git push origin <LANGUAGE>
 ```
 
-Last but not least, go on GitHub, and submit a pull-request from your branch against the `master` of the original repository.
+Last but not least, go on GitHub, and submit a pull-request from your branch against the `main` of the original repository.

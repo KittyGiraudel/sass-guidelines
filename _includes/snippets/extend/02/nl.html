@@ -1,0 +1,74 @@
+
+<div class="code-block">
+  <div class="code-block__wrapper" data-syntax="scss">
+```scss
+%foo {
+  content: 'foo';
+}
+
+// Nope
+@media print {
+  .bar {
+    // Dit werkt niet. Erger nog: het crasht.
+    @extend %foo;
+  }
+}
+
+// Yep
+@media print {
+  .bar {
+    @at-root (without: media) {
+      @extend %foo;
+    }
+  }
+}
+
+// Yep
+%foo {
+  content: 'foo';
+
+  &-print {
+    @media print {
+      content: 'foo print';
+    }
+  }
+}
+
+@media print {
+  .bar {
+    @extend %foo-print;
+  }
+}
+```
+  </div>
+  <div class="code-block__wrapper" data-syntax="sass">
+```sass
+%foo
+  content: 'foo'
+
+// Nope
+@media print
+  .bar
+    // Dit werkt niet. Erger nog: het crasht.
+    @extend %foo
+
+// Yep
+@media print
+  .bar
+    @at-root (without: media)
+      @extend %foo
+
+// Yep
+%foo
+  content: 'foo'
+
+  &-print
+    @media print
+      content: 'foo print'
+
+@media print
+  .bar
+    @extend %foo-print
+```
+  </div>
+</div>
