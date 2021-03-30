@@ -12,7 +12,7 @@
 
 {% capture translators %}{% for translator in site.data[page.language].configuration.translators %}<a href="{{ translator.link }}" target="_blank" rel="noopener noreferrer">{{ translator.name }}</a>{% if forloop.rindex0 > 1 %}, {% endif %}{% if forloop.rindex0 == 1 %} and {% endif %}{% endfor %}{% endcapture %}
 
-<div class="{{ class }}">
+<div class="{{ class }}" lang="en">
   <div class="translation-warning__inner">
     <p>You are viewing the {{ site.data[page.language].configuration.label }} translation by {{ translators }} of the original <a href="/">Sass Guidelines</a> from <a target="_blank" href="https://kittygiraudel.com" rel="noopener noreferrer">Kitty Giraudel</a>.</p>
     <p>This version is exclusively maintained by contributors without the review of the main author, therefore might not be completely authentic{% if site.data[page.language].configuration.version != site.data.en.configuration.version %}, especially since it is currently in version {{ site.data[page.language].configuration.version }} while the <a href="/">English version</a> is in version {{ site.data.en.configuration.version }}{% endif %}.</p>
