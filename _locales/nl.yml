@@ -26,7 +26,7 @@ translations:
   link_to_skip: "Naar de hoofdinhoud"
   link_to_chapter: "Link naar dit hoofdstuk:"
   link_to_edit_chapter: "Bewerk dit hoofdstuk op GitHub:"
-  link_to_twitter: "Zoek me op op Twitter"
+  link_to_twitter: "Zoek me op Twitter"
 
   contributing_support_button: "Ondersteun Sass Guidelines"
   contributing_tweet_button: "Vertel het verder"
