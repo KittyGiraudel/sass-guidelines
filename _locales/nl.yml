@@ -13,6 +13,11 @@ translations:
   baseline: "Een eigenzinnige stijlgids voor het schrijven van gezonde, onderhoudbare en schaalbare Sass."
   footer_content: "Met liefde gemaakt door [Kitty Giraudel](https://kittygiraudel.com) en vertaald door [Noah van der Veer](https://github.com/noah-vdv)"
 
+  translation_disclaimer: |
+    U bekijkt de nederlandse vertaling van [Noah van der Veer](https://github.com/noah-vdv) van de originele [Sass Guidelines](/) van [Kitty Giraudel](https://kittygiraudel.com).
+
+    Deze versie wordt exclusief onderhouden door bijdragers zonder de beoordeling van de hoofdauteur en is daarom mogelijk niet volledig authentiek.
+
   aside_title: "Opties"
   aside_report: "Een probleem (issue) melden"
   aside_support: "Steun het project"
