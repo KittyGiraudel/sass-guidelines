@@ -11,8 +11,7 @@
   "dependencies": {
     "a11y-dialog": "^7.0.3",
     "blingdotjs": "gist:7d867cda127e64d38f28",
-    "picturefill": "^3.0.3",
-    "sw-precache": "^5.2.1"
+    "picturefill": "^3.0.3"
   },
   "devDependencies": {
     "clean-css-cli": "^5.2.2",
@@ -21,6 +20,7 @@
     "spritesh": "^1.2.1",
     "standard": "^16.0.3",
     "svgo": "^2.3.0",
-    "uglify-js": "^3.13.3"
+    "uglify-js": "^3.13.3",
+    "workbox-cli": "^6.1.2"
   }
 }
