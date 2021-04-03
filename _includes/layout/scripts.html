@@ -19,3 +19,6 @@
 <script defer src="/assets/js/src/helpers.js"></script>
 <script defer src="/assets/js/src/sidebar.js"></script>
 <script defer src="/assets/js/src/app.js"></script>
+{% if site.environment == 'production' %}
+<script defer src="/assets/js/src/sw.js"></script>
+{% endif %}
