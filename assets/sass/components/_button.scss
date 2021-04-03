@@ -29,7 +29,7 @@
   /**
    * Inlined buttons on large screens
    */
-  @include media('>medium') {
+  @include media(">medium") {
     display: inline-block;
   }
 }
@@ -88,7 +88,7 @@
 }
 
 .button-ui--back {
-  bottom: 50px;
+  bottom: 60px;
 }
 
 .button-ui--toggle {
