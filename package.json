@@ -9,7 +9,7 @@
     "start": "nps"
   },
   "dependencies": {
-    "a11y-dialog": "^7.0.3",
+    "a11y-dialog": "^7.1.0",
     "blingdotjs": "gist:7d867cda127e64d38f28",
     "picturefill": "^3.0.3"
   },
