@@ -13,6 +13,11 @@ translations:
   baseline: "Ein meinungsbasierter Styleguide für sinnvolles, wartbares und skalierbares Sass."
   footer_content: "Von [Kitty Giraudel](https://kittygiraudel.com) mit Liebe gemacht, und durch [Moritz Kröger](https://morkro.de) übersetzt."
 
+  translation_disclaimer: |
+    Du schaust dir gerade die deutsche Übersetzung von [Moritz Kröger](https://github.com/morkro) der originalen [Sass Guidelines](/) von [Kitty Giraudel](https://kittygiraudel.com) an.
+
+    Diese Version wird exklusiv durch die Übersetzer gepflegt, ohne zusätzliche Überprüfung des Hauptautors, und mag deshalb nicht vollständig authentisch sein.
+
   aside_title: "Optionen"
   aside_report: "Ein Problem melden"
   aside_support: "Unterstütze das Projekt"
