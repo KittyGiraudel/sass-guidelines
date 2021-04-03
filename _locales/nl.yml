@@ -39,7 +39,7 @@ translations:
   donate_content: "Als je Sass Guidelines leuk vindt, overweeg dan om ze te steunen."
   donate_button: "Ondersteun Sass Guidelines"
 
-  note: "Notitie"
+  note: "Opmerking"
 
   image_color_functions: "Illustratie van het verschil tussen `lighten`/`darken` en `mix` door [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
   image_order_poll: "Grafiek die de volgorde van de CSS-declaraties van ontwikkelaars laat zien"
