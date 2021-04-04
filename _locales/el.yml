@@ -19,7 +19,7 @@ translations:
   baseline: "Ένα δογματικό styleguide για συγγραφή ισορροπημένης, συντηρήσιμης και επεκτάσιμης Sass."
   footer_content: "Φτιαγμένο με μεράκι από τον [Kitty Giraudel](https://kittygiraudel.com) και μεταφράστηκε από τους [Kostantinos Margaritis](https://github.com/margaritis), [Adonis K.](https://github.com/varemenos), [Mod Kaffes](https://github.com/modkaffes) και [Sébastien Nikolaou](vhttps://github.com/sebdesign)"
 
-  translation_disclaimer:
+  translation_disclaimer: |
     Βλέπετε την ελληνική μετάφραση των [Μόδεστο Καφφέ](https://github.com/modkaffes), [Σεμπαστιέν Νικολάου](https://github.com/sebdesign), [Άδωνη Κακουλίδη](https://github.com/varemenos) και [Κωνσταντίνου Μαργαρίτη](https://github.com/margaritis) για τις πρωτότυπες [Οδηγίες για Sass](/) των [Kitty Giraudel](https://kittygiraudel.com).
 
     Αυτή η έκδοση συντηρείται αποκλειστικά από συνεισφέροντες χωρίς τον έλεγχο του κύριου συντάκτη, επομένως μπορεί να μην είναι εντελώς αυθεντική.
