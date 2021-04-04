@@ -1,6 +1,6 @@
 /* globals $ */
 
-(function (scope) {
+;(function (scope) {
   'use strict'
 
   // DOM queries
@@ -12,7 +12,7 @@
   var addOffsetView = 50
   var isLargerThanMobile = scope.evalClientResolution(975)
   var headingsOffset = headings.map(function (heading) {
-    return [ heading, scope.getOffset(heading) ]
+    return [heading, scope.getOffset(heading)]
   })
 
   var evalHeadingsPosition = function () {
@@ -21,8 +21,13 @@
     if (isLargerThanMobile) {
       // Loop over all headings offsets & compare scrollTop if already passed a value.
       for (var i = 0, offsets = headingsOffset.length; i < offsets; i++) {
-        var headingPassed = scrollTop >= headingsOffset[i][1] && headingsOffset[i + 1] && scrollTop < headingsOffset[i + 1][1]
-        var lastHeading = headingsOffset[i] === headingsOffset[offsets - 1] && scrollTop >= headingsOffset[i][1]
+        var headingPassed =
+          scrollTop >= headingsOffset[i][1] &&
+          headingsOffset[i + 1] &&
+          scrollTop < headingsOffset[i + 1][1]
+        var lastHeading =
+          headingsOffset[i] === headingsOffset[offsets - 1] &&
+          scrollTop >= headingsOffset[i][1]
 
         if (headingPassed) {
           highlightTableOfContents(headingsOffset[i])
@@ -38,14 +43,17 @@
     var bottom = scope.getOffset(footer)
     var current = scope.getDocumentScrollTop()
     var topFn = current > top ? 'add' : 'remove'
-    var bottomFn = (current + scope.getDocumentHeight()) > bottom ? 'add' : 'remove'
+    var bottomFn =
+      current + scope.getDocumentHeight() > bottom ? 'add' : 'remove'
 
     tableOfContents.classList[topFn]('sticky')
     tableOfContents.classList[bottomFn]('sticky-bottom')
   }
 
   var highlightTableOfContents = function (heading) {
-    var tocElem = tableOfContents.querySelector('a[href="#' + heading[0].id + '"]')
+    var tocElem = tableOfContents.querySelector(
+      'a[href="#' + heading[0].id + '"]'
+    )
     var inViewportElem = tableOfContents.querySelector('.in-viewport')
 
     if (!!tocElem && !tocElem.classList.contains('in-viewport')) {
@@ -62,4 +70,4 @@
   // Initial test
   evalHeadingsPosition()
   adjustTableOfContents()
-}(window))
+})(window)

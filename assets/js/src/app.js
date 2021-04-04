@@ -1,37 +1,38 @@
 /* globals $ */
 
-(function () {
+;(function () {
   'use strict'
 
-  function getTemplateContent (id) {
+  function getTemplateContent(id) {
     return document.getElementById(id).content.firstElementChild.cloneNode(true)
   }
 
-  function getChapterHeading (chapter) {
+  function getChapterHeading(chapter) {
     return chapter.querySelector('h2[id]')
   }
 
-  function getChapterName (chapter) {
+  function getChapterName(chapter) {
     return chapter.id.split('chapter-')[1]
   }
 
-  function getCurrentLocale () {
+  function getCurrentLocale() {
     return document.documentElement.getAttribute('lang')
   }
 
-  function getChapterEditUrl (chapter) {
-    var BASE_URL = 'https://github.com/KittyGiraudel/sass-guidelines/tree/main/pages'
+  function getChapterEditUrl(chapter) {
+    var BASE_URL =
+      'https://github.com/KittyGiraudel/sass-guidelines/tree/main/pages'
     var locale = getCurrentLocale()
     var fileName = '_' + getChapterName(chapter) + '.md'
 
-    return [ BASE_URL, locale, fileName ].join('/')
+    return [BASE_URL, locale, fileName].join('/')
   }
 
-  function createChapterLinks (chapter, heading) {
+  function createChapterLinks(chapter, heading) {
     var editLink = getTemplateContent('svg-pencil-tpl')
     var chapterLink = getTemplateContent('svg-link-tpl')
     var wrapper = document.createElement('div')
-    var title = (heading.innerText || heading.textContent)
+    var title = heading.innerText || heading.textContent
 
     editLink.href = getChapterEditUrl(chapter)
     chapterLink.href = '#' + heading.id
@@ -45,17 +46,17 @@
     return wrapper
   }
 
-  function redirectUrl (event) {
+  function redirectUrl(event) {
     window.location.href = this.value
   }
 
-  function initialiseLanguagePicker () {
+  function initialiseLanguagePicker() {
     var languagePicker = document.querySelector('#language-picker')
 
     languagePicker.on('change', redirectUrl, false)
   }
 
-  function initialiseSyntaxToggle () {
+  function initialiseSyntaxToggle() {
     var syntaxToggle = $('input[name="syntax"]')
 
     syntaxToggle.on('click', function (event) {
@@ -64,7 +65,7 @@
     })
   }
 
-  function replaceSidebarOpener (link) {
+  function replaceSidebarOpener(link) {
     var button = document.createElement('button')
 
     button.setAttribute('type', 'button')
@@ -75,17 +76,21 @@
     link.parentNode.replaceChild(button, link)
   }
 
-  function initialiseOptionsPanel () {
+  function initialiseOptionsPanel() {
     $('a[href="#options-panel"]').forEach(replaceSidebarOpener)
 
     var dialog = new A11yDialog(document.querySelector('#options-panel'))
 
     dialog
-      .on('show', function (el) { el.classList.add('is-open') })
-      .on('hide', function (el) { el.classList.remove('is-open') })
+      .on('show', function (el) {
+        el.classList.add('is-open')
+      })
+      .on('hide', function (el) {
+        el.classList.remove('is-open')
+      })
   }
 
-  function initialiseChapters () {
+  function initialiseChapters() {
     var chapters = $('.chapter:not(.toc)')
 
     chapters.forEach(function (chapter) {
@@ -104,4 +109,4 @@
     initialiseOptionsPanel()
     initialiseChapters()
   })
-}())
+})()
