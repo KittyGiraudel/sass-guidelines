@@ -34,7 +34,6 @@ module.exports = {
         'mkdir -p assets/js/vendor',
         'cp node_modules/a11y-dialog/dist/a11y-dialog.min.js assets/js/vendor',
         'cp node_modules/blingdotjs/bling.js assets/js/vendor',
-        'cp node_modules/picturefill/dist/picturefill.min.js assets/js',
       ].join(' && '),
     },
 
