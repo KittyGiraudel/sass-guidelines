@@ -6,11 +6,21 @@ configuration:
   translators: []
 
 translations:
-  # “Baseline” for the project (main description, used in the header, in tweets, etc.)
+  # “Baseline” for the project (main description, used in the header, in tweets,
+  # etc.)
   baseline: "An opinionated styleguide for writing sane, maintainable and scalable Sass."
 
   # Content of the footer, parsed as Markdown
   footer_content: "Made with love by [Kitty Giraudel](https://kittygiraudel.com)"
+
+  # This string is not used in the English version, but is used in all the
+  # others—where ‘{language}’ should be replaced with the name of the
+  # language, and ‘{translator x}’ should be replaced with the name od the
+  # translators (you)
+  translation_disclaimer: |
+    You are viewing the {language} translation from {translator A} and {translator B} of the original [Sass Guidelines](/) from [Kitty Giraudel](https://kittygiraudel.com).
+
+    This version is exclusively maintained by contributors without the review of the main author, therefore might not be completely authentic.
 
   # Everything related to the options panel
   aside_title: "Options"
