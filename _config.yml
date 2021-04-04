@@ -26,24 +26,23 @@ gems:
   - jekyll-sitemap
 data_dir: ./_locales
 exclude:
+  - _bin
+  - assets/images/icons
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
-  - TRANSLATING.md
-  - assets/images/icons
-  - package.json
-  - package-lock.json
-  - package-scripts.js
-  - prettier.config.js
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - pages/**/README.md
   - LICENSE
-  - CNAME
   - node_modules
+  - package-lock.json
+  - package-scripts.js
+  - package.json
+  - pages/**/README.md
+  - prettier.config.js
+  - README.md
+  - TRANSLATING.md
   - vendor
-  - _bin
   - workbox-config.js
 
 markdown: kramdown
