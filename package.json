@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "a11y-dialog": "^7.1.0",
-    "blingdotjs": "gist:7d867cda127e64d38f28",
-    "picturefill": "^3.0.3"
+    "blingdotjs": "gist:7d867cda127e64d38f28"
   },
   "devDependencies": {
     "clean-css-cli": "^5.2.2",
