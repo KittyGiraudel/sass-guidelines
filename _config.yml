@@ -34,6 +34,7 @@ exclude:
   - package.json
   - package-lock.json
   - package-scripts.js
+  - prettier.config.js
   - Gemfile
   - Gemfile.lock
   - README.md
