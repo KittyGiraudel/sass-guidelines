@@ -4,7 +4,8 @@
   'use strict'
 
   function getTemplateContent(id) {
-    return document.getElementById(id).content.firstElementChild.cloneNode(true)
+    const template = document.getElementById(id)
+    return template.content.firstElementChild.cloneNode(true)
   }
 
   function getChapterHeading(chapter) {
