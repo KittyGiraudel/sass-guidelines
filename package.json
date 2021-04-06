@@ -5,8 +5,15 @@
   "repository": "KittyGiraudel/sass-guidelines",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm start js.vendors",
-    "start": "nps"
+    "postinstall": "npm run js:vendors",
+    "icons": "svgo assets/images/icons && spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 1024 1024' --prefix icon-",
+    "js:vendors": "mkdir -p assets/js/vendor && cp node_modules/a11y-dialog/dist/a11y-dialog.min.js assets/js/vendor && cp node_modules/blingdotjs/bling.js assets/js/vendor",
+    "css:critical": "criticalcss run --url http://localhost:4000 --file _site/assets/css/main.css --forceInclude .chapter__buttons --output _includes/critical.css",
+    "css:clean": "cleancss _includes/critical.css --output _includes/critical.css",
+    "css": "npm run css:critical && npm run css:clean",
+    "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
+    "build": "npm run js:vendors && jekyll build && _bin/testbuild",
+    "start": "npm run build && npm run watch"
   },
   "dependencies": {
     "a11y-dialog": "^7.1.0",
@@ -15,7 +22,6 @@
   "devDependencies": {
     "clean-css-cli": "^5.2.2",
     "criticalcss": "^2.1.0",
-    "nps": "^5.10.0",
     "spritesh": "^1.2.1",
     "svgo": "^2.3.0",
     "workbox-cli": "^6.1.2"
