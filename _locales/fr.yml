@@ -10,33 +10,38 @@ configuration:
 # For more information about the context around these translations, refer to
 # _locales/en.yml
 translations:
-  baseline: "Un guide de style engagé pour du code Sass sain, maintenable et extensible."
-  footer_content: "Fait avec amour par [Kitty Giraudel](https://kittygiraudel.com), traduit par [Pierre Choffé](https://la-cascade.ghost.io)"
+  baseline: 'Un guide de style engagé pour du code Sass sain, maintenable et extensible.'
+  footer_content: 'Fait avec amour par [Kitty Giraudel](https://kittygiraudel.com), traduit par [Pierre Choffé](https://la-cascade.ghost.io)'
 
-  aside_title: "Options"
-  aside_report: "Signaler un problème"
-  aside_support: "Supporter le projet"
-  aside_tweet: "Tweeter"
-  aside_syntax: "Syntaxe du code"
-  aside_language: "Langue"
-  aside_close: "Fermer le panneau d’options"
-  aside_open: "Ouvrir le panneau d’option"
+  translation_disclaimer: |
+    Ceci est la traduction française par [Pierre Choffé](https://la-cascade.io/) des [Sass Guidelines](/) de [Kitty Giraudel](https://kittygiraudel.com).
 
-  link_to_top: "Retour en haut de page"
-  link_to_skip: "Allez au contenu principal"
-  link_to_chapter: "Lien vers ce chapitre :"
-  link_to_edit_chapter: "Editez ce chapitre sur GitHub :"
-  link_to_twitter: "Suivez-moi sur Twitter"
+    Cette version étant exclusivement maintenue par des contributeurs sans l’intervention de l’auteur·e, il se peut que ce document ne soit pas entièrement authentique.
 
-  contributing_support_button: "Soutenir Sass Guidelines"
-  contributing_tweet_button: "Faites passer le message"
+  aside_title: 'Options'
+  aside_report: 'Signaler un problème'
+  aside_support: 'Supporter le projet'
+  aside_tweet: 'Tweeter'
+  aside_syntax: 'Syntaxe du code'
+  aside_language: 'Langue'
+  aside_close: 'Fermer le panneau d’options'
+  aside_open: 'Ouvrir le panneau d’option'
+
+  link_to_top: 'Retour en haut de page'
+  link_to_skip: 'Allez au contenu principal'
+  link_to_chapter: 'Lien vers ce chapitre :'
+  link_to_edit_chapter: 'Editez ce chapitre sur GitHub :'
+  link_to_twitter: 'Suivez-moi sur Twitter'
+
+  contributing_support_button: 'Soutenir Sass Guidelines'
+  contributing_tweet_button: 'Faites passer le message'
 
   donate_content: "Si vous avez apprécié le projet Sass Guidelines, n'hésitez pas à le soutenir."
-  donate_button: "Soutenir Sass Guidelines"
+  donate_button: 'Soutenir Sass Guidelines'
 
-  note: "Note"
+  note: 'Note'
 
-  image_color_functions: "Illustration de la différence entre `lighten`/`darken` et `mix` par [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
-  image_order_poll: "Tableau montrant comment les développeurs ordonnent leurs déclarations CSS"
-  image_sassdoc: "Documentation générée par SassDoc"
-  image_wallpaper: "Fond d’écran par [Julien He](https://twitter.com/julien_he)"
+  image_color_functions: 'Illustration de la différence entre `lighten`/`darken` et `mix` par [KatieK](https://codepen.io/KatieK2/pen/tejhz/)'
+  image_order_poll: 'Tableau montrant comment les développeurs ordonnent leurs déclarations CSS'
+  image_sassdoc: 'Documentation générée par SassDoc'
+  image_wallpaper: 'Fond d’écran par [Julien He](https://twitter.com/julien_he)'
