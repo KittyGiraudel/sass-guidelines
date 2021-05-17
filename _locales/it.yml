@@ -12,33 +12,38 @@ configuration:
 # For more information about the context around these translations, refer to
 # _locales/en.yml
 translations:
-  baseline: "Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile."
-  footer_content: "Fatto con amore da [Kitty Giraudel](https://kittygiraudel.com) e tradotto da [Matteo Cavucci](https://github.com/mattcav) y [Davide di Pumpo](https://github.com/MakhBeth)"
+  baseline: 'Una serie di linee guida opinionate per scrivere Sass sano, manutenibile e scalabile.'
+  footer_content: 'Fatto con amore da [Kitty Giraudel](https://kittygiraudel.com) e tradotto da [Matteo Cavucci](https://github.com/mattcav) y [Davide di Pumpo](https://github.com/MakhBeth)'
 
-  aside_title: "Opzioni"
-  aside_report: "Segnala un problema"
-  aside_support: "Sostieni il progetto"
-  aside_tweet: "Tweet it"
-  aside_syntax: "Sintassi del codice"
-  aside_language: "Lingua"
-  aside_close: "Chiudi il pannello delle opzioni"
-  aside_open: "Apri il pannello delle opzioni"
+  translation_disclaimer: |
+    Stai leggendo la traduzione italiana di [Davide di Pumpo](https://github.com/MakhBeth) e [Matteo Cavucci](https://github.com/mattcav) delle originali linee guida per Sass di [Kitty Giraudel](https://kittygiraudel.com).
 
-  link_to_top: "Torna in cima"
-  link_to_skip: "Vai al contenuto principale"
-  link_to_chapter: "Un collegamento a questo capitolo:"
-  link_to_edit_chapter: "Modifica questo capitolo su GitHub:"
-  link_to_twitter: "Trovami su Twitter"
+    Questa versione è mantenuta esclusivamente dai collaboratori, senza la revisione dell'autore principale. Per questo potrebbe non essere completamente autentica.
 
-  contributing_support_button: "Supporta Sass Guidelines"
-  contributing_tweet_button: "Passaparola"
+  aside_title: 'Opzioni'
+  aside_report: 'Segnala un problema'
+  aside_support: 'Sostieni il progetto'
+  aside_tweet: 'Tweet it'
+  aside_syntax: 'Sintassi del codice'
+  aside_language: 'Lingua'
+  aside_close: 'Chiudi il pannello delle opzioni'
+  aside_open: 'Apri il pannello delle opzioni'
 
-  donate_content: "Se ti piace Sass Guidelines, dai una mano!."
-  donate_button: "Supporta Sass Guidelines"
+  link_to_top: 'Torna in cima'
+  link_to_skip: 'Vai al contenuto principale'
+  link_to_chapter: 'Un collegamento a questo capitolo:'
+  link_to_edit_chapter: 'Modifica questo capitolo su GitHub:'
+  link_to_twitter: 'Trovami su Twitter'
 
-  note: "Note"
+  contributing_support_button: 'Supporta Sass Guidelines'
+  contributing_tweet_button: 'Passaparola'
+
+  donate_content: 'Se ti piace Sass Guidelines, dai una mano!.'
+  donate_button: 'Supporta Sass Guidelines'
+
+  note: 'Note'
 
   image_color_functions: "L'illustrazione della differenza tra `lighten`/`darken` e `mix` è di [KatieK](https://codepen.io/KatieK2/pen/tejhz/)"
-  image_order_poll: "Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS"
-  image_sassdoc: "La documentazione è creata da SassDoc"
-  image_wallpaper: "Wallpaper di [Julien He](https://twitter.com/julien_he)"
+  image_order_poll: 'Il grafico mostra come gli sviluppatori ordinano le loro dichiarazioni CSS'
+  image_sassdoc: 'La documentazione è creata da SassDoc'
+  image_wallpaper: 'Wallpaper di [Julien He](https://twitter.com/julien_he)'
