@@ -12,7 +12,7 @@
     "css:clean": "cleancss _includes/critical.css --output _includes/critical.css",
     "css": "npm run css:critical && npm run css:clean",
     "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
-    "build": "npm run js:vendors && jekyll build && _bin/testbuild",
+    "build": "npm run js:vendors && jekyll build --trace && _bin/testbuild",
     "start": "npm run build && npm run watch"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "clean-css-cli": "^5.2.2",
     "criticalcss": "^2.1.0",
     "spritesh": "^1.2.1",
-    "svgo": "^2.3.0",
+    "svgo": "^2.3.1",
     "workbox-cli": "^6.1.2"
   }
 }
