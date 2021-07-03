@@ -24,6 +24,6 @@
     "criticalcss": "^2.1.0",
     "spritesh": "^1.2.1",
     "svgo": "^2.3.0",
-    "workbox-cli": "^6.1.2"
+    "workbox-cli": "^6.1.5"
   }
 }
