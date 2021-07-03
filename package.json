@@ -23,7 +23,7 @@
     "clean-css-cli": "^5.2.2",
     "criticalcss": "^2.1.0",
     "spritesh": "^1.2.1",
-    "svgo": "^2.3.0",
+    "svgo": "^2.3.1",
     "workbox-cli": "^6.1.2"
   }
 }
