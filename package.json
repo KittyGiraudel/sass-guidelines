@@ -12,7 +12,7 @@
     "css:clean": "cleancss _includes/critical.css --output _includes/critical.css",
     "css": "npm run css:critical && npm run css:clean",
     "watch": "jekyll s --incremental --config _config.yml,_config.dev.yml",
-    "build": "npm run js:vendors && jekyll build && _bin/testbuild",
+    "build": "npm run js:vendors && jekyll build --trace && _bin/testbuild",
     "start": "npm run build && npm run watch"
   },
   "dependencies": {
