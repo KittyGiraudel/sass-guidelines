@@ -16,7 +16,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.5.4
+          ruby-version: 2.6.0
           bundler-cache: true
 
       - name: Install npm dependencies
