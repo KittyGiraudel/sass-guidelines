@@ -20,7 +20,7 @@
     "blingdotjs": "gist:7d867cda127e64d38f28"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.3.0",
+    "clean-css-cli": "^5.3.2",
     "criticalcss": "^2.1.0",
     "spritesh": "^1.2.1",
     "svgo": "^2.3.1",
