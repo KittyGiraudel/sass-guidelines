@@ -6,10 +6,13 @@
 }
 
 /**
- * Redefine box-sizing on the root element
+ * 1. Redefine box-sizing on the root element
+ * 2. Explicitly set a background color to avoid an issue in Edge in dark mode,
+ *    where the browser’s chrome background is set to a dark color
  */
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  background-color: #fff; /* 2 */
 }
 
 /**
@@ -19,7 +22,6 @@ body {
   color: $dark-grey;
   font: 1.125em / 1.45 $text-font-stack;
 }
-
 
 /**
  * Links
