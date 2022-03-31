@@ -49,7 +49,7 @@ PostCSS 常被视为（并不正确）一种“后处理器”工具。从这个
 
 PostCSS 可以让开发者访问样式的基本单位，比如选择器、样式和属性值，并使用 JavaScript 处理各种操作，最终生成 CSS。一个典型事例就是基于 PostCSS 创建的 [Autoprefixer](https://github.com/postcss/autoprefixer)，该工具根据 [CanIUse](https://caniuse.com) 提供的浏览器支持度信息给属性添加合理的浏览器前缀。
 
-PostCSS 是一款强大的构建库，可以和任何预处理器（也可以是原生 CSS）共同工作，但是目前 PostCSS 还不易于使用。如果开发者想使用 PostCSS，那么他需要具备一些 JavaScript 的能力来构建项目，此外，PostCSC 的 API 也还处在变化之中。相对来说，Sass 只支持一些用于编写 CSS 的特性，而 PostCSS 则提供了使用 JavaScript 直接访问 CSS 抽象语法树的能力。
+PostCSS 是一款强大的构建库，可以和任何预处理器（也可以是原生 CSS）共同工作，但是目前 PostCSS 还不易于使用。如果开发者想使用 PostCSS，那么他需要具备一些 JavaScript 的能力来构建项目，此外，PostCSS 的 API 也还处在变化之中。相对来说，Sass 只支持一些用于编写 CSS 的特性，而 PostCSS 则提供了使用 JavaScript 直接访问 CSS 抽象语法树的能力。
 
 简而言之，Sass 简单易学，可以解决大部分的问题，而 PostCSS 上手略难，但威力巨大，所以你应该都去尝试一些这两种工具。实际上，PostCSS 提供了一个官方的 SCSS 解析器来处理 Sass 相关的任务。
 
