@@ -16,7 +16,7 @@
     "start": "npm run build && npm run watch"
   },
   "dependencies": {
-    "a11y-dialog": "^7.4.0",
+    "a11y-dialog": "^7.5.0",
     "blingdotjs": "gist:7d867cda127e64d38f28"
   },
   "devDependencies": {
