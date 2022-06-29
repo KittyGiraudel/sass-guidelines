@@ -41,8 +41,6 @@ Można też spróbować czegoś bardziej przyziemnego, choćby [csswizardry-grid
 
 **Dalsze informacje:**
 
-* [Singularity: Grids Without Limits](https://fourword.fourkitchens.com/article/singularity-grids-without-limits)
-* [Singularity Grid System](https://www.mediacurrent.com/blog/singularity-grid-system)
 * [Build Web Layouts Easily with Susy](https://css-tricks.com/build-web-layouts-easily-susy/)
 * [A Complete Tutorial to Susy 2](https://www.zell-weekeat.com/susy2-tutorial/)
 * [Sass Grids: From Neat to Susy](https://www.sitepoint.com/sass-grids-neat-susy/)
