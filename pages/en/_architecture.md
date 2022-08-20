@@ -88,7 +88,7 @@ The `base/` folder holds what we might call the boilerplate code for the project
 * `_typography.scss`
 
 <div class="note">
-  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>\_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use a them sporadically, let them live along the selectors that use them.</p>
+  <p>If your project uses <em>a lot</em> of CSS animations, you might consider adding an <code>\_animations.scss</code> file in there containing the <code>@keyframes</code> definitions of all your animations. If you only use them sporadically, let them live along the selectors that use them.</p>
 </div>
 
 #### Layout folder
