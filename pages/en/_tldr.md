@@ -68,7 +68,7 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 ### Variables
 
 * Do use the `!default` flag for any variable part of a public API that can be safely changed. 
-* Do not use the `!global` flag at root level as it might constitue a violation of Sass syntax in the future.
+* Do not use the `!global` flag at root level as it might constitute a violation of Sass syntax in the future.
 
 ### Extend
 
