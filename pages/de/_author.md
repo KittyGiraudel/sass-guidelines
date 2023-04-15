@@ -1,7 +1,7 @@
 
 ## Über den Autor
 
-Mein Name ist Kitty, ich bin ein Front-End Entwickler aus Frankreich, lebe seit 2015 in Berlin (Deutschland) und arbeite derzeit bei [Gorillas](https://gorillas.io/).
+Mein Name ist Kitty, ich bin ein Front-End Entwickler aus Frankreich, lebe seit 2015 in Berlin (Deutschland) und arbeite derzeit bei [Cofenster](https://www.cofenster.com).
 
 Seit mehreren Jahren entwickle ich nun in Sass und bin Autor vieler Sass bezogener Projekte wie [SassDoc](http://sassdoc.com), SitePoint Sass Reference und [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/). Falls du an weiteren Beiträgen zur Sass Community meinerseits interessiert bist, werf doch einen Blick auf [diese Liste](http://github.com/KittyGiraudel/awesome-sass).
 

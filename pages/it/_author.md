@@ -1,7 +1,7 @@
 
 ## L’autore
 
-Mi chiamo [Kitty Giraudel](https://kittygiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [Gorillas](https://gorillas.io/).
+Mi chiamo [Kitty Giraudel](https://kittygiraudel.com), sono uno sviluppatore front-end francese e abito a Berlino, in Germania dal 2015. Al momento lavoro da [Cofenster](https://www.cofenster.com).
 
 Lavoro con Sass da diversi anni e sono la persona che sta dietro a progetti come [SassDoc](http://sassdoc.com), SitePoint Sass Reference e [Sass-Compatibility](https://kittygiraudel.github.io/sass-compatibility/). Se sei interessato ai miei contributi nella comunità di Sass, dai un'occhiata a [questa lista](https://github.com/KittyGiraudel/awesome-sass).
 
