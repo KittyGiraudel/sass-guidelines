@@ -13,20 +13,20 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 
 * An indentation is made of two (2) spaces, no tabs.
 * Lines should be, as much as possible, shorter than 80 characters. Feel free to split them into several lines when necessary.
-* CSS should be properly written, possibly following the [CSS Guidelines](https://cssguidelin.es) from Harry Roberts. 
+* CSS should be properly written, possibly following the [CSS Guidelines](https://cssguidelin.es) from Harry Roberts.
 * Whitespace is free, use it to separate items, rules and declarations. Do not hesitate to leave empty lines, it never hurts.
 
 #### Strings
 
-* Declaring the `@charset` directive on top of the stylesheet is highly recommended. 
+* Declaring the `@charset` directive on top of the stylesheet is highly recommended.
 * Unless applied as CSS identifiers, strings should be quoted using single quotes. URLs should also be quoted.
 
 #### Numbers
 
-* Sass makes no distinction between numbers, integers, floats so trailing zeros (0) should be omitted. However, leading zeros (0) help readability and should be added.
-* A zero (0) length should not have a unit. 
+* Sass makes no distinction between numbers, integers, and floats, so trailing zeros (0) should be omitted. However, leading zeros (0) help readability and should be added.
+* A zero (0) length should not have a unit.
 * Units manipulation should be thought as arithmetic operations, not string operations.
-* In order to improve readability, top-level calculations should be wrapped in parentheses. Also, complex math operations might be splitted into smaller chunks. 
+* In order to improve readability, top-level calculations should be wrapped in parentheses. Also, complex math operations might be splitted into smaller chunks.
 * Magic numbers dramatically hurt code maintainability and should be avoided at all time. When in doubt, extensively explain the questionable value.
 
 #### Colors
@@ -38,7 +38,7 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 
 * Unless used as a direct mapping to space-separated CSS values, lists should be separated with commas.
 * Wrapping parentheses should also be considered to improve readability.
-* Inlined lists should not have a trailing comma, multi-line lists should have it. 
+* Inlined lists should not have a trailing comma, multi-line lists should have it.
 
 #### Maps
 
@@ -48,7 +48,7 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 
 #### Declaration sorting
 
-* The system used for declaration sorting (alphabetical, by type, etc.) doesn’t matter as long as it is consistent. 
+* The system used for declaration sorting (alphabetical, by type, etc.) doesn’t matter as long as it is consistent.
 
 #### Selector nesting
 
@@ -58,16 +58,16 @@ These guidelines are quite long and sometimes it is good to have them summed up 
 
 ### Naming conventions
 
-* It is best to stick to CSS naming conventions which are (except a few errors) lowercase and hyphen-delimited. 
+* It is best to stick to CSS naming conventions which are (except a few errors) lowercase and hyphen-delimited.
 
 ### Commenting
 
-* CSS is a tricky language; do not hesitate to write very extensive comments about things that look (or are) fishy. 
+* CSS is a tricky language; do not hesitate to write very extensive comments about things that look (or are) fishy.
 * For variables, functions, mixins and placeholders establishing a public API, use SassDoc comments.
 
 ### Variables
 
-* Do use the `!default` flag for any variable part of a public API that can be safely changed. 
+* Do use the `!default` flag for any variable part of a public API that can be safely changed.
 * Do not use the `!global` flag at root level as it might constitute a violation of Sass syntax in the future.
 
 ### Extend
